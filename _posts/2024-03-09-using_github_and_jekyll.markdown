@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "使用GitHub和自定义域名以及jekyll创建一个静态网站"
+title: "使用GitHub和自定义域名以及jekyll创建一个静态网站"
 date:   2024-03-09 16:48:54 +0800
 categories: jekyll update
 ---
