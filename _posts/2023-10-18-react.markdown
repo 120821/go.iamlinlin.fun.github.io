@@ -1,0 +1,44 @@
+---
+layout: post
+title: "react 数组根据列处理数据格式， 把每列数据都根据材料和年份进行处理"
+date: "2023-10-18"
+categories: 
+---
+<p>根据每一列写一个函数来处理每一个参数：</p>
+
+<pre>
+<code>function generateDefaultData(startYear, endYear, data, materialName, columnName) {
+  let foamParamsData = data.foam_params_data;
+  const dataParams = JSON.parse(foamParamsData);
+  let columnData = dataParams.slice(1).map(row =&gt; row[dataParams[0].indexOf(columnName)]);
+
+  let defaultData = [[&#39;&#39;, ...materialName]];
+  for (let i = 0; i &lt;= (endYear - startYear); i++) {
+    const year = startYear + i;
+    const rowData = [year];
+
+    for (let j = 1; j &lt; defaultData[0].length; j++) {
+      rowData.push(columnData[i]);
+    }
+
+    defaultData.push(rowData);
+  }
+
+  return defaultData;
+}</code></pre>
+
+<p><code>调用：</code></p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code>const processedData = {
+  factorProductionDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;生产排放因子(factor_production)&#39;),
+  factorByYearDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;年度排放因子(factor_by_year)&#39;),
+  factorTuiYiDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;退役排放因子(factor_tui_yi)&#39;),
+};</code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

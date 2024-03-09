@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Linux top 命令"
+date: "2022-08-18"
+categories: 
+---
+<p><a href="https://www.runoob.com/linux/linux-comm-top.html">Linux top 命令</a></p>
+
+<p>Linux top命令用于实时显示 process 的动态。</p>
+
+<p>使用权限：所有使用者。</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">top </span><span class="pun">[-]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">d delay</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">q</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">c</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">S</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">s</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">n</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">b</span><span class="pun">]</span></pre>
+
+<ul>
+	<li>d : 改变显示的更新速度，或是在交谈式指令列( interactive command)按 s</li>
+	<li>q : 没有任何延迟的显示速度，如果使用者是有 superuser 的权限，则 top 将会以最高的优先序执行</li>
+	<li>c : 切换显示模式，共有两种模式，一是只显示执行档的名称，另一种是显示完整的路径与名称</li>
+	<li>S : 累积模式，会将己完成或消失的子进程 ( dead child process ) 的 CPU time 累积起来</li>
+	<li>s : 安全模式，将交谈式指令取消, 避免潜在的危机</li>
+	<li>i : 不显示任何闲置 (idle) 或无用 (zombie) 的进程</li>
+	<li>n : 更新的次数，完成后将会退出 top</li>
+	<li>b : 批次档模式，搭配 &quot;n&quot; 参数一起使用，可以用来将 top 的结果输出到档案内</li>
+</ul>
+
+<p>显示进程信息</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top</span></pre>
+
+<p><img height="436" src="/uploads/ckeditor/pictures/256/image-20220818105435-1.png" width="970" /></p>
+
+<p>显示完整命令</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top -c</span></pre>
+
+<p><img height="377" src="/uploads/ckeditor/pictures/258/image-20220818105542-3.png" width="1920" /></p>
+
+<p>以批处理模式显示程序信息</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top -b</span></pre>
+
+<p><img height="347" src="/uploads/ckeditor/pictures/259/image-20220818105610-4.png" width="1123" /></p>
+
+<p>以累积模式显示程序信息</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top -S</span></pre>
+
+<p><img height="416" src="/uploads/ckeditor/pictures/260/image-20220818105643-5.png" width="1069" /></p>
+
+<p>设置信息更新次数</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">top </span><span class="pun">-</span><span class="pln">n </span><span class="lit">2</span><span class="pln">
+
+</span><span class="com">//表示更新两次后终止更新显示</span></pre>
+
+<p><img height="365" src="/uploads/ckeditor/pictures/261/image-20220818105712-6.png" width="1018" /></p>
+
+<p>设置信息更新时间</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top -d 3</span><span class="pln">
+
+</span><span class="com">//表示更新周期为3秒</span></pre>
+
+<p><img height="328" src="/uploads/ckeditor/pictures/262/image-20220818105745-7.png" width="981" /></p>
+
+<p>显示指定的进程信息</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># top -p 139</span><img height="198" src="/uploads/ckeditor/pictures/266/image-20220818110228-1.png" width="994" /><span class="com">//显示进程号为139的进程信息，CPU、内存占用率等</span></pre>
+
+<p>显示更新十次后退出</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">top </span><span class="pun">-</span><span class="pln">n </span><span class="lit">10</span></pre>
+
+<p><img height="365" src="/uploads/ckeditor/pictures/264/image-20220818110027-9.png" width="1029" /></p>
+
+<p>使用者将不能利用交谈式指令来对行程下命令</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">top </span><span class="pun">-</span><span class="pln">s</span></pre>
+
+<p><img height="406" src="/uploads/ckeditor/pictures/265/image-20220818110124-10.png" width="992" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

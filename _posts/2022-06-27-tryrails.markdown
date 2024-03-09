@@ -1,0 +1,15 @@
+---
+layout: post
+title: ".try rails的使用"
+date: "2022-06-27"
+categories: 
+---
+<p>参考：https://apidock.com/rails/Object/try</p>
+
+<p>调用名称作为第一个参数的公共方法，就像 public_send 一样，除了如果接收者没有响应它，则调用返回 nil 而不是引发异常。 这个方法被定义为能够写</p>
+
+<pre>
+<span class="attribute">@person</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/Object/try">try</a></span><span class="punct">(</span><span class="symbol">:name</span><span class="punct">)</span></pre>
+
+<p>&nbsp;</p>
+

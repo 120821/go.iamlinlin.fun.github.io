@@ -1,0 +1,57 @@
+---
+layout: post
+title: "go  插入排序"
+date: "2023-03-16"
+categories: 
+---
+<p><a href="https://geekr.dev/posts/go-sorting-algorithm-insertion">https://geekr.dev/posts/go-sorting-algorithm-insertion</a></p>
+
+<p>插入排序的原理是：我们将数组中的数据分为两个区间，已排序区间和未排序区间。初始已排序区间只有一个元素，就是数组的第一个元素。插入算法的核心思想是取未排序区间中的元素，在已排序区间中找到合适的插入位置将其插入，并保证已排序区间数据一直有序。重复这个过程，直到未排序区间中元素为空，算法结束。</p>
+
+<pre>
+<code>
+package main
+
+import &quot;fmt&quot;
+
+func insertionSort(nums []int) []int {
+    if len(nums) &lt;= 1 {
+        return nums
+    }
+
+    for i := 0; i &lt; len(nums); i++ {
+       // 每次从未排序区间取一个数据 value
+        value := nums[i]
+        // 在已排序区间找到插入位置
+        j := i - 1
+        for ; j &gt;= 0; j-- {
+           // 如果比 value 大后移
+            if nums[j] &gt; value {
+                nums[j+1] = nums[j]
+            } else {
+                break
+            }
+        }
+        // 插入数据 value
+        nums[j+1] = value
+    }
+
+    return nums
+}
+
+func main() {
+    nums := []int{4, 5, 6, 7, 8, 3, 2, 1}
+    nums = insertionSort(nums)
+    fmt.Println(nums)
+}</code></pre>
+
+<p>插入排序的性能和稳定性：</p>
+
+<ul>
+	<li>插入排序需要两个嵌套的循环，时间复杂度是O(n<sup>2</sup>)；</li>
+	<li>没有额外的存储空间，是原地排序算法；</li>
+	<li>不涉及相等元素位置交换，是稳定的排序算法。</li>
+</ul>
+
+<p>插入排序的时间复杂度和冒泡排序一样，也不是很理想，但是插入排序不涉及数据交换，从更细粒度来区分，性能要略优于冒泡排序。</p>
+

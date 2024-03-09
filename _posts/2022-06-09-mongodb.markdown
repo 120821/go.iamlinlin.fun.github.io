@@ -1,0 +1,86 @@
+---
+layout: post
+title: "MongoDB更新文档保存文档"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>update() 方法用于更新已存在的文档。语法格式如下：</p> 
+<pre><code>db.collection.update(
+   &lt;query&gt;,
+   &lt;update&gt;,
+   {
+     upsert: &lt;boolean&gt;,
+     multi: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;
+   }
+)</code></pre> 
+<ul>
+<li>
+<strong>query </strong>: update的查询条件，类似sql update查询内where后面的。</li>
+<li>
+<strong>update </strong>: update的对象和一些更新的操作符（如$,$inc...）等，也可以理解为sql update查询内set后面的</li>
+<li>
+<strong>upsert </strong> : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。</li>
+<li>
+<strong>multi </strong> : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。</li>
+<li>
+<strong>writeConcern </strong> :可选，抛出异常的级别</li>
+</ul>
+<p>在集合 col 中插入如下数据：</p> 
+<pre><code>&gt;db.col.insert({
+    title: 'MongoDB 教程', 
+    description: 'MongoDB 是一个 Nosql 数据库',
+    by: '菜鸟教程',
+    url: 'http://www.runoob.com',
+    tags: ['mongodb', 'database', 'NoSQL'],
+    likes: 100
+})</code></pre> 
+<p>通过 update() 方法来更新标题(title):</p> 
+<pre><code>&gt;db.col.update({'title':'MongoDB 教程'},{$set:{'title':'MongoDB'}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })   # 输出信息
+&gt; db.col.find().pretty()
+{
+        "_id" : ObjectId("56064f89ade2f21f36b03136"),
+        "title" : "MongoDB",
+        "description" : "MongoDB 是一个 Nosql 数据库",
+        "by" : "菜鸟教程",
+        "url" : "http://www.runoob.com",
+        "tags" : [
+                "mongodb",
+                "database",
+                "NoSQL"
+        ],
+        "likes" : 100
+}
+&gt;</code></pre> 
+<h2>save() 方法</h2> 
+<p>save() 方法通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。语法格式如下：</p> 
+<pre><code>db.collection.save(
+   &lt;document&gt;,
+   {
+     writeConcern: &lt;document&gt;
+   }
+)</code></pre> 
+<p><strong>参数说明：</strong></p> 
+<ul>
+<li>
+<strong>document </strong>: 文档数据。</li>
+<li>
+<strong>writeConcern </strong> :可选，抛出异常的级别。</li>
+</ul>
+<blockquote> 
+ <p>只更新第一条记录：</p> 
+ <pre><code>db.col.update( { "count" : { $gt : 1 } } , { $set : { "test2" : "OK"} } );</code></pre> 
+ <p>全部更新：</p> 
+ <pre><code>db.col.update( { "count" : { $gt : 3 } } , { $set : { "test2" : "OK"} },false,true );</code></pre> 
+ <p>只添加第一条：</p> 
+ <pre><code>db.col.update( { "count" : { $gt : 4 } } , { $set : { "test5" : "OK"} },true,false )；</code></pre> 
+ <p>全部添加进去:</p> 
+ <p>db.col.update( { "count" : { $gt : 5 } } , { $set : { "test5" : "OK"} },true,true );</p> 
+ <p>全部更新：</p> 
+ <p>db.col.update( { "count" : { $gt : 15 } } , { $inc : { "count" : 1} },false,true );</p> 
+ <p>只更新第一条记录：</p> 
+ <p>db.col.update( { "count" : { $gt : 10 } } , { $inc : { "count" : 1} },false,false );</p> 
+</blockquote>
+                

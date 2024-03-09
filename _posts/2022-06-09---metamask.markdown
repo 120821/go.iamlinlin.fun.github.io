@@ -1,0 +1,12 @@
+---
+layout: post
+title: "安装火狐插件--截图软件metamask"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>火狐截图，先搜索需要的插件进行下载安装</p> 
+<p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/045d982e772d4c4fb1feeb0d46f95852.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/d7a1eff144e84fc8bf4db7a2406726eb.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p> 就可以使用了</p>
+                

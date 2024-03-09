@@ -1,0 +1,107 @@
+---
+layout: post
+title: "ubuntu 百度输入法安装"
+date: "2023-08-05"
+categories: 
+---
+<p>我的版本：</p>
+
+<p>cat /etc/issue<br />
+Ubuntu 22.04.1 LTS \n \l</p>
+
+<p>1.下载百度输入法（Ubuntu18-19）</p>
+
+<p><a href="https://srf.baidu.com/?c=j&amp;e=d&amp;from=1000e&amp;platform=ubuntu&amp;ref=index_entrance_android_click">https://srf.baidu.com/?c=j&amp;e=d&amp;from=1000e&amp;platform=ubuntu&amp;ref=index_entrance_android_click</a></p>
+
+<p>2.下载后进行解压缩</p>
+
+<p>unzip xxx</p>
+
+<p>然后安装</p>
+
+<pre>
+<code>sudo dpkg -i fcitx-baidupinyin.deb</code></pre>
+
+<p>3，如果安装出现错误尝试：</p>
+
+<pre>
+<code>sudo apt update</code></pre>
+
+<p>提示：</p>
+
+<pre>
+<code>sudo dpkg -i fcitx-baidupinyin.deb
+
+Selecting previously unselected package fcitx-baidupinyin:amd64.
+
+(Reading database ... 416682 files and directories currently installed.)
+
+Preparing to unpack fcitx-baidupinyin.deb ...
+
+Unpacking fcitx-baidupinyin:amd64 (1.0.1.0) ...
+
+dpkg: dependency problems prevent configuration of fcitx-baidupinyin:amd64:
+
+&nbsp;fcitx-baidupinyin:amd64 depends on qml-module-qtquick-controls (&gt;= 5.5.1); however:
+
+&nbsp; Package qml-module-qtquick-controls is not installed.
+dpkg: error processing package fcitx-baidupinyin:amd64 (--install):
+
+&nbsp;dependency problems - leaving unconfigured
+
+Errors were encountered while processing:
+
+&nbsp;fcitx-baidupinyin:amd64</code></pre>
+
+<p>尝试解决：</p>
+
+<pre>
+<code>sudo apt-get install qml-<span style="color:#dcc6e0">module</span>-qtquick-controls</code></pre>
+
+<p>如果提示：</p>
+
+<pre>
+<code>Reading package lists... Done
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+You might want to run &#39;apt --fix-broken install&#39; to correct these.
+
+The following packages have unmet dependencies.
+
+&nbsp;qml-module-qtquick-controls : Depends: qml-module-qtgraphicaleffects but it is not going to be installed
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depends: qml-module-qtqml but it is not going to be installed
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depends: qml-module-qtqml-models2 but it is not going to be installed
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depends: qml-module-qtquick-layouts but it is not going to be installed
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depends: qml-module-qtquick-window2 but it is not going to be installed
+
+E: Unmet dependencies. Try &#39;apt --fix-broken install&#39; with no packages (or specify a solution).</code></pre>
+
+<p>解决：</p>
+
+<pre>
+<code>sudo apt --fix-broken install</code></pre>
+
+<p>然后继续安装：</p>
+
+<pre>
+<code>&nbsp;sudo dpkg -i fcitx-baidupinyin.deb
+
+(Reading database ... 417167 files and directories currently installed.)
+
+Preparing to unpack fcitx-baidupinyin.deb ...
+
+Unpacking fcitx-baidupinyin:amd64 (1.0.1.0) over (1.0.1.0) ...
+
+Setting up fcitx-baidupinyin:amd64 (1.0.1.0) ...</code></pre>
+
+<p>然后安照解压缩出来的百度输入法给的安装教程操作即可。</p>
+
+<p>&nbsp;</p>
+

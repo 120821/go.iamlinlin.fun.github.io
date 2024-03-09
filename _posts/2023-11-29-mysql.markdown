@@ -1,0 +1,25 @@
+---
+layout: post
+title: "mysql 创建用户，修改密码"
+date: "2023-11-29"
+categories: 
+---
+<p>1.创建用户root，并赋予密码，例如：</p>
+
+<p>CREATE USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;88888888&#39;;</p>
+
+<p>如果用户已经存在，只是修改密码：</p>
+
+<pre>
+<code><span style="color:#dcc6e0">ALTER</span> <span style="color:#dcc6e0">USER</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#dcc6e0">BY</span> <span style="color:#abe338">&#39;88888888&#39;</span>;</code></pre>
+
+<p>2.给该用户所有权限：</p>
+
+<pre>
+<code><span style="color:#dcc6e0">GRANT</span> <span style="color:#dcc6e0">ALL</span> PRIVILEGES <span style="color:#dcc6e0">ON</span> *.* <span style="color:#dcc6e0">TO</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> <span style="color:#dcc6e0">WITH</span> <span style="color:#dcc6e0">GRANT</span> OPTION;</code></pre>
+
+<p>3.刷新权限：</p>
+
+<pre>
+<code>FLUSH PRIVILEGES;</code></pre>
+

@@ -1,0 +1,38 @@
+---
+layout: post
+title: "ruby mine 编辑器的安装使用"
+date: "2022-06-11"
+categories: 
+---
+<p>下载：（官网）https://www.jetbrains.com/ruby/</p>
+
+<p>（Linux下载）https://www.jetbrains.com/ruby/download/#section=linux</p>
+
+<p>安装：</p>
+
+<p>cd /home/linlin/Downloads/RubyMine-2022.1.2<br />
+linlin@linlin-i5:~/Downloads/RubyMine-2022.1.2$ ls<br />
+bin&nbsp; build.txt&nbsp; help&nbsp; Install-Linux-tar.txt&nbsp; jbr&nbsp; lib&nbsp; license&nbsp; plugins&nbsp; product-info.json&nbsp; RMlogo.svg<br />
+linlin@linlin-i5:~/Downloads/RubyMine-2022.1.2$ ~/.config/JetBrains/RubyMine2022.1.<br />
+bash: /home/linlin/.config/JetBrains/RubyMine2022.1.: No such file or directory<br />
+linlin@linlin-i5:~/Downloads/RubyMine-2022.1.2$ ./rubymine.sh<br />
+bash: ./rubymine.sh: No such file or directory<br />
+linlin@linlin-i5:~/Downloads/RubyMine-2022.1.2$ cd bin/<br />
+linlin@linlin-i5:~/Downloads/RubyMine-2022.1.2/bin$ ./rubymine.sh<br />
+2022-06-11 17:39:23,283 [&nbsp;&nbsp;&nbsp;&nbsp; 11]&nbsp;&nbsp; WARN - j.u.prefs - Prefs file removed in background /home/linlin/.java/.userPrefs/prefs.xml<br />
+2022-06-11 17:39:30,191 [&nbsp;&nbsp; 6919]&nbsp;&nbsp; WARN - #c.i.n.i.NotificationGroupManagerImpl - Notification group CodeWithMe is already registered (group=com.intellij.notification.NotificationGroup@1bed5cbd). Plugin descriptor: PluginDescriptor(name=Code With Me, id=com.jetbrains.codeWithMe, descriptorPath=plugin.xml, path=~/Downloads/RubyMine-2022.1.2/plugins/cwm-plugin, version=221.5787.34, package=null, isBundled=true)</p>
+
+<p><img height="830" src="/uploads/ckeditor/pictures/8/image-20220611174653-1.png" width="803" /></p>
+
+<p>&nbsp;</p>
+
+<p>使用：</p>
+
+<div class="overview-info__item features-block" data-screen="screen-1" style="opacity: 0.9999; top: 0px;">
+<h3 class="h3-section">Work Faster with a&nbsp;Smart Editor</h3>
+
+<p>Produce high-quality code more efficiently, thanks to first-class support for Ruby and Rails, JavaScript and CoffeeScript, ERB and HAML, CSS, Sass and Less, and more.</p>
+
+<p>Take advantage of the language specific-aware syntax &amp; error highlighting, code formatting, code completion, and quick documentation.</p>
+</div>
+

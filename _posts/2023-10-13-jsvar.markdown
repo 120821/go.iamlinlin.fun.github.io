@@ -1,0 +1,77 @@
+---
+layout: post
+title: "js var 的简单使用"
+date: "2023-10-13"
+categories: 
+---
+<p>refer: <a href="https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/">https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/</a></p>
+
+<p><code>var</code>可以在全局范围声明或函数/局部范围内声明。</p>
+
+<p>当在最外层函数的外部声明<code>var</code>变量时，作用域是全局的。这意味着在最外层函数的外部用<code>var</code>声明的任何变量都可以在<code>windows</code>中使用。</p>
+
+<p>例如：</p>
+
+<pre>
+<code>var tester = &#39;hey hi&#39;;
+function newFunction() {
+    var hello = &#39;hello&#39;;
+}
+console.log(hello); // error: hello is not defined
+</code></pre>
+
+<p>var变量可以重复声明和修改</p>
+
+<p>例如：</p>
+
+<pre>
+<code>var greeter = &#39;hey hi&#39;;
+var greeter = &#39;say Hello instead&#39;;
+</code></pre>
+
+<p>例如：</p>
+
+<pre>
+<code>var greeter = &#39;hey hi&#39;;
+greeter = &#39;say Hello instead&#39;;
+</code></pre>
+
+<p>&nbsp;</p>
+
+<p>（可以不看了。）</p>
+
+<p>var可以进行变量提升：<br />
+变量提升是 JavaScript 的一种机制:在执行代码之前，变量和函数声明会移至其作用域的顶部</p>
+
+<p>例如：</p>
+
+<pre>
+<code>console.log(greeter);
+var greeter = &#39;say hello&#39;;</code></pre>
+
+<p><code>在编译的时候会被理解为：</code></p>
+
+<pre>
+<code>var greeter;
+console.log(greeter); // greeter is undefined
+greeter = &#39;say hello&#39;;
+</code></pre>
+
+<p>例如写一个test.js：</p>
+
+<p><code>console.log(greeter);<br />
+var greeter = &#39;say hello&#39;;<br />
+console.log(greeter);</code></p>
+
+<p>然后运行：<br />
+<code>node test.js</code></p>
+
+<p>输出：</p>
+
+<p><code>undefined<br />
+say hello</code></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

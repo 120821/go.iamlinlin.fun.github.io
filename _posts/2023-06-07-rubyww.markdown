@@ -1,0 +1,54 @@
+---
+layout: post
+title: "ruby %W{}和%w{}的使用"
+date: "2023-06-07"
+categories: 
+---
+<p>%w{}是Ruby中的一种快捷方式，用于创建一个以空格分隔的字符串数组。例如，%w{apple banana cherry}将创建一个包含3个字符串元素的数组：[&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]。这种写法比使用[&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]要更简便，并且更易于阅读。</p>
+
+<p>可以使用#{}结合变量来在%w{}中插入变量。例如，</p>
+
+<pre>
+<code>file_name = &quot;example.txt&quot;
+
+file_data = %w{This is an example file #{file_name}}</code>
+
+这将创建一个字符串数组 `file_data`，其中包含三个元素：&quot;This&quot;、&quot;is&quot;、&quot;an&quot;、&quot;example&quot;、&quot;file&quot;和&quot;example.txt&quot;。注意，#{file_name} 将会被替换成变量 `file_name` 的值。</pre>
+
+<p>在使用 <code>%w</code> 时，Ruby 会将字符串中的空格作为分隔符，将其拆分成一个字符串数组。在上面这个例子中，Ruby 会将 <code>&quot;This is an example file #{file_name}&quot;</code> 拆分为 <code>&quot;This&quot;、&quot;is&quot;、&quot;an&quot;、&quot;example&quot;、&quot;file&quot; 和 &quot;\#{file_name}&quot;</code> 这几个字符串，其中 <code>&quot;\#{file_name}&quot;</code> 并不会被解析为变量 <code>file_name</code> 的值。如果想要将 <code>file_name</code> 的值插入到字符串中，可以使用字符串插值的方式，例如：</p>
+
+<pre>
+<code>file_data = %W{This is an example file #{file_name}}</code></pre>
+
+<p>注意，在使用 <code>%W</code> 时需要将字符串中的变量使用 <code>#{}</code> 包裹起来，这样 Ruby 才会在字符串中插入变量的值</p>
+
+<div class="md md_doc_content" id="code_1686128243151_3">
+<p>%w{}和%W{}都是用来表示字符串数组的语法，区别在于%w{}默认以空格作为分隔符，而%W{}可以自定义分隔符。</p>
+
+<p>例如：</p>
+
+<pre>
+<code>arr1 = %w{apple banana orange}
+arr2 = %W[apple banana orange]
+arr3 = %w|apple banana orange|
+arr4 = %W(apple banana orange)
+
+puts arr1.inspect #=&gt; [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]
+puts arr2.inspect #=&gt; [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]
+puts arr3.inspect #=&gt; [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]
+puts arr4.inspect #=&gt; [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;]</code></pre>
+
+<p>以上四个数组的输出结果都是一样的，因为它们都表示的是包含三个元素的字符串数组。但是使用了不同的分隔符。</p>
+
+<p>另外需要注意的是，%w{}和%W{}中的字符串不需要使用引号括起来。例如：</p>
+
+<pre>
+<code>arr5 = %w{I am a string}
+arr6 = %W{I am also a string}
+
+puts arr5.inspect #=&gt; [&quot;I&quot;, &quot;am&quot;, &quot;a&quot;, &quot;string&quot;]
+puts arr6.inspect #=&gt; [&quot;I&quot;, &quot;am&quot;, &quot;also&quot;, &quot;a&quot;, &quot;string&quot;]</code></pre>
+
+<p>以上两个数组输出的结果也是一样的。</p>
+</div>
+

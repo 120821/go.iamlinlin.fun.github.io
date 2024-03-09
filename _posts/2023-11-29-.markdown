@@ -1,0 +1,8 @@
+---
+layout: post
+title: "即使是在本地进行不确定的操作，也一定要备份数据库！！！"
+date: "2023-11-29"
+categories: 
+---
+<p>在本地ubuntu安装dvwa，mysql重置了。。。不过没有重要的数据</p>
+

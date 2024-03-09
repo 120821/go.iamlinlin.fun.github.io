@@ -1,0 +1,41 @@
+---
+layout: post
+title: "ruby self的简单使用"
+date: "2023-04-25"
+categories: 
+---
+<p>在 Ruby 中，<code>self</code> 是一个特殊的关键字，它指的是当前对象。举个例子，假设你有一个名为 Person 的类，可以使用 <code>self</code> 来引用当前对象的属性。</p>
+
+<pre>
+<code>class Person
+  attr_accessor :name
+
+  def say_hello
+    puts &quot;Hi, my name is #{self.name}.&quot;
+  end
+end
+
+p = Person.new
+p.name = &quot;Alice&quot;
+p.say_hello   # 输出 Hi, my name is Alice.</code></pre>
+
+<p>在上面的例子中，<code>self.name</code> 指的是当前对象的 <code>name</code> 属性，它等价于 <code>@name</code>。</p>
+
+<p>除了可以引用当前对象的属性，<code>self</code> 还可以用来调用当前对象的方法，比如：</p>
+
+<pre>
+<code>class Person
+  def do_something
+    puts &quot;I can do something!&quot;
+  end
+
+  def do_another_thing
+    self.do_something
+  end
+end
+
+p = Person.new
+p.do_another_thing   # 输出 I can do something!</code></pre>
+
+<p>这里 <code>self.do_something</code> 调用了当前对象的 <code>do_something</code> 方法。注意，使用 <code>self</code> 调用方法与直接调用方法的区别在于，如果当前对象覆盖了该方法，使用 <code>self</code> 调用的是对象的原始方法，而直接调用是调用对象覆盖的方法。</p>
+

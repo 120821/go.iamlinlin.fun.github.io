@@ -1,0 +1,15 @@
+---
+layout: post
+title: "ul 不显示圆点 html"
+date: "2022-09-01"
+categories: 
+---
+<pre>
+<a href="https://www.php.cn/website-design-ask-491315.html">https://www.php.cn/website-design-ask-491315.html</a></pre>
+
+<pre><code>
+ul{
+   list-style-type:none;
+}</code>
+</pre>
+

@@ -1,0 +1,34 @@
+---
+layout: post
+title: "vue 配置的vuex版本选择"
+date: "2022-06-09"
+categories: 
+---
+<p id="正常使用的顺序">正常使用的顺序</p>
+
+<p>假设,我们有两个页面: &quot;页面1&quot; 和&quot;页面2&quot; , 共同使用一个变量: counter. 页面1对 &quot;counter&quot; + 1 后, 页面2的值也会发生变化.</p>
+
+<p id="1修改packagejson">1.修改<code>package.json</code>:</p>
+
+<pre>
+<code>  &quot;dependencies&quot;: {
+    &quot;vuex&quot;: &quot;^2.3.1&quot;
+  },
+</code></pre>
+
+<p>如果不确定你的 vuex 用什么版本,就先手动安装一下:</p>
+
+<pre>
+<code>$ npm install vuex --verbose
+</code></pre>
+
+<p>然后看安装过来的版本号就可以了.</p>
+
+<p>如果以上命令都无法安装，那么进行搜索相关版本号进行安装</p>
+
+<p>本机使用2.6.1 安装的vuex版本为3</p>
+
+<p><img alt="" height="1080" src="https://img-blog.csdnimg.cn/2bdf5cc6a2ff40a1acda87af58045d4c.png" width="1200" /></p>
+
+<p>&nbsp;</p>
+

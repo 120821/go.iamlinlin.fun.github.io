@@ -1,0 +1,209 @@
+---
+layout: post
+title: "java map"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>一、概述：</p> 
+<ol>
+<li> <p>Interface Map&lt;K,V&gt; k:键的类型；V：值的类型</p> </li>
+<li> <p>将键映射到值的对象；不能包含重复的键；每个键可以映射到最多一个值</p> </li>
+</ol>
+<p>二、创建Map集合的对象方式</p> 
+<p>1.使用多态的方式</p> 
+<p>2.具体实现类HashMap</p> 
+<pre>public static void main(String[] args) {
+        //创建Map集合对象
+        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+        //添加元素使用put方法，默认自然排序
+        m.put("02","李四");
+        m.put("04","赵六");
+        m.put("01","张三");
+        m.put("03","王五");
+        System.out.println(m);
+    }
+}</pre> 
+<p>三、Map集合的常用方法</p> 
+<table>
+<thead><tr>
+<th>方法名</th>
+<th>说明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>V put(K key,V value)</td>
+<td>添加元素，添加重复键值元素会覆盖</td>
+</tr>
+<tr>
+<td>V remove(Object key)</td>
+<td>根据键删除键值对元素</td>
+</tr>
+<tr>
+<td>void clear()</td>
+<td>清除所有的键值对元素</td>
+</tr>
+<tr>
+<td>Boolean containsKey(Object key)</td>
+<td>判断集合是否包含指定的键,包含返回true</td>
+</tr>
+<tr>
+<td>Boolean containsValue(Object value)</td>
+<td>判断集合是否包含指定的值,包含返回true</td>
+</tr>
+<tr>
+<td>Boolean isEmpty()</td>
+<td>判断集合是否为空</td>
+</tr>
+<tr>
+<td>int size()</td>
+<td>获取集合的长度，也就是键值对的个数</td>
+</tr>
+</tbody>
+</table>
+<pre>public class MapDemo01 {
+    public static void main(String[] args) {
+        //创建Map集合对象
+        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+        //添加元素，put方法
+        m.put("1","张三");
+        m.put("2","李四");
+        m.put("3","王五");
+        m.put("4","赵六");
+        // System.out.println(m);
+        //根据键删除键值对元素
+        System.out.println(m.remove("3"));//切记键是什么类型就写什么类型，不然会返回null
+        System.out.println(m);
+        //清除所有键值对元素
+        m.clear();
+        //Boolean isEmpty()判断集合是否为空
+        System.out.println(m.isEmpty());
+       // System.out.println(m);
+        //Boolean containsKey(Object key);判断集合中是否包含指定的键
+        System.out.println(m.containsKey("5"));//切记键是什么类型就写什么类型，不然会返回null
+        //Boolean containsValue(Object value)判断集合是否包含指定的值,包含返回true
+        System.out.println(m.containsValue("张三"));
+        //int size()获取集合的长度，也就是键值对的个数
+        System.out.println(m.size());
+    }
+}
+​</pre> 
+<p>四、Map的获取方法</p> 
+<table>
+<thead><tr>
+<th>方法名</th>
+<th>说明</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>V get(Object key)</td>
+<td>根据键获取值</td>
+</tr>
+<tr>
+<td>Set&lt;K&gt;keySet()</td>
+<td>获取所有键的集合</td>
+</tr>
+<tr>
+<td>Collection&lt;V&gt;values()</td>
+<td>获取所有值的集合</td>
+</tr>
+<tr>
+<td>Set&lt;Map.Entry&lt;K,V&gt;&gt;entrySet()</td>
+<td>获取所有键值对对象的集合</td>
+</tr>
+</tbody>
+</table>
+<pre>public class MapDemo02 {
+    public static void main(String[] args) {
+        //创建Map对象
+        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+        //添加元素
+        m.put("1","张三");
+        m.put("3","李四");
+        m.put("4","王五");
+        m.put("2","赵六");
+//        System.out.println(m);
+        //V get(Object key)根据键获取值
+        System.out.println(m.get("3"));//要注意键的类型，类型不对会报null
+        //Set&lt;K&gt;keySet()获取所有键的集合,因为返回的是个集合，所以用增强for遍历
+        Set&lt;String&gt; k=m.keySet();
+        for (String key:k){
+            System.out.println(key);
+        }
+        //Collection&lt;V&gt;values()获取所有值的集合,注意，他会按照键的排序对值进行排序
+        Collection&lt;String&gt; c=m.values();
+        for (String v:c){
+            System.out.println(v);
+        }
+​
+    }
+}</pre> 
+<p>五、Map集合的遍历方式</p> 
+<p>方式一：</p> 
+<p>1.先获取Map集合中的所有键的集合，使用方法setKey()</p> 
+<p>2.遍历所有键的集合获取每一个键</p> 
+<p>3.通过每一个键获取相对应的值 getValues方法</p> 
+<pre>public static void main(String[] args) {
+        //方式一
+        //创建Map集合对象
+        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+        //添加键值对
+        m.put("1","张三");
+        m.put("3","李四");
+        m.put("4","王五");
+        m.put("2","赵六");
+        //获取所有键的集合
+        Set&lt;String&gt;s=m.keySet();
+        //遍历
+        for (String key:s){
+            //再通过键获取相对应的值
+            String value=m.get(key);
+            System.out.println(key+","+value);
+        }
+    }
+}</pre> 
+<p>方式二、</p> 
+<p>1.获取所有键值对的集合，使用Set&lt;Map.Entry&lt;K,V&gt;&gt;entrySet()方法</p> 
+<p>2.遍历这个集合获得每一个键值对 对象也就是Map.Entry对象</p> 
+<p>3.再根据键值对对象获取值和键</p> 
+<p>getKey()获取键</p> 
+<p>getValue()获取值</p> 
+<pre>public static void main(String[] args) {
+//        //方式一
+//        //创建Map集合对象
+//        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+//        //添加键值对
+//        m.put("1","张三");
+//        m.put("3","李四");
+//        m.put("4","王五");
+//        m.put("2","赵六");
+//        //获取所有键的集合
+//        Set&lt;String&gt;s=m.keySet();
+//        //遍历
+//        for (String key:s){
+//            //再通过键获取相对应的值
+//            String value=m.get(key);
+//            System.out.println(key+","+value);
+//        }
+        //方式二
+        //创建Map集合对象
+        Map&lt;String,String&gt; m=new HashMap&lt;String,String&gt;();
+        //添加键值对
+        m.put("1","张三");
+        m.put("3","李四");
+        m.put("4","王五");
+        m.put("2","赵六");
+        //获取所有键值对的集合Set&lt;Map.Entry&lt;K,V&gt;&gt;entrySet()
+        Set&lt;Map.Entry&lt;String,String&gt;&gt; s= m.entrySet();
+        //遍历该集合
+        for (Map.Entry&lt;String,String&gt; ss:s){
+            //通过键值对对象获取键值
+            String key=ss.getKey();
+            //通过键值对对象获取值
+            String value=ss.getValue();
+            System.out.println(key+","+value);
+​
+        }
+    }
+}</pre>
+                

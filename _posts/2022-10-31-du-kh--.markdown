@@ -1,0 +1,11 @@
+---
+layout: post
+title: "du . -kh --查看文件夹大小"
+date: "2022-10-31"
+categories: 
+---
+<p>du . -kh<br />
+691M&nbsp;&nbsp; &nbsp;.</p>
+
+<p>&nbsp;</p>
+

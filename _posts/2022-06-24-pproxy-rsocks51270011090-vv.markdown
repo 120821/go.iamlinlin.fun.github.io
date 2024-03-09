@@ -1,0 +1,94 @@
+---
+layout: post
+title: "pproxy -r socks5://127.0.0.1:1090 -vv"
+date: "2022-06-24"
+categories: 
+---
+<p>pproxy -r socks5://127.0.0.1:1090 -vv<br />
+Serving on :8080 by http,socks4,socks5<br />
+2022-06-24 18:40:32 http 192.168.0.102:42848 -&gt; socks5 127.0.0.1:1090 -&gt; fastdl.mongodb.org:443<br />
+2022-06-24 18:40:36 http 192.168.0.102:42850 -&gt; socks5 127.0.0.1:1090 -&gt; fastdl.mongodb.org:443<br />
+2022-06-24 18:40:38 http 192.168.0.102:42852 -&gt; socks5 127.0.0.1:1090 -&gt; fastdl.mongodb.org:443<br />
+2022-06-24 18:42:13 http 192.168.0.102:42856 -&gt; socks5 127.0.0.1:1090 -&gt; fastdl.mongodb.org:443<br />
+DIRECT: 0 (0.0K/s,0.0K/s)&nbsp;&nbsp; PROXY: 0 (0.0K/s,0.0K/s)</p>
+
+<p><img src="/uploads/ckeditor/pictures/68/image-20220624221820-1.png" style="height:190px; width:1073px" /></p>
+
+<p>vim ~/env_file<br />
+linlin@linlin-i5:/workspace/lueluelue-airdrop-admin$ ifconfig<br />
+br-1cdb9e69418c: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.19.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.19.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:7e:15:98:2a&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>br-5c3dad90f52b: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.21.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.21.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:ee:ab:7a:fc&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>br-5d40ced148b5: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.23.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.23.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:2c:e9:5b:68&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>br-75ab2acb8190: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.22.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.22.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:17:6a:6e:34&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>br-8699ceffea25: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.18.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.18.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:18:27:e7:1e&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>br-c200ea24cd1a: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.20.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.20.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:7e:1e:14:5b&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>docker0: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 172.17.0.1&nbsp; netmask 255.255.0.0&nbsp; broadcast 172.17.255.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 02:42:fe:62:57:b4&nbsp; txqueuelen 0&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 0&nbsp; bytes 0 (0.0 B)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;&nbsp; mtu 65536<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 127.0.0.1&nbsp; netmask 255.0.0.0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet6 ::1&nbsp; prefixlen 128&nbsp; scopeid 0x10&lt;host&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; loop&nbsp; txqueuelen 1000&nbsp; (Local Loopback)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 4625135&nbsp; bytes 2597711076 (2.5 GB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 4625135&nbsp; bytes 2597711076 (2.5 GB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>wlo1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;&nbsp; mtu 1500<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet 192.168.0.102&nbsp; netmask 255.255.255.0&nbsp; broadcast 192.168.0.255<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet6 fe80::d150:4db9:6c63:6bd1&nbsp; prefixlen 64&nbsp; scopeid 0x20&lt;link&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ether 14:13:33:af:aa:ed&nbsp; txqueuelen 1000&nbsp; (Ethernet)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets 19999777&nbsp; bytes 25459564929 (25.4 GB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX errors 0&nbsp; dropped 0&nbsp; overruns 0&nbsp; frame 0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets 9217122&nbsp; bytes 1395579997 (1.3 GB)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX errors 0&nbsp; dropped 0 overruns 0&nbsp; carrier 0&nbsp; collisions 0</p>
+
+<p>&nbsp;</p>
+

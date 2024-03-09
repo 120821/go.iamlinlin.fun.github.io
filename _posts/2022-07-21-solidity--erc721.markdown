@@ -1,0 +1,215 @@
+---
+layout: post
+title: "solidity--erc721"
+date: "2022-07-21"
+categories: 
+---
+<p>example</p>
+
+<p>// SPDX-License-Identifier: MIT<br />
+pragma solidity ^0.8.13;</p>
+
+<p>interface IERC165 {<br />
+&nbsp;&nbsp;&nbsp; function supportsInterface(bytes4 interfaceID) external view returns (bool);<br />
+}</p>
+
+<p>interface IERC721 is IERC165 {<br />
+&nbsp;&nbsp;&nbsp; function balanceOf(address owner) external view returns (uint balance);</p>
+
+<p>&nbsp;&nbsp;&nbsp; function ownerOf(uint tokenId) external view returns (address owner);</p>
+
+<p>&nbsp;&nbsp;&nbsp; function safeTransferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint tokenId<br />
+&nbsp;&nbsp;&nbsp; ) external;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function safeTransferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint tokenId,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bytes calldata data<br />
+&nbsp;&nbsp;&nbsp; ) external;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function transferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint tokenId<br />
+&nbsp;&nbsp;&nbsp; ) external;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function approve(address to, uint tokenId) external;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function getApproved(uint tokenId) external view returns (address operator);</p>
+
+<p>&nbsp;&nbsp;&nbsp; function setApprovalForAll(address operator, bool _approved) external;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function isApprovedForAll(address owner, address operator)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; external<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; view<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; returns (bool);<br />
+}</p>
+
+<p>interface IERC721Receiver {<br />
+&nbsp;&nbsp;&nbsp; function onERC721Received(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address operator,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint tokenId,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bytes calldata data<br />
+&nbsp;&nbsp;&nbsp; ) external returns (bytes4);<br />
+}</p>
+
+<p>contract ERC721 is IERC721 {<br />
+&nbsp;&nbsp;&nbsp; event Transfer(address indexed from, address indexed to, uint indexed id);<br />
+&nbsp;&nbsp;&nbsp; event Approval(address indexed owner, address indexed spender, uint indexed id);<br />
+&nbsp;&nbsp;&nbsp; event ApprovalForAll(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address indexed owner,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address indexed operator,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool approved<br />
+&nbsp;&nbsp;&nbsp; );</p>
+
+<p>&nbsp;&nbsp;&nbsp; // Mapping from token ID to owner address<br />
+&nbsp;&nbsp;&nbsp; mapping(uint =&gt; address) internal _ownerOf;</p>
+
+<p>&nbsp;&nbsp;&nbsp; // Mapping owner address to token count<br />
+&nbsp;&nbsp;&nbsp; mapping(address =&gt; uint) internal _balanceOf;</p>
+
+<p>&nbsp;&nbsp;&nbsp; // Mapping from token ID to approved address<br />
+&nbsp;&nbsp;&nbsp; mapping(uint =&gt; address) internal _approvals;</p>
+
+<p>&nbsp;&nbsp;&nbsp; // Mapping from owner to operator approvals<br />
+&nbsp;&nbsp;&nbsp; mapping(address =&gt; mapping(address =&gt; bool)) public isApprovedForAll;</p>
+
+<p>&nbsp;&nbsp;&nbsp; function supportsInterface(bytes4 interfaceId) external pure returns (bool) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; interfaceId == type(IERC721).interfaceId ||<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; interfaceId == type(IERC165).interfaceId;<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function ownerOf(uint id) external view returns (address owner) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; owner = _ownerOf[id];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(owner != address(0), &quot;token doesn&#39;t exist&quot;);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function balanceOf(address owner) external view returns (uint) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(owner != address(0), &quot;owner = zero address&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return _balanceOf[owner];<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function setApprovalForAll(address operator, bool approved) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isApprovedForAll[msg.sender][operator] = approved;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit ApprovalForAll(msg.sender, operator, approved);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function approve(address spender, uint id) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address owner = _ownerOf[id];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msg.sender == owner || isApprovedForAll[owner][msg.sender],<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;not authorized&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _approvals[id] = spender;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Approval(owner, spender, id);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function getApproved(uint id) external view returns (address) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(_ownerOf[id] != address(0), &quot;token doesn&#39;t exist&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return _approvals[id];<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function _isApprovedOrOwner(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address owner,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address spender,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint id<br />
+&nbsp;&nbsp;&nbsp; ) internal view returns (bool) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (spender == owner ||<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isApprovedForAll[owner][spender] ||<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spender == _approvals[id]);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function transferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint id<br />
+&nbsp;&nbsp;&nbsp; ) public {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(from == _ownerOf[id], &quot;from != owner&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(to != address(0), &quot;transfer to zero address&quot;);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(_isApprovedOrOwner(from, msg.sender, id), &quot;not authorized&quot;);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _balanceOf[from]--;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _balanceOf[to]++;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _ownerOf[id] = to;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delete _approvals[id];</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(from, to, id);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function safeTransferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint id<br />
+&nbsp;&nbsp;&nbsp; ) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transferFrom(from, to, id);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to.code.length == 0 ||<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IERC721Receiver(to).onERC721Received(msg.sender, from, id, &quot;&quot;) ==<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IERC721Receiver.onERC721Received.selector,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;unsafe recipient&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function safeTransferFrom(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address from,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address to,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint id,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bytes calldata data<br />
+&nbsp;&nbsp;&nbsp; ) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; transferFrom(from, to, id);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to.code.length == 0 ||<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IERC721Receiver(to).onERC721Received(msg.sender, from, id, data) ==<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IERC721Receiver.onERC721Received.selector,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;unsafe recipient&quot;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function _mint(address to, uint id) internal {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(to != address(0), &quot;mint to zero address&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(_ownerOf[id] == address(0), &quot;already minted&quot;);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _balanceOf[to]++;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _ownerOf[id] = to;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(address(0), to, id);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function _burn(uint id) internal {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address owner = _ownerOf[id];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(owner != address(0), &quot;not minted&quot;);</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _balanceOf[owner] -= 1;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delete _ownerOf[id];<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; delete _approvals[id];</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(owner, address(0), id);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+}</p>
+
+<p>contract MyNFT is ERC721 {<br />
+&nbsp;&nbsp;&nbsp; function mint(address to, uint id) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _mint(to, id);<br />
+&nbsp;&nbsp;&nbsp; }</p>
+
+<p>&nbsp;&nbsp;&nbsp; function burn(uint id) external {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(msg.sender == _ownerOf[id], &quot;not owner&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _burn(id);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+}</p>
+
+<p>&nbsp;</p>
+

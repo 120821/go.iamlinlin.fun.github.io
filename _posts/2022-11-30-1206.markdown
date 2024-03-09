@@ -1,0 +1,65 @@
+---
+layout: post
+title: "1206部署"
+date: "2022-11-30"
+categories: 
+---
+<p>安装vim&nbsp;<a href="http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim">http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim</a></p>
+
+<pre>
+<code>git clone&nbsp; https://github.com/sg552/happy_book_vim.git</code></pre>
+
+<p>1.安装vundle :</p>
+
+<pre><code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</code></pre>
+
+<p>2.clone本项目:</p>
+
+<pre><code>cp dot_vimrc_for_vim8 ~/.vimrc</code></pre>
+
+<p>3.进入到vim中,然后</p>
+
+<pre><code>:PluginInstall</code></pre>
+
+<p>创建新目录</p>
+<p><code>sudo mkdir /opt/app -p</code></pre>
+
+<p>进入新的目录</p>
+<pre><code>cd /opt/app</code></pre>
+
+<p>修改权限</p>
+
+<pre><code>sudo chown ubuntu:ubuntu . -R &nbsp;</code></pre>
+
+<p>克隆项目，安装asdf：</p>
+
+<pre><code>git clone ...<br />
+cd ~</code></pre>
+<p>1.安装asdf</p>
+
+<pre><code>git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2</code></pre>
+
+<p>然后增加 ~/.bashrc：</p>
+<pre><code>&nbsp;source ./bashrc</code></pre>
+
+<pre><code>. $HOME/.asdf/asdf.sh</code></pre>
+<p>asdf(查看是否显示所有命令)</p>
+
+<p>2.安装bundle</p>
+
+<pre><code>sudo apt update</code></pre>
+
+<pre><code>sudo apt install bundler</code></pre>
+<p>安装ruby</p>
+
+<pre><code>asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git</code></pre>
+
+<pre><code>asdf install ruby latest</code></pre>
+
+<pre><code>ruby -v</code></pre>
+<pre><code>ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]<br />
+ubuntu@ip-172-31-46-188:~$ which ruby<br />
+/usr/bin/ruby</code></pre>
+
+<p>&nbsp;</p>
+

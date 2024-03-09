@@ -1,0 +1,65 @@
+---
+layout: post
+title: "react log 等级"
+date: "2023-11-06"
+categories: 
+---
+<p>日志可以进行调试和监控应用的运行。</p>
+
+<p>react 使用console的全局独行进行日志记录： console.log /console.warn/console.error/console.info/console.debug</p>
+
+<p>1.console.log用于一般的调试信心，打印变量的值，跟踪函数的执行流程。</p>
+
+<p>2.console.warn用于遇到非致命的问题或者潜在的错误的时候，提出警告</p>
+
+<p>3.console.error用于遇到严重的错误的时候，可以发出警告，不会中断应用的执行。</p>
+
+<p>4.console.info用于输出较为重要的信息，不是错误或警告</p>
+
+<p>5.console.debug用于开发过程输出详细的调试信息。生产环境会禁用或忽略console.debug</p>
+
+<p>示例：</p>
+
+<p>1.console.log</p>
+
+<pre>
+<code><span style="color:#dcc6e0">const</span> handleClick = () =&gt; {
+  <span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&#39;Button clicked!&#39;</span>);
+  <span style="color:#d4d0ab">// 执行其他逻辑</span>
+}
+
+<span style="color:#d4d0ab">// ...</span>
+
+&lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;</code></pre>
+
+<p>2.console.warn</p>
+
+<pre>
+<code><span style="color:#dcc6e0">const</span> fetchData = () =&gt; {
+  <span style="color:#dcc6e0">if</span> (!isConnected) {
+    <span style="color:#f5ab35">console</span>.warn(<span style="color:#abe338">&#39;No internet connection. Retrieving data from cache.&#39;</span>);
+    <span style="color:#d4d0ab">// 从缓存中获取数据</span>
+  } <span style="color:#dcc6e0">else</span> {
+    <span style="color:#d4d0ab">// 发起网络请求获取数据</span>
+  }
+}
+
+<span style="color:#d4d0ab">// ...</span>
+
+fetchData();</code></pre>
+
+<p>3.console.error</p>
+
+<pre>
+<code><span style="color:#dcc6e0">const</span> divide = (<span style="color:#f5ab35">a, b</span>) =&gt; {
+  <span style="color:#dcc6e0">if</span> (b === <span style="color:#f5ab35">0</span>) {
+    <span style="color:#f5ab35">console</span>.error(<span style="color:#abe338">&#39;Division by zero error!&#39;</span>);
+    <span style="color:#dcc6e0">return</span> <span style="color:#f5ab35">NaN</span>;
+  }
+
+  <span style="color:#dcc6e0">return</span> a / b;
+}
+
+<span style="color:#dcc6e0">const</span> result = divide(<span style="color:#f5ab35">10</span>, <span style="color:#f5ab35">0</span>);
+<span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&#39;Result:&#39;</span>, result);</code></pre>
+

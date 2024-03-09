@@ -1,0 +1,26 @@
+---
+layout: post
+title: "nginx 设置默认站点"
+date: "2023-10-23"
+categories: 
+---
+<p>在设置好c.com的ssl后，发现访问http://c.com会定向到a.com， 设置c.com为default还是不行，在火狐的隐私窗口可以通过http://c.com定向到https://c.com, 但是非隐私窗口就还是定向到a.com,</p>
+
+<p>设置默认站点hi.c.com, 重启nginx，在非隐私窗口访问http://c.com， 可以定向到https://c.com</p>
+
+<pre>
+<code><span style="color:#00e0e0">server</span> {
+    <span style="color:#ffd700">listen</span> <span style="color:#f5ab35">80</span> default_server;
+    <span style="color:#ffd700">listen</span> [::]:<span style="color:#f5ab35">80</span> default_server;
+
+    <span style="color:#ffd700">root</span> /tmp;  <span style="color:#d4d0ab"># 网站文件的根目录</span>
+    <span style="color:#ffd700">index</span> hi.txt;  <span style="color:#d4d0ab"># 默认的索引文件名</span>
+
+    <span style="color:#ffd700">server_name</span> hi.c.com;  <span style="color:#d4d0ab"># 默认站点的服务器名称</span>
+
+    <span style="color:#ffd700">location</span> / {
+        <span style="color:#ffd700">default_type</span> text/html;
+        <span style="color:#ffd700">return</span> <span style="color:#f5ab35">200</span> <span style="color:#abe338">&quot;hi&quot;</span>;
+    }
+}</code></pre>
+

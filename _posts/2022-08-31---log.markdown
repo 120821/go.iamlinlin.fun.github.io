@@ -1,0 +1,40 @@
+---
+layout: post
+title: "内存满了 --清空log"
+date: "2022-08-31"
+categories: 
+---
+<p>在服务器进行新建文件的时候出现报错：</p>
+
+<p><img height="381" src="/uploads/ckeditor/pictures/377/image-20220831215209-1.png" width="1920" /></p>
+
+<p>使用命令查看磁盘使用状态：</p>
+
+<p>df -kh</p>
+
+<p>已经使用了100%</p>
+
+<p><img height="146" src="/uploads/ckeditor/pictures/378/image-20220831220242-2.png" width="597" /></p>
+
+<p>使用命令查看大文件是哪些：</p>
+
+<p><img height="146" src="/uploads/ckeditor/pictures/379/image-20220831220324-3.png" width="597" /></p>
+
+<p>然后看到最大的文件是nohup.out</p>
+
+<p><img height="146" src="/uploads/ckeditor/pictures/380/image-20220831220419-4.png" width="597" /></p>
+
+<p>使用命令进行清空文件：</p>
+
+<p>echo &#39;&#39; &gt; nohup.out</p>
+
+<p>然后看到磁盘还是100%的使用</p>
+
+<p>进入log查看文件</p>
+
+<p><img height="174" src="/uploads/ckeditor/pictures/381/image-20220831220600-5.png" width="994" /></p>
+
+<p>然后清空最大的文件</p>
+
+<p>echo 即可</p>
+

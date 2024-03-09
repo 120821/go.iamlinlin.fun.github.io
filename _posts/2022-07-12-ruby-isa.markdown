@@ -1,0 +1,51 @@
+---
+layout: post
+title: "ruby - is_a的简单认识"
+date: "2022-07-12"
+categories: 
+---
+<p>参考：<a href="https://apidock.com/ruby/Object/is_a%3F">https://apidock.com/ruby/Object/is_a%3F</a>&nbsp;&nbsp;<a href="https://stackoverflow.com/questions/53100328/edit-jsonb-data-in-textarea-form-field">https://stackoverflow.com/questions/53100328/edit-jsonb-data-in-textarea-form-field</a></p>
+
+<pre>
+<code><strong>is_a?</strong>(p1)</code> <em>public</em></pre>
+
+<div class="description">
+<p>Returns true if <em><a href="https://apidock.com/ruby/Object/class">class</a></em> is the <a href="https://apidock.com/ruby/Object/class">class</a> of <em>obj,</em> or if <em><a href="https://apidock.com/ruby/Object/class">class</a></em> is one of the superclasses of <em>obj</em> or modules included in <em>obj</em>.</p>
+
+<p>如果 class 是 obj 的类，或者 class 是 obj 的超类之一或 obj 中包含的模块，则返回 true</p>
+
+<pre>
+<code><span class="keyword">module </span><span class="module">M</span><span class="punct">;</span>    <span class="keyword">end</span>
+<span class="keyword">class </span><span class="class">A</span>
+  <span class="ident">include</span> <span class="constant">M</span>
+<span class="keyword">end</span>
+<span class="keyword">class </span><span class="class">B</span> <span class="punct">&lt;</span> <span class="constant">A</span><span class="punct">;</span> <span class="keyword">end</span>
+<span class="keyword">class </span><span class="class">C</span> <span class="punct">&lt;</span> <span class="constant">B</span><span class="punct">;</span> <span class="keyword">end</span>
+
+<span class="ident">b</span> <span class="punct">=</span> <span class="constant">B</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/new/class">new</a></span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/is_a%3F">is_a?</a></span> <span class="constant">A</span>          <span class="comment">#=&gt; true</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/is_a%3F">is_a?</a></span> <span class="constant">B</span>          <span class="comment">#=&gt; true</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/is_a%3F">is_a?</a></span> <span class="constant">C</span>          <span class="comment">#=&gt; false</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/is_a%3F">is_a?</a></span> <span class="constant">M</span>          <span class="comment">#=&gt; true</span>
+
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/kind_of%3F">kind_of?</a></span> <span class="constant">A</span>       <span class="comment">#=&gt; true</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/kind_of%3F">kind_of?</a></span> <span class="constant">B</span>       <span class="comment">#=&gt; true</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/kind_of%3F">kind_of?</a></span> <span class="constant">C</span>       <span class="comment">#=&gt; false</span>
+<span class="ident">b</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/ruby/Object/kind_of%3F">kind_of?</a></span> <span class="constant">M</span>       <span class="comment">#=&gt; true</span></code></pre>
+
+<pre class="default s-code-block">
+<code><code class="hljs language-ruby"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Thing</span> &lt; <span class="hljs-title class_ inherited__">ApplicationRecord</span>
+  <span class="hljs-keyword">def</span> <span class="hljs-title function_">settings=</span>(<span class="hljs-params">val</span>)
+    <span class="hljs-keyword">if</span> val.is_a?(String)
+      <span class="hljs-keyword">begin</span> 
+        <span class="hljs-variable language_">super</span> <span class="hljs-variable constant_">JSON</span>.parse(val)
+      <span class="hljs-keyword">rescue</span> <span class="hljs-variable constant_">JSON</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:ParserError</span>
+        errors[<span class="hljs-symbol">:settings</span>].add(<span class="hljs-string">&#39;is not valid JSON&#39;</span>)
+        <span class="hljs-variable language_">super</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></code></pre>
+</div>
+

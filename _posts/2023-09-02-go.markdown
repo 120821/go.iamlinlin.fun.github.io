@@ -1,0 +1,27 @@
+---
+layout: post
+title: "go 在列表页面管理用户权限"
+date: "2023-09-02"
+categories: 
+---
+<p>在react 前段浏览页面的时候，发现无论是普通用户还是管理员，都是显示该用户的计算方案，这个逻辑是不对的，所以应该根据是否是管理员进行判断，如果是管理员就显示所有的数据。</p>
+
+<pre>
+<code><span style="color:#dcc6e0">func</span> <span style="color:#f5ab35">(u *Users)</span> <span style="color:#00e0e0">GetCalculationPlans</span><span style="color:#f5ab35">()</span> <span style="color:#f5ab35">([]CalculationPlans, error)</span> {
+    <span style="color:#dcc6e0">var</span> calculationPlans []CalculationPlans
+
+    <span style="color:#dcc6e0">if</span> u.IsAdmin == true {
+        err := db.Find(&amp;calculationPlans).Error
+        <span style="color:#dcc6e0">if</span> err != <span style="color:#f5ab35">nil</span> {
+            <span style="color:#dcc6e0">return</span> <span style="color:#f5ab35">nil</span>, err
+        }
+    } <span style="color:#dcc6e0">else</span> {
+        err := db.Where(<span style="color:#abe338">&quot;user_id = ?&quot;</span>, u.ID).Order(<span style="color:#abe338">&quot;id desc&quot;</span>).Find(&amp;calculationPlans).Error
+        <span style="color:#dcc6e0">if</span> err != <span style="color:#f5ab35">nil</span> {
+            <span style="color:#dcc6e0">return</span> <span style="color:#f5ab35">nil</span>, err
+        }
+    }
+
+    <span style="color:#dcc6e0">return</span> calculationPlans, <span style="color:#f5ab35">nil</span>
+}</code></pre>
+

@@ -1,0 +1,36 @@
+---
+layout: post
+title: "列表页增加： CSV 下载的按钮和功能"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>在index页面，增加按钮下载功能，实现用户下载index页面表格内容</p> 
+<p>在需要下载的页面对应的controller文件中增加如下的内容</p> 
+<pre><code>def download_csv
+    require 'csv'
+    # 这个是获得数据的方法
+
+    headers = %w{id title content }
+    file = CSV.generate do |csv|
+      # 先放　header
+      csv &lt;&lt; headers
+      # 再放　 csv 的内容
+      Blog.all.each_with_index do |blog, index|
+        row = [id, blog.title, blog.content]
+        Rails.logger.info "== row: #{row.inspect}"
+        csv &lt;&lt; row
+      end
+   end
+    send_data file.encode("utf-8", "utf-8"), :type =&gt; 'text/csv; charset=utf-8; header=present', :disposition =&gt; "attachment;filename=domains.csv"
+ end</code></pre> 
+<p>接着在视图页面index页面增加如下内容</p> 
+<pre><code>&lt;%= link_to '下载csv', download_csv_blogs_path %&gt;</code></pre> 
+<p>然后在config/routes.rb文件中增加路由</p> 
+<pre><code> resources :blogs, only: [:index, :edit, :update] do
+   collection do
+     get :download_csv
+   end
+ end</code></pre> 
+<p>这样启动服务器进入页面点击按钮就可以下载了</p>
+                

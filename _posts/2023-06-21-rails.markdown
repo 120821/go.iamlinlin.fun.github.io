@@ -1,0 +1,21 @@
+---
+layout: post
+title: "rails 怎么根据日期筛选出每天的最后一条数据"
+date: "2023-06-21"
+categories: 
+---
+<p>可以使用Rails的ActiveRecord来查询，使用group和maximum函数可以遍历daily_goods_statistics的每一天，然后找出当天的最后一条数据。<br />
+<br />
+例如，假设daily_goods_statistics有一个字段叫created_at记录了创建时间，可以使用下面的代码筛选出每天的最后一条数据：<br />
+&nbsp;</p>
+
+<pre>
+<code>last_records = DailyGoodsStatistic.group(&quot;DATE(created_at)&quot;).maximum(:created_at)
+
+result = DailyGoodsStatistic.where(created_at: last_records.values)</code></pre>
+
+<p><br />
+这段代码首先使用group函数根据created_at字段的日期进行分组，然后使用maximum函数找到每个分组的最大日期。这些最大日期对应的就是每天的最后一条数据的创建时间，然后使用where函数找到这些数据记录。最后，查询结果就是每天的最后一条数据记录。</p>
+
+<p>&nbsp;</p>
+

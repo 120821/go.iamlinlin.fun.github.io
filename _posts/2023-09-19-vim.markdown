@@ -1,0 +1,14 @@
+---
+layout: post
+title: "vim 删除每一行的最后的逗号"
+date: "2023-09-19"
+categories: 
+---
+<p>使用：</p>
+
+<p><code>%s/,$//g</code></p>
+
+<p>理解：</p>
+
+<p><code>,$</code> 表示匹配每一行末尾的逗号。</p>
+

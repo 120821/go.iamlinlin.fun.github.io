@@ -1,0 +1,27 @@
+---
+layout: post
+title: "1219 部署asdf mysql "
+date: "2022-12-19"
+categories: 
+---
+<p>官网：asdf install mysql&nbsp; <a href="https://github.com/iroddis/asdf-mysql">https://github.com/iroddis/asdf-mysql</a></p>
+
+<pre>
+<code>asdf plugin-add mysql
+asdf list-all mysql
+asdf install mysql [VERSION]
+asdf global mysql [VERSION]</code></pre>
+
+<pre>
+<code>asdf install mysql 8.0.31</code></pre>
+
+<p>然后查看版本的时候出现了错误：</p>
+
+<pre>
+<code>error while loading shared libraries: libtinfo.so.5: cannot open shared object file: No such file or directory</code></pre>
+
+<p>解决： 参考：<a href="https://stackoverflow.com/questions/48674104/clang-error-while-loading-shared-libraries-libtinfo-so-5-cannot-open-shared-o">https://stackoverflow.com/questions/48674104/clang-error-while-loading-shared-libraries-libtinfo-so-5-cannot-open-shared-o</a></p>
+
+<pre>
+<code>sudo apt install libncurses5</code></pre>
+

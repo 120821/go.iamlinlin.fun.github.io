@@ -1,0 +1,28 @@
+---
+layout: post
+title: "表单的使用--账号密码记住密码"
+date: "2022-06-09"
+categories: 
+---
+
+                    <pre><code class="language-html">
+&lt;form action=""&gt;
+  &lt;div class="form-group"&gt;
+  &lt;label for="email"&gt;Email address:&lt;/label&gt;
+  &lt;input type="email" class="form-control" placeholder="Enter email" id="email"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group"&gt;
+  &lt;label for="pwd"&gt;Password:&lt;/label&gt;
+  &lt;input type="password" class="form-control" placeholder="Enter password" id="pwd"&gt;
+  &lt;/div&gt;
+  &lt;div class="form-group form-check"&gt;
+  &lt;label class="form-check-label"&gt;
+    &lt;input class="form-check-input" type="checkbox"&gt; Remember me
+  &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</code></pre> 
+<p><img alt="" height="295" src="https://img-blog.csdnimg.cn/cc333c1c47b54aa38f82eb3af49bb6b6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="832"></p> 
+<p> </p>
+                

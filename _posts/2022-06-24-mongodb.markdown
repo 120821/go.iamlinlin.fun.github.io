@@ -1,0 +1,424 @@
+---
+layout: post
+title: "导入数据到MongoDB"
+date: "2022-06-24"
+categories: 
+---
+<p>~/.asdf/plugins$ which docker<br />
+/usr/bin/docker<br />
+linlin@linlin-i5:~/.asdf/plugins$ sudo docker pull mongo:5.0.6<br />
+[sudo] password for linlin:<br />
+5.0.6: Pulling from library/mongo<br />
+Digest: sha256:fed6248ae0bb0d54c0448eb786c87120737eedc522172ee1536ad47789782348<br />
+Status: Image is up to date for mongo:5.0.6<br />
+docker.io/library/mongo:5.0.6<br />
+linlin@linlin-i5:~/.asdf/plugins$ sudo docker start ^C<br />
+linlin@linlin-i5:~/.asdf/plugins$ cd /workspace/<br />
+linlin@linlin-i5:/workspace$ mkdir docker_folder<br />
+mkdir: cannot create directory &lsquo;docker_folder&rsquo;: File exists<br />
+linlin@linlin-i5:/workspace$ cd docker_folder<br />
+linlin@linlin-i5:/workspace/docker_folder$ ls<br />
+collection-0--7642342716083924179.wt&nbsp;&nbsp; collection-7--7642342716083924179.wt&nbsp; index-16--7642342716083924179.wt&nbsp; index-8--7642342716083924179.wt&nbsp; storage.bson<br />
+collection-11--7642342716083924179.wt&nbsp; collection-9--7642342716083924179.wt&nbsp; index-1--7642342716083924179.wt&nbsp;&nbsp; journal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WiredTiger<br />
+collection-13--7642342716083924179.wt&nbsp; diagnostic.data&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index-18--7642342716083924179.wt&nbsp; _mdb_catalog.wt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WiredTigerHS.wt<br />
+collection-15--7642342716083924179.wt&nbsp; docker_folder2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index-19--7642342716083924179.wt&nbsp; mongo5.0.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WiredTiger.lock<br />
+collection-17--7642342716083924179.wt&nbsp; index-10--7642342716083924179.wt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index-3--7642342716083924179.wt&nbsp;&nbsp; mongo5.0.7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WiredTiger.turtle<br />
+collection-2--7642342716083924179.wt&nbsp;&nbsp; index-12--7642342716083924179.wt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index-5--7642342716083924179.wt&nbsp;&nbsp; mongod.lock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WiredTiger.wt<br />
+collection-4--7642342716083924179.wt&nbsp;&nbsp; index-14--7642342716083924179.wt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; index-6--7642342716083924179.wt&nbsp;&nbsp; sizeStorer.wt<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp; CREATED&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps -a<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+3b2d46e0543a&nbsp;&nbsp; f4a2a7264d08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;/bin/bash -c &#39;volta&hellip;&quot;&nbsp;&nbsp; 2 weeks ago&nbsp;&nbsp;&nbsp; Exited (127) 2 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compassionate_gould<br />
+a2f73981864a&nbsp;&nbsp; f4a2a7264d08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;/bin/bash -c &#39;volta&hellip;&quot;&nbsp;&nbsp; 2 weeks ago&nbsp;&nbsp;&nbsp; Exited (127) 2 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kind_davinci</p>
+
+<p><br />
+sudo docker start 5d5b<br />
+5d5b<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+5d5b156fb1b0&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 8 weeks ago&nbsp;&nbsp; Up 3 seconds&nbsp;&nbsp; 0.0.0.0:27017-&gt;27017/tcp, :::27017-&gt;27017/tcp&nbsp;&nbsp; mongo5.0.6<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker exec -it 5d5b bash<br />
+root@5d5b156fb1b0:/# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Error: couldn&#39;t connect to server 127.0.0.1:27017, connection attempt failed: SocketException: Error connecting to 127.0.0.1:27017 :: caused by :: Connection refused :<br />
+connect@src/mongo/shell/mongo.js:372:17<br />
+@(connect):2:6<br />
+exception: connect failed<br />
+exiting with code 1<br />
+root@5d5b156fb1b0:/# exit<br />
+linlin@linlin-i5:/workspace/docker_folder$ mongo<br />
+Command &#39;mongo&#39; not found, did you mean:<br />
+&nbsp; command &#39;mono&#39; from deb mono-runtime (6.8.0.105+dfsg-3)<br />
+Try: sudo apt install &lt;deb name&gt;<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+5d5b156fb1b0&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 8 weeks ago&nbsp;&nbsp; Up About a minute&nbsp;&nbsp; 0.0.0.0:27017-&gt;27017/tcp, :::27017-&gt;27017/tcp&nbsp;&nbsp; mongo5.0.6<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker run -it -p 127.0.0.1:27017:27017 -v /workspace/docker_folder/mongo5.0.6:/data/db -d mongo:5.0.6<br />
+786e35bab6c87c0deca3d950f533f4c4b3d4f3f491ae81a518b57d83f096f8a2<br />
+docker: Error response from daemon: driver failed programming external connectivity on endpoint quizzical_clarke (593b4bb8dc19e384da3be1d256ff80dbe1c92cd29363038d723e921bbde1868d): Error starting userland proxy: listen tcp4 127.0.0.1:27017: bind: address already in use.<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+5d5b156fb1b0&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 8 weeks ago&nbsp;&nbsp; Up 3 minutes&nbsp;&nbsp; 0.0.0.0:27017-&gt;27017/tcp, :::27017-&gt;27017/tcp&nbsp;&nbsp; mongo5.0.6<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker stop 5d5b<br />
+5d5b</p>
+
+<p>sudo docker run -it -p 127.0.0.1:27017:27017 -v /workspace/docker_folder/mongo5.0.6:/data/db -d mongo:5.0.6<br />
+74378c6e312082860d162442edaf6c434da6e6dee1a7ab052365fc8fccec34b3<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+74378c6e3120&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 4 seconds&nbsp;&nbsp; 127.0.0.1:27017-&gt;27017/tcp&nbsp;&nbsp; modest_thompson<br />
+linlin@linlin-i5:/workspace/docker_folder$ sudo docker exec -it 7437 bash<br />
+root@74378c6e3120:/# top</p>
+
+<p>top - 10:52:06 up 5 days,&nbsp; 6:54,&nbsp; 0 users,&nbsp; load average: 1.17, 1.15, 1.01<br />
+Tasks:&nbsp;&nbsp; 3 total,&nbsp;&nbsp; 1 running,&nbsp;&nbsp; 2 sleeping,&nbsp;&nbsp; 0 stopped,&nbsp;&nbsp; 0 zombie<br />
+%Cpu(s):&nbsp; 7.9 us,&nbsp; 1.4 sy,&nbsp; 0.0 ni, 90.5 id,&nbsp; 0.0 wa,&nbsp; 0.0 hi,&nbsp; 0.2 si,&nbsp; 0.0 st<br />
+MiB Mem :&nbsp; 15699.0 total,&nbsp;&nbsp;&nbsp; 270.0 free,&nbsp; 12958.7 used,&nbsp;&nbsp; 2470.3 buff/cache<br />
+MiB Swap:&nbsp;&nbsp; 2048.0 total,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0 free,&nbsp;&nbsp; 2048.0 used.&nbsp;&nbsp; 1121.2 avail Mem</p>
+
+<p>&nbsp;&nbsp;&nbsp; PID USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PR&nbsp; NI&nbsp;&nbsp;&nbsp; VIRT&nbsp;&nbsp;&nbsp; RES&nbsp;&nbsp;&nbsp; SHR S&nbsp; %CPU&nbsp; %MEM&nbsp;&nbsp;&nbsp;&nbsp; TIME+ COMMAND<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 mongodb&nbsp;&nbsp; 20&nbsp;&nbsp; 0 1543264 112636&nbsp; 49288 S&nbsp;&nbsp; 0.3&nbsp;&nbsp; 0.7&nbsp;&nbsp; 0:01.14 mongod<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 59 root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 4248&nbsp;&nbsp; 3444&nbsp;&nbsp; 2872 S&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0:00.01 bash<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 67 root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 6156&nbsp;&nbsp; 3228&nbsp;&nbsp; 2692 R&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0:00.00 top</p>
+
+<p><br />
+root@74378c6e3120:/# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;b6d60aa1-903f-4ab6-ac1c-92dfa9da1daf&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+Welcome to the MongoDB shell.<br />
+For interactive help, type &quot;help&quot;.<br />
+For more comprehensive documentation, see<br />
+&nbsp;&nbsp;&nbsp; https://docs.mongodb.com/<br />
+Questions? Try the MongoDB Developer Community Forums<br />
+&nbsp;&nbsp;&nbsp; https://community.mongodb.com<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:20.365+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:21.222+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+lueluelue&nbsp;&nbsp;&nbsp;&nbsp; 0.001GB<br />
+&gt;<br />
+bye<br />
+root@74378c6e3120:/# ls<br />
+bin&nbsp; boot&nbsp; data&nbsp; dev&nbsp; docker-entrypoint-initdb.d&nbsp; etc&nbsp; home&nbsp; js-yaml.js&nbsp; lib&nbsp; lib32&nbsp; lib64&nbsp; libx32&nbsp; media&nbsp; mnt&nbsp; opt&nbsp; proc&nbsp; root&nbsp; run&nbsp; sbin&nbsp; srv&nbsp; sys&nbsp; tmp&nbsp; usr&nbsp; var<br />
+root@74378c6e3120:/# cd /root/<br />
+root@74378c6e3120:~# ls<br />
+20220624-065751.archive<br />
+root@74378c6e3120:~# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;bfeb1ae3-06f3-4b89-aa4c-175193269433&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:20.365+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:21.222+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+lueluelue&nbsp;&nbsp;&nbsp;&nbsp; 0.001GB<br />
+&gt; use lueluelue<br />
+switched to db lueluelue<br />
+&gt;<br />
+bye<br />
+root@74378c6e3120:~# mongo<br />
+mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodump&nbsp;&nbsp;&nbsp;&nbsp; mongoexport&nbsp;&nbsp; mongofiles&nbsp;&nbsp;&nbsp; mongoimport&nbsp;&nbsp; mongorestore&nbsp; mongos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongosh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongostat&nbsp;&nbsp;&nbsp;&nbsp; mongotop<br />
+root@74378c6e3120:~# mongo<br />
+mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodump&nbsp;&nbsp;&nbsp;&nbsp; mongoexport&nbsp;&nbsp; mongofiles&nbsp;&nbsp;&nbsp; mongoimport&nbsp;&nbsp; mongorestore&nbsp; mongos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongosh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongostat&nbsp;&nbsp;&nbsp;&nbsp; mongotop<br />
+root@74378c6e3120:~# mongorestore --help<br />
+Usage:<br />
+&nbsp; mongorestore &lt;options&gt; &lt;connection-string&gt; &lt;directory or file to restore&gt;</p>
+
+<p>Restore backups generated with mongodump to a running server.</p>
+
+<p>Specify a database with -d to restore a single database from the target directory,<br />
+or use -d and -c to restore a single collection from a single .bson file.</p>
+
+<p>Connection strings must begin with mongodb:// or mongodb+srv://.</p>
+
+<p>See http://docs.mongodb.com/database-tools/mongorestore/ for more information.</p>
+
+<p>general options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print usage<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print the tool version and exit<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --config=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path to a configuration file</p>
+
+<p>verbosity options:<br />
+&nbsp; -v, --verbose=&lt;level&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; more detailed log output (include multiple times for more verbosity, e.g. -vvvvv, or specify a numeric value,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. --verbose=N)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --quiet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hide all log output</p>
+
+<p>connection options:<br />
+&nbsp; -h, --host=&lt;hostname&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodb host to connect to (setname/host1,host2 for replica sets)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --port=&lt;port&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; server port (can also use --host hostname:port)</p>
+
+<p>ssl options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --ssl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; connect to a mongod or mongos that has ssl enabled<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslCAFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the .pem file containing the root certificate chain from the certificate authority<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslPEMKeyFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the .pem file containing the certificate and key<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslPEMKeyPassword=&lt;password&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the password to decrypt the sslPEMKeyFile, if necessary<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslCRLFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the .pem file containing the certificate revocation list<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslFIPSMode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; use FIPS mode of the installed openssl library<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --tlsInsecure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bypass the validation for server&#39;s certificate chain and host name</p>
+
+<p>authentication options:<br />
+&nbsp; -u, --username=&lt;username&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; username for authentication<br />
+&nbsp; -p, --password=&lt;password&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; password for authentication<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --authenticationDatabase=&lt;database-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database that holds the user&#39;s credentials<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --authenticationMechanism=&lt;mechanism&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; authentication mechanism to use<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --awsSessionToken=&lt;aws-session-token&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session token to authenticate via AWS IAM</p>
+
+<p>kerberos options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gssapiServiceName=&lt;service-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service name to use when authenticating using GSSAPI/Kerberos (default: mongodb)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gssapiHostName=&lt;host-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostname to use when authenticating using GSSAPI/Kerberos (default: &lt;remote server&#39;s address&gt;)</p>
+
+<p>namespace options:<br />
+&nbsp; -d, --db=&lt;database-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database to use<br />
+&nbsp; -c, --collection=&lt;collection-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collection to use</p>
+
+<p>uri options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --uri=mongodb-uri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodb uri connection string</p>
+
+<p>namespace options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --excludeCollection=&lt;collection-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEPRECATED; collection to skip over during restore (may be specified multiple times to exclude additional<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collections)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --excludeCollectionsWithPrefix=&lt;collection-prefix&gt;&nbsp;&nbsp;&nbsp; DEPRECATED; collections to skip over during restore that have the given prefix (may be specified multiple times<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to exclude additional prefixes)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsExclude=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exclude matching namespaces<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsInclude=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include matching namespaces<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsFrom=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rename matching namespaces, must have matching nsTo<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsTo=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rename matched namespaces, must have matching nsFrom</p>
+
+<p>input options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --objcheck&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; validate all objects before inserting<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --oplogReplay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replay oplog for point-in-time restore<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --oplogLimit=&lt;seconds&gt;[:ordinal]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; only include oplog entries before the provided Timestamp<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --oplogFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; oplog file to use for replay of oplog<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --archive=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; restore dump from the specified archive file.&nbsp; If flag is specified without a value, archive is read from stdin<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --restoreDbUsersAndRoles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; restore user and role definitions for the given database<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --dir=&lt;directory-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; input directory, use &#39;-&#39; for stdin<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gzip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decompress gzipped input</p>
+
+<p>restore options:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --drop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drop each collection before import<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --dryRun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; view summary without importing anything. recommended with verbosity<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --writeConcern=&lt;write-concern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; write concern options e.g. --writeConcern majority, --writeConcern &#39;{w: 3, wtimeout: 500, fsync: true, j: true}&#39;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --noIndexRestore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; don&#39;t restore indexes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --convertLegacyIndexes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Removes invalid index options and rewrites legacy option values (e.g. true becomes 1).<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --noOptionsRestore&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; don&#39;t restore collection options<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --keepIndexVersion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; don&#39;t update index version<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --maintainInsertionOrder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; restore the documents in the order of their appearance in the input source. By default the insertions will be<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; performed in an arbitrary order. Setting this flag also enables the behavior of --stopOnError and restricts<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NumInsertionWorkersPerCollection to 1.<br />
+&nbsp; -j, --numParallelCollections=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number of collections to restore in parallel<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --numInsertionWorkersPerCollection=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number of insert operations to run concurrently per collection<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --stopOnError&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; halt after encountering any error during insertion. By default, mongorestore will attempt to continue through<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document validation and DuplicateKey errors, but with this option enabled, the tool will stop instead. A small<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number of documents may be inserted after encountering an error even with this option enabled; use<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --maintainInsertionOrder to halt immediately after an error<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --bypassDocumentValidation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bypass document validation<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --preserveUUID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; preserve original collection UUIDs (off by default, requires drop)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --fixDottedHashIndex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; when enabled, all the hashed indexes on dotted fields will be created as single field ascending indexes on the<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; destination<br />
+root@74378c6e3120:~# mongorestore --archive=<br />
+.bashrc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .dbshell&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20220624-065751.archive<br />
+.config/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .mongorc.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .wget-hsts<br />
+root@74378c6e3120:~# mongorestore --archive=20220624-065751.archive<br />
+2022-06-24T10:54:22.765+0000&nbsp;&nbsp;&nbsp; preparing collections to restore from<br />
+2022-06-24T10:54:22.775+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.claims from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.775+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.775+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.invalid_domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.775+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.simple_redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.776+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.domain_registers from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.776+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.776+0000&nbsp;&nbsp;&nbsp; restoring to existing collection lueluelue.claims without dropping<br />
+2022-06-24T10:54:22.776+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.claims from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:54:22.872+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.claims index: _id_ dup key: { _id: ObjectId(&#39;61a71b291828d7531dae46ab&#39;) }<br />
+2022-06-24T10:54:22.872+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.claims index: _id_ dup key: { _id: ObjectId(&#39;61a70c55f48225bbe6932360&#39;) }</p>
+
+<p><br />
+2022-06-24T10:54:23.238+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.domain_registers index: _id_ dup key: { _id: ObjectId(&#39;626a168e4cf72c5084e166a0&#39;) }<br />
+2022-06-24T10:54:23.256+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.domain_registers (3020 documents, 2153 failures)<br />
+2022-06-24T10:54:23.256+0000&nbsp;&nbsp;&nbsp; restoring indexes for collection lueluelue.domains from metadata<br />
+2022-06-24T10:54:23.256+0000&nbsp;&nbsp;&nbsp; index: &amp;idx.IndexDocument{Options:primitive.M{&quot;name&quot;:&quot;name_1&quot;, &quot;unique&quot;:true, &quot;v&quot;:2}, Key:primitive.D{primitive.E{Key:&quot;name&quot;, Value:1}}, PartialFilterExpression:primitive.D(nil)}<br />
+2022-06-24T10:54:23.256+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.claims<br />
+2022-06-24T10:54:23.257+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.simple_redeem_codes<br />
+2022-06-24T10:54:23.257+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.domain_registers<br />
+2022-06-24T10:54:23.257+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.redeem_codes<br />
+2022-06-24T10:54:23.257+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.invalid_domains<br />
+2022-06-24T10:54:23.264+0000&nbsp;&nbsp;&nbsp; 3122 document(s) restored successfully. 7339 document(s) failed to restore.<br />
+root@74378c6e3120:~# remove-shell ^C<br />
+root@74378c6e3120:~# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;669e3406-dedf-4b4c-bf38-1129bc966e22&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:20.365+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:21.222+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt; help<br />
+&nbsp;&nbsp;&nbsp; db.help()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; help on db methods<br />
+&nbsp;&nbsp;&nbsp; db.mycoll.help()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; help on collection methods<br />
+&nbsp;&nbsp;&nbsp; sh.help()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sharding helpers<br />
+&nbsp;&nbsp;&nbsp; rs.help()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replica set helpers<br />
+&nbsp;&nbsp;&nbsp; help admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; administrative help<br />
+&nbsp;&nbsp;&nbsp; help connect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; connecting to a db help<br />
+&nbsp;&nbsp;&nbsp; help keys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; key shortcuts<br />
+&nbsp;&nbsp;&nbsp; help misc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; misc things to know<br />
+&nbsp;&nbsp;&nbsp; help mr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapreduce</p>
+
+<p>&nbsp;&nbsp;&nbsp; show dbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show database names<br />
+&nbsp;&nbsp;&nbsp; show collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show collections in current database<br />
+&nbsp;&nbsp;&nbsp; show users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show users in current database<br />
+&nbsp;&nbsp;&nbsp; show profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show most recent system.profile entries with time &gt;= 1ms<br />
+&nbsp;&nbsp;&nbsp; show logs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show the accessible logger names<br />
+&nbsp;&nbsp;&nbsp; show log [name]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prints out the last segment of log in memory, &#39;global&#39; is default<br />
+&nbsp;&nbsp;&nbsp; use &lt;db_name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set current database<br />
+&nbsp;&nbsp;&nbsp; db.mycoll.find()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list objects in collection mycoll<br />
+&nbsp;&nbsp;&nbsp; db.mycoll.find( { a : 1 } )&nbsp; list objects in mycoll where a == 1<br />
+&nbsp;&nbsp;&nbsp; it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result of the last line evaluated; use to further iterate<br />
+&nbsp;&nbsp;&nbsp; DBQuery.shellBatchSize = x&nbsp;&nbsp; set default number of items to display on shell<br />
+&nbsp;&nbsp;&nbsp; exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quit the mongo shell<br />
+&gt; use p^C<br />
+bye<br />
+root@74378c6e3120:~# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;80f50328-35c3-450d-91e4-a3e618358789&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:20.365+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-24T10:51:21.222+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+lueluelue&nbsp;&nbsp;&nbsp;&nbsp; 0.002GB<br />
+&gt; use lueluelue<br />
+switched to db lueluelue<br />
+&gt; db.dropDatabase()<br />
+{ &quot;ok&quot; : 1 }<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+&gt;<br />
+bye<br />
+root@74378c6e3120:~# mongorestore --archive=20220624-065751.archive<br />
+2022-06-24T10:55:45.812+0000&nbsp;&nbsp;&nbsp; preparing collections to restore from<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.claims from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.invalid_domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.simple_redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.853+0000&nbsp;&nbsp;&nbsp; reading metadata for lueluelue.domain_registers from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.893+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.claims from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.914+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.claims (1126 documents, 0 failures)<br />
+2022-06-24T10:55:45.919+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.930+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.redeem_codes (300 documents, 0 failures)<br />
+2022-06-24T10:55:45.935+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.962+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.domains (3702 documents, 0 failures)<br />
+2022-06-24T10:55:45.968+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.invalid_domains from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.979+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.invalid_domains (59 documents, 0 failures)<br />
+2022-06-24T10:55:45.985+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.simple_redeem_codes from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:45.996+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.simple_redeem_codes (101 documents, 0 failures)<br />
+2022-06-24T10:55:46.002+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.domain_registers from archive &#39;20220624-065751.archive&#39;<br />
+2022-06-24T10:55:46.079+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.domain_registers (5173 documents, 0 failures)<br />
+2022-06-24T10:55:46.079+0000&nbsp;&nbsp;&nbsp; restoring indexes for collection lueluelue.domains from metadata<br />
+2022-06-24T10:55:46.079+0000&nbsp;&nbsp;&nbsp; index: &amp;idx.IndexDocument{Options:primitive.M{&quot;name&quot;:&quot;name_1&quot;, &quot;unique&quot;:true, &quot;v&quot;:2}, Key:primitive.D{primitive.E{Key:&quot;name&quot;, Value:1}}, PartialFilterExpression:primitive.D(nil)}<br />
+2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.claims<br />
+2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.simple_redeem_codes<br />
+2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.domain_registers<br />
+2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.redeem_codes<br />
+2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.invalid_domains<br />
+2022-06-24T10:55:46.129+0000&nbsp;&nbsp;&nbsp; 10461 document(s) restored successfully. 0 document(s) failed to restore.<br />
+root@74378c6e3120:~#</p>
+
+<p>&nbsp;</p>
+

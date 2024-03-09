@@ -1,0 +1,10 @@
+---
+layout: post
+title: "获取数据 "
+date: "2022-10-10"
+categories: 
+---
+<p>command = &quot;echo &#39;added QMa1b2c3 CAKE.jpg&#39; &quot;<br />
+result = `#{command}`<br />
+puts result.split(&#39; &#39;)[1]</p>
+

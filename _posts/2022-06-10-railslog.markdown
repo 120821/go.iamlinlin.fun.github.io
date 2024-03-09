@@ -1,0 +1,19 @@
+---
+layout: post
+title: "rails 清空log文件"
+date: "2022-06-10"
+categories: 
+---
+<p>Rails 删除 development.log 行（不是文件本身），使用命令</p>
+
+<pre>
+<code>echo &quot;&quot; &gt; log/development.log</code></pre>
+
+<pre>
+<code>echo &quot;&quot; &gt; production.log linlin@linlin-i5:/workspace/lueluelue-airdrop-admin/log$ ll total 24 drwxrwxr-x 2 linlin linlin 4096 6月 10 08:12 ./ drwxrwxr-x 16 linlin linlin 4096 6月 9 17:59 ../ -rw-rw-r-- 1 linlin linlin 1 6月 10 08:12 development.log -rw-rw-r-- 1 linlin linlin 0 6月 9 17:53 ENVIRONMENT.log -rw-rw-r-- 1 linlin linlin 1 6月 10 08:12 production.log -rw-rw-r-- 1 linlin linlin 1 6月 10 08:12 production.log.log -rw-rw-r-- 1 linlin linlin 1 6月 10 08:12 test.log </code></pre>
+
+<p>也可以通过创建文件在服务器启动时自动执行此操作</p>
+
+<pre>
+<code>You can do it automatically on server startup by creating a file clear_development_log.rb in config/initializers: if Rails.env.development? `rake log:clear` end </code></pre>
+

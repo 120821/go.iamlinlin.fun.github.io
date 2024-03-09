@@ -1,0 +1,10 @@
+---
+layout: post
+title: "wps-- 打开文档目录"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p style="text-align:center;">WPS打开文件，进入view页面，此时默认目录是隐藏的状态，只需要选择目录--样式--选择左侧或者右侧即可<img alt="" src="https://img-blog.csdnimg.cn/1428eaaa373f4ed19935357fd0026d93.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p></p>
+                

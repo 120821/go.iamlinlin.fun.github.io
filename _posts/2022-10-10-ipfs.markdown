@@ -1,0 +1,28 @@
+---
+layout: post
+title: "在远程安装使用ipfs"
+date: "2022-10-10"
+categories: 
+---
+<p><a href="http://www.siwei.me/blog/posts/blockchain-ipfs-setup-ipfs-on-linux-server">http://www.siwei.me/blog/posts/blockchain-ipfs-setup-ipfs-on-linux-server</a></p>
+
+<p>下载压缩包：wget https://dist.ipfs.tech/kubo/v0.15.0/kubo_v0.15.0_linux-amd64.tar.gz</p>
+
+<p>解压缩：tar zxvf kubo_v0.15.0_linux-amd64.tar.gz kubo/</p>
+
+<p>进入文件夹：cd kubo/<br />
+移动：sudo bash install.sh</p>
+
+<p>启动：ipfs gateway（这个命令失效了）</p>
+
+<p>gateway会自动的跑起来。跑在本地的8080端口</p>
+
+<p>初始化：ipfs init</p>
+
+<p>创建测试文件：vim hi.txt</p>
+
+<p>上传文件：ipfs add hi.txt</p>
+
+<p>result：added QmXQrn3noXsMWHzHUUxZPWXQvdqEUZ2SurqzUVPKGLjE8t hi.txt<br />
+&nbsp;7 B / 7 B [========================================================================================================================================================] 100.00%</p>
+

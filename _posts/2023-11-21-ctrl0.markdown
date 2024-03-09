@@ -1,0 +1,11 @@
+---
+layout: post
+title: "火狐屏幕恢复原来的尺寸  ctrl + 0"
+date: "2023-11-21"
+categories: 
+---
+<ul>
+	<li>Windows和Linux系统：按下<code>Ctrl + 0</code>键</li>
+	<li>macOS系统：按下<code>Command + 0</code>键</li>
+</ul>
+

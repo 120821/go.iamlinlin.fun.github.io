@@ -1,0 +1,85 @@
+---
+layout: post
+title: "Linux ps 命令"
+date: "2022-08-18"
+categories: 
+---
+<p><a href="https://www.runoob.com/linux/linux-comm-ps.html">Linux ps 命令</a></p>
+
+<p>Linux ps （英文全拼：process status）命令用于显示当前进程的状态，类似于 windows 的任务管理器</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">ps </span><span class="pun">[</span><span class="pln">options</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">help</span><span class="pun">]</span></pre>
+
+<ul>
+	<li>ps 的参数非常多, 在此仅列出几个常用的参数并大略介绍含义</li>
+	<li>-A 列出所有的进程</li>
+	<li>-w 显示加宽可以显示较多的资讯</li>
+	<li>-au 显示较详细的资讯</li>
+	<li>-aux 显示所有包含其他使用者的进程</li>
+	<li>
+	<p>au(x) 输出格式 :</p>
+
+	<pre class="prettyprint prettyprinted" style="">
+<span class="pln">USER PID </span><span class="pun">%</span><span class="pln">CPU </span><span class="pun">%</span><span class="pln">MEM VSZ RSS TTY STAT START TIME COMMAND</span></pre>
+	</li>
+</ul>
+
+<ul>
+	<li>USER: 行程拥有者</li>
+	<li>PID: pid</li>
+	<li>%CPU: 占用的 CPU 使用率</li>
+	<li>%MEM: 占用的记忆体使用率</li>
+	<li>VSZ: 占用的虚拟记忆体大小</li>
+	<li>RSS: 占用的记忆体大小</li>
+	<li>TTY: 终端的次要装置号码 (minor device number of tty)</li>
+	<li>
+	<p>STAT: 该行程的状态:</p>
+
+	<ul>
+		<li>D: 无法中断的休眠状态 (通常 IO 的进程)</li>
+		<li>R: 正在执行中</li>
+		<li>S: 静止状态</li>
+		<li>T: 暂停执行</li>
+		<li>Z: 不存在但暂时无法消除</li>
+		<li>W: 没有足够的记忆体分页可分配</li>
+		<li>&lt;: 高优先序的行程</li>
+		<li>N: 低优先序的行程</li>
+		<li>L: 有记忆体分页分配并锁在记忆体内 (实时系统或捱A I/O)</li>
+	</ul>
+	</li>
+	<li>START: 行程开始时间</li>
+	<li>TIME: 执行的时间</li>
+	<li>COMMAND:所执行的指令</li>
+</ul>
+
+<p>查找指定进程格式：</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="pln">ps </span><span class="pun">-</span><span class="pln">ef </span><span class="pun">|</span><span class="pln"> grep </span><span class="pun">进程关键字</span></pre>
+
+<p><img height="262" src="/uploads/ckeditor/pictures/267/image-20220818110544-1.png" width="1322" /></p>
+
+<p>显示进程信息：</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com">ps -A </span></pre>
+
+<p><img height="299" src="/uploads/ckeditor/pictures/268/image-20220818110635-2.png" width="636" /></p>
+
+<p>显示指定用户信息</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># ps -u root //显示root进程用户信息</span></pre>
+
+<p><img height="206" src="/uploads/ckeditor/pictures/269/image-20220818110745-3.png" width="628" /></p>
+
+<p>显示所有进程信息，连同命令行</p>
+
+<pre class="prettyprint prettyprinted" style="">
+<span class="com"># ps -ef //显示所有命令，连带命令行</span></pre>
+
+<p><img height="280" src="/uploads/ckeditor/pictures/270/image-20220818110821-4.png" width="917" /></p>
+
+<p>&nbsp;</p>
+

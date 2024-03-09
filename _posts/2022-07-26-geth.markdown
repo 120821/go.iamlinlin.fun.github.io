@@ -1,0 +1,171 @@
+---
+layout: post
+title: "安装geth"
+date: "2022-07-26"
+categories: 
+---
+<p>https://ethereum.org/zh/developers/tutorials/run-light-node-geth/</p>
+
+<p>安装：https://geth.ethereum.org/docs/install-and-build/installing-geth</p>
+
+<pre class="highlight">
+<code><span class="nb">Ubuntu安装：sudo </span>add-apt-repository <span class="nt">-y</span> ppa:ethereum/ethereum
+</code></pre>
+
+<pre class="highlight">
+<code><span class="nb">更新（</span></code>安装 go-ethereum 的稳定版本：<code><span class="nb">）：sudo </span>apt-get update</code></pre>
+
+<p>或者，或者开发版本：</p>
+
+<pre class="highlight">
+<code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ethereum-unstable
+</code></pre>
+
+<p><font style="vertical-align:inherit">这些命令安装核心 Geth 软件和以下开发人员工具： </font><code class="language-plaintext highlighter-rouge">clef</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">devp2p</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">abigen</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">bootnode</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">evm</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">rlpdump</code><font style="vertical-align:inherit">和 </font><code class="language-plaintext highlighter-rouge">puppeth</code><font style="vertical-align:inherit">. 这些工具中的每一个的二进制文件都保存在 </font><code class="language-plaintext highlighter-rouge">/usr/local/bin/</code><font style="vertical-align:inherit">. 命令行选项的完整列表可以在 </font><a href="https://geth.ethereum.org/docs/interface/command-line-options"><font style="vertical-align:inherit">这里 </font></a><font style="vertical-align:inherit">在终端运行 </font><code class="language-plaintext highlighter-rouge">geth --help</code><font style="vertical-align:inherit">. </font></p>
+
+<p><font style="vertical-align:inherit">可以通过停止节点并运行以下命令来将现有的 Geth 安装更新到最新版本： </font></p>
+
+<div class="language-shell highlighter-rouge">
+<div class="highlight">
+<pre class="highlight">
+<code>sudo apt-get update
+sudo apt-get install ethereum
+sudo apt-get upgrade geth
+</code></pre>
+</div>
+</div>
+
+<p><img height="703" src="/uploads/ckeditor/pictures/138/image-20220726113228-1.png" width="1417" /></p>
+
+<p>sudo add-apt-repository -y ppa:ethereum/ethereum<br />
+[sudo] password for linlin:<br />
+Repository: &#39;deb http://ppa.launchpad.net/ethereum/ethereum/ubuntu/ impish main&#39;<br />
+More info: https://launchpad.net/~ethereum/+archive/ubuntu/ethereum<br />
+Adding repository.<br />
+Adding deb entry to /etc/apt/sources.list.d/ethereum-ubuntu-ethereum-impish.list<br />
+Adding disabled deb-src entry to /etc/apt/sources.list.d/ethereum-ubuntu-ethereum-impish.list<br />
+Adding key to /etc/apt/trusted.gpg.d/ethereum-ubuntu-ethereum.gpg with fingerprint 2A518C819BE37D2C2031944D1C52189C923F6CA9<br />
+Ign:1 http://mirrors.aliyun.com/ubuntu impish InRelease<br />
+Get:2 https://mirrors.aliyun.com/docker-ce/linux/ubuntu impish InRelease [48.9 kB]<br />
+Ign:3 http://mirrors.aliyun.com/ubuntu impish-updates InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:4 https://download.docker.com/linux/ubuntu impish InRelease [48.9 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Ign:5 http://mirrors.aliyun.com/ubuntu impish-backports InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Hit:6 https://dl.google.com/linux/chrome/deb stable InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Err:7 http://mirrors.aliyun.com/ubuntu impish Release&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+&nbsp; 404&nbsp; Not Found [IP: 111.29.60.118 80]<br />
+Err:8 http://mirrors.aliyun.com/ubuntu impish-updates Release&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+&nbsp; 404&nbsp; Not Found [IP: 111.29.60.118 80]<br />
+Err:9 http://mirrors.aliyun.com/ubuntu impish-backports Release&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+&nbsp; 404&nbsp; Not Found [IP: 111.29.60.118 80]<br />
+Hit:10 http://ppa.launchpad.net/cybermax-dexter/sdl2-backport/ubuntu impish InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:11 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish InRelease [17.5 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Hit:12 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/impish pgadmin4 InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:13 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 Packages [2,784 B]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:14 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main Translation-en [828 B]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Ign:15 http://security.ubuntu.com/ubuntu impish-security InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Hit:16 http://dl.winehq.org/wine-builds/ubuntu impish InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Ign:17 https://dl.winehq.org/wine-builds/ubuntu hirsute InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Ign:17 https://dl.winehq.org/wine-builds/ubuntu hirsute InRelease&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Ign:17 https://dl.winehq.org/wine-builds/ubuntu hirsute InRelease<br />
+Err:18 http://security.ubuntu.com/ubuntu impish-security Release<br />
+&nbsp; 404&nbsp; Not Found [IP: 185.125.190.39 80]<br />
+Err:17 https://dl.winehq.org/wine-builds/ubuntu hirsute InRelease<br />
+&nbsp; Could not connect to dl.winehq.org:443 (151.101.78.217), connection timed out<br />
+Reading package lists... Done<br />
+E: The repository &#39;http://mirrors.aliyun.com/ubuntu impish Release&#39; no longer has a Release file.<br />
+N: Updating from such a repository can&#39;t be done securely, and is therefore disabled by default.<br />
+N: See apt-secure(8) manpage for repository creation and user configuration details.<br />
+E: The repository &#39;http://mirrors.aliyun.com/ubuntu impish-updates Release&#39; no longer has a Release file.<br />
+N: Updating from such a repository can&#39;t be done securely, and is therefore disabled by default.<br />
+N: See apt-secure(8) manpage for repository creation and user configuration details.<br />
+E: The repository &#39;http://mirrors.aliyun.com/ubuntu impish-backports Release&#39; no longer has a Release file.<br />
+N: Updating from such a repository can&#39;t be done securely, and is therefore disabled by default.<br />
+N: See apt-secure(8) manpage for repository creation and user configuration details.<br />
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+E: The repository &#39;http://security.ubuntu.com/ubuntu impish-security Release&#39; no longer has a Release file.<br />
+N: Updating from such a repository can&#39;t be done securely, and is therefore disabled by default.<br />
+N: See apt-secure(8) manpage for repository creation and user configuration details.<br />
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Packages (main/binary-i386/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Translations (main/i18n/Translation-en_US) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1<br />
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/archive_uri-http_dl_winehq_org_wine-builds_ubuntu_-impish.list:1 and /etc/apt/sources.list.d/winehq-impish.sources:1</p>
+
+<p>&nbsp;</p>
+
+<p>sudo apt-get install ethereum<br />
+Reading package lists... Done<br />
+Building dependency tree... Done<br />
+Reading state information... Done<br />
+The following additional packages will be installed:<br />
+&nbsp; abigen bootnode clef evm geth puppeth rlpdump<br />
+The following NEW packages will be installed:<br />
+&nbsp; abigen bootnode clef ethereum evm geth puppeth rlpdump<br />
+0 upgraded, 8 newly installed, 0 to remove and 53 not upgraded.<br />
+Need to get 34.2 MB of archives.<br />
+After this operation, 108 MB of additional disk space will be used.<br />
+Do you want to continue? [Y/n]<br />
+Get:1 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 abigen amd64 1.10.20+build27972+impish [3,831 kB]<br />
+Get:2 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 bootnode amd64 1.10.20+build27972+impish [3,450 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:3 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 clef amd64 1.10.20+build27972+impish [9,007 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:4 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 evm amd64 1.10.20+build27972+impish [3,958 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:5 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 geth amd64 1.10.20+build27972+impish [9,401 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:6 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 puppeth amd64 1.10.20+build27972+impish [3,827 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:7 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 rlpdump amd64 1.10.20+build27972+impish [703 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Get:8 http://ppa.launchpad.net/ethereum/ethereum/ubuntu impish/main amd64 ethereum amd64 1.10.20+build27972+impish [1,466 B]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Fetched 34.2 MB in 1min 32s (372 kB/s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+Selecting previously unselected package abigen.<br />
+(Reading database ... 312645 files and directories currently installed.)<br />
+Preparing to unpack .../0-abigen_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking abigen (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package bootnode.<br />
+Preparing to unpack .../1-bootnode_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking bootnode (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package clef.<br />
+Preparing to unpack .../2-clef_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking clef (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package evm.<br />
+Preparing to unpack .../3-evm_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking evm (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package geth.<br />
+Preparing to unpack .../4-geth_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking geth (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package puppeth.<br />
+Preparing to unpack .../5-puppeth_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking puppeth (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package rlpdump.<br />
+Preparing to unpack .../6-rlpdump_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking rlpdump (1.10.20+build27972+impish) ...<br />
+Selecting previously unselected package ethereum.<br />
+Preparing to unpack .../7-ethereum_1.10.20+build27972+impish_amd64.deb ...<br />
+Unpacking ethereum (1.10.20+build27972+impish) ...<br />
+Setting up rlpdump (1.10.20+build27972+impish) ...<br />
+Setting up puppeth (1.10.20+build27972+impish) ...<br />
+Setting up clef (1.10.20+build27972+impish) ...<br />
+Setting up bootnode (1.10.20+build27972+impish) ...<br />
+Setting up geth (1.10.20+build27972+impish) ...<br />
+Setting up evm (1.10.20+build27972+impish) ...<br />
+Setting up abigen (1.10.20+build27972+impish) ...<br />
+Setting up ethereum (1.10.20+build27972+impish) ...</p>
+
+<p>&nbsp;</p>
+

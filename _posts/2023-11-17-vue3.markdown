@@ -1,0 +1,41 @@
+---
+layout: post
+title: "vue3 设置图片上下浮动"
+date: "2023-11-17"
+categories: 
+---
+<p>主要是html代码以及css的修改，例如：</p>
+
+<pre>
+<code>&lt;div class=&quot;image-frame&quot;&gt;
+  &lt;img src=&quot;your-image.jpg&quot; alt=&quot;Your Image&quot;&gt;
+&lt;/div&gt;</code></pre>
+
+<p>我就可以修改样式：（如果效果不明显可以修改距离，也可以调整时间）</p>
+
+<pre>
+<code><span style="color:#ffa07a">.image-frame</span> {
+  <span style="color:#ffd700">position</span>: relative;
+  <span style="color:#ffd700">height</span>: <span style="color:#f5ab35">200px</span>; <span style="color:#d4d0ab">/* 调整容器高度 */</span>
+  <span style="color:#ffd700">overflow</span>: hidden;
+}
+
+<span style="color:#ffa07a">.image-frame</span> <span style="color:#dcc6e0">img</span> {
+  <span style="color:#ffd700">position</span>: absolute;
+  <span style="color:#ffd700">top</span>: <span style="color:#f5ab35">0</span>;
+  <span style="color:#ffd700">left</span>: <span style="color:#f5ab35">0</span>;
+  <span style="color:#ffd700">animation</span>: floatAnimation <span style="color:#f5ab35">3s</span> infinite ease-in-out;
+}
+
+<span style="color:#dcc6e0">@keyframes</span> floatAnimation {
+  <span style="color:#f5ab35">0%</span> {
+    <span style="color:#ffd700">transform</span>: <span style="color:#f5ab35">translateY</span>(<span style="color:#f5ab35">0</span>);
+  }
+  <span style="color:#f5ab35">50%</span> {
+    <span style="color:#ffd700">transform</span>: <span style="color:#f5ab35">translateY</span>(<span style="color:#f5ab35">20px</span>); <span style="color:#d4d0ab">/* 调整上浮距离 */</span>
+  }
+  <span style="color:#f5ab35">100%</span> {
+    <span style="color:#ffd700">transform</span>: <span style="color:#f5ab35">translateY</span>(<span style="color:#f5ab35">0</span>);
+  }
+}</code></pre>
+

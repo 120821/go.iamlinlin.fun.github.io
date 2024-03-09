@@ -1,0 +1,16 @@
+---
+layout: post
+title: "字体加粗html"
+date: "2022-08-31"
+categories: 
+---
+<p>使用style：</p>
+
+<p>font-weight: bold;</p>
+
+<p>使用标签</p>
+
+<p>&lt;b&gt;&lt;/b&gt;</p>
+
+<p>&lt;strong&gt;&lt;/strong&gt;</p>
+

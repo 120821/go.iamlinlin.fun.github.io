@@ -1,0 +1,59 @@
+---
+layout: post
+title: "阿里云oss博客使用图片"
+date: "2022-09-09"
+categories: 
+---
+<p><a href="https://help.aliyun.com/document_detail/32120.html">如何在Rails应用中使用OSS Ruby SDK来列举存储空间（Bucket）、上传文件（Object）、下载文件等</a></p>
+
+<p>服务器更换域名后，图片上传功能也不能正确使用。找不到数据，重新绑定。</p>
+
+<p>安装：gem install aliyun-sdk --clear-sources --source https://gems.ruby-china.com</p>
+
+<p>进入irb环境：</p>
+
+<pre>
+<code class="hljs language-ruby">&gt; <span class="hljs-keyword">require</span> <span class="hljs-string">&#39;aliyun/oss&#39;</span>
+=&gt; true</code></pre>
+
+<p><code class="hljs language-ruby">创建client</code></p>
+
+<pre>
+<code class="hljs language-php">&gt; client = <span class="hljs-title class_">Aliyun</span>::<span class="hljs-variable constant_">OSS</span>::<span class="hljs-variable constant_">Client</span>.<span class="hljs-keyword">new</span>(
+&gt;   endpoint: <span class="hljs-string">&#39;endpoint&#39;</span>,
+&gt;   access_key_id: <span class="hljs-string">&#39;AccessKeyId&#39;</span>,
+&gt;   access_key_secret: <span class="hljs-string">&#39;AccessKeySecret&#39;</span>)
+=&gt; <span class="hljs-comment">#&lt;Aliyun::OSS::Client...</span></code></pre>
+
+<p><a href="https://help.aliyun.com/document_detail/31837.html?spm=a2c6h.13066369.question.5.3ab84362PPzJ88">公共云下OSS Region和Endpoint对照表</a></p>
+
+<p>irb环境下继续，查看buckets</p>
+
+<p>buckets = client.list_buckets</p>
+
+<p><a href="http://linlin.fun/blogs/125145970">http://linlin.fun/blogs/125145970</a>（把之前的内容走一遍）</p>
+
+<p>然后很多都不需要修改，修改：app/controllers/objects_controller.rb</p>
+
+<pre class="pre codeblock language-ruby" id="codeblock-r59-39o-y8x">
+<code class="hljs language-ruby" data-spm-anchor-id="a2c4g.11186623.0.i17.1cb118e6Sn0ziy"><span class="hljs-keyword">def</span> <span class="hljs-title function_">new</span>
+  <span class="hljs-variable">@bucket_name</span> = params[<span class="hljs-symbol">:bucket_id</span>]
+  <span class="hljs-variable">@prefix</span> = params[<span class="hljs-symbol">:prefix</span>]
+  <span class="hljs-variable">@bucket</span> = <span class="hljs-variable constant_">OSS</span>.client.get_bucket(<span class="hljs-variable">@bucket_name</span>)
+  <span class="hljs-variable">@options</span> = {
+    <span class="hljs-symbol">:prefix</span> =&gt; <span class="hljs-variable">@prefix</span>,
+    <span class="hljs-symbol">:redirect</span> =&gt; <span class="hljs-string">&#39;http://你的域名/buckets/&#39;</span>
+  }
+<span class="hljs-keyword">end</span>
+                                </code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

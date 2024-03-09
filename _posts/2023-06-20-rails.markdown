@@ -1,0 +1,65 @@
+---
+layout: post
+title: "Rails 站内信 已读未读"
+date: "2023-06-20"
+categories: 
+---
+<p>要显示已读和未读消息，可以在Message模型中添加read属性，用来标识该消息是否已读。然后在inbox页面中，可以根据read属性的值，对已读和未读消息进行不同的样式展示。</p>
+
+<pre>
+<code># messages_controller.rb
+
+def index
+  @messages = current_user.received_messages.order(created_at: :desc)
+end
+
+# inbox.html.erb
+
+&lt;% @messages.each do |message| %&gt;
+  &lt;div class=&quot;message &lt;%= &#39;unread&#39; unless message.read %&gt;&quot;&gt;
+    &lt;h3&gt;&lt;%= message.subject %&gt;&lt;/h3&gt;
+    &lt;p&gt;&lt;%= message.body %&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;% end %&gt;
+
+# styles.css
+
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.unread {
+  font-weight: bold;
+}</code></pre>
+
+<p>要查询用户未读的站内信息数量，可以使用ActiveRecord的count方法结合查询条件，例如：</p>
+
+<pre>
+<code># messages_controller.rb
+
+def index
+  @unread_count = current_user.received_messages.where(read: false).count
+  @messages = current_user.received_messages.order(created_at: :desc)
+end
+
+# _navbar.html.erb
+
+&lt;%= link_to &#39;Inbox&#39;, messages_path %&gt;
+&lt;% if @unread_count &gt; 0 %&gt;
+  &lt;span class=&quot;unread-count&quot;&gt;&lt;%= @unread_count %&gt;&lt;/span&gt;
+&lt;% end %&gt;
+
+# styles.css
+
+.unread-count {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+  margin-left: 5px;
+}</code></pre>
+
+<p>在上面的代码中，使用where方法过滤出当前用户未读的消息，然后使用count方法统计数量。将未读消息数量存储在实例变量@unread_count中，在导航栏中展示未读消息数量。如果未读消息数量为0，则不展示未读消息数量。通过样式设置未读消息数量的展示样式。</p>
+

@@ -1,0 +1,70 @@
+---
+layout: post
+title: "windows 简单实现展示博客列表和详情页面（部分逻辑和代码）"
+date: "2023-12-04"
+categories: 
+---
+<p>1.博客列表的视图页面可以这样写</p>
+
+<pre style="margin-left:0px; margin-right:0px; text-align:start">
+<code>&lt;!-- index.wxml --&gt;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;block wx:for=&quot;{{blogList}}&quot; wx:key=&quot;index&quot;&gt;
+    &lt;view class=&quot;blog-item&quot; bindtap=&quot;goToDetail&quot; data-id=&quot;{{item.id}}&quot;&gt;
+      &lt;view class=&quot;blog-title&quot;&gt;{{item.title}}&lt;/view&gt;
+      &lt;view class=&quot;blog-date&quot;&gt;{{item.date}}&lt;/view&gt;
+    &lt;/view&gt;
+  &lt;/block&gt;
+&lt;/view&gt;</code></pre>
+
+<p>2.博客列表的js代码可以这样写：</p>
+
+<pre style="margin-left:0px; margin-right:0px; text-align:start">
+<code><span style="color:#d4d0ab">// index.js</span>
+Page({
+  data: {
+    blogList: [
+      { id: <span style="color:#f5ab35">1</span>, title: <span style="color:#abe338">&quot;博客标题1&quot;</span>, date: <span style="color:#abe338">&quot;2023-11-30&quot;</span> },
+      { id: <span style="color:#f5ab35">2</span>, title: <span style="color:#abe338">&quot;博客标题2&quot;</span>, date: <span style="color:#abe338">&quot;2023-12-01&quot;</span> },
+      { id: <span style="color:#f5ab35">3</span>, title: <span style="color:#abe338">&quot;博客标题3&quot;</span>, date: <span style="color:#abe338">&quot;2023-12-02&quot;</span> },
+    ],
+  },
+
+  <span style="color:#00e0e0">goToDetail</span>(<span style="color:#f5ab35">e</span>) {
+    <span style="color:#dcc6e0">const</span> blogId = e.currentTarget.dataset.id;
+    <span style="color:#d4d0ab">// 跳转到博客详情页，传递博客ID</span>
+    wx.navigateTo({
+      url: <span style="color:#abe338">`/pages/detail/detail?id=</span><span style="color:#abe338">${blogId}</span><span style="color:#abe338">`</span>,
+    });
+  },
+});</code></pre>
+
+<p>3.博客详情的视图代码可以这样：</p>
+
+<pre style="margin-left:0px; margin-right:0px; text-align:start">
+<code>&lt;!-- detail.wxml --&gt;
+&lt;view class=&quot;container&quot;&gt;
+  &lt;view class=&quot;blog-title&quot;&gt;{{blog.title}}&lt;/view&gt;
+  &lt;view class=&quot;blog-content&quot;&gt;{{blog.content}}&lt;/view&gt;
+&lt;/view&gt;</code></pre>
+
+<p>4.博客的详情的js代码可以这样：</p>
+
+<pre style="margin-left:0px; margin-right:0px; text-align:start">
+<code><span style="color:#d4d0ab">// detail.js</span>
+Page({
+  data: {
+    blog: {}, <span style="color:#d4d0ab">// 博客详情数据</span>
+  },
+
+  <span style="color:#00e0e0">onLoad</span>(<span style="color:#f5ab35">options</span>) {
+    <span style="color:#dcc6e0">const</span> blogId = options.id;
+    <span style="color:#d4d0ab">// 根据博客ID从服务器获取博客详情数据</span>
+    <span style="color:#d4d0ab">// 假设通过API函数getBlogDetailById获取博客详情，返回一个包含标题和内容的对象</span>
+    <span style="color:#dcc6e0">const</span> blogDetail = getBlogDetailById(blogId);
+    <span style="color:#f5ab35">this</span>.setData({
+      blog: blogDetail,
+    });
+  },
+});</code></pre>
+

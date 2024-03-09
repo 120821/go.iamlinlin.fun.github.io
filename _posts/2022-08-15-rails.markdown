@@ -1,0 +1,81 @@
+---
+layout: post
+title: "rails 博客增加置顶功能"
+date: "2022-08-15"
+categories: 
+---
+<p>增加新列的migration,&nbsp;&nbsp; is_top，boolean, &nbsp; 默认false,&nbsp; 修改之后是true</p>
+
+<p>cat db/migrate/20220816003414_add_is_top_to_blogs.rb</p>
+
+<pre>
+<code>class AddIsTopToBlogs &lt; ActiveRecord::Migration
+
+&nbsp; def change
+
+&nbsp;&nbsp;&nbsp; add_column :blogs, :is_top, :boolean, default: false, comment: &#39;默认不置顶，后期自己选择是否置顶&#39;
+
+&nbsp; end
+
+end</code></pre>
+
+<p>编辑新建页面：cat app/views/blogs/_form.html.erb</p>
+
+<pre>
+&nbsp;&lt;div&gt;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 是否置顶:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%= form.select :is_top, options_for_select([[&#39;top&#39;, 1],[&#39;buttom&#39;,0]], params[:is_top]) %&gt;
+
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;</pre>
+
+<p>修改controller：cat app/controllers/blogs_controller.rb</p>
+
+<pre>
+<code>&nbsp;def index
+
+&nbsp;&nbsp;&nbsp; # 找到指定的blogs,&nbsp; migration,&nbsp;&nbsp; is_top&nbsp;&nbsp; 默认false,&nbsp; 修改之后是true
+
+&nbsp;&nbsp;&nbsp; @top_blogs = Blog.where(&#39;is_top = ?&#39;, true).order(&#39;created_at desc&#39;)
+
+&nbsp;&nbsp;&nbsp; # 找到普通的blogs
+
+&nbsp;&nbsp;&nbsp; @blogs = Blog.all
+
+&nbsp;&nbsp;&nbsp; @blogs = @blogs.where(&#39;title like ?&#39;, &quot;%#{params[:blog_title]}%&quot;) if params[:blog_title].present?
+
+&nbsp;&nbsp;&nbsp; @blogs = @blogs.where(&#39;content like ?&#39;, &quot;%#{params[:blog_content]}%&quot;) if params[:blog_content].present?
+
+&nbsp;&nbsp;&nbsp; @total_count = @blogs.all.size
+
+&nbsp;&nbsp;&nbsp; @blogs = @blogs.order(&#39;created_at desc&#39;).page(params[:page]).per(100)
+
+&nbsp; end</code></pre>
+
+<p>...</p>
+
+<pre>
+<code>&nbsp;&nbsp;&nbsp; def blog_params
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; params.require(:blog).permit(:title, :content, :category_id, :is_top)
+
+&nbsp;&nbsp;&nbsp; end</code></pre>
+
+<p>修改index页面：cat app/views/blogs/index.html.erb</p>
+
+<pre>
+<code>&lt;% @top_blogs.each do |blog| %&gt;
+
+&nbsp; &lt;a href=&quot;/blogs/&lt;%= blog.id %&gt;&quot; class=&quot;title&quot;&gt;&lt;%= blog.id %&gt;&nbsp; &lt;%= blog.title %&gt;
+
+&nbsp; &lt;/a&gt;&lt;/br&gt;
+
+&lt;% end %&gt;</code></pre>
+
+<pre>
+
+&nbsp;</pre>
+
+<p>&nbsp;</p>
+

@@ -1,0 +1,24 @@
+---
+layout: post
+title: "git push--与远程创建连接--文件提交到远程"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>注册账号，验证邮箱，登录github   创建.一个新的项目，尽量和本地的项目名相同，在创建项目的时候，如图所示的三个选项可以都不选择，只要把名字写好后即可点击绿色的创建按钮，即可创建好。<img alt="" src="https://img-blog.csdnimg.cn/f09ebffc02a9404da3c59e1430d0158a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p>创建后需要与本地进行连接。此时可以完全根据提示进行与本地建立连接，在命令行输入如图所示的命令，根据命令行的提示进行操作，最后需要输入账号名字和秘钥，这样本地才能与账号远程传送文件。名字就是注册时的昵称，秘钥需要自己在页面找一下，或者进行创建新的。<img alt="" src="https://img-blog.csdnimg.cn/9c9c783a9c654b389d923c886368be8a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p>查找秘钥不需要太麻烦，有时候也可以把秘钥保存一下，复制粘贴起来，方便一段时间内使用。查找秘钥的方法如下：秘钥在我的--setting--页面最后一项developersetting中，点击右上角的创建即可创建新的秘钥，也可以查看历史的秘钥记录。</p> 
+<p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/9e0ee56579a44194abe7d0a47e68530d.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p></p> 
+<p>git status ---查看修改的文件</p> 
+<p>git diff-- 查看所有修改的内容</p> 
+<ul>
+<li>git init - 初始化仓库。</li>
+<li>git add . - 添加文件到暂存区。</li>
+<li>git commit - 将暂存区内容添加到仓库中</li>
+<li>git log 查看日志</li>
+<li>git add -A 添加所有文件</li>
+<li>git push   输入昵称和秘钥传送文件</li>
+</ul>
+<p></p>
+                

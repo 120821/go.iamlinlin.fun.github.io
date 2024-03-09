@@ -1,0 +1,30 @@
+---
+layout: post
+title: "git 仓库"
+date: "2022-06-09"
+categories: 
+---
+
+                    <h3>commit</h3> 
+<p>git merge</p> 
+<p>git merge name ^c</p> 
+<p>git branch</p> 
+<p>git checkout</p> 
+<p>git merge</p> 
+<p>git log</p> 
+<h3>创建远程仓库</h3> 
+<p>github 注册创建一个repository</p> 
+<p>ls</p> 
+<p>git remote add origin 120821@githob.com：sg552</p> 
+<p>git push -u orign master</p> 
+<h3>在coding.net上创建</h3> 
+<p>注册 登录 创建项目</p> 
+<p>cd ..</p> 
+<p>cp 文件名</p> 
+<p>粘贴</p> 
+<p></p> 
+<p><a class="has-card" href="https://blog.csdn.net/Rong_Toa/article/details/80577410?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164670296416780366588411%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164670296416780366588411&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80577410.pc_search_result_control_group&amp;utm_term=git+push+githob&amp;spm=1018.2226.3001.4187" title="如何用git将本地项目push到GitHub上？_RToax-CSDN博客_git如何push到github"><span class="link-card-box"><span class="link-title">如何用git将本地项目push到GitHub上？_RToax-CSDN博客_git如何push到github</span><span class="link-desc">1.首先你要有个GitHub账号，登录网址注册：https://github.com/2.进入你的Github，点击New repository新建一个项目3.取一个Repository name，不能和自己的其他项目冲突PS：Repository name: 仓库名称Description(可选): 仓库描述介绍Public, Private : 仓库权限（公开共享，私有或指定合作者）Initi...</span><span class="link-link"><img alt="" class="link-link-icon" src="https://g.csdnimg.cn/static/logo/favicon32.ico">https://blog.csdn.net/Rong_Toa/article/details/80577410?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164670296416780366588411%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=164670296416780366588411&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80577410.pc_search_result_control_group&amp;utm_term=git+push+githob&amp;spm=1018.2226.3001.4187</span></span></a>$ git init                    #把当前目录变成git可以管理的仓库<br> $ git add readme.txt          #添加一个文件，也可以添加文件夹<br> $ git add -A                  #添加全部文件<br> $ git commit -m "some commit" #提交修改<br> $ git status                  #查看是否还有未提交<br> $ git log                     #查看最近日志<br> $ git reset --hard HEAD^      #版本回退一个版本<br> $ git reset --hard HEAD^^     #版本回退两个版本<br> $ git reset --hard HEAD~100   #版本回退多个版本<br> $ git remote add origin +地址 #远程仓库的提交（第一次链接）<br> $ git push -u origin master   #仓库关联<br> $ git push                    #远程仓库的提交（第二次及之后）<br> ————————————————<br> 版权声明：本文为CSDN博主「rtoax」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br> 原文链接：https://blog.csdn.net/Rong_Toa/article/details/80577410</p> 
+<p></p> 
+<p></p> 
+<p></p>
+                

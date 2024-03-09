@@ -1,0 +1,132 @@
+---
+layout: post
+title: "gin - 声明model"
+date: "2022-10-25"
+categories: 
+---
+<p><a href="https://gorm.io/docs/models.html">https://gorm.io/docs/models.html</a></p>
+
+<p>模型是具有基本 Go 类型、指针/别名或实现 Scanner 和 Valuer 接口的自定义类型的普通结构</p>
+
+<p>例如：</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+<span class="line">  ID           <span class="type">uint</span></span>
+<span class="line">  Name         <span class="type">string</span></span>
+<span class="line">  Email        *<span class="type">string</span></span>
+<span class="line">  Age          <span class="type">uint8</span></span>
+<span class="line">  Birthday     *time.Time</span>
+<span class="line">  MemberNumber sql.NullString</span>
+<span class="line">  ActivatedAt  sql.NullTime</span>
+<span class="line">  CreatedAt    time.Time</span>
+<span class="line">  UpdatedAt    time.Time</span>
+<span class="line">}</span></code></pre>
+
+<p>GORM 更喜欢约定而不是配置。&nbsp; 默认情况下，GORM使用ID作为主键，将struct name复数为snake_cases作为表名，snake_case作为列名，并使用CreatedAt、UpdatedAt来跟踪创建/更新时间</p>
+
+<p>&nbsp;如果您遵循 GORM 采用的约定，您将需要编写非常少的配置/代码。&nbsp; 如果约定不符合您的要求，GORM 允许您配置它们</p>
+
+<p>GORM defined a <code>gorm.Model</code> struct, which includes fields <code>ID</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>, <code>DeletedAt</code></p>
+
+<pre>
+<code><span class="line"><span class="comment">// gorm.Model definition</span></span>
+<span class="line"><span class="keyword">type</span> Model <span class="keyword">struct</span> {</span>
+<span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:&quot;primaryKey&quot;`</span></span>
+<span class="line">  CreatedAt time.Time</span>
+<span class="line">  UpdatedAt time.Time</span>
+<span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:&quot;index&quot;`</span></span>
+<span class="line">}</span></code></pre>
+
+<p>You can embed （嵌入）it into your struct（结构） to include those fields（字段）, refer <a href="https://gorm.io/docs/models.html#embedded_struct">Embedded Struct</a></p>
+
+<p>使用 GORM 进行 CRUD 时，导出的字段具有所有权限，并且 GORM 允许您使用标签更改字段级别的权限，因此您可以将字段设置为只读、只写、只创建、只更新或忽略</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-:create&quot;`</span> <span class="comment">// allow read and create</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-:update&quot;`</span> <span class="comment">// allow read and update</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-&quot;`</span>        <span class="comment">// allow read and write (create and update)</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-:false&quot;`</span>  <span class="comment">// allow read, disable write permission</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-&gt;&quot;`</span>        <span class="comment">// readonly (disable write permission unless it configured)</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-&gt;;&lt;-:create&quot;`</span> <span class="comment">// allow read and create</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-&gt;:false;&lt;-:create&quot;`</span> <span class="comment">// createonly (disabled read from db)</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-&quot;`</span>            <span class="comment">// ignore this field when write and read with struct</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-:all&quot;`</span>        <span class="comment">// ignore this field when write, read and migrate with struct</span></span>
+<span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-:migration&quot;`</span>  <span class="comment">// ignore this field when migrate with struct</span></span>
+<span class="line">}</span></code></pre>
+
+<p>创建/更新时间/Unix (Milli/Nano) 秒跟踪</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+<span class="line">  CreatedAt time.Time <span class="comment">// Set to current time if it is zero on creating</span></span>
+<span class="line">  UpdatedAt <span class="type">int</span>       <span class="comment">// Set to current unix seconds on updating or if it is zero on creating</span></span>
+<span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:&quot;autoUpdateTime:nano&quot;`</span> <span class="comment">// Use unix nano seconds as updating time</span></span>
+<span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:&quot;autoUpdateTime:milli&quot;`</span><span class="comment">// Use unix milli seconds as updating time</span></span>
+<span class="line">  Created   <span class="type">int64</span> <span class="string">`gorm:&quot;autoCreateTime&quot;`</span>      <span class="comment">// Use unix seconds as creating time</span></span>
+<span class="line">}</span></code></pre>
+
+<p>Embedded Struct(嵌入式结构)</p>
+
+<p>对于匿名字段，GORM 会将其字段包含在其父结构中，例如：</p>
+
+<p>For anonymous fields, GORM will include its fields into its parent struct, for example:</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+<span class="line">  gorm.Model</span>
+<span class="line">  Name <span class="type">string</span></span>
+<span class="line">}</span>
+<span class="line"><span class="comment">// equals</span></span>
+<span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+<span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:&quot;primaryKey&quot;`</span></span>
+<span class="line">  CreatedAt time.Time</span>
+<span class="line">  UpdatedAt time.Time</span>
+<span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:&quot;index&quot;`</span></span>
+<span class="line">  Name <span class="type">string</span></span>
+<span class="line">}</span></code></pre>
+
+<p>For a normal struct field, you can embed （嵌入）it with the tag <code>embedded（嵌入式）</code>, for example:</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> Author <span class="keyword">struct</span> {</span>
+<span class="line">  Name  <span class="type">string</span></span>
+<span class="line">  Email <span class="type">string</span></span>
+<span class="line">}</span>
+
+<span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
+<span class="line">  ID      <span class="type">int</span></span>
+<span class="line">  Author  Author <span class="string">`gorm:&quot;embedded&quot;`</span></span>
+<span class="line">  Upvotes <span class="type">int32</span></span>
+<span class="line">}</span>
+<span class="line"><span class="comment">// equals</span></span>
+<span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
+<span class="line">  ID    <span class="type">int64</span></span>
+<span class="line">  Name  <span class="type">string</span></span>
+<span class="line">  Email <span class="type">string</span></span>
+<span class="line">  Upvotes  <span class="type">int32</span></span>
+<span class="line">}</span></code></pre>
+
+<p>And you can use tag <code>embeddedPrefix</code>（嵌入式前缀） to add prefix to embedded fields&rsquo; db name, for example:</p>
+
+<pre>
+<code><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
+<span class="line">  ID      <span class="type">int</span></span>
+<span class="line">  Author  Author <span class="string">`gorm:&quot;embedded;embeddedPrefix:author_&quot;`</span></span>
+<span class="line">  Upvotes <span class="type">int32</span></span>
+<span class="line">}</span>
+<span class="line"><span class="comment">// equals</span></span>
+<span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
+<span class="line">  ID          <span class="type">int64</span></span>
+<span class="line">  AuthorName  <span class="type">string</span></span>
+<span class="line">  AuthorEmail <span class="type">string</span></span>
+<span class="line">  Upvotes     <span class="type">int32</span></span>
+<span class="line">}</span></code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

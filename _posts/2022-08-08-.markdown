@@ -1,0 +1,97 @@
+---
+layout: post
+title: "制作图表 柱状图等"
+date: "2022-08-08"
+categories: 
+---
+<p>官网：https://www.chartjs.org/docs/latest/charts/line.html</p>
+
+<p>参考：https://blog.csdn.net/weixin_42577411/article/details/115695505</p>
+
+<p>引入（application.html.erb）</p>
+
+<p>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css&quot;&gt;<br />
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js&quot;&gt;&lt;/script&gt;</p>
+
+<p>创建页面</p>
+
+<p>&lt;canvas id=&quot;myChart&quot; width=&quot;960&quot; height=&quot;200&quot;&gt;&lt;/canvas&gt;</p>
+
+<p>增加代码</p>
+
+<p>&lt;script&gt;<br />
+var ctx = document.getElementById(&#39;myChart&#39;);<br />
+var myChart = new Chart(ctx, {<br />
+&nbsp; type: &#39;bar&#39;,<br />
+&nbsp; data: {<br />
+&nbsp;&nbsp;&nbsp; labels: [&#39;Red&#39;, &#39;Blue&#39;, &#39;Yellow&#39;, &#39;Green&#39;, &#39;Purple&#39;, &#39;Orange&#39;],<br />
+&nbsp;&nbsp;&nbsp; datasets: [{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label: &#39;# of Votes&#39;,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: [12, 19, 3, 5, 2, 3],<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; backgroundColor: [&#39;rgba(255, 99, 132, 0.2)&#39;, &#39;rgba(54, 162, 235, 0.2)&#39;, &#39;rgba(255, 206, 86, 0.2)&#39;, &#39;rgba(75, 192, 192, 0.2)&#39;, &#39;rgba(153, 102, 255, 0.2)&#39;, &#39;rgba(255, 159, 64, 0.2)&#39;],<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; borderColor: [&#39;rgba(255, 99, 132, 1)&#39;, &#39;rgba(54, 162, 235, 1)&#39;, &#39;rgba(255, 206, 86, 1)&#39;, &#39;rgba(75, 192, 192, 1)&#39;, &#39;rgba(153, 102, 255, 1)&#39;, &#39;rgba(255, 159, 64, 1)&#39;],<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; borderWidth: 1<br />
+&nbsp;&nbsp;&nbsp; }]<br />
+&nbsp; },<br />
+&nbsp; options: {<br />
+&nbsp;&nbsp;&nbsp; scales: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yAxes: [{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ticks: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; beginAtZero: true<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }]<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp; }<br />
+});<br />
+&lt;/script&gt;</p>
+
+<p><img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" style="width: 1400px;" /></p>
+
+<p>也可以换成线状的</p>
+
+<p>&lt;script&gt;<br />
+var ctx = document.getElementById(&#39;myChart&#39;);<br />
+var myChart = new Chart(ctx, {<br />
+&nbsp;type: &#39;line&#39;,<br />
+&nbsp;data: {<br />
+&nbsp; labels: [&#39;Red&#39;, &#39;Blue&#39;, &#39;Yellow&#39;, &#39;Green&#39;, &#39;Purple&#39;, &#39;Orange&#39;],<br />
+&nbsp; datasets: [{<br />
+&nbsp;&nbsp; label: &#39;# of Votes&#39;,<br />
+&nbsp;&nbsp; data: [12, 19, 3, 5, 2, 12],<br />
+&nbsp;&nbsp; fill:false,<br />
+&nbsp;&nbsp; borderColor:&quot;#308af3&quot;,<br />
+&nbsp;&nbsp; pointBackgroundColor: &quot;#308af3&quot;,<br />
+&nbsp;&nbsp; pointBorderWidth: 2,<br />
+&nbsp;&nbsp; pointHoverBackgroundColor: &quot;#fff&quot;,<br />
+&nbsp;&nbsp; pointHoverBorderWidth: 2,<br />
+&nbsp;&nbsp; lineTension:0.05<br />
+&nbsp; }, {<br />
+&nbsp;&nbsp; label: &#39;# of Votes&#39;,<br />
+&nbsp;&nbsp; data: [19, 12, 6, 15, 7, 9],<br />
+&nbsp;&nbsp; fill:false,<br />
+&nbsp;&nbsp; borderColor:&quot;#48ba16&quot;,<br />
+&nbsp;&nbsp; pointBackgroundColor: &quot;#48ba16&quot;,<br />
+&nbsp;&nbsp; pointBorderWidth: 2,<br />
+&nbsp;&nbsp; pointHoverBackgroundColor: &quot;#fff&quot;,<br />
+&nbsp;&nbsp; pointHoverBorderWidth: 2,<br />
+&nbsp;&nbsp; lineTension:0.05<br />
+&nbsp; }]<br />
+&nbsp;},<br />
+&nbsp;options: {<br />
+&nbsp; legend: { display: false },<br />
+&nbsp; scales: {<br />
+&nbsp;&nbsp; xAxes: [{<br />
+&nbsp;&nbsp;&nbsp; gridLines: { display:false },<br />
+&nbsp;&nbsp; }],<br />
+&nbsp;&nbsp; yAxes: [{<br />
+&nbsp;&nbsp;&nbsp; gridLines: {<br />
+&nbsp;&nbsp;&nbsp;&nbsp; color: &quot;rgba(0, 0, 0, .05)&quot;,<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; }]<br />
+&nbsp; },<br />
+&nbsp;}<br />
+});<br />
+&lt;/script&gt;</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" style="width: 1400px;" /></p>
+

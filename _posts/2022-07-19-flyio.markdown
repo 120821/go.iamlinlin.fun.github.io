@@ -1,0 +1,24 @@
+---
+layout: post
+title: "fly.io 连接远程进行增加管理员等"
+date: "2022-07-19"
+categories: 
+---
+<p>使用fly.io进行连接远程</p>
+
+<p>fly ssh console<br />
+Update available 0.0.332 -&gt; v0.0.353.<br />
+Run &quot;flyctl version update&quot; to upgrade.</p>
+
+<p>fly version update</p>
+
+<p>fly ssh console<br />
+Connecting to top1.nearest.of.rain-drop-rails-mc-production.internal... complete</p>
+
+<p>cd app<br />
+# budnle exec rails c</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

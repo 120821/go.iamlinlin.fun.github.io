@@ -1,0 +1,54 @@
+---
+layout: post
+title: "icon - 使用国内的cdn"
+date: "2022-11-18"
+categories: 
+---
+<p>发现新的使用icon的方式，电脑还没好，使用记事本，star.txt, 内容如下：</p>
+
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&nbsp; &lt;title&gt;Foundation 实例&lt;/title&gt;
+&nbsp; &lt;meta charset=&quot;utf-8&quot;&gt;
+&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.staticfile.org/foundation/5.5.3/css/foundation.min.css&quot;&gt;
+&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://static.runoob.com/assets/foundation-icons/foundation-icons.css&quot;&gt;
+&nbsp; &lt;script src=&quot;https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &lt;script src=&quot;https://cdn.staticfile.org/foundation/5.5.3/js/foundation.min.js&quot;&gt;&lt;/script&gt;
+&nbsp; &lt;script src=&quot;https://cdn.staticfile.org/foundation/5.5.3/js/vendor/modernizr.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;padding:20px;&quot;&gt;<br />
+&lt;h2&gt;图标实例&lt;/h2&gt;<br />
+&lt;p&gt;Cloud icon: &lt;i class=&quot;fi-star&quot;&gt;&lt;/i&gt;&lt;/p&gt; &nbsp; &nbsp;<br />
+&lt;p&gt;Cloud icon as a link:<br />
+&nbsp; &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fi-star&quot;&gt;&lt;/i&gt;&lt;/a&gt;<br />
+&lt;/p&gt;<br />
+&lt;p&gt;Styled Cloud icon: &lt;i class=&quot;fi-cloud&quot; style=&quot;font-size:35px;color:red;&quot;&gt;&lt;/i&gt;&lt;/p&gt; &nbsp; &nbsp;<br />
+&lt;p&gt;Home icon: &lt;i class=&quot;fi-home&quot;&gt;&lt;/i&gt;&lt;/p&gt;<br />
+&lt;p&gt;Home icon on a button:<br />
+&nbsp; &lt;button type=&quot;button&quot; class=&quot;button&quot;&gt;<br />
+&nbsp; &nbsp; &lt;i class=&quot;fi-home&quot;&gt;&lt;/i&gt; Home&nbsp;<br />
+&nbsp; &lt;/button&gt;<br />
+&lt;/p&gt;<br />
+&lt;p&gt;Home icon on a green button:<br />
+&nbsp; &lt;button type=&quot;button&quot; class=&quot;button success&quot;&gt;<br />
+&nbsp; &nbsp; &lt;i class=&quot;fi-home&quot;&gt;&lt;/i&gt; Home&nbsp;<br />
+&nbsp; &lt;/button&gt;<br />
+&lt;/p&gt;<br />
+&lt;p&gt;Home icon on a large, light blue link button:<br />
+&nbsp; &lt;a href=&quot;#&quot; class=&quot;button info large&quot;&gt;<br />
+&nbsp; &nbsp; &lt;i class=&quot;fi-home&quot;&gt;&lt;/i&gt; Home&nbsp;<br />
+&nbsp; &lt;/a&gt;<br />
+&lt;/p&gt;&nbsp;<br />
+&lt;/div&gt;
+
+&lt;/body&gt;<br />
+&lt;/html&gt;</code></pre>
+
+<p><code>然后ctrl+s，保存后，修改文件的名称为：star.html,双击打开，看到</code></p>
+
+<p><img height="443" src="/uploads/ckeditor/pictures/734/image-20221118151106-1.png" width="837" /></p>
+

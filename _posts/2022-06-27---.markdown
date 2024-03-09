@@ -1,0 +1,14 @@
+---
+layout: post
+title: "大小写的转换--注意区分大写小写"
+date: "2022-06-27"
+categories: 
+---
+<p>downcase 进行小写</p>
+
+<p>在 irb进行小写的操作。</p>
+
+<p>irb(main):002:0&gt; Account.all.each do |account|&nbsp; account.address = account.address.downcase ;&nbsp; account.save! end</p>
+
+<p>&nbsp;</p>
+

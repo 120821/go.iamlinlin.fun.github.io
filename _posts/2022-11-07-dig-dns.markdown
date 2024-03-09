@@ -1,0 +1,59 @@
+---
+layout: post
+title: "dig - 查询dns"
+date: "2022-11-07"
+categories: 
+---
+<p><a href="https://developer.aliyun.com/article/418787">https://developer.aliyun.com/article/418787</a></p>
+
+<p><a href="http://www.noobyard.com/article/p-nlfgejxc-oc.html">http://www.noobyard.com/article/p-nlfgejxc-oc.html</a></p>
+
+<p>一个典型的 <span>dig</span> 查询以下<span style="color:#fff">浏览器</span></p>
+
+<pre class="hljs nginx">
+<span class="hljs-title">dig</span> <span class="hljs-variable">@</span><span><span class="hljs-variable">server</span></span> <span>name</span> <span>type</span> </pre>
+
+<pre class="hljs nginx">
+<span><span class="hljs-title">dig</span>&nbsp;<wbr /><span class="hljs-variable">@server</span>&nbsp;<wbr />xxx.com.cn. </span></pre>
+
+<p>type类型</p>
+
+<pre>
+&nbsp;<code>&nbsp; A 地址记录(Ipv4)
+
+&nbsp;<wbr />&nbsp;<wbr />AAAA 地址记录（Ipv6）
+
+&nbsp;<wbr />&nbsp;<wbr />AFSDB Andrew文件系统数据库服务器记录
+
+&nbsp;<wbr />&nbsp;<wbr />ATMA ATM地址记录
+
+&nbsp;<wbr />&nbsp;<wbr />CNAME 别名记录
+
+&nbsp;<wbr />&nbsp;<wbr />HINFO 硬件配置记录，包括CPU、操做系统信息
+
+&nbsp;<wbr />&nbsp;<wbr />ISDN 域名对应的ISDN号码
+
+&nbsp;<wbr />&nbsp;<wbr />MB 存放指定邮箱的服务器
+
+&nbsp;<wbr />&nbsp;<wbr />MG 邮件组记录
+
+&nbsp;<wbr />&nbsp;<wbr />MINFO 邮件组和邮箱的信息记录
+
+&nbsp;<wbr />&nbsp;<wbr />MR 更名的邮箱记录
+
+&nbsp;<wbr />&nbsp;<wbr />MX 邮件服务器记录
+
+&nbsp;<wbr />&nbsp;<wbr />NS 名字服务器记录
+
+&nbsp;<wbr />&nbsp;<wbr />PTR 反向记录
+
+&nbsp;<wbr />&nbsp;<wbr />RP 负责人记录
+
+&nbsp;<wbr />&nbsp;<wbr />RT 路由穿透记录
+
+&nbsp;<wbr />&nbsp;<wbr />SRV TCP服务器信息记录
+
+&nbsp;<wbr />&nbsp;<wbr />TXT 域名对应的文本信息
+
+&nbsp;<wbr />&nbsp;<wbr />X25 域名对应的X.25地址记录</code></pre>
+

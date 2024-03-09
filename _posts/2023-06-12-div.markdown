@@ -1,0 +1,136 @@
+---
+layout: post
+title: "div 自动滚动的方式"
+date: "2023-06-12"
+categories: 
+---
+<p>1.只需将HTML和CSS代码稍微更改即可。以下是一个示例，使用div作为滚动框，内部div包含滚动内容：</p>
+
+<p>HTML代码：</p>
+
+<pre>
+<code>&lt;div class=&quot;scroll-box&quot;&gt;
+  &lt;div class=&quot;scroll-content&quot;&gt;
+    &lt;div&gt;内容1&lt;/div&gt;
+    &lt;div&gt;内容2&lt;/div&gt;
+    &lt;div&gt;内容3&lt;/div&gt;
+    &lt;div&gt;内容4&lt;/div&gt;
+    &lt;div&gt;内容5&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>CSS代码：</p>
+
+<pre>
+<code>.scroll-box {
+  overflow: hidden;
+}
+
+.scroll-content {
+  animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+div {
+  margin: 10px 0;
+  height: 20px;
+}</code></pre>
+
+<div id="rtf3861">
+<div>
+<p>该代码使用CSS动画实现滚动效果，通过将滚动内容div应用动画实现滚动。可以根据需要调整动画时间、滚动内容高度等参数。如果需要暂停、继续滚动可以通过JavaScript控制animation-play-state属性实现。</p>
+</div>
+</div>
+
+<p>一个页面可以用多个滚动的 <code>div</code>。</p>
+
+<p>可能是你的另一个 <code>div</code> 没有设置正确的样式，比如 <code>overflow: hidden</code> 或者缺少必要的样式。你可以检查一下另一个 <code>div</code> 的 CSS 样式，确保它设置正确。同时也需要注意，如果两个 <code>div</code> 的滚动速度相差很大，可能会导致其中一个 <code>div</code> 被另一个 <code>div</code> 盖住，这时可以通过调整 <code>z-index</code> 属性来解决。</p>
+
+<p>另外，有些浏览器可能会在某些情况下出现某些元素无法滚动的问题，这时可以试试添加 <code>-webkit-overflow-scrolling: touch</code> 样式来修复。</p>
+
+<p>2可以使用CSS的动画或JavaScript的定时器来实现自动滚动效果。以下是使用JavaScript的示例代码：</p>
+
+<p>HTML代码：</p>
+
+<pre>
+<code>&lt;div class=&quot;scroll-box&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;内容1&lt;/li&gt;
+    &lt;li&gt;内容2&lt;/li&gt;
+    &lt;li&gt;内容3&lt;/li&gt;
+    &lt;li&gt;内容4&lt;/li&gt;
+    &lt;li&gt;内容5&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+<p>CSS代码：</p>
+
+<pre>
+<code>.scroll-box {
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  height: 20px;
+}</code></pre>
+
+<p>JavaScript代码：</p>
+
+<pre>
+<code>function autoScroll() {
+  var box = document.querySelector(&#39;.scroll-box&#39;);
+  var ul = box.querySelector(&#39;ul&#39;);
+  var liHeight = ul.querySelector(&#39;li&#39;).offsetHeight;
+  var speed = 50; // 滚动速度，单位：像素/秒
+  var delay = 2000; // 停留时间，单位：毫秒
+  var timer;
+
+  // 复制列表项
+  var clone = ul.cloneNode(true);
+  ul.appendChild(clone);
+
+  // 滚动函数
+  function scroll() {
+    if (box.scrollTop % liHeight == 0 &amp;&amp; !box.noScroll) {
+      clearTimeout(timer);
+      setTimeout(function() {
+        box.noScroll = true;
+        timer = setInterval(function() {
+          box.scrollTop++;
+          if (box.scrollTop % liHeight == 0) {
+            clearInterval(timer);
+            box.noScroll = false;
+            scroll();
+          }
+        }, speed / liHeight);
+      }, delay);
+    } else {
+      setTimeout(scroll, 0);
+    }
+  }
+
+  // 开始滚动
+  setTimeout(scroll, delay);
+}
+
+autoScroll();</code></pre>
+
+<p>该代码实现了在div滚动框中自动滚动内容。可以根据需要调整滚动速度、停留时间等参数。</p>
+
+<p>&nbsp;</p>
+

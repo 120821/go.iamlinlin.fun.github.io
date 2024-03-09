@@ -1,0 +1,28 @@
+---
+layout: post
+title: "linux复制文件或目录cp用法"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>复制文件到当前目录，并替换Gemfire</p> 
+<p>cp test_rails_crud/config/database.yml my_fruits/config</p> 
+<p>复制文件到当前目录，并命名为rrr</p> 
+<p>cp ../test_rails_crud/Gemfile ./rrr</p> 
+<p style="text-align:center;">同一个文件夹复制并改名<img alt="" src="https://img-blog.csdnimg.cn/29fdfd8e38ee4e8487edbe9c47618f91.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p> </p> 
+<p>bundle1 exec rails s</p> 
+<p>bundle exec rails console</p> 
+<p>bundle exec rails generate migration create_books</p> 
+<p>bundle exec thin start</p> 
+<p>bundle1 install</p> 
+<p>bundle1 exec thin start</p> 
+<p>bundle1 exec thin start -e production</p> 
+<p>bundle1 exec thin start -C config/thin.yml</p> 
+<p>bundle1 exec rake assets:precompile RALIS_ENV=production</p> 
+<p>git status</p> 
+<p>ps -ef | grep thin</p> 
+<p>ps -ef | grep thin</p> 
+<p>git commit -m 'xxx'</p> 
+<p></p>
+                

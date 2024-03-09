@@ -1,0 +1,277 @@
+---
+layout: post
+title: "发送单条短信"
+date: "2022-06-11"
+categories: 
+---
+<p>1. 注册用户名密码</p>
+
+<p>2. 做备案. &nbsp;是企业还是个人. &nbsp;一半都是企业. 准备好各种证照. (营业执照等)</p>
+
+<p>3. 新建一个签名. 这个签名不是论坛上发了帖子之后的签名,而是类似于一个大的模板.&nbsp;</p>
+
+<p><img alt="Screenshot From 2016 12 03 17 08 47 云片的签名" height="564" rel="225x255" src="http://siwei.me/system/images/W1siZiIsIjIwMTYvMTIvMDMvMTdfMTBfNDBfNzMzX1NjcmVlbnNob3RfZnJvbV8yMDE2XzEyXzAzXzE3XzA4XzQ3Xy5wbmciXV0/Screenshot%20from%202016-12-03%2017-08-47-%E4%BA%91%E7%89%87%E7%9A%84%E7%AD%BE%E5%90%8D.png" title="Screenshot From 2016 12 03 17 08 47 云片的签名" width="1232" /></p>
+
+<p>4. 一个模板, &nbsp;选择好用途,就可以了!&nbsp;</p>
+
+<p><img alt="Screenshot From 2016 12 03 17 14 01 模板列表" height="353" rel="225x255" src="http://siwei.me/system/images/W1siZiIsIjIwMTYvMTIvMDMvMTdfMTRfMjFfNDY4X1NjcmVlbnNob3RfZnJvbV8yMDE2XzEyXzAzXzE3XzE0XzAxXy5wbmciXV0/Screenshot%20from%202016-12-03%2017-14-01-%E6%A8%A1%E6%9D%BF%E5%88%97%E8%A1%A8.png" title="Screenshot From 2016 12 03 17 14 01 模板列表" width="1039" /></p>
+
+<p>记得选择类型时,要选择 &quot;验证码&quot;, 然后提供一个URL, 这个URL就是注册或者登陆的页面. 供云片网的工作人员使用.&nbsp;</p>
+
+<p>有这么两个,就可以发送短信验证码了:</p>
+
+<p>1 sms_key: &#39;316e7066e393e9edf88b8bf03&#39;<br />
+2 sms_url: &quot;https://sms.yunpian.com/v1/sms/send.json&quot;</p>
+
+<pre class="hljs ruby">
+  <span class="hljs-comment">#发送验证码短信方法</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> </span><span class="hljs-keyword">self</span>.send_sms(mobile, token)
+
+    sms_url = <span class="hljs-constant">Settings</span>.sms_url
+    sms_key = <span class="hljs-constant">Settings</span>.sms_key
+
+    body = { 
+        <span class="hljs-symbol">:apikey</span> =&gt; sms_key,
+        <span class="hljs-symbol">:mobile</span> =&gt; mobile,
+        <span class="hljs-symbol">:text</span> =&gt;<span class="hljs-string">&quot;【智慧图】您的验证码是<span class="hljs-subst">#{token}</span>. 如非本人操作，请忽略本短信。&quot;</span>
+    }   
+    logger.info(<span class="hljs-string">&#39;=== before send_sms&#39;</span>)
+    logger.info(<span class="hljs-string">&quot;== body: <span class="hljs-subst">#{body.inspect}</span>&quot;</span>)
+    logger.info(<span class="hljs-string">&quot;== sms url: <span class="hljs-subst">#{sms_url}</span>&quot;</span>)
+    response = <span class="hljs-constant">HTTParty</span>.post(sms_url, <span class="hljs-symbol">:body</span> =&gt; body )
+    logger.info(<span class="hljs-string">&quot;== response: <span class="hljs-subst">#{response.inspect}</span>&quot;</span>)
+  <span class="hljs-keyword">end</span> 
+
+</pre>
+
+<h3 data-lake-id="23edf055bf942cd69dc13062c64d150a_h3_4" id="eba93122" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">cURL 请求示例</h3>
+
+<p data-lake-id="42752743bc6d3f9f6c928fb47989b8c2_p_16" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<div data-card-type="block" data-lake-card="codeblock" data-language="plain" id="0fbd00e9">
+<div class="lake-codeblock-content" style="border: 1px solid rgb(232, 232, 232); max-width: 750px; color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: rgb(249, 249, 249);">
+<div class="CodeMirror-sizer" style="color: rgb(89, 89, 89); margin: 0px; padding: 16px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<pre class="cm-s-default" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">#单条短信发送,智能匹配短信模板
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"># @param apikey成功注册后登录云片官网,进入后台可查看
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"># @param text需要使用已审核通过的模板或者默认模板,如果内容含有％注意需要是中文全角的
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"># @param mobile接收的手机号,仅支持单号码发送
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"># @return json格式字符串
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">curl -X &quot;POST&quot; &quot;https://sms.yunpian.com/v2/sms/single_send.json&quot; \
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  -H &quot;content-type: application/x-www-form-urlencoded&quot; \
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  -d &quot;apikey=4d6cxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot; \
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  -d &quot;mobile=158xxxxxxxx&quot; \
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  -d &quot;text=【云片网】您的验证码是1234&quot;</span></span></pre>
+</div>
+</div>
+</div>
+
+<h3 data-lake-id="d2a32b18eb77df1913569fdeb6c4e141_h3_2" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">可以尝试添加权限不然就会</h3>
+
+<p><img height="60" src="/uploads/ckeditor/pictures/5/image-20220611161114-1.png" width="1469" /></p>
+
+<h3 data-lake-id="d2a32b18eb77df1913569fdeb6c4e141_h3_2" id="1fb911f4" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">java 请求示例</h3>
+
+<p data-lake-id="09a2b5671cf447a1a3529d71c89cf9e1_p_12" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<div data-card-type="block" data-lake-card="codeblock" data-language="java" id="95fddee8">
+<div class="lake-codeblock-content" style="border: 1px solid rgb(232, 232, 232); max-width: 750px; color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: rgb(249, 249, 249);">
+<div class="CodeMirror-sizer" style="color: rgb(89, 89, 89); margin: 0px; padding: 16px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<pre class="cm-s-default" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">/**</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">* 单条短信发送,智能匹配短信模板</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">*</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">* @param apikey成功注册后登录云片官网,进入后台可查看</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">* @param text需要使用已审核通过的模板或者默认模板</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">* @param mobile接收的手机号,仅支持单号码发送</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">* @return json格式字符串</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-comment" style="color: rgb(106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">*/</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-keyword" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">public</span> <span class="cm-keyword" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">static</span> <span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span> <span class="cm-def" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">singleSend</span>(<span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">apikey</span>, <span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">text</span>, <span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">mobile</span>) {
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">    <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">Map</span><span class="cm-operator" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&lt;</span><span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span>, <span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span><span class="cm-operator" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&gt;</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">params</span> <span class="cm-operator" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">=</span> <span class="cm-keyword" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">new</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">HashMap</span><span class="cm-operator" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&lt;</span><span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span>, <span class="cm-type" style="color: rgb(34, 134, 58); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">String</span><span class="cm-operator" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&gt;</span>();
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">    <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">params</span>.<span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">put</span>(<span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;apikey&quot;</span>, <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">apikey</span>);
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">    <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">params</span>.<span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">put</span>(<span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;text&quot;</span>, <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">text</span>);
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">    <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">params</span>.<span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">put</span>(<span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;mobile&quot;</span>, <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">mobile</span>);
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">    <span class="cm-keyword" style="color: rgb(215, 58, 73); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">return</span> <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">post</span>(<span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;https://sms.yunpian.com/v2/sms/single_send.json&quot;</span>, <span class="cm-variable" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">params</span>);
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">}</span></span></pre>
+</div>
+</div>
+</div>
+
+<h3 data-lake-id="938dacdf3ea1938af69339baa5d493e9_h3_6" id="8aa9de4e" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">响应</h3>
+
+<div data-card-type="block" data-lake-card="table" id="96df6e5a">
+<table class="lake-table" style="width: 720px; outline: none; border-collapse: collapse; border: 1px solid rgb(217, 217, 217);">
+	<colgroup>
+		<col span="1" width="240" />
+		<col span="1" width="240" />
+		<col span="1" width="240" />
+	</colgroup>
+	<tbody>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">名称</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">类型</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">描述</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">code</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">integer</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">0 代表发送成功，其他 code 代表出错，详细见&quot;返回值说明&quot;页面</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">msg</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">text</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">例如&quot;&quot;发送成功&quot;&quot;，或者相应错误信息</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">count</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">integer</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">发送成功短信的计费条数(计费条数：70 个字一条，超出 70 个字时按每 67 字一条计费)</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">fee</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">double</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">扣费金额，单位：元，类型：双精度浮点型/double</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">unit</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">string</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">计费单位；例如：&ldquo;RMB&rdquo;</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">mobile</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">string</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">发送手机号</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">sid</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">long(64 位)</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">短信 id，64 位整型， 对应 Java 和 C#的 long，不可用 int 解析</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<p data-lake-id="54d418504a63791b75a5f497078fa24a_p_21" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<h3 data-lake-id="532c02c095c75dbc4c6b694ff7fa344b_h3_7" id="7099a0e2" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">Json 返回示例</h3>
+
+<p data-lake-id="37928cd1f32681ee4810a9ab9d3c1104_p_22" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<div data-card-type="block" data-lake-card="codeblock" data-language="json" id="0c17a676">
+<div class="lake-codeblock-content" style="border: 1px solid rgb(232, 232, 232); max-width: 750px; color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: rgb(249, 249, 249);">
+<div class="CodeMirror-sizer" style="color: rgb(89, 89, 89); margin: 0px; padding: 16px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<pre class="cm-s-default" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">{
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;code&quot;</span>: <span class="cm-number" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">0</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;msg&quot;</span>: <span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;发送成功&quot;</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;count&quot;</span>: <span class="cm-number" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">1</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;fee&quot;</span>: <span class="cm-number" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">0.05</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;unit&quot;</span>: <span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;RMB&quot;</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;mobile&quot;</span>: <span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;13200000000&quot;</span>,
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">  <span class="cm-string cm-property" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">&quot;sid&quot;</span>: <span class="cm-number" style="color: rgb(0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">3310228982</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">}</span></span></pre>
+</div>
+</div>
+</div>
+
+<p data-lake-id="4372d54e794afb948227802583a47ca0_p_4" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<p data-lake-id="4372d54e794afb948227802583a47ca0_p_4" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">HTTP 头信息:</p>
+
+<p data-lake-id="7467903a77e4c43e92d4f196903d0bbe_p_5" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<div data-card-type="block" data-lake-card="codeblock" data-language="http" id="7ac5d3be">
+<div class="lake-codeblock-content" style="border: 1px solid rgb(232, 232, 232); max-width: 750px; color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: rgb(249, 249, 249);">
+<div class="CodeMirror-sizer" style="color: rgb(89, 89, 89); margin: 0px; padding: 16px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<pre class="cm-s-default" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-error" style="color: rgb(255, 0, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">Accept:application/json;charset=utf-8;</span>
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="cm-atom" style="color: rgb(153, 0, 85); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">Content-Type:</span><span class="cm-string" style="color: rgb(102, 153, 0); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">application/x-www-form-urlencoded;charset=utf-8;</span></span></span></pre>
+</div>
+</div>
+</div>
+
+<p data-lake-id="f23fb9c519ff30bfe03d0b2cc2cac85d_p_6" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<h3 data-lake-id="e06b6a5d1fd458dbd76abe6e83815d77_h3_0" id="75b16081" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">请求</h3>
+
+<p data-lake-id="e1b0979b54c1fb29acc1d92ad2159922_p_7" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<div data-card-type="block" data-lake-card="codeblock" data-language="plain" id="ac373566">
+<div class="lake-codeblock-content" style="border: 1px solid rgb(232, 232, 232); max-width: 750px; color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: rgb(249, 249, 249);">
+<div class="CodeMirror-sizer" style="color: rgb(89, 89, 89); margin: 0px; padding: 16px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<pre class="cm-s-default" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">
+<span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">URL：https://sms.yunpian.com/v2/sms/single_send.json
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">注意：海外服务器地址 us.yunpian.com
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">访问方式：POST
+</span></span><span class="lake-preview-line" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);"><span class="lake-preview-codeblock-content" style="color: rgb(89, 89, 89); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">支持 https 与 http 两种访问，建议使用 https</span></span></pre>
+</div>
+</div>
+</div>
+
+<p data-lake-id="92c8228235b93f7cc9ced6ac90fca3a6_p_8" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;">&nbsp;</p>
+
+<h3 data-lake-id="7bad8e52317e55db7ffb33b139ec37e3_h3_1" id="527466ff" style="padding: 7px 0px; margin: 0px; font-weight: 700; font-size: 20px; line-height: 28px;">请求参数</h3>
+
+<div data-card-type="block" data-lake-card="table" id="edfaf81a">
+<table class="lake-table" style="width: 720px; outline: none; border-collapse: collapse; border: 1px solid rgb(217, 217, 217);">
+	<colgroup>
+		<col span="1" width="120" />
+		<col span="1" width="120" />
+		<col span="1" width="120" />
+		<col span="1" width="120" />
+		<col span="1" width="120" />
+		<col span="1" width="120" />
+	</colgroup>
+	<tbody>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">参数名</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">类型</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是否必传</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是否默认开放</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">描述</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">示例</td>
+		</tr>
+	</tbody>
+	<tbody>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">apikey</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">string</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">用户唯一标识，在&quot;账号设置&quot;-&quot;子帐号管理&quot;中查看</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">9b11127a9701975c734b8aee81ee3526</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">mobile</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">string</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">接收的手机号，仅支持单号码发送，不需要带+86 前缀</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">15205201314</td>
+		</tr>
+		<tr style="height: 33px;">
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">text</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">string</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">是</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">需要发送的短信内容，需要与已审核的短信模板相匹配。
+			<p data-lake-id="1516570b60837191db147a52009264e5" style="font-size: 14px; color: rgb(38, 38, 38); line-height: 1.74; letter-spacing: 0.05em; outline-style: none; overflow-wrap: break-word; margin: 0px;"><span style="color: #333333;">短信内容须在最前面携带签名，否则会使用子账号默认签名下发</span></p>
+			</td>
+			<td style="text-align: left; min-width: 90px; font-size: 14px; white-space: normal; overflow-wrap: break-word; border: 1px solid rgb(217, 217, 217); padding: 4px 8px; cursor: default;">
+			<p>【云片网】您的验证码是 1234</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+
+			<p>&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+

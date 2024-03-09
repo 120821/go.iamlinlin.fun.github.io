@@ -1,0 +1,52 @@
+---
+layout: post
+title: "购买一个.ens 域名"
+date: "2022-10-12"
+categories: 
+---
+<p>1.谷歌搜索ens<a href="https://www.google.com/search?client=firefox-b-d&amp;q=ens">https://www.google.com/search?client=firefox-b-d&amp;q=ens</a></p>
+
+<p><img height="645" src="/uploads/ckeditor/pictures/570/image-20221012100723-1.png" width="937" /></p>
+
+<p>1.2 点击红框的内容，进入官网，点击gotoapp</p>
+
+<p><img height="645" src="/uploads/ckeditor/pictures/571/image-20221012100844-2.png" width="1642" /></p>
+
+<p>2.在页面搜索需要的域名例如：daydayup</p>
+
+<p><img height="758" src="/uploads/ckeditor/pictures/572/image-20221012100922-3.png" width="1642" /></p>
+
+<p>如果可以购买就会出现图片下边的内容，不能购买就是上边的内容，点击域名的名称可以进行购买</p>
+
+<p><img height="758" src="/uploads/ckeditor/pictures/573/image-20221012101105-4.png" width="1642" /></p>
+
+<p>&nbsp;</p>
+
+<p>然后，连接钱包进行注册的确认：</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/574/image-20221012101421-5.png" width="1620" /></p>
+
+<p>接着进行确认申请注册</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/577/image-20221012101503-8.png" width="1620" /></p>
+
+<p>然后，等待一分钟：</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/576/image-20221012101451-7.png" width="1620" /></p>
+
+<p>然后直接点击注册即可：</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/578/image-20221012112011-9.png" width="1620" /></p>
+
+<p>在钱包进行确认订单：</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/579/image-20221012112027-10.png" width="1620" /></p>
+
+<p>然后页面进行处理：</p>
+
+<p><img height="833" src="/uploads/ckeditor/pictures/580/image-20221012112049-11.png" width="1620" /></p>
+
+<p>处理结束就可以看自己的ETH域名了<img height="833" src="/uploads/ckeditor/pictures/581/image-20221012112106-12.png" width="1620" /></p>
+
+<p>&nbsp;</p>
+

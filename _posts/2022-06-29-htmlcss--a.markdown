@@ -1,0 +1,40 @@
+---
+layout: post
+title: "html css --设置a标签字体的位置"
+date: "2022-06-29"
+categories: 
+---
+<p>参考：https://codeantenna.com/a/hF51Xm20FD</p>
+
+<p>二、独占一行a锚文本告捷配置高度</p>
+
+<p>1、使用css属性单词</p>
+
+<p>display:block</p>
+
+<p>加之这个标签元素造成块的css后再配置高度或宽度人造就起效了，偏差是配置后元素标签会独有一行。</p>
+
+<p>2、div css实例代码</p>
+
+<p>display:block完成a高度 CSS5</p>
+
+<p>a{bac千克round:#00F; color:#FFF}</p>
+
+<p>使用line-height: xxpx; 使用text-align: center</p>
+
+<p>a{ display:block; height:40px; line-height:40px}</p>
+
+<p>三、不独有一行a超链接配置高度</p>
+
+<p>1、用display:inline-block完成a标签高度获胜奏效</p>
+
+<p>这个属性与上一个display:block，甄别在于形成块但不会独有一行。</p>
+
+<p>2、css实例代码</p>
+
+<p>display:inline-block实现a高度 CSS5</p>
+
+<p>a{bac公斤round:#00F; color:#FFF}</p>
+
+<p>.bb a{ display:inline-block; height:40px; line-height:40px</p>
+

@@ -1,0 +1,39 @@
+---
+layout: post
+title: "vue 启动"
+date: "2023-11-12"
+categories: 
+---
+<p>使用命令：</p>
+
+<pre>
+<code>npm <span style="color:#f5ab35">run</span> serve</code></pre>
+
+<p>果还没项目可以：</p>
+
+<p>1.确保已经安装了Node.js</p>
+
+<pre>
+<code><span style="color:#dcc6e0">node</span> <span style="color:#00e0e0">-v</span></code></pre>
+
+<p>2.安装Vue CLI</p>
+
+<pre>
+<code><span style="color:#f5ab35">npm</span> install -g @vue/cli
+</code></pre>
+
+<p>3.创建一个新的vue项目：（记得修改名称）</p>
+
+<pre>
+<code>vue <span style="color:#dcc6e0">create</span> my-<span style="color:#dcc6e0">project</span></code></pre>
+
+<p>4.进入项目的目录</p>
+
+<pre>
+<code>cd <span style="color:#dcc6e0">my</span>-project</code></pre>
+
+<p>5.启动开发服务器</p>
+
+<pre>
+<code>npm <span style="color:#f5ab35">run</span> serve</code></pre>
+

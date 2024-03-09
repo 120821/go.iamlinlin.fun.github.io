@@ -1,0 +1,251 @@
+---
+layout: post
+title: "MongoDB--导出数据"
+date: "2022-07-18"
+categories: 
+---
+<p>参考：<a href="https://www.mongodb.com/docs/database-tools/mongodump/">https://www.mongodb.com/docs/database-tools/mongodump/</a></p>
+
+<p>mongodump --archive=test.20150715.archive --db=test</p>
+
+<p>客户端:</p>
+
+<p>参考: <a href="https://stackoverflow.com/questions/25947929/how-to-list-all-databases-in-the-mongo-shell">https://stackoverflow.com/questions/25947929/how-to-list-all-databases-in-the-mongo-shell</a></p>
+
+<p>mongo即可</p>
+
+<p>show dbs</p>
+
+<p>use &lt;db_name&gt;</p>
+
+<p>show collections (它跟&nbsp; show tables 返回的是一样的)</p>
+
+<p>导入</p>
+
+<p>参考:<a href="http://https://www.jianshu.com/p/6fa450b356c8  ( 处理问题:Failed: cannot decode array into a primitive.D )">http://https://www.jianshu.com/p/6fa450b356c8 ( 处理问题:Failed: cannot decode array into a primitive.D )</a></p>
+
+<p>mongoimport --db &lt;db-name&gt; --collection &lt;collection-name&gt; --jsonArray &lt;your-path.json&gt;</p>
+
+<p>node driver</p>
+
+<p>声明document:<br />
+use lueluelue&nbsp; ( 这个就是create database )</p>
+
+<p>查询<br />
+db.my_table.find()&nbsp; # 查询所有 , my_table就是表名， 记得这里在代码中需要&nbsp; .toArray()<br />
+db.my_table.findOne() 只查询一个。</p>
+
+<p>插入</p>
+
+<p>&gt; db.domains.insert({&quot;address&quot;: &quot;168EsqUaRF6teT9enPx9X6dbHR7JbWN5hDeNAKtHGUPh4RCy&quot;, &quot;name&quot;: &quot;goodgoodstudy013&quot;})</p>
+
+<p>更新</p>
+
+<p>611&nbsp;&nbsp;&nbsp;&nbsp; let all_domains = await domains.find().toArray()<br />
+612<br />
+613&nbsp;&nbsp;&nbsp;&nbsp; all_domains.forEach( async function(e: Domain) {<br />
+614<br />
+615&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let updateDoc = {<br />
+616&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $set: {<br />
+617&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; batch: (random(2) + 1),<br />
+618&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chain: (random(2) == 0 ? &quot;litentry&quot; : &quot;coinversation&quot;)<br />
+619&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+620&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+621&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; await domains.updateOne({_id: e._id}, updateDoc)<br />
+622&nbsp;&nbsp;&nbsp;&nbsp; })</p>
+
+<p>查询</p>
+
+<p>await redeem_codes.findOne({ shortcode: shortcode })</p>
+
+<p>首先看一下27017是否正常运行，因为MongoDB是在27017进行运行的，telnet 127.0.0.1 27017</p>
+
+<p>ubuntu@VM-0-13-ubuntu:/opt/app$ telnet 127.0.0.1 27017<br />
+Trying 127.0.0.1...<br />
+Connected to 127.0.0.1.<br />
+Escape character is &#39;^]&#39;.<br />
+^]<br />
+telnet&gt; ^CConnection closed.</p>
+
+<p>然后进行查看，27017都运行什么进程，显示是有三个进程</p>
+
+<p>ubuntu@VM-0-13-ubuntu:/opt/app/lueluelue-backend-fastify/current$ lsof -i:27017<br />
+COMMAND&nbsp;&nbsp;&nbsp; PID&nbsp;&nbsp; USER&nbsp;&nbsp; FD&nbsp;&nbsp; TYPE&nbsp;&nbsp; DEVICE SIZE/OFF NODE NAME<br />
+node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7034 ubuntu&nbsp;&nbsp; 18u&nbsp; IPv4&nbsp;&nbsp;&nbsp; 67490&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:33604-&gt;localhost:27017 (ESTABLISHED)<br />
+node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7034 ubuntu&nbsp;&nbsp; 19u&nbsp; IPv4&nbsp;&nbsp;&nbsp; 68353&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:33608-&gt;localhost:27017 (ESTABLISHED)<br />
+node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7034 ubuntu&nbsp;&nbsp; 20u&nbsp; IPv4&nbsp;&nbsp;&nbsp; 68553&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:33674-&gt;localhost:27017 (ESTABLISHED)<br />
+ruby&nbsp;&nbsp;&nbsp; 425436 ubuntu&nbsp;&nbsp; 22u&nbsp; IPv4&nbsp; 3185129&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:39706-&gt;localhost:27017 (ESTABLISHED)<br />
+ruby&nbsp;&nbsp;&nbsp; 425436 ubuntu&nbsp;&nbsp; 23u&nbsp; IPv4&nbsp; 3185137&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:39710-&gt;localhost:27017 (ESTABLISHED)<br />
+ruby&nbsp;&nbsp;&nbsp; 425436 ubuntu&nbsp;&nbsp; 24u&nbsp; IPv4&nbsp; 3184026&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:39714-&gt;localhost:27017 (ESTABLISHED)<br />
+ruby&nbsp;&nbsp;&nbsp; 425436 ubuntu&nbsp;&nbsp; 27u&nbsp; IPv4&nbsp; 3190168&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:40040-&gt;localhost:27017 (ESTABLISHED)<br />
+node&nbsp;&nbsp;&nbsp; 712724 ubuntu&nbsp;&nbsp; 18u&nbsp; IPv4 36153083&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:58296-&gt;localhost:27017 (ESTABLISHED)<br />
+node&nbsp;&nbsp;&nbsp; 712724 ubuntu&nbsp;&nbsp; 19u&nbsp; IPv4 36153193&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:58316-&gt;localhost:27017 (ESTABLISHED)<br />
+node&nbsp;&nbsp;&nbsp; 712724 ubuntu&nbsp;&nbsp; 20u&nbsp; IPv4 36150642&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:58302-&gt;localhost:27017 (ESTABLISHED)</p>
+
+<p>ps -ef | grep mongo<br />
+systemd+&nbsp;&nbsp;&nbsp; 5647&nbsp;&nbsp;&nbsp; 5627&nbsp; 0 Jun06 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 03:07:02 mongod --bind_ip_all<br />
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 213980&nbsp; 213955&nbsp; 0 Jun24 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00:00:43 mongo<br />
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 463340&nbsp; 462704&nbsp; 0 Jun08 pts/1&nbsp;&nbsp;&nbsp; 00:01:11 mongo<br />
+ubuntu&nbsp;&nbsp; 1700084 1699862&nbsp; 0 10:01 pts/1&nbsp;&nbsp;&nbsp; 00:00:00 grep --color=auto mongo</p>
+
+<p>cd /proc/7034<br />
+ubuntu@VM-0-13-ubuntu:/proc/7034$ ll<br />
+total 0<br />
+dr-xr-xr-x&nbsp;&nbsp; 9 ubuntu ubuntu 0 Jul 18 06:06 ./<br />
+dr-xr-xr-x 199 root&nbsp;&nbsp; root&nbsp;&nbsp; 0 Jun&nbsp; 6 16:12 ../<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 arch_status<br />
+dr-xr-xr-x&nbsp;&nbsp; 2 ubuntu ubuntu 0 Jul 18 10:01 attr/<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 autogroup<br />
+-r--------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 auxv<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 cgroup<br />
+--w-------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 clear_refs<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 06:06 cmdline<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 comm<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 coredump_filter<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 cpuset<br />
+lrwxrwxrwx&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 07:40 cwd -&gt; /opt/app/lueluelue-backend-fastify/new_claim_20220501/<br />
+-r--------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:01 environ</p>
+
+<p>cd /proc/712724<br />
+ubuntu@VM-0-13-ubuntu:/proc/712724$ ll<br />
+total 0<br />
+dr-xr-xr-x&nbsp;&nbsp; 9 ubuntu ubuntu 0 Jul 18 06:06 ./<br />
+dr-xr-xr-x 203 root&nbsp;&nbsp; root&nbsp;&nbsp; 0 Jun&nbsp; 6 16:12 ../<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 arch_status<br />
+dr-xr-xr-x&nbsp;&nbsp; 2 ubuntu ubuntu 0 Jul 18 10:02 attr/<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 autogroup<br />
+-r--------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 auxv<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 cgroup<br />
+--w-------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 clear_refs<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 06:06 cmdline<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 comm<br />
+-rw-r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 coredump_filter<br />
+-r--r--r--&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 cpuset<br />
+lrwxrwxrwx&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 07:40 cwd -&gt; /opt/app/lueluelue-backend-fastify/releases/20220401074311/<br />
+-r--------&nbsp;&nbsp; 1 ubuntu ubuntu 0 Jul 18 10:02 environ</p>
+
+<p>udo docker ps -a<br />
+CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
+0404f4be99a2&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 weeks ago&nbsp;&nbsp;&nbsp; Up 5 weeks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 127.0.0.1:5432-&gt;5432/tcp&nbsp;&nbsp;&nbsp;&nbsp; keen_kilby<br />
+3f1d593f54d2&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 weeks ago&nbsp;&nbsp;&nbsp; Exited (1) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; objective_bhaskara<br />
+29b06cdf3b26&nbsp;&nbsp; mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 weeks ago&nbsp;&nbsp;&nbsp; Up 5 weeks&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 127.0.0.1:27017-&gt;27017/tcp&nbsp;&nbsp; dreamy_darwin<br />
+c8eb7b3234d6&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 weeks ago&nbsp;&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vigorous_curie<br />
+a1d96b0835f4&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 2 months ago&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wizardly_joliot<br />
+75204b0a6b92&nbsp;&nbsp; mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 3 months ago&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sharp_bardeen</p>
+
+<p>cd /proc/5647<br />
+ubuntu@VM-0-13-ubuntu:/proc/5647$ ll<br />
+ls: cannot read symbolic link &#39;cwd&#39;: Permission denied<br />
+ls: cannot read symbolic link &#39;root&#39;: Permission denied<br />
+ls: cannot read symbolic link &#39;exe&#39;: Permission denied<br />
+total 0<br />
+dr-xr-xr-x&nbsp;&nbsp; 9 systemd-coredump systemd-coredump 0 Jul 18 06:06 ./<br />
+dr-xr-xr-x 199 root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 Jun&nbsp; 6 16:12 ../<br />
+-r--r--r--&nbsp;&nbsp; 1 systemd-coredump systemd-coredump 0 Jul 18 10:03 arch_status<br />
+dr-xr-xr-x&nbsp;&nbsp; 2 systemd-coredump systemd-coredump 0 Jul 18 10:03 attr/<br />
+-rw-r--r--&nbsp;&nbsp; 1 systemd-coredump systemd-coredump 0 Jul 18 10:03 autogroup<br />
+-r--------&nbsp;&nbsp; 1 systemd-coredump systemd-coredump 0 Jul 18 10:03 auxv<br />
+-r--r--r--&nbsp;&nbsp; 1 systemd-coredump systemd-coredump 0 Jul 18 07:40 cgroup</p>
+
+<p>/proc/5647$ sudo docker exec -it 29b0 bash<br />
+root@29b06cdf3b26:/# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;d7ae6cd4-58ab-4973-b55b-0f52f2006aeb&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-06T08:25:36.871+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-06T08:25:37.279+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+lueluelue&nbsp;&nbsp;&nbsp;&nbsp; 0.003GB<br />
+test&nbsp;&nbsp;&nbsp; 0.000GB<br />
+&gt; use lueluelue<br />
+switched to db lueluelue<br />
+&gt; show tables<br />
+claims<br />
+domain_registers<br />
+domains<br />
+invalid_domains<br />
+redeem_codes<br />
+simple_redeem_codes<br />
+&gt; db.claims.findAll()<br />
+uncaught exception: TypeError: db.claims.findAll is not a function :<br />
+@(shell):1:1<br />
+&gt; db.simple_redeem_codes.find()<br />
+{ &quot;_id&quot; : ObjectId(&quot;626736e9c51cf50d3d7a3ffd&quot;), &quot;code&quot; : &quot;111222333444&quot;, &quot;is_used&quot; : false, &quot;comment&quot; : &quot;给精神领袖一号用&quot;, &quot;created_at&quot; : ISODate(&quot;2022-04-26T00:03:53.221Z&quot;), &quot;updated_at&quot; : ISODate(&quot;2022-04-26T00:03:53.221Z&quot;) }</p>
+
+<p>Type &quot;it&quot; for more<br />
+&gt; it</p>
+
+<p>&gt; it<br />
+no cursor<br />
+&gt; show dbs<br />
+admin&nbsp;&nbsp; 0.000GB<br />
+config&nbsp; 0.000GB<br />
+local&nbsp;&nbsp; 0.000GB<br />
+lueluelue&nbsp;&nbsp;&nbsp;&nbsp; 0.003GB<br />
+test&nbsp;&nbsp;&nbsp; 0.000GB<br />
+&gt; use lueluelue<br />
+switched to db lueluelue</p>
+
+<p>&gt; mongo<br />
+Mongo(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MongoBridge(&nbsp; MongoRunner(</p>
+
+<p>&gt; mongo^C<br />
+bye<br />
+root@29b06cdf3b26:/# mongo<br />
+mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongod&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodump&nbsp;&nbsp;&nbsp;&nbsp; mongoexport&nbsp;&nbsp; mongofiles&nbsp;&nbsp;&nbsp; mongoimport&nbsp;&nbsp; mongorestore&nbsp; mongos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongosh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongostat&nbsp;&nbsp;&nbsp;&nbsp; mongotop<br />
+root@29b06cdf3b26:/# mongo^C<br />
+root@29b06cdf3b26:/# mongodump --archive=20220718.archive --db=lueluelue<br />
+2022-07-18T02:10:07.720+0000&nbsp;&nbsp;&nbsp; writing lueluelue.simple_redeem_codes to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.721+0000&nbsp;&nbsp;&nbsp; writing lueluelue.claims to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.722+0000&nbsp;&nbsp;&nbsp; writing lueluelue.domains to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.726+0000&nbsp;&nbsp;&nbsp; writing lueluelue.domain_registers to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.743+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.simple_redeem_codes (470 documents)<br />
+2022-07-18T02:10:07.750+0000&nbsp;&nbsp;&nbsp; writing lueluelue.redeem_codes to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.754+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.domains (3702 documents)<br />
+2022-07-18T02:10:07.755+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.claims (1136 documents)<br />
+2022-07-18T02:10:07.755+0000&nbsp;&nbsp;&nbsp; writing lueluelue.invalid_domains to archive &#39;lueluelue-mongo.20220718.archive&#39;<br />
+2022-07-18T02:10:07.767+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.domain_registers (5200 documents)<br />
+2022-07-18T02:10:07.775+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.invalid_domains (59 documents)<br />
+2022-07-18T02:10:07.803+0000&nbsp;&nbsp;&nbsp; done dumping lueluelue.redeem_codes (300 documents)<br />
+root@29b06cdf3b26:/# ls</p>
+
+<p>bin&nbsp;&nbsp; data&nbsp; docker-entrypoint-initdb.d&nbsp; home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lib&nbsp;&nbsp;&nbsp; lib64&nbsp;&nbsp; media&nbsp; opt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lueluelue0716.archive&nbsp; root&nbsp; sbin&nbsp; sys&nbsp; usr<br />
+boot&nbsp; dev&nbsp;&nbsp; etc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; js-yaml.js&nbsp; lib32&nbsp; libx32&nbsp; mnt&nbsp;&nbsp;&nbsp; 20220718.archive&nbsp; proc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; run&nbsp;&nbsp; srv&nbsp;&nbsp; tmp&nbsp; var</p>
+
+<p>sudo docker cp 29b0:/20220718.archive .</p>
+
+<p>ll -altrh</p>
+
+<p>drwxrwxr-x&nbsp; 2 ubuntu ubuntu 4.0K Apr 26 15:25 json0426<br />
+-rw-r--r--&nbsp; 1 root&nbsp;&nbsp; root&nbsp;&nbsp; 935K Apr 27 15:05 20220427.archive</p>
+
+<p>scp ubuntu@api-rpc.lueluelue.link:20220718.archive /workspace/20220718.archive<br />
+20220718.archive&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100% 2173KB&nbsp; 51.6KB/s&nbsp;&nbsp; 00:42</p>
+
+<p>&nbsp;</p>
+

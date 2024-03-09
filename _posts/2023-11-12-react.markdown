@@ -1,0 +1,46 @@
+---
+layout: post
+title: "react 根据中国地图网格化显示每个个格子，并进行计算"
+date: "2023-11-12"
+categories: 
+---
+<p>在使用网格化数据（CSV）的时候，需要读取CSV的数据，并进行计算，可以使用d3的CSV直接读取数据</p>
+
+<p>1.引入CSV</p>
+
+<p>csv有1000+行，每一行对应经纬度，可以根据经纬度进行省份的判断，有时间段的比例，例如1990-2020年的每一年的百分比</p>
+
+<p>例如：</p>
+
+<pre>
+<code><span style="color:#ffd700">province</span>	longitude	latitude	<span style="color:#f5ab35">1990</span>	<span style="color:#f5ab35">1991</span>	<span style="color:#f5ab35">1992</span> ...	<span style="color:#f5ab35">1993</span>	<span style="color:#f5ab35">1994</span>	<span style="color:#f5ab35">1995</span>	<span style="color:#f5ab35">1996</span>
+海南	<span style="color:#ffd700">112</span>	<span style="color:#f5ab35">16</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>
+海南	<span style="color:#ffd700">113</span>	<span style="color:#f5ab35">16</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>	<span style="color:#f5ab35">0</span>
+海南	<span style="color:#ffd700">108</span>	<span style="color:#f5ab35">18</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027810167</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027835479</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027860175</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027884277</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027907808</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">027930786</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">02794366</span>
+海南	<span style="color:#ffd700">109</span>	<span style="color:#f5ab35">18</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">11138863</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111480793</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111570713</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111658473</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111744149</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111827814</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">111960361</span>
+海南	<span style="color:#ffd700">110</span>	<span style="color:#f5ab35">18</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">047215837</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">047063557</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">046914982</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">046769977</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">046628415</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">046490175</span>	<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">046321184</span></code></pre>
+
+<p>2.进行遍历，计算（<code>yearlyDataArray是object，显示了计算结果的例如2010-2020的</code>每年每个省份的排放量或发电量的数据，包含百分比，省份等信息）</p>
+
+<pre>
+<code>d3.csv(everyGridPercentage).then((<span style="color:#f5ab35">csv_data</span>) =&gt; {
+  csv_data.forEach((<span style="color:#f5ab35">line, index</span>) =&gt; {
+    <span style="color:#dcc6e0">const</span> provinceData = yearlyDataArray.find((<span style="color:#f5ab35">province_data</span>) =&gt; {
+      <span style="color:#dcc6e0">return</span> province_data.some((<span style="color:#f5ab35">province</span>) =&gt; {
+        <span style="color:#dcc6e0">return</span> province.province === line[<span style="color:#abe338">&#39;province&#39;</span>] &amp;&amp; province.year === selectedYear;
+      });
+    });
+
+    <span style="color:#dcc6e0">if</span> (provinceData) {
+      <span style="color:#dcc6e0">const</span> province = provinceData.find((<span style="color:#f5ab35">province</span>) =&gt; province.province === line[<span style="color:#abe338">&#39;province&#39;</span>]);
+      <span style="color:#dcc6e0">const</span> emission_result = province.emission;
+      <span style="color:#dcc6e0">const</span> province_percentage_of_dataset = <span style="color:#f5ab35">parseFloat</span>(province.percentage);
+      <span style="color:#dcc6e0">const</span> percentage = <span style="color:#f5ab35">parseFloat</span>(line[selectedYear]);
+      <span style="color:#dcc6e0">const</span> multipliedEmission = emission_result * <span style="color:#f5ab35">parseFloat</span>(percentage);
+      newData.push([line[<span style="color:#abe338">&#39;province&#39;</span>], emission_result, province_percentage_of_dataset, percentage, multipliedEmission]);
+    }
+  });
+
+  <span style="color:#f5ab35">console</span>.info(<span style="color:#abe338">&quot;== newData: &quot;</span>, newData);
+});</code></pre>
+

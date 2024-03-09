@@ -1,0 +1,35 @@
+---
+layout: post
+title: "postgres 14.2 创建用户"
+date: "2022-11-30"
+categories: 
+---
+<p><a href="https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist">https://stackoverflow.com/questions/15301826/psql-fatal-role-postgres-does-not-exist</a></p>
+
+<p>使用172.0.0.3docker postgres的时候出现了报错：SCRAM authentication requires libpq version 10 or above</p>
+
+<p>已经是14.2。但是有时候可以用，有时候不行。项目的时候已经能运行了。</p>
+
+<p>本地的数据库升级后还没使用</p>
+
+<p>打开大象，进行连接，提示没有postgres这个用户，进行创建</p>
+
+<pre>
+<code>createuser --superuser postgres</code></pre>
+
+<p>然后进入</p>
+
+<pre>
+<code>psql -U postgres -h localhost</code></pre>
+
+<p>可以了</p>
+
+<p>\c \l 都可以使用</p>
+
+<pre>
+<code>bundle exec rake db:create
+
+bundle exec rake db:migrate</code></pre>
+
+<p>桌面版进行连接，没有设置密码</p>
+

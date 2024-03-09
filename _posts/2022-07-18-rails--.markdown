@@ -1,0 +1,19 @@
+---
+layout: post
+title: "rails--数字转字符串 十六进制"
+date: "2022-07-18"
+categories: 
+---
+<p>chain_id： 0xa869，chain_id是字符串，但是给出的是数字43113，怎么进行抓换呢</p>
+
+<p>进入bundle exec rails console</p>
+
+<p>irb(main):001:0&gt; 0xa869<br />
+=&gt; 43113<br />
+irb(main):002:0&gt; 43113.to_s(16)<br />
+=&gt; &quot;a869&quot;</p>
+
+<p>那么只需要在&quot;integer&quot;.to_s(16)前边加上&quot;0x&quot;即可</p>
+
+<p>&quot;0x&lt;%= @contract.network.try(:chain_id) .to_s(16)%&gt;&quot;</p>
+

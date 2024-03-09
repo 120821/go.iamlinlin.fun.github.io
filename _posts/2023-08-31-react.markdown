@@ -1,0 +1,26 @@
+---
+layout: post
+title: "react 判断参数是否存在"
+date: "2023-08-31"
+categories: 
+---
+<p>在页面进行判断参数是否存在，存在就显示（使用let声明，然后使用if + typeof来判断）：</p>
+
+<pre>
+<code><span style="color:#dcc6e0">let</span> displayedParams = {};
+
+<span style="color:#dcc6e0">if</span> (<span style="color:#dcc6e0">typeof</span> paramsObj.r !== <span style="color:#abe338">&quot;undefined&quot;</span>) {
+  displayedParams = {
+    <span style="color:#abe338">&quot;r&quot;</span>: paramsObj.r.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.r.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;f&quot;</span>: <span style="color:#abe338">&quot;f&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.f.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.f.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;s&quot;</span>: <span style="color:#abe338">&quot;s&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.s.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.s.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;EF_dis&quot;</span>: <span style="color:#abe338">&quot;EF_dis&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.EF_dis.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.EF_dis.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">2</span>)) : [],
+    <span style="color:#abe338">&quot;EF_ini&quot;</span>: <span style="color:#abe338">&quot;EF_ini&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.EF_ini.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.EF_ini.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">2</span>)) : [],
+    <span style="color:#abe338">&quot;EF_ope&quot;</span>: <span style="color:#abe338">&quot;EF_ope&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.EF_ope.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.EF_ope.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;EF_ser&quot;</span>: <span style="color:#abe338">&quot;EF_ser&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.EF_ser.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.EF_ser.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;m_ini&quot;</span>: <span style="color:#abe338">&quot;m_ini&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.m_ini.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.m_ini.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;m_ser&quot;</span>: <span style="color:#abe338">&quot;m_ser&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.m_ser.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.m_ser.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
+    <span style="color:#abe338">&quot;years&quot;</span>: <span style="color:#abe338">&quot;year_start&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; <span style="color:#abe338">&quot;year_end&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj ? <span style="color:#f5ab35">Array</span>.from({ length: paramsObj.year_end - paramsObj.year_start + <span style="color:#f5ab35">1</span> }, (<span style="color:#f5ab35">_, index</span>) =&gt; paramsObj.year_start + index) : []
+  };
+}</code></pre>
+

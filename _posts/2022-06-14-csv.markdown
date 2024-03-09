@@ -1,0 +1,56 @@
+---
+layout: post
+title: "列表页增加： CSV导入的按钮和功能 "
+date: "2022-06-14"
+categories: 
+---
+<p>首先增加路由，</p>
+
+<p>resources :users&nbsp; do^M<br />
+&nbsp;55&nbsp;&nbsp;&nbsp;&nbsp; collection do^M<br />
+&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get :download_csv^M<br />
+&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; post :import<br />
+&nbsp;58&nbsp;&nbsp;&nbsp;&nbsp; end^M<br />
+&nbsp;59&nbsp;&nbsp; end^M</p>
+
+<p>然后增加视图页面</p>
+
+<p>&lt;%= form_tag import_users_path, multipart: true do %&gt;<br />
+&nbsp; &lt;p&gt;导入文件：&lt;%= file_field_tag :file %&gt; &lt;%= submit_tag &quot;导入&quot; %&gt;&lt;/p&gt;<br />
+&lt;% end %&gt;</p>
+
+<p>在路由增加</p>
+
+<p>&nbsp; def import<br />
+&nbsp;&nbsp;&nbsp; require &#39;csv&#39;</p>
+
+<p>&nbsp;&nbsp;&nbsp; tmp = params[:file]<br />
+&nbsp;&nbsp;&nbsp; current_file_name = tmp.original_filename + Time.now.to_i.to_s<br />
+&nbsp;&nbsp;&nbsp; uploaded_file = File.join(&quot;public/upload_files&quot;, current_file_name)<br />
+&nbsp;&nbsp;&nbsp; File.open(uploaded_file, &#39;wb&#39;) do |f|<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f.write(tmp.read)<br />
+&nbsp;&nbsp;&nbsp; end<br />
+&nbsp;&nbsp;&nbsp; #读取csv文件<br />
+&nbsp;&nbsp;&nbsp; csv_text = File.read(uploaded_file)<br />
+&nbsp;&nbsp;&nbsp; csv = CSV.parse(csv_text,:headers =&gt; true)<br />
+&nbsp;&nbsp;&nbsp; csv.each_with_index do |row, index|<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; User = User.new<br />
+user.email= row[&#39;email&#39;]<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; user.name= row[&#39;name]<br />
+&nbsp;&nbsp; #user.manager = row[&#39;manager&#39;] 不应该放在csv导入中。<br />
+&nbsp;&nbsp;&nbsp;&nbsp; user.manager = current_manager.email#在application页面已经进行管理员登录的判断<br />
+&nbsp;&nbsp;&nbsp;&nbsp; user.save!<br />
+&nbsp;&nbsp;&nbsp; end<br />
+&nbsp;&nbsp;&nbsp; redirect_to users_url, notice: &#39;操作成功&#39;<br />
+&nbsp; end</p>
+
+<p>然后在视图页面就可以使用导入进行文件数据的传输，完成后就会返回index页面</p>
+
+<p><img height="677" src="/uploads/ckeditor/pictures/17/image-20220614104651-1.png" width="555" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

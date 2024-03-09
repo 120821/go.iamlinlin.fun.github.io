@@ -1,0 +1,43 @@
+---
+layout: post
+title: "8080端口少用，因为用来开着代理"
+date: "2022-06-24"
+categories: 
+---
+<p>远程的MongoDB与本地的docker需要保持一致</p>
+
+<p>用着比较方便</p>
+
+<p>sudo docker exec -it 29b0 bash<br />
+root@29b06cdf3b26:/# mongo<br />
+MongoDB shell version v5.0.6<br />
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&amp;gssapiServiceName=mongodb<br />
+Implicit session: session { &quot;id&quot; : UUID(&quot;4c66071a-0f36-4361-99e0-b9b347fd42fd&quot;) }<br />
+MongoDB server version: 5.0.6<br />
+================<br />
+Warning: the &quot;mongo&quot; shell has been superseded by &quot;mongosh&quot;,<br />
+which delivers improved usability and compatibility.The &quot;mongo&quot; shell has been deprecated and will be removed in<br />
+an upcoming release.<br />
+For installation instructions, see<br />
+https://docs.mongodb.com/mongodb-shell/install/<br />
+================<br />
+---<br />
+The server generated these startup warnings when booting:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-06T08:25:36.871+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2022-06-06T08:25:37.279+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted<br />
+---<br />
+---<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
+---<br />
+&gt;</p>
+
+<p>&nbsp;</p>
+

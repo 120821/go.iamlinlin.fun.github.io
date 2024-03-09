@@ -1,0 +1,42 @@
+---
+layout: post
+title: "运行ckb node"
+date: "2022-11-10"
+categories: 
+---
+<p>1.连接数据库：</p>
+
+<p>（1）启动postgres</p>
+
+<pre>
+<code>docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres</code></pre>
+
+<p>（2）查看postgres的id</p>
+
+<pre>
+<code>sudo docker ps -a</code></pre>
+
+<p>（3）查看postgres的ip：</p>
+
+<pre>
+<code>sudo docker inspect f1a6a66855f5，修改配置文件的host</code></pre>
+
+<p>2.运行节点：</p>
+
+<pre>
+<code>./ckb run</code></pre>
+
+<p>3.运行redis：</p>
+
+<pre>
+<code>redis-server</code></pre>
+
+<p>抓取数据</p>
+
+<pre>
+<code>ruby lib/ckb_block_node_processor.rb</code></pre>
+
+<p><code>4.j进入container</code></p>
+
+<p>docker exec -it 4153c8a7c46f bash</p>
+

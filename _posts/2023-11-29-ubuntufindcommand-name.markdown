@@ -1,0 +1,13 @@
+---
+layout: post
+title: "ubuntu find command -name"
+date: "2023-11-29"
+categories: 
+---
+<p>ubuntu 使用find进行查找文件，可以使用-name根据文件的名称查找，例如：</p>
+
+<pre>
+<code>sudo find / -name my.cnf</code></pre>
+
+<p>&nbsp;</p>
+

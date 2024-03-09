@@ -1,0 +1,50 @@
+---
+layout: post
+title: "数据库每天进行一次备份"
+date: "2023-11-30"
+categories: 
+---
+<p>写一个脚本，例如： backup.sh</p>
+
+<p>内容设置为：</p>
+
+<pre>
+<code># 设置备份目录和文件名
+backup_dir=&quot;/你的备份文件夹路径_xxx_backup_data&quot;
+backup_file=&quot;$backup_dir/$(date +%Y%m%d_%H%M%S).sql&quot;  # 使用了日期加时间命名
+
+# MySQL 连接参数
+db_host=&quot;你的ip&quot;
+db_port=&quot;你的端口&quot;
+db_name=&quot;数据库名称&quot;
+db_user=&quot;数据库用户名称&quot;
+
+# 创建备份目录
+mkdir -p &quot;$backup_dir&quot;
+
+export PGPASSWORD=&#39;你的数据库密码&#39;
+
+# 执行备份命令
+pg_dump  -U &quot;$db_user&quot; -h &quot;$db_host&quot; -p &quot;$db_port&quot; &quot;$db_name&quot; &gt; &quot;$backup_file&quot;  # postgres备份
+#pg_dump -U 用户名 -h ip -p 端口 数据库名称 &gt; 文件名称.sql
+mysqldump -h &quot;$db_host&quot; -P &quot;$db_port&quot; -u &quot;$db_user&quot; -p&quot;$db_password&quot; &quot;$db_name&quot; &gt; &quot;$backup_file&quot;    # mysql备份
+# 输出备份完成信息
+echo &quot;数据库备份完成：$backup_file&quot;
+
+ 等待 24 小时
+sleep 24h
+
+## 执行脚本本身，实现每天的定时执行
+/你的备份执行文件路径/backup.sh</code></pre>
+
+<p><code>执行一下，例如我修改为24s执行一次备份:</code></p>
+
+<pre>
+<code>
+<code>./backup.sh
+数据库备份完成：/xxx/20231130_112909.sql
+数据库备份完成：/xxx/20231130_112934.sql
+数据库备份完成：/xxx/20231130_112958.sql</code></code></pre>
+
+<p><code>&nbsp;</code></p>
+

@@ -1,0 +1,52 @@
+---
+layout: post
+title: "wmware16 安装ubuntu 22.04.3"
+date: "2023-11-06"
+categories: 
+---
+<p><a href="https://blog.csdn.net/yang4123/article/details/131661855">https://blog.csdn.net/yang4123/article/details/131661855</a></p>
+
+<p><a href="https://releases.ubuntu.com/20.04/">https://releases.ubuntu.com/20.04/</a></p>
+
+<p>参考以上文章，步骤即可</p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">下载<span style="font-family:Calibri">ubuntu</span><span style="font-family:SimSun">桌面版：（因为文件比较大，可以先下载，同时进行虚拟机的配置）</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><a href="https://releases.ubuntu.com/20.04/ubuntu-20.04.6-desktop-amd64.iso"><u><span style="font-family:Calibri"><span style="color:#0000ff"><u>https://releases.ubuntu.com/20.04/ubuntu-20.04.6-desktop-amd64.iso</u></span></span></u></a></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">打开虚拟机，点击创建新的虚拟机，选择自定义高级，进行下一步，</span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">保持默认，进行下一步，</span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">选择稍后安装操作系统，下一步，</span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">选择<span style="font-family:Calibri">Linux</span><span style="font-family:SimSun">系统，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">虚拟机的名称和位置可以进行修改，不修改可以保持默认，自行决定，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">处理器数量输入</span><span style="font-family:Calibri">2</span><span style="font-family:SimSun">，每个处理器的内核数量输入</span><span style="font-family:Calibri">4</span><span style="font-family:SimSun">，可以看到处理器内核总数是</span><span style="font-family:Calibri">8</span><span style="font-family:SimSun">，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">根据需要设置内存，可以看到推荐值，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">网络地址选择使用网络地址转换，进行下一步，选择</span><span style="font-family:Calibri">LSI Login(L)</span><span style="font-family:SimSun">（推荐），进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">磁盘类型选择</span><span style="font-family:Calibri">SCSI</span><span style="font-family:SimSun">（</span><span style="font-family:Calibri">s</span><span style="font-family:SimSun">）</span><span style="font-family:Calibri">(</span><span style="font-family:SimSun">推荐</span><span style="font-family:Calibri">), </span><span style="font-family:SimSun">进行下一步，创建新的虚拟磁盘，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">磁盘大小设置</span><span style="font-family:Calibri">20g/40g</span><span style="font-family:SimSun">都可以，将虚拟磁盘储存为单个文件</span><span style="font-family:Calibri">(O)</span><span style="font-family:SimSun">，下一步</span><span style="font-family:Calibri">,</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">磁盘文件名称可以修改，也可以保持默认，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">点击自定义硬件，点击</span><span style="font-family:Calibri">CD/DVD</span><span style="font-family:SimSun">自动检测，在连接选项里，选择使用</span><span style="font-family:Calibri">ISO</span><span style="font-family:SimSun">映像文件，选择下载好的</span><span style="font-family:Calibri">ubuntu</span><span style="font-family:SimSun">桌面版，点击关闭，点击完成安装。</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun">点击刚刚创建的虚拟机，开启虚拟机，选择安装， <span style="font-family:Calibri">try or install Ubuntu, </span><span style="font-family:SimSun">按回车键，选择语言，可以使用简体汉语，也可以使用英语，可以选择正常安装，也可以选择最小安装，其他选项里选择安装</span><span style="font-family:Calibri">ubuntu</span><span style="font-family:SimSun">时下载更新，进行下一步，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">安装类型选择清除整个磁盘并安装，提示后点击继续，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">时区选择上海即可，</span></span></span></p>
+
+<p style="margin-left:0pt; margin-right:0pt"><span style="font-family:Calibri"><span style="font-family:SimSun"><span style="font-family:SimSun">姓名和用户名使用英文来写，输入密码，等待安装，安装好点击立即重启即可。输入刚刚设置的登录密码，如果选择自动登录就不用输入密码。弹出的信息可以点击跳过。</span></span></span></p>
+
+<p>注意：需要安装桌面版本的ubuntu，如果不是，那么也可以，但是桌面版和上面的参考文章是步骤相同的， 桌面版本也很方便。</p>
+
+<p>&nbsp;</p>
+

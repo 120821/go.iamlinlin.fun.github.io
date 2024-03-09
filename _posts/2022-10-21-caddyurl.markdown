@@ -1,0 +1,33 @@
+---
+layout: post
+title: "caddy  使用某个URL 显示百度首页的内容"
+date: "2022-10-21"
+categories: 
+---
+<p><a href="https://caddyserver.com/">https://caddyserver.com/</a></p>
+
+<p>http 反向代理：<code class="block">reverse-proxy --from example.com --to localhost:9000</code></p>
+
+<p><font style="vertical-align:inherit">通过 HTTPS 的公共文件服务器：</font><code class="block">file-server --domain example.com</code></p>
+
+<p><font style="vertical-align:inherit">在工作目录中使用 Caddyfile 运行服务器（如果存在）：</font><code class="block">caddy run</code></p>
+
+<p>在Caddyfile文件中增加</p>
+
+<pre><code>&lt;你的测试URL&gt;{
+
+&nbsp; reverse_proxy baidu.com<br />
+&nbsp; #rewrite * baidu.com(不需要rewrite)<br />
+&nbsp; log {<br />
+&nbsp;&nbsp;&nbsp; output file /var/log/&lt;log文件名&gt;.log<br />
+&nbsp; }
+
+&nbsp; tls {<br />
+&nbsp;&nbsp;&nbsp; dns cloudflare &lt;你的域名证书&gt;<br />
+&nbsp; }<br />
+}</code></pre>
+
+<p>例如测试的域名url如下，显示的是siwei.me的页面</p>
+
+<p><img height="533" src="/uploads/ckeditor/pictures/602/image-20221021172352-1.png" width="1821" /></p>
+

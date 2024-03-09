@@ -1,0 +1,42 @@
+---
+layout: post
+title: "aws s3--登录"
+date: "2022-08-31"
+categories: 
+---
+<p><a href="https://blog.csdn.net/qq_41571224/article/details/122983330">https://blog.csdn.net/qq_41571224/article/details/122983330</a></p>
+
+<p>在命令行输入命令：</p>
+
+<pre>
+<code>aws configure</code></pre>
+
+<p>就可以进行初始化更换bucket，</p>
+
+<p>&nbsp;</p>
+
+<p>然后输入id 和秘钥就可以了。</p>
+
+<pre>
+<code>1.yum -y install python-pip
+
+2.pip install awscli
+
+3.aws configure(initailize configuration,input the aws access key)
+
+AWS Access Key ID [None]:
+
+AWS Secret Access Key [None]:
+
+Default region name [None]:
+
+Default output format [None]:
+
+4.use command
+
+aws s3 ls s3://xxx/
+
+aws s3 cp s3://xxx/
+
+aws s3 sync s3://xxx/</code></pre>
+

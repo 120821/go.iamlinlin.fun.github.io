@@ -1,0 +1,92 @@
+---
+layout: post
+title: "job的使用--执行"
+date: "2022-06-13"
+categories: 
+---
+<p>首先，命名和文件位置：app/jobs/xx_job.rb,</p>
+
+<p>内容上：一种是继承application</p>
+
+<pre>
+<code>cat app/jobs/application_job.rb
+
+class ApplicationJob &lt; ActiveJob::Base
+
+&nbsp; # Automatically retry jobs that encountered a deadlock
+
+&nbsp; # retry_on ActiveRecord::Deadlocked</code></pre>
+
+<pre>
+<code>&nbsp; # Most jobs are safe to ignore if the underlying records are no longer available
+
+&nbsp; # discard_on ActiveJob::DeserializationError
+
+end</code></pre>
+
+<pre>
+<code>cat app/jobs/say_hi_job.rb
+
+class SayHiJob &lt; ApplicationJob
+
+&nbsp; queue_as :default</code></pre>
+
+<p><code>&nbsp; def perform(args)<br />
+&nbsp;&nbsp;&nbsp; # 演示如何获得参数<br />
+&nbsp;&nbsp;&nbsp; name = args[:name]<br />
+&nbsp;&nbsp;&nbsp; content = args[:content]<br />
+&nbsp;&nbsp;&nbsp; puts &quot;in SayHiJob, name: #{name}, content: #{content}&quot;</code></p>
+
+<pre>
+<code>&nbsp;&nbsp;&nbsp; # 如何执行代码
+
+&nbsp;&nbsp;&nbsp; avatar = Avatar.new
+
+&nbsp;&nbsp;&nbsp; avatar.account_id = 1
+
+&nbsp;&nbsp;&nbsp; avatar.nft_asset_id = 1
+
+&nbsp;&nbsp;&nbsp; avatar.is_primary = false
+
+&nbsp;&nbsp;&nbsp; avatar.save!
+
+&nbsp; end
+
+end</code></pre>
+
+<h3>一种是自己：</h3>
+
+<pre><code>cat app/jobs/guests_cleanup_job.rb<br />
+class GuestsCleanupJob &lt; ActiveJob::Base<br />
+&nbsp; queue_as :default</code></pre>
+
+<pre><code>&nbsp; def perform(*args)<br />
+&nbsp;&nbsp;&nbsp; # Do something later<br />
+&nbsp; end<br />
+end</code></pre>
+
+<pre><code>执行： 进入console</code></pre>
+
+<pre><code>bundle exec rails c</code></pre>
+
+<pre><code>reload!<br />
+Reloading...<br />
+=&gt; true<br />
+irb(main):002:0&gt; YunPianJob.perform_later<br />
+Enqueued YunPianJob (Job ID: d5de572f-4f20-4db6-9263-2166b854ca07) to Async(default)<br />
+=&gt;<br />
+#&lt;YunPianJob:0x0000564abab51700<br />
+&nbsp;@arguments=[],<br />
+&nbsp;@exception_executions={},<br />
+&nbsp;@executions=0,<br />
+&nbsp;@job_id=&quot;d5de572f-4f20-4db6-9263-2166b854ca07&quot;,<br />
+&nbsp;@priority=nil,<br />
+&nbsp;@provider_job_id=&quot;456f4b94-a56e-47ed-97a4-884aa9c9a007&quot;,<br />
+&nbsp;@queue_name=&quot;default&quot;,<br />
+&nbsp;@timezone=&quot;UTC&quot;&gt;<br />
+Performing YunPianJob (Job ID: d5de572f-4f20-4db6-9263-2166b854ca07) from Async(default) enqueued at 2022-06-13T01:21:30Z</code></pre>
+
+<p><img height="505" src="/uploads/ckeditor/pictures/14/image-20220613114308-1.png" width="1281" /></p>
+
+<div class="notranslate" style="all: initial;">&nbsp;</div>
+

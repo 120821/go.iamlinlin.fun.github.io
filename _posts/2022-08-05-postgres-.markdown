@@ -1,0 +1,41 @@
+---
+layout: post
+title: "postgres-导入数据"
+date: "2022-08-05"
+categories: 
+---
+<p><a href="https://www.bilibili.com/read/cv14411030">参考</a></p>
+
+<p>比较好理解的是：<a href="https://www.cnblogs.com/nhdlb/p/14960000.html">https://www.cnblogs.com/nhdlb/p/14960000.html</a></p>
+
+<p>导入</p>
+
+<pre><code>psql -d jdbc -h localhost -p 5432 -U postgres -f /home/sql/test.dmp</code></pre>
+
+<pre><code>#-d 数据库名称<br />
+#-h ip地址<br />
+#-p 端口号<br />
+#-U 用户<br />
+#-f sql文件路径</code></pre>
+
+<p>导出</p>
+
+<pre><code>psql -d jdbc -h localhost -p 5432 -U postgres -f /home/sql/test.dmp</code></pre>
+
+<pre><code>#-d 数据库名称<br />
+#-h ip地址<br />
+#-p 端口号<br />
+#-U 用户<br />
+#-f sql文件路径</code></pre>
+
+<p>保证数据是可以执行的，说明数据有问题</p>
+
+<pre><code>psql -d blogs -h localhost -p 5432 -U admin -f /workspace/test_linlin_blogs/forune.sql<br />
+psql:/workspace/test_linlin_blogs/forune.sql:17: ERROR:&nbsp; syntax error at or near &quot;utf8mb4&quot;<br />
+LINE 17: SET NAMES utf8mb4;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ^<br />
+psql:/workspace/test_linlin_blogs/forune.sql:18: ERROR:&nbsp; unrecognized configuration parameter &quot;foreign_key_checks&quot;<br />
+psql:/workspace/test_linlin_blogs/forune.sql:23: ERROR:&nbsp; syntax error at or near &quot;`&quot;</code></pre><img height="1080" src="/uploads/ckeditor/pictures/165/image-20220805083323-1.png" width="1920" /></p>
+
+<p>&nbsp;</p>
+

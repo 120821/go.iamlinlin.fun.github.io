@@ -1,0 +1,18 @@
+---
+layout: post
+title: "git diff查看文件修改内容"
+date: "2022-06-09"
+categories: 
+---
+
+                    <blockquote> 
+ <p> git status</p> 
+ <p style="text-align:center;">git diff 文件名  查看文件修改内容<img alt="" src="https://img-blog.csdnimg.cn/da145468c69a4c95afa25d00deee9ea5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+ <p> git  status结果显示的红色部分是代表有修改的文件，选中文件git diff</p> 
+ <p>可以看到文件的修改内容，与原文的对照</p> 
+ <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/c8c56f1521b0435d891b36ee7a453780.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+ <p> 每一条增加或者删除的内容都会显示在页面，</p> 
+ <p>修改至和原文一样，就不会显示对照内容</p> 
+</blockquote> 
+<p></p>
+                

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "git checkout -b 0.1.0-2 eee488bccfcd40d11ff09af806a57e5b2391b67d"
+date: "2023-06-27"
+categories: 
+---
+<p>这个命令是用于在 Git 中创建并切换到一个新的分支。</p>
+
+<p>具体来说，命令是这样的：</p>
+
+<pre>
+<code>git checkout -b &lt;branch_name&gt; &lt;commit_id&gt;</code></pre>
+
+<p>其中：</p>
+
+<p>- `branch_name` 是你要创建的新分支的名称。<br />
+- `commit_id` 是你要基于的某个提交的 commit ID（用于创建新分支的起点）。</p>
+
+<p>在你提供的命令中，新分支的名称是 `0.1.0-2`，起点是 `eee488bccfcd40d11ff09af806a57e5b2391b67d` 这个提交。</p>
+
+<p>简而言之，这个命令表示在 Git 中创建一个名为 `0.1.0-2` 的新分支，并将其切换为当前工作分支。新分支将会在 `eee488bccfcd40d11ff09af806a57e5b2391b67d` 这个提交上开始。</p>
+

@@ -1,0 +1,41 @@
+---
+layout: post
+title: "ESXI-安装6,7,8版本的要求以及区别"
+date: "2023-12-21"
+categories: 
+---
+<p>refer： <a href="https://www.mi-d.cn/2819">https://www.mi-d.cn/2819</a></p>
+
+<p>安装需要的U盘： 容量大于4G u盘一个&nbsp; &nbsp;Windows电脑环境</p>
+
+<p><strong>6.7支持R8125B 网卡（TAD1581M板载网卡），7.0 8.0只支持intel千兆（包含2.5G）万兆网卡可能需要另外加装网卡才可以使用</strong></p>
+
+<div>
+<div class="cos-space-mt-md">
+<div>
+<div class="_no-spacing_lzhxo_29">
+<p><a class="cos-link sc-link _link_1iyz5_2 -v-color-primary block" href="http://www.baidu.com/link?url=l8B18HkhxlR-J_qE9vHnwJIt-T5BkQXvYcySChrdQqmbca5Kx4s4xAEXyPUnpDs0W1nhbCp6IB-YarW2cHLKO5L9eg1TubHNW40Y1gMnt_CPTisjf86hEmjzB9eHYLEIEgYrGIKxakHOZ31U8zUsoK" target="_blank">VMware <em>ESXi 8</em>.0 Update 2 发行说明</a>： 更新时间<strong>2023年12月04日</strong></p>
+
+<p><strong>所以需要使用低版本的进行测试</strong></p>
+
+<p>以下为参考文章的内容：</p>
+
+<blockquote>
+<p>ESXi系统下载地址（包含6.7、7.0、8.0）：<a href="https://www.123pan.com/s/7doDVv-007QA" rel="noopener" target="_blank">https://www.123pan.com/s/7doDVv-007QA</a><br />
+<strong>注意：6.7支持R8125B 网卡（TAD1581M板载网卡），7.0 8.0只支持intel千兆（包含2.5G）万兆网卡可能需要另外加装网卡才可以使用。</strong>6.7的优点是启动速度快稳定支持Realtek的网卡，缺点是切换直通需要重启，SR-IOV似乎有BUG无限提示重启几乎无解不是一般人能搞定的。8.0的优点是大部分设备切换直通免重启，SR-IOV即点即用南桥通道也能开启，缺点也明显启动速度和对硬件要求都比较高，并且从7.0开始就删除Realtek网卡的依赖导致Realtek的网卡无法在7.0或以上版本使用。当然这个也没什么冲突只要你不玩SR-IOV那么6.7的优点就够用了缺点也不是不能用接受毕竟能直通的玩意就那几个没人天天切换，如果要用SR-IOV那么网卡肯定也支持8.0，板载网卡虽然不能直接被ESXi8使用，但是可以直通给虚拟机，Realtek市场占有率这么高，也没几敢不兼容Realtek网卡（ESXi人家是故意要区分市场，你们这些人就单纯是白嫖，家用网卡就是异端，再稳定再便宜市场容量再大我也不想支持。还有ESXi是典型的intel舔狗删除了大部分老网卡的支持，就是刚刚淘汰的型号也不放过，唯独对十几年历史的intel x520老掉牙型号支持非常好）。</p>
+
+<p>8.0版本在官方原版基础上新增以下特性：</p>
+
+<ul>
+	<li>macOS Unlocker：来自 GitHub 的 Unlocker 4，现已支持 macOS Ventura</li>
+	<li>OEM BIOS：使用社区最流行的 OEM BIOS/EFI64，现已支持 Windows Server 2022</li>
+	<li>LegacyCPU support，允许在不受支持的旧款 CPU 上安装 ESXi 8.0</li>
+	<li>有限支持 Intel 12、13 代 CPU 架构，可以正常引导和运行</li>
+	<li>ESX-OSData 卷大小修改为 8G，解决 ESXi 7.0 开始的安装占用磁盘空间过大的问题（超过 142GB）</li>
+</ul>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+

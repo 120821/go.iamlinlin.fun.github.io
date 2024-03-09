@@ -1,0 +1,19 @@
+---
+layout: post
+title: "向日葵远程控制 键盘不能使用"
+date: "2023-11-06"
+categories: 
+---
+<p><a href="https://zhidao.baidu.com/question/1701564360967754308.html">https://zhidao.baidu.com/question/1701564360967754308.html</a></p>
+
+<p><a href="https://www.jiayongluyou.com/pc/how-to-solve-29.html">https://www.jiayongluyou.com/pc/how-to-solve-29.html</a></p>
+
+<p>1.长按alt 三秒</p>
+
+<p>2.切换语言系统。<br />
+1、首先双击桌面的向日葵图标进入软件，进入软件界面，点击右上角小三条横线菜单栏。<br />
+2、其次在下拉菜单中选择设置。<br />
+3、最后进入设置界面后，可以看到当前显示语言处为英文，切换至中文即可正常输入中文。</p>
+
+<p>3.重新连接向日葵。</p>
+

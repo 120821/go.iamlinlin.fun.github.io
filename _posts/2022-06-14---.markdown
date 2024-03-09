@@ -1,0 +1,38 @@
+---
+layout: post
+title: "提取 公共的样式到文件-- 快捷命令 "
+date: "2022-06-14"
+categories: 
+---
+<p>在详情 列表 等四个页面存在共同的样式，例如 菜单等，使用命令进行提取</p>
+
+<p>/assets/style$ ls<br />
+common.css&nbsp; components.css&nbsp; icons.css</p>
+
+<p>查看共同的样式</p>
+
+<p>assets/style$ cat common.css components.css icons.css<br />
+@font-face {<br />
+&nbsp;&nbsp;&nbsp; font-family: &#39;Noto Sans&#39;;<br />
+&nbsp;&nbsp;&nbsp; src: url(&#39;../fonts/noto_sans_medium.ttf&#39;);<br />
+}</p>
+
+<p>@font-face {<br />
+&nbsp;&nbsp;&nbsp; font-family: &#39;Noto Sans Bold&#39;;<br />
+&nbsp;&nbsp;&nbsp; src: url(&#39;../fonts/noto_sans_bold.ttf&#39;);<br />
+}</p>
+
+<p><br />
+body {<br />
+&nbsp;&nbsp;&nbsp; font-family: &#39;Noto Sans&#39;, sans-serif;<br />
+&nbsp;&nbsp;&nbsp; background: linear-gradient(180deg, #FFF9FC 0%, rgba(255, 246, 251, 0) 100%);<br />
+&nbsp;&nbsp;&nbsp; min-height: calc(100vh - 60px);</p>
+
+<p>...............</p>
+
+<p>进行文件的写入，把cat到的数据进行文件的copy</p>
+
+<p>assets/style$ cat common.css components.css icons.css&nbsp; &gt;&nbsp; front_end_all.css</p>
+
+<p>&nbsp;</p>
+

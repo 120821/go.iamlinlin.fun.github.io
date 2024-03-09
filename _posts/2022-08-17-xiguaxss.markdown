@@ -1,0 +1,160 @@
+---
+layout: post
+title: "完善 xigua XSS平台"
+date: "2022-08-17"
+categories: 
+---
+<p><a href="https://github.com/sg552/xigua_xss_platform">xigua xss</a>(github)</p>
+
+<p>首先，git clone https://github.com/sg552/xigua_xss_platform</p>
+
+<p>1.修改数据库配置 ，Gemfile，puma</p>
+
+<p>vim config/puma.rb(查看是否需要修改，不需要修改就修改其他的数据)</p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>vim config/database.yml</code></div>
+
+<pre>
+<code>default: &amp;default
+
+&nbsp; adapter: postgresql
+
+&nbsp; pool: &lt;%= ENV[&quot;DATABASE_POOL&quot;] || 64 %&gt;
+
+&nbsp; timeout: 5000
+
+&nbsp; encoding: utf8
+
+&nbsp; pool: 5
+
+&nbsp; username: admin
+
+&nbsp; user: admin
+
+&nbsp; password: 88888888
+
+&nbsp; port: 5432
+
+&nbsp; host: localhost</code></pre>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">Gemfile：（增加gem pg, 注释sql）</div>
+
+<pre>
+<code>gem &#39;rails&#39;, &#39;6.1.4.1&#39;
+
+#gem &#39;mysql2&#39;, &#39;0.5.3&#39;
+
+gem &#39;pg&#39;
+
+gem &#39;figaro&#39;</code></pre>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">2.gem install bundler （注意版本)</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">3.bundle install</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了报错</div>
+
+<pre>
+<code>nokogiri-1.12.5-x86_64-linux requires ruby version &lt; 3.1.dev, &gt;= 2.5, which is incompatible with the current version, ruby 3.1.0p0</code></pre>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><a href="https://github.com/sparklemotion/nokogiri/issues/2397">查找解决方法</a></div>
+
+<pre>
+<code>ruby -v
+
+ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-linux]</code></pre>
+
+<pre>
+<code>bundle update nokogiri
+
+Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)&#39; instead.
+
+Fetching gem metadata from https://gems.ruby-china.com/...........
+
+Resolving dependencies...</code></pre>
+
+<pre>
+<code>bundle
+
+Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)&#39; instead.
+
+Using rake 13.0.6
+
+Using concurrent-ruby 1.1.9</code></pre>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.bundle exec rake db:create</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.1bundle exec rake db:migrate</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2bundle exec rails s</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">运行后，出现了报错<a href="https://github.com/rails/webpacker/issues/2825">Webpacker can&#39;t find application.js</a></div>
+
+<p><img height="541" src="/uploads/ckeditor/pictures/219/image-20220817093853-1.png" width="1030" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2.1编译：bundle exec rails webpacker:compile</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了error：<img height="256" src="/uploads/ckeditor/pictures/220/image-20220817094758-1.png" width="1873" /></div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2.2安装：<code>bin/rails webpacker:install</code></div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">.4.2.3编译：bundle exec rails webpacker:compile</div>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了404</div>
+
+<p><img height="176" src="/uploads/ckeditor/pictures/222/image-20220817095108-3.png" width="499" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2.4是路径错了，查看：config/route.rb</div>
+
+<p><img height="265" src="/uploads/ckeditor/pictures/223/image-20220817100019-1.png" width="490" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">localhost:3000/logs 即可跳转到http://localhost:3000/users/sign_in</div>
+
+<p><img height="329" src="/uploads/ckeditor/pictures/224/image-20220817100033-2.png" width="556" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">css并没有生效</div>
+
+<p><img height="932" src="/uploads/ckeditor/pictures/226/image-20220817100555-2.png" width="1846" /></p>
+
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">打开链接也是404</div>
+
+<p><img height="557" src="/uploads/ckeditor/pictures/225/image-20220817100534-1.png" width="1173" /></p>
+
+<p><a href="https://www.bootcdn.cn/">查看cdn官网</a>，可以看到存在需要的css。<a href="https://www.bootcdn.cn/twitter-bootstrap/">Twitter-bootstrap</a></p>
+
+<p><img height="358" src="/uploads/ckeditor/pictures/227/image-20220817100715-3.png" width="1165" /></p>
+
+<p>layout替换：</p>
+
+<p><code>&lt;link href=&quot;https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+
+<p>替换后仍然不能使用：https://www.javazxz.com/thread-11054-1-1.html</p>
+
+<p>解决方法：cdn.bootcss.com替换成cdnjs.cloudflare.com/ajax/libs</p>
+
+<p>可以看到有一些效果了。</p>
+
+<p><img height="161" src="/uploads/ckeditor/pictures/228/image-20220817101531-1.png" width="1848" /></p>
+
+<p>使用原来的4.2的css更加合适</p>
+
+<p><img height="188" src="/uploads/ckeditor/pictures/229/image-20220817101646-1.png" width="1820" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

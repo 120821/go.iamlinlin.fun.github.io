@@ -1,0 +1,104 @@
+---
+layout: post
+title: "git/linux常用命令"
+date: "2022-06-09"
+categories: 
+---
+
+                    <pre><code class="language-html">~/
+~/start_trojan
+history
+</code></pre> 
+<h2>:q </h2> 
+<pre><code>ls -altrh
+    cd ..
+    ls -altrh
+    clear
+    cd name_test_config
+ls
+cd ..
+mv name_test_config/ my_test
+ls
+ls -altrh
+cd my_test/
+ls
+touch READNE
+git status  ==&gt;(README  red)
+git add README
+git status==&gt;(new file:README  green)
+touch useless_file
+git stats==&gt;(usless file  red)
+touch history
+git status
+git add history
+git status
+git commit -m 'inintial commit'
+git status
+git log
+git rm status
+git status
+
+
+</code></pre> 
+<p>:w</p> 
+<h2 id="%E8%8E%B7%E5%8F%96%E6%9C%80%E6%96%B0%E4%BB%A3%E7%A0%81-git-pull">获取最新代码 git pull</h2> 
+<pre><code class="language-java">sudo vim 
+:w name
+:q
+sudo gedit
+sudo nano
+ctrl+x</code></pre> 
+<h2 id="%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81-git-add-commit-push">提交代码 git add/commit/push</h2> 
+<h2 id="%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2-git-log-show">查看历史 git log/show</h2> 
+<h2 id="%E5%81%9A%E4%BB%A3%E7%A0%81%E6%AF%94%E8%BE%83-git-diff">做代码比较 git diff</h2> 
+<pre><code class="language-html">
+git --version ==&gt;get version 2.7.4
+cat ~/git ==&gt;.gitbook/  .gitconfig
+cat ~/gitconfig==&gt;[user]name/email[core]
+    vim ~/gitconfig
+    cat ~/config==&gt;bianji  xinname email core
+mkdir_test_git==&gt;chuangjainmulu
+    cd test_git
+    ls
+    ls -altrh
+mikdir name
+    cd le^c
+    mv name_test_config
+    cd name_test_config
+    ls
+    git init .
+    ls -altrh
+    vim .git./
+    git commit ^c
+    vim .git
+git config user.name=name
+
+vim ~/.bashrc</code></pre> 
+<p>git 的典型工作过程是；</p> 
+<ul>
+<li>程序员A修改了代码。(通过git status/diff查看修改的情况)</li>
+<li>程序员A把修改后的文件，(通过git add/rm)放到了git的"待提交代码列表"中。</li>
+<li>程序员A把“待提交的代码”提交(通过git commit)</li>
+<li>程序员A把“本地的commit“ 同步到远程的git服务器上（通过git push)</li>
+<li>程序员B 把程序员A的代码(通过git pull/merge)同步到本地</li>
+<li> <p>working directory: 当前的代码目录</p> </li>
+<li> <p>branch: 代码的分支。 在本地可以有，在远程也可以有。</p> </li>
+<li> <p>commit: 每次的代码的提交。每个commit 都对应一个40位的字符串，例如<code>e4b924e3e0c03a6d71effc3bc3075c2596c14cf3</code></p> </li>
+<li> <h2 id="%E6%8F%90%E4%BA%A4%E6%97%B6%E9%9C%80%E8%A6%81%EF%BC%9A%EF%BC%88%E4%BB%A3%E7%A0%81review%E7%9A%84%E5%B0%8F%E8%A6%81%E6%B1%82%EF%BC%89">提交时需要：（代码review的小要求）</h2> </li>
+<li>有正确的 用户名和电子邮件.</li>
+<li>comments 中就不要有"由XX操作"了。重复。</li>
+<li>这样会在当前repository目录下的. git /config中写入配置信息</li>
+<li> <h2 id="%E7%94%9F%E6%88%90%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9%E7%9A%84%E6%89%80%E6%9C%89patch%EF%BC%88%E5%A4%9A%E5%B0%91%E6%AC%A1%E6%8F%90%E4%BA%A4%E5%B0%B1%E5%A4%9A%E5%B0%91%E4%B8%AA-path%E6%96%87%E4%BB%B6%EF%BC%89">成本地修改的所有patch（多少次提交就多少个.path文件）:</h2> <pre><code>$ git format-patch origin
+</code></pre> <h2 id="%E7%94%9F%E6%88%90%E5%8D%95%E4%B8%AApatch%E6%96%87%E4%BB%B6%EF%BC%88%E4%BE%8B%E5%AD%90%E4%B8%AD%E6%98%AF%E5%B0%86%E6%9C%80%E8%BF%915%E6%AC%A1%E6%8F%90%E4%BA%A4%E7%9A%84%E5%86%85%E5%AE%B9%E5%90%88%E5%B9%B6%E5%88%B0%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%AD%EF%BC%89%EF%BC%9A">生成单个patch文件（例子中是将最近5次提交的内容合并到一个文件中）：</h2> <pre><code>$ git format-patch -5 --stdout  &gt; patch_by_siwei.txt
+</code></pre> <h2 id="%E5%BE%80%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E6%8F%90%E4%BA%A4%E5%88%86%E6%94%AF%EF%BC%9A">往远程服务器上提交分支：</h2> <pre><code>$ git push origin [本地分支名]:[远程分知名(push之后就存在了)]
+</code></pre> <pre><code>git push origin my_local_branch:lily
+</code></pre> <h2 id="apply-patch">apply patch</h2> <pre><code>$ git pull . master    (把远程的master更新到当前的本地分支）
+</code></pre> <h2 id="git-patch-apply-%E6%9F%90%E4%B8%80%E4%B8%AAcommit">git patch/apply 某一个commit</h2> </li>
+</ul>
+<p></p> 
+<p></p> 
+<pre><code>$ git -config user.name "Jike Song"
+$ git -config user.email [email]albcamus@gmail.com[/emai</code></pre> 
+<pre><code>$ git pull . master    (把远程的master更新到当前的本地分支）
+</code></pre>
+                

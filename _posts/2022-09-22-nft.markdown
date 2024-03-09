@@ -1,0 +1,24 @@
+---
+layout: post
+title: "认领nft的时候，本地和远程都出现错误，进行修改的思路"
+date: "2022-09-22"
+categories: 
+---
+<p>远程的错误解决：</p>
+
+<p>在fly.io上，进行认领的时候，出现了报错，在区块浏览器进行查看，该contract的nft已经认领了13个，也就是再继续认领必须从14进行认领，而服务器上进行认领的时候，显示的nft_id是11,因此导致无法继续认领。</p>
+
+<p><img height="468" src="/uploads/ckeditor/pictures/468/image-20220922145517-2.png" width="1341" /></p>
+
+<p>再看这里的错误，因为无法认领，所以数据也无法进行保存，是没有问题的。脚本也没有问题，需要把服务器的错误数据进行调整。然后继续认领即可。</p>
+
+<p><img height="404" src="/uploads/ckeditor/pictures/467/image-20220922145253-1.png" width="1330" /></p>
+
+<p>2.本地的错误解决：</p>
+
+<p>本地的网络不能连接测试网络，fuji等网络，而且本地的参数传递不对，js包没有安装完成，应该首先运行node,进行安装需要的包。然后进行对比，可以知道network之后，有好几个空格，没有显示contract的address</p>
+
+<p><img height="1080" src="/uploads/ckeditor/pictures/469/image-20220922151133-3.png" width="1920" /></p>
+
+<p>&nbsp;</p>
+

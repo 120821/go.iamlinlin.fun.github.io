@@ -1,0 +1,10 @@
+---
+layout: post
+title: "入门区块链 --账户转账， 在区块链浏览器进行查询这些记录"
+date: "2022-06-25"
+categories: 
+---
+<p>点击转账记录，就可以进行详情的查看，点击浏览器查看，就看到更详细的内容。<img height="851" src="/uploads/ckeditor/pictures/72/image-20220625092206-1.png" width="1169" /></p>
+
+<p><img height="863" src="/uploads/ckeditor/pictures/73/image-20220625092312-2.png" width="1557" /></p>
+

@@ -1,0 +1,30 @@
+---
+layout: post
+title: "go install 1.18.3"
+date: "2023-07-24"
+categories: 
+---
+<p>refer: <a href="https://www.cnblogs.com/yongquan/p/16417775.html">https://www.cnblogs.com/yongquan/p/16417775.html</a></p>
+
+<div id="main">
+<div id="post_detail">
+<div class="post">linux 下载安装 go1.18
+<div class="postText">
+<div class="blogpost-body blogpost-body-html" id="cnblogs_post_body">
+<p>(1)下载</p>
+
+<pre>
+<code>wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz</code></pre>
+
+<p>(2)解压文件到新版本文件夹</p>
+
+<pre>
+<code>sudo tar -zxvf go1.18.3.linux-amd64.tar.gz </code></pre>
+
+<p>然后修改.bashrc (/home/linlin/.bashrc)即可。把原来的1.19替换为1.18.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+

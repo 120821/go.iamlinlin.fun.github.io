@@ -1,0 +1,141 @@
+---
+layout: post
+title: "phonenix - 目录结构"
+date: "2022-11-08"
+categories: 
+---
+<p><a href="https://hexdocs.pm/phoenix/directory_structure.html">https://hexdocs.pm/phoenix/directory_structure.html</a></p>
+
+<p>当我们使用 mix phx.new 生成一个新的 Phoenix 应用程序时，它会构建一个像这样的顶级目录结构：</p>
+
+<pre>
+<code>├── _build
+
+├── assets
+
+├── config
+
+├── deps
+
+├── lib
+
+│&nbsp;&nbsp; ├── hello
+
+│&nbsp;&nbsp; ├── hello.ex
+
+│&nbsp;&nbsp; ├── hello_web
+
+│&nbsp;&nbsp; └── hello_web.ex
+
+├── priv
+
+└── test</code></pre>
+
+<p><font style="vertical-align:inherit">我们将一一浏览这些目录： </font></p>
+
+<ul>
+	<li>
+	<p><code class="inline">_build</code><font style="vertical-align:inherit">- 由创建的目录 </font><code class="inline">mix</code><font style="vertical-align:inherit">作为 Elixir 的一部分提供的命令行工具，包含所有编译工件。 正如我们在&ldquo; </font><a href="https://hexdocs.pm/phoenix/up_and_running.html"><font style="vertical-align:inherit"> Up and Running </font></a><font style="vertical-align:inherit"> &rdquo;中看到的， </font><code class="inline">mix</code><font style="vertical-align:inherit">是您的应用程序的主界面。 我们使用 Mix 来编译我们的代码、创建数据库、运行我们的服务器等等。 此目录不得签入版本控制，并且可以随时删除。 删除它将强制 Mix 从头开始​​重建您的应用程序。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">assets</code><font style="vertical-align:inherit">- 一个目录，保存与源前端资产相关的所有内容，例如 JavaScript 和 CSS，并由 </font><code class="inline">esbuild</code><font style="vertical-align:inherit">工具。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">config</code><font style="vertical-align:inherit">- 保存项目配置的目录。 这 </font><code class="inline">config/config.exs</code><font style="vertical-align:inherit">文件是您的配置的入口点。 在结束时 </font><code class="inline">config/config.exs</code><font style="vertical-align:inherit">，它导入环境特定的配置，可以在 </font><code class="inline">config/dev.exs</code><font style="vertical-align:inherit">, </font><code class="inline">config/test.exs</code><font style="vertical-align:inherit">， 和 </font><code class="inline">config/prod.exs</code><font style="vertical-align:inherit">. 最后， </font><code class="inline">config/runtime.exs</code><font style="vertical-align:inherit">被执行，它是读取秘密和其他动态配置的最佳位置。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">deps</code><font style="vertical-align:inherit">- 一个包含我们所有 Mix 依赖项的目录。 您可以找到列出的所有依赖项 </font><code class="inline">mix.exs</code><font style="vertical-align:inherit">文件，里面 </font><code class="inline">defp deps do</code><font style="vertical-align:inherit">函数定义。 此目录不得签入版本控制，并且可以随时删除。 删除它会强制 Mix 从头开始​​下载所有的 deps。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">lib</code><font style="vertical-align:inherit">- 保存应用程序源代码的目录。 该目录分为两个子目录， </font><code class="inline">lib/hello</code><font style="vertical-align:inherit">和 </font><code class="inline">lib/hello_web</code><font style="vertical-align:inherit">. 这 </font><code class="inline">lib/hello</code><font style="vertical-align:inherit">目录将负责托管您所有的业务逻辑和业务域。 它通常直接与数据库交互&mdash;&mdash;它是模型-视图-控制器 (MVC) 架构中的&ldquo;模型&rdquo;。 </font><code class="inline">lib/hello_web</code><font style="vertical-align:inherit">负责将您的业务域公开给世界，在这种情况下，通过 Web 应用程序。 它同时拥有 MVC 的视图和控制器。 我们将在下一节中更详细地讨论这些目录的内容。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">priv</code><font style="vertical-align:inherit">- 一个目录，用于保存生产中必需但不直接包含在源代码中的所有资源。 您通常会在此处保留数据库脚本、翻译文件等。 静态和生成的资产，来自 </font><code class="inline">assets</code><font style="vertical-align:inherit">目录，默认情况下也从这里提供。 </font></p>
+	</li>
+	<li>
+	<p><code class="inline">test</code><font style="vertical-align:inherit">- 包含我们所有应用程序测试的目录。 它经常反映在 </font><code class="inline">lib</code><font style="vertical-align:inherit">. </font></p>
+	</li>
+</ul>
+
+<p><code class="inline">lib/hello</code><font style="vertical-align:inherit">目录托管您的所有业务域。 由于我们的项目还没有任何业务逻辑，所以目录大多是空的。 您只会找到三个文件</font></p>
+
+<pre><code>lib/hello<br />
+├── application.ex<br />
+├── mailer.ex<br />
+└── repo.ex</code></pre>
+
+<p><code class="inline">lib/hello/application.ex</code><font style="vertical-align:inherit">文件定义了一个名为 Elixir 的应用程序 </font><code class="inline">Hello.Application</code><font style="vertical-align:inherit">. 那是因为归根结底，Phoenix 应用程序只是 Elixir 应用程序。 这 </font><code class="inline">Hello.Application</code><font style="vertical-align:inherit">模块定义了哪些服务是我们应用程序的一部分： </font></p>
+
+<pre><code>children = [<br />
+&nbsp; # Start the Ecto repository<br />
+&nbsp; Hello.Repo,<br />
+&nbsp; # Start the Telemetry supervisor<br />
+&nbsp; HelloWeb.Telemetry,<br />
+&nbsp; # Start the PubSub system<br />
+&nbsp; {Phoenix.PubSub, name: Hello.PubSub},<br />
+&nbsp; # Start the Endpoint (http/https)<br />
+&nbsp; HelloWeb.Endpoint<br />
+&nbsp; # Start a worker by calling: Hello.Worker.start_link(arg)<br />
+&nbsp; # {Hello.Worker, arg}<br />
+]</code></pre>
+
+<p><code class="inline">lib/hello/mailer.ex</code><font style="vertical-align:inherit">文件包含 </font><code class="inline">Hello.Mailer</code><font style="vertical-align:inherit">模块，它定义了发送电子邮件的主界面： </font></p>
+
+<pre><code>defmodule Hello.Mailer do<br />
+&nbsp; use Swoosh.Mailer, otp_app: :hello<br />
+end</code></pre>
+
+<p><font style="vertical-align:inherit">在相同的 </font><code class="inline">lib/hello</code><font style="vertical-align:inherit">目录，我们会找到一个 </font><code class="inline">lib/hello/repo.ex</code><font style="vertical-align:inherit">. 它定义了一个 </font><code class="inline">Hello.Repo</code><font style="vertical-align:inherit">模块，它是我们与数据库的主要接口。 如果您使用 Postgres（默认数据库），您将看到如下内容： </font></p>
+
+<pre><code>defmodule Hello.Repo do<br />
+&nbsp; use Ecto.Repo,<br />
+&nbsp;&nbsp;&nbsp; otp_app: :hello,<br />
+&nbsp;&nbsp;&nbsp; adapter: Ecto.Adapters.Postgres<br />
+end</code></pre>
+
+<p><code class="inline">lib/hello_web</code><font style="vertical-align:inherit">目录包含我们应用程序的网络相关部分。 展开后是这样的：</font></p>
+
+<pre><code>lib/hello_web<br />
+├── controllers<br />
+│&nbsp;&nbsp; └── page_controller.ex<br />
+├── templates<br />
+│&nbsp;&nbsp; ├── layout<br />
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── app.html.heex<br />
+│&nbsp;&nbsp; │&nbsp;&nbsp; ├── live.html.heex<br />
+│&nbsp;&nbsp; │&nbsp;&nbsp; └── root.html.heex<br />
+│&nbsp;&nbsp; └── page<br />
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; └── index.html.heex<br />
+├── views<br />
+│&nbsp;&nbsp; ├── error_helpers.ex<br />
+│&nbsp;&nbsp; ├── error_view.ex<br />
+│&nbsp;&nbsp; ├── layout_view.ex<br />
+│&nbsp;&nbsp; └── page_view.ex<br />
+├── endpoint.ex<br />
+├── gettext.ex<br />
+├── router.ex<br />
+└── telemetry.ex</code></pre>
+
+<p><font style="vertical-align:inherit">当前在 </font><code class="inline">controllers</code><font style="vertical-align:inherit">, </font><code class="inline">templates</code><font style="vertical-align:inherit">， 和 </font><code class="inline">views</code><font style="vertical-align:inherit">目录在那里创建&ldquo;欢迎来到凤凰！&rdquo; 中看到的页面。 </font><a href="https://hexdocs.pm/phoenix/up_and_running.html"><font style="vertical-align:inherit"> 我们在&ldquo;启动并运行 </font></a><font style="vertical-align:inherit">&rdquo;指南 </font></p>
+
+<p><font style="vertical-align:inherit">通过查看 </font><code class="inline">templates</code><font style="vertical-align:inherit">和 </font><code class="inline">views</code><font style="vertical-align:inherit">目录，我们可以看到 Phoenix 提供了开箱即用的布局和错误页面处理功能。 </font></p>
+
+<p><font style="vertical-align:inherit">除了提到的目录， </font><code class="inline">lib/hello_web</code><font style="vertical-align:inherit">根目录有四个文件。 </font><code class="inline">lib/hello_web/endpoint.ex</code><font style="vertical-align:inherit">是 HTTP 请求的入口点。 一旦浏览器访问 </font><a href="http://localhost:4000"><font style="vertical-align:inherit">http://localhost:4000 </font></a><font style="vertical-align:inherit"> ，端点就开始处理数据，最终通向路由器，路由器定义在 </font><code class="inline">lib/hello_web/router.ex</code><font style="vertical-align:inherit">. 路由器定义了将请求分派给&ldquo;控制器&rdquo;的规则，然后控制器使用&ldquo;视图&rdquo;和&ldquo;模板&rdquo;将 HTML 页面呈现回客户端。 我们在其他指南中详细探讨了这些层，从接下来的&ldquo; </font><a href="https://hexdocs.pm/phoenix/request_lifecycle.html"><font style="vertical-align:inherit">请求生命周期 </font></a><font style="vertical-align:inherit">&rdquo;指南开始。 </font></p>
+
+<p><font style="vertical-align:inherit">通过 </font><em><font style="vertical-align:inherit">Telemetry </font></em><font style="vertical-align:inherit"> ，Phoenix 能够收集指标并发送应用程序的监控事件。 这 </font><code class="inline">lib/hello_web/telemetry.ex</code><font style="vertical-align:inherit">文件定义负责管理遥测过程的主管。 中找到有关此主题的更多信息 </font><a href="https://hexdocs.pm/phoenix/telemetry.html"><font style="vertical-align:inherit"> 您可以在遥测指南 </font></a><font style="vertical-align:inherit">。 </font></p>
+
+<p><font style="vertical-align:inherit">最后，有一个 </font><code class="inline">lib/hello_web/gettext.ex</code><font style="vertical-align:inherit">提供国际化的文件 </font><a href="https://hexdocs.pm/gettext/Gettext.html"><font style="vertical-align:inherit">通过Gettext </font></a><font style="vertical-align:inherit">。 如果您不担心国际化，可以安全地跳过此文件及其内容。 </font></p>
+
+<p><code class="inline">assets</code><font style="vertical-align:inherit">目录包含与前端资产相关的源文件，例如 JavaScript 和 CSS。 从 Phoenix v1.6 开始，我们使用 </font><a class="no-underline" href="https://github.com/evanw/esbuild/"><code class="inline">esbuild</code></a><font style="vertical-align:inherit">编译资产，由 </font><a class="no-underline" href="https://github.com/phoenixframework/esbuild"><code class="inline">esbuild</code></a><font style="vertical-align:inherit">长生不老药包。 与整合 </font><code class="inline">esbuild</code><font style="vertical-align:inherit">已融入您的应用程序。 相关配置可以在你的 </font><code class="inline">config/config.exs</code><font style="vertical-align:inherit">文件。 </font></p>
+
+<p><font style="vertical-align:inherit">您的其他静态资产被放置在 </font><code class="inline">priv/static</code><font style="vertical-align:inherit">文件夹，在哪里 </font><code class="inline">priv/static/assets</code><font style="vertical-align:inherit">为生成的资产保留。 一切都在 </font><code class="inline">priv/static</code><font style="vertical-align:inherit">由 </font><a class="no-underline" href="https://hexdocs.pm/plug/1.13.6/Plug.Static.html"><code class="inline">Plug.Static</code></a><font style="vertical-align:inherit">插入配置 </font><code class="inline">lib/hello_web/endpoint.ex</code><font style="vertical-align:inherit">. 在开发模式下运行时（ </font><code class="inline">MIX_ENV=dev</code><font style="vertical-align:inherit">)，Phoenix 会留意您在 </font><code class="inline">assets</code><font style="vertical-align:inherit">目录，然后在您工作时负责更新浏览器中的前端应用程序。 </font></p>
+
+<p><font style="vertical-align:inherit">请注意，当您第一次使用 </font><a class="no-underline" href="https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html"><code class="inline">mix phx.new</code></a><font style="vertical-align:inherit">可以指定将影响的存在和布局的选项 </font><code class="inline">assets</code><font style="vertical-align:inherit">目录。 事实上，Phoenix 应用程序可以自带前端工具，也可以完全没有前端（例如，如果您正在编写 API，则非常方便）。 有关更多信息，您可以运行 </font><a class="no-underline" href="https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html"><code class="inline">mix help phx.new</code></a><font style="vertical-align:inherit">或查看 </font><a href="https://hexdocs.pm/phoenix/mix_tasks.html"><font style="vertical-align:inherit">Mix tasks </font></a><font style="vertical-align:inherit">中的文档。 </font></p>
+
+<p><font style="vertical-align:inherit">如果默认的 esbuild 集成不能满足您的需求，例如因为您想使用其他构建工具，您可以切换到 </font><a href="https://hexdocs.pm/phoenix/asset_management.html#custom_builds"><font style="vertical-align:inherit">自定义资产构建 </font></a><font style="vertical-align:inherit">。 </font></p>
+
+<p><font style="vertical-align:inherit">至于 CSS，Phoenix 附带了一些自定义样式以及 </font><a href="https://milligram.io/"><font style="vertical-align:inherit">Milligram CSS 框架 </font></a><font style="vertical-align:inherit">，为项目提供了最小的设置。 您可以迁移到您选择的任何 CSS 框架。 其他参考资料可在 </font><a href="https://hexdocs.pm/phoenix/asset_management.html#css"><font style="vertical-align:inherit">资产管理 </font></a><font style="vertical-align:inherit">指南中找到。 </font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

@@ -1,0 +1,138 @@
+---
+layout: post
+title: "ruby-处理数组的数据，得到所有id（递归）"
+date: "2024-01-19"
+categories: 
+---
+<p>处理数组，得到所有的id</p>
+
+<pre>
+<code>testData = [
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp; id: &#39;7067179125001158661&#39;,
+
+&nbsp; },
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp; id: &#39;7067448596362166278&#39;,
+
+&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7067486541085442053&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7067486541085474821&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7067878618105495558&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7067825150707679238&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp; ],
+
+&nbsp; },
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp; id: &#39;7067179088024174597&#39;,
+
+&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7068143816268054533&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7068143740090597381&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; children: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; id: &#39;7068143740090630149&#39;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp; ],
+
+&nbsp; },
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp; id: &#39;7067179173667831814&#39;,
+
+&nbsp; },
+
+]
+
+puts&nbsp; testData.size
+
+array = []
+
+def get_id(testData, array)
+
+&nbsp; testData.each do |i|
+
+&nbsp;&nbsp;&nbsp; puts i
+
+&nbsp;&nbsp;&nbsp; i.map do |key, value|
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; puts key
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if key == :id
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; puts value
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; array.push(value)
+&nbsp;&nbsp; else key == :children
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; puts value
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get_id(value, array)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
+
+&nbsp;&nbsp;&nbsp; end &nbsp; end
+
+&nbsp; puts &quot;== array: &quot;
+
+&nbsp; puts array
+
+end puts get_id(testData, array)</code></pre>
+

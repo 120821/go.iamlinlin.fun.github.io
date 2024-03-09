@@ -1,0 +1,20 @@
+---
+layout: post
+title: "阿里云的秘钥可以更换，禁用，启用"
+date: "2022-08-25"
+categories: 
+---
+<p>阿里云的警示已经出现一段时间了，有一些都过期了，但是点击处理和详情都不知道应该怎么处理，今天邮箱收到GitHub的风险提示，非常多，才发现是博客的项目都公开着秘钥什么的。</p>
+
+<p><img height="861" src="/uploads/ckeditor/pictures/333/image-20220825110747-2.png" width="1729" /></p>
+
+<p>我也不知道怎么处理就一直放着，博客也可以正常使用，也没有特别重要的东西，或者私密的东西，而且，我也不知道有什么可以值得攻击的。</p>
+
+<p><img height="689" src="/uploads/ckeditor/pictures/334/image-20220825111127-3.png" width="811" /></p>
+
+<p>根本没有杭州的同学，（会写代码的），然后把key禁用了。分不能再低了。</p>
+
+<p><img height="643" src="/uploads/ckeditor/pictures/335/image-20220825111247-4.png" width="858" /></p>
+
+<p><img height="321" src="/uploads/ckeditor/pictures/336/image-20220825111428-5.png" width="1405" /></p>
+

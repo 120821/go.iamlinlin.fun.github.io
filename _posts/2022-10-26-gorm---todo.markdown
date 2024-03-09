@@ -1,0 +1,55 @@
+---
+layout: post
+title: "gorm - 尝试博客搭建 --todo"
+date: "2022-10-26"
+categories: 
+---
+<p><a href="https://zhuanlan.zhihu.com/p/480568916">https://zhuanlan.zhihu.com/p/480568916</a></p>
+
+<p>尝试使用go 搭建博客</p>
+
+<p>项目初始化：</p>
+
+<pre>
+<code class="language-text">mkdir gin-blog # 创建项目</code></pre>
+
+<pre>
+<code class="language-text">go mod init gin-blog</code></pre>
+
+<pre>
+<code class="language-text">go get -u github.com/gin-gonic/gin</code></pre>
+
+<p><img height="808" src="/uploads/ckeditor/pictures/653/image-20221026141752-1.png" width="947" /></p>
+
+<pre>
+<code class="language-text">package main
+
+import (
+	&quot;github.com/gin-gonic/gin&quot;
+	&quot;net/http&quot;
+)
+
+func main() {
+	r :=  gin.Default()
+	r.Use(gin.Logger())
+	r.Use(gin.Recovery())
+
+	r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			&quot;message&quot;: &quot;success...&quot;,
+		})
+	})
+
+	r.Run(&quot;:8888&quot;)
+}
+go run main.go</code></pre>
+
+<p><img height="127" src="/uploads/ckeditor/pictures/654/image-20221026141947-2.png" width="475" /></p>
+
+<p><img height="401" src="/uploads/ckeditor/pictures/655/image-20221026141959-3.png" width="1184" /></p>
+
+<pre>
+<b>配置热重载，热重载方式有很多种，例如：fresh和gowatch
+</b><code class="language-text">项目目录gin-blog下执行
+go get github.com/pilu/fresh</code></pre>
+

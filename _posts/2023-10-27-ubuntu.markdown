@@ -1,0 +1,62 @@
+---
+layout: post
+title: "ubuntu 安装 向日葵"
+date: "2023-10-27"
+categories: 
+---
+<p><a href="https://sunlogin.oray.com/download/linux?type=personal">https://sunlogin.oray.com/download/linux?type=personal</a></p>
+
+<p><a href="https://blog.csdn.net/linghu8812/article/details/106677055">https://blog.csdn.net/linghu8812/article/details/106677055</a></p>
+
+<p>1.下载</p>
+
+<pre>
+<code>wget https://down.oray.com/sunlogin/linux/sunloginclientshell-10.1.1.28779-amd64.deb</code></pre>
+
+<p>2.安装</p>
+
+<pre>
+<code>sudo dpkg -i 文件名.deb</code></pre>
+
+<p>提示了错误：</p>
+
+<pre>
+<code>dpkg: dependency problems prevent configuration of sunloginclient:
+
+&nbsp;sunloginclient depends on libncurses5; however:
+
+&nbsp; Package libncurses5 is not installed.
+
+dpkg: error processing package sunloginclient (--install):
+
+&nbsp;dependency problems - leaving unconfigured
+
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+
+Errors were encountered while processing:
+
+&nbsp;sunloginclient</code></pre>
+
+<p>解决，安装依赖：</p>
+
+<pre>
+<code>sudo apt --fix-broken install</code></pre>
+
+<p>然后继续步骤2即可</p>
+
+<p>3.启动：</p>
+
+<pre>
+<code>/usr/local/sunlogin/bin/sunloginclient</code></pre>
+
+<p>4.如果不用了就卸载：</p>
+
+<pre>
+<code>sudo dpkg -r sunloginclient</code></pre>
+
+<p>&nbsp;</p>
+

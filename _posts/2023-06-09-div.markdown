@@ -1,0 +1,97 @@
+---
+layout: post
+title: "div 滚动"
+date: "2023-06-09"
+categories: 
+---
+<p>可以使用CSS属性overflow来控制div的滚动。具体做法如下：</p>
+
+<p>1.在CSS中给div设置一个固定高度，达到需要滚动的高度范围。</p>
+
+<p>2.给div设置CSS属性overflow为auto或scroll，这将使div在高度范围内滚动。</p>
+
+<p>3.如果需要滚动条美观，可以使用CSS属性::-webkit-scrollbar进行美化。</p>
+
+<p>代码示例：</p>
+
+<pre>
+<code>&lt;div style=&quot;height: 200px; overflow: auto;&quot;&gt;
+   &lt;!-- 这里放数据 --&gt;
+&lt;/div&gt;</code></pre>
+
+<pre>
+<code>div::-webkit-scrollbar {
+  width: 10px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 5px;
+}</code></pre>
+
+<p>其中，::-webkit-scrollbar用于设置滚动条整体样式，::-webkit-scrollbar-thumb用于设置滚动条滑块样式。你可以根据需要进行设置</p>
+
+<p>可以通过 CSS 来隐藏滚动条或者将滚动条变细。</p>
+
+<ol>
+	<li>隐藏滚动条</li>
+</ol>
+
+<pre>
+<code>div::-webkit-scrollbar {
+  display: none;
+}</code></pre>
+
+<ol start="2">
+	<li>将滚动条变细</li>
+</ol>
+
+<pre>
+<code>div::-webkit-scrollbar {
+  width: 6px; /* 设置滚动条宽度 */
+  height: 6px; /* 设置滚动条高度 */
+}
+
+div::-webkit-scrollbar-thumb {
+  border-radius: 3px; /* 设置滚动条滑块圆角 */
+  background-color: rgba(0, 0, 0, 0.2); /* 设置滑块颜色 */
+}
+
+div::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05); /* 设置滑块轨道颜色 */
+}</code></pre>
+
+<p>以上代码将滚动条宽度设置为 6px，高度设置为 6px，滑块圆角设置为 3px，滑块颜色设置为灰色半透明，滑块轨道颜色设置为浅灰色半透明。你可以根据需要进行调整。</p>
+
+<p>如果要针对一个带有 <code>.class-name</code> 类的 <code>div</code> 元素进行样式设置，只需在 CSS 选择器中加入类选择器即可，如下所示：</p>
+
+<ol>
+	<li>隐藏滚动条</li>
+</ol>
+
+<pre>
+<code>div.class-name::-webkit-scrollbar {
+  display: none;
+}</code></pre>
+
+<ol start="2">
+	<li>将滚动条变细</li>
+</ol>
+
+<pre>
+<code>div.class-name::-webkit-scrollbar {
+  width: 6px; /* 设置滚动条宽度 */
+  height: 6px; /* 设置滚动条高度 */
+}
+
+div.class-name::-webkit-scrollbar-thumb {
+  border-radius: 3px; /* 设置滚动条滑块圆角 */
+  background-color: rgba(0, 0, 0, 0.2); /* 设置滑块颜色 */
+}
+
+div.class-name::-webkit-scrollbar-track {
+  background-color: rgba(0,0,0,0.05); /* 设置滑块轨道颜色 */
+}</code></pre>
+
+<p>类选择器的语法是在选择器名称前加上 <code>.class-name</code>，其中 <code>class-name</code> 是你要选择的元素的类名。请注意，通常情况下，隐藏滚动条和将滚动条变细的代码适用于所有 <code>div</code> 元素，因此不需要加上 <code>.class-name</code>。只有在你想要针对特定的 <code>div</code> 元素进行样式设置时才需要使用类选择器。</p>
+

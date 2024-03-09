@@ -1,0 +1,214 @@
+---
+layout: post
+title: "react go实现用户历史登录列表页面"
+date: "2023-08-16"
+categories: 
+---
+<p><span>​</span></p>
+
+<p>&nbsp;</p>
+
+<p>refer: <span aria-label="a 小部件" contenteditable="false" role="region" tabindex="-1"><a class="link-info" contenteditable="true" data-link-icon="https://csdnimg.cn/release/blog_editor_html/release2.3.5/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=N6B9" data-link-title="http://ip-api.com/" data-widget="csdnlink" href="http://ip-api.com/" title="http://ip-api.com/">http://ip-api.com/</a></span></p>
+
+<p>1.首先需要创建一个保存用户历史的登录的表，然后连接go</p>
+
+<p>2.在用户登录的时候，获取用户的IP IP位置，在后端直接处理数据即可（不需要在前端传递数据）</p>
+
+<p>（1）增加路由：</p>
+
+<div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
+<pre data-widget="codeSnippet">
+<code class="language-Go hljs">apiv1.POST(<span class="hljs-string">&quot;/history_login_logs&quot;</span>, v1.AddHistoryLoginLog)</code></pre>
+<span style="background:rgba(220, 220, 220, 0.5) url(&quot;https://csdnimg.cn/release/blog_editor_html/release2.3.5/ckeditor/plugins/widget/images/handle.png&quot;); left:0px; top:0px"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
+
+<p>（2）在model里增加（例如：models/history_login_logs.go）<br />
+&nbsp;</p>
+
+<div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
+<pre data-widget="codeSnippet">
+<code class="language-Go hljs"> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">AddHistoryLoginLog</span><span class="hljs-params">(user_id <span class="hljs-type">int</span>, ip_address <span class="hljs-type">string</span>, ip_location <span class="hljs-type">string</span>, login_at time.Time)</span></span> <span class="hljs-type">bool</span> {
+    db.Create(&amp;HistoryLoginLogs{
+      UserId:    user_id,
+      IpAddress: ip_address,
+      IpLocation:   ip_location,
+      LoginAt: login_at,
+    })
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+  }</code></pre>
+<span style="background:rgba(220, 220, 220, 0.5) url(&quot;https://csdnimg.cn/release/blog_editor_html/release2.3.5/ckeditor/plugins/widget/images/handle.png&quot;); left:0px; top:0px"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
+
+<p><br />
+&nbsp; (3) 在登录后的方法中增加（需要引入</p>
+
+<div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
+<pre data-widget="codeSnippet">
+<code class="language-Go hljs"><span class="hljs-keyword">import</span>(
+  <span class="hljs-string">&quot;time&quot;</span>
+  <span class="hljs-string">&quot;io/ioutil&quot;</span>
+  <span class="hljs-string">&quot;fmt&quot;</span>
+  <span class="hljs-string">&quot;encoding/json&quot;</span>
+）
+
+<span class="hljs-keyword">type</span> Location <span class="hljs-keyword">struct</span> {
+  Status      <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;status&quot;`</span>
+    Country     <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;country&quot;`</span>
+    CountryCode <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;countryCode&quot;`</span>
+    Region      <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;region&quot;`</span>
+    RegionName  <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;regionName&quot;`</span>
+    City        <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;city&quot;`</span>
+    Zip         <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;zip&quot;`</span>
+    Lat         <span class="hljs-type">float64</span> <span class="hljs-string">`json:&quot;lat&quot;`</span>
+    Lon         <span class="hljs-type">float64</span> <span class="hljs-string">`json:&quot;lon&quot;`</span>
+    Timezone    <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;timezone&quot;`</span>
+    Isp         <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;isp&quot;`</span>
+    Org         <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;org&quot;`</span>
+    As          <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;as&quot;`</span>
+    Query       <span class="hljs-type">string</span>  <span class="hljs-string">`json:&quot;query&quot;`</span>
+}
+
+...
+ipAddress := c.ClientIP()
+fmt.Println(<span class="hljs-string">&quot;== ip_address:&quot;</span>, ipAddress)
+resp, err := http.Get(<span class="hljs-string">&quot;http://ip-api.com/json/&quot;</span> + ipAddress + <span class="hljs-string">&quot;?lang=zh-CN&quot;</span>)
+<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+  fmt.Println(<span class="hljs-string">&quot;Error:&quot;</span>, err)
+    <span class="hljs-keyword">return</span>
+}
+
+<span class="hljs-keyword">defer</span> resp.Body.Close()
+
+  body, err := ioutil.ReadAll(resp.Body)
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    fmt.Println(<span class="hljs-string">&quot;Error:&quot;</span>, err)
+      <span class="hljs-keyword">return</span>
+  }
+
+  <span class="hljs-keyword">var</span> location Location
+err = json.Unmarshal(body, &amp;location)
+  <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+    fmt.Println(<span class="hljs-string">&quot;Error:&quot;</span>, err)
+      <span class="hljs-keyword">return</span>
+  }
+
+fmt.Println(<span class="hljs-string">&quot;=== Location:&quot;</span>, location)
+City := location.City
+
+  currentTime := time.Now()
+models.AddHistoryLoginLog(user.ID, ipAddress, City, currentTime)
+...</code></pre>
+<span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
+
+<p>&nbsp; （4）增加action （例如：routers/api/v1/history_login_log.go）（需要引入import&nbsp; &quot;net/http&quot;&nbsp;&nbsp; &quot;time&quot;&nbsp; &quot;fmt&quot;）<br />
+&nbsp;</p>
+
+<div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
+<pre data-widget="codeSnippet">
+<code class="language-Go hljs"><span class="hljs-keyword">type</span> AddHistoryLoginLogRequest <span class="hljs-keyword">struct</span> {
+    UserID     <span class="hljs-type">int</span>    <span class="hljs-string">`json:&quot;user_id&quot; binding:&quot;required&quot;`</span>
+      IPAddress  <span class="hljs-type">string</span> <span class="hljs-string">`json:&quot;ip_address&quot; binding:&quot;required&quot;`</span>
+      City <span class="hljs-type">string</span> <span class="hljs-string">`json:&quot;ip_location&quot; binding:&quot;required&quot;`</span>
+      CurrentTime time.Time <span class="hljs-string">`json:&quot;login_at&quot; binding:&quot;required&quot;`</span>
+  }
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">AddHistoryLoginLog</span><span class="hljs-params">(c *gin.Context)</span></span> {
+  <span class="hljs-keyword">var</span> request AddHistoryLoginLogRequest
+    <span class="hljs-keyword">if</span> err := c.ShouldBindJSON(&amp;request); err != <span class="hljs-literal">nil</span> {
+      fmt.Println(<span class="hljs-string">&quot;== err: &quot;</span>, err)
+        <span class="hljs-keyword">return</span>
+    }
+
+  models.AddHistoryLoginLog(request.UserID, request.IPAddress, request.City, request.CurrentTime)
+
+}</code></pre>
+<span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
+
+<p>3.在前端写一个展示的列表页面即可。（登录时间写现在的时间即可。）<br />
+例如：src/pages/HistoryLoginLog/index.jsx</p>
+
+<div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
+<pre data-widget="codeSnippet">
+<code class="language-Go hljs"><span class="hljs-keyword">import</span> React, { Component } from <span class="hljs-string">&#39;react&#39;</span>
+<span class="hljs-keyword">import</span> { Table } from <span class="hljs-string">&#39;antd&#39;</span>;
+<span class="hljs-keyword">import</span> axios from <span class="hljs-string">&#39;axios&#39;</span>
+<span class="hljs-keyword">import</span> Config from <span class="hljs-string">&#39;@/settings&#39;</span>
+<span class="hljs-keyword">import</span> { getToken, removeToken } from <span class="hljs-string">&#39;@/utils/auth&#39;</span>
+
+<span class="hljs-keyword">const</span> columns = [
+  {
+    title: <span class="hljs-string">&#39;登录名&#39;</span>,
+    dataIndex: <span class="hljs-string">&#39;user_id&#39;</span>,
+    key: <span class="hljs-string">&#39;user_id&#39;</span>,
+    render: text =&gt; &lt;a&gt;{text}&lt;/a&gt;,
+  },
+  {
+    title: <span class="hljs-string">&#39;登陆时间&#39;</span>,
+    dataIndex: <span class="hljs-string">&#39;login_at&#39;</span>,
+    key: <span class="hljs-string">&#39;login_at&#39;</span>,
+    <span class="hljs-comment">// 这里是进行时间的处理，转换为北京时间，格式为：2023/08/16 21:40</span>
+    render: text =&gt; {
+      <span class="hljs-keyword">const</span> dateObj = <span class="hljs-built_in">new</span> Date(text);
+      <span class="hljs-keyword">const</span> localizedDate = dateObj.toLocaleString(<span class="hljs-string">&#39;zh-CN&#39;</span>, {
+        timeZone: <span class="hljs-string">&#39;Asia/Shanghai&#39;</span>,
+        year: <span class="hljs-string">&#39;numeric&#39;</span>,
+        month: <span class="hljs-string">&#39;2-digit&#39;</span>,
+        day: <span class="hljs-string">&#39;2-digit&#39;</span>,
+        hour: <span class="hljs-string">&#39;2-digit&#39;</span>,
+        minute: <span class="hljs-string">&#39;2-digit&#39;</span>,
+      });
+      <span class="hljs-keyword">return</span> &lt;span&gt;{localizedDate}&lt;/span&gt;;
+    },
+  },
+  {
+    title: <span class="hljs-string">&#39;登陆ip&#39;</span>,
+    dataIndex: <span class="hljs-string">&#39;ip_address&#39;</span>,
+    key: <span class="hljs-string">&#39;ip_address&#39;</span>,
+  },
+  {
+    title: <span class="hljs-string">&#39;登陆位置&#39;</span>,
+    dataIndex: <span class="hljs-string">&#39;ip_location&#39;</span>,
+    key: <span class="hljs-string">&#39;ip_locatio&#39;</span>,
+  }
+];
+
+export <span class="hljs-keyword">default</span> class CalculationPlan extends Component {
+  state = {
+    data: [],
+    loading: <span class="hljs-literal">true</span>,
+  }
+
+  async fetchData() {
+    try {
+      <span class="hljs-keyword">const</span> response = await axios.get(<span class="hljs-string">`${Config.BASE_URL}/api/v1/history_login_logs?token=${getToken()}`</span>)
+      <span class="hljs-keyword">if</span> (response.data.message == <span class="hljs-string">&quot;ok&quot;</span>) {
+        <span class="hljs-keyword">const</span> sortedData = response.data.data.sort((a, b) =&gt; <span class="hljs-built_in">new</span> Date(b.id) - <span class="hljs-built_in">new</span> Date(a.id));
+        this.setState({
+          data: sortedData,
+          loading: <span class="hljs-literal">false</span>,
+        })
+      }
+    } catch (<span class="hljs-type">error</span>) {
+      console.<span class="hljs-type">error</span>(<span class="hljs-type">error</span>)
+      removeToken()
+      window.location.href = <span class="hljs-string">&#39;/&#39;</span>
+    }
+  }
+
+  componentDidMount() {
+    this.fetchData()
+  }
+
+  render() {
+    <span class="hljs-keyword">const</span> { data, loading } = this.state
+
+    <span class="hljs-keyword">return</span> (
+        &lt;Table columns={columns} dataSource={data} loading={loading} /&gt;
+    )
+  }
+}</code></pre>
+<span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
+
+<p>&nbsp;</p>
+
+<p><span>​</span></p>
+

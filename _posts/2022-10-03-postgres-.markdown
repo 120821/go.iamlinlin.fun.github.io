@@ -1,0 +1,104 @@
+---
+layout: post
+title: "postgres - 创建数据库，访问数据库"
+date: "2022-10-03"
+categories: 
+---
+<p><strong class="userinput"><code>1.创建数据库&nbsp; </code></strong>官网：<a href="https://www.postgresql.org/docs/14/tutorial-createdb.html">https://www.postgresql.org/docs/14/tutorial-createdb.html</a></p>
+
+<pre class="screen">
+<strong class="userinput"><code>createdb mydb</code></strong></pre>
+
+<p><strong class="userinput"><code>如果报错了：</code></strong></p>
+
+<pre class="screen">
+createdb: command not found</pre>
+
+<p>更换文件夹：</p>
+
+<pre class="screen">
+ <strong class="userinput"><code>/usr/local/pgsql/bin/createdb mydb</code></strong></pre>
+
+<p><strong class="userinput"><code>如果你的安装路径不一致，那么仍然：</code></strong></p>
+
+<pre class="screen">
+createdb: error: connection to server on socket &quot;/tmp/.s.PGSQL.5432&quot; failed: No such file or directory
+        Is the server running locally and accepting connections on that socket?</pre>
+
+<p>或者服务器没有启动：</p>
+
+<pre class="screen">
+createdb: error: connection to server on socket &quot;/tmp/.s.PGSQL.5432&quot; failed: FATAL:  role &quot;joe&quot; does not exist</pre>
+
+<p>或者没有用户权限：</p>
+
+<pre class="screen">
+createdb: error: database creation failed: ERROR:  permission denied to create database</pre>
+
+<p>如果没有为数据库命名就创建数据库，会创建默认的数据库</p>
+
+<pre class="screen">
+<strong class="userinput"><code>createdb</code></strong></pre>
+
+<p><strong class="userinput"><code>删除数据库</code></strong></p>
+
+<pre class="screen">
+<strong class="userinput"><code>dropdb mydb</code></strong></pre>
+
+<p><strong class="userinput"><code>2.访问数据库 参考：<a href="https://www.postgresql.org/docs/14/tutorial-accessdb.html">https://www.postgresql.org/docs/14/tutorial-accessdb.html</a></code></strong></p>
+
+<p><strong class="userinput"><code>如果你有一个数据库，&ldquo;mydb&rdquo;，访问数据库&ldquo;mydb&rdquo;</code></strong></p>
+
+<pre class="screen">
+<strong class="userinput"><code>psql mydb</code></strong></pre>
+
+<p><code><strong>你可以看到已经进入数据&ldquo;mydb&rdquo;</strong></code></p>
+
+<pre class="screen">
+psql (14.5)
+Type &quot;help&quot; for help.
+
+mydb=&gt;</pre>
+
+<p>最后一行也可以是</p>
+
+<pre class="screen">
+mydb=#</pre>
+
+<p>你可以尝试这些命令：</p>
+
+<pre class="screen">
+<code class="prompt">mydb=&gt;</code> <strong class="userinput"><code>SELECT version();</code></strong>
+                                         version
+-------------------------------------------------------------------​-----------------------
+ PostgreSQL 14.5 on x86_64-pc-linux-gnu, compiled by gcc (Debian 4.9.2-10) 4.9.2, 64-bit
+(1 row)
+
+<code class="prompt">mydb=&gt;</code> <strong class="userinput"><code>SELECT current_date;</code></strong>
+    date
+------------
+ 2016-01-07
+(1 row)
+
+<code class="prompt">mydb=&gt;</code> <strong class="userinput"><code>SELECT 2 + 2;</code></strong>
+ ?column?
+----------
+        4
+(1 row)</pre>
+
+<p>psql 程序有许多不是 SQL 命令的内部命令。&nbsp; 它们以反斜杠字符&ldquo;\&rdquo;开头。&nbsp; 例如，您可以通过键入以下内容获得有关各种 PostgreSQL SQL 命令语法的帮助：</p>
+
+<p>查看帮助：</p>
+
+<pre class="screen">
+<code class="prompt">mydb=&gt;</code> <strong class="userinput"><code>\h</code></strong></pre>
+
+<p>要退出 psql，请输入：</p>
+
+<pre class="screen">
+<code class="prompt">mydb=&gt;</code> <strong class="userinput"><code>\q</code></strong></pre>
+
+<p><strong class="userinput"><code>3.postgres 语法：<a href="https://www.postgresql.org/docs/14/tutorial-sql.html">https://www.postgresql.org/docs/14/tutorial-sql.html</a></code></strong></p>
+
+<p><strong class="userinput"><code>使用标准的sql语法即可</code></strong></p>
+

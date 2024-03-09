@@ -1,0 +1,20 @@
+---
+layout: post
+title: "pre tag 的简单使用"
+date: "2022-06-27"
+categories: 
+---
+<p>参考：https://www.w3schools.com/tags/tag_pre.asp</p>
+
+<p>&lt;td&gt;&lt;pre&gt;&lt;%= @contract.abi %&gt;&lt;/pre&gt;&lt;/td&gt;</p>
+
+<p>&lt;pre&gt;<br />
+Text in a pre element<br />
+is displayed in a fixed-width<br />
+font, and it preserves<br />
+both&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spaces and<br />
+line breaks<br />
+&lt;/pre&gt;</p>
+
+<p><img height="121" src="/uploads/ckeditor/pictures/82/image-20220627105319-1.png" width="358" /></p>
+

@@ -1,0 +1,38 @@
+---
+layout: post
+title: "本地和远程的postgres备份数据库"
+date: "2023-07-25"
+categories: 
+---
+<p>refer: <a href="https://www.cyberithub.com/how-to-install-pg_dump-and-pg_restore-on-ubuntu-20-04-lts-focal/">https://www.cyberithub.com/how-to-install-pg_dump-and-pg_restore-on-ubuntu-20-04-lts-focal/</a></p>
+
+<p>查看版本：</p>
+
+<pre>
+cyberithub@ubuntu:~$ <span style="color:#00ff00">pg_restore --version</span>
+<span style="color:#ffff99">pg_restore (PostgreSQL) 12.14 (Ubuntu 12.14-0ubuntu0.20.04.1)</span></pre>
+
+<p>在本地的postgres，进行备份，可以直接在命令行使用:</p>
+
+<pre>
+postgres@ubuntu:~$ <span style="color:#00ff00">pg_dump cyberithub_db &gt; cyberithub_db.sql</span></pre>
+
+<p>也可以转换为tar文件类型：</p>
+
+<pre>
+postgres@ubuntu:~$ <span style="color:#00ff00">pg_dump -F t cyberithub_db &gt; cyberithub_db.tar</span></pre>
+
+<p>同理，可以转换为dump文件类型：</p>
+
+<pre>
+postgres@ubuntu:~$ <span style="color:#00ff00">pg_dump -F c cyberithub_db &gt; cyberithub_db.dump
+</span>
+</pre>
+
+<p>如果备份远程的数据库：</p>
+
+<p>例如通过在默认端口 5432 上远程连接 IP 200.128.16.10 的数据库服务器来进行备份，就运行pg_dump -U postgres -h 200.128.16.10 -p 5432 cyberithub_db &gt; cyberithub_db.sql命令：</p>
+
+<pre>
+cyberithub@ubuntu:~$ <span style="color:#00ff00">pg_dump -U postgres -h 200.128.16.10 -p 5432 cyberithub_db &gt; cyberithub_db.sql</span></pre>
+

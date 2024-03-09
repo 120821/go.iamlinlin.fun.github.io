@@ -1,0 +1,11 @@
+---
+layout: post
+title: "查看java jdk的环境变量"
+date: "2023-11-25"
+categories: 
+---
+<p>linux直接使用：</p>
+
+<pre>
+<code>echo $JAVA_HOME</code></pre>
+

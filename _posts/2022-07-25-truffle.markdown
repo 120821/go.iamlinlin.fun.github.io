@@ -1,0 +1,99 @@
+---
+layout: post
+title: "truffle的安装使用"
+date: "2022-07-25"
+categories: 
+---
+<p>官网：https://trufflesuite.com/docs/truffle/getting-started/installation/</p>
+
+<p>使用命令进行全局安装使用</p>
+
+<p>npm install -g truffle</p>
+
+<p>npm install -g truffle<br />
+⸨⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠧ idealTree:lib: sill idealTree buildDeps<br />
+⸨⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠧ idealTree:lib: sill idealTree buildDeps</p>
+
+<p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install -g truffle<br />
+⸨#########⠂⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠧ idealTree:lib: timing idealTree:#root Completed in 1035ms<br />
+⸨#########⠂⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠧ idealTree:lib: timing idealTree:#root Completed in 1035ms</p>
+
+<p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install -g truffle<br />
+⸨#########⠂⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠙ idealTree:pouchdb-debug: sill fetch manifest express@^4.17.1</p>
+
+<p>运行会一直卡着，那么就不使用这个命令 ，停止这个命令然后直接在AppStore进行搜索，进行安装即可<img height="642" src="/uploads/ckeditor/pictures/131/image-20220725155744-1.png" width="1297" /></p>
+
+<p>安装结束，直接在命令行进行使用命令查看版本号即可：truffle -v</p>
+
+<p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ truffle -v<br />
+Truffle v4.0.1 - a development framework for Ethereum</p>
+
+<p>Usage: truffle &lt;command&gt; [options]</p>
+
+<p>Commands:<br />
+&nbsp; init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Initialize new Ethereum project with example contracts and tests<br />
+&nbsp; compile&nbsp;&nbsp; Compile contract source files<br />
+&nbsp; migrate&nbsp;&nbsp; Run migrations to deploy contracts<br />
+&nbsp; deploy&nbsp;&nbsp;&nbsp; (alias for migrate)<br />
+&nbsp; build&nbsp;&nbsp;&nbsp;&nbsp; Execute build pipeline (if configuration present)<br />
+&nbsp; test&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Run Mocha and Solidity tests<br />
+&nbsp; debug&nbsp;&nbsp;&nbsp;&nbsp; Interactively debug any transaction on the blockchain (experimental)<br />
+&nbsp; opcode&nbsp;&nbsp;&nbsp; Print the compiled opcodes for a given contract<br />
+&nbsp; console&nbsp;&nbsp; Run a console with contract abstractions and commands available<br />
+&nbsp; develop&nbsp;&nbsp; Open a console with a local TestRPC<br />
+&nbsp; create&nbsp;&nbsp;&nbsp; Helper to create new contracts, migrations and tests<br />
+&nbsp; install&nbsp;&nbsp; Install a package from the Ethereum Package Registry<br />
+&nbsp; publish&nbsp;&nbsp; Publish a package to the Ethereum Package Registry<br />
+&nbsp; networks&nbsp; Show addresses for deployed contracts on each network<br />
+&nbsp; watch&nbsp;&nbsp;&nbsp;&nbsp; Watch filesystem for changes and rebuild the project automatically<br />
+&nbsp; serve&nbsp;&nbsp;&nbsp;&nbsp; Serve the build directory on localhost and watch for changes<br />
+&nbsp; exec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Execute a JS module within this Truffle environment<br />
+&nbsp; unbox&nbsp;&nbsp;&nbsp;&nbsp; Unbox Truffle project<br />
+&nbsp; version&nbsp;&nbsp; Show version number and exit</p>
+
+<p>See more at http://truffleframework.com/docs</p>
+
+<p>安装后，进行卸载，然后继续执行命令</p>
+
+<pre>
+<code>npm uninstall -g truffle
+npm install -g truffle
+</code></pre>
+
+<p>npm install -g truffle<br />
+npm WARN deprecated mkdirp-promise@5.0.1: This package is broken and no longer maintained. &#39;mkdirp&#39; itself supports promises now, please switch to that.<br />
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported<br />
+npm WARN deprecated multicodec@1.0.4: This module has been superseded by the multiformats module<br />
+npm WARN deprecated uuid@3.4.0: Please upgrade&nbsp; to version 7 or higher.&nbsp; Older versions may use Math.random() in certain circumstances, which is known to be problematic.&nbsp; See https://v8.dev/blog/math-random for details.<br />
+npm WARN deprecated uuid@3.3.2: Please upgrade&nbsp; to version 7 or higher.&nbsp; Older versions may use Math.random() in certain circumstances, which is known to be problematic.&nbsp; See https://v8.dev/blog/math-random for details.<br />
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142<br />
+npm WARN deprecated multibase@0.6.1: This module has been superseded by the multiformats module<br />
+npm WARN deprecated multibase@0.7.0: This module has been superseded by the multiformats module<br />
+npm WARN deprecated multicodec@0.5.7: This module has been superseded by the multiformats module<br />
+npm WARN deprecated node-pre-gyp@0.11.0: Please upgrade to @mapbox/node-pre-gyp: the non-scoped node-pre-gyp package is deprecated and only the @mapbox scoped package will recieve updates in the future<br />
+npm WARN deprecated cids@0.7.5: This module has been superseded by the multiformats module<br />
+npm WARN deprecated uuid@3.2.1: Please upgrade&nbsp; to version 7 or higher.&nbsp; Older versions may use Math.random() in certain circumstances, which is known to be problematic.&nbsp; See https://v8.dev/blog/math-random for details.<br />
+npm WARN deprecated uuid@2.0.1: Please upgrade&nbsp; to version 7 or higher.&nbsp; Older versions may use Math.random() in certain circumstances, which is known to be problematic.&nbsp; See https://v8.dev/blog/math-random for details.<br />
+npm WARN deprecated uuid@3.2.1: Please upgrade&nbsp; to version 7 or higher.&nbsp; Older versions may use Math.random() in certain circumstances, which is known to be problematic.&nbsp; See https://v8.dev/blog/math-random for details.<br />
+⸨##################⸩ ⠧ reify:isarray: http fetch GET 200 https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz 6209ms (cache miss)</p>
+
+<p>added 547 packages, and audited 579 packages in 3m</p>
+
+<p>90 packages are looking for funding<br />
+&nbsp; run `npm fund` for details</p>
+
+<p>10 moderate severity vulnerabilities</p>
+
+<p>To address issues that do not require attention, run:<br />
+&nbsp; npm audit fix</p>
+
+<p>Some issues need review, and may require choosing<br />
+a different dependency.</p>
+
+<p>Run `npm audit` for details.<br />
+Reshimming asdf nodejs...</p>
+
+<p><img height="594" src="/uploads/ckeditor/pictures/133/image-20220725170237-1.png" width="920" /></p>
+
+<p>没有用的，还是安装回来吧。npm install之后，就可以使用truffle init了。</p>
+

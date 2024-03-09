@@ -1,0 +1,8 @@
+---
+layout: post
+title: "不好用。。。别看了"
+date: "2022-09-16"
+categories: 
+---
+<p><a href="https://www.coraliecollignon.com/ruby/2018/11/17/console.html">https://www.coraliecollignon.com/ruby/2018/11/17/console.html</a></p>
+

@@ -1,0 +1,80 @@
+---
+layout: post
+title: "ruby入门算法： 输出一个 宽度为m , 高度为n 的图形。"
+date: "2022-06-09"
+categories: 
+---
+
+                    <blockquote> 
+ <p>需要实现这个函数： pretty_print(width, height, char),</p> 
+ <p>该函数具备的功能是：</p> 
+ <pre>pretty_print(5, 2, 'a') 
+
+会打印下面的形状： （每行5个a, 合计2行）
+</pre> 
+ <pre><code class="language-ruby">def pretty_print width, height, charactor
+
+  height_index = 0 
+  loop do
+
+    width_index = 0 
+    loop do
+      print charactor
+
+      width_index = width_index + 1 
+      if width_index &gt;= width
+        print "\n\r"
+        break
+      end 
+    end
+
+    height_index = height_index + 1 
+
+    if height_index &gt;= height
+      break
+    end 
+  end
+
+end
+
+pretty_print(5,2,'a')
+</code></pre> 
+ <pre>
+pretty_print(3, 4, 'b')     #  每行3个b, 合计4行
+
+bbb
+bbb
+bbb
+bbb   
+</pre> 
+ <pre><code class="language-ruby">def pretty_print width, height, charactor
+
+  height_index = 0 
+  loop do
+
+    width_index = 0 
+    loop do
+      print charactor
+
+      width_index = width_index + 1 
+      if width_index &gt;= width
+        print "\n\r"
+        break
+      end 
+    end
+
+    height_index = height_index + 1 
+
+    if height_index &gt;= height
+      break
+    end 
+  end
+
+end
+
+pretty_print(3, 4, 'b')
+</code></pre> 
+ <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/1f50654d59414b60a9fbc4ea8c6e6cb4.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+ <p> </p> 
+</blockquote>
+                

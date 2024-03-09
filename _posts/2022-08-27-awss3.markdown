@@ -1,0 +1,18 @@
+---
+layout: post
+title: "aws s3"
+date: "2022-08-27"
+categories: 
+---
+<p>快速上传的方法： 在多个窗口进行上传，每个窗口上传一百。同时进行。</p>
+
+<pre><code>Dir[&quot;*.jpg&quot;].each do |i|<br />
+&nbsp; #command = &quot;aws s3 cp --acl public-read-write nft/parachain/#{i} s3://远程目录/#{i}&quot;<br />
+&nbsp; #command = &quot;aws s3 cp --acl public-read-write tmp/images_jpg_copy/#{i} s3://远程目录/nft/#{i}&quot;<br />
+&nbsp; command = &quot;aws s3 cp --acl public-read-write #{i} s3://远程目录/#{i}&quot;<br />
+&nbsp; puts `#{command}`<br />
+end<br />
+puts &quot;done&quot;</code></pre>
+
+<p>&nbsp;</p>
+

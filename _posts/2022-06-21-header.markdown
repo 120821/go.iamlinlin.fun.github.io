@@ -1,0 +1,106 @@
+---
+layout: post
+title: "header 排序 "
+date: "2022-06-21"
+categories: 
+---
+<p>参考：https://medium.com/swlh/using-rails-and-html-to-view-sort-and-search-tables-fbf8a0543558</p>
+
+<p>普通的列表页面：</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="7399">#views/players/index.html.erb</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="5cd4">&lt;h1&gt;Players List&lt;/h1&gt;</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="9098">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Player Name &lt;/th&gt;              &lt;-- Each of these
+    &lt;th&gt;Position &lt;/th&gt;                      is a column header
+    &lt;th&gt;Avg. Ranking &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;% <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a>.each do |player| %&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;%= player.name%&gt;&lt;/td&gt;         &lt;-- Each of these adds
+    &lt;td&gt;&lt;%=player.position %&gt;&lt;/td&gt;&lt;td&gt;     data to the corresponding
+    &lt;td&gt;&lt;%=player.avg_ranking %&gt;&lt;/td&gt;      column in the same row
+  &lt;/tr&gt;
+  &lt;% end %&gt;
+ &lt;/table&gt;</span></pre>
+
+<p>使用排序的列表页面</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="eb8b">&lt;h1&gt;Players List&lt;/h1&gt;</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="61fe">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;&lt;%= link_to &quot;Player Name&quot;, :sort =&gt; &quot;name&quot;%&gt; &lt;/th&gt;
+    &lt;th&gt;&lt;%= link_to &quot;Position&quot;, :sort =&gt; &quot;position&quot;%&gt; &lt;/th&gt;
+    &lt;th&gt;&lt;%= link_to &quot;Avg. Ranking&quot;, :sort =&gt; &quot;avg_ranking&quot;%&gt; &lt;/th&gt;
+  &lt;/tr&gt;
+&lt;% <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a>.each do |player| %&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;%= player.name%&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;%=player.position %&gt;&lt;/td&gt;&lt;td&gt;
+    &lt;td&gt;  &lt;%=player.avg_ranking %&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;% end %&gt;
+  &lt;/table&gt;</span></pre>
+
+<p><img height="439" src="/uploads/ckeditor/pictures/48/image-20220621115346-1.png" width="725" /></p>
+
+<p>实现点击进行排序</p>
+
+<p>在controller进行增加</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="14f0">class PlayersController &lt; ApplicationController</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="7a70">  def index
+    <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.order(params[:sort])
+  end</span></pre>
+
+<p>增加:</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="6ea5">class PlayersController &lt; ApplicationController
+  def index
+    if params[:sort] != &quot;avg_ranking&quot;
+      <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.order(params[:sort])
+    elsif params[:sort] == &quot;avg_ranking&quot;
+      <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.all.sort_by{|player| player.avg_ranking}
+    else
+      <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.all
+    end
+  end</span></pre>
+
+<p>使用form表单：</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="63b9">&lt;%= form_tag(players_path, method: :get) do %&gt;
+  &lt;p&gt; Search for a player &lt;/p&gt;
+  &lt;%= text_field_tag(:search, params[:search]) %&gt;
+  &lt;%= submit_tag (&quot;Search&quot;) %&gt;
+&lt;% end %&gt;</span></pre>
+
+<p><img height="383" src="/uploads/ckeditor/pictures/49/image-20220621115508-2.png" width="637" /></p>
+
+<p>那么：</p>
+
+<pre class="mm mn mo mp gz mq bt mr">
+<span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="0a44">class PlayersController &lt; ApplicationController
+  def index
+    if params[:search]
+      search_players
+    if params[:sort] == &quot;avg_ranking&quot;
+      <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.all.sort_by{|player| player.avg_ranking}      
+    elsif params[:sort] != &quot;avg_ranking&quot;
+     <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.order(params[:sort])
+    else
+      <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.all
+    end
+  end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="f641">def search_players
+    if <a class="au nc" href="http://twitter.com/player" rel="noopener ugc nofollow" target="_blank">@player</a> = Player.all.find{|player| player.name.include?(params[:search])}
+      redirect_to player_path(<a class="au nc" href="http://twitter.com/player" rel="noopener ugc nofollow" target="_blank">@player</a>)
+    end
+  end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="fdd1">def show
+    <a class="au nc" href="http://twitter.com/player" rel="noopener ugc nofollow" target="_blank">@player</a> = Player.find(params[:id])
+  end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="86e6">end</span></pre>
+
+<p><img alt="" class="cf kg kh" height="496" loading="lazy" role="presentation" src="https://miro.medium.com/max/760/1*SkEjMUceoCwS3gUxT3U8BQ.gif" width="380" /></p>
+
+<p>&nbsp;</p>
+

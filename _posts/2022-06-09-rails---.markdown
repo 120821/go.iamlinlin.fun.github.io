@@ -1,0 +1,72 @@
+---
+layout: post
+title: "rails---视图"
+date: "2022-06-09"
+categories: 
+---
+
+                    <blockquote> 
+ <p>视图在 Rails 中 , 就是 .html.erb 文件 .<br> 每个视图都要由 controller 触发 . 所有的视图文件 , 都放在 :app/views/ 目录下 . 例如 : app/views/books/new.html.erb</p> 
+ <p><img alt="" height="1080" src="https://img-blog.csdnimg.cn/58c6d0df91814bc5a69a9cbc9d8888c1.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1200"></p> 
+</blockquote> 
+<p style="text-align:center;"></p> 
+<blockquote> 
+ <p><strong>最基本用法</strong><br> 最简单的 erb 文件 :</p> 
+ <pre><code>&lt;p&gt; 当前时间是 : &lt;%= Time.now %&gt;&lt;/p&gt;</code></pre> 
+ <p>它会直接被转换成下面的 HTML:</p> 
+ <pre><code>&lt;p&gt; 当前时间是 : &lt;%= Time.now %&gt;&lt;/p&gt;</code></pre> 
+</blockquote> 
+<blockquote> 
+ <p><strong>&lt;% %&gt; 与 &lt;%= %&gt; 的区别</strong><br> &lt;% %&gt; 表示仅运行代码 , 例如 : &lt;% a = 1%&gt;<br> &lt;%= %&gt; 表示 , 不但运行 , 而且把结果渲染到<br> html 中 . 例如 : &lt;%= Time.now %&gt;</p> 
+</blockquote> 
+<blockquote> 
+ <p><strong>Rails 中的视图在什么时候被渲染</strong><br> Rails 架构: M - V - C (几乎是所有经典 web<br> 项目的架构) . 其中 :<br> Model: 操作数据库。<br> Controller: 把每个 "http request" 分发<br> 到对应的 "Action( method)" 来处理<br> View: 显示 HTML 页面。</p> 
+</blockquote> 
+<blockquote> 
+ <p>例如：<br> 1. 小王同学在浏览器端,输入了一个网址 :http://server.com/fruits/new ,回车。( 这会产生一个 "http request" , 请求方式是GET)</p> 
+ <p>2."http request" 从浏览器,发送到服务器端(server.com) 之后,Rails 就会 把这个请求交给 router 来处理。</p> 
+</blockquote> 
+<blockquote> 
+ <p>3.router 根据配置文件: config/routes.rb中的配置:</p> 
+ <pre><code>​Rails.application.routes.draw do
+resources :fruits # 根据这个路由配置
+end
+
+​</code></pre> 
+ <p>把这个 request ,分发到:<br> 中的 new action.<br> fruits controller</p> 
+</blockquote> 
+<blockquote> 
+ <p>4.new action 做一些 处理, 显示对应的 erb .<br> # 下面是 app/controllers/fruits_controller.rb 的内容 :</p> 
+ <pre><code>class FruitsController &lt; ApplicationController
+def new
+@hello = 'hellow, Rails!'</code></pre> 
+ <p># 啥也不写,就直接渲染对应的 erb 页面 :</p> 
+ <pre><code># app/views/fruits/new.html.erb
+end
+end</code></pre> 
+</blockquote> 
+<p></p> 
+<blockquote> 
+ <p>5. 然后 , 上面的 new action 执行完 , 会自动渲<br> 染 new.html.erb 这个文件 ( 文件路径 :</p> 
+ <pre><code>app/views/books/new.html.erb )
+&lt;% [1,2,3].each do e %&gt;
+&lt;%= e %&gt; &lt;br/&gt;
+&lt;% end %&gt;</code></pre> 
+ <p><br> 上面的视图文件会被渲染成 :</p> 
+ <pre><code>1 &lt;br/&gt; 2&lt;br/&gt; 3&lt;br/&gt;</code></pre> 
+</blockquote> 
+<p></p> 
+<blockquote> 
+ <p>恰当的使用 @ 变量<br> 实例变量 (@name  )定义在 controller 中 , 在 view 中被调用 .</p> 
+</blockquote> 
+<p></p> 
+<blockquote> 
+ <p>Partial ( 片段 )<br> 有时候,如果某个 erb 文件, 过于复杂了。 例如:<br> 20 行。<br> 或者, 某些代码可以重用。<br> 我们就用Partial 来简化我们的代码 , 提取出公共部分</p> 
+</blockquote> 
+<blockquote> 
+ <p>不带参数的 partial<br> 例如 , 原来的 HTML 是 :<br> &lt;!-- 下面这段是版权声明,多个页面都需要重用 --&gt;<br> &lt;footer&gt;<br> copyright@2016 xx.co.ltd<br> &lt;/footer&gt;<br><br> 那么就把它写成一个<br> 全名是 :<br> partial ( 片段)<br> app/views/fruits/_footer.html.erb( 注意,文件名以 "_" 开头 )<br> ● 然后,我们就可以在对应的<br> ● &lt;%= render :partial =&gt; 'footer' %&gt;<br> erb 文件中:<br> 注意 : 上面的调用中 , 直接使用了<br> 'footer', 而不是 '_footer.html.erb' . 这也是 Rails 的惯例 .</p> 
+</blockquote> 
+<blockquote> 
+ <p>带参数的 partial<br> 如果,某个 partial , 是需要参数的,(例如: 年份是个<br> 变量)<br> &lt;!-- 下面这段是版权声明,多个页面都需要重用 --&gt;<br> &lt;footer&gt;<br> copyright@ &lt;%= year %&gt;xx.co.ltd<br> &lt;/footer&gt;<br> 那么,在调用时,就:<br> &lt;%= render :partial =&gt; 'footer', :locals =&gt; {:year =&gt;2016} %&gt;<br> 可以看到 , 使用了<br> locals 来传递参数 .</p> 
+</blockquote>
+                

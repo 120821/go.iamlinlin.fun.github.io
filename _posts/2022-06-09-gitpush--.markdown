@@ -1,0 +1,12 @@
+---
+layout: post
+title: "git push -- 注意不要删除远程的仓库"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>提交远程的仓库时，首先要git status查看有改动的文件，git diff 文件名，查看所有改动，</p> 
+<p>没有问题可以提交，git commit -m "修改了什么内容" 注意双引号要用英文的，不要用中文的</p> 
+<p>最后，git push origin-master</p> 
+<p></p>
+                

@@ -1,0 +1,78 @@
+---
+layout: post
+title: "curl - 使用代理服务器 ， 实现发起100次请求，使用20个IP地址轮训"
+date: "2022-12-15"
+categories: 
+---
+<p>根据在<a href="https://doveip.com/index.php?s=index/login.html&amp;lang=en-us">doveip proxy</a> 获得的ip 可以进行换ip进行curl</p>
+
+<pre>
+<code>require &#39;json&#39;
+#url = &quot;https://curl.se/docs/sslcerts.html&quot;
+
+url = &quot;https://www.google.com&quot;
+
+i = 1
+
+loop do
+
+&nbsp; command_get_token = %Q{curl -d &quot;user=username&amp;password=password&quot; https://dvapi.doveproxy.net/cmapi.php?rq=login}
+
+&nbsp; puts command_get_token
+
+&nbsp; get_token = `#{command_get_token}`
+
+&nbsp; puts get_token
+
+&nbsp; token = JSON.parse(get_token)[&#39;data&#39;][&#39;token&#39;]
+
+&nbsp; puts token
+
+&nbsp; command_get_ip = %Q{curl -ipv4 -d &quot;user=username&amp;token=#{token}&amp;geo=mx&quot; https://dvapi.doveproxy.net/cmapi.php?rq=distribute}
+
+&nbsp; #puts command_get_ip
+
+&nbsp; get_ip = `#{command_get_ip}`
+
+&nbsp; #puts &quot;=== get_ip#{get_ip.inspect}&quot;
+
+&nbsp; temp_ip = get_ip.to_s.split(&quot;\r\n\r\n&quot;).last
+
+&nbsp; #puts &quot;=== temp ip:&quot;
+
+&nbsp; #puts temp_ip
+
+&nbsp; ip = JSON.parse(temp_ip)[&#39;data&#39;][&#39;ip&#39;]
+
+&nbsp; port = JSON.parse(temp_ip)[&#39;data&#39;][&#39;port&#39;]
+
+&nbsp; puts &quot;=== ip #{ip} port #{port}&quot;
+
+&nbsp; (1..5).each do |e|
+
+&nbsp;&nbsp;&nbsp; puts &quot;=== e#{e}&quot;
+
+&nbsp;&nbsp;&nbsp; command_get_content = %Q{curl -ipv4 --socks5 #{ip}:#{port} #{url}}
+
+&nbsp;&nbsp;&nbsp; puts command_get_content
+
+&nbsp;&nbsp;&nbsp; get_content = `#{command_get_content}`
+
+&nbsp;&nbsp;&nbsp; sleep 1
+
+&nbsp;&nbsp;&nbsp; puts &quot;=== sleep end&quot;
+
+&nbsp; end
+
+&nbsp; i = i + 1
+
+&nbsp; if i &gt; 20
+
+&nbsp;&nbsp;&nbsp; break
+
+&nbsp; end
+
+end</code></pre>
+
+<p>&nbsp;</p>
+

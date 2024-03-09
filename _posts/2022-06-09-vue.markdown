@@ -1,0 +1,102 @@
+---
+layout: post
+title: "vue 父子组件 定义变量 定义方法"
+date: "2022-06-09"
+categories: 
+---
+
+                    <pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;父组件的页面的内容&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;!-- 进行切换子页面，写法同vue.js --&gt;
+      &lt;li&gt;&lt;nuxt-link to='/parent/child'&gt;child&lt;/nuxt-link&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;nuxt-link to='/parent/child2'&gt;child2&lt;/nuxt-link&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;hr&gt;
+    &lt;div class="box"&gt;
+      &lt;p&gt;嵌套子页面内容区&lt;/p&gt;
+      &lt;!-- &lt;nuxt-child&gt;标签在父页面组件中相当于是子页面组件的占位符；嵌套中这个不可少 --&gt;
+      &lt;!--
+      &lt;Child read_only = 'aaa'&gt;
+      &lt;/Child&gt;
+      --&gt;
+      &lt;Child :read_only = 'var_in_child' @my_emit='do_my_emit'&gt;
+      &lt;/Child&gt;
+    &lt;/div&gt;
+    &lt;input v-model= 'var_in_child'/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import Child from '@/components/Child'
+export default {
+  data () {
+    return {
+      my_value: '默认值',
+      var_in_child: 'sss',
+    }
+  },
+  methods: {
+    do_my_emit: function(value) {
+      console.info("in do_my_emit: value ", value)
+      this.var_in_child = value
+
+    }
+  },
+  components: {
+    Child
+  }
+}
+&lt;/script&gt;
+&lt;style scoped&gt;
+.box{
+  margin-top: 20px;
+  padding: 200px;
+  border: 20px solid pink;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+</code></pre> 
+<pre><code>&lt;template&gt;
+  &lt;div style='border: 1px solid red; margin-left: 50px; width: 600px'&gt;
+
+    本页面是child: &lt;br/&gt;
+
+    &lt;!--
+    value_in_child: &lt;input type="text" v-model="value_in_child"/&gt;
+    --&gt;
+    &lt;h2&gt;嵌套子组件中的页面child&lt;/h2&gt;
+    &lt;p&gt;ss：{<!-- -->{read_only}}&lt;/p&gt;
+    var_in_input: &lt;input v-model = 'var_in_input'/&gt;
+    &lt;input type=submit value= '我要传值' @click="do_my_function"/&gt;
+
+  &lt;/div&gt;
+
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+
+  props:['read_only'],
+  data () {
+    return {
+      var_in_input: 'var_in_input',
+    }
+  },
+  methods: {
+    do_my_function: function() {
+      console.info("sss")
+      this.$emit('my_emit', this.var_in_input)
+    }
+  }
+
+
+}
+
+&lt;/script&gt;
+&lt;style scoped&gt;
+
+&lt;/style&gt;
+</code></pre> 
+<p><img alt="" height="825" src="https://img-blog.csdnimg.cn/13876ba4e82747c3959b5ead36aed24a.png" width="736"></p> 
+<p> </p>
+                

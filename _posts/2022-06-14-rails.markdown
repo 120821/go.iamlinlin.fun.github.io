@@ -1,0 +1,150 @@
+---
+layout: post
+title: "rails  发送邮件"
+date: "2022-06-14"
+categories: 
+---
+<p>参考：https://guides.rubyonrails.org/action_mailer_basics.html#example-action-mailer-configuration</p>
+
+<p>首先，创建表</p>
+
+<p>bin/rails generate mailer User</p>
+
+<pre>
+<code class="highlight console"><span class="go">create  app/mailers/user_mailer.rb
+create  app/mailers/application_mailer.rb
+invoke  erb
+create    app/views/user_mailer
+create    app/views/layouts/mailer.text.erb
+create    app/views/layouts/mailer.html.erb
+invoke  test_unit
+create    test/mailers/user_mailer_test.rb
+create    test/mailers/previews/user_mailer_preview.rb
+</span></code></pre>
+
+<p>增加内容</p>
+
+<p># app/mailers/application_mailer.rb<br />
+class ApplicationMailer &lt; ActionMailer::Base<br />
+&nbsp; default from: &quot;from@example.com&quot;<br />
+&nbsp; layout &#39;mailer&#39;<br />
+end</p>
+
+<p># app/mailers/user_mailer.rb<br />
+class UserMailer &lt; ApplicationMailer<br />
+end</p>
+
+<p>或者按照自己的喜欢，创建</p>
+
+<p>class MyMailer &lt; ActionMailer::Base<br />
+end</p>
+
+<p>增加欢迎邮件</p>
+
+<p>class UserMailer &lt; ApplicationMailer<br />
+&nbsp; default from: &#39;notifications@example.com&#39;</p>
+
+<p>&nbsp; def welcome_email<br />
+&nbsp;&nbsp;&nbsp; @user = params[:user]<br />
+&nbsp;&nbsp;&nbsp; @url&nbsp; = &#39;http://example.com/login&#39;<br />
+&nbsp;&nbsp;&nbsp; mail(to: @user.email, subject: &#39;Welcome to My Awesome Site&#39;)<br />
+&nbsp; end<br />
+end</p>
+
+<p>&nbsp;</p>
+
+<p>增加视图内容：<code>welcome_email.html.erb</code> in <code>app/views/user_mailer/</code></p>
+
+<p>&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&nbsp; &lt;head&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;meta content=&#39;text/html; charset=UTF-8&#39; http-equiv=&#39;Content-Type&#39; /&gt;<br />
+&nbsp; &lt;/head&gt;<br />
+&nbsp; &lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;h1&gt;Welcome to example.com, &lt;%= @user.name %&gt;&lt;/h1&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You have successfully signed up to example.com,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; your username is: &lt;%= @user.login %&gt;.&lt;br&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To login to the site, just follow this link: &lt;%= @url %&gt;.<br />
+&nbsp;&nbsp;&nbsp; &lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;p&gt;Thanks for joining and have a great day!&lt;/p&gt;<br />
+&nbsp; &lt;/body&gt;<br />
+&lt;/html&gt;</p>
+
+<p>也可以增加文本内容：<code>welcome_email.text.erb</code> in <code>app/views/user_mailer/</code>:</p>
+
+<p>Welcome to example.com, &lt;%= @user.name %&gt;<br />
+===============================================</p>
+
+<p>You have successfully signed up to example.com,<br />
+your username is: &lt;%= @user.login %&gt;.</p>
+
+<p>To login to the site, just follow this link: &lt;%= @url %&gt;.</p>
+
+<p>Thanks for joining and have a great day!</p>
+
+<p>创建：</p>
+
+<p>bin/rails generate scaffold user name email login<br />
+bin/rails db:migrate</p>
+
+<p>修改controller</p>
+
+<p>class UsersController &lt; ApplicationController<br />
+&nbsp; # ...</p>
+
+<p>&nbsp; # POST /users or /users.json<br />
+&nbsp; def create<br />
+&nbsp;&nbsp;&nbsp; @user = User.new(user_params)</p>
+
+<p>&nbsp;&nbsp;&nbsp; respond_to do |format|<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if @user.save<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Tell the UserMailer to send a welcome email after save<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UserMailer.with(user: @user).welcome_email.deliver_later</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format.html { redirect_to(@user, notice: &#39;User was successfully created.&#39;) }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format.json { render json: @user, status: :created, location: @user }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format.html { render action: &#39;new&#39; }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; format.json { render json: @user.errors, status: :unprocessable_entity }<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end<br />
+&nbsp;&nbsp;&nbsp; end<br />
+&nbsp; end</p>
+
+<p>&nbsp; # ...<br />
+end</p>
+
+<p><img height="646" src="/uploads/ckeditor/pictures/20/image-20220614154719-1.png" width="1239" /></p>
+
+<p>进行配置文件的修改，修改usermailer，修改account 的controller，增加action，</p>
+
+<p>&nbsp;def send_email<br />
+&nbsp;18&nbsp;&nbsp;&nbsp;&nbsp; to = params[:to]<br />
+&nbsp;19&nbsp;&nbsp;&nbsp;&nbsp; subject = params[:subject]<br />
+&nbsp;20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+&nbsp;21&nbsp;&nbsp;&nbsp;&nbsp; UserMailer.welcome_email(to, subject).deliver_now<br />
+&nbsp;22&nbsp;&nbsp;&nbsp;&nbsp; render plain: &#39;ok&#39;<br />
+&nbsp;23&nbsp;&nbsp; end</p>
+
+<p><img height="287" src="/uploads/ckeditor/pictures/22/image-20220614155024-3.png" width="669" /></p>
+
+<p><img height="221" src="/uploads/ckeditor/pictures/21/image-20220614154857-2.png" width="1192" /></p>
+
+<p>然后测试</p>
+
+<p>http://localhost:3000/accounts/send_email?to=1208215066@qq.com&amp;subject=hihihi</p>
+
+<p>或者进入console</p>
+
+<p>bundle exec rails c -e production<br />
+Loading production environment (Rails 6.1.5.1)<br />
+irb: warn: can&#39;t alias context from irb_context.<br />
+irb(main):001:0&gt;&nbsp; UserMailer.welcome_email(&quot;1208215066@qq.com&quot;, &quot;hihihi&quot;).deliver_now<br />
+&nbsp; Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.6ms | Allocations: 241)<br />
+&nbsp; Rendered layout layouts/mailer.html.erb (Duration: 2.5ms | Allocations: 490)<br />
+Delivered mail 62a827ca3158e_33367f3c92457@linlin-i5.mail (5003.4ms)</p>
+
+<p>&nbsp;</p>
+

@@ -1,0 +1,52 @@
+---
+layout: post
+title: "sinatra - 单元测试"
+date: "2022-11-22"
+categories: 
+---
+<p><a href="https://sinatrarb.com/testing.html">官网教程</a></p>
+
+<p>1.首先安装gem:</p>
+
+<pre class="highlight">
+<code>gem <span class="nb">install </span>rack-test</code></pre>
+
+<p><code>或者使用gemfile</code></p>
+
+<pre class="highlight">
+<code><span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span></code></pre>
+
+<p>2.假设有一个sinatra 的hello_world.rb APP文件</p>
+
+<pre class="highlight">
+<code>require &#39;sinatra&#39;
+
+get &#39;/&#39; do
+  &quot;Hello World #{params[:name]}&quot;.strip
+end</code></pre>
+
+<p>3.测试文件：test/*.rb</p>
+
+<pre class="highlight">
+<code>ENV[&#39;APP_ENV&#39;] = &#39;test&#39;
+
+require &#39;hello_world&#39;  # &lt;-- your sinatra app
+require &#39;rspec&#39;
+require &#39;rack/test&#39;
+
+RSpec.describe &#39;The HelloWorld App&#39; do
+  include Rack::Test::Methods
+
+  def app
+    Sinatra::Application
+  end
+
+  it &quot;says hello&quot; do
+    get &#39;/&#39;
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq(&#39;Hello World&#39;)
+  end
+end</code></pre>
+
+<p>&nbsp;</p>
+

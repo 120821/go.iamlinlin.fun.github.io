@@ -1,0 +1,71 @@
+---
+layout: post
+title: "selenium 的使用"
+date: "2022-12-13"
+categories: 
+---
+<p>官网：<a href="https://www.selenium.dev/">https://www.selenium.dev/</a>&nbsp;&nbsp; 安装：<a href="https://www.selenium.dev/documentation/webdriver/getting_started/install_library/">https://www.selenium.dev/documentation/webdriver/getting_started/install_library/</a></p>
+
+<p>1.使用ruby 安装：</p>
+
+<pre>
+<code>gem install selenium-webdriver</code></pre>
+
+<p>或者使用Gemfile安装：</p>
+
+<pre>
+<code>gem &#39;selenium-webdriver&#39;, &#39;= 4.7.1&#39;</code></pre>
+
+<p>2.安装浏览器驱动程序</p>
+
+<p>（1）使用Gemfile安装：</p>
+
+<pre>
+<code>gem &#39;webdrivers&#39;, &#39;~&gt; 5.0&#39;</code></pre>
+
+<p>（1.1）或者直接在文件使用：</p>
+
+<pre>
+<code>    require &#39;webdrivers&#39;
+
+    @driver = Selenium::WebDriver.for :chrome</code></pre>
+
+<p>（2）PATH 环境变量</p>
+
+<p>如果已经存在path：</p>
+
+<pre>
+<code>echo $PATH
+</code></pre>
+
+<p>如果您的驱动程序的位置不在列出的目录中，您可以向 PATH 添加一个新目录：</p>
+
+<p>echo &#39;export PATH=$PATH:/path/to/driver&#39; &gt;&gt; ~/.bash_profile<br />
+source ~/.bash_profile</p>
+
+<p>您可以通过启动驱动程序来测试它是否已正确添加：</p>
+
+<p>chromedriver</p>
+
+<p>如果您的 PATH 在上面配置正确，您将看到一些与驱动程序启动相关的输出：</p>
+
+<pre>
+<code>Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+</code></pre>
+
+<p>(3).硬编码位置</p>
+
+<p>您需要手动下载驱动程序（有关链接，请参阅快速参考部分）。 在代码本身中指定位置的优点是不需要找出系统上的环境变量，但缺点是代码的灵活性要差得多。</p>
+
+<p>service = Selenium::WebDriver::Service.chrome(path: &#39;/path/to/chromedriver&#39;)<br />
+driver = Selenium::WebDriver.for :chrome, service: service</p>
+
+<p>火狐下载：<a href="https://github.com/mozilla/geckodriver/releases">https://github.com/mozilla/geckodriver/releases</a></p>
+
+<p>谷歌下载：<a href="https://chromedriver.chromium.org/downloads">https://chromedriver.chromium.org/downloads</a></p>
+
+<p>&nbsp;</p>
+

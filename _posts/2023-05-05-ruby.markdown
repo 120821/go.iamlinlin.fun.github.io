@@ -1,0 +1,25 @@
+---
+layout: post
+title: "ruby #{}的使用"
+date: "2023-05-05"
+categories: 
+---
+<p>#{ }在Ruby中被称为字符串插值（String Interpolation），用于嵌入表达式或变量值到字符串中。在字符串中，可以使用#{}来嵌入变量、表达式或方法的结果。例如：</p>
+
+<pre>
+<code>name = &quot;Ruby&quot;
+puts &quot;Hello, #{name}!&quot; # 输出 &quot;Hello, Ruby!&quot;</code></pre>
+
+<p>在这个例子中，#{}被用来插入变量name的值到字符串中。</p>
+
+<p>另外，#{}也可以用于任何表达式，例如：</p>
+
+<pre>
+<code>a = 5
+b = 7
+puts &quot;The sum of #{a} and #{b} is #{a + b}&quot; # 输出 &quot;The sum of 5 and 7 is 12&quot;</code></pre>
+
+<p>在这个例子中，#{}被用来插入表达式a + b的结果到字符串中。</p>
+
+<p>总之，#{}在Ruby中是一种非常有用的字符串插值语法，可以使代码更加简洁易读。</p>
+

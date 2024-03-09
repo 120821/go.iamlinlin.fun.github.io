@@ -1,0 +1,36 @@
+---
+layout: post
+title: "ruby -- 基础学习-设置中国时区时间"
+date: "2022-09-08"
+categories: 
+---
+<p><a href="http://t.zoukankan.com/lmei-p-3262413.html">http://t.zoukankan.com/lmei-p-3262413.html</a></p>
+
+<pre><span class="pre-scrollable">在config/application.rb中找到&nbsp;class Application &lt; Rails::Application 加上下面两句</span><br />
+<code>&nbsp;class Application &lt; Rails::Application
+&nbsp;&nbsp;&nbsp; &hellip;&hellip;
+&nbsp;&nbsp;&nbsp; config.active_record.default_timezone = :local&nbsp; # 注释1
+
+&nbsp;&nbsp;&nbsp; config.time_zone = &#39;Beijing&#39;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # 注释2
+
+&nbsp;&nbsp;&nbsp; &hellip;&hellip;
+
+&nbsp;end</code></pre>
+
+<p><img height="227" src="/uploads/ckeditor/pictures/389/image-20220908150436-1.png" width="589" /></p>
+
+<p><span class="pre-scrollable">注释1：加上这句代码，查看数据库时会发现数据表中的数据也是本地时间</span></p>
+
+<p><span class="pre-scrollable">注释2：加上这句代码，页面显示的时间是北京时间</span></p>
+
+<p><span class="pre-scrollable">备注：如果只加上第二句，只是页面显示时间是北京时间，而数据库的时间还是UTC。</span></p>
+
+<p><span class="pre-scrollable"><span style="color: rgba(0, 0, 0, 1); background-color: rgba(255, 204, 153, 1)">注： 查看时区</span></span></p>
+
+<pre>
+<span class="pre-scrollable"> rake <span style="color: rgba(0, 0, 255, 1)">time</span><span style="color: rgba(0, 0, 0, 1)">:zones:all    #查看全部时区
+</span></span></pre>
+
+<pre>
+<span class="pre-scrollable"> rake <span style="color: rgba(0, 0, 255, 1)">time</span>:zones:local  #查看本地时区</span></pre>
+

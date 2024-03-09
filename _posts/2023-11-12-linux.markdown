@@ -1,0 +1,75 @@
+---
+layout: post
+title: "linux 安装百度网盘"
+date: "2023-11-12"
+categories: 
+---
+<p><a href="https://pan.baidu.com/download#linux">https://pan.baidu.com/download#linux</a></p>
+
+<p>1.到官网下载linux版本的百度网盘</p>
+
+<p>2.安装</p>
+
+<pre>
+<code>~/Downloads$ sudo dpkg -i baidunetdisk_4.
+
+baidunetdisk_4.17.7_amd64.deb&nbsp; baidunetdisk_4.3.0_amd64.deb&nbsp; &nbsp;
+
+linlin@linlin-i5:~/Downloads$ sudo dpkg -i baidunetdisk_4.3.0_amd64.deb </code></pre>
+
+<p>安装的时候，在本机出现了错误：</p>
+
+<pre>
+<code>(Reading database ... 420232 files and directories currently installed.)
+
+Preparing to unpack baidunetdisk_4.3.0_amd64.deb ...
+
+Unpacking baidunetdisk (4.3.0) over (4.3.0) ...
+
+Setting up baidunetdisk (4.3.0) ...
+
+Could not parse file &quot;/usr/share/applications/fcitx-ui-baidu-qimpanel.desktop&quot;: No such file or directory
+
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+
+Processing triggers for hicolor-icon-theme (0.17-2) ...</code></pre>
+
+<p>但是已经可以打开百度网盘，并使用了，不影响。</p>
+
+<p>看起来是安装的依赖缺少了，</p>
+
+<p>我运行：</p>
+
+<pre>
+<code>sudo apt-get install -f</code></pre>
+
+<p>但是并没有安装任何依赖：(应该没有问题了）</p>
+
+<pre>
+<code>~/Downloads$ sudo apt-get install -f
+Reading package lists... Done
+Building dependency tree... Done
+Reading state <span style="color:#f5ab35">inf</span>ormation... Done
+The following packages were automatically installed <span style="color:#dcc6e0">and</span> are no longer required:
+  gyp libc-ares2 libid3tag0 libimlib2 libjs-events libjs-highlight.js libjs-inherits libjs-is-typedarray libjs-psl libjs-source-map libjs-sprintf-js
+  libjs-typedarray-to-buffer libncurses5 libnode-dev libnode72 libt<span style="color:#f5ab35">inf</span>o5 libuv1-dev <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-abbrev</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ansi-regex</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ansi-styles</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ansistyles</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-are-we-there-yet</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-arrify</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-asap</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-asynckit</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-balanced-match</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-brace-expansion</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-chownr</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-clean-yaml-object</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-color-convert</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-color-name</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-commander</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-core-util-is</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-decompress-response</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-delayed-stream</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-delegates</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-depd</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-diff</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-encoding</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-end-of-stream</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-err-code</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-escape-string-regexp</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-fancy-log</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-foreground-child</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-fs</span>.realpath <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-function-bind</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-get-stream</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-glob</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-growl</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-has-flag</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-has-unicode</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-hosted-git-info</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-iconv-lite</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-iferr</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-imurmurhash</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-indent-string</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-inflight</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-inherits</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ini</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ip</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-ip-regex</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-is-buffer</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-is-plain-obj</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-is-typedarray</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-isarray</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-isexe</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-json-parse-better-errors</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-jsonparse</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-kind-of</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-lodash-packages</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-lowercase-keys</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-lru-cache</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-mimic-response</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-minimatch</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-minimist</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-minipass</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-mute-stream</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-negotiator</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-npm-bundled</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-once</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-osenv</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-p-cancelable</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-p-map</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-path-is-absolute</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-process-nextick-args</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-promise-inflight</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-promise-retry</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-promzard</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-pump</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-quick-lru</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-read</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-readable-stream</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-resolve</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-retry</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-safe-buffer</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-set-blocking</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-signal-exit</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-slash</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-slice-ansi</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-source-map</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-spdx-correct</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-spdx-exceptions</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-spdx-expression-parse</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-spdx-license-ids</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-sprintf-js</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-stealthy-require</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-string-decoder</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-supports-color</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-text-table</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-time-stamp</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-tmatch</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-typedarray-to-buffer</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-universalify</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-util-deprecate</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-validate-npm-package-license</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-webidl-conversions</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-whatwg-fetch</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-wrappy</span>
+  <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-yallist</span> nodejs-doc qml-module-qtqml qml-module-qtquick-controls tint2
+Use &#39;sudo apt autoremove&#39; to remove them.
+<span style="color:#f5ab35">0</span> to upgrade, <span style="color:#f5ab35">0</span> to newly install, <span style="color:#f5ab35">0</span> to remove <span style="color:#dcc6e0">and</span> <span style="color:#f5ab35">81</span> not to upgrade.</code></pre>
+
+<p>&nbsp;</p>
+

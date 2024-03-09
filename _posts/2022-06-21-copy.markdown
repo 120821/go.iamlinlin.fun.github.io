@@ -1,0 +1,12 @@
+---
+layout: post
+title: "实现copy按钮"
+date: "2022-06-21"
+categories: 
+---
+<p>视图页面：</p>
+
+<p>&lt;span class=&quot;copy&quot; data-text=&quot;&lt;%= @contract.address %&gt;&quot;&gt;&lt;i class=&quot;uil uil-copy&quot;&gt;&lt;/i&gt;&lt;/span&gt;</p>
+
+<p>&nbsp;</p>
+

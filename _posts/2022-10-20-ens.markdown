@@ -1,0 +1,45 @@
+---
+layout: post
+title: "ens反向查询"
+date: "2022-10-20"
+categories: 
+---
+<p><a href="https://www.npmjs.com/package/web3">web3 安装官网：https://www.npmjs.com/package/web3</a></p>
+
+<p>namehash安装 官网：<a href="https://www.npmjs.com/package/@ensdomains/eth-ens-namehash">https://www.npmjs.com/package/@ensdomains/eth-ens-namehash</a></p>
+
+<p>安装web3</p>
+
+<div class="highlight highlight-source-shell">
+<pre>
+<span>npm install web3</span></pre>
+
+<p>安装namehash</p>
+
+<p><span><code>npm install @ensdomains/eth-ens-namehash -S</code></span></p>
+
+<p>反向解析的脚本： cat reverse_name.js</p>
+
+<pre>
+<code>const web3=&quot;require(&#39;web3&#39;)&quot;;
+const web3 = new Web3(&#39;https://mainnet.infura.io/v3/6d5b3edb39ed4ac39731a6f107540942&#39;);
+var namehash = require(&#39;@ensdomains/eth-ens-namehash&#39;)
+async function reverse(address) {
+&nbsp; var lookup=address.toLowerCase().substr(2) + &#39;.addr.reverse&#39;
+&nbsp; var ResolverContract=await web3.eth.ens.resolver(lookup);
+&nbsp; var nh=namehash.hash(lookup);
+&nbsp; var name=await ResolverContract.methods.name(nh).call()
+&nbsp; return name;
+}
+async function main(){
+&nbsp; var myArgs = process.argv.slice(2);
+&nbsp; console.log(&#39;myArgs: &#39;, myArgs[0]);
+&nbsp; let name = await reverse(myArgs[0]);
+&nbsp; console.info(&quot;== name is: &quot;, name)
+
+}
+main()</code></pre>
+
+<p>使用： node reverse_name.js &lt;你的address&gt; 就可以查询反向解析的域名了</p>
+</div>
+

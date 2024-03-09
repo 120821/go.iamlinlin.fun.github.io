@@ -1,0 +1,18 @@
+---
+layout: post
+title: "格式"
+date: "2022-09-14"
+categories: 
+---
+<p>&nbsp;== 左右要有空格.&nbsp;</p>
+
+<p>例如； mobile==&#39;&#39; 是不规范的，应该： mobile == &#39;&#39;</p>
+
+<p><strong>空行</strong>：每一个作用域记得空行， 方便查看（维护）</p>
+
+<p><strong>注释</strong>应该放在代码的上边，进行引领作用。</p>
+
+<p><strong>命名</strong>要规范，可以很长，能说明作用即可。</p>
+
+<p><strong>避免重复代码</strong>，需要进行重构。</p>
+

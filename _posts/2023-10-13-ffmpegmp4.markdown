@@ -1,0 +1,20 @@
+---
+layout: post
+title: "ffmpeg 视频转换为mp4"
+date: "2023-10-13"
+categories: 
+---
+<p>refer: <a href="http://siwei.me/blog/posts/ffmpeg-useful-commands">http://siwei.me/blog/posts/ffmpeg-useful-commands</a></p>
+
+<p>使用命令：</p>
+
+<pre>
+<code>ffmpeg -i youtube.flv -c:v libx264 filename.mp4</code></pre>
+
+<p>例如：</p>
+
+<pre>
+linlin@linlin-i5:~/Videos$ <code>ffmpeg -i 动态排放功能介绍.mp4 -c:v libx264 动态排放功能介绍-new.mp4</code></pre>
+
+<p>&nbsp;</p>
+

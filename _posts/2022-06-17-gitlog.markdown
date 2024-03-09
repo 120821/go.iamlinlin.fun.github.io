@@ -1,0 +1,10 @@
+---
+layout: post
+title: "git log +文件名 查看该文件的所有提交改变"
+date: "2022-06-17"
+categories: 
+---
+<p>git log app/views/blogs/index.html.erb</p>
+
+<p>查看列表页面文件的所有变动</p>
+

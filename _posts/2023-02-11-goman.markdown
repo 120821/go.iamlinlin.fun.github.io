@@ -1,0 +1,119 @@
+---
+layout: post
+title: "go man()"
+date: "2023-02-11"
+categories: 
+---
+<p><a href="https://www.w3cschool.cn/go/go-scope-rules.html">https://www.w3cschool.cn/go/go-scope-rules.html</a></p>
+
+<p><a href="https://haicoder.net/golang/golang-main.html">https://haicoder.net/golang/golang-main.html</a></p>
+
+<p><strong>go</strong> 程序有一个特殊的<strong>func</strong>，就是 main 函数，main 函数是程序的入口，也就是说程序的运行一定是从 main 函数开始的。</p>
+
+<p>整个程序中，main 函数只能有一个，如果出现了多个 main 函数，那么程序就不能正常运行。所有我们自定义的函数都必须直接或者间接的在 main 函数里面调用，否则无法运行(除了 <strong>int</strong>函数)。</p>
+
+<p>Go 语言的 main 函数，是一个没有任何 参数 和 返回值 的函数。</p>
+
+<p>自定义函数必须被 main 函数调用，才能运行</p>
+
+<pre>
+<code>cat func_main.go
+
+package main
+
+import (
+
+&nbsp; &quot;fmt&quot;
+
+)
+
+func myFunc(){
+
+&nbsp; fmt.Println(&quot;Call myFunc&quot;)
+
+}
+
+func myFunc2(){
+
+&nbsp; fmt.Println(&quot;Call myFunc2&quot;)
+
+}
+
+func main() {
+
+&nbsp; fmt.Println(&quot;hi, 自定义函数必须被main函数调用，才能运行。&quot;)
+
+&nbsp; //自定义函数必须被main函数调用，才能运行
+
+&nbsp; myFunc2()
+
+}</code></pre>
+
+<pre>
+<code>$ go run func_main.go
+
+hi, 自定义函数必须被main函数调用，才能运行。
+
+Call myFunc2</code></pre>
+
+<p>main函数调用自定义函数，与函数位置无关。</p>
+
+<pre>
+<code>cat func_main_sum.go
+
+package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+
+var a int = 20
+
+func main() {
+
+&nbsp; /* main 函数中声明局部变量 */
+
+&nbsp; var a int = 10
+
+&nbsp; var b int = 20
+
+&nbsp; var c int = 0
+
+&nbsp; fmt.Printf(&quot;main()函数中 a = %d\n&quot;,&nbsp; a)
+
+&nbsp; c = sum( a, b);
+
+&nbsp; fmt.Printf(&quot;main()函数中 c = %d\n&quot;,&nbsp; c)
+
+}
+
+/* 函数定义-两数相加 */
+
+func sum(a, b int) int {
+
+&nbsp; fmt.Printf(&quot;sum() 函数中 a = %d\n&quot;,&nbsp; a)
+
+&nbsp; fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,&nbsp; b)
+
+</code></pre>
+
+<p><code><code>&nbsp; return a + b<br />
+}</code></code></p>
+
+<pre>
+<code><code>$ go run func_main_sum.go
+
+main()函数中 a = 10
+
+sum() 函数中 a = 10
+
+sum() 函数中 b = 20
+
+main()函数中 c = 30</code></code></pre>
+
+<p><code>&nbsp;</code></p>
+
+<p><code>&nbsp;</code></p>
+
+<p><code>&nbsp;</code></p>
+

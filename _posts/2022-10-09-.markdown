@@ -1,0 +1,10 @@
+---
+layout: post
+title: "谷歌使用翻译"
+date: "2022-10-09"
+categories: 
+---
+<p><a href="https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb/related">https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb/related</a></p>
+
+<p>&nbsp;</p>
+

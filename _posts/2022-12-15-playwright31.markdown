@@ -1,0 +1,179 @@
+---
+layout: post
+title: "playwright 的安装 使用（3）编写测试（元素定位1）"
+date: "2022-12-15"
+categories: 
+---
+<p>参考：<a href="https://playwright.dev/docs/writing-tests">https://playwright.dev/docs/writing-tests</a></p>
+
+<p>生成的测试文件是这样的，先了解一下</p>
+
+<pre>
+<code>// @ts-check
+
+const { test, expect } = require(&#39;@playwright/test&#39;);
+test(&#39;homepage has Playwright in title and get started link linking to the intro page&#39;, async ({ page }) =&gt; {
+
+&nbsp; await page.goto(&#39;https://playwright.dev/&#39;);
+
+&nbsp; // Expect a title &quot;to contain&quot; a substring.
+
+&nbsp; await expect(page).toHaveTitle(/Playwright/);
+
+&nbsp; // create a locator
+
+&nbsp; const getStarted = page.getByRole(&#39;link&#39;, { name: &#39;Get started&#39; });
+
+&nbsp; // Expect an attribute &quot;to be strictly equal&quot; to the value.
+
+&nbsp; await expect(getStarted).toHaveAttribute(&#39;href&#39;, &#39;/docs/intro&#39;);
+&nbsp; // Click the get started link.
+
+&nbsp; await getStarted.click();</code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp; // Expects the URL to contain intro.<br />
+&nbsp; await expect(page).toHaveURL(/.*intro/);<br />
+});</p>
+
+<p>参考：<a href="https://playwright.dev/docs/locators">https://playwright.dev/docs/locators</a></p>
+
+<p><a href="https://playwright.dev/docs/api/class-locator" title="定位器">定位器 </a>是 Playwright 自动等待和重试能力的核心部分。 简而言之，定位器代表了一种随时在页面上查找元素的方法。</p>
+
+<ul>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-role">page.getByRole(role[, options]) </a>通过显式和隐式可访问性属性进行定位。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-text">page.getByText(text[, options]) </a>按文本内容定位。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-label">page.getByLabel(text[, options]) </a>通过关联标签的文本定位表单控件。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-placeholder">page.getByPlaceholder(text[, options]) </a>通过占位符定位输入。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-alt-text">page.getByAltText(text[, options]) </a>通过替代文本定位一个元素，通常是图像。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-title">page.getByTitle(text[, options]) </a>通过标题属性定位元素。</li>
+	<li><a href="https://playwright.dev/docs/locators#locate-by-testid">page.getByTestId(testId) </a>根据其定位元素 <code>data-testid</code>属性（可以配置其他属性）。</li>
+</ul>
+
+<div class="codeBlockContainer_Ckt0 language-js theme-code-block">
+<div class="codeBlockContent_biex">
+<pre>
+<code>await page.getByLabel(&#39;User Name&#39;).fill(&#39;John&#39;);
+
+await page.getByLabel(&#39;Password&#39;).fill(&#39;secret-password&#39;);
+await page.getByRole(&#39;button&#39;, { name: &#39;Sign in&#39; }).click();
+await expect(page.getByText(&#39;Welcome, John!&#39;)).toBeVisible();</code></pre>
+
+<p>1.根据元素的角色定位元素 <code>button</code>名称为&ldquo;登录&rdquo;。</p>
+
+<p>这样一段内容：</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span>Sign in<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span></code></pre>
+
+<p><code><span style="color:#393a34"><span style="color:#393a34">使用：</span></span></code></p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Sign in&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>每次将定位器用于操作时，都会在页面中找到一个最新的 DOM 元素。 在下面的代码片段中，底层 DOM 元素将被定位两次，一次在每个动作之前。 这意味着如果 DOM 由于重新渲染而在调用之间发生变化，则将使用与定位器对应的新元素。</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">const</span> locator <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Sign in&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span>
+</span>
+<span style="color:#393a34"><span style="color:#cf222e">await</span> locator<span style="color:#393a34">.</span><span style="color:#8250df">hover</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
+</span><span style="color:#393a34"><span style="color:#cf222e">await</span> locator<span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>请注意，所有创建定位器的方法（例如 <a href="https://playwright.dev/docs/api/class-page#page-get-by-label">page.getByLabel(text[, options]) ） </a>也可用于 <a href="https://playwright.dev/docs/api/class-locator" title=" Locator">Locator </a>和 <a href="https://playwright.dev/docs/api/class-framelocator" title=" FrameLocator">FrameLocator </a>类，因此您可以将它们链接起来并迭代地缩小定位器的范围。</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">const</span> locator <span style="color:#d73a49">=</span> page
+</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">frameLocator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;#my-frame&#39;</span><span style="color:#393a34">)</span>
+</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Sign in&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
+</span>
+<span style="color:#393a34"><span style="color:#cf222e">await</span> locator<span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p><code><span style="color:#393a34"><span style="color:#393a34">2.根据角色定位</span></span></code></p>
+
+<p>page.getByRole <a href="https://playwright.dev/docs/api/class-page#page-get-by-role"> (role[, options]) </a>定位器反映了用户和辅助技术如何感知页面，例如某个元素是按钮还是复选框。 按角色定位时，通常还应传递可访问的名称，以便定位器准确定位元素。</p>
+
+<p>如果有这样的内容</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">h3</span><span style="color:#393a34">&gt;</span>Sign up<span style="color:#393a34">&lt;/</span><span style="color:#22863a">h3</span><span style="color:#393a34">&gt;</span>
+</span><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">label</span><span style="color:#393a34">&gt;</span>
+</span><span style="color:#393a34">  <span style="color:#393a34">&lt;</span><span style="color:#22863a">input</span><span style="color:#22863a"> </span><span style="color:#0550ae">type</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">checkbox</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#393a34">/&gt;</span> Subscribe
+</span><span style="color:#393a34"><span style="color:#393a34">&lt;/</span><span style="color:#22863a">label</span><span style="color:#393a34">&gt;</span>
+</span><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">br</span><span style="color:#393a34">/&gt;</span>
+</span><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span>Submit<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span></code></pre>
+
+<p>您可以通过其隐含角色定位每个元素</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;heading&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Sign up&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toBeVisible</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span>
+</span>
+<span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;checkbox&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Subscribe&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">check</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
+</span>
+<span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#36acaa">/</span><span style="color:#36acaa">submit</span><span style="color:#36acaa">/</span><span style="color:#36acaa">i</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>角色定位器包括 <a href="https://www.w3.org/TR/html-aria/#docconformance" rel="noopener noreferrer" target="_blank">按钮、复选框、标题、链接、列表、表格等， </a>的 W3C 规范 <a href="https://www.w3.org/TR/wai-aria-1.2/#roles" rel="noopener noreferrer" target="_blank">并遵循ARIA 角色 </a>、 <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-attributes" rel="noopener noreferrer" target="_blank"> ARIA 属性 </a>和 <a href="https://w3c.github.io/accname/#dfn-accessible-name" rel="noopener noreferrer" target="_blank">可访问名称 </a></p>
+
+<p>3.标签定位</p>
+
+<p>大多数表单控件通常都有专用标签，可以方便地用于与表单交互。 通过其关联标签定位控件 <a href="https://playwright.dev/docs/api/class-page#page-get-by-label"> 在这种情况下，您可以使用page.getByLabel(text[, options]) </a>。</p>
+
+<p>例如：</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">label</span><span style="color:#393a34">&gt;</span>Password <span style="color:#393a34">&lt;</span><span style="color:#22863a">input</span><span style="color:#22863a"> </span><span style="color:#0550ae">type</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">password</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#393a34">/&gt;</span><span style="color:#393a34">&lt;/</span><span style="color:#22863a">label</span><span style="color:#393a34">&gt;</span>
+</span></code></pre>
+
+<p>您可以在通过标签文本定位后填写输入</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByLabel</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Password&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">fill</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;secret&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p><code><span style="color:#393a34"><span style="color:#393a34">4.占位符定位</span></span></code></p>
+
+<p>输入可能有一个占位符属性来提示用户应该输入什么值。 找到这样的输入 <a href="https://playwright.dev/docs/api/class-page#page-get-by-placeholder"> 您可以使用page.getByPlaceholder(text[, options]) </a>。</p>
+
+<p>例如：</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">input</span><span style="color:#22863a"> </span><span style="color:#0550ae">type</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">email</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#0550ae">placeholder</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">name@example.com</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#393a34">/&gt;</span></span></code></pre>
+
+<p>您可以在通过占位符文本定位后填充输入：</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page
+</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">getByPlaceholder</span><span style="color:#393a34">(</span><span style="color:#c6105f">&quot;name@example.com&quot;</span><span style="color:#393a34">)</span>
+</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">fill</span><span style="color:#393a34">(</span><span style="color:#c6105f">&quot;playwright@microsoft.com&quot;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p><code><span style="color:#393a34"><span style="color:#393a34">5.文字定位</span></span></code></p>
+
+<p>根据元素包含的文本查找元素。 时，您可以通过子字符串、精确字符串或正则表达式进行 <a href="https://playwright.dev/docs/api/class-page#page-get-by-text"> 使用page.getByText(text[, options]) </a>匹配。</p>
+
+<p>例如，考虑以下 DOM 结构。</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">span</span><span style="color:#393a34">&gt;</span>Welcome, John<span style="color:#393a34">&lt;/</span><span style="color:#22863a">span</span><span style="color:#393a34">&gt;</span></span></code></pre>
+
+<p>您可以通过元素包含的文本来定位该元素：</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Welcome, John&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toBeVisible</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>设置精确匹配</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Welcome, John&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">exact</span><span style="color:#d73a49">:</span> <span style="color:#005cc5">true</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toBeVisible</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>与正则表达式匹配</p>
+
+<pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByText</span><span style="color:#393a34">(</span><span style="color:#36acaa">/</span><span style="color:#36acaa">welcome, [A-Za-z]+$</span><span style="color:#36acaa">/</span><span style="color:#36acaa">i</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toBeVisible</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+
+<p>建议使用文本定位器来查找非交互式元素，例如 <code>div</code>, <code>span</code>, <code>p</code>等。对于交互式元素，如 <code>button</code>, <code>a</code>, <code>input</code>等使用 <a href="https://playwright.dev/docs/locators#locate-by-role">角色定位器 </a>。</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+</div>
+

@@ -1,0 +1,10 @@
+---
+layout: post
+title: "每一次编译，都会改变abi"
+date: "2022-07-22"
+categories: 
+---
+<p>进行合约创建后，增加白名单的时候，需要进行再次的编译，部署，所以abi会发生改变</p>
+
+<p><img height="613" src="/uploads/ckeditor/pictures/123/image-20220722111110-1.png" width="883" /></p>
+

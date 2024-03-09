@@ -1,0 +1,47 @@
+---
+layout: post
+title: "elixir - 安装 使用"
+date: "2022-11-03"
+categories: 
+---
+<p><a href="https://elixir-lang.org/getting-started/introduction.html">https://elixir-lang.org/getting-started/introduction.html</a></p>
+
+<p><a href="https://www.phoenixframework.org/">https://www.phoenixframework.org/</a></p>
+
+<p>安装：</p>
+
+<pre>
+<code class="language-plaintext highlighter-rouge">sudo apt-get install elixir</code></pre>
+
+<p><img height="138" src="/uploads/ckeditor/pictures/683/image-20221104084544-1.png" width="1002" /></p>
+
+<p>安装使用<a href="https://hexdocs.pm/phoenix/installation.html">Phoenix： https://hexdocs.pm/phoenix/installation.html</a></p>
+
+<p>mix local.hex</p>
+
+<p><img height="81" src="/uploads/ckeditor/pictures/684/image-20221104085400-2.png" width="1002" /></p>
+
+<p>一旦我们有了 Elixir 和 Erlang，我们就可以安装 Phoenix 应用程序生成器了：</p>
+
+<p>mix archive.install hex phx_new</p>
+
+<p>phx.new 生成器现在可用于在名为 Up and Running 的下一个指南中生成新应用程序。&nbsp; 下面提到的标志是生成器的命令行选项；&nbsp; 通过调用 <a href="https://hexdocs.pm/phoenix/Mix.Tasks.Phx.New.html">mix help phx.new</a> 查看所有可用选项。</p>
+
+<p>mix phx.new</p>
+
+<p><img height="1022" src="/uploads/ckeditor/pictures/686/image-20221104085612-4.png" width="886" /></p>
+
+<p>mix archive.install hex phx_new</p>
+
+<p><img height="284" src="/uploads/ckeditor/pictures/685/image-20221104085438-3.png" width="672" /></p>
+
+<p>mix phx.new hello</p>
+
+<p><img height="529" src="/uploads/ckeditor/pictures/687/image-20221104090325-6.png" width="688" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

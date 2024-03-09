@@ -1,0 +1,18 @@
+---
+layout: post
+title: "csv - 让内容换行，增加 \n 即可（稳妥起见， \n\r 吧）"
+date: "2022-07-20"
+categories: 
+---
+<p>参考：https://stackoverflow.com/questions/35136328/csv-parsing-newline-linebreak-issues</p>
+
+<p>输出内容的时候，想换行，就 \n\r</p>
+
+<p>row = [&quot;#{simple_redeem_code.code}\n\r&quot;</p>
+
+<p><img height="168" src="/uploads/ckeditor/pictures/121/image-20220720105925-1.png" width="276" /></p>
+
+<p>row = [&quot;#{simple_redeem_code.code}\n\n&quot;</p>
+
+<p><img height="281" src="/uploads/ckeditor/pictures/122/image-20220720105940-2.png" width="301" /></p>
+

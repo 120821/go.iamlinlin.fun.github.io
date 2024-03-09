@@ -1,0 +1,21 @@
+---
+layout: post
+title: "react 处理接口的数据，变量存在与否的判断"
+date: "2023-09-21"
+categories: 
+---
+<p>对于接口返回的数据，原来是仅对emission_all处理：</p>
+
+<pre>
+<code>const emissionAll = result.emission_all;</code></pre>
+
+<p>但是不同的算法返回的内容是不同的，因此进行判断：</p>
+
+<p>如果对于接口返回的数据，存在emission_all就使用emission_all，存在result就使用result:</p>
+
+<pre>
+<code>const emissionAll = result.emission_all ? result.emission_all : (result.result ? result.result : null);
+console.log(&quot;== emissionAll: &quot;, emissionAll);</code></pre>
+
+<p>&nbsp;</p>
+

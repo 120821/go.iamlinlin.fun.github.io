@@ -1,0 +1,10 @@
+---
+layout: post
+title: "入门区块链 给第二个钱包地址转账"
+date: "2022-06-25"
+categories: 
+---
+<p>在账户中进行转账，</p>
+
+<p><img height="605" src="/uploads/ckeditor/pictures/71/image-20220625091240-1.png" width="1296" /></p>
+

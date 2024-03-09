@@ -1,0 +1,21 @@
+---
+layout: post
+title: "echarts 隐藏下载图片的功能"
+date: "2023-11-27"
+categories: 
+---
+<p>可以直接把saveAsImage属性设置为false,或者直接注释这一行即可：</p>
+
+<pre>
+<code>option = {
+  <span style="color:#d4d0ab">// 其他配置项...</span>
+  toolbox: {
+    feature: {
+      saveAsImage: <span style="color:#f5ab35">false</span>, <span style="color:#d4d0ab">// 禁用保存图片功能</span>
+      <span style="color:#d4d0ab">// 其他功能按钮...</span>
+    }
+  },
+  
+  <span style="color:#d4d0ab">// 数据和图表配置...</span>
+};</code></pre>
+

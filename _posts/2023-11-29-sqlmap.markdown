@@ -1,0 +1,62 @@
+---
+layout: post
+title: "sqlmap 的基础命令"
+date: "2023-11-29"
+categories: 
+---
+<p><a href="https://www.bilibili.com/video/BV11W41157j3/?spm_id_from=333.337.search-card.all.click&amp;vd_source=fb5acd43340f23df8cb34d10a0c2ce4a">黑客工具 | SQLmap数据库注入简单使用</a></p>
+
+<p><a href="http://ttps://www.freeerror.org/linux/6898/">http://ttps://www.freeerror.org/linux/6898/</a></p>
+
+<p>1.安装成功后，使用sqlmap命令：</p>
+
+<pre>
+<code>sqlmap</code></pre>
+
+<pre>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __H__
+
+&nbsp;___ ___[&#39;]_____ ___ ___&nbsp; {1.6.4#stable}
+
+|_ -| . [&quot;]&nbsp;&nbsp;&nbsp;&nbsp; | .&#39;| . |
+
+|___|_&nbsp; [,]_|_|_|__,|&nbsp; _|
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |_|V...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |_|&nbsp;&nbsp; https://sqlmap.org
+
+Usage: python3 sqlmap [options]
+
+sqlmap: error: missing a mandatory option (-d, -u, -l, -m, -r, -g, -c, --wizard, --shell, --update, --purge, --list-tampers or --dependencies). Use -h for basic and -hh for advanced help
+
+09:37:25] [WARNING] your sqlmap version is outdated</code></pre>
+
+<p>2.根据以上的提示，sqlmap的命令参数包含：</p>
+
+<p>-h 查看帮助</p>
+
+<p>-u 使用url进行数据库的注入等</p>
+
+<p>-d 指定数据库</p>
+
+<p>-t 指定数据库表（需要有指定数据库）</p>
+
+<p>-c 指定输出的表字段（需要有指定的数据库和数据库表）</p>
+
+<p>--dunp 把结果拉到本地</p>
+
+<p>--batch 设置所有的输入为默认值</p>
+
+<p>--curent-db 输出当前所在数据库</p>
+
+<p>--dbs 输出当前所有的数据库名称</p>
+
+<p>--tables 输出所有数据库中的表，前提是有-d</p>
+
+<p>--columns 输出所有表字段，前提是有-d -t</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

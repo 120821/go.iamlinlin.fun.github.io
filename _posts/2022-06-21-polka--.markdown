@@ -1,0 +1,51 @@
+---
+layout: post
+title: "使用polka进行第三方登录--登录"
+date: "2022-06-21"
+categories: 
+---
+<p>文章：<a href="https://siwei.me/blog/posts/blockchain-polka">https://siwei.me/blog/posts/blockchain-polka</a></p>
+
+<p>1. 需要在package.json中增加这个依赖： &quot;@polkadot/extension-dapp&quot;: &quot;^0.42.7&quot;,</p>
+
+<pre><code>ls<br />
+app&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bin&nbsp;&nbsp;&nbsp;&nbsp; config.ru&nbsp; dump.rdb&nbsp; Gemfile.lock&nbsp; log&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nohup.out&nbsp;&nbsp;&nbsp;&nbsp; package-lock.json&nbsp; Rakefile&nbsp;&nbsp; scripts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test&nbsp; vendor<br />
+babel.config.js&nbsp; config&nbsp; db&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gemfile&nbsp;&nbsp; lib&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node_modules&nbsp; package.json&nbsp; public&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; README.md&nbsp; static_template&nbsp; tmp&nbsp;&nbsp; yarn.lock</code></pre>
+
+<pre><code>vim package.json</code></pre>
+
+<p>增加：</p>
+
+<pre><code>&quot;dependencies&quot;: {<br />
+&nbsp;&nbsp;&nbsp; &quot;@rails/actioncable&quot;: &quot;^6.0.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;@rails/ujs&quot;: &quot;^6.0.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;@rails/webpacker&quot;: &quot;5.4.3&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;@polkadot/extension-dapp&quot;: &quot;^0.42.7&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;turbolinks&quot;: &quot;^5.2.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;webpack&quot;: &quot;^4.46.0&quot;,<br />
+&nbsp;&nbsp;&nbsp; &quot;webpack-cli&quot;: &quot;^3.3.12&quot;（这里是增加的内容）<br />
+&nbsp; },</code></pre>
+
+<p>2.视图页面增加链接：</p>
+
+<pre><code>&nbsp;&lt;a class=&#39;polka_connect&#39;&gt;.Connect Wallet.&lt;/a&gt;</code></pre>
+
+<p>3.对应页面的js关键代码这样:&nbsp;</p>
+
+<pre class="hljs cs">
+<code><span class="hljs-comment">// 需要一个 </span><a class="polka_connect"><span class="hljs-comment">polka sign up</span></a>
+document.querySelector(<span class="hljs-string">&#39;a.polka_connect&#39;</span>).addEventListener(<span class="hljs-string">&#39;click&#39;</span>, <span class="hljs-keyword">async</span> () =&gt; {
+  <span class="hljs-comment">// 启动polka 钱包</span>
+  <span class="hljs-keyword">const</span> extensions = <span class="hljs-keyword">await</span> polka.web3Enable(window.location.hostname);
+
+  <span class="hljs-comment">// 如果没有安装，就alert</span>
+  <span class="hljs-keyword">if</span> (!extensions.length) {
+    alert(<span class="hljs-string">&#39;Polkadot extension not found, please go to install it: https://polkadot.js.org/extension/&#39;</span>);
+    <span class="hljs-keyword">return</span>
+  }
+
+  <span class="hljs-comment">// 获得polka钱包的地址</span>
+  <span class="hljs-keyword">const</span> accounts = <span class="hljs-keyword">await</span> polka.web3Accounts();
+
+});</code></pre>
+

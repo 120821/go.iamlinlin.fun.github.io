@@ -1,0 +1,10 @@
+---
+layout: post
+title: "云片增加ip白名单"
+date: "2022-07-14"
+categories: 
+---
+<p>在系统设置-ip白名单设置中添加未成功的ip即可</p>
+
+<p><img height="772" src="/uploads/ckeditor/pictures/95/image-20220714113049-1.png" width="735" /></p>
+

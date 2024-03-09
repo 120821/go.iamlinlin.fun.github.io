@@ -1,0 +1,19 @@
+---
+layout: post
+title: " geth attach http://127.0.0.1:8545"
+date: "2022-07-28"
+categories: 
+---
+<p>&nbsp;geth attach http://127.0.0.1:8545<br />
+Welcome to the Geth JavaScript console!</p>
+
+<p>instance: Ganache/v7.3.2/EthereumJS TestRPC/v7.3.2/ethereum-js<br />
+coinbase: 0x0000000000000000000000000000000000000000<br />
+at block: 0 (Tue Jul 26 2022 10:46:58 GMT+0800 (CST))<br />
+&nbsp;modules: eth:1.0 evm:1.0 net:1.0 personal:1.0 rpc:1.0 web3:1.0</p>
+
+<p>To exit, press ctrl-d or type exit<br />
+&gt;</p>
+
+<p>&nbsp;</p>
+

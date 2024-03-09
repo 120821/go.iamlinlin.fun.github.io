@@ -1,0 +1,35 @@
+---
+layout: post
+title: "react 显示时间的格式 2023-08-15 16:46:41 以及 2023/8/15 16:46:41"
+date: "2023-10-16"
+categories: 
+---
+<p>react 我有这样的代码：<br />
+&nbsp;</p>
+
+<pre>
+<code>184       {
+185         title: &#39;创建时间&#39;,
+186         dataIndex: &#39;created_at&#39;,
+187         key: &#39;created_at&#39;,
+188         render: (text) =&gt; new Date(text).toLocaleString(&#39;zh-CN&#39;, { timeZone: &#39;Asia/Shanghai&#39; }),
+189       },</code></pre>
+
+<p><code>显示的时间的格式是：</code>2023/8/15 16:46:41</p>
+
+<p>我想得到用-连接的时间，例如 2023-08-15 16:46:41，使用：</p>
+
+<pre>
+<code>{
+  title: &#39;创建时间&#39;,
+  dataIndex: &#39;created_at&#39;,
+  key: &#39;created_at&#39;,
+  render: (text) =&gt; {
+    const formattedDate = new Date(text).toLocaleString(&#39;zh-CN&#39;, { timeZone: &#39;Asia/Shanghai&#39; });
+    const formattedDateWithDash = formattedDate.replace(/\//g, &#39;-&#39;);
+    return formattedDateWithDash;
+  },
+},</code></pre>
+
+<p>&nbsp;</p>
+

@@ -1,0 +1,228 @@
+---
+layout: post
+title: "在原生的vim基础上，把 vim 弄起来 ，可以使用历史记录等功能"
+date: "2022-10-08"
+categories: 
+---
+<p><a href="https://github.com/sg552/happy_book_vim">https://github.com/sg552/happy_book_vim</a></p>
+
+<p>安装：仅限于Linux, Mac.</p>
+
+<p dir="auto"><strong>1.安装的是 vim 7.3+ 版本。</strong></p>
+
+<p dir="auto">Ubuntu: <code>$ apt install vim</code></p>
+
+<p dir="auto">把两个配置文件，都放到home目录下。</p>
+
+<div class="notranslate overflow-auto position-relative snippet-clipboard-content">
+<pre>
+<code>$ unzip vim_folder.zip      # 解压缩 这个文件.
+$ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目录
+$ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
+</code></pre>
+
+<p><strong>2.如果安装是vim8</strong></p>
+
+<p dir="auto">1.安装vundle :</p>
+
+<div class="notranslate overflow-auto position-relative snippet-clipboard-content">
+<pre>
+<code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+</code></pre>
+</div>
+
+<p dir="auto">2.clone本项目:</p>
+
+<div class="notranslate overflow-auto position-relative snippet-clipboard-content">
+<pre>
+<code>cp dot_vimrc_for_vim8 ~/.vimrc
+</code></pre>
+</div>
+
+<p dir="auto">3.进入到vim中,然后</p>
+
+<div class="notranslate overflow-auto position-relative snippet-clipboard-content">
+<pre>
+<code>:PluginInstall
+</code></pre>
+</div>
+
+<p dir="auto">就成功了</p>
+
+<p dir="auto"><code>(没有.vimrc/dot_vimrc_for_vim8的话，就复制粘贴这端代码，到~/.vimrc,就可以看到行数和字体的颜色，也可以使用ctrl e查看历史编辑的文件等了)</code></p>
+<code>filetype on</code>
+
+<pre>
+<code>set langmenu=none
+set fileencodings=utf-8
+set fileencoding=utf-8
+set encoding=utf8
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set number
+set autoindent
+set hlsearch
+set incsearch
+&quot; highlight Normal ctermfg=white ctermbg=cyan
+set nowrap
+syntax enable
+
+let g:proj_window_width=5
+set laststatus=2
+
+
+map  :FufFile
+map  :MRU
+map  :Rmodel
+map  :Rcontroller
+map  :Runit
+map  :Rfunctional
+map  :Rhelper
+map  :Rview
+map  :ZoomWin
+
+
+&quot; Strip trailing whitespace
+function! StripTrailingWhitespaces()
+    &quot; Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(&quot;.&quot;)
+    let c = col(&quot;.&quot;)
+    &quot; Do the business:
+    %s/\s\+$//e
+    &quot; Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call StripTrailingWhitespaces()
+
+&quot; match Todo /\s\+$/
+filetype plugin on
+let mapleader = &quot;,&quot;
+
+
+&quot; THE VIM OUTLINER (TVO)
+&quot; defaults:
+let otl_install_menu=1
+let no_otl_maps=0
+let no_otl_insert_maps=0
+
+&quot; overrides:
+let otl_bold_headers=0
+let otl_use_thlnk=0
+
+&quot; au BufWinLeave *.otl mkview
+&quot; au BufWinEnter *.otl silent loadview
+let maplocalleader = &quot;,&quot;
+
+&quot;&quot;Only do this part when compiled with support for autocommands.
+&quot;if has(&quot;autocmd&quot;)
+&quot;  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+&quot;endif
+
+
+set nocompatible               &quot; be iMproved
+filetype off                   &quot; required!
+
+
+
+
+&quot; ============== Vundle part =================
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+&quot; let Vundle manage Vundle
+&quot; required!
+Bundle &#39;gmarik/vundle&#39;
+
+&quot; My Bundles here:
+&quot;
+&quot; original repos on github
+Bundle &#39;tpope/vim-fugitive&#39;
+Bundle &#39;Lokaltog/vim-easymotion&#39;
+&quot;Bundle &#39;rstacruz/sparkup&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}
+Bundle &#39;tpope/vim-rails.git&#39;
+Bundle &#39;tsaleh/vim-matchit.git&#39;
+Bundle &#39;ecomba/vim-ruby-refactoring.git&#39;
+
+&quot; vim-scripts repos
+Bundle &#39;L9&#39;
+Bundle &#39;FuzzyFinder&#39;
+
+Bundle &#39;git://git.wincent.com/command-t.git&#39;
+&quot;Bundle &#39;snipMate&#39;
+&quot;Bundle &#39;snipmate-snippets&#39;
+&quot;Bundle &#39;Jasmine-snippets-for-snipMate&#39;
+Bundle &#39;YankRing.vim&#39;
+Bundle &#39;vividchalk.vim&#39;
+Bundle &#39;The-NERD-Commenter&#39;
+Bundle &#39;The-NERD-tree&#39;
+Bundle &#39;kchmck/vim-coffee-script&#39;
+Bundle &#39;vim-vue&#39;
+
+colorscheme vividchalk
+set background=light
+set background=dark
+Bundle &#39;mru.vim&#39;
+Bundle &#39;greplace.vim&#39;
+
+Bundle &#39;rust-lang/rust.vim&#39;
+
+Bundle &#39;tomlion/vim-solidity&#39;
+
+Bundle &#39;leafgarland/typescript-vim&#39;
+
+filetype plugin indent on     &quot; required!
+&quot;
+&quot; Brief help
+&quot; :BundleList          - list configured bundles
+&quot; :BundleInstall(!)    - install(update) bundles
+&quot; :BundleSearch(!) foo - search(or refresh cache first) for foo
+&quot; :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+&quot;
+&quot; see :h vundle for more details or wiki for FAQ
+&quot; NOTE: comments after Bundle command are not allowed..
+
+
+map  f
+map a :YRShow
+map t :NERDTree
+map q :q
+map f :Rfixture
+map rj :Rjavascript
+
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join appstore/static/javascripts/angular/controllers.js appstore/static/javascripts/angular/controllers.coffee appstore/static/javascripts/angular/tabs/*coffee appstore/static/javascripts/angular/applications/*coffee appstore/static/javascripts/angular/users/*coffee appstore/static/javascripts/angular/commons/*coffee
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile appstore/static/javascripts/angular/app.coffee appstore/static/javascripts/angular/directives.coffee appstore/static/javascripts/angular/filters.coffee appstore/static/javascripts/angular/services.coffee
+
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join tvboxcms/static/javascripts/angular/controllers.js tvboxcms/static/javascripts/angular/controllers.coffee tvboxcms/static/javascripts/angular/tabs/*coffee tvboxcms/static/javascripts/angular/applications/*coffee tvboxcms/static/javascripts/angular/users/*coffee tvboxcms/static/javascripts/angular/commons/*coffee
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile tvboxcms/static/javascripts/angular/app.coffee tvboxcms/static/javascripts/angular/directives.coffee tvboxcms/static/javascripts/angular/filters.coffee tvboxcms/static/javascripts/angular/services.coffee
+
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile --join m-cms-preview/static/javascripts/angular/controllers.js m-cms-preview/static/javascripts/angular/controllers.coffee m-cms-preview/static/javascripts/angular/tabs/*coffee m-cms-preview/static/javascripts/angular/applications/*coffee m-cms-preview/static/javascripts/angular/users/*coffee m-cms-preview/static/javascripts/angular/commons/*coffee
+&quot;autocmd BufWritePost,FileWritePost *.coffee :silent !coffee --compile m-cms-preview/static/javascripts/angular/app.coffee m-cms-preview/static/javascripts/angular/directives.coffee m-cms-preview/static/javascripts/angular/filters.coffee m-cms-preview/static/javascripts/angular/services.coffee
+&quot;
+&quot; For fuf plugin , ignore the node_modules folder
+&quot; Truth be told, I don&#39;t remember what these do, but I must have
+&quot; found them necessary back when I installed fuzzyfinder years ago
+let s:slash = &#39;[/\\]&#39;
+let s:startname = &#39;(^|&#39;.s:slash.&#39;)&#39;
+let s:endname = &#39;($|&#39;.s:slash.&#39;)&#39;
+
+&quot; directories and extensions to ignore when listing files
+&quot; these contain a lot of Python-isms, yours will probably vary
+let s:extension = &#39;\.bak|\.dll|\.exe|\.o|\.pyc|\.pyo|\.swp|\.swo&#39;
+let s:dirname = &#39;build|deploy|dist|vms|\.bzr|\.git|\.hg|\.svn|.+\.egg-info|node_modules|logs|log&#39;
+let g:fuf_file_exclude = &#39;\v&#39;.&#39;(&#39;.s:startname.&#39;(&#39;.s:dirname.&#39;)&#39;.s:endname.&#39;)|((&#39;.s:extension.&#39;)$)&#39;
+let g:fuf_dir_exclude = &#39;\v&#39;.s:startname.&#39;(&#39;.s:dirname.&#39;)&#39;.s:endname
+
+&quot; limit number of displayed matches
+&quot; (makes response instant even on huge source trees)
+let g:fuf_enumeratingLimit = 60
+
+</code></pre>
+
+<p dir="auto"><code><code><code><code><img src="/uploads/ckeditor/pictures/676/image-20221102164105-1.png" style="height:1074px; width:1004px" /></code></code></code></code></p>
+</div>
+

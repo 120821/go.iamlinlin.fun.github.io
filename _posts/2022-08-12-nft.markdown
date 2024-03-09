@@ -1,0 +1,25 @@
+---
+layout: post
+title: "实现服务器端对于nft的认领"
+date: "2022-08-12"
+categories: 
+---
+<p>1.服务器端可以发行一个Contract，<br />
+2.某个用户仅使用手机号码或邮件注册，没有钱包地址，<br />
+3.该用户在前端点击认领按钮，后端认领该nft到后端的钱包地址，（这个钱包地址就是托管钱包，一个后端的托管钱包可以对前端无数的用户进行托管）<br />
+4.等未来某个时刻，该用户绑定钱包地址后，该用户可以在前端（my_collections）点击按钮（把nft从托管钱包转移到我的钱包）， 后端就会发起请求，执行对应的操作。</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>1.创建一个Contract&nbsp;</p>
+
+<p>2、Contract add white list：白名单增加address，</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 认领人白名单：没有address就增加email，mobile，前端认领使用管理员address，备注email或mobile（增加列备注comment ， string）</p>
+
+<p>3.转移，用户绑定address，点击进行转移，transfer</p>
+
+<p>4、</p>
+

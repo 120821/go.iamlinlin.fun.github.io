@@ -1,0 +1,51 @@
+---
+layout: post
+title: "go使用，安装"
+date: "2022-06-09"
+categories: 
+---
+
+                    <p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p> 
+<p>Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，后来还加入了Ian Lance Taylor, Russ Cox等人，并最终于2009年11月开源，在2012年早些时候发布了Go 1稳定版本。现在Go的开发已经是完全开放的，并且拥有一个活跃的社区。</p> 
+<hr>
+<h2>Go 语言特色</h2> 
+<ul>
+<li>简洁、快速、安全</li>
+<li>并行、有趣、开源</li>
+<li>内存管理、数组安全、编译迅速</li>
+<li> <h2>Go 语言用途</h2> <p>Go 语言被设计成一门应用于搭载 Web 服务器，存储集群或类似用途的巨型中央服务器的系统编程语言。</p> <p>对于高性能分布式系统领域而言，Go 语言无疑比大多数其它语言有着更高的开发效率。它提供了海量并行的支持，这对于游戏服务端的开发而言是再好不过了。</p> 
+  <hr>
+<h2>第一个 Go 程序</h2> <p>接下来我们来编写第一个 Go 程序 hello.go（Go 语言源文件的扩展是 .go），代码如下：</p> <pre><code>package main
+
+import "fmt"
+
+func main() {
+   fmt.Println("Hello, World!")
+}
+</code></pre> <p><img alt="" height="344" src="https://img-blog.csdnimg.cn/3e8a465e3bae46a5b0c3c8f9710d597b.png" width="595"></p> <p> 安装</p> <p>sudo apt  install gccgo-go</p> <pre><code>Command 'go' not found, but can be installed with:
+sudo snap install go         # version 1.18.2, or
+sudo apt  install golang-go  # version 2:1.16~0ubuntu1
+sudo apt  install gccgo-go   # version 2:1.16~0ubuntu1
+See 'snap info go' for additional versions.
+</code></pre> </li>
+<li> <p><img alt="" height="620" src="https://img-blog.csdnimg.cn/b19b69f8752d492b9ab6257a02ed6221.png" width="1114"></p> <p>要执行 Go 语言代码可以使用 <strong>go run </strong>命令。</p> <p>执行以上代码输出:</p> <pre><code>$ go run hello.go 
+Hello, World!</code></pre> <p>此外我们还可以使用 go build 命令来生成二进制文件：</p> <pre><code>$ go build hello.go 
+$ ls
+hello    hello.go
+$ ./hello 
+Hello, World!</code></pre> <p></p> 
+  <blockquote> 
+   <p>将 /usr/local/go/bin 目录添加至 PATH 环境变量：</p> 
+   <pre>export PATH=$PATH:/usr/local/go/bin</pre> 
+   <p>以上只能暂时添加 PATH，关闭终端下次再登录就没有了。</p> 
+   <p>我们可以编辑 ~/.bash_profile 或者 /etc/profile，并将以下命令添加该文件的末尾，这样就永久生效了：</p> 
+   <pre>export PATH=$PATH:/usr/local/go/bin</pre> 
+   <p>添加后需要执行：</p> 
+   <pre>source ~/.bash_profile
+或
+source /etc/profile</pre> 
+  </blockquote> <pre><code>linlin@linlin-i5:/workspace/go_test$ vim ~/.bashrc
+linlin@linlin-i5:/workspace/go_test$ source ~/.bashrc
+linlin@linlin-i5:/workspace/go_test$</code></pre> <p></p> </li>
+</ul>
+                

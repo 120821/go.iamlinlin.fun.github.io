@@ -1,0 +1,16 @@
+---
+layout: post
+title: "if--最多出现三层"
+date: "2022-08-25"
+categories: 
+---
+<p>在不改变代码行为的前提下，修改代码的内容。</p>
+
+<p>比如，现在有一段代码，有5层if，而且有很多行都是重复的，必定是有问题的，因此需要进行简化</p>
+
+<p><img height="899" src="/uploads/ckeditor/pictures/337/image-20220825171907-1.png" width="1920" /></p>
+
+<p>修改后这样的</p>
+
+<p><img height="421" src="/uploads/ckeditor/pictures/338/image-20220825172158-2.png" width="1837" /></p>
+

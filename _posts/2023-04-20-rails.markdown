@@ -1,0 +1,28 @@
+---
+layout: post
+title: "rails 常量应该放在哪个文件"
+date: "2023-04-20"
+categories: 
+---
+<p>Rails 常量数组通常应该放在 Rails 应用程序的 config/initializers 文件夹中的任何 Ruby 文件中。这些文件在应用程序启动时自动加载。</p>
+
+<p>例如，如果您有一个名为 COUNTRIES 的常量数组，可以在 config/initializers/constants.rb 文件中定义它，如下所示：</p>
+
+<pre>
+<code>COUNTRIES = [&#39;USA&#39;, &#39;Canada&#39;, &#39;Mexico&#39;, &#39;France&#39;, &#39;Germany&#39;]</code></pre>
+
+<p>然后，您可以在整个应用程序中使用 COUNTRIES 常量。</p>
+
+<p>您也可以将常量数组定义为模块或类的类常量。例如，您可以创建一个名为 Constants 的模块，并在其中定义 COUNTRIES 常量，如下所示：</p>
+
+<pre>
+<code>module Constants
+
+&nbsp; COUNTRIES = [&#39;USA&#39;, &#39;Canada&#39;, &#39;Mexico&#39;, &#39;France&#39;, &#39;Germany&#39;]
+
+end</code></pre>
+
+<p>然后，在应用程序中，您可以使用 Constants::COUNTRIES 常量。</p>
+
+<p>无论您选择将常量数组定义为文件中的全局常量还是类常量，都需要确保它能在应用程序中正确地工作并与其他文件进行正确交互。</p>
+

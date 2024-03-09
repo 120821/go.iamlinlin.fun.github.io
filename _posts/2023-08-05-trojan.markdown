@@ -1,0 +1,160 @@
+---
+layout: post
+title: "trojan 简单使用"
+date: "2023-08-05"
+categories: 
+---
+<p>1.安装trojan</p>
+
+<p>git clone https://github.com/trojan-gfw/trojan.git</p>
+
+<p>2.修改配置(更换域名等）</p>
+
+<p>现在使用demo2.nextc1oud.com.crt</p>
+
+<p>使用demo2.nextc1oud.com.crt命名，内容如下：</p>
+
+<pre>
+<code>-----BEGIN CERTIFICATE-----
+
+MIIF/DCCBOSgAwIBAgIQDgIBBhNAWTpz5E6JDYRTxDANBgkqhkiG9w0BAQsFADBu
+
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3
+
+d3cuZGlnaWNlcnQuY29tMS0wKwYDVQQDEyRFbmNyeXB0aW9uIEV2ZXJ5d2hlcmUg
+
+RFYgVExTIENBIC0gRzEwHhcNMjMwNzExMDAwMDAwWhcNMjQwNzEwMjM1OTU5WjAe
+
+MRwwGgYDVQQDExNkZW1vMi5uZXh0YzFvdWQuY29tMIIBIjANBgkqhkiG9w0BAQEF
+
+AAOCAQ8AMIIBCgKCAQEA1jiW5yk/wX4lLK65WlSn0FT20VmcrWPITu+J+ZUqGMvO
+
+hr6B+7IPbZIl15Eg4Q6H2oBPK6ZX76QpvK+xZabaPaPP3h+IDd7VBYuoMi7/a07e
+
+GrhuvCfZh1AH6D0UBKFotNGaNou3thve1QOkgWDdfnhtJCvShk8gqrHH5O58NS92
+
+E+TR1mYXxKox8m2oTOtdStoKP7KD5CZPYKkF++9GF3Qb7mmxIH6R4e/FIiuunWF0
+
+BRcKcV63us5c0HsDPM8aPkTuVOtmuSTTZsthhPThLuYNm1tsCFO/MruSQqmifHy6
+
+Qeu8xWhjPK6Dmw/CsEoQTXV8zL7NLDgxpb26NLpZ0QIDAQABo4IC5DCCAuAwHwYD
+
+VR0jBBgwFoAUVXRPsnJP9WC6UNHX5lFcmgGHGtcwHQYDVR0OBBYEFAFY0k8Xt1ka
+
+29j+o3Y+bC+f0+BnMB4GA1UdEQQXMBWCE2RlbW8yLm5leHRjMW91ZC5jb20wDgYD
+
+VR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjA+BgNV
+
+HSAENzA1MDMGBmeBDAECATApMCcGCCsGAQUFBwIBFhtodHRwOi8vd3d3LmRpZ2lj
+
+ZXJ0LmNvbS9DUFMwgYAGCCsGAQUFBwEBBHQwcjAkBggrBgEFBQcwAYYYaHR0cDov
+
+L29jc3AuZGlnaWNlcnQuY29tMEoGCCsGAQUFBzAChj5odHRwOi8vY2FjZXJ0cy5k
+
+aWdpY2VydC5jb20vRW5jcnlwdGlvbkV2ZXJ5d2hlcmVEVlRMU0NBLUcxLmNydDAJ
+
+BgNVHRMEAjAAMIIBfwYKKwYBBAHWeQIEAgSCAW8EggFrAWkAdgDuzdBk1dsazsVc
+
+t520zROiModGfLzs3sNRSFlGcR+1mwAAAYlD+L1GAAAEAwBHMEUCIQDjlqUeUwtK
+
+hRWV9G/yKdhlgFhnRH3/y7Ps3FD0ZfAgvwIgWMRjIYQ5Qnf0IDI/qjU2T04LRCpZ
+
+beXPudzzf5YSRawAdgBIsONr2qZHNA/lagL6nTDrHFIBy1bdLIHZu7+rOdiEcwAA
+
+AYlD+L2kAAAEAwBHMEUCIGuLR0gEQ6VEOtd7GZpN0cBUaVQ7kfeqjfghym7LQiGc
+
+AiEAsV4Cx6codI5XAqD/Cy0Pje9lltZSBU+UjHiUVSINZx8AdwDatr9rP7W2Ip+b
+
+wrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYlD+L11AAAEAwBIMEYCIQDFQXBZdchR
+
+mfLzhebqu/P/6vHbTCeWW1bkA9e5WrFOVQIhAMrQoaTZJW2VREkpZAjbeqXcX54x
+
+a6l6SCzsgdVAzyPfMA0GCSqGSIb3DQEBCwUAA4IBAQAl+/6SXyrFa0zR9tbDbQIf
+
+VUsDutrghKF+WFRKcm/w8gTMWd04G+gPv7TskC3gC8BxX2bdMczM+513DB2kdiz7
+
+GFS1XmX+UFJ4ift96Cr+UekwLJqAuWnX8EtTRT4FweWiQPUR9JuYVYZfIVDcgMJg
+
+jgbjluQpc4L8HHpZGE0SB6c/SA35BkYuLD+nk9CkIHejoJyfpIWWZfHn3nIJnKGH
+
+bOhtlL65enbPLRJUpe6pJnF0nM9EGK1TG/Xj+JMWDlR2+PT93D5pQxY4Mver7I7U
+
+6H+ghLYAkTbI94GaMtFWlGOQtMbE19fGmhzMIVziORhOYI+Far69FzF/24YT3MN7
+
+-----END CERTIFICATE-----</code></pre>
+
+<p>修改config.json文件，替换为可以使用的域名进行访问：</p>
+
+<p>&nbsp;</p>
+
+<pre>
+<code>{
+
+&nbsp;&nbsp;&nbsp; &quot;run_type&quot;: &quot;client&quot;,
+
+&nbsp;&nbsp;&nbsp; &quot;local_addr&quot;: &quot;127.0.0.1&quot;,
+
+&nbsp;&nbsp;&nbsp; &quot;local_port&quot;: 1090,
+
+&nbsp;&nbsp;&nbsp; &quot;remote_addr&quot;: &quot;demo2.nextc1oud.com&quot;,
+
+&nbsp;&nbsp;&nbsp; &quot;remote_port&quot;: 443,
+
+&nbsp;&nbsp;&nbsp; &quot;password&quot;: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;showmethemoney&quot;
+
+&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp; &quot;log_level&quot;: 0,
+
+&nbsp;&nbsp;&nbsp; &quot;ssl&quot;: {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;verify&quot;: true,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;verify_hostname&quot;: true,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;cert&quot;: &quot;/workspace/coding_tools/trojan/demo2.nextc1oud.com.crt&quot;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;cipher&quot;: &quot;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES128-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA:AES128-SHA:AES256-SHA:DES-CBC3-SHA&quot;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;cipher_tls13&quot;: &quot;TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384&quot;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;sni&quot;: &quot;&quot;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;alpn&quot;: [
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;h2&quot;,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;http/1.1&quot;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ],
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;reuse_session&quot;: true,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;session_ticket&quot;: false,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;curves&quot;: &quot;&quot;
+
+&nbsp;&nbsp;&nbsp; },
+
+&nbsp;&nbsp;&nbsp; &quot;tcp&quot;: {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;no_delay&quot;: true,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;keep_alive&quot;: true,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;reuse_port&quot;: false,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fast_open&quot;: false,
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;fast_open_qlen&quot;: 20
+
+&nbsp;&nbsp;&nbsp; }
+
+}</code></pre>
+
+<p>在这个配置文件 里替换为可以使用的域名，设置端口号，启动的话就是./trojan即可。</p>
+
+<p>&nbsp;</p>
+

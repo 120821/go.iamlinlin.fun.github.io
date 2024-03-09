@@ -1,0 +1,10 @@
+---
+layout: post
+title: "web--TODO"
+date: "2022-08-18"
+categories: 
+---
+<p><a href="https://www.runoob.com/web/web-glossary.html">Web 词汇表</a></p>
+
+<p><a href="https://www.runoob.com/?s=web">some blogs</a></p>
+

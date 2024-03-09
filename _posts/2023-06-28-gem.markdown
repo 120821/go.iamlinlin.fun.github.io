@@ -1,0 +1,15 @@
+---
+layout: post
+title: "查看已经安装的所有的gem位置"
+date: "2023-06-28"
+categories: 
+---
+<p>你可以通过使用`gem list`命令来查看已经安装的所有的gem，并且展示它们的安装路径。</p>
+
+<p>在命令行中输入以下命令：</p>
+
+<pre>
+<code>gem list --details</code></pre>
+
+<p>这将会列出所有的gem，并且会显示它们的版本、作者、安装路径等详细信息。</p>
+

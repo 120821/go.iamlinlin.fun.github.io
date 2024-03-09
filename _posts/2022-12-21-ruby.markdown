@@ -1,0 +1,41 @@
+---
+layout: post
+title: "通过命令行将变量传递给ruby脚本"
+date: "2022-12-21"
+categories: 
+---
+<p>refer: <a href="https://www.learnhowtoprogram.com/ruby-and-rails/basic-ruby/basic-ruby-scripting">https://www.learnhowtoprogram.com/ruby-and-rails/basic-ruby/basic-ruby-scripting</a></p>
+
+<p>在hi.rb使用参数，内容如下：</p>
+
+<pre>
+<code>name = ARGV[0]
+
+puts &quot;Hello #{name}!&quot;</code></pre>
+
+<p>在命令行，传递参数并执行：</p>
+
+<pre>
+<code>ruby hi.rb</code></pre>
+
+<p>返回结果：</p>
+
+<pre>
+<code>Hello !</code></pre>
+
+<p>在命令行传递参数，</p>
+
+<pre>
+<code>ruby hi.rb jim</code></pre>
+
+<p>返回结果：</p>
+
+<pre>
+<code>Hello jim!</code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

@@ -1,0 +1,159 @@
+---
+layout: post
+title: "ruby - 单元测试（1）"
+date: "2022-11-22"
+categories: 
+---
+<p>参考：<a href="http://rails_book.siwei.me/part3_rails_premier/ruby_advanced.html">http://rails_book.siwei.me/part3_rails_premier/ruby_advanced.html</a></p>
+
+<p>ruby单元测试是不需要rails/sinatra的环境的。在代码比较多的时候，方便测试。</p>
+
+<p>测试的简单使用： apple_test.rb</p>
+
+<pre>
+<code class="lang-ruby"><span class="hljs-comment"># apple_test.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Apple</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">color</span></span>
+    <span class="hljs-string">&#39;red&#39;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">require</span> <span class="hljs-string">&#39;test/unit&#39;</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppleTest</span>&lt; Test::Unit::<span class="hljs-title">TestCase</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_color</span></span>
+    assert Apple.new.color == <span class="hljs-string">&#39;red&#39;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code>
+</pre>
+
+<p>运行： ruby apple_test.rb</p>
+
+<p><img height="220" src="/uploads/ckeditor/pictures/739/image-20221122165104-2.png" width="663" /></p>
+
+<p>rescue</p>
+
+<p>定义error</p>
+
+<pre>
+<code class="lang-ruby"><span class="hljs-comment"># test_error.rb</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">error</span></span>
+  raise <span class="hljs-string">&#39;I got error!&#39;</span>
+<span class="hljs-keyword">end</span>
+
+error</code></pre>
+
+<p><code class="lang-ruby">运行：</code></p>
+
+<p><img height="102" src="/uploads/ckeditor/pictures/740/image-20221122165335-3.png" width="503" /></p>
+
+<p>使用　begin..rescue ..end 来处理异常</p>
+
+<pre>
+<code class="lang-ruby"> <span class="hljs-comment"># test_rescue.rb</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">error</span></span>
+    <span class="hljs-keyword">begin</span>
+      raise <span class="hljs-string">&#39;I got error!&#39;</span>
+    <span class="hljs-keyword">rescue</span> Exception =&gt; e
+      puts e
+      puts e.backtrace
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+
+  error</code></pre>
+
+<p>运行，可以看到错误已经被打印出了：</p>
+
+<p><img height="87" src="/uploads/ckeditor/pictures/741/image-20221122165509-4.png" width="528" /></p>
+
+<p>block, proc, lambda都源自于函数式语言的概念，是函数式(functional progarmming)编程的体现。在函数式编程语言的世界中，这三种结构叫做闭包(closure)。 proc, lambda是可以单独调用的闭包，而block不可以。</p>
+
+<p>换句话说，proc和lambda可以转化成为block，当做参数传递给方法，但是block只能接在方法调用后面，不可以单独调用。</p>
+
+<p>在ruby当中，block是接在方法调用(method call)后面的do...end或者使用花括号({})包起来的代码块(code block)会，可以认为成方法的参数(parameter)。</p>
+
+<p>以下两种写法是等价的:</p>
+
+<pre>
+<code class="lang-ruby">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each <span class="hljs-keyword">do</span> |x|
+  puts x
+<span class="hljs-keyword">end</span></code></pre>
+
+<pre>
+<code class="lang-ruby">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each {|x| puts x}</code></pre>
+
+<p>proc对象：</p>
+
+<pre>
+<code class="lang-ruby">proc = Proc.new {|x| puts x*<span class="hljs-number">2</span>}
+proc.call(<span class="hljs-number">2</span>) <span class="hljs-comment"># 4</span></code></pre>
+
+<p>lambda对象：</p>
+
+<pre>
+<code class="lang-ruby">lam = lambda {|x| puts x*<span class="hljs-number">2</span>}
+lam.call(<span class="hljs-number">2</span>) <span class="hljs-comment"># 4</span></code></pre>
+
+<p>在使用block的地方使用proc和lambda：</p>
+
+<pre>
+<code class="lang-ruby">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each {|x| puts x*<span class="hljs-number">2</span> } <span class="hljs-comment"># 2, 4, 6</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each(&amp;proc) <span class="hljs-comment"># 2, 4, 6</span>
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each(&amp;lam)  <span class="hljs-comment"># 2, 4, 6</span></code></pre>
+
+<p>lambda和proc的两个重要区别是:</p>
+
+<ul>
+	<li>Proc对象对参数数量检查不严格, lambda对象则要求参数的数量精确匹配</li>
+	<li>Proc对象和lambda对象对return关键字的处理不一样</li>
+</ul>
+
+<p>在block 中，如果要返回一个值，直接把它放在最后就可以了．例如：</p>
+
+<pre>
+<code class="lang-ruby">result = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>].map { |e|
+  puts <span class="hljs-string">&quot;e is: <span class="hljs-subst">#{e}</span>&quot;</span>
+  e * <span class="hljs-number">3</span>
+}
+
+<span class="hljs-comment"># 结果是：</span>
+e <span class="hljs-symbol">is:</span> <span class="hljs-number">1</span>
+e <span class="hljs-symbol">is:</span> <span class="hljs-number">2</span>
+e <span class="hljs-symbol">is:</span> <span class="hljs-number">3</span>
+=&gt; [<span class="hljs-number">3</span>, <span class="hljs-number">6</span>, <span class="hljs-number">9</span>]</code></pre>
+
+<p><code class="lang-ruby">module的使用：</code></p>
+
+<pre>
+<code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Fruit</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">test_method</span></span>
+    <span class="hljs-string">&quot;this is a test method in module&quot;</span>
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">taste</span></span>
+    <span class="hljs-string">&#39;good&#39;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span></code></pre>
+
+<p><code>include</code>用来包含一个module到class里面，module里面的普通方法会变成class里面的instance method:</p>
+
+<pre>
+<code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Apple</span></span>
+  <span class="hljs-keyword">include</span> Fruit
+<span class="hljs-keyword">end</span>
+puts Apple.new.taste
+<span class="hljs-comment"># =&gt; good</span></code></pre>
+
+<p><code>extend</code>把Module中的普通方法方法变成 &quot;class method&quot;</p>
+
+<pre>
+<code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Orange</span></span>
+  extend Fruit
+<span class="hljs-keyword">end</span>
+
+puts Orange.taste
+<span class="hljs-comment"># =&gt; good</span></code></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+

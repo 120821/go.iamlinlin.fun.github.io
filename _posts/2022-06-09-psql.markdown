@@ -1,0 +1,31 @@
+---
+layout: post
+title: "psql数据库无法连接"
+date: "2022-06-09"
+categories: 
+---
+
+                    <blockquote> 
+ <p><span style="color:#fe2c24;">Is the server running on host "localhost" (::1) and accepting TCP/IP connections on port 5432?</span></p> 
+ <p><span style="color:#fe2c24;">could not connect to server: Connection refused Is the server running on host "127.0.0.1" and accepting TCP/IP connections on port 5432?</span></p> 
+ <p>无法连接到服务器：连接被拒绝服务器是否在主机“127.0.0.1”上运行并在端口5432上接受TCP/IP连接？</p> 
+</blockquote> 
+<p>查看psql是否在运行</p> 
+<pre><code>ps -ef|grep postgres</code></pre> 
+<blockquote> 
+ <p>ps -ef | grep postgres 查看某个进程</p> 
+ <p>ps -ef 查看全部进程</p> 
+</blockquote> 
+<p>如果没有运行的话，启动即可</p> 
+<pre><code>pg_ctl start</code></pre> 
+<pre><code>Linux 系统可以直接切换到 postgres 用户来开启命令行工具：
+
+#  sudo -i -u postgres</code></pre> 
+<pre><code>修改一个数据库。
+
+ALTER DATABASE name SET parameter { TO | = } { value | DEFAULT }
+ALTER DATABASE name RESET parameter
+ALTER DATABASE name RENAME TO new_name
+ALTER DATABASE name OWNER TO new_owner</code></pre> 
+<p></p>
+                

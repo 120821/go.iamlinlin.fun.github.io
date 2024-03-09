@@ -1,0 +1,71 @@
+---
+layout: post
+title: "SCSS css"
+date: "2022-08-11"
+categories: 
+---
+<p>参考：<a href="https://www.geeksforgeeks.org/what-is-the-difference-between-css-and-scss/">https://www.geeksforgeeks.org/what-is-the-difference-between-css-and-scss/</a></p>
+
+<p><a href="https://www.geeksforgeeks.org/css-tutorials/">CSS 教程</a>和 <a href="https://www.geeksforgeeks.org/css-examples/">CSS 示例</a></p>
+
+<p>了解：</p>
+
+<p>CSS：级联样式表基本上是脚本语言。&nbsp; CSS用于设计网页。<br />
+&nbsp;CSS 是最重要的 Web 技术，与 HTML 和 JavaScript 一起被广泛使用。&nbsp; CSS 的文件扩展名为 .css。<br />
+&nbsp;SCSS : Syntactically Awesome Style Sheet 是 CSS 的超集。&nbsp; SCSS 是 CSS 的更高级版本。&nbsp; SCSS 由 Hampton Catlin 设计，由 Chris Eppstein 和 Natalie Weizenbaum 开发。&nbsp; 由于其高级功能，它通常被称为 Sassy CSS。&nbsp; SCSS 的文件扩展名为 .scss。</p>
+
+<p>区别：</p>
+
+<p>SCSS 包含 CSS 的所有特性，并包含更多 CSS 中不存在的特性，这使其成为开发人员使用它的好选择。<br />
+&nbsp;SCSS 充满了高级功能。<br />
+&nbsp;SCSS 提供变量，您可以使用变量来缩短代码。&nbsp; 与传统的 CSS 相比，这是一个很大的优势。</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; 示例：在 CSS 中</p>
+
+<pre>
+<code>
+body{
+ color: #ffffff;
+ font: $ubuntu-font: &#39;Ubuntu&#39;, 
+                     &#39;Arial&#39;,
+                     &#39;Helvetica&#39;,
+                      sans-serif;
+ font-size: xx-large;
+ padding: 2rem;
+}</code></pre>
+
+<p><img alt="" class="aligncenter" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630134649/Screenshot-2022-06-30-134753.png" /></p>
+
+<pre><code>
+$white: #ffffff;
+$ubuntu-font: $ubuntu-font: &#39;Ubuntu&#39;, &#39;Arial&#39;, &#39;Helvetica&#39;, sans-serif;
+
+body{
+ color: $white;
+ font: $ubuntu-font;
+ font-size: xx-large;
+ padding: 2rem;
+}</code></pre>
+
+<p><img alt="" class="aligncenter" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630134649/Screenshot-2022-06-30-134753.png" /></p>
+
+<p>了解 SCSS 可以帮助您自定义 Bootstrap 4。<br />
+&nbsp;SASS 添加了@import 功能，可以让您导入自定义的 SCSS 文件。</p>
+
+<p>SASS 允许我们使用嵌套语法。&nbsp; 假设您必须在 &#39;footer&#39; 中的 &#39;div&#39; 中设置特定的 &#39;paragraph&#39; 样式，您绝对可以通过 SASS 来做到这一点。<br />
+&nbsp;例子</p>
+
+<pre><code>
+footer {
+    div {
+        p {
+            margin: 2rem;
+            color: #2f2f2f;
+        }
+    }
+}</code></pre>
+
+<p>最后，使 SASS 成为一个不错的选择的原因在于它有据可查。</p>
+
+<p>&nbsp;CSS 是网页的基础，通过样式化网站和 Web 应用程序用于网页开发。您可以按照本 <a href="https://www.geeksforgeeks.org/css-tutorials/">CSS 教程</a>和 <a href="https://www.geeksforgeeks.org/css-examples/">CSS 示例</a>从头开始学习 CSS。</p>
+

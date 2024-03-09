@@ -1,0 +1,14 @@
+---
+layout: post
+title: "js 字符串 换行"
+date: "2023-09-22"
+categories: 
+---
+<p>使用反斜杠（\）来表示换行</p>
+
+<pre>
+<code><span style="color:#dcc6e0">var</span> str = <span style="color:#abe338">&quot;这是一个跨行\
+</span><span style="color:#abe338">字符串&quot;</span>;
+<span style="color:#f5ab35">console</span>.log(str);
+</code></pre>
+

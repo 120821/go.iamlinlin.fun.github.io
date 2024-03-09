@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Vue3.0 使用单独的css 文件，并且引用"
+date: "2023-11-14"
+categories: 
+---
+<p>1.写一个css文件：</p>
+
+<p><code>styles.css</code></p>
+
+<p>2.引入：（打开你的Vue组件文件（<code>.vue</code>文件），在文件的顶部添加一个<code>&lt;style&gt;</code>标签。）</p>
+
+<pre>
+<code>&lt;style&gt;
+@import &#39;./styles.css&#39;;
+&lt;/style&gt;</code></pre>
+

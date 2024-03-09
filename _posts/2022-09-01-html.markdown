@@ -1,0 +1,16 @@
+---
+layout: post
+title: "html 单个空格，两个空格"
+date: "2022-09-01"
+categories: 
+---
+<p><a href="https://blog.csdn.net/wangyuntuan/article/details/124247499">https://blog.csdn.net/wangyuntuan/article/details/124247499</a></p>
+
+<p>单个空格：</p>
+
+<pre><code>&amp;nbsp;</code></pre>
+
+<p>两个空格：</p>
+
+<pre><code>&amp;emsp;</code></pre>
+
