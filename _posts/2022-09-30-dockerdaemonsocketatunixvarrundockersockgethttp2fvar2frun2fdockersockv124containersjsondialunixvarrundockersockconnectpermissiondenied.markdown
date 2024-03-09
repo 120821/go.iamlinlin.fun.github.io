@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Docker daemon socket at unix:///var/run/docker.sock: Get "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json": dial unix /var/run/docker.sock: connect: permission denied"
+title: "Docker daemon socket at unix:///var/run/docker.sock: Get 'http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/json': dial unix /var/run/docker.sock: connect: permission denied"
 date: "2022-09-30"
-categories: 
+categories:
 ---
 <p><a href="https://newbedev.com/got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket-at-unix-var-run-docker-sock-get-http-2fvar-2frun-2fdocker-sock-v1-24-containers-json-dial-unix-var-run-docker-sock-connect-permission-denied-docker-code-example">docker </a></p>
 

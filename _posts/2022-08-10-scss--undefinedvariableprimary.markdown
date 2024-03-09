@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "scss--Undefined variable: "$primary"."
+title: "scss--Undefined variable: '$primary'."
 date: "2022-08-10"
-categories: 
+categories:
 ---
 <p>https://stackoverflow.com/questions/68988793/scss-variable-not-applying-globally<br />
 https://stackoverflow.com/questions/17598996/sass-use-variables-across-multiple-files</p>
