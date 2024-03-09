@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "postgres 备份本地的所有数据库"
-date: "2023-12-22"
+date: 2023-12-22
 categories: jekyll update
 ---
 <p>1.在命令行直接输入：</p>
