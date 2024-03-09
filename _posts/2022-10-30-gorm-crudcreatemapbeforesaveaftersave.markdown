@@ -2,7 +2,7 @@
 layout: post
 title: "gorm -  CRUD 接口 (create) map  beforesave aftersave "
 date: "2022-10-30"
-categories: 
+categories:
 ---
 <p><a href="https://learnku.com/docs/gorm/v2/create/9732">https://learnku.com/docs/gorm/v2/create/9732</a></p>
 
@@ -26,7 +26,8 @@ result.RowsAffected // 返回插入记录的条数</code></pre>
 <p>创建记录并更新未给出的字段。</p>
 
 <pre><code>db.Omit(&quot;Name&quot;, &quot;Age&quot;, &quot;CreatedAt&quot;).Create(&amp;user)<br />
-// INSERT INTO `users` (`birthday`,`updated_at`) VALUES (&quot;2020-01-01 00:00:00.000&quot;, &quot;2020-07-04 11:05:21.775&quot;)</code></pre>
+// INSERT INTO `users` (`birthday`,`updated_at`) VALUES ("2020-01-01 00:00:00.000", "2020-07-04 11:05:21.775")
+</code></pre>
 
 <p id="1f7cfd"><strong>批量插入</strong></p>
 
