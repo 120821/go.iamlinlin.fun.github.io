@@ -9,7 +9,7 @@ categories:
 <pre>
 <code>&lt;div class=&quot;image-frame&quot;&gt;
   &lt;img src=&quot;your-image.jpg&quot; alt=&quot;Your Image&quot;&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>我就可以修改样式：（如果效果不明显可以修改距离，也可以调整时间）</p>
 
@@ -37,5 +37,5 @@ categories:
   <span style="color:#f5ab35">100%</span> {
     <span style="color:#ffd700">transform</span>: <span style="color:#f5ab35">translateY</span>(<span style="color:#f5ab35">0</span>);
   }
-}</code></pre>
+}{% endhighlight %}
 

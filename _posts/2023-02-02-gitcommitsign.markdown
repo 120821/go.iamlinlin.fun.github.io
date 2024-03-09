@@ -15,17 +15,17 @@ categories:
 <pre>
 <code># Ubuntu
 
-sudo apt-get install gpa seahorse</code></pre>
+sudo apt-get install gpa seahorse{% endhighlight %}
 
 <p>2. 生成:&nbsp;</p>
 
 <pre>
-<code>gpg --gen-key</code></pre>
+<code>gpg --gen-key{% endhighlight %}
 
 <p>3. 列出来:</p>
 
 <pre>
-<code>gpg --list-secret-keys --keyid-format=long</code></pre>
+<code>gpg --list-secret-keys --keyid-format=long{% endhighlight %}
 
 <p>看到输出结果：</p>
 
@@ -35,7 +35,7 @@ sec   rsa3072/&lt;你的秘钥&gt;</pre>
 <p>4. 复制上面的 &lt;你的秘钥&gt;&nbsp; ，然后列出它的完整内容：</p>
 
 <pre>
-<code>$ gpg --armor --export &lt;你的秘钥&gt;</code></pre>
+<code>$ gpg --armor --export &lt;你的秘钥&gt;{% endhighlight %}
 
 <p>把输出的结果从begin行到end行复制到GitHub中，路径为：settings -&gt; ssh and gpg keys -&gt; new gpg key</p>
 
@@ -47,7 +47,7 @@ sec   rsa3072/&lt;你的秘钥&gt;</pre>
   email = &lt;email&gt;
   signingkey = &lt;你的秘钥&gt; (增加这一行)
 [commit] (增加这一行)
-  gpgsign = true (增加这一行)</code></pre>
+  gpgsign = true (增加这一行){% endhighlight %}
 
 <p>&nbsp;</p>
 

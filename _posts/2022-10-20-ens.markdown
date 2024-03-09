@@ -38,7 +38,7 @@ async function main(){
 &nbsp; console.info(&quot;== name is: &quot;, name)
 
 }
-main()</code></pre>
+main(){% endhighlight %}
 
 <p>使用： node reverse_name.js &lt;你的address&gt; 就可以查询反向解析的域名了</p>
 </div>

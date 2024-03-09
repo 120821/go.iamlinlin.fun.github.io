@@ -36,7 +36,7 @@ categories:
 <p>3.如果不升效，就先使用</p>
 
 <pre class="lang-bash s-code-block">
-<code class="hljs language-bash"><span class="hljs-built_in">source</span> ~/.bashrc</code></pre>
+<code class="hljs language-bash"><span class="hljs-built_in">source</span> ~/.bashrc{% endhighlight %}
 
 <p><code>然后进行renametab hihihi</code></p>
 

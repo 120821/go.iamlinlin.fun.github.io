@@ -10,8 +10,8 @@ categories:
 <p>w-screen w-auto</p> 
 <p>高度同理，h-0等</p> 
 <p>文本位置也是比较方便的  text-center  text-left  text-right text-justify</p> 
-<pre><code>&lt;div class="w-24 md:w-auto"&gt; &lt;/div&gt;自定义宽度
-&lt;div class="h-12 w-screen" &gt;&lt;/div&gt;整个页面</code></pre> 
+{% highlight %}&lt;div class="w-24 md:w-auto"&gt; &lt;/div&gt;自定义宽度
+&lt;div class="h-12 w-screen" &gt;&lt;/div&gt;整个页面{% endhighlight %} 
 <p>宽度其他会用的样式</p> 
 <blockquote> 
  <p>min-w-0    min-width: 0px;<br> min-w-full    min-width: 100%;<br> min-w-min    min-width: min-content;<br> min-w-max    min-width: max-content;</p> 

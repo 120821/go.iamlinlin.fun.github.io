@@ -8,20 +8,20 @@ categories:
 1.在本地分支(确保当前的分支是存在*的）：</p>
 
 <pre>
-<code><span style="color:#ffd700">git branch</span></code></pre>
+<code><span style="color:#ffd700">git branch</span>{% endhighlight %}
 
 <p>2.拉取远程最新的修改：</p>
 
 <pre>
-<code>git pull <span style="color:#d4d0ab">--rebase</span></code></pre>
+<code>git pull <span style="color:#d4d0ab">--rebase</span>{% endhighlight %}
 
 <p>3.如果冲突就解决：</p>
 
 <pre>
-<code>git rebase --<span style="color:#dcc6e0">continue</span></code></pre>
+<code>git rebase --<span style="color:#dcc6e0">continue</span>{% endhighlight %}
 
 <p>4.如果放弃就：</p>
 
 <pre>
-<code>git rebase <span style="color:#d4d0ab">--abort</span></code></pre>
+<code>git rebase <span style="color:#d4d0ab">--abort</span>{% endhighlight %}
 

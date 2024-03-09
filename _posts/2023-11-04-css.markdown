@@ -9,6 +9,6 @@ categories:
 <code><span style="color:#dcc6e0">p</span> {
   <span style="color:#ffd700">line-height</span>: <span style="color:#f5ab35">1.5</span>; <span style="color:#d4d0ab">/* 默认值为 normal */</span>
 }
-</code></pre>
+{% endhighlight %}
 </div>
 

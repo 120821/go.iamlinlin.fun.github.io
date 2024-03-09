@@ -91,7 +91,7 @@ loop do
 
 &nbsp; result = JSON.parse(response)
 
-&nbsp; Rails.logger.info &quot;=== step 2 after post, result: #{result} response.code, #{response.code} ===response.headers is #{response.headers} query: #{query}&quot;</code></pre>
+&nbsp; Rails.logger.info &quot;=== step 2 after post, result: #{result} response.code, #{response.code} ===response.headers is #{response.headers} query: #{query}&quot;{% endhighlight %}
 
 <p>&nbsp;</p>
 

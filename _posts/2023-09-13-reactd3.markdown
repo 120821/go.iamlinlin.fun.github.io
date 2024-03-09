@@ -11,12 +11,12 @@ categories:
 <p>1.首先安装:</p>
 
 <pre>
-<code>npm install d3 topojson</code></pre>
+<code>npm install d3 topojson{% endhighlight %}
 
 <p><code>或者使用</code></p>
 
 <pre>
-<code>yarn add d3 topojson</code></pre>
+<code>yarn add d3 topojson{% endhighlight %}
 
 <p><code>2.</code>react中引入:</p>
 
@@ -24,7 +24,7 @@ categories:
 <code>import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
 import china from &#39;./china.json&#39;; // 导入拓扑数据
-</code></pre>
+{% endhighlight %}
 
 <p dir="auto">3.同样，创建钩子:</p>
 
@@ -57,7 +57,7 @@ import china from &#39;./china.json&#39;; // 导入拓扑数据
   }, []);
 
   return &lt;svg ref={svgRef} width=&quot;1000&quot; height=&quot;1000&quot; /&gt;;
-};</code></pre>
+};{% endhighlight %}
 
 <p>上面的例子里使用了 D3 的 <code>select</code> 方法选择 SVG 元素，创建一个地理投影 <code>projection</code>用于将地理坐标转换为屏幕坐标。 然后，我们创建一个路径生成器 <code>pathGenerator</code>，它将根据地理投影生成路径</p>
 
@@ -83,7 +83,7 @@ const App = () =&gt; {
 };
 
 export default App;
-</code></pre>
+{% endhighlight %}
 
 <div class="position-absolute right-0 top-0 zeroclipboard-container">我这里其实是出错了，调整后，还是不行。。。。。</div>
 

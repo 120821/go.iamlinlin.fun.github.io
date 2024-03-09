@@ -27,17 +27,17 @@ categories:
 
 -rw-r--r-- 1 root root 12587764 Mar 14 08:00 2023_03_14_08_00_01.sql.zip
 
--rw-r--r-- 1 root root 12587764 Mar 14 10:00 2023_03_14_10_00_01.sql.zip</code></pre>
+-rw-r--r-- 1 root root 12587764 Mar 14 10:00 2023_03_14_10_00_01.sql.zip{% endhighlight %}
 
 <p>解压缩：</p>
 
 <pre>
-<code>unzip 2023_03_14_10_00_01.sql.zip</code></pre>
+<code>unzip 2023_03_14_10_00_01.sql.zip{% endhighlight %}
 
 <p>2.在命令行进入sql</p>
 
 <pre>
-<code>mysql -uroot -p  # 登录到数据库</code></pre>
+<code>mysql -uroot -p  # 登录到数据库{% endhighlight %}
 
 <pre>
 <code>mysql&gt; CREATE DATABASE test_db;&nbsp; //创建数据库表test_db
@@ -54,7 +54,7 @@ Query OK, 0 rows affected (0.32 sec)
 
 Query OK, 0 rows affected (0.09 sec)
 
-Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功</code></pre>
+Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功{% endhighlight %}
 
 <p>3.查看是否已经恢复：</p>
 
@@ -71,7 +71,7 @@ Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功</code></pre>
 
 +---------------------+
 
-6 rows in set (0.00 sec)</code></pre>
+6 rows in set (0.00 sec){% endhighlight %}
 
 <pre>
 <code>mysql&gt; DESC&nbsp; tbl_del_users;&nbsp; //查看tbl_del_users数据库表结构
@@ -86,5 +86,5 @@ Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功</code></pre>
 
 | passwd&nbsp;&nbsp;&nbsp; | varchar(20) | NO&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; | NULL&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</code></pre>
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;{% endhighlight %}
 

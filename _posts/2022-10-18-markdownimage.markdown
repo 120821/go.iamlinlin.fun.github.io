@@ -10,5 +10,5 @@ categories:
 
 <pre>
 <code>![image info](./pictures/image.png)
-</code></pre>
+{% endhighlight %}
 

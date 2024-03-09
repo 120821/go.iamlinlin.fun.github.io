@@ -8,9 +8,9 @@ categories:
 
 <p>单个空格：</p>
 
-<pre><code>&amp;nbsp;</code></pre>
+{% highlight %}&amp;nbsp;{% endhighlight %}
 
 <p>两个空格：</p>
 
-<pre><code>&amp;emsp;</code></pre>
+{% highlight %}&amp;emsp;{% endhighlight %}
 

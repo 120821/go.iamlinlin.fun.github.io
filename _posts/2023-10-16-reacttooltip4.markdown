@@ -7,12 +7,12 @@ categories:
 <p>在地图组件里，我有这样的代码，（显示了10位小数）</p>
 
 <pre>
-<code>.text(d.properties.name + &quot;:&quot; + d.properties.emission);</code></pre>
+<code>.text(d.properties.name + &quot;:&quot; + d.properties.emission);{% endhighlight %}
 
 <p>修改为显示4位小数</p>
 
 <pre>
-<code>.text(d.properties.name + &quot;:&quot; + d.properties.emission.toFixed(4));</code></pre>
+<code>.text(d.properties.name + &quot;:&quot; + d.properties.emission.toFixed(4));{% endhighlight %}
 
 <p>&nbsp;</p>
 

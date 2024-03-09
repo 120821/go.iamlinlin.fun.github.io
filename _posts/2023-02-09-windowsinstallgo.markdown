@@ -15,7 +15,7 @@ categories:
 <p>3.查看go的环境变量：</p>
 
 <pre>
-<code>go env</code></pre>
+<code>go env{% endhighlight %}
 
 <p>4.进入gopath，没有go文件夹，就创建go文件夹。</p>
 
@@ -28,22 +28,22 @@ categories:
 <p>7.创建模块管理文件：go.mod</p>
 
 <pre>
-<code>go mod init src</code></pre>
+<code>go mod init src{% endhighlight %}
 
 <p>8.在src目录下再创建俩个文件夹，一个叫main,一个叫tool。</p>
 
 <pre>
-<code>cd src</code></pre>
+<code>cd src{% endhighlight %}
 
 <pre>
-<code>mkdir main tool</code></pre>
+<code>mkdir main tool{% endhighlight %}
 
 <p>9.在main文件夹写第一个测试文件hello_world.go：</p>
 
 <pre>
 <code>cat hello_world.go
 
-package main</code></pre>
+package main{% endhighlight %}
 
 <pre>
 <code>import &quot;fmt&quot;
@@ -54,17 +54,17 @@ func main(){
 
 &nbsp; fmt.Println(&quot;first commit&quot;)
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>10.运行hello_world.go</p>
 
 <pre>
-<code>go run hello_world.go</code></pre>
+<code>go run hello_world.go{% endhighlight %}
 
 <p>返回结果：</p>
 
 <pre>
-<code>hello_world</code></pre>
+<code>hello_world{% endhighlight %}
 
 <p>&nbsp;</p>
 

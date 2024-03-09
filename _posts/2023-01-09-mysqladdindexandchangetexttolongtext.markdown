@@ -17,7 +17,7 @@ categories:
 <p><code>或者 mysql -uroot -pxxx</code></p>
 
 <pre>
-<code>ALTER TABLE `table` ADD INDEX `product_id_index` (`product_id`)</code></pre>
+<code>ALTER TABLE `table` ADD INDEX `product_id_index` (`product_id`){% endhighlight %}
 
 <p>2.使用mysql进行保存文章，当文章太长的时候，就会出现报错，进行数据类型的修改即可：<a href="https://stackoverflow.com/questions/1827063/mysql-error-key-specification-without-a-key-length">https://stackoverflow.com/questions/1827063/mysql-error-key-specification-without-a-key-length</a></p>
 

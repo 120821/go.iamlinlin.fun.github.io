@@ -30,14 +30,14 @@ categories:
 </tbody>
 </table>
  <p>于是,</p> 
- <pre><code class="language-ruby">&lt;%= options_from_collection_for_select Book.all, :id, :title %&gt;</code></pre> 
+ <pre><code class="language-ruby">&lt;%= options_from_collection_for_select Book.all, :id, :title %&gt;{% endhighlight %} 
  <p>会生成:</p> 
- <pre><code>&lt;option value="1"&gt;三体1&lt;/option&gt;
+ {% highlight %}&lt;option value="1"&gt;三体1&lt;/option&gt;
 &lt;option value="2"&gt;三体2&lt;/option&gt;
 &lt;option value="3"&gt;三体3&lt;/option&gt;
-</code></pre> 
+{% endhighlight %} 
 </blockquote> 
-<pre><code>&lt;%= select_tag "dapp_category_id", options_from_collection_for_select(DappCategory.all, :id, :name), class:'form-control' %&gt;</code></pre> 
+{% highlight %}&lt;%= select_tag "dapp_category_id", options_from_collection_for_select(DappCategory.all, :id, :name), class:'form-control' %&gt;{% endhighlight %} 
 <blockquote> 
  <p>在dapp表格中。读取dapp分类的所有数据，进行选择。</p> 
 </blockquote> 

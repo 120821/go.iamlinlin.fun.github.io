@@ -10,19 +10,19 @@ categories:
 <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/de123ab4a4d34577958b8abb42c84e5e.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <blockquote> 
  <p>全局默认值在$HOME/中管理。工具版本。将全局版本设置为：</p> 
- <pre><code>
+ {% highlight %}
 asdf global nodejs latest
 
-</code></pre> 
+{% endhighlight %} 
  <p>$HOME/。工具版本将如下所示：</p> 
- <pre><code>
-nodejs 16.5.0</code></pre> 
+ {% highlight %}
+nodejs 16.5.0{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>本地版本在$PWD/中定义。需要增加<code>$PWD/.tool-versions</code>工具版本文件（当前工作目录），文件内容是所需要的软件名字加上版本号码。通常，这将是Git对项目的响应。在所需目录中执行：</p> 
- <pre><code>asdf local nodejs latest</code></pre> 
+ {% highlight %}asdf local nodejs latest{% endhighlight %} 
  <p>$PWD/。工具版本将如下所示：</p> 
- <pre><code>nodejs 16.5.0</code></pre> 
+ {% highlight %}nodejs 16.5.0{% endhighlight %} 
  <p></p> 
 </blockquote> 
 <pre><code class="language-html">可用插件清单:
@@ -36,5 +36,5 @@ asdf install {<!-- -->{软件包名}} {<!-- -->{版本}}
 设置软件包的全局安装版本:
 asdf global {<!-- -->{软件包名}} {<!-- -->{版本}}
 设置软件包的本地版本:
-asdf local {<!-- -->{软件包名}} {<!-- -->{版本}}</code></pre>
+asdf local {<!-- -->{软件包名}} {<!-- -->{版本}}{% endhighlight %}
                 

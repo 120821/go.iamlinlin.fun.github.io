@@ -11,7 +11,7 @@ categories:
 <p>使用官方的脚本：（推荐）</p>
 
 <pre>
-<code>curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \chmod 755 msfinstall &amp;&amp; \./msfinstall</code></pre>
+<code>curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \chmod 755 msfinstall &amp;&amp; \./msfinstall{% endhighlight %}
 
 <p>如果不行，可以使用手动安装，进入参考文章里看。</p>
 
@@ -26,34 +26,34 @@ categories:
 <p>更新一下MSF：</p>
 
 <pre>
-<code>sudo msfupdate</code></pre>
+<code>sudo msfupdate{% endhighlight %}
 
 <p>启动MSF</p>
 
 <pre>
-<code>msfconsole </code></pre>
+<code>msfconsole {% endhighlight %}
 
 <p>连接数据库：（自己根据用户名密码数据库进行修改）</p>
 
 <pre>
-<code>db_connect postgres:hehehe@127.0.0.1/test //用户名，密码，地址，自己随意编造的名字。</code></pre>
+<code>db_connect postgres:hehehe@127.0.0.1/test //用户名，密码，地址，自己随意编造的名字。{% endhighlight %}
 
 <p>查看数据库的状态：</p>
 
 <pre>
-<code>db_status //查看数据库连接状态 </code></pre>
+<code>db_status //查看数据库连接状态 {% endhighlight %}
 
 <pre>
 <code>msf6 &gt; db_status
 
-[*] Connected to blogs. Connection type: postgresql.</code></pre>
+[*] Connected to blogs. Connection type: postgresql.{% endhighlight %}
 
 <p>简单使用：</p>
 
 <p>测试是否可以访问目标机器：</p>
 
 <pre>
-<code>ping 192.168.174.129</code></pre>
+<code>ping 192.168.174.129{% endhighlight %}
 
 <pre>
 <code>ping 192.168.174.129
@@ -66,7 +66,7 @@ PING 192.168.174.129 (192.168.174.129) 56(84) bytes of data.
 
 --- 192.168.174.129 ping statistics ---
 
-19 packets transmitted, 0 received, 100% packet loss, time 18412ms</code></pre>
+19 packets transmitted, 0 received, 100% packet loss, time 18412ms{% endhighlight %}
 
 <p>根据漏洞的编号进行搜索：</p>
 
@@ -92,12 +92,12 @@ Matching Modules
 &nbsp;&nbsp; 3&nbsp; auxiliary/scanner/smb/smb_ms17_010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; normal&nbsp;&nbsp; No&nbsp;&nbsp;&nbsp;&nbsp; MS17-010 SMB RCE Detection
 
 
-Interact with a module by name or index. For example info 3, use 3 or use auxiliary/scanner/smb/smb_ms17_010</code></pre>
+Interact with a module by name or index. For example info 3, use 3 or use auxiliary/scanner/smb/smb_ms17_010{% endhighlight %}
 
 <p>搜索某年的漏洞：</p>
 
 <pre>
-<code>msf6 &gt; search cve-2023</code></pre>
+<code>msf6 &gt; search cve-2023{% endhighlight %}
 
 <pre>
 <code>Matching Modules
@@ -152,7 +152,7 @@ Interact with a module by name or index. For example info 3, use 3 or use auxili
 
 &nbsp;&nbsp; 75&nbsp; exploit/linux/http/pyload_js2py_exec&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2023-01-13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excellent&nbsp; Yes&nbsp;&nbsp;&nbsp; pyLoad js2py Python Execution
 
-Interact with a module by name or index. For example info 75, use 75 or use exploit/linux/http/pyload_js2py_exec</code></pre>
+Interact with a module by name or index. For example info 75, use 75 or use exploit/linux/http/pyload_js2py_exec{% endhighlight %}
 
 <p>&nbsp;</p>
 

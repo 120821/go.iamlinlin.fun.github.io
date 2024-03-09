@@ -8,17 +8,17 @@ categories:
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
 <code>python3 -m venv patator-env
-source patator-env/bin/activate</code></pre>
+source patator-env/bin/activate{% endhighlight %}
 
 <p>2.在激活的虚拟环境安装patator:</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>pip install patator</code></pre>
+<code>pip install patator{% endhighlight %}
 
 <p>3.运行</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>patator [patator-arguments]</code></pre>
+<code>patator [patator-arguments]{% endhighlight %}
 
 <p>但是我安装失败了：</p>
 
@@ -65,7 +65,7 @@ source patator-env/bin/activate</code></pre>
 │ <span style="color:#f5ab35">exit</span> <span style="color:#f5ab35">code</span>: 1
 ╰─&gt; See <span style="color:#f5ab35">above</span> <span style="color:#f5ab35">for</span> <span style="color:#f5ab35">output</span>.
 
-<span style="color:#f5ab35">note</span>: This <span style="color:#f5ab35">error</span> <span style="color:#f5ab35">originates</span> <span style="color:#f5ab35">from</span> <span style="color:#f5ab35">a</span> <span style="color:#f5ab35">subprocess</span>, <span style="color:#f5ab35">and</span> <span style="color:#f5ab35">is</span> <span style="color:#f5ab35">likely</span> <span style="color:#f5ab35">not</span> <span style="color:#f5ab35">a</span> <span style="color:#f5ab35">problem</span> <span style="color:#f5ab35">with</span> <span style="color:#f5ab35">pip</span>.</code></pre>
+<span style="color:#f5ab35">note</span>: This <span style="color:#f5ab35">error</span> <span style="color:#f5ab35">originates</span> <span style="color:#f5ab35">from</span> <span style="color:#f5ab35">a</span> <span style="color:#f5ab35">subprocess</span>, <span style="color:#f5ab35">and</span> <span style="color:#f5ab35">is</span> <span style="color:#f5ab35">likely</span> <span style="color:#f5ab35">not</span> <span style="color:#f5ab35">a</span> <span style="color:#f5ab35">problem</span> <span style="color:#f5ab35">with</span> <span style="color:#f5ab35">pip</span>.{% endhighlight %}
 </div>
 
 <p>我安装依赖：</p>
@@ -76,12 +76,12 @@ source patator-env/bin/activate</code></pre>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
 <code>export MYSQLCLIENT_CFLAGS=&quot;-I/usr/include/mysql&quot;
-export MYSQLCLIENT_LDFLAGS=&quot;-L/usr/lib/x86_64-linux-gnu -lmysqlclient&quot;</code></pre>
+export MYSQLCLIENT_LDFLAGS=&quot;-L/usr/lib/x86_64-linux-gnu -lmysqlclient&quot;{% endhighlight %}
 
 <p>重新安装：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>pip install patator</code></pre>
+<code>pip install patator{% endhighlight %}
 
 <p>但是还是不行：</p>
 
@@ -101,7 +101,7 @@ export MYSQLCLIENT_LDFLAGS=&quot;-L/usr/lib/x86_64-linux-gnu -lmysqlclient&quot;
 <span style="color:#ffd700">Successfully</span> installed IPy-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">1</span> Jinja<span style="color:#f5ab35">2</span>-<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">2</span> MarkupSafe-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">3</span> Werkzeug-<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">1</span> ajpy-<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">5</span> bcrypt-<span style="color:#f5ab35">4</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">1</span> blinker-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">7</span>.<span style="color:#f5ab35">0</span> cffi-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">16</span>.<span style="color:#f5ab35">0</span> charset_normalizer-<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">2</span> click-<span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">7</span> cryptography-<span style="color:#f5ab35">41</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">7</span> cx-Oracle-<span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">0</span> dsinternals-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">4</span> flask-<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">0</span> future-<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">18</span>.<span style="color:#f5ab35">3</span> impacket-<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">11</span>.<span style="color:#f5ab35">0</span> itsdangerous-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">2</span> ldap<span style="color:#f5ab35">3</span>-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">9</span>.<span style="color:#f5ab35">1</span> ldapdomaindump-<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">9</span>.<span style="color:#f5ab35">4</span> mysqlclient-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">1</span> paramiko-<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">1</span> patator-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">0</span> psycopg<span style="color:#f5ab35">2</span>-binary-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">9</span>.<span style="color:#f5ab35">9</span> pycparser-<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">21</span> pycurl-<span style="color:#f5ab35">7</span>.<span style="color:#f5ab35">45</span>.<span style="color:#f5ab35">2</span> pyopenssl-<span style="color:#f5ab35">23</span>.<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">0</span> pysmi-<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">3</span>.<span style="color:#f5ab35">4</span> pysnmp-<span style="color:#f5ab35">4</span>.<span style="color:#f5ab35">4</span>.<span style="color:#f5ab35">12</span> pysqlcipher<span style="color:#f5ab35">3</span>
 <span style="color:#ffd700">linlin</span>@linlin-i<span style="color:#f5ab35">5</span>:~/Videos$ patator
 <span style="color:#ffd700">Command</span> &#39;patator&#39; not found, but can be installed with:
-<span style="color:#ffd700">sudo</span> apt install patator</code></pre>
+<span style="color:#ffd700">sudo</span> apt install patator{% endhighlight %}
 </div>
 
 <p>使用apt安装可能会破坏我现在的环境，所以我选择使用docker安装。</p>

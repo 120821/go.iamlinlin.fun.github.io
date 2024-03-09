@@ -13,10 +13,10 @@ categories:
 <p>然后进行文件的传送：</p>
 
 <pre>
-<code>scp file.txt remote_username@10.10.0.2:/remote/directory</code></pre>
+<code>scp file.txt remote_username@10.10.0.2:/remote/directory{% endhighlight %}
 
 <pre>
-<code>scp test_linlin_blog.zip root@linlin.fun:~/workspace/</code></pre>
+<code>scp test_linlin_blog.zip root@linlin.fun:~/workspace/{% endhighlight %}
 
 <p><code>这样就可以传送成功了：</code></p>
 
@@ -24,5 +24,5 @@ categories:
 
 <p>在远程进行解压缩:</p>
 
-<pre><code>unzip asdf.zip</code></pre>
+{% highlight %}unzip asdf.zip{% endhighlight %}
 

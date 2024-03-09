@@ -19,11 +19,11 @@ db.Model(User{}).Create(map[string]interface{}{
 
 })
 
-// INSERT INTO `users` (`name`,`point`) VALUES (&quot;jinzhu&quot;,ST_PointFromText(&quot;POINT(100 100)&quot;));</code></pre>
+// INSERT INTO `users` (`name`,`point`) VALUES (&quot;jinzhu&quot;,ST_PointFromText(&quot;POINT(100 100)&quot;));{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<pre><code>// 通过自定义类型创建记录<br />
+{% highlight %}// 通过自定义类型创建记录<br />
 type Location struct {<br />
 &nbsp;&nbsp;&nbsp; X, Y int<br />
 } / Scan 方法实现了 sql.Scanner 接口<br />
@@ -43,7 +43,7 @@ func (loc *Location) Scan(v interface{}) error {<br />
 &nbsp; Name:&nbsp;&nbsp;&nbsp;&nbsp; &quot;jinzhu&quot;,<br />
 &nbsp; Location: Location{X: 100, Y: 100},<br />
 })<br />
-// INSERT INTO `users` (`name`,`point`) VALUES (&quot;jinzhu&quot;,ST_PointFromText(&quot;POINT(100 100)&quot;))</code></pre>
+// INSERT INTO `users` (`name`,`point`) VALUES (&quot;jinzhu&quot;,ST_PointFromText(&quot;POINT(100 100)&quot;)){% endhighlight %}
 
 <p id="f43bde"><strong>关联创建</strong></p>
 
@@ -80,7 +80,7 @@ db.Create(&amp;User{
 
 // INSERT INTO `users` ...
 
-// INSERT INTO `credit_cards` ...</code></pre>
+// INSERT INTO `credit_cards` ...{% endhighlight %}
 
 <p>您也可以通过 <code>Select</code>、 <code>Omit</code> 跳过关联保存，例如：</p>
 
@@ -89,7 +89,7 @@ db.Create(&amp;User{
 
 // 跳过所有关联
 
-db.Omit(clause.Associations).Create(&amp;user)</code></pre>
+db.Omit(clause.Associations).Create(&amp;user){% endhighlight %}
 
 <p id="225f3e"><strong>默认值</strong></p>
 
@@ -104,7 +104,7 @@ db.Omit(clause.Associations).Create(&amp;user)</code></pre>
 
 &nbsp; Age&nbsp; int64&nbsp; `gorm:&quot;default:18&quot;`
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>插入记录到数据库时，默认值 <em>会被用于</em> 填充值为 <a href="https://tour.golang.org/basics/12" rel="nofollow noopener noreferrer">零值</a> 的字段</p>
 
@@ -121,7 +121,7 @@ db.Omit(clause.Associations).Create(&amp;user)</code></pre>
 
 &nbsp; Active sql.NullBool `gorm:&quot;default:true&quot;`
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>若要数据库有默认、虚拟 / 生成的值，你必须为字段设置 <code>default</code> 标签。若要在迁移时跳过默认值定义，你可以使用 <code>default:(-)</code>，例如：</p>
 <rep><code>type User struct {<br />
@@ -183,7 +183,7 @@ db.Clauses(clause.OnConflict{
 
 }).Create(&amp;users)
 
-// INSERT INTO &quot;users&quot; *** ON CONFLICT (&quot;id&quot;) DO UPDATE SET &quot;name&quot;=&quot;excluded&quot;.&quot;name&quot;, &quot;age&quot;=&quot;excluded&quot;.&quot;age&quot;, ...;</code></pre>
+// INSERT INTO &quot;users&quot; *** ON CONFLICT (&quot;id&quot;) DO UPDATE SET &quot;name&quot;=&quot;excluded&quot;.&quot;name&quot;, &quot;age&quot;=&quot;excluded&quot;.&quot;age&quot;, ...;{% endhighlight %}
 
 <p>&nbsp;</p>
 </rep>

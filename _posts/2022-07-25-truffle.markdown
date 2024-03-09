@@ -58,7 +58,7 @@ Truffle v4.0.1 - a development framework for Ethereum</p>
 <pre>
 <code>npm uninstall -g truffle
 npm install -g truffle
-</code></pre>
+{% endhighlight %}
 
 <p>npm install -g truffle<br />
 npm WARN deprecated mkdirp-promise@5.0.1: This package is broken and no longer maintained. &#39;mkdirp&#39; itself supports promises now, please switch to that.<br />

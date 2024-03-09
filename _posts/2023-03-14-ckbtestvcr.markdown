@@ -25,7 +25,7 @@ categories:
 
 &nbsp; config.default_cassette_options[:match_requests_on] = [:method, :path, :body]
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>（2）在单元测试增加：</p>
 
@@ -60,7 +60,7 @@ end</code></pre>
 
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end{% endhighlight %}
 
 <p>（3）单元测试的方法会生成这样的yml文件：</p>
 
@@ -73,7 +73,7 @@ end</code></pre>
 
 &nbsp;&nbsp; &nbsp;vcr_fixtures/vcr_cassettes/get_transaction_fees_for_last_n_days_transaction_fee_rates.yml
 
-&nbsp;&nbsp; &nbsp;vcr_fixtures/vcr_cassettes/get_transaction_fees_for_pending_tx.yml</code></pre>
+&nbsp;&nbsp; &nbsp;vcr_fixtures/vcr_cassettes/get_transaction_fees_for_pending_tx.yml{% endhighlight %}
 
 <p>查看第一个文件：</p>
 
@@ -148,7 +148,7 @@ http_interactions:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Content-Length:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &#39;648&#39;</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &#39;648&#39;{% endhighlight %}
 
 <p>查看最后一个pending的文件：</p>
 
@@ -221,7 +221,7 @@ http_interactions:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; encoding: UTF-8
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string: &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;transaction&quot;:{&quot;cell_deps&quot;:[{&quot;dep_type&quot;:&quot;dep_group&quot;,&quot;out_point&quot;:{&quot;index&quot;:&quot;0x0&quot;,&quot;tx_hash&quot;:&quot;0x71a7ba8fc96349fea0ed3a5c47992e3b</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string: &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;transaction&quot;:{&quot;cell_deps&quot;:[{&quot;dep_type&quot;:&quot;dep_group&quot;,&quot;out_point&quot;:{&quot;index&quot;:&quot;0x0&quot;,&quot;tx_hash&quot;:&quot;0x71a7ba8fc96349fea0ed3a5c47992e3b{% endhighlight %}
 
 <p>&nbsp;</p>
 

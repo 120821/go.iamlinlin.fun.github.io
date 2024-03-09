@@ -14,12 +14,12 @@ categories:
 <p>(1)下载</p>
 
 <pre>
-<code>wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz</code></pre>
+<code>wget https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
 
 <p>(2)解压文件到新版本文件夹</p>
 
 <pre>
-<code>sudo tar -zxvf go1.18.3.linux-amd64.tar.gz </code></pre>
+<code>sudo tar -zxvf go1.18.3.linux-amd64.tar.gz {% endhighlight %}
 
 <p>然后修改.bashrc (/home/linlin/.bashrc)即可。把原来的1.19替换为1.18.</p>
 </div>

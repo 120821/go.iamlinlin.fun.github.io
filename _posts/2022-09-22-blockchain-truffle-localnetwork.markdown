@@ -11,22 +11,22 @@ categories:
 <p>运行部署</p>
 
 <pre>
-<code>truffle deploy --network=ganache</code></pre>
+<code>truffle deploy --network=ganache{% endhighlight %}
 
 <p>运行某个脚本</p>
 
 <pre>
-<code>truffle exec &lt;yourfile.js&gt;</code></pre>
+<code>truffle exec &lt;yourfile.js&gt;{% endhighlight %}
 
 <p>查看帮助</p>
 
 <pre>
-<code>truffle help</code></pre>
+<code>truffle help{% endhighlight %}
 
 <p>仅仅运行某个migration</p>
 
 <pre>
-<code>truffle migrate --f 9 --network=ganache</code></pre>
+<code>truffle migrate --f 9 --network=ganache{% endhighlight %}
 
 <p>$truffle develop</p>
 
@@ -58,7 +58,7 @@ categories:
 &nbsp; deployer.deploy(Contract-name);<br />
 };</p>
 
-<pre><code>truffle deploy --network ganacheNet --verbose-rpc --interactive --reset</code></pre>
+{% highlight %}truffle deploy --network ganacheNet --verbose-rpc --interactive --reset{% endhighlight %}
 
 <p>使用这个命令可以进行合约的重新部署。--network 可以进行网络的选择，根据配置文件的内容进行书写。</p>
 

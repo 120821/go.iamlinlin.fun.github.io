@@ -21,7 +21,7 @@ categories:
 &nbsp; let a = 0;
 &nbsp; a // 0 
 } 
-a // 报错 ReferenceError: a is not defined</code></pre>
+a // 报错 ReferenceError: a is not defined{% endhighlight %}
 
 <pre>
 <code>const：
@@ -47,7 +47,7 @@ for (let j = 0; j &lt; 10; j++) {
 &nbsp; setTimeout(function(){ 
 &nbsp; &nbsp; console.log(j); }
 &nbsp; )=
-} // 输出 0123456789</code></pre>
+} // 输出 0123456789{% endhighlight %}
 
 <p>变量 i 是用 var 声明的，在全局范围内有效，所以全局中只有一个变量 i, 每次循环时，setTimeout 定时器里面的 i 指的是全局变量 i ，而循环里的十个 setTimeout 是在循环结束后才执行，所以此时的 i 都是 10。</p>
 
@@ -68,18 +68,18 @@ for (let j = 0; j &lt; 10; j++) {
 
 <p>基本用法:</p>
 
-<pre><code>const&nbsp;PI&nbsp;=&nbsp;&quot;3.1415926&quot;;<br />
+{% highlight %}const&nbsp;PI&nbsp;=&nbsp;&quot;3.1415926&quot;;<br />
 PI &nbsp;// 3.1415926<br />
 <br />
-const&nbsp;MY_AGE;&nbsp;&nbsp;// SyntaxError: Missing initializer in const declaration</code></pre>
+const&nbsp;MY_AGE;&nbsp;&nbsp;// SyntaxError: Missing initializer in const declaration{% endhighlight %}
 
 <p>暂时性死区:</p>
 
-<pre><code>var&nbsp;PI&nbsp;=&nbsp;&quot;a&quot;;<br />
+{% highlight %}var&nbsp;PI&nbsp;=&nbsp;&quot;a&quot;;<br />
 if(true){<br />
 &nbsp; console.log(PI);&nbsp;&nbsp;// Cannot access &#39;PI&#39; before initialization<br />
 &nbsp;&nbsp;const&nbsp;PI&nbsp;=&nbsp;&quot;3.1415926&quot;;<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>ES6 明确规定，代码块内如果存在 let 或者 const，代码块会对这些命令声明的变量从块的开始就形成一个封闭作用域。代码块内，在声明变量 PI 之前使用它会报错。</p>
 

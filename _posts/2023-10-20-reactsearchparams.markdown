@@ -37,7 +37,7 @@ const MyComponent = () =&gt; {
   return &lt;div&gt;My Component&lt;/div&gt;;
 };
 
-export default MyComponent;</code></pre>
+export default MyComponent;{% endhighlight %}
 
 <p><code>对于</code><a href="http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18" target="_blank">http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18</a></p>
 
@@ -73,7 +73,7 @@ const MyComponent = () =&gt; {
   return &lt;div&gt;My Component&lt;/div&gt;;
 };
 
-export default MyComponent;</code></pre>
+export default MyComponent;{% endhighlight %}
 
 <p>上面的代码中使用了React的<code>useEffect</code>钩子，并将其依赖数组设置为空数组<code>[]</code>，以确保只在组件加载时执行一次。这样可以在组件加载时对URL的查询参数进行处理。</p>
 

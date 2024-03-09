@@ -11,7 +11,7 @@ categories:
 <p><span class="marked">tail -f filename</span> 会把 filename 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 filename 更新就可以看到最新的文件内容。</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="pln">tail </span><span class="pun">[参数]</span><span class="pln"> </span><span class="pun">[文件]</span><span class="pln">  </span></code></pre>
+<code><span class="pln">tail </span><span class="pun">[参数]</span><span class="pln"> </span><span class="pun">[文件]</span><span class="pln">  </span>{% endhighlight %}
 
 <ul>
 	<li>-f 循环读取</li>

@@ -15,7 +15,7 @@ categories:
     data={refrigerationDefaultData} 
     onDataChange={this.handleDataChangeForRefrigeration} 
   /&gt; 
-)}</code></pre>
+)}{% endhighlight %}
 
 <p>&nbsp;</p>
 

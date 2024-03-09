@@ -17,7 +17,7 @@ categories:
 	}
 	return arr
 }
-</code></pre>
+{% endhighlight %}
 
 <p>在main函数调用</p>
 
@@ -28,7 +28,7 @@ categories:
     // prints
     // [0, 1, 2, 3, 4, 5]
 }
-</code></pre>
+{% endhighlight %}
 </div>
 
 <p>&nbsp;</p>

@@ -15,7 +15,7 @@ categories:
 <span class="token comment"># 如果你使用 Windows:</span>
 del *
 <span class="token comment"># 然后回到项目文件夹</span>
-<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span></code></pre>
+<span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>{% endhighlight %}
 
 <p><img height="159" src="/uploads/ckeditor/pictures/276/image-20220818142354-1.png" width="1080" /></p>
 
@@ -48,7 +48,7 @@ del *
 <code class="gatsby-code-jsx"><span class="token keyword">class</span> <span class="token class-name">Board</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
   <span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="gatsby-highlight-code-line">    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Square</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span></span>  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>修改 Square 组件中的 <code class="gatsby-code-text">render</code> 方法，把 <code class="gatsby-code-text">{/* TODO */}</code> 替换为 <code class="gatsby-code-text">{this.props.value}</code>，以显示上文中传入的值：</p>
 
@@ -61,7 +61,7 @@ del *
 <span class="gatsby-highlight-code-line"><span class="token plain-text">        </span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p><code>可以看到发生变化：(</code>成功地把一个 prop 从父组件 Board &ldquo;传递&rdquo;给了子组件 Square。在 React 应用中，数据通过 props 的传递，从父组件流向子组件<code>)</code></p>
 
@@ -80,7 +80,7 @@ del *
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>如果此刻点击某个格子，将在浏览器的开发者工具中打印 &lsquo;click<img height="162" src="/uploads/ckeditor/pictures/279/image-20220818143838-4.png" width="799" /></p>
 
@@ -95,7 +95,7 @@ del *
 <span class="token plain-text">     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
    <span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p><img height="179" src="/uploads/ckeditor/pictures/280/image-20220818144031-5.png" width="1191" /></p>
 
@@ -120,7 +120,7 @@ del *
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>在 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes" rel="nofollow noopener noreferrer" target="_blank">JavaScript class</a> 中，每次你定义其子类的构造函数时，都需要调用 <code class="gatsby-code-text">super</code> 方法。因此，在所有含有构造函数的的 React 组件中，构造函数必须以 <code class="gatsby-code-text">super(props)</code> 开头。</p>
 
@@ -151,7 +151,7 @@ del *
 <span class="gatsby-highlight-code-line"><span class="token plain-text">        </span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>在 Square 组件 <code class="gatsby-code-text">render</code> 方法中的 <code class="gatsby-code-text">onClick</code> 事件监听函数中调用 <code class="gatsby-code-text">this.setState</code>，我们就可以在每次 <code class="gatsby-code-text">&lt;button&gt;</code> 被点击的时候通知 React 去重新渲染 Square 组件。组件更新之后，Square 组件的 <code class="gatsby-code-text">this.state.value</code> 的值会变为 <code class="gatsby-code-text">&#39;X&#39;</code>，因此，我们在游戏棋盘上就能看见 <code class="gatsby-code-text">X</code> 了。点击任意一个方格，<code class="gatsby-code-text">X</code> 就会出现了。</p>
 
@@ -165,7 +165,7 @@ del *
 <span class="gatsby-highlight-code-line">  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">props</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      <span class="token literal-property property">squares</span><span class="token operator">:</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span>
   <span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Square</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>当我们填充棋盘后，<code class="gatsby-code-text">this.state.squares</code> 数组的值可能如下所示：</p>
 
@@ -175,20 +175,20 @@ del *
   <span class="token string">&#39;O&#39;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">&#39;X&#39;</span><span class="token punctuation">,</span>
   <span class="token string">&#39;X&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;X&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;O&#39;</span><span class="token punctuation">,</span>
   <span class="token string">&#39;O&#39;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
-<span class="token punctuation">]</span></code></pre>
+<span class="token punctuation">]</span>{% endhighlight %}
 
 <p>Board 组件当前的 <code class="gatsby-code-text">renderSquare</code> 方法看起来像下面这样：</p>
 
 <pre class="gatsby-code-jsx">
 <code class="gatsby-code-jsx"> <span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Square</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>i<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>让我们再一次使用 prop 的传递机制。我们通过修改 Board 来指示每一个 Square 的当前值（<code class="gatsby-code-text">&#39;X&#39;</code>, <code class="gatsby-code-text">&#39;O&#39;</code>, 或者 <code class="gatsby-code-text">null</code>）。我们在 Board 的构造函数中已经定义好了 <code class="gatsby-code-text">squares</code> 数组，这样，我们就可以通过修改 Board 的 <code class="gatsby-code-text">renderSquare</code> 方法来读取这些值了。</p>
 
 <pre class="gatsby-code-jsx">
 <code class="gatsby-code-jsx"><span class="token function">renderSquare</span><span class="token punctuation">(</span><span class="token parameter">i</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-<span class="gatsby-highlight-code-line">    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Square</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>squares<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span></span>  <span class="token punctuation">}</span></code></pre>
+<span class="gatsby-highlight-code-line">    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Square</span></span> <span class="token attr-name">value</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>squares<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span><span class="token punctuation">;</span></span>  <span class="token punctuation">}</span>{% endhighlight %}
 </div>
 </div>
 
@@ -227,7 +227,7 @@ del *
 <span class="gatsby-highlight-code-line"><span class="token plain-text">        </span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>value<span class="token punctuation">}</span></span><span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>每一个 Square 被点击时，Board 提供的 <code class="gatsby-code-text">onClick</code> 函数就会触发。我们回顾一下这是怎么实现的：</p>
 
@@ -301,7 +301,7 @@ del *
 <pre class="gatsby-code-jsx">
 <code class="gatsby-code-jsx"><span class="token keyword">var</span> player <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token literal-property property">score</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">&#39;Jeff&#39;</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 player<span class="token punctuation">.</span>score <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token comment">// player 修改后的值为 {score: 2, name: &#39;Jeff&#39;}</span></code></pre>
+<span class="token comment">// player 修改后的值为 {score: 2, name: &#39;Jeff&#39;}</span>{% endhighlight %}
 
 <p id="data-change-without-mutation">新数据替换旧数据</p>
 
@@ -313,7 +313,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token comment">// player 的值没有改变, 但是 newPlayer 的值是 {score: 2, name: &#39;Jeff&#39;}</span>
 
 <span class="token comment">// 使用对象展开语法，就可以写成：</span>
-<span class="token comment">// var newPlayer = {...player, score: 2};</span></code></pre>
+<span class="token comment">// var newPlayer = {...player, score: 2};</span>{% endhighlight %}
 
 <p>接下来我们把 Square 组件重写为一个<strong>函数组件</strong>。</p>
 
@@ -329,7 +329,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
       </span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>value<span class="token punctuation">}</span><span class="token plain-text">
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>我们把两个 <code class="gatsby-code-text">this.props</code> 都替换成了 <code class="gatsby-code-text">props</code>。</p>
 
@@ -349,7 +349,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
     <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
       <span class="token literal-property property">squares</span><span class="token operator">:</span> <span class="token function">Array</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="gatsby-highlight-code-line">      <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span></span>    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>棋子每移动一步，<code class="gatsby-code-text">xIsNext</code>（布尔值）都会反转，该值将确定下一步轮到哪个玩家，并且游戏的状态会被保存下来。我们将通过修改 Board 组件的 <code class="gatsby-code-text">handleClick</code> 函数来反转 <code class="gatsby-code-text">xIsNext</code> 的值：</p>
 
@@ -360,7 +360,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="gatsby-highlight-code-line">    squares<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext <span class="token operator">?</span> <span class="token string">&#39;X&#39;</span> <span class="token operator">:</span> <span class="token string">&#39;O&#39;</span><span class="token punctuation">;</span></span>    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
       <span class="token literal-property property">squares</span><span class="token operator">:</span> squares<span class="token punctuation">,</span>
 <span class="gatsby-highlight-code-line">      <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext<span class="token punctuation">,</span></span>    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>修改之后，我们就实现了 &ldquo;X&rdquo; 和 &ldquo;O&rdquo; 轮流落子的效果。尝试玩一下。</p>
 
@@ -370,7 +370,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <code class="gatsby-code-jsx"> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> status <span class="token operator">=</span> <span class="token string">&#39;Next player: &#39;</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext <span class="token operator">?</span> <span class="token string">&#39;X&#39;</span> <span class="token operator">:</span> <span class="token string">&#39;O&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token comment">// 其他部分没有改变</span></code></pre>
+      <span class="token comment">// 其他部分没有改变</span>{% endhighlight %}
 
 <p>现在你整个的 Board 组件的代码应该是下面这样的：</p>
 
@@ -419,7 +419,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p id="declaring-a-winner">判断出胜者</p>
 
@@ -445,7 +445,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
   <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>传入长度为 9 的数组，此函数将判断出获胜者，并根据情况返回 &ldquo;X&rdquo;，&ldquo;O&rdquo; 或 &ldquo;null&rdquo;。</p>
 
@@ -455,7 +455,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <code class="gatsby-code-jsx"> <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 <span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> winner <span class="token operator">=</span> <span class="token function">calculateWinner</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>squares<span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">let</span> status<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">if</span> <span class="token punctuation">(</span>winner<span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      status <span class="token operator">=</span> <span class="token string">&#39;Winner: &#39;</span> <span class="token operator">+</span> winner<span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      status <span class="token operator">=</span> <span class="token string">&#39;Next player: &#39;</span> <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext <span class="token operator">?</span> <span class="token string">&#39;X&#39;</span> <span class="token operator">:</span> <span class="token string">&#39;O&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span></span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span>
-      <span class="token comment">// 其他部分没有修改</span></code></pre>
+      <span class="token comment">// 其他部分没有修改</span>{% endhighlight %}
 
 <p>最后，修改 <code class="gatsby-code-text">handleClick</code> 事件，当有玩家胜出时，或者某个 Square 已经被填充时，该函数不做任何处理直接返回。</p>
 
@@ -468,7 +468,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
       <span class="token literal-property property">squares</span><span class="token operator">:</span> squares<span class="token punctuation">,</span>
       <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p id="storing-a-history-of-moves">保存历史记录</p>
 
@@ -512,7 +512,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token comment">// ...</span>
-<span class="token punctuation">]</span></code></pre>
+<span class="token punctuation">]</span>{% endhighlight %}
 
 <p>现在，我们需要确定应该在哪一个组件里保存 <code class="gatsby-code-text">history</code> 这个 state。</p>
 
@@ -542,7 +542,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 </div>
 </div>
 </div>
@@ -610,7 +610,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
+<span class="token punctuation">}</span>{% endhighlight %}
 
 <p>接着，更新 Game 组件的 <code class="gatsby-code-text">render</code> 函数，使用最新一次历史记录来确定并展示游戏的状态：</p>
 
@@ -626,7 +626,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>由于 Game 组件渲染了游戏的状态，因此我们可以将 Board 组件 <code class="gatsby-code-text">render</code> 方法中对应的代码移除。修改之后，Board 组件的 <code class="gatsby-code-text">render</code> 函数如下所示：</p>
 
@@ -647,7 +647,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>最后，我们需要把 Board 组件的 <code class="gatsby-code-text">handleClick</code> 方法移动 Game 组件中。同时，我们也需要修改一下 <code class="gatsby-code-text">handleClick</code> 方法，因为这两个组件的 state 在结构上有所不同。在 Game 组件的 <code class="gatsby-code-text">handleClick</code> 方法中，我们需要把新的历史记录拼接到 <code class="gatsby-code-text">history</code> 上。</p>
 
@@ -660,7 +660,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
 <span class="gatsby-highlight-code-line">      <span class="token literal-property property">history</span><span class="token operator">:</span> history<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">        <span class="token literal-property property">squares</span><span class="token operator">:</span> squares<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span></span>      <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p><code class="gatsby-code-text">concat()</code> 方法可能与你比较熟悉的 <code class="gatsby-code-text">push()</code> 方法不太一样，它并不会改变原数组，所以我们推荐使用 <code class="gatsby-code-text">concat()</code>。</p>
 
@@ -676,7 +676,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <div class="gatsby-highlight" data-language="jsx">
 <pre class="gatsby-code-jsx">
 <code class="gatsby-code-jsx"><span class="token keyword">const</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> doubled <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=&gt;</span> x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [2, 4, 6]</span></code></pre>
+<span class="token keyword">const</span> doubled <span class="token operator">=</span> numbers<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">x</span> <span class="token operator">=&gt;</span> x <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// [2, 4, 6]</span>{% endhighlight %}
 
 <p>我们可以通过使用 <code class="gatsby-code-text">map</code> 方法，把历史步骤映射为代表按钮的 React 元素，然后可以展示出一个按钮的列表，点击这些按钮，可以&ldquo;跳转&rdquo;到对应的历史步骤。</p>
 
@@ -710,7 +710,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="gatsby-highlight-code-line"><span class="token plain-text">          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>moves<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span></span><span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
     <span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 </div>
 
 <p>当我们遍历 <code class="gatsby-code-text">history</code> 数组时，<code class="gatsby-code-text">step</code> 变量指向的是当前 <code class="gatsby-code-text">history</code> 元素的值，而 <code class="gatsby-code-text">move</code> 则指向的是 <code class="gatsby-code-text">history</code> 元素的索引。此处，我们只对 <code class="gatsby-code-text">move</code> 感兴趣，因此未对 <code class="gatsby-code-text">step</code> 做任何处理。</p>
@@ -732,7 +732,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <div class="gatsby-highlight" data-language="html">
 <pre class="gatsby-code-html">
 <code class="gatsby-code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Alexa: 7 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Ben: 5 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Ben: 5 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>{% endhighlight %}
 
 <p>转换成下面的代码</p>
 
@@ -740,13 +740,13 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <pre class="gatsby-code-html">
 <code class="gatsby-code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Ben: 9 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Claudia: 8 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Alexa: 5 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Alexa: 5 tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>{% endhighlight %}
 
 <p>除了数字发生了改变之外，阅读这段代码的人也许会认为我们把 Alexa 和 Ben 的顺序交换了位置，然后把 Claudia 插入到 Alexa 和 Ben 之间。然而，React 是电脑程序，它并不知道我们想要什么。因为 React 无法得知我们人类的意图，所以我们需要给每一个列表项一个确定的 <em>key</em> 属性，它可以用来区分不同的列表项和他们的同级兄弟列表项。你可以使用字符串，比如 <code class="gatsby-code-text">alexa</code>, <code class="gatsby-code-text">ben</code>, <code class="gatsby-code-text">claudia</code>。如果我们使用从数据库里获取的数据，那么 Alexa、Ben 和 Claudia 的数据库 ID 就可以作为 key 来使用。</p>
 
 <div class="gatsby-highlight" data-language="html">
 <pre class="gatsby-code-html">
-<code class="gatsby-code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{user.id}</span><span class="token punctuation">&gt;</span></span>{user.name}: {user.taskCount} tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></code></pre>
+<code class="gatsby-code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>{user.id}</span><span class="token punctuation">&gt;</span></span>{user.name}: {user.taskCount} tasks left<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>{% endhighlight %}
 
 <p>每当一个列表重新渲染时，React 会根据每一项列表元素的 key 来检索上一次渲染时与每个 key 所匹配的列表项。如果 React 发现当前的列表有一个之前不存在的 key，那么就会创建出一个新的组件。如果 React 发现和之前对比少了一个 key，那么就会销毁之前对应的组件。如果一个组件的 key 发生了变化，这个组件会被销毁，然后使用新的 state 重新创建一份。</p>
 
@@ -773,7 +773,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="gatsby-highlight-code-line">        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">key</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>move<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span></span><span class="token plain-text">          </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">jumpTo</span><span class="token punctuation">(</span>move<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>desc<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token plain-text">        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
       <span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>{% endhighlight %}
 
 <p>因为 <code class="gatsby-code-text">jumpTo</code> 还未定义，所以你点击列表项的按钮时，会出现报错。在我们实现 <code class="gatsby-code-text">jumpTo</code> 之前，我们向 Game 组件的 state 中添加 <code class="gatsby-code-text">stepNumber</code>，这个值代表我们当前正在查看哪一项历史记录。</p>
 
@@ -802,7 +802,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
 <span class="gatsby-highlight-code-line">  <span class="token function">jumpTo</span><span class="token punctuation">(</span><span class="token parameter">step</span><span class="token punctuation">)</span> <span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span></span><span class="gatsby-highlight-code-line">      <span class="token literal-property property">stepNumber</span><span class="token operator">:</span> step<span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">      <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token punctuation">(</span>step <span class="token operator">%</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">,</span></span><span class="gatsby-highlight-code-line">    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="gatsby-highlight-code-line">  <span class="token punctuation">}</span></span>
   <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment">// 这个方法无更改</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>在 <code class="gatsby-code-text">jumpTo</code> 方法中, 我们没有更新 state 中的 <code class="gatsby-code-text">history</code> 属性。这是因为 state 更新被合并了，或者用更简单的话说，React 不会更新 <code class="gatsby-code-text">setState</code> 方法中未提到的属性。<strong><a href="https://zh-hans.reactjs.org/docs/state-and-lifecycle.html#state-updates-are-merged">这篇文档</a></strong>对此有更详细的介绍。</p>
 
@@ -826,7 +826,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
       <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
 <span class="gatsby-highlight-code-line">      <span class="token literal-property property">stepNumber</span><span class="token operator">:</span> history<span class="token punctuation">.</span>length<span class="token punctuation">,</span></span>      <span class="token literal-property property">xIsNext</span><span class="token operator">:</span> <span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>xIsNext<span class="token punctuation">,</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre>
+  <span class="token punctuation">}</span>{% endhighlight %}
 
 <p>最后，修改 Game 组件的 <code class="gatsby-code-text">render</code> 方法，将代码从始终根据最后一次移动渲染修改为根据当前 <code class="gatsby-code-text">stepNumber</code> 渲染。</p>
 
@@ -835,7 +835,7 @@ player<span class="token punctuation">.</span>score <span class="token operator"
     <span class="token keyword">const</span> history <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>history<span class="token punctuation">;</span>
 <span class="gatsby-highlight-code-line">    <span class="token keyword">const</span> current <span class="token operator">=</span> history<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>stepNumber<span class="token punctuation">]</span><span class="token punctuation">;</span></span>    <span class="token keyword">const</span> winner <span class="token operator">=</span> <span class="token function">calculateWinner</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>squares<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token comment">// 其他部分没有改变</span></code></pre>
+    <span class="token comment">// 其他部分没有改变</span>{% endhighlight %}
 
 <p><img height="297" src="/uploads/ckeditor/pictures/282/image-20220818154527-1.png" width="443" /></p>
 

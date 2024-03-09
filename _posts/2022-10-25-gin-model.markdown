@@ -21,7 +21,7 @@ categories:
 <span class="line">  ActivatedAt  sql.NullTime</span>
 <span class="line">  CreatedAt    time.Time</span>
 <span class="line">  UpdatedAt    time.Time</span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>GORM 更喜欢约定而不是配置。&nbsp; 默认情况下，GORM使用ID作为主键，将struct name复数为snake_cases作为表名，snake_case作为列名，并使用CreatedAt、UpdatedAt来跟踪创建/更新时间</p>
 
@@ -36,7 +36,7 @@ categories:
 <span class="line">  CreatedAt time.Time</span>
 <span class="line">  UpdatedAt time.Time</span>
 <span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:&quot;index&quot;`</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>You can embed （嵌入）it into your struct（结构） to include those fields（字段）, refer <a href="https://gorm.io/docs/models.html#embedded_struct">Embedded Struct</a></p>
 
@@ -54,7 +54,7 @@ categories:
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-&quot;`</span>            <span class="comment">// ignore this field when write and read with struct</span></span>
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-:all&quot;`</span>        <span class="comment">// ignore this field when write, read and migrate with struct</span></span>
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;-:migration&quot;`</span>  <span class="comment">// ignore this field when migrate with struct</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>创建/更新时间/Unix (Milli/Nano) 秒跟踪</p>
 
@@ -65,7 +65,7 @@ categories:
 <span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:&quot;autoUpdateTime:nano&quot;`</span> <span class="comment">// Use unix nano seconds as updating time</span></span>
 <span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:&quot;autoUpdateTime:milli&quot;`</span><span class="comment">// Use unix milli seconds as updating time</span></span>
 <span class="line">  Created   <span class="type">int64</span> <span class="string">`gorm:&quot;autoCreateTime&quot;`</span>      <span class="comment">// Use unix seconds as creating time</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>Embedded Struct(嵌入式结构)</p>
 
@@ -85,7 +85,7 @@ categories:
 <span class="line">  UpdatedAt time.Time</span>
 <span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:&quot;index&quot;`</span></span>
 <span class="line">  Name <span class="type">string</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>For a normal struct field, you can embed （嵌入）it with the tag <code>embedded（嵌入式）</code>, for example:</p>
 
@@ -106,7 +106,7 @@ categories:
 <span class="line">  Name  <span class="type">string</span></span>
 <span class="line">  Email <span class="type">string</span></span>
 <span class="line">  Upvotes  <span class="type">int32</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>And you can use tag <code>embeddedPrefix</code>（嵌入式前缀） to add prefix to embedded fields&rsquo; db name, for example:</p>
 
@@ -122,7 +122,7 @@ categories:
 <span class="line">  AuthorName  <span class="type">string</span></span>
 <span class="line">  AuthorEmail <span class="type">string</span></span>
 <span class="line">  Upvotes     <span class="type">int32</span></span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

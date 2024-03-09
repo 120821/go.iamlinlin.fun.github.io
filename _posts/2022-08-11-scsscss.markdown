@@ -32,11 +32,11 @@ body{
                       sans-serif;
  font-size: xx-large;
  padding: 2rem;
-}</code></pre>
+}{% endhighlight %}
 
 <p><img alt="" class="aligncenter" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630134649/Screenshot-2022-06-30-134753.png" /></p>
 
-<pre><code>
+{% highlight %}
 $white: #ffffff;
 $ubuntu-font: $ubuntu-font: &#39;Ubuntu&#39;, &#39;Arial&#39;, &#39;Helvetica&#39;, sans-serif;
 
@@ -45,7 +45,7 @@ body{
  font: $ubuntu-font;
  font-size: xx-large;
  padding: 2rem;
-}</code></pre>
+}{% endhighlight %}
 
 <p><img alt="" class="aligncenter" src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220630134649/Screenshot-2022-06-30-134753.png" /></p>
 
@@ -55,7 +55,7 @@ body{
 <p>SASS 允许我们使用嵌套语法。&nbsp; 假设您必须在 &#39;footer&#39; 中的 &#39;div&#39; 中设置特定的 &#39;paragraph&#39; 样式，您绝对可以通过 SASS 来做到这一点。<br />
 &nbsp;例子</p>
 
-<pre><code>
+{% highlight %}
 footer {
     div {
         p {
@@ -63,7 +63,7 @@ footer {
             color: #2f2f2f;
         }
     }
-}</code></pre>
+}{% endhighlight %}
 
 <p>最后，使 SASS 成为一个不错的选择的原因在于它有据可查。</p>
 

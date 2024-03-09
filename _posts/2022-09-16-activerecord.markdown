@@ -8,7 +8,7 @@ categories:
 
 <p>编辑rakefile</p>
 
-<pre><code># From https://gist.github.com/Rhoxio/ee9a855088c53d447f2eb888bd9d09a4<br />
+{% highlight %}# From https://gist.github.com/Rhoxio/ee9a855088c53d447f2eb888bd9d09a4<br />
 require &quot;active_record&quot;<br />
 &nbsp; require &quot;fileutils&quot;<br />
 &nbsp; begin<br />
@@ -73,10 +73,10 @@ namespace :g do<br />
 &nbsp;&nbsp;&nbsp; puts &quot;Migration #{path} created&quot;<br />
 &nbsp;&nbsp;&nbsp; abort # needed stop other tasks<br />
 &nbsp; end<br />
-end</code></pre>
+end{% endhighlight %}
 
 <pre class="chroma">
-<code class="language-bash" data-lang="bash">rake -T</code></pre>
+<code class="language-bash" data-lang="bash">rake -T{% endhighlight %}
 
 <p><img height="175" src="/uploads/ckeditor/pictures/408/image-20220916165411-1.png" width="1089" /></p>
 
@@ -84,7 +84,7 @@ end</code></pre>
 
 <p><code>require &#39;active_record&#39;</code></p>
 
-<pre><code>ActiveRecord::Base.establish_connection(adapter: &#39;postgresql&#39;, database: &#39;datasetter_development&#39;)
+{% highlight %}ActiveRecord::Base.establish_connection(adapter: &#39;postgresql&#39;, database: &#39;datasetter_development&#39;)
 class User &lt; ActiveRecord::Base<br />
 end
 
@@ -106,7 +106,7 @@ puts User.all.size<br />
 # Create and save in one step with `.create()`<br />
 User.create(name: &#39;John Leon&#39;)<br />
 puts &quot;=== after save user.all.size: &quot;<br />
-puts User.all.size</code></pre>
+puts User.all.size{% endhighlight %}
 
 <p><img height="267" src="/uploads/ckeditor/pictures/409/image-20220916165841-2.png" width="1466" /></p>
 

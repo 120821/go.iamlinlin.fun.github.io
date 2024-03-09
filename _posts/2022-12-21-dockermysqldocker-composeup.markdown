@@ -45,10 +45,10 @@ services:</code></p>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - MYSQL_ROOT_PASSWORD=666666
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - MYSQL_ROOT_HOST=%</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - MYSQL_ROOT_HOST=%{% endhighlight %}
 
 <p>3.启动数据库：</p>
 
 <pre>
-<code>sudo docker-compose up</code></pre>
+<code>sudo docker-compose up{% endhighlight %}
 

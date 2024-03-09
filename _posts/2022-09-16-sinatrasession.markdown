@@ -19,12 +19,12 @@ categories:
 <span class="n">get</span> <span class="s1">&#39;/:value&#39;</span> <span class="k">do</span>
   <span class="n">session</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">]</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code>创建session秘钥</code></p>
 
 <pre class="highlight">
-<code>ruby -e &quot;require &#39;securerandom&#39;; puts SecureRandom.hex(64)&quot;</code></pre>
+<code>ruby -e &quot;require &#39;securerandom&#39;; puts SecureRandom.hex(64)&quot;{% endhighlight %}
 
 <p>使用 sysrandom gem 更喜欢使用系统 RNG 工具来生成随机值，而不是 MRI Ruby 当前默认使用的用户空间 OpenSSL：</p>
 
@@ -35,7 +35,7 @@ Successfully installed sysrandom-1.x
 1 gem installed
 
 $ ruby -e &quot;require &#39;sysrandom/securerandom&#39;; puts SecureRandom.hex(64)&quot;
-99ae8af...snip...ec0f262ac</code></pre>
+99ae8af...snip...ec0f262ac{% endhighlight %}
 
 <p>&nbsp;</p>
 </div>

@@ -8,7 +8,7 @@ categories:
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
 <code>failed to connect to mysql at <span style="color:#f5ab35">127.0</span><span style="color:#f5ab35">.0</span><span style="color:#f5ab35">.1</span>:<span style="color:#f5ab35">3306</span> <span style="color:#dcc6e0">with</span> user root
-access denied <span style="color:#dcc6e0">for</span> use<span style="color:#abe338">r&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span></code></pre>
+access denied <span style="color:#dcc6e0">for</span> use<span style="color:#abe338">r&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span>{% endhighlight %}
 
 <p>修改文件：mysql.conf.d/mysqld.cnf(例如我修改文件是： sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf）</p>
 
@@ -19,7 +19,7 @@ access denied <span style="color:#dcc6e0">for</span> use<span style="color:#abe3
 
 mysqlx-bind-address&nbsp;&nbsp;&nbsp;&nbsp; = 127.0.0.1
 
-skip-networking = false</code></pre>
+skip-networking = false{% endhighlight %}
 
 <p>然后连接桌面版即可（确保端口号和账号密码都是正确的）</p>
 

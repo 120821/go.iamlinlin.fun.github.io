@@ -238,7 +238,7 @@ nbsp; );
 
 };
 
-export default MyMapToShowResult;</code></pre>
+export default MyMapToShowResult;{% endhighlight %}
 
 <p>&nbsp;</p>
 

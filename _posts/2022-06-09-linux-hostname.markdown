@@ -7,9 +7,9 @@ categories:
 
                     <h1 id="articleContentId">Linux-hostname查看</h1> 
 <p>命令行输入命令</p> 
-<pre><code>hostname</code></pre> 
+{% highlight %}hostname{% endhighlight %} 
 <p>即可查看 linlin-i5</p> 
-<pre><code># 查看当前hostname
+{% highlight %}# 查看当前hostname
 [root@suhw ~]# hostname
 suhw
 
@@ -20,6 +20,6 @@ suhw
 [root@suhw ~]# cat /etc/hostname 
 suhw-host
 
-</code></pre> 
+{% endhighlight %} 
 <p></p>
                 

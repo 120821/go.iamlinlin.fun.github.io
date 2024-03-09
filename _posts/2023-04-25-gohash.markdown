@@ -40,7 +40,7 @@ func main() {
     hashBytes := hasher.Sum(nil)
     hashString := hex.EncodeToString(hashBytes)
     fmt.Println(hashString)
-}</code></pre>
+}{% endhighlight %}
 
 <p>输出结果将是 <code>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</code>，这就是&ldquo;password&rdquo;经过sha1哈希后的结果。</p>
 
@@ -56,7 +56,7 @@ myMap[&quot;one&quot;] = 1
 myMap[&quot;two&quot;] = 2
 
 fmt.Println(myMap[&quot;one&quot;]) // 输出 1
-fmt.Println(myMap[&quot;two&quot;]) // 输出 2</code></pre>
+fmt.Println(myMap[&quot;two&quot;]) // 输出 2{% endhighlight %}
 
 <p>在上面的示例中，我们创建了一个 <code>map</code> 类型的变量 <code>myMap</code>，其中 key 的类型为 <code>string</code>，value 的类型为 <code>int</code>。</p>
 
@@ -68,7 +68,7 @@ fmt.Println(myMap[&quot;two&quot;]) // 输出 2</code></pre>
 <code>myMap := map[string]int{
     &quot;one&quot;: 1,
     &quot;two&quot;: 2,
-}</code></pre>
+}{% endhighlight %}
 
 <p>在这种情况下，我们创建了一个 <code>map</code> 变量 <code>myMap</code>，其中包含了两个 key-value 对。我们可以通过 <code>myMap[&quot;one&quot;]</code> 和 <code>myMap[&quot;two&quot;]</code> 访问它们的值。</p>
 
@@ -86,7 +86,7 @@ fmt.Println(myMap[&quot;two&quot;]) // 输出 2</code></pre>
 
 <pre>
 <code>var myMap map[string]int       // 定义一个键为 string，值为 int 的 map
-map[string]string{&quot;k1&quot;: &quot;v1&quot;}  // 定义一个键为 string，值为 string 的 map</code></pre>
+map[string]string{&quot;k1&quot;: &quot;v1&quot;}  // 定义一个键为 string，值为 string 的 map{% endhighlight %}
 
 <p>在 Go 中，我们可以通过 map[key]value 的方式来访问或设置哈希表中的元素，其中 key 是哈希表中的键，value 是与之关联的值。例如：</p>
 
@@ -97,7 +97,7 @@ myMap[&quot;apple&quot;] = 2             // 将键为 &quot;apple&quot; 的元�
 fmt.Println(myMap[&quot;apple&quot;])    // 输出 2
 
 _, ok := myMap[&quot;orange&quot;]       // 查看是否存在某个键
-fmt.Println(ok)                // 输出 false</code></pre>
+fmt.Println(ok)                // 输出 false{% endhighlight %}
 
 <p>在上面的示例中，我们演示了如何将一个元素添加或读取到哈希表中，并使用 ok 特判查看一个键是否存在于哈希表中。</p>
 
@@ -133,7 +133,7 @@ delete(myMap, &quot;banana&quot;)
 // 遍历哈希表
 for key, value := range myMap {
     fmt.Printf(&quot;%s:%d\n&quot;, key, value)
-}</code></pre>
+}{% endhighlight %}
 
 <p>上述代码中，我们首先定义了一个键类型为 string，值类型为 int 的哈希表变量 <code>myMap</code>。接着，我们使用 <code>make</code> 函数对哈希表变量进行初始化，并使用赋值语句将元素添加到哈希表中。</p>
 
@@ -169,7 +169,7 @@ incrementCounter(&quot;banana&quot;, 0)
 
 // 输出结果
 fmt.Println(counter[&quot;apple&quot;])  // 输出 [1 1 0 0 0 0 0 0 0 0]
-fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]</code></pre>
+fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]{% endhighlight %}
 
 <p>上述代码中，我们首先定义了一个键类型为字符串，值类型为整数数组的哈希表变量 <code>counter</code>。接着，我们定义了一个 <code>incrementCounter</code> 函数，在该函数中对计数器进行增加操作。在 <code>incrementCounter</code> 函数中，我们首先检查哈希表中是否存在对应的键，如果不存在，则使用 <code>make</code> 函数创建一个长度为 10 的整数数组，并将其作为哈希表的值进行存储。然后，我们对数组的指定下标进行自增操作。</p>
 
@@ -196,7 +196,7 @@ m[&quot;two&quot;] = 2
 
 // 获取键值
 fmt.Println(m[&quot;one&quot;]) // 输出 1
-fmt.Println(m[&quot;two&quot;]) // 输出 2</code></pre>
+fmt.Println(m[&quot;two&quot;]) // 输出 2{% endhighlight %}
 
 <h3>整数作为键</h3>
 
@@ -213,7 +213,7 @@ m[2] = &quot;two&quot;
 
 // 获取键值
 fmt.Println(m[1]) // 输出 &quot;one&quot;
-fmt.Println(m[2]) // 输出 &quot;two&quot;</code></pre>
+fmt.Println(m[2]) // 输出 &quot;two&quot;{% endhighlight %}
 
 <h3>结构体作为键</h3>
 
@@ -236,7 +236,7 @@ m[Point{1,0}] = 2
 
 // 获取键值
 fmt.Println(m[Point{0,0}]) // 输出 1
-fmt.Println(m[Point{1,0}]) // 输出 2</code></pre>
+fmt.Println(m[Point{1,0}]) // 输出 2{% endhighlight %}
 
 <h3>数组、切片作为值</h3>
 
@@ -262,7 +262,7 @@ incrementCounter(&quot;banana&quot;, 0)
 
 // 输出结果
 fmt.Println(counter[&quot;apple&quot;])  // 输出 [1 1 0 0 0 0 0 0 0 0]
-fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]</code></pre>
+fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]{% endhighlight %}
 
 <p>综上所述，Go 语言中的 <code>map</code> 类型非常灵活，可以使用各种数据类型作为键和值，从而适应各种不同的需求。需要注意的是，当使用结构体、数组、切片等复杂数据类型作为键时，我们需要确保其是可比较的，否则不能作为键类型。</p>
 

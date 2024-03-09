@@ -5,7 +5,7 @@ date: "2022-06-09"
 categories: 
 ---
 
-                    <pre><code>&lt;template&gt;
+                    {% highlight %}&lt;template&gt;
   &lt;div&gt;
     &lt;h2&gt;父组件的页面的内容&lt;/h2&gt;
     &lt;ul&gt;
@@ -56,8 +56,8 @@ export default {
   border-radius: 5px;
 }
 &lt;/style&gt;
-</code></pre> 
-<pre><code>&lt;template&gt;
+{% endhighlight %} 
+{% highlight %}&lt;template&gt;
   &lt;div style='border: 1px solid red; margin-left: 50px; width: 600px'&gt;
 
     本页面是child: &lt;br/&gt;
@@ -96,7 +96,7 @@ export default {
 &lt;style scoped&gt;
 
 &lt;/style&gt;
-</code></pre> 
+{% endhighlight %} 
 <p><img alt="" height="825" src="https://img-blog.csdnimg.cn/13876ba4e82747c3959b5ead36aed24a.png" width="736"></p> 
 <p> </p>
                 

@@ -15,12 +15,12 @@ categories:
 <p>打开大象，进行连接，提示没有postgres这个用户，进行创建</p>
 
 <pre>
-<code>createuser --superuser postgres</code></pre>
+<code>createuser --superuser postgres{% endhighlight %}
 
 <p>然后进入</p>
 
 <pre>
-<code>psql -U postgres -h localhost</code></pre>
+<code>psql -U postgres -h localhost{% endhighlight %}
 
 <p>可以了</p>
 
@@ -29,7 +29,7 @@ categories:
 <pre>
 <code>bundle exec rake db:create
 
-bundle exec rake db:migrate</code></pre>
+bundle exec rake db:migrate{% endhighlight %}
 
 <p>桌面版进行连接，没有设置密码</p>
 

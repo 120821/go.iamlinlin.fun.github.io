@@ -9,7 +9,7 @@ categories:
 <p><span style="font-size: 18px">Html:</span></p>
 
 <pre>
-<code><span style="font-size: 18px">&lt;a href=&quot;###&quot; class=&quot;join&quot;&gt;加入我们，看到自己更多可能&lt;/a&gt;</span></code></pre>
+<code><span style="font-size: 18px">&lt;a href=&quot;###&quot; class=&quot;join&quot;&gt;加入我们，看到自己更多可能&lt;/a&gt;</span>{% endhighlight %}
 
 <p><span style="font-size: 18px">Css:</span></p>
 
@@ -19,7 +19,7 @@ position: relative;z-index: 1;overflow: hidden;letter-spacing: 2px;}
 a:hover{border-color: #fff;}
 a.join:after{width: 100%;cursor: pointer;position: absolute;content: &quot;&quot;;top: -150%;height: 100%;right: 0;left: 0;z-index: -1;background: #D7B375;
 transition: 0.3s linear;}
-a.join:hover:after{top: 0%;}</code></pre>
+a.join:hover:after{top: 0%;}{% endhighlight %}
 
 <p>&nbsp;</p>
 

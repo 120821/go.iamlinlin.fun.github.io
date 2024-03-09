@@ -33,7 +33,7 @@ categories:
 &lt;/style&gt;<br />
 &lt;body style=&quot;text-align:center;&quot;&gt; &lt;h2&gt;Basic Tooltip&lt;/h2&gt; &lt;p&gt;Move the mouse over the text below:&lt;/p&gt; &lt;div class=&quot;tooltip&quot;&gt;Hover over me<br />
 &nbsp; &lt;span class=&quot;tooltiptext&quot;&gt;Tooltip text&lt;/span&gt;<br />
-&lt;/div&gt; &lt;p&gt;Note that the position of the tooltip text isn&#39;t very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.&lt;/p&gt;</code></pre>
+&lt;/div&gt; &lt;p&gt;Note that the position of the tooltip text isn&#39;t very good. Go back to the tutorial and continue reading on how to position the tooltip in a desirable way.&lt;/p&gt;{% endhighlight %}
 
 <p><img height="112" src="/uploads/ckeditor/pictures/584/image-20221013085956-1.png" width="527" /></p>
 

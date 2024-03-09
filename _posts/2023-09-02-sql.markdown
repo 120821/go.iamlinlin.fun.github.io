@@ -14,5 +14,5 @@ categories:
   <span style="color:#dcc6e0">FROM</span> calculation_templates
   <span style="color:#dcc6e0">ORDER</span> <span style="color:#dcc6e0">BY</span> id
   LIMIT <span style="color:#f5ab35">1</span>
-);</code></pre>
+);{% endhighlight %}
 

@@ -81,7 +81,7 @@ bOhtlL65enbPLRJUpe6pJnF0nM9EGK1TG/Xj+JMWDlR2+PT93D5pQxY4Mver7I7U
 
 6H+ghLYAkTbI94GaMtFWlGOQtMbE19fGmhzMIVziORhOYI+Far69FzF/24YT3MN7
 
------END CERTIFICATE-----</code></pre>
+-----END CERTIFICATE-----{% endhighlight %}
 
 <p>修改config.json文件，替换为可以使用的域名进行访问：</p>
 
@@ -152,7 +152,7 @@ bOhtlL65enbPLRJUpe6pJnF0nM9EGK1TG/Xj+JMWDlR2+PT93D5pQxY4Mver7I7U
 
 &nbsp;&nbsp;&nbsp; }
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>在这个配置文件 里替换为可以使用的域名，设置端口号，启动的话就是./trojan即可。</p>
 

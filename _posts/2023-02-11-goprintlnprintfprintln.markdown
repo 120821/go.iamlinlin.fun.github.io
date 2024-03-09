@@ -14,7 +14,7 @@ categories:
 fmt.Println(a)　　//right
 fmt.Println(&quot;abc&quot;)　　//right
 fmt.Printf(&quot;%d&quot;,a)　　//right
-fmt.Printf(a)　　//error</code></pre>
+fmt.Printf(a)　　//error{% endhighlight %}
 
 <p><a href="https://www.zhihu.com/question/335186436">https://www.zhihu.com/question/335186436</a></p>
 

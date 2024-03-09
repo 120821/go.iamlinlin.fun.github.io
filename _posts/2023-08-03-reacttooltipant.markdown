@@ -11,7 +11,7 @@ categories:
 <p>2.在组件（页面）引入tooltip</p>
 
 <pre>
-<code>import { Form, Tooltip } from &#39;antd&#39;;</code></pre>
+<code>import { Form, Tooltip } from &#39;antd&#39;;{% endhighlight %}
 
 <p>3.在合适的位置使用tooltip：</p>
 
@@ -21,7 +21,7 @@ categories:
    &lt;Tooltip title=&quot;这是寿命的说明&quot;&gt;
      &lt;QuestionCircleOutlined /&gt;
    &lt;/Tooltip&gt;
- &lt;/span&gt;</code></pre>
+ &lt;/span&gt;{% endhighlight %}
 
 <p>解释：</p>
 

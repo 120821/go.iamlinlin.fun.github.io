@@ -26,7 +26,7 @@ module Api
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>接下来，你需要将该路由指定到该控制器的 details 动作。你可以在 config/routes.rb 文件中添加以下代码：</p>
 
@@ -39,7 +39,7 @@ end</code></pre>
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>在这里，我们使用了 get 方法来指定该请求的 HTTP 方法，ckb_transaction/:tx_hash/details 是一个动态路由，表示 tx_hash 是可以从 URL 中动态获取的参数。最后，我们指定了该请求应该由 CkbTransactionsController 的 details 动作处理。</p>
 
@@ -66,7 +66,7 @@ module Api
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>现在你已经创建了一个处理 /api/v2/ckb_transaction/0x../details 请求的控制器和路由。你可以在 details 动作中编写逻辑来处理该请求。</p>
 

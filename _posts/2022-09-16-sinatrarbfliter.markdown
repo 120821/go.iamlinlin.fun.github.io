@@ -16,7 +16,7 @@ before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span 
 <span class="n">after</span> <span class="s1">&#39;/blog/*&#39;</span><span class="p">,</span> <span class="ss">:host_name</span> <span class="o">=&gt;</span> <span class="s1">&#39;example.com&#39;</span> <span class="k">do</span>
   <span class="c1"># ...</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code>例如：</code></p>
 
@@ -31,7 +31,7 @@ before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span 
   <span class="vi">@note</span> <span class="c1">#=&gt; &#39;Hi!&#39;</span>
   <span class="n">params</span><span class="p">[</span><span class="s1">&#39;splat&#39;</span><span class="p">]</span> <span class="c1">#=&gt; &#39;bar/baz&#39;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code><span class="k">或者进行身份验证：</span></code></p>
 
@@ -44,7 +44,7 @@ before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span 
 <span class="n">after</span> <span class="s1">&#39;/create/:slug&#39;</span> <span class="k">do</span> <span class="o">|</span><span class="n">slug</span><span class="o">|</span>
   <span class="n">session</span><span class="p">[</span><span class="ss">:last_slug</span><span class="p">]</span> <span class="o">=</span> <span class="n">slug</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 </div>
 </div>
 </div>

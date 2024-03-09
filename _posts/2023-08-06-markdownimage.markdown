@@ -9,7 +9,7 @@ categories:
 <p>&nbsp;使用这样的语法即可：</p>
 
 <pre>
-<code>![image info](./pictures/image.png)</code></pre>
+<code>![image info](./pictures/image.png){% endhighlight %}
 
 <p>&nbsp;</p>
 

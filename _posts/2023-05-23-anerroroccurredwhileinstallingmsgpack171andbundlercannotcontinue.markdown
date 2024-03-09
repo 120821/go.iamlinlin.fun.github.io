@@ -11,20 +11,20 @@ categories:
 	<p>确认您的系统中是否安装了msgpack的依赖库：libmsgpack-dev。如果没有安装，请使用以下命令安装:</p>
 
 	<pre>
-<code>sudo apt-get install -y libmsgpack-dev</code></pre>
+<code>sudo apt-get install -y libmsgpack-dev{% endhighlight %}
 	</li>
 	<li>
 	<p>尝试使用以下命令重新安装msgpack:（亲测有效）</p>
 
 	<pre>
-<code>gem install msgpack -- --with-cflags=&quot;-std=c99&quot;</code></pre>
+<code>gem install msgpack -- --with-cflags=&quot;-std=c99&quot;{% endhighlight %}
 	</li>
 	<li>
 	<p>清除bundle缓存，然后重新安装:</p>
 
 	<pre>
 <code>bundle clean --force
-bundle install</code></pre>
+bundle install{% endhighlight %}
 	</li>
 </ol>
 

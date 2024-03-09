@@ -13,7 +13,7 @@ categories:
 </ol>
 
 <pre>
-<code>/keywords</code></pre>
+<code>/keywords{% endhighlight %}
 
 <p>其中，keywords为要查找的单词或关键字。</p>
 
@@ -24,7 +24,7 @@ categories:
 <p>如果你想一下子查找上一个匹配的单词，你可以在查询的时候用 ? 替换 / 作为开头，然后使用小写的 n 。例如：</p>
 
 <pre>
-<code>?keywords</code></pre>
+<code>?keywords{% endhighlight %}
 
 <p>之后按下 n 就可以查找上一个匹配的单词了。</p>
 

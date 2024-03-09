@@ -9,7 +9,7 @@ categories:
 <p>安装：在Gemfile增加gem，然后bundle</p>
 
 <pre>
-<code>gem &quot;sinatra-cross_origin&quot;, &quot;~&gt; 0.3.1&quot;</code></pre>
+<code>gem &quot;sinatra-cross_origin&quot;, &quot;~&gt; 0.3.1&quot;{% endhighlight %}
 
 <p>使用：在app.rb增加这样的内容</p>
 
@@ -18,7 +18,7 @@ categories:
 require &#39;sinatra/cross_origin&#39;
 configure do
 &nbsp; enable :cross_origin
-end</code></pre>
+end{% endhighlight %}
 
 <p><code>使用：</code><img height="53" src="/uploads/ckeditor/pictures/586/image-20221013140955-2.png" width="321" /></p>
 

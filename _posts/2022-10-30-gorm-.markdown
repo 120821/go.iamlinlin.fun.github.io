@@ -8,7 +8,7 @@ categories:
 
 <p>模型是标准的 struct，由 Go 的基本数据类型、实现了 <a href="https://pkg.go.dev/database/sql/?tab=doc#Scanner" rel="nofollow noopener noreferrer">Scanner</a> 和 <a href="https://pkg.go.dev/database/sql/driver#Valuer" rel="nofollow noopener noreferrer">Valuer</a> 接口的自定义类型及其指针或别名组成</p>
 
-<pre><code>type User struct {<br />
+{% highlight %}type User struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint<br />
 &nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string<br />
 &nbsp; Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *string<br />
@@ -18,17 +18,17 @@ categories:
 &nbsp; ActivedAt&nbsp;&nbsp;&nbsp; sql.NullTime<br />
 &nbsp; CreatedAt&nbsp;&nbsp;&nbsp; time.Time<br />
 &nbsp; UpdatedAt&nbsp;&nbsp;&nbsp; time.Time<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>GORM 定义一个 <code>gorm.Model</code> 结构体，其包括字段 <code>ID</code>、<code>CreatedAt</code>、<code>UpdatedAt</code>、<code>DeletedAt</code></p>
 
-<pre><code>// gorm.Model 的定义<br />
+{% highlight %}// gorm.Model 的定义<br />
 type Model struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `gorm:&quot;primaryKey&quot;`<br />
 &nbsp; CreatedAt time.Time<br />
 &nbsp; UpdatedAt time.Time<br />
 &nbsp; DeletedAt gorm.DeletedAt `gorm:&quot;index&quot;`<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p id="9b91fc">嵌入结构体</p>
 
@@ -36,7 +36,7 @@ type Model struct {<br />
 
 <p><strong>字段级权限控制</strong></p>
 
-<pre><code>type User struct {<br />
+{% highlight %}type User struct {<br />
 &nbsp; gorm.Model<br />
 &nbsp; Name string<br />
 }<br />
@@ -47,11 +47,11 @@ type User struct {<br />
 &nbsp; UpdatedAt time.Time<br />
 &nbsp; DeletedAt gorm.DeletedAt `gorm:&quot;index&quot;`<br />
 &nbsp; Name string<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>对于正常的结构体字段，你也可以通过标签 <code>embedded</code> 将其嵌入，例如：</p>
 
-<pre><code>type Author struct {<br />
+{% highlight %}type Author struct {<br />
 &nbsp;&nbsp;&nbsp; Name&nbsp; string<br />
 &nbsp;&nbsp;&nbsp; Email string<br />
 }</code></p>
@@ -67,11 +67,11 @@ type Blog struct {<br />
 &nbsp;&nbsp;&nbsp; Name&nbsp; string<br />
 &nbsp;&nbsp;&nbsp; Email string<br />
 &nbsp; Upvotes&nbsp; int32<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>可以使用标签 <code>embeddedPrefix</code> 来为 db 中的字段名添加前缀，例如：</p>
 
-<pre><code>type Blog struct {<br />
+{% highlight %}type Blog struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
 &nbsp; Author&nbsp; Author `gorm:&quot;embedded;embeddedPrefix:author_&quot;`<br />
 &nbsp; Upvotes int32<br />
@@ -82,13 +82,13 @@ type Blog struct {<br />
 &nbsp;&nbsp;&nbsp; AuthorName&nbsp; string<br />
 &nbsp;&nbsp;&nbsp; AuthorEmail string<br />
 &nbsp; Upvotes&nbsp;&nbsp;&nbsp;&nbsp; int32<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>可导出的字段在使用 GORM 进行 CRUD 时拥有全部的权限，此外，GORM 允许您用标签控制字段级别的权限。这样您就可以让一个字段的权限是只读、只写、只创建、只更新或者被忽略</p>
 
 <p>&nbsp;&nbsp;&nbsp; 注意： 使用 GORM Migrator 创建表时，不会创建被忽略的字段</p>
 
-<pre><code>type User struct {<br />
+{% highlight %}type User struct {<br />
 &nbsp; Name string `gorm:&quot;&lt;-:create&quot;` // 允许读和创建<br />
 &nbsp; Name string `gorm:&quot;&lt;-:update&quot;` // 允许读和更新<br />
 &nbsp; Name string `gorm:&quot;&lt;-&quot;`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 允许读和写（创建和更新）<br />
@@ -97,7 +97,7 @@ type Blog struct {<br />
 &nbsp; Name string `gorm:&quot;-&gt;;&lt;-:create&quot;` // 允许读和写<br />
 &nbsp; Name string `gorm:&quot;-&gt;:false;&lt;-:create&quot;` // 仅创建（禁止从 db 读）<br />
 &nbsp; Name string `gorm:&quot;-&quot;`&nbsp; // 读写操作均会忽略该字段<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p><strong>创建 / 更新时间追踪（纳秒、毫秒、秒、Time）</strong></p>
 
@@ -107,13 +107,13 @@ type Blog struct {<br />
 
 <p>如果您想要保存 UNIX（毫 / 纳）秒时间戳，而不是 time，您只需简单地将 time.Time 修改为 int 即可</p>
 
-<pre><code>type User struct {<br />
+{% highlight %}type User struct {<br />
 &nbsp; CreatedAt time.Time // 在创建时，如果该字段值为零值，则使用当前时间填充<br />
 &nbsp; UpdatedAt int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 在创建时该字段值为零值或者在更新时，使用当前时间戳秒数填充<br />
 &nbsp; Updated&nbsp;&nbsp; int64 `gorm:&quot;autoUpdateTime:nano&quot;` // 使用时间戳填纳秒数充更新时间<br />
 &nbsp; Updated&nbsp;&nbsp; int64 `gorm:&quot;autoUpdateTime:milli&quot;` // 使用时间戳毫秒数填充更新时间<br />
 &nbsp; Created&nbsp;&nbsp; int64 `gorm:&quot;autoCreateTime&quot;`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 使用时间戳秒数填充创建时间<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

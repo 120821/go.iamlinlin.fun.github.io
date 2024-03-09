@@ -6,14 +6,14 @@ categories:
 ---
 <p>--读取文件内容</p>
 
-<pre><code>File.read(&quot;1.svg&quot;)<br />
-=&gt; &quot;&lt;svg id=\&quot;图层_1\&quot; data-name=\&quot;图层 1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; viewBox=\&quot;0 0 1795 3106.06\&quot;&gt;&lt;defs&gt;&lt;style&gt;.cls-1,.cls-48{fill:none;}.cls-2{fill:url(#li......</code></pre>
+{% highlight %}File.read(&quot;1.svg&quot;)<br />
+=&gt; &quot;&lt;svg id=\&quot;图层_1\&quot; data-name=\&quot;图层 1\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:xlink=\&quot;http://www.w3.org/1999/xlink\&quot; viewBox=\&quot;0 0 1795 3106.06\&quot;&gt;&lt;defs&gt;&lt;style&gt;.cls-1,.cls-48{fill:none;}.cls-2{fill:url(#li......{% endhighlight %}
 
 <p>--进行内容的替换</p>
 
 <p>a.sub(&quot;###NAME###&quot;, &#39;张三&#39;).sub(&quot;###NUMBER###&quot;, &quot;10010&quot;)</p>
 
-<pre><code>transform=\&quot;translate(477.14 1488.85)\&quot;&gt;张三&lt;/text&gt;&lt;text class=\&quot;cls-44\&quot; transform=\&quot;translate(676.16 1484.9)\&quot;&gt;编号&lt;/text&gt;&lt;text class=\&quot;cls-46\&quot; transform=\&quot;translate(756.92 1493.24)\&quot;&gt;10010&lt;/text&gt;&lt;text class=\&quot;cls-47\&quot; transform=\&quot;translate(401.99 1364.56)\&quot;&gt;海柴角救援&lt;/text&gt;&lt;line class=\&quot;cls-48\&quot; x1=\&quot;406.12\&quot; y1=\&quot;1407.19\&quot; x2=\&quot;1386.62\&quot; y2=\&quot;1407.19\&quot;/&gt;&lt;/svg&gt;\n&quot;</code></pre>
+{% highlight %}transform=\&quot;translate(477.14 1488.85)\&quot;&gt;张三&lt;/text&gt;&lt;text class=\&quot;cls-44\&quot; transform=\&quot;translate(676.16 1484.9)\&quot;&gt;编号&lt;/text&gt;&lt;text class=\&quot;cls-46\&quot; transform=\&quot;translate(756.92 1493.24)\&quot;&gt;10010&lt;/text&gt;&lt;text class=\&quot;cls-47\&quot; transform=\&quot;translate(401.99 1364.56)\&quot;&gt;海柴角救援&lt;/text&gt;&lt;line class=\&quot;cls-48\&quot; x1=\&quot;406.12\&quot; y1=\&quot;1407.19\&quot; x2=\&quot;1386.62\&quot; y2=\&quot;1407.19\&quot;/&gt;&lt;/svg&gt;\n&quot;{% endhighlight %}
 
 <p>&nbsp;</p>
 

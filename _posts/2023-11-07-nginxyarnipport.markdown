@@ -17,7 +17,7 @@ categories:
         proxy_set_header X-Real-IP $<span style="color:#d4d0ab">remote_addr;</span>
         proxy_set_header X-Forwarded-<span style="color:#dcc6e0">For</span> $proxy_add_x_forwarded_for;
     }
-}</code></pre>
+}{% endhighlight %}
 
 <p>设置好后，在虚拟机ubuntu之外的windows里就可以访问了。（在别的电脑不能访问。）</p>
 

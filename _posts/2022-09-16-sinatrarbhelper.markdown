@@ -18,7 +18,7 @@ helpers</span> <span class="k">do</span>
 <span class="n">get</span> <span class="s1">&#39;/:name&#39;</span> <span class="k">do</span>
   <span class="n">bar</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p>2.或者，可以在模块中单独定义辅助方法：</p>
 
@@ -33,7 +33,7 @@ helpers</span> <span class="k">do</span>
 <span class="k">end</span>
 
 <span class="n">helpers</span> <span class="no">FooUtils</span><span class="p">,</span> <span class="no">BarUtils</span>
-</code></pre>
+{% endhighlight %}
 </div>
 </div>
 

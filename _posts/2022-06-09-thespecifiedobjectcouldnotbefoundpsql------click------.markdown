@@ -17,11 +17,11 @@ categories:
 </ol>
 <p>这里说的接口，就是：设计模式中的接口。 我们不讲它。 也不建议使用java/oc 这样的语言。 编程语言中的interface, 虽然比继承( extend, inherit ）功能高级， 但是，不如mix-in好用。</p> 
 <p></p> 
-<pre><code>通常将接口文件写在项目的：./controllers/interface/目录下。
+{% highlight %}通常将接口文件写在项目的：./controllers/interface/目录下。
 注：在我们的项目中，android/ios访问同一个接口，pc端直接读取后台数据库。
-</code></pre> 
+{% endhighlight %} 
 <h3 id="2接口的实现">2.接口的实现</h3> 
-<pre><code>class Interface::CasesController &lt; ActionController::Base
+{% highlight %}class Interface::CasesController &lt; ActionController::Base
   def all_cases
     all_cases = Case.all.map  do |the_case|
     { :id =&gt; the_case.id,
@@ -39,9 +39,9 @@ categories:
     render :json =&gt; { :success =&gt;true, :result =&gt; all_cases}
   end
 end
-</code></pre> 
+{% endhighlight %} 
 <h3 id="3接口路由的配置">3.接口路由的配置</h3> 
-<pre><code>namespace :interface do
+{% highlight %}namespace :interface do
   resources :init, :only =&gt; [] do
     collection do
       get :index
@@ -58,12 +58,12 @@ end
     end
   end
 end
-</code></pre> 
+{% endhighlight %} 
 <h3 id="4最终接口的调用">4.最终接口的调用</h3> 
-<pre><code>http://域名/interface/cases/all_cases
-</code></pre> 
+{% highlight %}http://域名/interface/cases/all_cases
+{% endhighlight %} 
 <h3 id="5返回的结果">5.返回的结果</h3> 
-<pre><code>{
+{% highlight %}{
   success: true,
     result: [
       {
@@ -92,7 +92,7 @@ end
       }
    ]
 }
-</code></pre> 
+{% endhighlight %} 
 <p></p> 
 <p></p> 
 <p></p> 
@@ -100,5 +100,5 @@ end
 function OnEnter( field ) { if( field.value == field.defaultValue ) { field.value = ""; } }
 function OnExit( field ) { if( field.value == "" ) { field.value = field.defaultValue; } }
 &lt;/script&gt;
-&lt;input type=text value="你的名字" onFocus=OnEnter(this) onBlur=OnExit(this)&gt;</code></pre>
+&lt;input type=text value="你的名字" onFocus=OnEnter(this) onBlur=OnExit(this)&gt;{% endhighlight %}
                 

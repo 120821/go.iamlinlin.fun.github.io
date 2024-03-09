@@ -9,7 +9,7 @@ categories:
 <p>chatroom启动的时候，不能发送消息，然后服务器会自动断开，redis尚未成功使用，启动即可，然后继续rails s就可以发送即时消息了</p>
 
 <pre class="lang-yaml s-code-block">
-<code class="hljs language-yaml"><span class="hljs-string">redis-server</span></code></pre>
+<code class="hljs language-yaml"><span class="hljs-string">redis-server</span>{% endhighlight %}
 
 <p><img height="681" src="/uploads/ckeditor/pictures/210/image-20220812092444-1.png" width="1920" /></p>
 

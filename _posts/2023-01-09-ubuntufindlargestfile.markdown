@@ -9,7 +9,7 @@ categories:
 <p>首先进行磁盘空间使用情况的查看，可以看到电脑的内存已经使用了很多了。</p>
 
 <pre>
-<code>df -kh</code></pre>
+<code>df -kh{% endhighlight %}
 
 <p>Filesystem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size&nbsp; Used Avail Use% Mounted on<br />
 tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6G&nbsp; 3.4M&nbsp; 1.6G&nbsp;&nbsp; 1% /run<br />
@@ -22,17 +22,17 @@ tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6G&nbsp; 2.0
 <p>使用命令，进行查看前20个大文件，从大到小的顺序排列。</p>
 
 <pre>
-<code>du -a /dir/ | sort -n -r | head -n 20</code></pre>
+<code>du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}
 
 <p>因为根据df -kh 查看的内容，我的大文件是放在根目录下的，/目录下，因此进行查看前1000个最大的文件，并且放入/tmp/largest文件内</p>
 
 <pre>
-<code>sudo du -a / | sort -n -r | head -n 1000 &gt; /tmp/largest</code></pre>
+<code>sudo du -a / | sort -n -r | head -n 1000 &gt; /tmp/largest{% endhighlight %}
 
 <p>打开另一个窗口，使用tail命令进行时时查看：</p>
 
 <pre>
-<code>tail -f /tmp/largest</code></pre>
+<code>tail -f /tmp/largest{% endhighlight %}
 
 <p>接着就可以看到最大的几个文件：</p>
 
@@ -121,7 +121,7 @@ tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6G&nbsp; 2.0
 
 2945972&nbsp;&nbsp; &nbsp;/workspace/coding_tools/android_studio
 
-2933440&nbsp;&nbsp; &nbsp;/home/linlin/Downloads</code></pre>
+2933440&nbsp;&nbsp; &nbsp;/home/linlin/Downloads{% endhighlight %}
 
 <p>可以看出，微信以及workspace文件夹的devise文件夹，/var/log文件夹占用很大的空间。可以进行查看，不重要的就可以删除了。</p>
 

@@ -45,7 +45,7 @@ group :test do
    gem &#39;rspec-rails&#39;
    gem &#39;rswag-specs&#39;
  end
-</code></pre>
+{% endhighlight %}
 
 <p>注意一定要有 rspec这个gem, 因为 rswag的文档是根据rspec的内容生成的.&nbsp;</p>
 
@@ -54,30 +54,30 @@ group :test do
 <p>生成 rspec</p>
 
 <pre>
-<code>rails g rspec:install</code></pre>
+<code>rails g rspec:install{% endhighlight %}
 
 <p>再生成 rswag helper:&nbsp;</p>
 
 <pre>
-<code>rails g rswag&nbsp; &nbsp;(这个命令来自于 gem &#39;rswag&#39; )</code></pre>
+<code>rails g rswag&nbsp; &nbsp;(这个命令来自于 gem &#39;rswag&#39; ){% endhighlight %}
 
 <p>上面命令没有的话(如果你按照官方文档操作,则肯定没有 )</p>
 
 <p>就运行下面2个命令</p>
 
 <pre>
-<code>rails g rswag:specs:install&nbsp; &nbsp;生成swagger_helper</code></pre>
+<code>rails g rswag:specs:install&nbsp; &nbsp;生成swagger_helper{% endhighlight %}
 
 <pre>
-<code>rails g rswag:api:install&nbsp; &nbsp; &nbsp;生成路由中的 /api-docs</code></pre>
+<code>rails g rswag:api:install&nbsp; &nbsp; &nbsp;生成路由中的 /api-docs{% endhighlight %}
 
 <pre>
-<code>rails g rswag:ui:install&nbsp; &nbsp; &nbsp;同上,只不过这个也由swagger ui 处理.具体为啥一个路由能映射到2个action 我还没细看</code></pre>
+<code>rails g rswag:ui:install&nbsp; &nbsp; &nbsp;同上,只不过这个也由swagger ui 处理.具体为啥一个路由能映射到2个action 我还没细看{% endhighlight %}
 
 <p>随便生成一个controller 的rswag ( 封装了rspec 的rswag测试文件), 内容如下</p>
 
 <pre>
-<code>rails generate rspec:swagger API::V1::Encounters_Controller</code></pre>
+<code>rails generate rspec:swagger API::V1::Encounters_Controller{% endhighlight %}
 
 <p>内容如下</p>
 
@@ -86,5 +86,5 @@ group :test do
 
 2028 rails rswag:specs:swaggerize
 
-2031 rails s -p 30333</code></pre>
+2031 rails s -p 30333{% endhighlight %}
 

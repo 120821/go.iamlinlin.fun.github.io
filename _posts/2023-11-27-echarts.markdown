@@ -17,5 +17,5 @@ categories:
   },
   
   <span style="color:#d4d0ab">// 数据和图表配置...</span>
-};</code></pre>
+};{% endhighlight %}
 

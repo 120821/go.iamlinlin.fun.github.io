@@ -45,7 +45,7 @@ func UpdateCalculationTemplate(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{
 		&quot;message&quot;: &quot;ok&quot;,
 	})
-}</code></pre>
+}{% endhighlight %}
 
 <p>在前端已经可以看到发送了请求，数据格式也是正确的，在go也可以打印出数据，但是不能udpate：</p>
 
@@ -54,7 +54,7 @@ func UpdateCalculationTemplate(c *gin.Context) {
 
 (/workspace/dongtaipaifang_2_backend/models/calculation_templates.go:82) 
 [2023-10-17 14:43:26]  [0.49ms]  UPDATE &quot;calculation_templates&quot; SET &quot;foam_params_data&quot; = &#39;&#39;, &quot;updated_at&quot; = &#39;2023-10-17 14:43:26&#39;  WHERE (id = 22)  
-[1 rows affected or returned ] </code></pre>
+[1 rows affected or returned ] {% endhighlight %}
 
 <p>可以使用json.Marshal对数据处理：</p>
 
@@ -121,7 +121,7 @@ func main() {
 
 	fmt.Println(&quot;Data inserted successfully!&quot;)
 }
-</code></pre>
+{% endhighlight %}
 
 <p>&nbsp;</p>
 

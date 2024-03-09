@@ -24,7 +24,7 @@ gem install nokogiri</pre>
 <p>存在这样的html：</p>
 
 <pre>
-<code class="prettyprint lang-html"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">&quot;http://www.google.com&quot;</span><span class="tag">&gt;</span><span class="pln">Click here</span><span class="tag">&lt;/a&gt;</span></code></pre>
+<code class="prettyprint lang-html"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">&quot;http://www.google.com&quot;</span><span class="tag">&gt;</span><span class="pln">Click here</span><span class="tag">&lt;/a&gt;</span>{% endhighlight %}
 
 <p><code class="prettyprint lang-html"><span class="tag">就可以使用这样的方法进行获得需要的内容：</span></code></p>
 
@@ -34,12 +34,12 @@ page </span><span class="pun">=</span><span class="pln"> </span><span class="typ
 links </span><span class="pun">=</span><span class="pln"> page</span><span class="pun">.</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;a&quot;</span><span class="pun">)</span><span class="pln">
 puts links</span><span class="pun">.</span><span class="pln">length   </span><span class="com"># =&gt; 6</span><span class="pln">
 puts links</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">text   </span><span class="com"># =&gt; Click here</span><span class="pln">
-puts links</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">&quot;href&quot;</span><span class="pun">]</span><span class="pln"> </span><span class="com"># =&gt; http://www.google.com</span></code></pre>
+puts links</span><span class="pun">[</span><span class="lit">0</span><span class="pun">][</span><span class="str">&quot;href&quot;</span><span class="pun">]</span><span class="pln"> </span><span class="com"># =&gt; http://www.google.com</span>{% endhighlight %}
 
 <p>也可以使用多层的关系：</p>
 
 <pre>
-<code class="prettyprint"><span class="pln">page</span><span class="pun">.</span><span class="pln">css</span><span class="pun">(</span><span class="str">&#39;p&#39;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;a[data-category=news]&quot;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;strong&quot;</span><span class="pun">)</span></code></pre>
+<code class="prettyprint"><span class="pln">page</span><span class="pun">.</span><span class="pln">css</span><span class="pun">(</span><span class="str">&#39;p&#39;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;a[data-category=news]&quot;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;strong&quot;</span><span class="pun">)</span>{% endhighlight %}
 
 <p>In your case, after <code>response = RestClient.get get_url...</code> you should have variable <code>response</code> and ability to call <code>response.headers</code>, <code>response.code</code> or <code>response.body</code>.</p>
 
@@ -80,5 +80,5 @@ doc.search(&#39;nav ul.menu li a&#39;, &#39;//article//h2&#39;).each do |link|
 
 &nbsp; puts link.content
 
-end</code></pre>
+end{% endhighlight %}
 

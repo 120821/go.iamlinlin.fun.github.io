@@ -9,7 +9,7 @@ categories:
 <blockquote> 
  <p>使用sudo docker-compose up</p> 
  <p>出现了报错</p> 
- <pre><code>WARNING: Found orphan containers (test_rails_crud_db_1, test_rails_crud_web_1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up.
+ {% highlight %}WARNING: Found orphan containers (test_rails_crud_db_1, test_rails_crud_web_1) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up.
 Starting postgres14.3 ... 
 Starting postgres14.3 ... error
 
@@ -17,9 +17,9 @@ ERROR: for postgres14.3  Cannot start service postgres14.3: driver failed progra
 
 ERROR: for postgres14.3  Cannot start service postgres14.3: driver failed programming external connectivity on endpoint postgres14.3 (1eb701338d09b3f05f36238ba1092b4cdd055aed72b9bae2bcab6c3200569535): Error starting userland proxy: listen tcp4 0.0.0.0:5432: bind: address already in use
 ERROR: Encountered errors while bringing up the project.
-</code></pre> 
+{% endhighlight %} 
  <p>端口被占用，那么进行查看 lsof -i:5432</p> 
- <pre><code>COMMAND     PID   USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
+ {% highlight %}COMMAND     PID   USER   FD   TYPE  DEVICE SIZE/OFF NODE NAME
 postgres   4373 linlin    3u  IPv4   58407      0t0  TCP *:postgresql (LISTEN)
 postgres   4373 linlin    4u  IPv6   58408      0t0  TCP *:postgresql (LISTEN)
 python3    6978 linlin   12u  IPv4   83141      0t0  TCP localhost:54620-&gt;localhost:postgresql (ESTABLISHED)
@@ -35,10 +35,10 @@ python3    6978 linlin   21u  IPv4  793099      0t0  TCP localhost:54654-&gt;loc
 python3    6978 linlin   22u  IPv4 1121214      0t0  TCP localhost:54666-&gt;localhost:postgresql (ESTABLISHED)
 python3    6978 linlin   23u  IPv4 1143824      0t0  TCP localhost:54668-&gt;localhost:postgresql (ESTABLISHED)
 python3    6978 linlin   24u  IPv4 1142614      0t0  TCP localhost:54670-&gt;localhost:postgresql (ESTABLISHED)
-</code></pre> 
+{% endhighlight %} 
  <p>查看cd /proc/4373</p> 
  <p>/proc/4373$ ll</p> 
- <pre><code>total 0
+ {% highlight %}total 0
 dr-xr-xr-x   9 linlin linlin 0  5月 31 13:41 ./
 dr-xr-xr-x 459 root   root   0  5月 30 08:12 ../
 -r--r--r--   1 linlin linlin 0  6月  2 09:53 arch_status
@@ -95,9 +95,9 @@ dr-xr-xr-x   3 linlin linlin 0  6月  2 09:53 task/
 -rw-rw-rw-   1 linlin linlin 0  6月  2 09:53 timerslack_ns
 -rw-r--r--   1 linlin linlin 0  6月  2 09:53 uid_map
 -r--r--r--   1 linlin linlin 0  6月  2 09:53 wchan
-</code></pre> 
+{% endhighlight %} 
  <p>/proc/4373$ ifconfig -a</p> 
- <pre><code>br-1cdb9e69418c: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
+ {% highlight %}br-1cdb9e69418c: flags=4099&lt;UP,BROADCAST,MULTICAST&gt;  mtu 1500
         inet 172.19.0.1  netmask 255.255.0.0  broadcast 172.19.255.255
         ether 02:42:3a:2b:82:df  txqueuelen 0  (Ethernet)
         RX packets 0  bytes 0 (0.0 B)
@@ -187,7 +187,7 @@ wlo1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         RX packets 13862378  bytes 16158002300 (16.1 GB)
         RX errors 0  dropped 623718  overruns 0  frame 0
         TX packets 7227500  bytes 1096232937 (1.0 GB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</code></pre> 
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0{% endhighlight %} 
  <p>在docker进行查看  sudo docker run -it ubuntu bash</p> 
  <p>root@11f55a91272d:/# ifconfig -a</p> 
  <p>此时会出现报错，<span style="color:#fe2c24;">bash: ifconfig: command not found</span></p> 
@@ -195,7 +195,7 @@ wlo1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
  <p><span style="color:#0d0016;">使用命令进行更新，</span>root@11f55a91272d:/# apt update</p> 
  <p>然后还需要安装config 进行命令的查询 root@11f55a91272d:/# apt install net-tools</p> 
  <p>安装结束就可以进行查询了root@11f55a91272d:/# ifconfig -a</p> 
- <pre><code>eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+ {% highlight %}eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
         inet 172.17.0.2  netmask 255.255.0.0  broadcast 172.17.255.255
         ether 02:42:ac:11:00:02  txqueuelen 0  (Ethernet)
         RX packets 8803  bytes 22039340 (22.0 MB)
@@ -219,7 +219,7 @@ root@11f55a91272d:/# ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 02:13 pts/0    00:00:00 bash
 root         240       1  0 02:17 pts/0    00:00:00 ps -ef
-</code></pre> 
+{% endhighlight %} 
  <p></p> 
 </blockquote>
                 

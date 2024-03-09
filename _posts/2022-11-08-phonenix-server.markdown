@@ -7,7 +7,7 @@ categories:
 <p>配置数据库信息 ：</p>
 
 <pre>
-<code>vim config/dev.exs</code></pre>
+<code>vim config/dev.exs{% endhighlight %}
 
 <p>与本地数据库或者docker的数据库进行连接例如这样：</p>
 
@@ -64,14 +64,14 @@ config :lueluelue_backend, LueLueLueBackendWeb.Endpoint,
 
 &nbsp;&nbsp;&nbsp; esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
 
-&nbsp; ]</code></pre>
+&nbsp; ]{% endhighlight %}
 
 <p><img src="/uploads/ckeditor/pictures/698/image-20221108093442-1.png" style="height:414px; width:1040px" /></p>
 
 <p>启动server：</p>
 
 <pre>
-<code>mix phx.server</code></pre>
+<code>mix phx.server{% endhighlight %}
 
 <p>打开浏览器</p>
 

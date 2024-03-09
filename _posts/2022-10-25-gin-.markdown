@@ -34,7 +34,7 @@ categories:
 	<span style="color:#000;font-weight:700">})</span>
 	<span style="color:#000">router</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>使用时需要引入包：</p>
 
@@ -47,7 +47,7 @@ categories:
 
 &nbsp; &quot;time&quot;
 
-)</code></pre>
+){% endhighlight %}
 
 <p><code>不然会报错：</code><img height="122" src="/uploads/ckeditor/pictures/630/image-20221025100929-1.png" width="704" /></p>
 
@@ -67,7 +67,7 @@ categories:
     <span class="s">&quot;log/syslog&quot;</span>
     <span class="s">&quot;os&quot;</span>
 <span class="p">)</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code>增加log设置：</code></p>
 
@@ -89,12 +89,12 @@ categories:
     <span class="n">log</span><span class="o">.</span><span class="n">SetFlags</span><span class="p">(</span><span class="n">log</span><span class="o">.</span><span class="n">Lshortfile</span> <span class="o">|</span> <span class="n">log</span><span class="o">.</span><span class="n">LstdFlags</span><span class="p">)</span>
 
     <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">&quot;Logging to custom file&quot;</span><span class="p">)</span>
-<span class="p">}</span></code></pre>
+<span class="p">}</span>{% endhighlight %}
 
 <p><code><span class="p">运行：</span></code></p>
 
 <pre class="highlight shell">
-<code><span class="nb">tail</span> <span class="nt">-f</span> /tmp/myapp_log</code></pre>
+<code><span class="nb">tail</span> <span class="nt">-f</span> /tmp/myapp_log{% endhighlight %}
 
 <p><img height="74" src="/uploads/ckeditor/pictures/632/image-20221025101653-1.png" width="767" /></p>
 

@@ -27,9 +27,9 @@ categories:
 
 <p>运行node content-hash.js， 输出：</p>
 
-<pre><code>== result:&nbsp; QmfFjVBz5wd66kyd89RWkJJiWEMq1Fde3XGN9MBfx47Btp<br />
+{% highlight %}== result:&nbsp; QmfFjVBz5wd66kyd89RWkJJiWEMq1Fde3XGN9MBfx47Btp<br />
 == vitalik.eth, result: QmcW6e33pgdHaQE4PLKLShEHeyWtzHthanjoyRhaRy9bdA<br />
-== vitalik.eth, CID v1: bafybeigsn4u4nv4uyskxhewakk5m2j2lluzhsbsayp76zh7nbqznrxwm7e</code></pre>
+== vitalik.eth, CID v1: bafybeigsn4u4nv4uyskxhewakk5m2j2lluzhsbsayp76zh7nbqznrxwm7e{% endhighlight %}
 
 <p><img height="514" src="/uploads/ckeditor/pictures/558/image-20221010105505-1.png" width="1920" /></p>
 

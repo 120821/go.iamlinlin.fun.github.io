@@ -34,5 +34,5 @@ const ColorCard = ({ minValue, maxValue }) =&gt; {
   );
 };
 
-export default ColorCard;</code></pre>
+export default ColorCard;{% endhighlight %}
 

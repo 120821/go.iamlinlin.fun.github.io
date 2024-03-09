@@ -27,14 +27,14 @@ categories:
 &nbsp;&nbsp;&nbsp; logger.info &quot;=== url is: #{url}&quot;<br />
 &nbsp;&nbsp;&nbsp; response = HTTParty.get url
 
-&nbsp;&nbsp;&nbsp; status 200</code></pre>
+&nbsp;&nbsp;&nbsp; status 200{% endhighlight %}
 
-<pre><code>&nbsp;&nbsp;&nbsp; # 这里特别重要<br />
+{% highlight %}&nbsp;&nbsp;&nbsp; # 这里特别重要<br />
 &nbsp;&nbsp;&nbsp; my_headers = {&#39;content-type&#39; =&gt; response.headers[&#39;content-type&#39;]}<br />
 &nbsp;&nbsp;&nbsp; headers my_headers
 
 &nbsp;&nbsp;&nbsp; body response.body<br />
-&nbsp; end</code></pre>
+&nbsp; end{% endhighlight %}
 
 <p>&nbsp;</p>
 

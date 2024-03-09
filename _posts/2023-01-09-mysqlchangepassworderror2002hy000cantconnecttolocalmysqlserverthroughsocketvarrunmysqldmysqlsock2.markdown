@@ -13,7 +13,7 @@ categories:
 sudo apt-get autoremove
 sudo apt-get autoclean
 sudo apt-get install mysql-server mysql-client
-</code></pre>
+{% endhighlight %}
 
 <p>然后正常登录就可以了。</p>
 

@@ -7,7 +7,7 @@ categories:
 
                     <blockquote> 
  <p>“<strong>算法复杂度</strong>是指算法在编写成可执行程序后，运行时所需要的资源，资源包括时间资源和内存资源。” </p> 
- <pre><code># 可用的表示：
+ {% highlight %}# 可用的表示：
 # O(1) 最快，一般是公式
 # O(n) 第二快 , 一般是一重循环
 # O(lnN)
@@ -47,7 +47,7 @@ for(let i =0; i &lt; n; i++) {
     for( let j =0 ; j &lt; i ; j++){
       #askdkfsdkfj
     }   
-}</code></pre> 
+}{% endhighlight %} 
  <p><img alt="" src="https://img-blog.csdnimg.cn/d59a83681b6b44d993e9a8f042233ace.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"><img alt="" height="539" src="https://img-blog.csdnimg.cn/8223b8494d724a23b452b00175b29c7c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="823"></p> 
 </blockquote> 
 <p>需要熟悉的话，可用习题多练习一下，大概二十分钟即可，可自行百度或者参考这个博主的内容，这个内容比较好理解</p> 

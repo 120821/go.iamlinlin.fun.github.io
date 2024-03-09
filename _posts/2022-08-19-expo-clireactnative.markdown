@@ -9,14 +9,14 @@ categories:
 <p>1.<font style="vertical-align:inherit">安装 </font><a class="sc-fzoJMP eDewpD" href="https://docs.expo.io/versions/latest/workflow/expo-cli/"><code class="sc-fznMnq kEGdgu">expo-cli</code></a><font style="vertical-align:inherit">，一个用于处理 React Native 项目的命令行工具</font></p>
 
 <pre class="sc-fzpkJw ickbIB">
-<code class="sc-fznzOf dOLHfr language-bash">npm install --global expo-cli</code></pre>
+<code class="sc-fznzOf dOLHfr language-bash">npm install --global expo-cli{% endhighlight %}
 
 <p><font style="vertical-align:inherit">1.1 使用 expo-cli 创建一个新应用程序</font></p>
 
 <pre class="sc-fzpkJw ickbIB">
 <code class="sc-fznzOf dOLHfr language-bash">expo init MyApp --template blank
 cd MyApp
-npm start</code></pre>
+npm start{% endhighlight %}
 
 <p class="sc-fzolEj cQxQWb"><code class="sc-fznMnq kEGdgu">expo-cli</code><font style="vertical-align:inherit">下载依赖项可能需要几分钟。 （真的非常慢）</font></p>
 

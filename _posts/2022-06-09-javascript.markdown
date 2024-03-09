@@ -12,12 +12,12 @@ categories:
  <p>如果n第i位为0，则n&amp;(1&lt;&lt;i)的值为0</p> 
  <p>否则不为0</p> 
  <p>常用if(n&amp;(1&lt;&lt;i)==0)用于判断n的第i位是否为0</p> 
- <pre><code>编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为汉明重量）。
+ {% highlight %}编写一个函数，输入是一个无符号整数（以二进制串的形式），返回其二进制表达式中数字位数为 '1' 的个数（也被称为汉明重量）。
 
 提示：
     请注意，在某些语言（如 Java）中，没有无符号整数类型。在这种情况下，输入和输出都将被指定为有符号整数类型，并且不应影响您的实现，因为无论整数是有符号的还是无符号的，其内部的二进制表示形式都是相同的。
     在 Java 中，编译器使用二进制补码记法来表示有符号整数。因此，在上面的 示例 3 中，输入表示有符号整数 -3。
-</code></pre> 
+{% endhighlight %} 
  <pre><code class="language-javascript">var hammingWeight = function(n) {
     let ret = 0;
     for (let i = 0; i &lt; 32; i++) {
@@ -26,7 +26,7 @@ categories:
         }
     }
     return ret;
-};</code></pre> 
+};{% endhighlight %} 
  <p><img alt="" height="742" src="https://img-blog.csdnimg.cn/8c4333afd4154d8a99a2b6e79a5fd415.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1200"></p> 
 </blockquote> 
 <blockquote> 

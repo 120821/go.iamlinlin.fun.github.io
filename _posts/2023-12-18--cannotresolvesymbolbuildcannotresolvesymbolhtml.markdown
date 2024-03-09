@@ -16,13 +16,13 @@ Cannot resolve symbol &#39;Html&#39;</p>
 
 <pre>
 <code>implementation <span style="color:#abe338">&#39;androidx.appcompat:appcompat:1.3.1&#39;</span>
-implementation <span style="color:#abe338">&#39;androidx.core:core-ktx:1.6.0&#39;</span></code></pre>
+implementation <span style="color:#abe338">&#39;androidx.core:core-ktx:1.6.0&#39;</span>{% endhighlight %}
 
 <p>在.java文件里增加：</p>
 
 <pre>
 <code><span style="color:#dcc6e0">import</span> android.os.Build;
-<span style="color:#dcc6e0">import</span> android.text.Html;</code></pre>
+<span style="color:#dcc6e0">import</span> android.text.Html;{% endhighlight %}
 
 <p>2.在顶部菜单里进行rebuild</p>
 

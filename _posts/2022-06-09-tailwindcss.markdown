@@ -6,7 +6,7 @@ categories:
 ---
 
                     <p>安装不成功，就不要安装了直接复制链接在文档使用就可以了，可一看到一样的效果。</p> 
-<pre><code class="language-html">&lt;link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"&gt;</code></pre> 
+<pre><code class="language-html">&lt;link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"&gt;{% endhighlight %} 
 <p>创建config .rb文件，或者不同名字的文件在文件夹，知道自己引用的样式即可。文件内容比较少也可以不创建。样式占据了四五百行可以考虑进行整理。</p> 
 <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/7ce64c2f7ea04c878965734994bcf16c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p> 整理好也就一百多一点。还是很方便的。</p> 

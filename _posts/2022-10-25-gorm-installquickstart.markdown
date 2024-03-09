@@ -24,7 +24,7 @@ categories:
 
 <p>连接数据库，创建新表,创建数据crud：</p>
 
-<pre><code>package main
+{% highlight %}package main
 
 import (<br />
 &nbsp; &quot;gorm.io/gorm&quot;<br />
@@ -73,7 +73,7 @@ func main() {<br />
 
 &nbsp; // Delete - delete product<br />
 &nbsp; db.Delete(&amp;product, 1)<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>可以看到数据库已经创建了新表，并更新了数据。</p>
 

@@ -9,12 +9,12 @@ categories:
 <p>元素是构成 React 应用的最小单位，它用于描述屏幕上输出的内容</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="kwd">const</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> </span><span class="str">&lt;h1&gt;</span><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> world</span><span class="pun">!&lt;/</span><span class="pln">h1</span><span class="pun">&gt;;</span></code></pre>
+<code><span class="kwd">const</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> </span><span class="str">&lt;h1&gt;</span><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> world</span><span class="pun">!&lt;/</span><span class="pln">h1</span><span class="pun">&gt;;</span>{% endhighlight %}
 
 <p>首先我们在一个 HTML 页面中添加一个 <span class="marked">id=&quot;example&quot;</span> 的 <span class="marked">&lt;div&gt;</span></p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">&quot;example&quot;</span><span class="tag">&gt;&lt;/div&gt;</span></code></pre>
+<code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">&quot;example&quot;</span><span class="tag">&gt;&lt;/div&gt;</span>{% endhighlight %}
 
 <p>在此 div 中的所有内容都将由 React DOM 来管理，所以我们将其称为 &quot;根&quot; DOM 节点。</p>
 
@@ -24,7 +24,7 @@ categories:
 
 <p>React 元素都是不可变的。当元素被创建之后，你是无法改变其内容或属性的。</p>
 
-<pre><code>&lt;head&gt;
+{% highlight %}&lt;head&gt;
 
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -39,13 +39,13 @@ ReactDOM.render(<br />
 &nbsp; &nbsp; element,<br />
 &nbsp; &nbsp; document.getElementById(&#39;example&#39;)<br />
 );<br />
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>目前更新界面的唯一办法是创建一个新的元素，然后将它传入 ReactDOM.render() 方法：</p>
 
 <p>来看一下这个计时器的例子</p>
 
-<pre><code>&lt;head&gt;
+{% highlight %}&lt;head&gt;
 
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -69,13 +69,13 @@ function tick() {<br />
 }<br />
 &nbsp;<br />
 setInterval(tick, 1000);<br />
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>以上实例通过 setInterval() 方法，每秒钟调用一次 ReactDOM.render()。</p>
 
 <p>我们可以将要展示的部分封装起来，以下实例用一个函数来表示：</p>
 
-<pre><code>&lt;head&gt;<br />
+{% highlight %}&lt;head&gt;<br />
 &lt;meta charset=&quot;UTF-8&quot; /&gt;<br />
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -105,11 +105,11 @@ function tick() {<br />
 setInterval(tick, 1000);<br />
 &lt;/script&gt;
 
-&lt;/body&gt;</code></pre>
+&lt;/body&gt;{% endhighlight %}
 
 <p>除了函数外我们还可以创建一个 React.Component 的 ES6 类，该类封装了要展示的元素，需要注意的是在 render() 方法中，需要使用&nbsp;this.props&nbsp;替换&nbsp;props：</p>
 
-<pre><code>&lt;head&gt;<br />
+{% highlight %}&lt;head&gt;<br />
 &lt;meta charset=&quot;UTF-8&quot; /&gt;<br />
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -141,5 +141,5 @@ function tick() {<br />
 setInterval(tick, 1000);<br />
 &lt;/script&gt;
 
-&lt;/body&gt;</code></pre>
+&lt;/body&gt;{% endhighlight %}
 

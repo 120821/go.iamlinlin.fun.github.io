@@ -15,7 +15,7 @@ categories:
 <pre>
 <code>├── Import.sol
 └── Foo.sol
-</code></pre>
+{% endhighlight %}
 
 <p><font style="vertical-align:inherit">foo.sol </font></p>
 
@@ -37,7 +37,7 @@ function add(uint x, uint y) pure returns (uint) {
 contract Foo {
     string public name = &quot;Foo&quot;;
 }
-</code></pre>
+{% endhighlight %}
 
 <p><font style="vertical-align:inherit">import.sol </font></p>
 
@@ -60,7 +60,7 @@ contract Import {
         return foo.name();
     }
 }
-</code></pre>
+{% endhighlight %}
 
 <h3 id="external"><font style="vertical-align:inherit">外部的 </font></h3>
 

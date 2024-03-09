@@ -8,12 +8,12 @@ categories:
                     <p>搜索是否安装完毕  使用命令 ps | grep postgres 查找不到</p> 
 <p>ps -ef  查询所有进程</p> 
 <p>安装</p> 
-<pre><code>sudo apt update
-sudo apt install postgresql postgresql-contrib</code></pre> 
+{% highlight %}sudo apt update
+sudo apt install postgresql postgresql-contrib{% endhighlight %} 
 <p>运行</p> 
-<pre><code>sudo systemctl start postgresql.service</code></pre> 
+{% highlight %}sudo systemctl start postgresql.service{% endhighlight %} 
 <p>切换到postgres帐户<br> 通过键入以下内容切换到服务器上的postgres帐户：</p> 
-<pre><code>通过键入切换到服务器上的postgres帐户  sudo -i -u postgres   
+{% highlight %}通过键入切换到服务器上的postgres帐户  sudo -i -u postgres   
 现在，您可以通过键入以下内容立即访问Postgres提示符：
 psql   
 这将让您登录到PostgreSQL提示符，您可以从这里自由地与数据库管理系统进行交互。
@@ -26,7 +26,7 @@ sudo -u postgres psql
 同样，您可以通过键入以下内容退出交互式Postgres会话：
 \q
 如果您以postgres帐户登录，您可以通过键入以下内容创建新用户：
-createuser --interactive</code></pre> 
+createuser --interactive{% endhighlight %} 
 <p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04" title="How To Install and Use PostgreSQL on Ubuntu 18.04  | DigitalOcean">How To Install and Use PostgreSQL on Ubuntu 18.04 | DigitalOcean</a></p> 
 <p></p> 
 <p></p> 

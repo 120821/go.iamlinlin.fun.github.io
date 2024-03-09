@@ -18,7 +18,7 @@ git config user.email &quot;your_github_email&quot;
 
 # Again check what&#39;s currently:
 git config user.name
-git config user.email</code></pre>
+git config user.email{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>设置全局生效使用--global</code></div>
 

@@ -72,7 +72,7 @@ const ChinaMapForTooltip = () =&gt; {
 }<span style="color:#d4d0ab">;</span>
 
 export default ChinaMapForTooltip<span style="color:#d4d0ab">;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>然后在app.js里引入即可,视图页面是这样的：</p>
 

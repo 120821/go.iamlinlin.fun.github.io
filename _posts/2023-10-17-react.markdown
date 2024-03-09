@@ -11,7 +11,7 @@ categories:
     title: &#39;所属材料&#39;,
     dataIndex: &#39;materials&#39;,
     key: &#39;materials&#39;
-  },</code></pre>
+  },{% endhighlight %}
 
 <p>然后得到数据，处理数据：</p>
 
@@ -23,7 +23,7 @@ categories:
   currentPage: 1,
   totalPages: 1,
   totalCount: 0
-}</code></pre>
+}{% endhighlight %}
 
 <p><span style="font-family:monospace">接口中得到数据：</span><br />
 &nbsp;</p>
@@ -42,7 +42,7 @@ categories:
     console.error(error)
     // removeToken()
     // window.location.href = &#39;/&#39;
-  }</code></pre>
+  }{% endhighlight %}
 
 <p>以及和列表页面的数据关联：</p>
 
@@ -75,7 +75,7 @@ categories:
     // removeToken()
     // window.location.href = &#39;/&#39;
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>增加一个函数，用来把材料的ID和名称进行匹配：</code></p>
 
@@ -84,7 +84,7 @@ categories:
   const { materialData } = this.state;
   const material = materialData.find((item) =&gt; item.id === materialIds[0]);
   return material ? material.name : &#39;&#39;;
-}</code></pre>
+}{% endhighlight %}
 
 <p>修改数据：</p>
 
@@ -97,7 +97,7 @@ categories:
     key: &#39;materialName&#39;
   },
   // ...
-];</code></pre>
+];{% endhighlight %}
 
 <p>考虑到材料是多个（数组），可以修改函数：<br />
 &nbsp;</p>
@@ -110,5 +110,5 @@ categories:
     return material ? material.name : &#39;&#39;;
   });
   return materialNames.join(&#39;, &#39;); // 将多个材料名称用逗号分隔
-}</code></pre>
+}{% endhighlight %}
 

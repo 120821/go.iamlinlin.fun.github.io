@@ -11,7 +11,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp; &lt;%= link_to (image_tag enterprise.business_license.url, style: &#39;width: 200px; height: 200px;&#39;), enterprise.business_license.url %&gt;
 
-&lt;% end %&gt;</code></pre>
+&lt;% end %&gt;{% endhighlight %}
 
 <p>原因：</p>
 
@@ -24,31 +24,31 @@ categories:
 
 &nbsp; mount_uploader :image, ImageUploader
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>在这里 `:image` 是指代您模型中的图片字段，`ImageUploader` 则代表上传器的类名。</p>
 
 <p>2. 确保在您的视图代码中，使用 `image_url` 或 `image_path` 方法获取上传的图片的 URL 或路径，而不是直接使用实例：</p>
 
 <pre>
-<code>&lt;%= image_tag @model.image_url if @model.image? %&gt;</code></pre>
+<code>&lt;%= image_tag @model.image_url if @model.image? %&gt;{% endhighlight %}
 
 <p>或者：</p>
 
 <pre>
-<code>&lt;%= image_tag @model.image.url if @model.image? %&gt;</code></pre>
+<code>&lt;%= image_tag @model.image.url if @model.image? %&gt;{% endhighlight %}
 
 <p>3. 确保在您的业务逻辑或者控制器代码中，避免将 `ImageUploader` 实例当作字符串使用：</p>
 
 <pre>
 # 避免这种错误使用方式
 
-<code>image_path = @model.image</code></pre>
+<code>image_path = @model.image{% endhighlight %}
 
 <pre>
 # 正确的使用方式，返回图片的 URL
 
-<code>image_path = @model.image.url</code></pre>
+<code>image_path = @model.image.url{% endhighlight %}
 
 <p>4. 确保在您的上传器中，正确地实现了 `store_dir` 方法：</p>
 
@@ -65,7 +65,7 @@ end</code></pre>
 
 &nbsp; # ...
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>请注意，`store_dir` 方法的返回值必须是一个字符串类型，否则可能会出现与错误消息类似的错误。</p>
 

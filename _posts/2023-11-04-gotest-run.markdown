@@ -24,15 +24,15 @@ func TestA(t *testing.T) {
 
 func TestB(t *testing.T) {
     assert.True(t, false)
-}</code></pre>
+}{% endhighlight %}
 
 <p>如果都测试使用：</p>
 
 <pre>
-<code>go test</code></pre>
+<code>go test{% endhighlight %}
 
 <p>如果仅仅测试其中一个：</p>
 
 <pre>
-<code>go test -run B</code></pre>
+<code>go test -run B{% endhighlight %}
 

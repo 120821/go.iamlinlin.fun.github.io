@@ -26,5 +26,5 @@ categories:
 <p>2.需要使用命令来指定Gemfile，以便于生成Gemfile。如果还是不行，就写一个Gemfile.lock的简单版，然后执行，就可以自动生成。</p>
 
 <pre>
-<code>bundle install --gemfile=Gemfile</code></pre>
+<code>bundle install --gemfile=Gemfile{% endhighlight %}
 

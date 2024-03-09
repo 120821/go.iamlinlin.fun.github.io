@@ -15,36 +15,36 @@ categories:
 <p>所有图片都应该有一个 <code>alt</code>描述图像的属性。 根据替代文本定位图像 <a href="https://playwright.dev/docs/api/class-page#page-get-by-alt-text"> 您可以使用page.getByAltText(text[, options]) </a>。</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">img</span><span style="color:#22863a"> </span><span style="color:#0550ae">alt</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">playwright logo</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#0550ae">src</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">/img/playwright-logo.svg</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#0550ae">width</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">100</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#393a34">/&gt;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">img</span><span style="color:#22863a"> </span><span style="color:#0550ae">alt</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">playwright logo</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#0550ae">src</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">/img/playwright-logo.svg</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#0550ae">width</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">100</span><span style="color:#393a34">&quot;</span><span style="color:#22863a"> </span><span style="color:#393a34">/&gt;</span></span>{% endhighlight %}
 
 <p>您可以在通过文本选项找到图像后单击它</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByAltText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;playwright logo&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByAltText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;playwright logo&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>2.标题定位</p>
 
 <p>定位具有匹配 title 属性的元素 <a href="https://playwright.dev/docs/api/class-page#page-get-by-title">使用page.getByTitle(text[, options]) </a>。</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">span</span><span style="color:#22863a"> </span><span style="color:#0550ae">title</span><span style="color:#393a34">=</span><span style="color:#393a34">&#39;</span><span style="color:#c6105f">Issues count</span><span style="color:#393a34">&#39;</span><span style="color:#393a34">&gt;</span>25 issues<span style="color:#393a34">&lt;/</span><span style="color:#22863a">span</span><span style="color:#393a34">&gt;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">span</span><span style="color:#22863a"> </span><span style="color:#0550ae">title</span><span style="color:#393a34">=</span><span style="color:#393a34">&#39;</span><span style="color:#c6105f">Issues count</span><span style="color:#393a34">&#39;</span><span style="color:#393a34">&gt;</span>25 issues<span style="color:#393a34">&lt;/</span><span style="color:#22863a">span</span><span style="color:#393a34">&gt;</span></span>{% endhighlight %}
 
 <p>您可以在通过标题文本找到它后检查问题数：</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByTitle</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Issues count&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toHaveText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;25 issues&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">getByTitle</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Issues count&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toHaveText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;25 issues&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p><code><span style="color:#393a34"><span style="color:#393a34">3，测试id进行定位</span></span></code></p>
 
 <p>通过测试 ID 进行测试是最具弹性的测试方式，因为即使您的文本或属性角色发生变化，测试仍会通过。 QA 和开发人员应该定义明确的测试 ID 并使用 <a href="https://playwright.dev/docs/api/class-page#page-get-by-test-id">page.getByTestId(testId) </a>查询它们。 但是，通过测试 ID 进行的测试不是面向用户的。 如果角色或文本值对您很重要，那么请考虑使用面向用户的定位器，例如 <a href="https://playwright.dev/docs/locators#locate-by-role">角色 </a>定位器和 <a href="https://playwright.dev/docs/locators#locate-by-text">文本定位器 </a>。</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#22863a"> </span><span style="color:#0550ae">data-testid</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">directions</span><span style="color:#393a34">&quot;</span><span style="color:#393a34">&gt;</span>Itin&eacute;raire<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#22863a"> </span><span style="color:#0550ae">data-testid</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">directions</span><span style="color:#393a34">&quot;</span><span style="color:#393a34">&gt;</span>Itin&eacute;raire<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span>{% endhighlight %}
 
 <p>您可以通过它的测试 ID 找到该元素：</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByTestId</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;directions&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByTestId</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;directions&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>当您选择使用测试 ID 方法或无法通过 <a href="https://playwright.dev/docs/locators#locate-by-role">角色 </a>或 <a href="https://playwright.dev/docs/locators#locate-by-text">文本 </a>定位时，您也可以使用测试 ID</p>
 
@@ -72,17 +72,17 @@ const config = {
 
 };
 
-module.exports = config;</code></pre>
+module.exports = config;{% endhighlight %}
 
 <p>在您的 html 中，您现在可以使用 <code>data-pw</code>作为您的测试 ID 而不是默认 ID <code>data-testid</code>.</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#22863a"> </span><span style="color:#0550ae">data-pw</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">directions</span><span style="color:#393a34">&quot;</span><span style="color:#393a34">&gt;</span>Itin&eacute;raire<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#22863a"> </span><span style="color:#0550ae">data-pw</span><span style="color:#393a34">=</span><span style="color:#393a34">&quot;</span><span style="color:#c6105f">directions</span><span style="color:#393a34">&quot;</span><span style="color:#393a34">&gt;</span>Itin&eacute;raire<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span></span>{% endhighlight %}
 
 <p>然后像往常一样定位元素：</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByTestId</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;directions&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+<code><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByTestId</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;directions&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>4.通过css xpath定位</p>
 
@@ -93,7 +93,7 @@ module.exports = config;</code></pre>
 </span><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;xpath=//button&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
 <span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
-</span><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;//button&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;//button&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>XPath 和 CSS 选择器可以绑定到 DOM 结构或实现。 当 DOM 结构发生变化时，这些选择器可能会中断。 的示例： <strong>的不良做法 </strong> 下面的长 CSS 或 XPath 链是导致测试不稳定</p>
 
@@ -104,7 +104,7 @@ module.exports = config;</code></pre>
 </span>
 <span style="color:#393a34"><span style="color:#cf222e">await</span> page
 </span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;//*[@id=&quot;tsf&quot;]/div[2]/div[1]/div[1]/div/div[2]/input&#39;</span><span style="color:#393a34">)</span>
-</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34">    <span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <div class="admonitionContent_S0QG">
 <p>不推荐使用 CSS 和 XPath，因为 DOM 经常会发生变化，从而导致非弹性测试。 相反，尝试提出一个接近用户如何感知页面的定位器，例如 <a href="https://playwright.dev/docs/locators#locate-by-role">角色定位器 </a>，或者 <a href="https://playwright.dev/docs/locators#locate-by-testid">定义一个明确的测试合同。 </a>使用测试 ID</p>

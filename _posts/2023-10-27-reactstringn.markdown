@@ -15,7 +15,7 @@ categories:
   { title: <span style="color:#abe338">&quot;年份&quot;</span>, dataIndex: <span style="color:#abe338">&quot;year&quot;</span> },
   { title: <span style="color:#abe338">&quot;初始库存量&quot;</span>, dataIndex: <span style="color:#abe338">&quot;bank_count&quot;</span> },
   { title: <span style="color:#abe338">&quot;维修排放&quot;</span>, dataIndex: <span style="color:#abe338">&quot;emission_operation&quot;</span> }
-];</code></pre>
+];{% endhighlight %}
 
 <p>修改上面的内容是不行的，需要在render里判断：</p>
 
@@ -27,7 +27,7 @@ categories:
       : parseFloat(item[column.dataIndex]).toFixed(2) // 对于其他列，保留两位小数
     }
   <span style="color:#ffa07a">&lt;/</span><span style="color:#ffa07a">td</span><span style="color:#ffa07a">&gt;</span>
-))}</code></pre>
+))}{% endhighlight %}
 
 <p>&nbsp;</p>
 

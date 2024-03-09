@@ -10,5 +10,5 @@ categories:
 <code>curl https://reqbin.com/echo/post/json
    -H &#39;Content-Type: application/json&#39;
    -d &#39;{&quot;Id&quot;: 78912, &quot;Quantity&quot;: 1,
-&quot;Price&quot;: 19.00}&#39;</code></pre>
+&quot;Price&quot;: 19.00}&#39;{% endhighlight %}
 

@@ -9,20 +9,20 @@ categories:
 <p>1.查看所有已经安装的软件</p>
 
 <pre>
-<code>dpkg -l</code></pre>
+<code>dpkg -l{% endhighlight %}
 
 <p>2.查看是否安装了飞书</p>
 
 <pre>
-<code>dpkg -l | grep feishu</code></pre>
+<code>dpkg -l | grep feishu{% endhighlight %}
 
 <pre>
-<code>ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu)</code></pre>
+<code>ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu){% endhighlight %}
 
 <p>3.卸载飞书</p>
 
 <pre>
-<code>sudo apt-get remove --purge bytedance-feishu-dev</code></pre>
+<code>sudo apt-get remove --purge bytedance-feishu-dev{% endhighlight %}
 
 <pre>
 <code>Reading package lists... Done
@@ -45,7 +45,7 @@ The following packages will be REMOVED
 
 After this operation, 1,195 MB disk space will be freed.
 
-Do you want to continue? [Y/n] Y</code></pre>
+Do you want to continue? [Y/n] Y{% endhighlight %}
 
 <p>&nbsp;</p>
 

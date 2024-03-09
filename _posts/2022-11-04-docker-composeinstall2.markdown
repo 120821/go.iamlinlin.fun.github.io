@@ -20,7 +20,7 @@ categories:
 </span></span><span style="display:flex"><span><span style="color:#09f;font-style:italic"># download the CLI into the plugins directory</span>
 </span></span><span style="display:flex"><span>curl -sSL https://github.com/docker/compose/releases/download/v2.0.1/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
 </span></span><span style="display:flex"><span><span style="color:#09f;font-style:italic"># make the CLI executable</span>
-</span></span><span style="display:flex"><span>chmod +x ~/.docker/cli-plugins/docker-compose</span></span></code></pre>
+</span></span><span style="display:flex"><span>chmod +x ~/.docker/cli-plugins/docker-compose</span></span>{% endhighlight %}
 
 <p>get docker-compose 2.5.0</p>
 

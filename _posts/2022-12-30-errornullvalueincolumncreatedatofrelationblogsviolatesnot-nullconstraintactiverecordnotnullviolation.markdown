@@ -9,12 +9,12 @@ categories:
 <p>解决：</p>
 
 <pre>
-<code>ALTER TABLE &lt;your-table&gt; ALTER COLUMN &lt;your-column&gt; DROP NOT NULL;</code></pre>
+<code>ALTER TABLE &lt;your-table&gt; ALTER COLUMN &lt;your-column&gt; DROP NOT NULL;{% endhighlight %}
 
 <p>把表的not null删除</p>
 
 <pre>
-<code>ALTER TABLE blogs ALTER COLUMN created_at DROP NOT NULL;</code></pre>
+<code>ALTER TABLE blogs ALTER COLUMN created_at DROP NOT NULL;{% endhighlight %}
 
 <p>&nbsp;</p>
 

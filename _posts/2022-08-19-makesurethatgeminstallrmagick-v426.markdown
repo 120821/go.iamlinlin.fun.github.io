@@ -14,7 +14,7 @@ categories:
 
 <pre class="code sh">
 <code class="sh">解决：使用命令
-sudo apt-get install libmagickwand-dev</code></pre>
+sudo apt-get install libmagickwand-dev{% endhighlight %}
 
 <p><code class="sh">然后继续bundle install</code></p>
 

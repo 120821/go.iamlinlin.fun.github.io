@@ -10,12 +10,12 @@ categories:
 
 <pre>
 <code>sudo apt-<span style="color:#f5ab35">get</span> update
-sudo apt-<span style="color:#f5ab35">get</span> install unrar</code></pre>
+sudo apt-<span style="color:#f5ab35">get</span> install unrar{% endhighlight %}
 
 <p>2.使用命令解压缩：（将 <code>&lt;password&gt;</code> 替换为你的RAR文件的密码，<code>&lt;archive.rar&gt;</code> 替换为你要解压缩的RAR文件的路径）</p>
 
 <pre>
-<code>unrar x -p<span style="color:#ffa07a">&lt;</span><span style="color:#ffa07a">password</span><span style="color:#ffa07a">&gt;</span> <span style="color:#ffa07a">&lt;</span><span style="color:#ffa07a">archive.rar</span><span style="color:#ffa07a">&gt;</span></code></pre>
+<code>unrar x -p<span style="color:#ffa07a">&lt;</span><span style="color:#ffa07a">password</span><span style="color:#ffa07a">&gt;</span> <span style="color:#ffa07a">&lt;</span><span style="color:#ffa07a">archive.rar</span><span style="color:#ffa07a">&gt;</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

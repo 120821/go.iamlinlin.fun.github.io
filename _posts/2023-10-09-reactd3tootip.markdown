@@ -113,7 +113,7 @@ nbsp; return (
 
 };
 
-export default ChinaMapForTooltip;</code></pre>
+export default ChinaMapForTooltip;{% endhighlight %}
 
 <p>&nbsp;</p>
 

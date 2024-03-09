@@ -11,43 +11,43 @@ categories:
 <p>1.运行所有的测试</p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span>{% endhighlight %}
 
 <p><code><span style="color:#393a34"><span style="color:#116329">2.运行单个的测试</span></span></code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.spec.ts</span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.spec.ts</span>{% endhighlight %}
 
 <p><code><span style="color:#393a34">3.运行一组测试</span></code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> tests/todo-page/ tests/landing-page/</span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> tests/todo-page/ tests/landing-page/</span>{% endhighlight %}
 
 <p><code>4.运行所有含有landing文件夹或者在login在文件名中的测试文件</code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing login</span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing login</span>{% endhighlight %}
 
 <p><code>5.</code>运行带有标题的文件</p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> <span style="color:#e36209">-g</span> <span style="color:#c6105f">&quot;add a todo item&quot;</span></span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> <span style="color:#e36209">-g</span> <span style="color:#c6105f">&quot;add a todo item&quot;</span></span>{% endhighlight %}
 
 <p><code>6.在引导模式下运行测试文件</code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.spec.ts <span style="color:#e36209">--headed</span></span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.spec.ts <span style="color:#e36209">--headed</span></span>{% endhighlight %}
 
 <p><code>7.在特定的项目进行测试</code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.ts <span style="color:#e36209">--project</span><span style="color:#d73a49">=</span>chromium</span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> landing-page.ts <span style="color:#e36209">--project</span><span style="color:#d73a49">=</span>chromium</span>{% endhighlight %}
 
 <p><code><span style="color:#393a34">8.调试所有的测试文件</span></code></p>
 
 <pre>
 <code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> <span style="color:#e36209">--debug</span>
-</span></code></pre>
+</span>{% endhighlight %}
 
 <p><code><span style="color:#393a34">9.调试一个测试文件</span></code></p>
 
@@ -58,10 +58,10 @@ categories:
 <p>10.从行号调试测试 <code>test(..</code>被定义为：</p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> example.spec.ts:42 <span style="color:#e36209">--debug</span></span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span> example.spec.ts:42 <span style="color:#e36209">--debug</span></span>{% endhighlight %}
 
 <p><code><span style="color:#393a34"><span style="color:#e36209">11.测试报告（如果测试出现错误，就会自动出现html的测试报告，点击可以查看错误的详情）</span></span></code></p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright show-report</span></code></pre>
+<code><span style="color:#393a34">npx playwright show-report</span>{% endhighlight %}
 

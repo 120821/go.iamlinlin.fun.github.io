@@ -9,7 +9,7 @@ categories:
 <p>附加到切片 : 将新元素附加到切片是很​​常见的，因此 Go 提供了一个内置的 <code>append</code>功能。 文档 <a href="https://go.dev/pkg/builtin/#append" target="_self">_ </a> 内置包的描述 <code>append</code>.</p>
 
 <pre>
-<code>func append(s []T, vs ...T) []T </code></pre>
+<code>func append(s []T, vs ...T) []T {% endhighlight %}
 
 <p>第一个参数 <code>s</code>的 <code>append</code>是类型的一部分 <code>T</code>，其余的是 <code>T</code>要附加到切片的值。</p>
 
@@ -32,7 +32,7 @@ func main() {
 
 &nbsp;&nbsp; &nbsp;s = append(s, 0)
 
-&nbsp;&nbsp; &nbsp;printSlice(s)</code></pre>
+&nbsp;&nbsp; &nbsp;printSlice(s){% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -54,7 +54,7 @@ len=1 cap=1 [0]
 
 len=2 cap=2 [0 1]
 
-len=5 cap=6 [0 1 2 3 4]</code></pre>
+len=5 cap=6 [0 1 2 3 4]{% endhighlight %}
 
 <p>&nbsp;</p>
 

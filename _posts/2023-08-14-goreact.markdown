@@ -25,7 +25,7 @@ categories:
 
 +&nbsp; AnnualMaintenanceRate float64 `json:&quot;annualMaintenanceRate&quot;`
 
-+&nbsp; ScrapDischargeRate float64 `json:&quot;scrapDischargeRate&quot;</code></pre>
++&nbsp; ScrapDischargeRate float64 `json:&quot;scrapDischargeRate&quot;{% endhighlight %}
 
 <p>然后再在Error里自己自己的error的打印：</p>
 
@@ -40,14 +40,14 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp; return
 
-&nbsp;&nbsp; }</code></pre>
+&nbsp;&nbsp; }{% endhighlight %}
 
 <p>格式修改完整后，继续在前端发起请求，发现出现了error，说明还是格式不对，仔细对比发现input不匹配，应该使用inputnumber</p>
 
 <pre>
 <code>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Input className=&quot;custom-form-item&quot; defaultValue={data.data.initial_filling_amount}/&gt;
 
-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;InputNumber defaultValue={data.data.initial_filling_amount} step={0.01} min={0} max={100} precision={2} className=&quot;custom-input&quot; /&gt;</code></pre>
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;InputNumber defaultValue={data.data.initial_filling_amount} step={0.01} min={0} max={100} precision={2} className=&quot;custom-input&quot; /&gt;{% endhighlight %}
 
 <p>修改好后，就可以正常保存了。</p>
 

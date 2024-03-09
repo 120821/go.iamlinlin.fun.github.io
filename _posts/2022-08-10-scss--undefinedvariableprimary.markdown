@@ -10,13 +10,13 @@ https://stackoverflow.com/questions/17598996/sass-use-variables-across-multiple-
 <pre class="lang-css s-code-block">
 <code class="hljs language-css"><span class="hljs-keyword">@use</span> <span class="hljs-string">&#39;variables&#39;</span>;
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#39;gallery&#39;</span>;
-</code></pre>
+{% endhighlight %}
 
 <p><code>_variables.scss</code>:</p>
 
 <pre class="lang-css s-code-block">
 <code class="hljs language-css">$primary: <span class="hljs-number">#ffffff</span>;
-</code></pre>
+{% endhighlight %}
 
 <p><code>_gallery.scss</code>:</p>
 
@@ -24,7 +24,7 @@ https://stackoverflow.com/questions/17598996/sass-use-variables-across-multiple-
 <code class="hljs language-php"><span class="hljs-comment">#gallery {</span>
     background-color: <span class="hljs-variable">$primary</span> <span class="hljs-comment">// &lt;--- Throws error of undefined variable</span>
 }
-</code></pre>
+{% endhighlight %}
 
 <p>$primary 是一个颜色，报错的时候，直接替换颜色即可使用，或者先定义一下就可以使用，$primary: blue.这样的</p>
 

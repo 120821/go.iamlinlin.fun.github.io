@@ -20,26 +20,26 @@ categories:
   &lt;li class=&quot;apples&quot;&gt;&hellip;
   &lt;li class=&quot;tomatoes&quot;&gt;&lt;span&gt;Tomato is a Fruit&lt;/span&gt;&hellip;
 &lt;/ul&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>为了获取其中的内容，可以使用class</p>
 
-<pre><code>vegetable = driver.find_element(class: &#39;tomatoes&#39;)</code></pre>
+{% highlight %}vegetable = driver.find_element(class: &#39;tomatoes&#39;){% endhighlight %}
 
 <p>或者使用：id + class</p>
 
-<pre><code>fruits = driver.find_element(id: &#39;fruits&#39;)<br />
-fruit = fruits.find_element(class: &#39;tomatoes&#39;)</code></pre>
+{% highlight %}fruits = driver.find_element(id: &#39;fruits&#39;)<br />
+fruit = fruits.find_element(class: &#39;tomatoes&#39;){% endhighlight %}
 
 <p>或者使用：</p>
 
-<pre><code>fruit = driver.find_element(css: &#39;#fruits .tomatoes&#39;)</code></pre>
+{% highlight %}fruit = driver.find_element(css: &#39;#fruits .tomatoes&#39;){% endhighlight %}
 <p>&nbsp; 有几个用例需要获取对与定位器匹配的所有元素的引用，而不仅仅是第一个元素。&nbsp; 复数查找元素方法返回元素引用的集合。&nbsp; 如果没有匹配项，则返回一个空列表。&nbsp; 在这种情况下，将在一个集合中返回对所有水果和蔬菜列表项的引用。</p>
 
-<pre><code>plants = driver.find_elements(tag_name: &#39;li&#39;)</code></pre>
+{% highlight %}plants = driver.find_elements(tag_name: &#39;li&#39;){% endhighlight %}
 <p>获取元素</p>
 
-<pre><code>require &#39;selenium-webdriver&#39;<br />
+{% highlight %}require &#39;selenium-webdriver&#39;<br />
 driver = Selenium::WebDriver.for :firefox<br />
 begin<br />
 &nbsp;&nbsp;&nbsp;&nbsp; # Navigate to URL<br />
@@ -53,7 +53,7 @@ begin<br />
 &nbsp; }<br />
 ensure<br />
 &nbsp; driver.quit<br />
-end</code></pre>
+end{% endhighlight %}
 <p>从元素中查找元素</p>
 
 <pre>&nbsp; <code>require &#39;selenium-webdriver&#39;<br />
@@ -73,7 +73,7 @@ end</code></pre>
 &nbsp;&nbsp;&nbsp; }<br />
 &nbsp; ensure<br />
 &nbsp;&nbsp;&nbsp; driver.quit<br />
-&nbsp; end</code></pre>
+&nbsp; end{% endhighlight %}
 <p>获取活动元素</p>
 
 <pre>&nbsp;<code> require &#39;selenium-webdriver&#39;<br />
@@ -88,7 +88,7 @@ end</code></pre>
 &nbsp; ensure<br />
 &nbsp;&nbsp;&nbsp; driver.quit<br />
 &nbsp; end</code><br />
-&nbsp;</code></pre>
+&nbsp;{% endhighlight %}
 
 <p>&nbsp;</p>
 

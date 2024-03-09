@@ -22,7 +22,7 @@ categories:
 </ol>
 <h3>Linux 在 / 中找到最大的文件</h3> 
 <p>运行命令：<br><code>$ sudo du -a /dir/ | sort -n -r | head -n 20</code><br> 或者<br><code>$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20</code></p> 
-<pre><code>
+{% highlight %}
     Open the terminal application
     Login as root user using the sudo -i command
     Type du -a /dir/ | sort -n -r | head -n 20
@@ -37,6 +37,6 @@ Run the command:
 $ sudo du -a /dir/ | sort -n -r | head -n 20
 
 OR
-$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20</code></pre> 
+$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20{% endhighlight %} 
 <p></p>
                 

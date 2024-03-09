@@ -19,7 +19,7 @@ render action: &quot;edit&quot;
 
 render &quot;books/edit&quot;
 
-render template: &quot;books/edit&quot;</code></pre>
+render template: &quot;books/edit&quot;{% endhighlight %}
 
 <p>渲染其他内容：</p>
 
@@ -28,7 +28,7 @@ render template: &quot;books/edit&quot;</code></pre>
 
 render html: helpers.tag.strong(&#39;Not Found&#39;)
 
-render json: @product</code></pre>
+render json: @product{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -43,7 +43,7 @@ render json: @product</code></pre>
 <pre>
 <code>render file: &quot;#{Rails.root}/public/404.html&quot;, layout: false
 
-controller进行设置渲染模板</code></pre>
+controller进行设置渲染模板{% endhighlight %}
 
 <pre>
 <code>class ProductsController &lt; ApplicationController
@@ -64,7 +64,7 @@ controller进行设置渲染模板</code></pre>
 
 &nbsp;&nbsp;&nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>application_controller确认进行渲染的公共样式</p>
 
@@ -73,21 +73,21 @@ end</code></pre>
 
 &nbsp; layout &quot;main&quot;
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>不渲染：</p>
 
 <pre>
 <code>class OldArticlesController &lt; SpecialArticlesController
 
-&nbsp; layout false</code></pre>
+&nbsp; layout false{% endhighlight %}
 
 <pre>
 <code>&nbsp; def show
 
 &nbsp;&nbsp;&nbsp; @article = Article.find(params[:id])
 
-&nbsp; end</code></pre>
+&nbsp; end{% endhighlight %}
 
 <pre>
 <code>&nbsp; def index
@@ -100,7 +100,7 @@ end</code></pre>
 
 &nbsp; # ...
 
-end</code></pre>
+end{% endhighlight %}
 
 <p id="structuring-layouts"><a class="anchorlink" href="https://guides.rubyonrails.org/layouts_and_rendering.html#structuring-layouts">3 Structuring Layouts</a></p>
 

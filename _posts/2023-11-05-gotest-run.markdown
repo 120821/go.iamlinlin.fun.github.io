@@ -9,20 +9,20 @@ categories:
 <p>使用 的是正则表达式：</p>
 
 <pre>
-<code>go test -<span style="color:#f5ab35">run</span> &lt;regex&gt;</code></pre>
+<code>go test -<span style="color:#f5ab35">run</span> &lt;regex&gt;{% endhighlight %}
 
 <p>运行Test开头的所有测试函数：</p>
 
 <pre>
-<code>go test -run ^Test</code></pre>
+<code>go test -run ^Test{% endhighlight %}
 
 <p>运行所有包含Add的测试函数：</p>
 
 <pre>
-<code>go test -<span style="color:#f5ab35">run</span> <span style="color:#f5ab35">Add</span></code></pre>
+<code>go test -<span style="color:#f5ab35">run</span> <span style="color:#f5ab35">Add</span>{% endhighlight %}
 
 <p>运行Test开头Number结尾的测试函数:</p>
 
 <pre>
-<code>go test -run ^Test.*Numbers$</code></pre>
+<code>go test -run ^Test.*Numbers${% endhighlight %}
 

@@ -9,7 +9,7 @@ categories:
 <pre>
 <code>credits: {
   enabled: false
-}</code></pre>
+}{% endhighlight %}
 
 <p>请注意，根据Highcharts的许可协议，如果您使用的是免费版本，则需要在图表中保留Highcharts的版权信息。</p>
 
@@ -24,7 +24,7 @@ categories:
 };
 
 // 初始化 Highcharts 图表
-Highcharts.chart(&#39;container&#39;, options);</code></pre>
+Highcharts.chart(&#39;container&#39;, options);{% endhighlight %}
 
 <p>&nbsp;</p>
 

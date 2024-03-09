@@ -25,7 +25,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show: true,
 
-&nbsp;&nbsp;&nbsp; },</code></pre>
+&nbsp;&nbsp;&nbsp; },{% endhighlight %}
 
 <p>这里的grid是和<code>yAxis并列的。</code></p>
 

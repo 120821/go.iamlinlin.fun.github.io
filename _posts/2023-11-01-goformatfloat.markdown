@@ -9,7 +9,7 @@ categories:
 <p>引入：</p>
 
 <pre>
-<code><span style="color:#dcc6e0">import</span> <span style="color:#abe338">&quot;strconv&quot;</span></code></pre>
+<code><span style="color:#dcc6e0">import</span> <span style="color:#abe338">&quot;strconv&quot;</span>{% endhighlight %}
 
 <p>调用：</p>
 
@@ -21,5 +21,5 @@ emissionInit[i] := formatFloat(sale[i][<span style="color:#f5ab35">1</span>] * E
 emissionOperation[i] := formatFloat(sale[i][<span style="color:#f5ab35">1</span>] * (<span style="color:#f5ab35">1</span> - EF_ini[i]) * EF_ope[i], <span style="color:#f5ab35">2</span>)
 
 <span style="color:#d4d0ab">// 保留2位小数</span>
-emissionService[i] := formatFloat((sale[i][<span style="color:#f5ab35">1</span>] - emissionInit[i] - emissionService[i]) * EF_ser[i], <span style="color:#f5ab35">2</span>)</code></pre>
+emissionService[i] := formatFloat((sale[i][<span style="color:#f5ab35">1</span>] - emissionInit[i] - emissionService[i]) * EF_ser[i], <span style="color:#f5ab35">2</span>){% endhighlight %}
 

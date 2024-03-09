@@ -14,5 +14,5 @@ Make sure that `gem install sqlite3 -v &#39;1.3.11&#39; --source &#39;https://ru
 <p>使用提示的`gem install sqlite3 -v &#39;1.3.11&#39; --source &#39;https://rubygems.org/&#39;` 并不能直接安装，需要使用以下命令然后继续bundle：</p>
 
 <pre>
-<code>sudo apt-get install -y sqlite3 libsqlite3-dev</code></pre>
+<code>sudo apt-get install -y sqlite3 libsqlite3-dev{% endhighlight %}
 

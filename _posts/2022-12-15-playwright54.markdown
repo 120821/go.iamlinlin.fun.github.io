@@ -26,7 +26,7 @@ categories:
 </span><span style="color:#393a34">    <span style="color:#393a34">&lt;</span><span style="color:#22863a">div</span><span style="color:#393a34">&gt;</span>Mary<span style="color:#393a34">&lt;/</span><span style="color:#22863a">div</span><span style="color:#393a34">&gt;</span>
 </span><span style="color:#393a34">    <span style="color:#393a34">&lt;</span><span style="color:#22863a">div</span><span style="color:#393a34">&gt;</span><span style="color:#393a34">&lt;</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span>Say goodbye<span style="color:#393a34">&lt;/</span><span style="color:#22863a">button</span><span style="color:#393a34">&gt;</span><span style="color:#393a34">&lt;/</span><span style="color:#22863a">div</span><span style="color:#393a34">&gt;</span>
 </span><span style="color:#393a34">  <span style="color:#393a34">&lt;/</span><span style="color:#22863a">li</span><span style="color:#393a34">&gt;</span>
-</span><span style="color:#393a34"><span style="color:#393a34">&lt;/</span><span style="color:#22863a">ul</span><span style="color:#393a34">&gt;</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#393a34">&lt;/</span><span style="color:#22863a">ul</span><span style="color:#393a34">&gt;</span></span>{% endhighlight %}
 
 <p>要截取包含&ldquo;Mary&rdquo;和&ldquo;Say goodbye&rdquo;的行的屏幕截图：</p>
 
@@ -36,7 +36,7 @@ categories:
 <span style="color:#393a34"><span style="color:#cf222e">await</span> rowLocator
 </span><span style="color:#393a34">  <span style="color:#393a34">.</span><span style="color:#8250df">filter</span><span style="color:#393a34">(</span><span style="color:#393a34">{</span> <span style="color:#005cc5">hasText</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Mary&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span>
 </span><span style="color:#393a34">  <span style="color:#393a34">.</span><span style="color:#8250df">filter</span><span style="color:#393a34">(</span><span style="color:#393a34">{</span> <span style="color:#005cc5">has</span><span style="color:#d73a49">:</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;button&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Say goodbye&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span>
-</span><span style="color:#393a34">  <span style="color:#393a34">.</span><span style="color:#8250df">screenshot</span><span style="color:#393a34">(</span><span style="color:#393a34">{</span> <span style="color:#005cc5">path</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;screenshot.png&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34">  <span style="color:#393a34">.</span><span style="color:#8250df">screenshot</span><span style="color:#393a34">(</span><span style="color:#393a34">{</span> <span style="color:#005cc5">path</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;screenshot.png&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>ls, 您现在应该在项目的根目录中有一个&ldquo;screenshot.png&rdquo;文件。</p>
 
@@ -44,7 +44,7 @@ categories:
 
 <pre>
 <code><span style="color:#393a34"><span style="color:#cf222e">const</span> rows <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;listitem&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
-</span><span style="color:#393a34"><span style="color:#cf222e">const</span> texts <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">allTextContents</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#cf222e">const</span> texts <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">allTextContents</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>对列表中的每个元素做一些事情</p>
 
@@ -52,7 +52,7 @@ categories:
 <code><span style="color:#393a34"><span style="color:#cf222e">const</span> rows <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;listitem&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> count <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">count</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">for</span> <span style="color:#393a34">(</span><span style="color:#cf222e">let</span> i <span style="color:#d73a49">=</span> <span style="color:#005cc5">0</span><span style="color:#393a34">;</span> i <span style="color:#d73a49">&lt;</span> count<span style="color:#393a34">;</span> <span style="color:#d73a49">++</span>i<span style="color:#393a34">)</span>
-</span><span style="color:#393a34">  <span style="color:#116329">console</span><span style="color:#393a34">.</span><span style="color:#8250df">log</span><span style="color:#393a34">(</span><span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">nth</span><span style="color:#393a34">(</span>i<span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">textContent</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34">  <span style="color:#116329">console</span><span style="color:#393a34">.</span><span style="color:#8250df">log</span><span style="color:#393a34">(</span><span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">nth</span><span style="color:#393a34">(</span>i<span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">textContent</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p><code><span style="color:#393a34"><span style="color:#393a34">测试：</span></span></code></p>
 
@@ -77,12 +77,12 @@ categories:
 
 &nbsp;&nbsp;&nbsp; Mary
 
-&nbsp;&nbsp;&nbsp; Say goodbye</code></pre>
+&nbsp;&nbsp;&nbsp; Say goodbye{% endhighlight %}
 
 <p>在页面中评估</p>
 
 <pre>
 <code><span style="color:#393a34"><span style="color:#cf222e">const</span> rows <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;listitem&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> texts <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> rows<span style="color:#393a34">.</span><span style="color:#8250df">evaluateAll</span><span style="color:#393a34">(</span>
-</span><span style="color:#393a34">    <span style="color:#953800">list</span> <span style="color:#d73a49">=&gt;</span> list<span style="color:#393a34">.</span><span style="color:#8250df">map</span><span style="color:#393a34">(</span><span style="color:#953800">element</span> <span style="color:#d73a49">=&gt;</span> element<span style="color:#393a34">.</span>textContent<span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34">    <span style="color:#953800">list</span> <span style="color:#d73a49">=&gt;</span> list<span style="color:#393a34">.</span><span style="color:#8250df">map</span><span style="color:#393a34">(</span><span style="color:#953800">element</span> <span style="color:#d73a49">=&gt;</span> element<span style="color:#393a34">.</span>textContent<span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 

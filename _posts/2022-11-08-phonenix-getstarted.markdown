@@ -9,7 +9,7 @@ categories:
 <p>创建新的框架：</p>
 
 <pre>
-<code>mix phx.new hello</code></pre>
+<code>mix phx.new hello{% endhighlight %}
 
 <p>然后就会看到自动生成以下文件：</p>
 
@@ -23,7 +23,7 @@ categories:
 * creating hello/config/prod.exs
 
 ...
-Fetch and install dependencies? [Yn]</code></pre>
+Fetch and install dependencies? [Yn]{% endhighlight %}
 
 <p>直接回车即可</p>
 
@@ -50,7 +50,7 @@ Start your Phoenix app with:
 
 You can also run your app inside IEx (Interactive Elixir) as:
 
-&nbsp;&nbsp;&nbsp; $ iex -S mix phx.server</code></pre>
+&nbsp;&nbsp;&nbsp; $ iex -S mix phx.server{% endhighlight %}
 
 <p>进入文件夹：</p>
 
@@ -65,7 +65,7 @@ Compiling 13 files (.ex)
 
 Generated hello app
 
-The database for Hello.Repo has been created</code></pre>
+The database for Hello.Repo has been created{% endhighlight %}
 
 <p>启动server</p>
 
@@ -78,7 +78,7 @@ The database for Hello.Repo has been created</code></pre>
 
 [watch] build finished, watching for changes...
 
-...</code></pre>
+...{% endhighlight %}
 
 <p>&nbsp;</p>
 

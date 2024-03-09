@@ -11,23 +11,23 @@ categories:
 <p>Download winetricks:（需要安装非常多的东西，大概二十分钟）</p>
 
 <pre>
-<code>wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks</code></pre>
+<code>wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks{% endhighlight %}
 
 <pre>
 设置可执行标志：
-<code>chmod +x winetricks</code></pre>
+<code>chmod +x winetricks{% endhighlight %}
 
 <p>一些 winetricks &ldquo;包&rdquo;需要安装一些外部工具。&nbsp; 我们需要cabextract：</p>
 
 <pre>
 <code>sudo apt install cabextract
-</code></pre>
+{% endhighlight %}
 
 <p>现在我们安装字体和其他一些库：</p>
 
 <pre>
 <code>./winetricks corefonts gdiplus riched20 riched30 wenquanyi
-</code></pre>
+{% endhighlight %}
 
 <p>最后，我们需要编辑 regedit 以启用我们刚刚安装的字体。&nbsp; 下载这个&nbsp;<a href="https://gist.github.com/swordfeng/c3fd6b6fcf6dc7d7fa8a" rel="nofollow noreferrer">.reg file</a>.</p>
 
@@ -35,7 +35,7 @@ categories:
 
 <pre>
 <code>./winetricks regedit
-</code></pre>
+{% endhighlight %}
 
 <p>在菜单栏中，单击注册表并选择导入注册表文件...</p>
 
@@ -60,7 +60,7 @@ categories:
 <p class="fs-headline1 ow-break-word mb8 flex--item fl1" itemprop="name">解决：</p>
 
 <pre>
-<code>sudo apt-get remove winbind &amp;&amp; sudo apt-get install winbind</code></pre>
+<code>sudo apt-get remove winbind &amp;&amp; sudo apt-get install winbind{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>2.删除wine：</code>how to remove wine apt</div>
 
@@ -105,5 +105,5 @@ deb-src <span class="hljs-url">http://mirrors.aliyun.com/ubuntu/</span> bionic-s
 
 pproxy -r socks5://127.0.0.1:1099 -vv
 
-source ~/env_file</code></pre>
+source ~/env_file{% endhighlight %}
 

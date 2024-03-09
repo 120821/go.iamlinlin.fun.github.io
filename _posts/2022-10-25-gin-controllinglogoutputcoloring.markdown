@@ -23,7 +23,7 @@ categories:
     
     <span style="color:#000">router</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>着色日志：</p>
 
@@ -43,7 +43,7 @@ categories:
     
     <span style="color:#000">router</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 </div>
 
 <p><img height="126" src="/uploads/ckeditor/pictures/625/image-20221025095536-1.png" width="756" /></p>

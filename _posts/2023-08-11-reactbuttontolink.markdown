@@ -9,7 +9,7 @@ categories:
 <p>引入link</p>
 
 <pre>
-<code>&nbsp;&nbsp; import { Link } from &#39;react-router-dom&#39;;</code></pre>
+<code>&nbsp;&nbsp; import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
 <p>然后在button处增加link</p>
 
@@ -22,7 +22,7 @@ categories:
 
 &nbsp; &lt;/Button&gt;
 
-&lt;/Link&gt;</code></pre>
+&lt;/Link&gt;{% endhighlight %}
 
 <p>2.使用方法</p>
 
@@ -47,7 +47,7 @@ nbsp;&nbsp;&nbsp; this.state = {
 
 &nbsp; handleViewClick = (id) =&gt; { &nbsp;&nbsp;
 
-&nbsp;&nbsp;&nbsp; // 处理其他的逻辑，如果需要的话</code></pre>
+&nbsp;&nbsp;&nbsp; // 处理其他的逻辑，如果需要的话{% endhighlight %}
 
 <p><code>&nbsp;&nbsp;&nbsp; // 导航到参数详情页<br />
 &nbsp;&nbsp;&nbsp; this.props.history.push(`/view_calculation_results/`);<br />

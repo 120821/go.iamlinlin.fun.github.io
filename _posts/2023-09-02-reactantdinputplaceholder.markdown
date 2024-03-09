@@ -13,5 +13,5 @@ function MyComponent() {
   return (
     &lt;Input placeholder=&quot;请输入用户名&quot; /&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 

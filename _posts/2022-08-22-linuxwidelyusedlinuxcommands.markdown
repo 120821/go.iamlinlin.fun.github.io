@@ -55,10 +55,10 @@ crontab -e </span>linux自带的定时任务
 <pre class="hljs sql"><code>
 <span class="hljs-operator">vim /etc/nginx 修改Nginx的配置等
 tail 方便查看log tail -f xx.log 可以实时查看log，而且可以进行保存log文件
-head </span>可用于查看文件的开头部分的内容，有一个常用的参数&nbsp;-n&nbsp;用于显示行数，默认为 10，即显示 10 行的内容，使用：</code></pre>
+head </span>可用于查看文件的开头部分的内容，有一个常用的参数&nbsp;-n&nbsp;用于显示行数，默认为 10，即显示 10 行的内容，使用：{% endhighlight %}
 
-<pre><code>
-head -n 10 runoon_notes.log</code></pre>
+{% highlight %}
+head -n 10 runoon_notes.log{% endhighlight %}
 
 <pre class="hljs sql"><code>
  <a href="https://www.runoob.com/linux/linux-comm-head.html">参考</a><span class="hljs-operator">
@@ -72,7 +72,7 @@ sftp </span>ftp命令和sftp命令的用法基本相似连接ftp服务器并下�
 
 <pre>
 <code>$ ftp IP/hostname
-ftp&gt; mget *.html</code></pre>
+ftp&gt; mget *.html{% endhighlight %}
 
 <p>显示远程主机上文件列表</p>
 
@@ -94,18 +94,18 @@ chown </span>用于设置文件所有者和文件关联组的命令
 例如：将当前前目录下的所有文件与子目录的拥有者皆设为 runoob，群体的使用者 runoobgroup:
   chown -R runoob:runoobgroup *<span class="hljs-operator">
 passwd 用来更改使用者的密码 <a href="https://www.runoob.com/linux/linux-comm-passwd.html">参考</a>
-例如： </span></code></pre>
+例如： </span>{% endhighlight %}
 
 <pre>
 <code># passwd runoob  //设置runoob用户的密码
 Enter new UNIX password:  //输入新密码，输入的密码无回显
 Retype new UNIX password:  //确认密码
 passwd: password updated successfully
-# 显示账号信息</code></pre>
+# 显示账号信息{% endhighlight %}
 
 <pre>
 <code># passwd -S runoob
-runoob P 05/13/2010 0 99999 7 -1</code></pre>
+runoob P 05/13/2010 0 99999 7 -1{% endhighlight %}
 
 <p><code>删除用户密码</code></p>
 
@@ -124,9 +124,9 @@ cp -r 复制整个目录
 mv 移动文件或者文件夹
 删除大文件： $ echo <span class="hljs-string">&#39;&#39;</span> &gt; big_file
 知道各个系统文件夹的基本用处。  /<span class="hljs-keyword">var</span>/<span class="hljs-keyword">logs</span>,  /etc/
-关机，重启，登出：</span></code></pre>
+关机，重启，登出：</span>{% endhighlight %}
 
-<pre><code>
+{% highlight %}
 shutdown -h now 关闭系统(1)
 init 0 关闭系统(2)
 telinit 0 关闭系统(3)
@@ -139,7 +139,7 @@ logout 注销
 pipe     find . | grep <span class="hljs-string">&#39;.rb&#39;  查找当前目录下文件为.rb的所有文件</span>
 logrotate </span>用于管理记录文件<span class="hljs-operator">
 split </span>用于将一个文件分割成数个<a href="https://www.runoob.com/linux/linux-comm-split.html">参考
-</a>例如：</code></pre>
+</a>例如：{% endhighlight %}
 
 <p>使用指令&quot;split&quot;将文件&quot;README&quot;每6行切割成一个文件，输入如下命令：</p>
 
@@ -151,7 +151,7 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
 </span></pre>
 
 <pre>
-<code>awk &#39;{[pattern] action}&#39; {filenames}   # 行匹配语句 awk &#39;&#39; 只能用单引号</code></pre>
+<code>awk &#39;{[pattern] action}&#39; {filenames}   # 行匹配语句 awk &#39;&#39; 只能用单引号{% endhighlight %}
 
 <p>使用：</p>
 
@@ -169,12 +169,12 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
  2        a
  3        like
  This&#39;s
- 10       orange,apple,mongo</code></pre>
+ 10       orange,apple,mongo{% endhighlight %}
 
 <p>用法2：</p>
 
 <pre>
-<code>awk -F  #-F相当于内置变量FS, 指定分割字符</code></pre>
+<code>awk -F  #-F相当于内置变量FS, 指定分割字符{% endhighlight %}
 
 <pre>
 <code># 使用&quot;,&quot;分割
@@ -197,12 +197,12 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
  2 this test
  3 Are awk
  This&#39;s a
- 10 There apple</code></pre>
+ 10 There apple{% endhighlight %}
 
 <p>用法3</p>
 
 <pre>
-<code>awk -v  # 设置变量</code></pre>
+<code>awk -v  # 设置变量{% endhighlight %}
 
 <pre>
 <code>$ awk -va=1 &#39;{print $1,$1+a}&#39; log.txt
@@ -216,11 +216,11 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
  2 3 2s
  3 4 3s
  This&#39;s 1 This&#39;ss
- 10 11 10s</code></pre>
+ 10 11 10s{% endhighlight %}
 
 <p>其它使用方法请点开参考文章详细查看。</p>
 
-<pre><code>
+{% highlight %}
 <span class="hljs-operator">bash script 写脚本的一些规范 <a href="https://blog.csdn.net/CSDN1887/article/details/86132955">参考</a>
-expect </span>expect是一个自动化交互套件，主要应用于执行命令和程序时，系统以交互形式要求输入指定字符串，实现交互通信。<a href="https://m.php.cn/article/486909.html">详细的看这里</a></code></pre>
+expect </span>expect是一个自动化交互套件，主要应用于执行命令和程序时，系统以交互形式要求输入指定字符串，实现交互通信。<a href="https://m.php.cn/article/486909.html">详细的看这里</a>{% endhighlight %}
 

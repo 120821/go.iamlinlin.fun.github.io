@@ -12,7 +12,7 @@ categories:
 <code><span class="n">get</span> <span class="s2">&quot;/monstas/:name&quot;</span> <span class="k">do</span>
   <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p>重新启动您的 Sinatra 应用程序，然后将您的浏览器指向<a href="http://localhost:4567/monstas/monstas">http://localhost:4567/monstas/monstas</a>.</p>
 

@@ -18,7 +18,7 @@ categories:
     port: <span style="color:#f5ab35">4567</span>,
     https: <span style="color:#f5ab35">true</span>
   }
-})</code></pre>
+}){% endhighlight %}
 
 <p>重新启动就可以<code>https://127.0.0.1:4567</code>访问了。</p>
 

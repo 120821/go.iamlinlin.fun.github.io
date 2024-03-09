@@ -23,7 +23,7 @@ categories:
 <span style="color:#ffd700">    root</span> /tmp/build;
   }
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>其实这是nginx配置的问题，nginx没有正确处理react路由。修改一下配置nginx的代码，然后重启nginx之后，就可以访问mysite.com/login了。</p>
 
@@ -46,7 +46,7 @@ categories:
   <span style="color:#ffd700">location</span> / {
     <span style="color:#ffd700">try_files</span> $uri $uri/ /index.html;
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>这个配置中，我们使用<code>try_files</code>指令来尝试匹配请求的文件路径。如果找不到文件，则将请求重定向到<code>index.html</code>。这样，React应用程序将能够处理路由并正确加载相应的页面。</p>
 

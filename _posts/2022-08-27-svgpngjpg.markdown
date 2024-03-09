@@ -41,7 +41,7 @@ csv.each do |row|
 
 &nbsp; File.write(current_file_name, c)
 
-end</code></pre>
+end{% endhighlight %}
 
 <p><code>3.生成png jpg文件</code></p>
 
@@ -60,7 +60,7 @@ end</code></pre>
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>ffmpeg png&gt;&gt;jpg</p>
 
@@ -77,7 +77,7 @@ end</code></pre>
 
 &nbsp; end
 
-end&nbsp;&nbsp;&nbsp;&nbsp;</code></pre>
+end&nbsp;&nbsp;&nbsp;&nbsp;{% endhighlight %}
 
 <p><br />
 &gt;p&gt;脚本：Inkscape svg&gt;&gt;png</p>
@@ -95,7 +95,7 @@ end&nbsp;&nbsp;&nbsp;&nbsp;</code></pre>
 
 &nbsp; `#{command}`
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>Inkscape png&gt;&gt;jpg</p>
 
@@ -104,7 +104,7 @@ end</code></pre>
   puts <span class="hljs-string">&quot;== processing file: <span class="hljs-subst">#{file}</span>&quot;</span>
   command = <span class="hljs-string">&quot;mogrify -format jpg <span class="hljs-subst">#{file}</span>&quot;</span>
   <span class="hljs-string">`<span class="hljs-subst">#{command}</span>`</span>
-<span class="hljs-keyword">end</span></code></pre>
+<span class="hljs-keyword">end</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -22,5 +22,5 @@ categories:
 };
 
 <span style="color:#d4d0ab">// 使用上述配置项绘制图表</span>
-myChart.setOption(option);</code></pre>
+myChart.setOption(option);{% endhighlight %}
 

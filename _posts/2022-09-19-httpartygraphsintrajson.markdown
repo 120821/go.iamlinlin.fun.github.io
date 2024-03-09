@@ -33,7 +33,7 @@ response = httparty.post server_url,
 
 &nbsp;&nbsp;&nbsp; &quot;extensions&quot;:{&quot;headers&quot;: nil}
 
-&nbsp; }.to_json</code></pre>
+&nbsp; }.to_json{% endhighlight %}
 
 <p>然后进行测试，放在app.rb</p>
 
@@ -110,7 +110,7 @@ response = httparty.post server_url,
 
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name: &quot;#{domains[&#39;name&#39;]}&quot;,
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...... &nbsp;&nbsp;&nbsp; } }）</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...... &nbsp;&nbsp;&nbsp; } }）{% endhighlight %}
 
 <p>因为json部分数据需要根据graph的数据进行变化，所以进行参数的替换，并进行两次抓取</p>
 

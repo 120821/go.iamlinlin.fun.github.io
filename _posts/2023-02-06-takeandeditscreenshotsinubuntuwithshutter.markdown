@@ -10,10 +10,10 @@ categories:
 
 <pre>
 <code>sudo apt-get update 
-sudo apt install shutter</code></pre>
+sudo apt install shutter{% endhighlight %}
 
 <pre>
-<code>2.在APP列表打开就可以使用了。</code></pre>
+<code>2.在APP列表打开就可以使用了。{% endhighlight %}
 
 <p>可以用来增加图片的文字批注，用来增加图片的阴影，增加箭头等。</p>
 

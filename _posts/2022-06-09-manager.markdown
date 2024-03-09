@@ -35,7 +35,7 @@ categories:
     end 
   end 
 end
-~    </code></pre> 
+~    {% endhighlight %} 
 <p>在routes文件增加路由，需要的仅仅是编辑和更新页面，因为密码页面不需要显示，密码都是在数据库加密显示的，显示也不起作用。</p> 
 <pre><code class="language-ruby">resources :manager_passwords do
  11     collection do
@@ -43,7 +43,7 @@ end
  13       post :update_password
  14     end 
  15   end
-</code></pre> 
+{% endhighlight %} 
 <p>视图页面就是普通的页面，注意是post不是put，还有就是form表单的首行，地址要写好。</p> 
 <pre><code class="language-html">&lt;h3&gt;修改密码&lt;/h3&gt;
 &lt;%= form_tag update_password_manager_passwords_path(id: @manager.id), method: 'post' do %&gt;
@@ -52,11 +52,11 @@ end
   &lt;p&gt;确认新密码：&lt;%= password_field_tag :repeat_new_password, '', class: 'form-control', style: 'display: inline; width: 200px' %&gt;&lt;/p&gt;
   &lt;%= submit_tag "确认修改", class: 'btn btn-primary' %&gt;
 &lt;% end %&gt;
-</code></pre> 
-<pre><code>&lt;ul class="nav navbar-nav px-3" style='float:right'&gt;
+{% endhighlight %} 
+{% highlight %}&lt;ul class="nav navbar-nav px-3" style='float:right'&gt;
         &lt;li class="nav-item text-nowrap"&gt;
           &lt;%= link_to "修改密码", "/manager_passwords/edit_password", class: 'nav-link' %&gt;
         &lt;/li&gt;
-      &lt;/ul&gt;</code></pre> 
+      &lt;/ul&gt;{% endhighlight %} 
 <p></p>
                 

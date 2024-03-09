@@ -13,7 +13,7 @@ categories:
 </ol>
 
 <pre>
-<code>sudo useradd username</code></pre>
+<code>sudo useradd username{% endhighlight %}
 
 <p>其中<code>username</code>是你想要创建的用户的用户名；</p>
 
@@ -22,7 +22,7 @@ categories:
 </ol>
 
 <pre>
-<code>sudo passwd username</code></pre>
+<code>sudo passwd username{% endhighlight %}
 
 <ol start="3">
 	<li>如果你希望该用户有登录控制台或桌面GUI权限，需要创建一个新的家目录，使用以下命令进行操作：</li>
@@ -30,7 +30,7 @@ categories:
 
 <pre>
 <code>sudo mkdir /home/username
-sudo chown username:username /home/username</code></pre>
+sudo chown username:username /home/username{% endhighlight %}
 
 <p>其中<code>username</code>是你刚刚创建的新用户的用户名。</p>
 
@@ -39,7 +39,7 @@ sudo chown username:username /home/username</code></pre>
 </ol>
 
 <pre>
-<code>sudo usermod -aG sudo username</code></pre>
+<code>sudo usermod -aG sudo username{% endhighlight %}
 
 <p>其中<code>sudo</code>是包括所有管理员权限的用户组，也可以使用其他用户组。</p>
 

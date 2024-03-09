@@ -13,19 +13,19 @@ categories:
 <p>2. 运行以下命令以安装特定版本的Bundler：</p>
 
 <pre>
-<code>&nbsp;&nbsp; gem install bundler -v 版本号</code></pre>
+<code>&nbsp;&nbsp; gem install bundler -v 版本号{% endhighlight %}
 
 <p>&nbsp;&nbsp; 请将&ldquo;版本号&rdquo;替换为你要安装的具体Bundler版本的版本号。例如，要安装2.1.4版本的Bundler，运行：</p>
 
 <pre>
-<code>&nbsp;&nbsp; gem install bundler -v 2.1.4</code></pre>
+<code>&nbsp;&nbsp; gem install bundler -v 2.1.4{% endhighlight %}
 
 <p>3. 等待安装完成。安装过程可能会需要一些时间，具体取决于你的网络连接和系统性能。</p>
 
 <p>4. 验证安装是否成功。运行以下命令：</p>
 
 <pre>
-<code>&nbsp;&nbsp; bundler --version</code></pre>
+<code>&nbsp;&nbsp; bundler --version{% endhighlight %}
 
 <p>&nbsp;&nbsp; 如果安装成功，将会显示所安装的Bundler的版本号。</p>
 
@@ -40,7 +40,7 @@ categories:
 <p>2. 运行以下命令以卸载特定版本的Bundler：</p>
 
 <pre>
-<code>&nbsp;&nbsp; gem uninstall bundler -v 版本号</code></pre>
+<code>&nbsp;&nbsp; gem uninstall bundler -v 版本号{% endhighlight %}
 
 <p>&nbsp;&nbsp; 请将&ldquo;版本号&rdquo;替换为你要卸载的具体Bundler版本的版本号。例如，要卸载2.1.4版本的Bundler，运行：</p>
 
@@ -52,7 +52,7 @@ categories:
 <p>请注意，这将仅卸载指定版本的Bundler。如果你有其他版本的Bundler已安装，它们将保留在系统中。如果你想完全卸载所有版本的Bundler，可以运行以下命令：</p>
 
 <pre>
-<code>gem uninstall bundler</code></pre>
+<code>gem uninstall bundler{% endhighlight %}
 
 <p>这会卸载系统中的Bundler的所有版本。</p>
 

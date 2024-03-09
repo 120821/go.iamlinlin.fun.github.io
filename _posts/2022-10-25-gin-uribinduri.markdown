@@ -33,7 +33,7 @@ categories:
 	<span style="color:#000;font-weight:700">})</span>
 	<span style="color:#000">route</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8088&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 </div>
 
 <p>测试：</p>
@@ -41,7 +41,7 @@ categories:
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-sh" data-lang="sh">$ curl -v localhost:8088/thinkerou/987fbc97-4bed-5078-9f07-9141ba07c9f3
 $ curl -v localhost:8088/thinkerou/not-uuid
-</code></pre>
+{% endhighlight %}
 
 <p><img height="732" src="/uploads/ckeditor/pictures/622/image-20221025092927-1.png" width="1654" /></p>
 

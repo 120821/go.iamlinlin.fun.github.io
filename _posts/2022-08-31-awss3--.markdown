@@ -9,7 +9,7 @@ categories:
 <p>在命令行输入命令：</p>
 
 <pre>
-<code>aws configure</code></pre>
+<code>aws configure{% endhighlight %}
 
 <p>就可以进行初始化更换bucket，</p>
 
@@ -38,5 +38,5 @@ aws s3 ls s3://xxx/
 
 aws s3 cp s3://xxx/
 
-aws s3 sync s3://xxx/</code></pre>
+aws s3 sync s3://xxx/{% endhighlight %}
 

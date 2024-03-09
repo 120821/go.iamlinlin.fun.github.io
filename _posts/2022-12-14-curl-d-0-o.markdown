@@ -11,7 +11,7 @@ categories:
 <pre>
 <code>$ curl -d&#39;login=emma＆password=123&#39;-X POST https://google.com/login
 # 或者
-$ curl -d &#39;login=emma&#39; -d &#39;password=123&#39; -X POST  https://google.com/login</code></pre>
+$ curl -d &#39;login=emma&#39; -d &#39;password=123&#39; -X POST  https://google.com/login{% endhighlight %}
 
 <p>使用<code>-d</code>参数以后，HTTP 请求会自动加上标头<code>Content-Type : application/x-www-form-urlencoded</code>。并且会自动将请求转为 POST 方法，因此可以省略<code>-X POST</code>。</p>
 
@@ -21,14 +21,14 @@ $ curl -d &#39;login=emma&#39; -d &#39;password=123&#39; -X POST  https://google
 
 <pre>
 <code>$ curl -o example.html https://www.example.com
-</code></pre>
+{% endhighlight %}
 
 <p>上面命令将<code>www.example.com</code>保存成<code>example.html</code>。</p>
 
 <p><code>-O</code>（数字零）参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名</p>
 
 <pre>
-<code>$ curl -O https://www.example.com/foo/bar.html</code></pre>
+<code>$ curl -O https://www.example.com/foo/bar.html{% endhighlight %}
 
 <p>上面命令将服务器回应保存成文件，文件名为<code>bar.html</code>。</p>
 

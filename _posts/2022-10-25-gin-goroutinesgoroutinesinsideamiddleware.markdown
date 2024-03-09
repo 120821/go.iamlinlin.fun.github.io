@@ -35,7 +35,7 @@ categories:
 	<span style="color:#8f5902;font-style:italic">// Listen and serve on 0.0.0.0:8080
 </span>	<span style="color:#000">r</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="379" src="/uploads/ckeditor/pictures/638/image-20221025103725-1.png" width="1203" /></p>
 

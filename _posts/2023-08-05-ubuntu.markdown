@@ -20,12 +20,12 @@ Ubuntu 22.04.1 LTS \n \l</p>
 <p>然后安装</p>
 
 <pre>
-<code>sudo dpkg -i fcitx-baidupinyin.deb</code></pre>
+<code>sudo dpkg -i fcitx-baidupinyin.deb{% endhighlight %}
 
 <p>3，如果安装出现错误尝试：</p>
 
 <pre>
-<code>sudo apt update</code></pre>
+<code>sudo apt update{% endhighlight %}
 
 <p>提示：</p>
 
@@ -51,12 +51,12 @@ dpkg: error processing package fcitx-baidupinyin:amd64 (--install):
 
 Errors were encountered while processing:
 
-&nbsp;fcitx-baidupinyin:amd64</code></pre>
+&nbsp;fcitx-baidupinyin:amd64{% endhighlight %}
 
 <p>尝试解决：</p>
 
 <pre>
-<code>sudo apt-get install qml-<span style="color:#dcc6e0">module</span>-qtquick-controls</code></pre>
+<code>sudo apt-get install qml-<span style="color:#dcc6e0">module</span>-qtquick-controls{% endhighlight %}
 
 <p>如果提示：</p>
 
@@ -81,12 +81,12 @@ The following packages have unmet dependencies.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Depends: qml-module-qtquick-window2 but it is not going to be installed
 
-E: Unmet dependencies. Try &#39;apt --fix-broken install&#39; with no packages (or specify a solution).</code></pre>
+E: Unmet dependencies. Try &#39;apt --fix-broken install&#39; with no packages (or specify a solution).{% endhighlight %}
 
 <p>解决：</p>
 
 <pre>
-<code>sudo apt --fix-broken install</code></pre>
+<code>sudo apt --fix-broken install{% endhighlight %}
 
 <p>然后继续安装：</p>
 
@@ -99,7 +99,7 @@ Preparing to unpack fcitx-baidupinyin.deb ...
 
 Unpacking fcitx-baidupinyin:amd64 (1.0.1.0) over (1.0.1.0) ...
 
-Setting up fcitx-baidupinyin:amd64 (1.0.1.0) ...</code></pre>
+Setting up fcitx-baidupinyin:amd64 (1.0.1.0) ...{% endhighlight %}
 
 <p>然后安照解压缩出来的百度输入法给的安装教程操作即可。</p>
 

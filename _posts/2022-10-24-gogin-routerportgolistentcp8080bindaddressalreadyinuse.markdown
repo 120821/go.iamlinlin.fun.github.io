@@ -28,7 +28,7 @@ categories:
   router.Run(<span class="hljs-string">&quot;:9888&quot;</span>)
   <span class="hljs-comment">//r.Run() // listen and serve on 0.0.0.0:8080 (for windows &quot;localhost:8080&quot;)</span>
 }
-</code></pre>
+{% endhighlight %}
 
 <p>但是根据提示，进行使用其他端口的时候，仍然提示使用的时候8080端口，那么是为什么：</p>
 
@@ -47,7 +47,7 @@ categories:
         <span class="hljs-built_in">panic</span>(<span class="hljs-string">&quot;[Error] failed to start Gin server due to: &quot;</span> + err.Error())
         <span class="hljs-keyword">return</span>
     }
-}</code></pre>
+}{% endhighlight %}
 
 <p>运行代码：</p>
 

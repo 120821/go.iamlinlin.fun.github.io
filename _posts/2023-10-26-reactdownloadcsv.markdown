@@ -11,7 +11,7 @@ categories:
   const fileUrl = &#39;/path/to/your/file.csv&#39;; // 替换为你的 CSV 文件的路径
   window.open(fileUrl);
 };
-</code></pre>
+{% endhighlight %}
 
 <p>写一个函数：</p>
 
@@ -25,15 +25,15 @@ categories:
     &lt;/div&gt;
   );
 }
-</code></pre>
+{% endhighlight %}
 
 <p><code>&#39;/path/to/your/file.csv&#39;可以在import的时候和其他一起使用， 例如：</code></p>
 
 <pre>
-<code>import chinaPopulationData from &#39;./china_population.csv&#39;</code></pre>
+<code>import chinaPopulationData from &#39;./china_population.csv&#39;{% endhighlight %}
 
 <p>然后可以：</p>
 
 <pre>
-<code>const fileUrl = chinaPopulationData;</code></pre>
+<code>const fileUrl = chinaPopulationData;{% endhighlight %}
 

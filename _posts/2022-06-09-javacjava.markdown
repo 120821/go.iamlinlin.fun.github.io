@@ -37,7 +37,7 @@ public class EmployeeTest{
       empTwo.printEmployee();
    }
 }
-</code></pre> 
+{% endhighlight %} 
  <pre><code class="language-java">
 Employee.java 文件代码：
 import java.io.*;
@@ -71,11 +71,11 @@ public class Employee{
       System.out.println("薪水:" + salary);
    }
 }
-</code></pre> 
+{% endhighlight %} 
  <h2>import 语句</h2> 
  <p>在 Java 中，如果给出一个完整的限定名，包括包名、类名，那么 Java 编译器就可以很容易地定位到源代码或者类。import 语句就是用来提供一个合理的路径，使得编译器可以找到某个类。</p> 
  <p>例如，下面的命令行将会命令编译器载入 java_installation/java/io 路径下的所有类</p> 
- <pre><code>import java.io.*;</code></pre> 
+ {% highlight %}import java.io.*;{% endhighlight %} 
  <p></p> 
 </blockquote>
                 

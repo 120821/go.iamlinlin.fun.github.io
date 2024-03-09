@@ -120,5 +120,5 @@ export default defineComponent({
   color: var(--vc-nav-color-hover);
   color: white;
 }
-&lt;/style&gt;</code></pre>
+&lt;/style&gt;{% endhighlight %}
 

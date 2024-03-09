@@ -9,7 +9,7 @@ categories:
 <p>在命令行中输入以下命令：</p>
 
 <pre>
-<code>gem list --details</code></pre>
+<code>gem list --details{% endhighlight %}
 
 <p>这将会列出所有的gem，并且会显示它们的版本、作者、安装路径等详细信息。</p>
 

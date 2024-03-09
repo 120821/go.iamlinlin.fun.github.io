@@ -17,7 +17,7 @@ categories:
 <pre>
 <code>&lt;div style=&quot;height: 200px; overflow: auto;&quot;&gt;
    &lt;!-- 这里放数据 --&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <pre>
 <code>div::-webkit-scrollbar {
@@ -27,7 +27,7 @@ categories:
 div::-webkit-scrollbar-thumb {
   background-color: #ccc;
   border-radius: 5px;
-}</code></pre>
+}{% endhighlight %}
 
 <p>其中，::-webkit-scrollbar用于设置滚动条整体样式，::-webkit-scrollbar-thumb用于设置滚动条滑块样式。你可以根据需要进行设置</p>
 
@@ -40,7 +40,7 @@ div::-webkit-scrollbar-thumb {
 <pre>
 <code>div::-webkit-scrollbar {
   display: none;
-}</code></pre>
+}{% endhighlight %}
 
 <ol start="2">
 	<li>将滚动条变细</li>
@@ -59,7 +59,7 @@ div::-webkit-scrollbar-thumb {
 
 div::-webkit-scrollbar-track {
   background-color: rgba(0,0,0,0.05); /* 设置滑块轨道颜色 */
-}</code></pre>
+}{% endhighlight %}
 
 <p>以上代码将滚动条宽度设置为 6px，高度设置为 6px，滑块圆角设置为 3px，滑块颜色设置为灰色半透明，滑块轨道颜色设置为浅灰色半透明。你可以根据需要进行调整。</p>
 
@@ -72,7 +72,7 @@ div::-webkit-scrollbar-track {
 <pre>
 <code>div.class-name::-webkit-scrollbar {
   display: none;
-}</code></pre>
+}{% endhighlight %}
 
 <ol start="2">
 	<li>将滚动条变细</li>
@@ -91,7 +91,7 @@ div.class-name::-webkit-scrollbar-thumb {
 
 div.class-name::-webkit-scrollbar-track {
   background-color: rgba(0,0,0,0.05); /* 设置滑块轨道颜色 */
-}</code></pre>
+}{% endhighlight %}
 
 <p>类选择器的语法是在选择器名称前加上 <code>.class-name</code>，其中 <code>class-name</code> 是你要选择的元素的类名。请注意，通常情况下，隐藏滚动条和将滚动条变细的代码适用于所有 <code>div</code> 元素，因此不需要加上 <code>.class-name</code>。只有在你想要针对特定的 <code>div</code> 元素进行样式设置时才需要使用类选择器。</p>
 

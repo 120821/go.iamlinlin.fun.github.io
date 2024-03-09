@@ -15,5 +15,5 @@ categories:
     <span class="hljs-string">&#39;Content-Type&#39;</span> =&gt; <span class="hljs-string">&#39;application/x-www-form-urlencoded&#39;</span>,
     <span class="hljs-string">&#39;charset&#39;</span> =&gt; <span class="hljs-string">&#39;utf-8&#39;</span>
   }
-})</code></pre>
+}){% endhighlight %}
 

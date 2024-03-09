@@ -35,6 +35,6 @@ categories:
         }
       }
     }
-</code></pre>
+{% endhighlight %}
 </div>
 

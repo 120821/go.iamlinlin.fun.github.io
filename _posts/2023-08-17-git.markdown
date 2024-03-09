@@ -7,29 +7,29 @@ categories:
 <p>使用命令：（ <code>git filter-branch</code> 命令的作用：进行历史记录重写）（在根目录下运行）</p>
 
 <pre>
-<code>git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all</code></pre>
+<code>git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
 
 <p>然后使用：（<code>git push --force</code> 命令将更改的历史记录强制推送到远程仓库）</p>
 
 <pre>
-<code>git push --force origin</code></pre>
+<code>git push --force origin{% endhighlight %}
 
 <p><code>注意：</code></p>
 
 <p><code>如果运行的时候不是在根目录或者文件的路径写的不对，提示了&lsquo;cannot create a new bachup&rsquo;就使用:</code></p>
 
 <pre>
-<code>rm -r .git/refs/original/</code></pre>
+<code>rm -r .git/refs/original/{% endhighlight %}
 
 <p>如果是windows,使用：</p>
 
 <pre>
-<code>rmdir /s .git\refs\original</code></pre>
+<code>rmdir /s .git\refs\original{% endhighlight %}
 
 <p>删除后，继续使用：</p>
 
 <pre>
-<code>git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all</code></pre>
+<code>git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
 
 <p><code>然后继续操作。即可。</code></p>
 

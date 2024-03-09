@@ -32,7 +32,7 @@ categories:
 $ cp .vimrc ~
 $ cp .vim ~ -r
 $ vim
-:BundleInstall</code></pre>
+:BundleInstall{% endhighlight %}
 
 <blockquote>
 <p id="rails插件">Rails插件</p>

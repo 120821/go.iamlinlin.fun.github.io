@@ -9,14 +9,14 @@ categories:
 <p>有这样的语句就是类组件：</p>
 
 <pre>
-<code>export <span style="color:#dcc6e0">default</span> <span style="color:#dcc6e0">class</span> <span style="color:#00e0e0">ShowResultAsMap</span> <span style="color:#dcc6e0">extends</span> <span style="color:#00e0e0">Component</span> {</code></pre>
+<code>export <span style="color:#dcc6e0">default</span> <span style="color:#dcc6e0">class</span> <span style="color:#00e0e0">ShowResultAsMap</span> <span style="color:#dcc6e0">extends</span> <span style="color:#00e0e0">Component</span> {{% endhighlight %}
 
 <p>函数组件示例：</p>
 
 <pre>
 <code>function FunctionComponent(props) {
   return &lt;div&gt;Hello, {props.name}!&lt;/div&gt;;
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>类组件示例：</code></p>
 
@@ -25,7 +25,7 @@ categories:
   render() {
     return &lt;div&gt;Hello, {this.props.name}!&lt;/div&gt;;
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>使用useState的函数组件完整示例：</p>
 
@@ -46,7 +46,7 @@ categories:
       <span style="color:#ffa07a">&lt;</span><span style="color:#ffa07a">button</span><span style="color:#ffa07a"> </span><span style="color:#ffa07a">onClick</span><span style="color:#ffa07a">=</span><span style="color:#abe338">{handleClick}</span><span style="color:#ffa07a">&gt;</span>重新渲染<span style="color:#ffa07a">&lt;/</span><span style="color:#ffa07a">button</span><span style="color:#ffa07a">&gt;</span>
     <span style="color:#ffa07a">&lt;/</span><span style="color:#ffa07a">div</span><span style="color:#ffa07a">&gt;</span>
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

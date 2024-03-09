@@ -13,12 +13,12 @@ categories:
 <p>（1）使用npm</p>
 
 <pre>
-<code><span style="color:#393a34"><span style="color:#8250df">npm</span> init playwright@latest</span></code></pre>
+<code><span style="color:#393a34"><span style="color:#8250df">npm</span> init playwright@latest</span>{% endhighlight %}
 
 <p>（2）使用yarn</p>
 
 <pre>
-<code>yarn create playwright</code></pre>
+<code>yarn create playwright{% endhighlight %}
 
 <p>（3）安装的是这些：</p>
 
@@ -35,12 +35,12 @@ tests/（</code>包含一个基本示例测试，可帮助您开始测试。 有
 
 tests-examples/
 
-&nbsp; demo-todo-app.spec.ts</code></pre>
+&nbsp; demo-todo-app.spec.ts{% endhighlight %}
 
 <p>(4)运行测试示例</p>
 
 <pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span></code></pre>
+<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span>{% endhighlight %}
 
 <p>（5）html测试报告</p>
 

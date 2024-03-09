@@ -12,7 +12,7 @@ categories:
 <code>&lt;head&gt;
   &lt;title&gt;My Charts&lt;/title&gt;
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
-&lt;/head&gt;</code></pre>
+&lt;/head&gt;{% endhighlight %}
 
 <p>然后，在 <code>&lt;body&gt;</code> 中添加 6 个 <code>&lt;canvas&gt;</code> 元素，用于显示 6 个环形图。这里的例子中，每个 <code>&lt;canvas&gt;</code> 元素都有一个唯一的 <code>id</code> 属性，方便在 JavaScript 代码中选中并对其进行设定。</p>
 
@@ -24,7 +24,7 @@ categories:
   &lt;canvas id=&quot;chart4&quot;&gt;&lt;/canvas&gt;
   &lt;canvas id=&quot;chart5&quot;&gt;&lt;/canvas&gt;
   &lt;canvas id=&quot;chart6&quot;&gt;&lt;/canvas&gt;
-&lt;/body&gt;</code></pre>
+&lt;/body&gt;{% endhighlight %}
 
 <p>编写 JavaScript 代码，在每个 <code>&lt;canvas&gt;</code> 上绘制环形图。这里的例子中，我们使用 <code>Chart</code> 构造函数来创建并绘制环形图。每个环形图都有一个唯一的 <code>id</code>，指定了它所在的 HTML 元素。在每个环形图的选项中，我们设置了 <code>data</code>（用于绘制的数据数组）和 <code>backgroundColor</code>（环形图的背景色）。此外，还可以设置其他选项，例如 <code>cutoutPercentage</code>（环形图的中心空洞占比）、<code>rotation</code>（环形图的旋转角度）等等。</p>
 
@@ -131,5 +131,5 @@ categories:
       rotation: 0.25 * Math.PI
     }
   });
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 

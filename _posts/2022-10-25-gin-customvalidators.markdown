@@ -59,7 +59,7 @@ categories:
 		<span style="color:#000">c</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">JSON</span><span style="color:#000;font-weight:700">(</span><span style="color:#000">http</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">StatusBadRequest</span><span style="color:#000;font-weight:700">,</span> <span style="color:#000">gin</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">H</span><span style="color:#000;font-weight:700">{</span><span style="color:#4e9a06">&quot;error&quot;</span><span style="color:#000;font-weight:700">:</span> <span style="color:#000">err</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Error</span><span style="color:#000;font-weight:700">()})</span>
 	<span style="color:#000;font-weight:700">}</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code class="language-go" data-lang="go">测试：</code></p>
 
@@ -69,7 +69,7 @@ categories:
 
 $ curl <span style="color:#4e9a06">&quot;localhost:8085/bookable?check_in=2118-03-10&amp;check_out=2118-03-09&quot;</span>
 <span style="color:#ce5c00;font-weight:700">{</span><span style="color:#4e9a06">&quot;error&quot;</span>:<span style="color:#4e9a06">&quot;Key: &#39;Booking.CheckOut&#39; Error:Field validation for &#39;CheckOut&#39; failed on the &#39;gtfield&#39; tag&quot;</span><span style="color:#ce5c00;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="79" src="/uploads/ckeditor/pictures/634/image-20221025102800-1.png" width="1620" /></p>
 

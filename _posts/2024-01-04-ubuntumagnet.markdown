@@ -15,5 +15,5 @@ categories:
 <p>3.使用rtoorent下载镜像文件：（rtorrent + &quot;url&quot;,注意需要加上双引号或单引号），我使用后发现资源已经被取消了，尝试关闭，发现Ctrl c不能关闭，只能ps -ef | grep rtorrent之后再kill -9 关闭进程</p>
 
 <pre>
-<code>rtorrent &#39;magnet link in quotes&#39;</code></pre>
+<code>rtorrent &#39;magnet link in quotes&#39;{% endhighlight %}
 

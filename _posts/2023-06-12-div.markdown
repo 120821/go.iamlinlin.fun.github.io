@@ -17,7 +17,7 @@ categories:
     &lt;div&gt;内容4&lt;/div&gt;
     &lt;div&gt;内容5&lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>CSS代码：</p>
 
@@ -42,7 +42,7 @@ categories:
 div {
   margin: 10px 0;
   height: 20px;
-}</code></pre>
+}{% endhighlight %}
 
 <div id="rtf3861">
 <div>
@@ -69,7 +69,7 @@ div {
     &lt;li&gt;内容4&lt;/li&gt;
     &lt;li&gt;内容5&lt;/li&gt;
   &lt;/ul&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>CSS代码：</p>
 
@@ -87,7 +87,7 @@ ul {
 li {
   margin: 10px 0;
   height: 20px;
-}</code></pre>
+}{% endhighlight %}
 
 <p>JavaScript代码：</p>
 
@@ -128,7 +128,7 @@ li {
   setTimeout(scroll, delay);
 }
 
-autoScroll();</code></pre>
+autoScroll();{% endhighlight %}
 
 <p>该代码实现了在div滚动框中自动滚动内容。可以根据需要调整滚动速度、停留时间等参数。</p>
 

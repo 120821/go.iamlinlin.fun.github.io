@@ -7,7 +7,7 @@ categories:
 <p>首先把lueluelue.sql 文件下载至本地，确定本地存在的sql用户名 和下载好了的lueluelue.sql文件的地址，根据以下命令进行执行</p>
 
 <pre>
-<code>psql -U username -f backupfile.sql</code></pre>
+<code>psql -U username -f backupfile.sql{% endhighlight %}
 
 <p>&nbsp;遇到报错的话 <span style="color:#fe2c24">psql: FATAL:&nbsp; database &quot;admin&quot; does not exist</span></p>
 
@@ -24,7 +24,7 @@ sour
 退出，进入项目文件加命令行
 q
 导入文件
-psql -U username -d databasename -f fileaddress/filename</code></pre>
+psql -U username -d databasename -f fileaddress/filename{% endhighlight %}
 
 <p><img alt="" src="https://img-blog.csdnimg.cn/542d0597d2984f7dbc7f1588e9bba5fc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" /></p>
 

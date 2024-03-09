@@ -9,7 +9,7 @@ categories:
 
 <pre class="language-bash">
 <code class="language-bash">scp [OPTIONS] [[user@]src_host:]file1 [[user@]dest_host:]file2
-</code></pre>
+{% endhighlight %}
 
 <ul>
 	<li><code>scp</code><font style="vertical-align:inherit">- 它初始化命令并确保安全外壳到位。 </font></li>

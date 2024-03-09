@@ -44,7 +44,7 @@ categories:
 </span><span style="color:#393a34">    <span style="color:#cf222e">await</span> <span style="color:#cf222e">this</span><span style="color:#393a34">.</span><span style="color:#8250df">getStarted</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">    <span style="color:#cf222e">await</span> <span style="color:#cf222e">this</span><span style="color:#393a34">.</span>pomLink<span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">  <span style="color:#393a34">}</span>
-</span><span style="color:#393a34"><span style="color:#393a34">}</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#393a34">}</span></span>{% endhighlight %}
 
 <p>现在我们可以在我们的测试中使用 PlaywrightDevPage 类。</p>
 
@@ -74,5 +74,5 @@ categories:
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> playwrightDev<span style="color:#393a34">.</span><span style="color:#8250df">goto</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> playwrightDev<span style="color:#393a34">.</span><span style="color:#8250df">pageObjectModel</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;article&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toContainText</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;Page Object Model is a common pattern&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
-</span><span style="color:#393a34"><span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 

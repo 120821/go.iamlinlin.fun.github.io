@@ -12,7 +12,7 @@ categories:
 <code id="sinatra-syntax"> <span id="require">require </span><span class="code-quotes">&#39;</span><span class="code-text">sinatra</span><span class="code-quotes">&#39;</span>
     <span id="code-method-name">get </span><span class="code-quotes">&#39;</span><span class="code-text">/frank-says</span><span class="code-quotes">&#39; </span><span class="code-block">do</span>
       <span class="code-quotes">&#39;</span><span class="code-text">Put this in your pipe &amp; smoke it!</span><span class="code-quotes">&#39;</span>
-    <span class="code-block">end</span></code></pre>
+    <span class="code-block">end</span>{% endhighlight %}
 
 <p><code>创建新的文件夹，创建新的文件</code></p>
 
@@ -23,7 +23,7 @@ categories:
 <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
   <span class="s1">&#39;Hello world!&#39;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p>然后安装gem，并运行</p>
 

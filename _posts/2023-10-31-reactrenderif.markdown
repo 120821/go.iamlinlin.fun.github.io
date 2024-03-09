@@ -30,5 +30,5 @@ class YourComponent extends React.Component {
   }
 }
 
-export default YourComponent;</code></pre>
+export default YourComponent;{% endhighlight %}
 

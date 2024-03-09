@@ -34,12 +34,12 @@ categories:
     <span class="hljs-built_in">clearInterval</span>(x);
     <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;demo&quot;</span>).<span class="hljs-property">innerHTML</span> = <span class="hljs-string">&#39;&lt;a href=&quot;https://facebook.com&quot;&gt;We\&#39;re Live on Facebook!&lt;/a&gt;&#39;</span>;
   }
-}, <span class="hljs-number">1000</span>);</code></pre>
+}, <span class="hljs-number">1000</span>);{% endhighlight %}
 
 <p><code class="hljs language-javascript">视图页面的</code></p>
 
 <pre class="snippet-code-html lang-html s-code-block">
-<code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;countdown-live&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre>
+<code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;countdown-live&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>{% endhighlight %}
 
 <p><img height="176" src="/uploads/ckeditor/pictures/92/image-20220714093135-2.png" width="489" /></p>
 

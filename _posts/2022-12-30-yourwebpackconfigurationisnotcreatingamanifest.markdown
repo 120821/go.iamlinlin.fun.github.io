@@ -16,7 +16,7 @@ categories:
 3. You have misconfigured Webpacker&#39;s config/webpacker.yml file.
 4. Your webpack configuration is not creating a manifest.
 Your manifest contains:
-{ }</code></pre>
+{ }{% endhighlight %}
 
 <p>解决：</p>
 

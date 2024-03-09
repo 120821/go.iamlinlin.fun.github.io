@@ -24,7 +24,7 @@ categories:
  <p>ssh-keygen -t [rsa|dsa]</p> 
  <p>rsa和dsa代表不同的算法</p> 
  <p>例如：</p> 
- <pre><code>ssh-keygen -t rsa</code></pre> 
+ {% highlight %}ssh-keygen -t rsa{% endhighlight %} 
  <p>一直回车就对了（不用设置密码）</p> 
  <p>将会生成密钥文件和私钥文件 id_rsa,id_rsa.pub（如果用dsa则生成id_dsa,id_dsa.pub）</p> 
  <p>生成位置在/root/.ssh/文件夹下（我用的是root用户所以在root下，生成过程会有提示文件位置）</p> 
@@ -32,13 +32,13 @@ categories:
  <p>将公钥放到<a href="https://cloud.tencent.com/product/cvm?from=10680" title="服务器">服务器</a>指定位置</p> 
  <p><strong>方法一、直接复制</strong></p> 
  <p>1、将公钥复制到服务器的root用户下的.ssh文件夹（用哪个用户登录就复制到哪个用户下的.ssh文件夹下）</p> 
- <pre><code>scp /root/.ssh/id_rsa.pub root@172.16.0.164:/root/.ssh/</code></pre> 
+ {% highlight %}scp /root/.ssh/id_rsa.pub root@172.16.0.164:/root/.ssh/{% endhighlight %} 
  <p>2、安装公钥</p> 
  <p>登录到服务器cd /root/.ssh/</p> 
- <pre><code>cat id_rsa.pub &gt;&gt; authorized_keys</code></pre> 
+ {% highlight %}cat id_rsa.pub &gt;&gt; authorized_keys{% endhighlight %} 
  <p><strong>方法二、使用ssh-copy-id命令复制（推荐）</strong></p> 
  <p>一个命令直接就ok了</p> 
- <pre><code>ssh-copy-id root@172.16.0.164</code></pre> 
+ {% highlight %}ssh-copy-id root@172.16.0.164{% endhighlight %} 
  <p><img alt="" height="319" src="https://img-blog.csdnimg.cn/d1d2028a26604e3890bf5fe259198656.png" width="784"></p> 
  <p>不需要密码就OK</p> 
 </blockquote>

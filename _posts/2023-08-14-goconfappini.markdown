@@ -7,7 +7,7 @@ categories:
 <p>go的数据库配置放在conf/app.ini文件中</p>
 
 <pre>
-<code>cat conf/app.ini</code></pre>
+<code>cat conf/app.ini{% endhighlight %}
 
 <pre>
 <code>#debug or release
@@ -54,7 +54,7 @@ ACCESSSERCET =
 
 SIGNNAME =&nbsp; # 短信签名
 
-TEMPLATECODE =&nbsp; # 短信模板CODE</code></pre>
+TEMPLATECODE =&nbsp; # 短信模板CODE{% endhighlight %}
 
 <p>&nbsp;</p>
 

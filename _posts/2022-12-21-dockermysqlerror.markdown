@@ -7,7 +7,7 @@ categories:
 <p>运行docker mysql 的时候，出现了错误，数据库不能成功创建：</p>
 
 <pre>
-<code>Can&#39;t connect to local MySQL server through socket &#39;/tmp/mysql.sock&#39; (2)</code></pre>
+<code>Can&#39;t connect to local MySQL server through socket &#39;/tmp/mysql.sock&#39; (2){% endhighlight %}
 
 <p><code>查看MySQL的ip，进行替换 </code></p>
 

@@ -30,14 +30,14 @@ end</p>
 
 &nbsp; validates :registration_number, length: { is: 6 }
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>示例：</p>
 
 <pre>
 <code>class Person &lt; ApplicationRecord
 &nbsp; validates :name, presence: true, length: { minimum: 3 }
-end</code></pre>
+end{% endhighlight %}
 
 <p>验证：</p>
 
@@ -52,7 +52,7 @@ person = Person.new(name: &quot;John Doe&quot;)
 
 person.valid?
 
-person.errors.full_messages</code></pre>
+person.errors.full_messages{% endhighlight %}
 
 <p>message:</p>
 
@@ -93,7 +93,7 @@ person.errors.full_messages</code></pre>
 
 &nbsp;&nbsp;&nbsp; }
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>&nbsp;</p>
 

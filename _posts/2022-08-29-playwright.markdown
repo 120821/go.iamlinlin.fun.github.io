@@ -12,7 +12,7 @@ categories:
 <code>npm：
 npm init playwright@latest
 yarn:
-yarn install playwright</code></pre>
+yarn install playwright{% endhighlight %}
 
 <p><img height="383" src="/uploads/ckeditor/pictures/352/image-20220829150258-1.png" width="1681" /></p>
 
@@ -45,13 +45,13 @@ tests/
 
 tests-examples/
 
-&nbsp; demo-todo-app.spec.ts</code></pre>
+&nbsp; demo-todo-app.spec.ts{% endhighlight %}
 
 <p>默认情况下，测试将在所有 3 个浏览器上运行，chrome、firefox 和 webkit，使用 3 个 worker。&nbsp; 这可以在 playwright.config 文件中进行配置。&nbsp; 测试以无头模式运行，这意味着在运行测试时不会打开任何浏览器。&nbsp; 测试结果和测试日志将显示在终端中。</p>
 
 <pre>
 <code>npx playwright test
-</code></pre>
+{% endhighlight %}
 
 <p>&nbsp;请参阅关于<a href="https://playwright.dev/docs/running-tests">运行测试的文档</a>，以了解有关在 headed 模式下运行测试、运行多个测试、运行特定测试等的更多信息。</p>
 

@@ -13,13 +13,13 @@ categories:
 <p>在使用<code>rake assets:precompile</code> 命令之前，需要先配置应用程序的环境，并创建相应的文件。例如，需要在<code>config/application.rb</code>文件中添加以下行来启用静态资源支持：</p>
 
 <pre>
-<code>config.assets.enabled = true</code></pre>
+<code>config.assets.enabled = true{% endhighlight %}
 
 <p>还需要创建 <code>config/initializers/assets.rb</code> 文件，并添加以下代码以支持压缩静态资源：</p>
 
 <pre>
 <code>Rails.application.config.assets.version = &#39;1.0&#39;
-Rails.application.config.assets.compress = true</code></pre>
+Rails.application.config.assets.compress = true{% endhighlight %}
 
 <p>总的来说，<code>rake assets:precompile</code>命令可以提高Rails应用程序的性能和可扩展性，使其更适合生产环境部署。</p>
 

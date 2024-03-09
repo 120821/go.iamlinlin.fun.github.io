@@ -9,7 +9,7 @@ categories:
 <p>如果想生成不同环境的build文件内容，可以修改base_url。</p>
 
 <pre>
-<code>cat src/setting.js</code></pre>
+<code>cat src/setting.js{% endhighlight %}
 
 <pre>
 <code>module.exports = {
@@ -98,7 +98,7 @@ categories:
 
 &nbsp; ShowFold: true,
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

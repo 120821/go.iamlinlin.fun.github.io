@@ -13,5 +13,5 @@ if (myString.includes(&quot;[&quot;)) {
   console.log(&quot;字符串包含&#39;[&#39;&quot;);
 } else {
   console.log(&quot;字符串不包含&#39;[&#39;&quot;);
-}</code></pre>
+}{% endhighlight %}
 

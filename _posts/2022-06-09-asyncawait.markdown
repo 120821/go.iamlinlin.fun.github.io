@@ -13,7 +13,7 @@ categories:
  <p>如果不是Promise对象：把这个非promise的东西当做await表达式的结果。</p> 
 </blockquote> 
 <p>1.会自动将常规函数转换成Promise，返回值也是一个Promise对象<br> 2.只有async函数内部的异步操作执行完，才会执行then方法指定的回调函数<br> 3.异步函数内部可以使用await<br> 4.await 放置在Promise调用之前，await 强制后面点代码等待，直到Promise对象resolve，得到resolve的值作为await表达式的运算结果<br> 5.await只能在async函数内部使用,用在普通函数里就会报错</p> 
-<pre><code>和Promise相比较
+{% highlight %}和Promise相比较
 相同点：
 为了解决异步流程问题，promise是约定，而async更优雅
 
@@ -25,8 +25,8 @@ categories:
 5.Promise是显式的异步，而 Async/await 让你的代码看起来是同步的，你依然需要注意异步
 6.Promise即使不支持es6，你依然可以用promise的库或polyfil，而async就很难做，当然也不是不能，成本会高很多
 7.async functions 和Array.forEach等结合，很多tc39提案都在路上或者已经实现，处于上升期，而promise也就那样了
-总结：Async/awati 简单好用，是大势，肯定得学，而async的使用绕不开Promise，所以Promise是必会的。</code></pre> 
-<pre><code>// 使用async/await获取成功的结果
+总结：Async/awati 简单好用，是大势，肯定得学，而async的使用绕不开Promise，所以Promise是必会的。{% endhighlight %} 
+{% highlight %}// 使用async/await获取成功的结果
 // 定义一个异步函数，3秒后才能获取到值(类似操作数据库)
 function getSomeThing(){
     return new Promise((resolve,reject)=&gt;{
@@ -41,6 +41,6 @@ async function test(){
     console.log(a)
 }
 test(); // 3秒后输出：获取成功
-</code></pre> 
+{% endhighlight %} 
 <p></p>
                 

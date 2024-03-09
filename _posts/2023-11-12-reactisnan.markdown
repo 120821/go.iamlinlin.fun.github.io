@@ -7,7 +7,7 @@ categories:
 <p>对于数据，有可能是NaN，可以做个判断（如果计算是Nan,可以设置为0）：</p>
 
 <pre>
-<code>emission = province.emission<span style="color:#d4d0ab">;</span></code></pre>
+<code>emission = province.emission<span style="color:#d4d0ab">;</span>{% endhighlight %}
 
 <p>可以这样：</p>
 
@@ -16,12 +16,12 @@ categories:
 <pre>
 <code>if (isNaN(emission)) {
   emission_result = 0;
-}</code></pre>
+}{% endhighlight %}
 
 <p>2.使用3元运算：</p>
 
 <pre>
-<code>emission = isNaN(emission_result) ? 0 : emission_result;</code></pre>
+<code>emission = isNaN(emission_result) ? 0 : emission_result;{% endhighlight %}
 
 <p>&nbsp;</p>
 

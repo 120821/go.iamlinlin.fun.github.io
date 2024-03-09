@@ -21,12 +21,12 @@ categories:
 
 &nbsp; }
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>首先可以在本地yarn build(记得把域名配置好。）然后scp到远程服务器，（可以先压缩build文件夹，上传会更快，然后解压缩）如果权限不够，就chmod +x build 或者 chmod 777 build.</p>
 
 <pre>
-<code>/build# chmod +x *</code></pre>
+<code>/build# chmod +x *{% endhighlight %}
 
 <p>如果是使用/tmp/build,任何人都可以访问，nginx无论是哪个用户启动的，都不影响。</p>
 

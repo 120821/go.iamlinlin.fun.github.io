@@ -8,11 +8,11 @@ categories:
 
 <p>引入：</p>
 
-<pre><code>import (<br />
+{% highlight %}import (<br />
 &nbsp; &quot;log&quot;<br />
 &nbsp; &quot;github.com/gin-gonic/gin&quot;<br />
 &nbsp; &quot;time&quot;<br />
-)</code></pre>
+){% endhighlight %}
 
 <p>示例：</p>
 
@@ -53,7 +53,7 @@ categories:
 	<span style="color:#8f5902;font-style:italic">// Listen and serve on 0.0.0.0:8080
 </span>	<span style="color:#000">r</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="278" src="/uploads/ckeditor/pictures/633/image-20221025102411-1.png" width="1109" /></p>
 </div>

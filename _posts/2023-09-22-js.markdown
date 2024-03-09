@@ -10,5 +10,5 @@ categories:
 <code><span style="color:#dcc6e0">var</span> str = <span style="color:#abe338">&quot;这是一个跨行\
 </span><span style="color:#abe338">字符串&quot;</span>;
 <span style="color:#f5ab35">console</span>.log(str);
-</code></pre>
+{% endhighlight %}
 

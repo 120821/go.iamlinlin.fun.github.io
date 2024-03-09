@@ -13,7 +13,7 @@ categories:
 <p>在 Rails 项目的 Gemfile 文件中添加 MiniMagick 依赖库：</p>
 
 <pre>
-<code>gem &#39;mini_magick&#39;</code></pre>
+<code>gem &#39;mini_magick&#39;{% endhighlight %}
 
 <p>然后运行 `bundle install` 命令来安装它。</p>
 
@@ -44,7 +44,7 @@ categories:
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>在上述代码中，我们使用 MiniMagick 提供的 `thumb` 方法来将上传的图像转换为 `100x100` 的缩略图，并使用 `self.image = thumb` 将其保存到 `image` 列中。</p>
 

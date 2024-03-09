@@ -7,5 +7,5 @@ categories:
 <p>react 需要使用字符串拼接方式来构建动态的URL:</p>
 
 <pre>
-<code>&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to={`/blog/${item.id}`}&gt;</code></pre>
+<code>&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to={`/blog/${item.id}`}&gt;{% endhighlight %}
 

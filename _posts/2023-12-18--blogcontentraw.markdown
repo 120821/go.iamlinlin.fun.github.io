@@ -21,7 +21,7 @@ categories:
         <span style="color:#dcc6e0">return</span> <span style="color:#abe338">&quot;&quot;</span>;
     }
 }
-</code></pre>
+{% endhighlight %}
 
 <p>2.在渲染html的时候调用：</p>
 
@@ -32,5 +32,5 @@ categories:
 runOnUiThread(() -&gt; {
     <span style="color:#d4d0ab">// 在TextView中显示博客内容（格式化后的）</span>
     contentTextView.setText(blog.getFormattedContent());
-});</code></pre>
+});{% endhighlight %}
 

@@ -11,7 +11,7 @@ categories:
 <pre>
 <code><span style="color:#ffa07a">for</span> <span style="color:#ffa07a">i</span> <span style="color:#dcc6e0">in</span> <span style="color:#00e0e0">range</span>(<span style="color:#ffa07a">n</span>):
     <span style="color:#00e0e0">print</span>(<span style="color:#ffa07a">i</span>)
-</code></pre>
+{% endhighlight %}
 
 <p>复杂度是O（n）</p>
 

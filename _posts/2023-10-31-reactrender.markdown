@@ -22,5 +22,5 @@ categories:
     &lt;/div&gt;
   );
 }
-</code></pre>
+{% endhighlight %}
 

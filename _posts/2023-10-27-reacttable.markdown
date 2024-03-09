@@ -9,7 +9,7 @@ categories:
 <p>最开始使用这样的代码，在render里是不能展示的：</p>
 
 <pre>
-<code>{yearlyObjArray}</code></pre>
+<code>{yearlyObjArray}{% endhighlight %}
 
 <p>需要处理：</p>
 
@@ -30,7 +30,7 @@ categories:
       &lt;/div&gt;
     );
   }
-})}</code></pre>
+})}{% endhighlight %}
 
 <p>进一步做一个table：</p>
 
@@ -63,7 +63,7 @@ categories:
       &lt;/div&gt;
     );
   }
-})}</code></pre>
+})}{% endhighlight %}
 
 <p>可以增加边框：</p>
 
@@ -86,7 +86,7 @@ categories:
 
 // JSX代码
 {yearlyDataArray.map((yearlyObjArray, index) =&gt; {
-  ,,,</code></pre>
+  ,,,{% endhighlight %}
 
 <p>注意这里的table的css会影响其他页面的css，因为修改的是整体的css，如果不需要修改其他页面的table的css的话，就单独写class。</p>
 

@@ -28,7 +28,7 @@ def creat_new_hash_value_add_new_value
   puts hash
   puts my_hash
 end
-~            </code></pre> 
+~            {% endhighlight %} 
  <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/a6e52f51055a4c05a8eb41f6c7d2dfce.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
  <p> </p> 
 </blockquote>

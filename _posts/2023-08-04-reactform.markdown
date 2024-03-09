@@ -7,10 +7,10 @@ categories:
 <p>这样写是整数类型：</p>
 
 <pre>
-<code>&lt;InputNumber min={0} max={99999} /&gt;</code></pre>
+<code>&lt;InputNumber min={0} max={99999} /&gt;{% endhighlight %}
 
 <p>这样写是小数类型，保留两位小数，每次可以增加0.01或者减少0.01</p>
 
 <pre>
-<code>&lt;InputNumber step={0.01} /&gt;</code></pre>
+<code>&lt;InputNumber step={0.01} /&gt;{% endhighlight %}
 

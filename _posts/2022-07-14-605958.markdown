@@ -36,7 +36,7 @@ categories:
 
 &nbsp; });
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>后端进行方法的书写，进行与前端的交互</p>
 
@@ -58,7 +58,7 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to: to,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; code: code<br />
 &nbsp;&nbsp;&nbsp; }&nbsp; &nbsp;<br />
-&nbsp; end</code></pre>
+&nbsp; end{% endhighlight %}
 
 <p>增加云片的job，进行发送短信：（也可以申请阿里云等短信功能）</p>
 
@@ -102,7 +102,7 @@ class YunPianJob &lt; ApplicationJob
 &nbsp;&nbsp;&nbsp; logger.info(&quot;== response: #{response.inspect}&quot;)
 
 &nbsp; end
-end</code></pre>
+end{% endhighlight %}
 
 <p>&nbsp;</p>
 

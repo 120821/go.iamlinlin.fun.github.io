@@ -29,12 +29,12 @@ categories:
 <p>linux 下提供了 zip 和 unzip 程序，zip 是压缩程序，unzip 是解压程序。它们的参数选项很多，这里只做简单介绍，依旧举例说明一下其用法：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="com"># zip all.zip *.jpg</span></code></pre>
+<code><span class="com"># zip all.zip *.jpg</span>{% endhighlight %}
 
 <p>这条命令是将所有 .jpg 的文件压缩成一个 zip 包:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="com"># unzip all.zip</span></code></pre>
+<code><span class="com"># unzip all.zip</span>{% endhighlight %}
 
 <p>这条命令是将 all.zip 中的所有文件解压出来。</p>
 

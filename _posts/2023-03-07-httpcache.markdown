@@ -23,7 +23,7 @@ categories:
 <p>如果响应包含个性化内容并且你只想将响应存储在私有缓存中，则必须指定 <code>private</code> 指令。</p>
 
 <pre>
-<code>Cache-Control: private</code></pre>
+<code>Cache-Control: private{% endhighlight %}
 
 <p>个性化内容通常由 cookie 控制，但 cookie 的存在并不能表明它是私有的，因此单独的 cookie 不会使响应成为私有的。</p>
 
@@ -38,7 +38,7 @@ categories:
 <p><strong>Kitchen-sink 标头</strong>如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 <code>no-store</code>）的&ldquo;旧且未更新的代理缓存&rdquo;的实现。</p>
 
 <pre>
-<code>Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate</code></pre>
+<code>Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate{% endhighlight %}
 
 <p>然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。</p>
 
@@ -51,7 +51,7 @@ categories:
 <p>也可以忽略标准 HTTP 缓存规范协议以支持显式操作。例如，可以指定以下内容以选择退出私有缓存或代理缓存，同时使用你自己的策略仅在托管缓存中进行缓存。</p>
 
 <pre>
-<code>Cache-Control: no-store</code></pre>
+<code>Cache-Control: no-store{% endhighlight %}
 
 <p>5.启发式缓存：HTTP 旨在尽可能多地缓存，因此即使没有给出 <code>Cache-Control</code>，如果满足某些条件，响应也会被存储和重用。这称为<strong>启发式缓存</strong>。</p>
 
@@ -65,7 +65,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2021 22:22:22 GMT
 
 &lt;!doctype html&gt;
-&hellip;</code></pre>
+&hellip;{% endhighlight %}
 
 <p>试探性地知道，整整一年没有更新的内容在那之后的一段时间内不会更新。因此，客户端存储此响应（尽管缺少 <code>max-age</code>）并重用它一段时间。复用多长时间取决于实现，但规范建议存储后大约 10%（在本例中为 0.1 年）的时间。</p>
 
@@ -85,7 +85,7 @@ Date: Tue, 22 Feb 2022 22:22:22 GMT
 Cache-Control: max-age=604800
 
 &lt;!doctype html&gt;
-&hellip;</code></pre>
+&hellip;{% endhighlight %}
 
 <p>&nbsp;</p>
 

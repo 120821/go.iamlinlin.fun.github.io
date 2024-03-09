@@ -88,5 +88,5 @@ puts u</span><span class="pun">.</span><span class="pln">profile</span><span cla
 puts u</span><span class="pun">.</span><span class="pln">post_ids</span><span class="pun">.</span><span class="pln">inspect
 puts u</span><span class="pun">.</span><span class="pln">posts</span><span class="pun">.</span><span class="pln">inspect
 puts u</span><span class="pun">.</span><span class="pln">clan_ids</span><span class="pun">.</span><span class="pln">inspect
-puts u</span><span class="pun">.</span><span class="pln">clans</span><span class="pun">.</span><span class="pln">inspect</span></code></pre>
+puts u</span><span class="pun">.</span><span class="pln">clans</span><span class="pun">.</span><span class="pln">inspect</span>{% endhighlight %}
 

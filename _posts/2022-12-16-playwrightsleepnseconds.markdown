@@ -12,7 +12,7 @@ categories:
 
 <pre>
 <code><span style="color:#393a34"><em>// wait for 1 second</em>
-</span><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">waitForTimeout</span><span style="color:#393a34">(</span><span style="color:#005cc5">1000</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span></code></pre>
+</span><span style="color:#393a34"><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">waitForTimeout</span><span style="color:#393a34">(</span><span style="color:#005cc5">1000</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

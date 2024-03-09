@@ -13,10 +13,10 @@ categories:
 <p>1.使用git log获得某个commit 的id，使用id进行查看该commit的修改内容。</p>
 
 <pre>
-<code>git show [commit]</code></pre>
+<code>git show [commit]{% endhighlight %}
 
 <p><code>2.查看最新的commit</code></p>
 
 <pre>
-<code>git <span style="color:#dcc6e0">show</span></code></pre>
+<code>git <span style="color:#dcc6e0">show</span>{% endhighlight %}
 

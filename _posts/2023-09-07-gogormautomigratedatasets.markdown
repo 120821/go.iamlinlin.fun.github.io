@@ -7,7 +7,7 @@ categories:
 <p>1.在models/model.go增加atuoMigrate</p>
 
 <pre>
-<code>&nbsp;db.AutoMigrate(Datasets{})</code></pre>
+<code>&nbsp;db.AutoMigrate(Datasets{}){% endhighlight %}
 
 <p>完整：</p>
 
@@ -120,7 +120,7 @@ nbsp;&nbsp; &nbsp;// migrate(写所有的表)
 
 func CloseDB() {
   defer db.Close()
-}</code></pre>
+}{% endhighlight %}
 
 <p>2.增加models/datasets.go,写增删改查的方法。类似于：</p>
 
@@ -217,7 +217,7 @@ func DeleteDataset(id int) bool {
 
 nbsp;&nbsp; &nbsp;return true
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>3.注意我在models/dataset.go使用了convertToString的方法，但是没有声明，是因为在其他model已经写了，在Dataset中可以直接调用，不需要重复声明：</p>
 
@@ -235,7 +235,7 @@ nbsp;&nbsp; &nbsp;return true
 
 &nbsp; return result
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

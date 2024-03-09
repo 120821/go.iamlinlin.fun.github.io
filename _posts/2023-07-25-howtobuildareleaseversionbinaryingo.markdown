@@ -9,7 +9,7 @@ categories:
 <p>使用命令（生成一个可执行文件）</p>
 
 <pre>
-<code>go build</code></pre>
+<code>go build{% endhighlight %}
 
 <p>然后把生成的可执行文件进行执行即可。</p>
 
@@ -20,12 +20,12 @@ categories:
 
 &nbsp;- using env:&nbsp;&nbsp; &nbsp;export GIN_MODE=release
 
-&nbsp;- using code:&nbsp;&nbsp; &nbsp;gin.SetMode(gin.ReleaseMode)</code></pre>
+&nbsp;- using code:&nbsp;&nbsp; &nbsp;gin.SetMode(gin.ReleaseMode){% endhighlight %}
 
 <p>运行：</p>
 
 <pre>
-<code>export GIN_MODE=release</code></pre>
+<code>export GIN_MODE=release{% endhighlight %}
 
 <p>然后执行可执行文件即可。</p>
 

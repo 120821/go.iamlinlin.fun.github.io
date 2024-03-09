@@ -6,12 +6,12 @@ categories:
 ---
 <p>1.安装asdf</p>
 
-<pre><code>git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2</code></pre>
+{% highlight %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}
 
-<pre><code>然后增加 ~/.bashrc：(</code> source ./bashrc)</pre>
+{% highlight %}然后增加 ~/.bashrc：(</code> source ./bashrc)</pre>
 
 <pre class="shiki" style="background-color:#272822;">
-<code class="hljs language-bash">. <span class="hljs-variable">$HOME</span>/.asdf/asdf.sh</code></pre>
+<code class="hljs language-bash">. <span class="hljs-variable">$HOME</span>/.asdf/asdf.sh{% endhighlight %}
 
 <p>asdf(查看是否显示所有命令)</p>
 
@@ -24,7 +24,7 @@ categories:
 <p>安装ruby</p>
 
 <pre class="notranslate">
-<code class="hljs language-csharp">asdf plugin <span class="hljs-keyword">add</span> ruby https:<span class="hljs-comment">//github.com/asdf-vm/asdf-ruby.git</span></code></pre>
+<code class="hljs language-csharp">asdf plugin <span class="hljs-keyword">add</span> ruby https:<span class="hljs-comment">//github.com/asdf-vm/asdf-ruby.git</span>{% endhighlight %}
 
 <p>asdf install ruby latest</p>
 
@@ -94,10 +94,10 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;
 <p>git clone https://github.com/sg552/happy_book_vim</p>
 
 <pre class="notranslate">
-<code class="hljs language-bash"><span class="hljs-built_in">cp</span> dot_vimrc_for_vim8 ~/.vimrc</code></pre>
+<code class="hljs language-bash"><span class="hljs-built_in">cp</span> dot_vimrc_for_vim8 ~/.vimrc{% endhighlight %}
 
 <pre class="notranslate">
-<code class="hljs language-ruby"><span class="hljs-symbol">:PluginInstall</span></code></pre>
+<code class="hljs language-ruby"><span class="hljs-symbol">:PluginInstall</span>{% endhighlight %}
 
 <p><code class="hljs language-ruby"><span class="hljs-symbol">4.安装go caddy</span></code></p>
 
@@ -107,7 +107,7 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;
 
 <pre>
 <code class="hljs language-bash">wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
-</code></pre>
+{% endhighlight %}
 
 <p>tar zxvf go1.19.3.linux-amd64.tar.gz</p>
 
@@ -124,7 +124,7 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;
 
 <span class="hljs-built_in">export</span> GOBIN=<span class="hljs-variable">$GOPATH</span>/bin
 
-<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$GOPATH</span>:<span class="hljs-variable">$GOBIN</span>:<span class="hljs-variable">$GOROOT</span>/bin:/opt/app/go/go:<span class="hljs-variable">$PATH</span></code></pre>
+<span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$GOPATH</span>:<span class="hljs-variable">$GOBIN</span>:<span class="hljs-variable">$GOROOT</span>/bin:/opt/app/go/go:<span class="hljs-variable">$PATH</span>{% endhighlight %}
 
 <p>source ~/.bashrc</p>
 
@@ -134,7 +134,7 @@ go version go1.19.3 linux/amd64</p>
 <p>下载xcaddy</p>
 
 <pre>
-<code class="hljs language-bash">go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest</code></pre>
+<code class="hljs language-bash">go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest{% endhighlight %}
 
 <p>4.启动项目</p>
 

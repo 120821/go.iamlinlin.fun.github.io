@@ -11,12 +11,12 @@ categories:
 <p>For the full html of the page, this is what you need:</p>
 
 <pre>
-<code>const html = await page.content()</code></pre>
+<code>const html = await page.content(){% endhighlight %}
 
 <p>To get the inner text of the div, this should work:</p>
 
 <pre>
-<code>const pageText = await page.innerText(&#39;div&#39;)</code></pre>
+<code>const pageText = await page.innerText(&#39;div&#39;){% endhighlight %}
 
 <p>测试：</p>
 
@@ -38,7 +38,7 @@ test(&#39;localhost locator&#39;, async ({ page }) =&gt; {
 
 &nbsp; console.log(pageText);
 
-});</code></pre>
+});{% endhighlight %}
 
 <p>&nbsp;</p>
 

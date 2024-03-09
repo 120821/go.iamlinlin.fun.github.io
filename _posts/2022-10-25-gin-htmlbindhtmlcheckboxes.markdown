@@ -53,7 +53,7 @@ func formHandler(c *gin.Context) {
 
 &nbsp;&nbsp;&nbsp; c.JSON(200, gin.H{&quot;color&quot;: fakeForm.Colors})
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>增加视图文件：views/form.html</p>
 
@@ -69,7 +69,7 @@ func formHandler(c *gin.Context) {
     <span style="color:#000;font-weight:700">&lt;</span><span style="color:#204a87;font-weight:700">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:700">=</span><span style="color:#4e9a06">&quot;checkbox&quot;</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:700">=</span><span style="color:#4e9a06">&quot;colors[]&quot;</span> <span style="color:#c4a000">value</span><span style="color:#ce5c00;font-weight:700">=</span><span style="color:#4e9a06">&quot;blue&quot;</span> <span style="color:#c4a000">id</span><span style="color:#ce5c00;font-weight:700">=</span><span style="color:#4e9a06">&quot;blue&quot;</span><span style="color:#000;font-weight:700">&gt;</span>
     <span style="color:#000;font-weight:700">&lt;</span><span style="color:#204a87;font-weight:700">input</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:700">=</span><span style="color:#4e9a06">&quot;submit&quot;</span><span style="color:#000;font-weight:700">&gt;</span>
 <span style="color:#000;font-weight:700">&lt;/</span><span style="color:#204a87;font-weight:700">form</span><span style="color:#000;font-weight:700">&gt;</span>
-</code></pre>
+{% endhighlight %}
 </div>
 
 <p>运行：</p>

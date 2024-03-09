@@ -155,7 +155,7 @@ categories:
 
 &nbsp;&nbsp; &nbsp;});
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

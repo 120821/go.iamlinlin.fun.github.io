@@ -11,7 +11,7 @@ categories:
     currentSale := sale[i]
     <span style="color:#d4d0ab">// 在这里对 idStr 和 currentSale 进行操作</span>
     fmt.Println(idStr, currentSale)
-}</code></pre>
+}{% endhighlight %}
 
 <p>在这段代码里，循环中的占位符<code>_</code>是用来忽略索引的占位符，</p>
 
@@ -27,7 +27,7 @@ categories:
         <span style="color:#d4d0ab">// 处理 sale 数组越界的情况</span>
         fmt.Println(<span style="color:#abe338">&quot;sale 数组越界&quot;</span>)
     }
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

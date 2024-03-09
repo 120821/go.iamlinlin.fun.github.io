@@ -52,7 +52,7 @@ categories:
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;red&#39;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&#39;color: orange&#39;</span>&gt;</span>我是个div<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>下面结果来自 chrome developer tool: inspector, 可以看出, 排在第一位的是 !important属性, 后面的以selector的权重(weight)排序,从高到低.</p>
 

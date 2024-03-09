@@ -26,7 +26,7 @@ func main() {
     str := strconv.Itoa(num)
 
     fmt.Println(str) // 输出: &quot;42&quot;
-}</code></pre>
+}{% endhighlight %}
 
 <p>另外，您还可以使用 fmt.Sprintf() 函数将整数转换为字符串类型。</p>
 
@@ -47,7 +47,7 @@ func main() {
     str := fmt.Sprintf(&quot;%d&quot;, num)
 
     fmt.Println(str) // 输出: &quot;42&quot;
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -62,7 +62,7 @@ num = 42
 # converting integer to string
 string_num = str(num)
 
-print(string_num) # output: &quot;42&quot;</code></pre>
+print(string_num) # output: &quot;42&quot;{% endhighlight %}
 
 <p>Alternatively, you can use format() method or f-strings to convert integer to string.</p>
 
@@ -75,7 +75,7 @@ num = 42
 # converting integer to string using format()
 string_num = &quot;{}&quot;.format(num)
 
-print(string_num) # output: &quot;42&quot;</code></pre>
+print(string_num) # output: &quot;42&quot;{% endhighlight %}
 
 <p>Using f-strings:</p>
 
@@ -86,5 +86,5 @@ num = 42
 # converting integer to string using f-string
 string_num = f&quot;{num}&quot;
 
-print(string_num) # output: &quot;42&quot;</code></pre>
+print(string_num) # output: &quot;42&quot;{% endhighlight %}
 

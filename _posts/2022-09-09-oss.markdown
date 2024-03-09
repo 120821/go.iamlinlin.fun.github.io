@@ -14,7 +14,7 @@ categories:
 
 <pre>
 <code class="hljs language-ruby">&gt; <span class="hljs-keyword">require</span> <span class="hljs-string">&#39;aliyun/oss&#39;</span>
-=&gt; true</code></pre>
+=&gt; true{% endhighlight %}
 
 <p><code class="hljs language-ruby">创建client</code></p>
 
@@ -23,7 +23,7 @@ categories:
 &gt;   endpoint: <span class="hljs-string">&#39;endpoint&#39;</span>,
 &gt;   access_key_id: <span class="hljs-string">&#39;AccessKeyId&#39;</span>,
 &gt;   access_key_secret: <span class="hljs-string">&#39;AccessKeySecret&#39;</span>)
-=&gt; <span class="hljs-comment">#&lt;Aliyun::OSS::Client...</span></code></pre>
+=&gt; <span class="hljs-comment">#&lt;Aliyun::OSS::Client...</span>{% endhighlight %}
 
 <p><a href="https://help.aliyun.com/document_detail/31837.html?spm=a2c6h.13066369.question.5.3ab84362PPzJ88">公共云下OSS Region和Endpoint对照表</a></p>
 
@@ -45,7 +45,7 @@ categories:
     <span class="hljs-symbol">:redirect</span> =&gt; <span class="hljs-string">&#39;http://你的域名/buckets/&#39;</span>
   }
 <span class="hljs-keyword">end</span>
-                                </code></pre>
+                                {% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -22,7 +22,7 @@ categories:
 <code>//获取1i标签对象集合: HTMLCollection(2) [li, li]
 var lis = document.getElementsByTagName(&#39;li&#39;);
 var firstLi = lis[0];    //获取第1个1i标签的DOM对象
-var text = firstLi.innerText;    //获取第1个1i标签的文本内容</code></pre>
+var text = firstLi.innerText;    //获取第1个1i标签的文本内容{% endhighlight %}
 
 <p>&nbsp;</p>
 

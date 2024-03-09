@@ -6,7 +6,7 @@ categories:
 ---
 
                     <p>update() 方法用于更新已存在的文档。语法格式如下：</p> 
-<pre><code>db.collection.update(
+{% highlight %}db.collection.update(
    &lt;query&gt;,
    &lt;update&gt;,
    {
@@ -14,7 +14,7 @@ categories:
      multi: &lt;boolean&gt;,
      writeConcern: &lt;document&gt;
    }
-)</code></pre> 
+){% endhighlight %} 
 <ul>
 <li>
 <strong>query </strong>: update的查询条件，类似sql update查询内where后面的。</li>
@@ -28,16 +28,16 @@ categories:
 <strong>writeConcern </strong> :可选，抛出异常的级别</li>
 </ul>
 <p>在集合 col 中插入如下数据：</p> 
-<pre><code>&gt;db.col.insert({
+{% highlight %}&gt;db.col.insert({
     title: 'MongoDB 教程', 
     description: 'MongoDB 是一个 Nosql 数据库',
     by: '菜鸟教程',
     url: 'http://www.runoob.com',
     tags: ['mongodb', 'database', 'NoSQL'],
     likes: 100
-})</code></pre> 
+}){% endhighlight %} 
 <p>通过 update() 方法来更新标题(title):</p> 
-<pre><code>&gt;db.col.update({'title':'MongoDB 教程'},{$set:{'title':'MongoDB'}})
+{% highlight %}&gt;db.col.update({'title':'MongoDB 教程'},{$set:{'title':'MongoDB'}})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })   # 输出信息
 &gt; db.col.find().pretty()
 {
@@ -53,15 +53,15 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })   # 输出信�
         ],
         "likes" : 100
 }
-&gt;</code></pre> 
+&gt;{% endhighlight %} 
 <h2>save() 方法</h2> 
 <p>save() 方法通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。语法格式如下：</p> 
-<pre><code>db.collection.save(
+{% highlight %}db.collection.save(
    &lt;document&gt;,
    {
      writeConcern: &lt;document&gt;
    }
-)</code></pre> 
+){% endhighlight %} 
 <p><strong>参数说明：</strong></p> 
 <ul>
 <li>
@@ -71,11 +71,11 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })   # 输出信�
 </ul>
 <blockquote> 
  <p>只更新第一条记录：</p> 
- <pre><code>db.col.update( { "count" : { $gt : 1 } } , { $set : { "test2" : "OK"} } );</code></pre> 
+ {% highlight %}db.col.update( { "count" : { $gt : 1 } } , { $set : { "test2" : "OK"} } );{% endhighlight %} 
  <p>全部更新：</p> 
- <pre><code>db.col.update( { "count" : { $gt : 3 } } , { $set : { "test2" : "OK"} },false,true );</code></pre> 
+ {% highlight %}db.col.update( { "count" : { $gt : 3 } } , { $set : { "test2" : "OK"} },false,true );{% endhighlight %} 
  <p>只添加第一条：</p> 
- <pre><code>db.col.update( { "count" : { $gt : 4 } } , { $set : { "test5" : "OK"} },true,false )；</code></pre> 
+ {% highlight %}db.col.update( { "count" : { $gt : 4 } } , { $set : { "test5" : "OK"} },true,false )；{% endhighlight %} 
  <p>全部添加进去:</p> 
  <p>db.col.update( { "count" : { $gt : 5 } } , { $set : { "test5" : "OK"} },true,true );</p> 
  <p>全部更新：</p> 

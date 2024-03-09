@@ -25,15 +25,15 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp; else
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; render :edit</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; render :edit{% endhighlight %}
 
 <p>再次操作，就看到了错误提示：</p>
 
 <pre>
-<code>You must have ImageMagick or GraphicsMagick installed):</code></pre>
+<code>You must have ImageMagick or GraphicsMagick installed):{% endhighlight %}
 
 <p>安装：</p>
 
 <pre>
-<code>sudo apt-get install imagemagick</code></pre>
+<code>sudo apt-get install imagemagick{% endhighlight %}
 

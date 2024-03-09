@@ -31,5 +31,5 @@ categories:
   } <span style="color:#dcc6e0">catch</span> (error) {
     <span style="color:#f5ab35">console</span>.error(<span style="color:#abe338">&#39;== Error get calculation template details:&#39;</span>, error);
   }
-}</code></pre>
+}{% endhighlight %}
 

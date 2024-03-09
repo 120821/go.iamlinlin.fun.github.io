@@ -24,7 +24,7 @@ categories:
   height=&quot;auto&quot;
   licenseKey=&quot;non-commercial-and-evaluation&quot; // for non-commercial use only
 /&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>默认情况下是显示headers的，如果不想要显示，那么就把<code>rowHeaders</code>&nbsp; <code>colHeaders</code>修改为false即可。<code>data可以设置默认的数据。</code></p>
 </div>

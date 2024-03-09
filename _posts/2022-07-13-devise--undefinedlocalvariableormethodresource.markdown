@@ -25,5 +25,5 @@ categories:
 
   <span class="hljs-keyword">def</span> <span class="hljs-title function_">devise_mapping</span>
     <span class="hljs-variable">@devise_mapping</span> ||= Devise.mappings[<span class="hljs-symbol">:user</span>]
-  <span class="hljs-keyword">end</span></code></pre>
+  <span class="hljs-keyword">end</span>{% endhighlight %}
 

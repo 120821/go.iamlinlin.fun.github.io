@@ -7,15 +7,15 @@ categories:
 <p>当运行migrate的时候：</p>
 
 <pre>
-<code>rake db:migrate RAILS_ENV=test</code></pre>
+<code>rake db:migrate RAILS_ENV=test{% endhighlight %}
 
 <pre>
-<code>error&nbsp; failed: SCRAM authentication requires libpq version 10 or above</code></pre>
+<code>error&nbsp; failed: SCRAM authentication requires libpq version 10 or above{% endhighlight %}
 
 <p>查看版本：</p>
 
 <pre>
-<code>pg_config --version</code></pre>
+<code>pg_config --version{% endhighlight %}
 
 <p><img height="60" src="/uploads/ckeditor/pictures/717/image-20221110174209-1.png" width="658" /></p>
 
@@ -56,7 +56,7 @@ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-
 
 sudo apt-get update
 
-sudo apt-get -y install postgresql</code></pre>
+sudo apt-get -y install postgresql{% endhighlight %}
 
 <div>最后一个命令换成 sudo apt-get -y install postgresql-14</div>
 
@@ -77,7 +77,7 @@ The following packages will be upgraded:
 
 &nbsp; postgresql-14
 
-1 upgraded, 0 newly installed, 0 to remove and 52 not upgraded.</code></pre>
+1 upgraded, 0 newly installed, 0 to remove and 52 not upgraded.{% endhighlight %}
 
 <p>&nbsp;</p>
 

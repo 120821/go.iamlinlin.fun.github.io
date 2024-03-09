@@ -18,7 +18,7 @@ for (const key in parsedConsumption) {
   data.forEach(([year, value]) =&gt; {
     console.log(`Year: ${year}, Value: ${value}`);
   });
-}</code></pre>
+}{% endhighlight %}
 
 <p>运行后会显示这样的数据：</p>
 
@@ -46,5 +46,5 @@ Year: <span style="color:#f5ab35">2016</span><span style="color:#abe338">,</span
 Year: <span style="color:#f5ab35">2017</span><span style="color:#abe338">,</span> Value: <span style="color:#f5ab35">45</span>
 Year: <span style="color:#f5ab35">2018</span><span style="color:#abe338">,</span> Value: <span style="color:#f5ab35">908</span>
 Year: <span style="color:#f5ab35">2019</span><span style="color:#abe338">,</span> Value: <span style="color:#f5ab35">45</span>
-Year: <span style="color:#f5ab35">2020</span><span style="color:#abe338">,</span> Value: <span style="color:#f5ab35">908</span></code></pre>
+Year: <span style="color:#f5ab35">2020</span><span style="color:#abe338">,</span> Value: <span style="color:#f5ab35">908</span>{% endhighlight %}
 

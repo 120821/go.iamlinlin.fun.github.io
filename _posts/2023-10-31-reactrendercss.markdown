@@ -14,7 +14,7 @@ categories:
       &lt;div&gt;第二行内容&lt;/div&gt;
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>也可以使用css:</p>
 
@@ -32,5 +32,5 @@ categories:
       第二行内容
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 

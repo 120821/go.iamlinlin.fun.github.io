@@ -10,17 +10,17 @@ categories:
 
 <pre class="highlight">
 <code><span class="nb">Ubuntu安装：sudo </span>add-apt-repository <span class="nt">-y</span> ppa:ethereum/ethereum
-</code></pre>
+{% endhighlight %}
 
 <pre class="highlight">
-<code><span class="nb">更新（</span></code>安装 go-ethereum 的稳定版本：<code><span class="nb">）：sudo </span>apt-get update</code></pre>
+<code><span class="nb">更新（</span></code>安装 go-ethereum 的稳定版本：<code><span class="nb">）：sudo </span>apt-get update{% endhighlight %}
 
 <p>或者，或者开发版本：</p>
 
 <pre class="highlight">
 <code><span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get <span class="nb">install </span>ethereum-unstable
-</code></pre>
+{% endhighlight %}
 
 <p><font style="vertical-align:inherit">这些命令安装核心 Geth 软件和以下开发人员工具： </font><code class="language-plaintext highlighter-rouge">clef</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">devp2p</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">abigen</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">bootnode</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">evm</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">rlpdump</code><font style="vertical-align:inherit">和 </font><code class="language-plaintext highlighter-rouge">puppeth</code><font style="vertical-align:inherit">. 这些工具中的每一个的二进制文件都保存在 </font><code class="language-plaintext highlighter-rouge">/usr/local/bin/</code><font style="vertical-align:inherit">. 命令行选项的完整列表可以在 </font><a href="https://geth.ethereum.org/docs/interface/command-line-options"><font style="vertical-align:inherit">这里 </font></a><font style="vertical-align:inherit">在终端运行 </font><code class="language-plaintext highlighter-rouge">geth --help</code><font style="vertical-align:inherit">. </font></p>
 
@@ -32,7 +32,7 @@ categories:
 <code>sudo apt-get update
 sudo apt-get install ethereum
 sudo apt-get upgrade geth
-</code></pre>
+{% endhighlight %}
 </div>
 </div>
 

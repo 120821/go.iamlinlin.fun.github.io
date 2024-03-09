@@ -9,12 +9,12 @@ categories:
 <pre class="highlight">
 <code><span class="nb">sudo </span>apt update
 <span class="nb">sudo </span>apt <span class="nb">install </span>redis-server
-</code></pre>
+{% endhighlight %}
 
 <pre class="highlight">
 <code>$ redis-cli
 127.0.0.1:6379&gt; ping
-PONG</code></pre>
+PONG{% endhighlight %}
 
 <p>有Redis，但是没有 server</p>
 

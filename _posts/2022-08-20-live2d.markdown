@@ -29,7 +29,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp; &lt;/footer&gt;
 
-&nbsp; &lt;/body&gt;</code></pre>
+&nbsp; &lt;/body&gt;{% endhighlight %}
 
 <p>并且在底部增加css， 不然会显示三分之一的页面。<br />
 &lt;style&gt;<br />

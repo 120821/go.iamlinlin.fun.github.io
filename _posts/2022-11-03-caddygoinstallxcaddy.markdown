@@ -19,7 +19,7 @@ categories:
 <pre>
 <code>wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 
-tar zxvf ggo1.19.3.linux-amd64.tar.gz</code></pre>
+tar zxvf ggo1.19.3.linux-amd64.tar.gz{% endhighlight %}
 
 <p>添加go 命令到 $PATH中。</p>
 
@@ -36,17 +36,17 @@ export GOPATH=/opt/app
 
 export GOBIN=$GOPATH/bin
 
-export PATH=$GOPATH:$GOBIN:$GOROOT/bin:/opt/app/go/go:$PATH</code></pre>
+export PATH=$GOPATH:$GOBIN:$GOROOT/bin:/opt/app/go/go:$PATH{% endhighlight %}
 
 <p>2. 下载xcaddy</p>
 
 <pre>
-<code>go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest</code></pre>
+<code>go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest{% endhighlight %}
 
 <p>3. 根据xcaddy来编译 caddy + cloudflare</p>
 
 <pre>
-<code>xcaddy build --with github.com/caddy-dns/cloudflare</code></pre>
+<code>xcaddy build --with github.com/caddy-dns/cloudflare{% endhighlight %}
 
 <p>这样一个新版的 caddy 就构建好了，放在当前目录下的 caddy文件夹中。</p>
 

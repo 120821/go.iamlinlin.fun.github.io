@@ -11,14 +11,14 @@ categories:
 
 rake aborted!
 
-StandardError: An error has occurred, all later migrations canceled: Mysql2::Error: Invalid default value for &#39;status </code></pre>
+StandardError: An error has occurred, all later migrations canceled: Mysql2::Error: Invalid default value for &#39;status {% endhighlight %}
 
 <p>这个错误意味着 &#39;status&#39; 字段的默认值无效。解决此错误的一种方法是在添加 &#39;status&#39; 字段时指定有效的默认值。</p>
 
 <p>例如，您可以使用以下命令来指定 &#39;status&#39; 字段的默认值：</p>
 
 <pre>
-<code>add_column(:enterprises, :status, :string, {:comment=&gt;&quot;是否审批&quot;, :default=&gt;&quot;pending&quot;})</code></pre>
+<code>add_column(:enterprises, :status, :string, {:comment=&gt;&quot;是否审批&quot;, :default=&gt;&quot;pending&quot;}){% endhighlight %}
 
 <p>在这个示例中，我们将 &#39;status&#39; 字段的默认值设置为 &#39;pending&#39;，这是一个有效的默认值，不会触发错误。</p>
 

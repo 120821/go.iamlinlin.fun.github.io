@@ -17,7 +17,7 @@ categories:
     }
     return count;
 }
-</code></pre> 
+{% endhighlight %} 
  <p>既然匿名函数没有名字，那该怎么递归调用它呢？在这一点上，JavaScript 允许你命名这个函数表达式。你可以命名立即调用的函数表达式（IIFE——Immediately Invoked Function Expression），如下所示：</p> 
  <pre><code class="language-javascript">var charsInBody = (function counter(elm) {
     if (elm.nodeType == 3) { // 文本节点
@@ -29,7 +29,7 @@ categories:
     }
     return count;
 })(document.body);
-</code></pre> 
+{% endhighlight %} 
 </blockquote> 
 <pre><code class="language-javascript"> /* 求阶乘 */
 function fun(n) {
@@ -37,7 +37,7 @@ function fun(n) {
   return fun(n - 1) * n
   i--;
 }
-console.log(fun(3));</code></pre> 
+console.log(fun(3));{% endhighlight %} 
 <p>if 语句设置停止条件，在下一行的return语句调用自己</p> 
 <p></p>
                 

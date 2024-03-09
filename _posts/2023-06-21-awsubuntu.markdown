@@ -18,27 +18,27 @@ categories:
 	<li>连接到新的实例，使用 SSH 登录。</li>
 	<li>在命令行中，执行以下命令来查看新创建附加卷的设备名称和文件系统：
 	<pre>
-<code>sudo fdisk -l</code></pre>
+<code>sudo fdisk -l{% endhighlight %}
 	</li>
 	<li>使用以下命令来创建一个新的分区，使用整个附加卷大小：
 	<pre>
 <code>sudo parted /dev/nvme1n1 mklabel gpt
 sudo parted /dev/nvme1n1 mkpart primary ext4 0% 100%
-sudo mkfs -t ext4 /dev/nvme1n1p1</code></pre>
+sudo mkfs -t ext4 /dev/nvme1n1p1{% endhighlight %}
 	确保将 &quot;/dev/nvme1n1&quot; 替换为你实际的附加卷设备名称。</li>
 	<li>使用以下命令来挂载新的分区：
 	<pre>
 <code>sudo mkdir /mnt/new_disk
-sudo mount /dev/nvme1n1p1 /mnt/new_disk</code></pre>
+sudo mount /dev/nvme1n1p1 /mnt/new_disk{% endhighlight %}
 	</li>
 	<li>使用以下命令将新分区挂载到 <code>/etc/fstab</code> 文件中，以便在系统重新启动后自动挂载：
 	<pre>
 <code>sudo cp /etc/fstab /etc/fstab.bak
-echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc/fstab</code></pre>
+echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc/fstab{% endhighlight %}
 	</li>
 	<li>现在，你可以通过使用以下命令验证新分区是否已成功挂载：
 	<pre>
-<code>df -h</code></pre>
+<code>df -h{% endhighlight %}
 	确保 <code>/mnt/new_disk</code> 显示已挂载的新分区。</li>
 </ol>
 
@@ -54,7 +54,7 @@ echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc
 	<p>在命令行中，执行以下命令来查看现有分区和文件系统的信息：</p>
 
 	<pre>
-<code>df -h</code></pre>
+<code>df -h{% endhighlight %}
 
 	<p>这将显示当前的磁盘使用情况。</p>
 	</li>
@@ -62,7 +62,7 @@ echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc
 	<p>在命令行中，执行以下命令来查看附加卷的设备名称：</p>
 
 	<pre>
-<code>sudo fdisk -l</code></pre>
+<code>sudo fdisk -l{% endhighlight %}
 
 	<p>在输出中，找到你要扩展的附加卷设备名称（如 <code>/dev/xvdf</code>）。</p>
 	</li>
@@ -70,7 +70,7 @@ echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc
 	<p>在命令行中，执行以下命令来扩展文件系统：</p>
 
 	<pre>
-<code>sudo resize2fs /dev/xvdf</code></pre>
+<code>sudo resize2fs /dev/xvdf{% endhighlight %}
 
 	<p>确保将 <code>/dev/xvdf</code> 替换为你实际的附加卷设备名称。</p>
 	</li>
@@ -81,7 +81,7 @@ echo &#39;/dev/nvme1n1p1 /mnt/new_disk ext4 defaults 0 0&#39; | sudo tee -a /etc
 <ol start="5">
 	<li>再次执行以下命令来查看磁盘使用情况：
 	<pre>
-<code>df -h</code></pre>
+<code>df -h{% endhighlight %}
 	验证扩展是否成功，并且你现在拥有了更多的可用磁盘空间。</li>
 </ol>
 

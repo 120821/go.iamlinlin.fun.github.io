@@ -77,7 +77,7 @@ categories:
 
 &nbsp; return result_hash
 
-end</code></pre>
+end{% endhighlight %}
 
 <p><img src="/uploads/ckeditor/pictures/482/image-20220928113437-1.png" style="height:988px; width:1313px" /></p>
 

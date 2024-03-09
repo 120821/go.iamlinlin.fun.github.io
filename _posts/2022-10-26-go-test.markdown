@@ -10,7 +10,7 @@ categories:
 
 <p>增加测试文件：</p>
 
-<pre><code>example_test.go</code></pre>
+{% highlight %}example_test.go{% endhighlight %}
 
 <pre>
 <code>package stringutil_test
@@ -24,15 +24,15 @@ import (
 func ExampleReverse() {
     fmt.Println(stringutil.Reverse(&quot;hello&quot;))
     // Output: olleh
-}</code></pre>
+}{% endhighlight %}
 
-<pre><code>使用go test 命令:</code></pre>
+{% highlight %}使用go test 命令:{% endhighlight %}
 
-<pre><code>go test example_test.go</code></pre>
+{% highlight %}go test example_test.go{% endhighlight %}
 
-<pre>安装：<code>go get golang.org/x/example/stringutil</code></pre>
+<pre>安装：<code>go get golang.org/x/example/stringutil{% endhighlight %}
 
-<pre>测试：<code>go test example_test.go</code></pre>
+<pre>测试：<code>go test example_test.go{% endhighlight %}
 
 <p><img height="256" src="/uploads/ckeditor/pictures/657/image-20221026152720-1.png" width="1109" /></p>
 

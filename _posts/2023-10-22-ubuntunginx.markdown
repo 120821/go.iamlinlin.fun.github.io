@@ -9,7 +9,7 @@ categories:
 <p>1.nginx停止，然后卸载：</p>
 
 <pre>
-<code>sudo apt-get purge nginx nginx-common</code></pre>
+<code>sudo apt-get purge nginx nginx-common{% endhighlight %}
 
 <p>2.重新安装：</p>
 
@@ -18,5 +18,5 @@ categories:
 <p>3.修改配置，然后重启即可</p>
 
 <pre>
-<code>nginx</code></pre>
+<code>nginx{% endhighlight %}
 

@@ -24,7 +24,7 @@ rake aborted!</p>
 <p>解决：<a href="https://qiita.com/vaza__ta/items/1e7a780499b5effbfd65">https://qiita.com/vaza__ta/items/1e7a780499b5effbfd65</a></p>
 
 <pre>
-<code>bundle update --bundler </code></pre>
+<code>bundle update --bundler {% endhighlight %}
 
 <p>更新bundle的版本</p>
 
@@ -39,7 +39,7 @@ rake aborted!</p>
 <pre class="line-numbers language-ruby">
 <code class="language-ruby">gem <span class="token string">&#39;net-smtp&#39;</span>
 gem <span class="token string">&#39;net-imap&#39;</span>
-gem <span class="token string">&#39;net-pop&#39;</span></code></pre>
+gem <span class="token string">&#39;net-pop&#39;</span>{% endhighlight %}
 
 <p><code class="language-ruby"><span class="token string">然后bundle即可</span></code></p>
 
@@ -64,48 +64,48 @@ sudo apt install libsecp256k1-dev</pre>
 <p>安装14的postgres：<a href="https://citizix.com/how-to-install-and-configure-postgres-14-ubuntu-22-04/">https://citizix.com/how-to-install-and-configure-postgres-14-ubuntu-22-04/</a></p>
 
 <pre class="wp-block-code">
-<code>sudo apt update</code></pre>
+<code>sudo apt update{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>udo apt -y upgrade</code></pre>
+<code>udo apt -y upgrade{% endhighlight %}
 
 <p><code>或者：</code></p>
 
 <pre class="wp-block-code">
-<code>sudo apt update &amp;&amp; sudo apt -y full-upgrade</code></pre>
+<code>sudo apt update &amp;&amp; sudo apt -y full-upgrade{% endhighlight %}
 
 <p><code>重启：</code></p>
 
 <pre class="wp-block-code">
-<code>[ -f /var/run/reboot-required ] &amp;&amp; sudo reboot -f</code></pre>
+<code>[ -f /var/run/reboot-required ] &amp;&amp; sudo reboot -f{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo apt install vim curl wget gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates</code></pre>
+<code>sudo apt install vim curl wget gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>apt policy postgresql</code></pre>
+<code>apt policy postgresql{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg</code></pre>
+<code>curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;</code></pre>
+<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo apt  update</code></pre>
+<code>sudo apt  update{% endhighlight %}
 
 <p><code>安装：</code></p>
 
 <pre class="wp-block-code">
-<code>sudo apt install postgresql-14</code></pre>
+<code>sudo apt install postgresql-14{% endhighlight %}
 
 <pre class="wp-block-code">
-<code><mark class="has-inline-color has-luminous-vivid-amber-color" style="background-color:initial">查看状态：systemctl status postgresql@14-main.service</mark></code></pre>
+<code><mark class="has-inline-color has-luminous-vivid-amber-color" style="background-color:initial">查看状态：systemctl status postgresql@14-main.service</mark>{% endhighlight %}
 
 <p><img height="624" src="/uploads/ckeditor/pictures/533/image-20221009111730-2.png" width="1920" /></p>
 
 <pre class="wp-block-code">
-<code>sudo -u postgres psql -c &quot;SELECT version();&quot;</code></pre>
+<code>sudo -u postgres psql -c &quot;SELECT version();&quot;{% endhighlight %}
 
 <p><code>出现了报错：</code></p>
 
@@ -147,7 +147,7 @@ psql: error: connection to server on socket &quot;/var/run/postgresql/.s.PGSQL.5
 
 <pre class="prism-code language-text codeBlock_bY9V thin-scrollbar" tabindex="0">
 <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">./ckb --version</span>
-</span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">./ckb-cli --version</span></span></code></pre>
+</span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">./ckb-cli --version</span></span>{% endhighlight %}
 
 <p><img height="105" src="/uploads/ckeditor/pictures/539/image-20221009142703-1.png" width="659" /></p>
 

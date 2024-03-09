@@ -15,7 +15,7 @@ categories:
       &lt;view class=&quot;blog-date&quot;&gt;{{item.date}}&lt;/view&gt;
     &lt;/view&gt;
   &lt;/block&gt;
-&lt;/view&gt;</code></pre>
+&lt;/view&gt;{% endhighlight %}
 
 <p>2.博客列表的js代码可以这样写：</p>
 
@@ -37,7 +37,7 @@ Page({
       url: <span style="color:#abe338">`/pages/detail/detail?id=</span><span style="color:#abe338">${blogId}</span><span style="color:#abe338">`</span>,
     });
   },
-});</code></pre>
+});{% endhighlight %}
 
 <p>3.博客详情的视图代码可以这样：</p>
 
@@ -46,7 +46,7 @@ Page({
 &lt;view class=&quot;container&quot;&gt;
   &lt;view class=&quot;blog-title&quot;&gt;{{blog.title}}&lt;/view&gt;
   &lt;view class=&quot;blog-content&quot;&gt;{{blog.content}}&lt;/view&gt;
-&lt;/view&gt;</code></pre>
+&lt;/view&gt;{% endhighlight %}
 
 <p>4.博客的详情的js代码可以这样：</p>
 
@@ -66,5 +66,5 @@ Page({
       blog: blogDetail,
     });
   },
-});</code></pre>
+});{% endhighlight %}
 

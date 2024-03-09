@@ -7,7 +7,7 @@ categories:
 
                     <blockquote> 
  <p><code><strong>Math.floor()</strong></code> 返回小于或等于一个给定数字的最大整数。语法</p> 
- <pre><code>Math.floor(<em>x</em>) </code></pre> 
+ {% highlight %}Math.floor(<em>x</em>) {% endhighlight %} 
  <p><code>参数x</code>    一个数字。</p> 
  <p>返回值 一个表示小于或等于指定数字的最大整数的数字。</p> 
  <p>由于 <code>floor</code> 是 <code>Math</code> 的一个静态方法，你总是应该像这样使用它 <code>Math.floor()</code>，而不是作为你创建的一个Math对象的一种方法（Math不是一个构造函数）。</p> 
@@ -24,7 +24,7 @@ Math.floor(-45.05);
 Math.floor(-45.95);
 // -46
 
-</code></pre> 
+{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>Math是javascript的对象，Math 对象方法有：</p> 

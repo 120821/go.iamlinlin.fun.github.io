@@ -12,7 +12,7 @@ categories:
 <code>SELECT
   datname AS database_name,
   pg_size_pretty(pg_database_size(datname)) AS size
-FROM pg_database;</code></pre>
+FROM pg_database;{% endhighlight %}
 
 <p>查询指定数据库中各个表占用空间大小：</p>
 
@@ -22,7 +22,7 @@ FROM pg_database;</code></pre>
   pg_size_pretty(pg_total_relation_size(tablename)) AS size
 FROM pg_tables
 WHERE schemaname=&#39;public&#39;
-ORDER BY size DESC;</code></pre>
+ORDER BY size DESC;{% endhighlight %}
 
 <p>查询所有数据库中各个表占用空间大小：</p>
 
@@ -32,7 +32,7 @@ ORDER BY size DESC;</code></pre>
   tablename AS table_name,
   pg_size_pretty(pg_total_relation_size(schemaname || &#39;.&#39; || tablename)) AS size
 FROM pg_tables
-ORDER BY size DESC;</code></pre>
+ORDER BY size DESC;{% endhighlight %}
 
 <p>注意，上述语句中的pg_total_relation_size函数为计算表占用的空间大小，由于不同的操作系统和文件系统，实际空间大小可能与查询结果有所不同。</p>
 

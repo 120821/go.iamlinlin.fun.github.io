@@ -7,7 +7,7 @@ categories:
 <p>创建sh脚本， xx.sh</p>
 
 <pre>
-<code>chmod +x xx.sh</code></pre>
+<code>chmod +x xx.sh{% endhighlight %}
 
 <pre>
 <code><span style="color:#f5ab35">#!/bin/bash
@@ -45,10 +45,10 @@ algorithm_names=(<span style="color:#abe338">&quot;算法1&quot;</span> <span st
     <span style="color:#ffa07a">$psql_cmd</span> <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$insert_query</span><span style="color:#abe338">&quot;</span>
 <span style="color:#dcc6e0">done</span>
 
-<span style="color:#f5ab35">echo</span> <span style="color:#abe338">&quot;数据插入完成&quot;</span></code></pre>
+<span style="color:#f5ab35">echo</span> <span style="color:#abe338">&quot;数据插入完成&quot;</span>{% endhighlight %}
 
 <p>执行</p>
 
 <pre>
-<code>./xx.sh</code></pre>
+<code>./xx.sh{% endhighlight %}
 

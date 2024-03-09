@@ -12,7 +12,7 @@ a = [<span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <sp
 a.delete(<span class="hljs-number">3</span>)
 <span class="hljs-comment">#=&gt; 3</span>
 a
-<span class="hljs-comment">#=&gt; [2, 4, 6, 8]</span></code></pre>
+<span class="hljs-comment">#=&gt; [2, 4, 6, 8]</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

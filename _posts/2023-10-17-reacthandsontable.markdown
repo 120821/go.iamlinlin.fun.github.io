@@ -29,7 +29,7 @@ categories:
   return (
     &lt;div style={tableStyle} id={this.props.id}&gt;&lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>handsontable的组件可以这样写（普通的，没有使用双向绑定）：<br />
 &nbsp;</p>
@@ -100,5 +100,5 @@ function App() {
   );
 }
 
-export default App;</code></pre>
+export default App;{% endhighlight %}
 

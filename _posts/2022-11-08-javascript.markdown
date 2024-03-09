@@ -28,13 +28,13 @@ function myFunction()
 {
 &nbsp;&nbsp;&nbsp; var carName = &quot;Volvo&quot;;
 }
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p><code>2.全局作用域：</code>变量在函数外定义，即为全局变量。</p>
 
 <p>全局变量有 <strong>全局作用域</strong>: 网页中所有脚本和函数均可使用。</p>
 
-<pre><code>&lt;p&gt;全局变量在任何脚本和函数内均可访问。&lt;/p&gt;<br />
+{% highlight %}&lt;p&gt;全局变量在任何脚本和函数内均可访问。&lt;/p&gt;<br />
 &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br />
 &lt;script&gt;<br />
 var carName = &quot;Volvo&quot;;<br />
@@ -44,7 +44,7 @@ function myFunction()<br />
 &nbsp;&nbsp;&nbsp; document.getElementById(&quot;demo&quot;).innerHTML =<br />
 &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&quot;我可以显示 &quot; + carName;<br />
 }<br />
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>如果变量在函数内没有声明（没有使用 var 关键字），该变量为全局变量。</p>
 
@@ -63,7 +63,7 @@ function myFunction()<br />
 {<br />
 &nbsp;&nbsp;&nbsp; carName = &quot;Volvo&quot;;<br />
 }<br />
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 </div>
 
 <p>&nbsp;</p>

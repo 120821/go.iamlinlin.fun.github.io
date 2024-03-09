@@ -120,7 +120,7 @@ Interfaces not found</p>
 <div class="codeBlockContent_B9tL">
 <pre class="prism-code language-text codeBlock__0OG thin-scrollbar" tabindex="0">
 <code class="codeBlockLines_gEuF"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">sudo apt-get install network-manager-openvpn-gnome openvpn</span>
-</span></code></pre>
+</span>{% endhighlight %}
 </div>
 </div>
 
@@ -130,7 +130,7 @@ Interfaces not found</p>
 <div class="codeBlockContent_B9tL">
 <pre class="prism-code language-text codeBlock__0OG thin-scrollbar" tabindex="0">
 <code class="codeBlockLines_gEuF"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">sudo service network-manager restart</span>
-</span></code></pre>
+</span>{% endhighlight %}
 </div>
 </div>
 

@@ -37,5 +37,5 @@ export default class PatientTable extends Component {
    );
  }
 }
-</code></pre>
+{% endhighlight %}
 

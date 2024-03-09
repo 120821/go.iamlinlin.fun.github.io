@@ -7,7 +7,7 @@ categories:
 <p>对于接口返回的数据，原来是仅对emission_all处理：</p>
 
 <pre>
-<code>const emissionAll = result.emission_all;</code></pre>
+<code>const emissionAll = result.emission_all;{% endhighlight %}
 
 <p>但是不同的算法返回的内容是不同的，因此进行判断：</p>
 
@@ -15,7 +15,7 @@ categories:
 
 <pre>
 <code>const emissionAll = result.emission_all ? result.emission_all : (result.result ? result.result : null);
-console.log(&quot;== emissionAll: &quot;, emissionAll);</code></pre>
+console.log(&quot;== emissionAll: &quot;, emissionAll);{% endhighlight %}
 
 <p>&nbsp;</p>
 

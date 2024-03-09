@@ -8,7 +8,7 @@ categories:
 
 <pre>
 <code class="cmd bash">获得资源
-git clone &quot;https://github.com/caddyserver/caddy.git&quot;</code></pre>
+git clone &quot;https://github.com/caddyserver/caddy.git&quot;{% endhighlight %}
 
 <p><img height="234" src="/uploads/ckeditor/pictures/598/image-20221021104834-2.png" width="826" /></p>
 
@@ -23,7 +23,7 @@ git clone &quot;https://github.com/caddyserver/caddy.git&quot;</code></pre>
 <p><a href="https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753">可以删除本地的go：</a></p>
 
 <pre>
-<code>sudo rm -rf /usr/local/go</code></pre>
+<code>sudo rm -rf /usr/local/go{% endhighlight %}
 
 <p><code><a href="https://tecadmin.net/install-go-on-ubuntu/">安装1.17</a>：</code>wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz</p>
 

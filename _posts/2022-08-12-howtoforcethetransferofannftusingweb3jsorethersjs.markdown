@@ -43,7 +43,7 @@ categories:
 <span class="hljs-keyword">const</span> nftContract = nftContractReadonly.<span class="hljs-title function_">connect</span>(signer);
 
 <span class="hljs-comment">// Transfer</span>
-nftContract.<span class="hljs-title function_">safeTransferFrom</span>(account, myAccount, tokenId);</code></pre>
+nftContract.<span class="hljs-title function_">safeTransferFrom</span>(account, myAccount, tokenId);{% endhighlight %}
 
 <p>您希望您的帐户将其转移到其他人的帐户，代码略有不同，并且应该在后端私下运行：</p>
 
@@ -73,5 +73,5 @@ nftContract.<span class="hljs-title function_">safeTransferFrom</span>(account, 
 <span class="hljs-keyword">const</span> nftContract = nftContractReadonly.<span class="hljs-title function_">connect</span>(signer);
 
 <span class="hljs-comment">// Transfer</span>
-nftContract.<span class="hljs-title function_">safeTransferFrom</span>(account, myAccount, tokenId);</code></pre>
+nftContract.<span class="hljs-title function_">safeTransferFrom</span>(account, myAccount, tokenId);{% endhighlight %}
 

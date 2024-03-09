@@ -22,14 +22,14 @@ categories:
   <span style="color:#f5ab35">Object</span>.keys(updatedYearlyData).forEach(<span style="color:#f5ab35">year</span> =&gt; {
     marks[year] = <span style="color:#abe338">`</span><span style="color:#abe338">${year}</span><span style="color:#abe338">年`</span>;
   });
-}</code></pre>
+}{% endhighlight %}
 
 <p>同时修改slider:</p>
 
 <p>(使用 <code>marks</code> 属性标注分段式滑块，使用 <code>value</code> / <code>defaultValue</code> 指定滑块位置。当 <code>included=false</code> 时，表明不同标记间为并列关系。当 <code>step=null</code> 时，Slider 的可选值仅有 <code>marks</code> 标出来的部分。)</p>
 
 <pre>
-<code>&lt;Slider  min={firstYear} max={lastYear} marks={marks} onChange={handleSliderChange} defaultValue={firstYear} tooltipVisible tipFormatter={(value) =&gt; `${value}年`} /&gt;</code></pre>
+<code>&lt;Slider  min={firstYear} max={lastYear} marks={marks} onChange={handleSliderChange} defaultValue={firstYear} tooltipVisible tipFormatter={(value) =&gt; `${value}年`} /&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

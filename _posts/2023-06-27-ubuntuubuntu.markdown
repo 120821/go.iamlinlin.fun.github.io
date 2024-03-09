@@ -9,23 +9,23 @@ categories:
 <p>1、查看内核版本号</p>
 
 <pre>
-<code>uname -a</code></pre>
+<code>uname -a{% endhighlight %}
 
 <pre>
-<code>Linux linlin-i5 5.19.0-45-generic #46~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 7 15:06:04 UTC 20 x86_64 x86_64 x86_64 GNU/Linux</code></pre>
+<code>Linux linlin-i5 5.19.0-45-generic #46~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 7 15:06:04 UTC 20 x86_64 x86_64 x86_64 GNU/Linux{% endhighlight %}
 
 <p>2、查看ubuntu版本号</p>
 
 <pre>
-<code>cat /etc/issue</code></pre>
+<code>cat /etc/issue{% endhighlight %}
 
 <pre>
-<code>Ubuntu 22.04.1 LTS \n \l</code></pre>
+<code>Ubuntu 22.04.1 LTS \n \l{% endhighlight %}
 
 <p>3、查看ubuntu版本号</p>
 
 <pre>
-<code>sudo lsb_release -a</code></pre>
+<code>sudo lsb_release -a{% endhighlight %}
 
 <pre>
 <code>[sudo] password for linlin:
@@ -38,12 +38,12 @@ Description:&nbsp;&nbsp; &nbsp;Ubuntu 22.04.1 LTS
 
 Release:&nbsp;&nbsp; &nbsp;22.04
 
-Codename:&nbsp;&nbsp; &nbsp;jammy</code></pre>
+Codename:&nbsp;&nbsp; &nbsp;jammy{% endhighlight %}
 
 <p>4. 查看版本号</p>
 
 <pre>
-<code>cat /etc/*release*</code></pre>
+<code>cat /etc/*release*{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -78,7 +78,7 @@ BUG_REPORT_URL=&quot;https://bugs.launchpad.net/ubuntu/&quot;
 
 PRIVACY_POLICY_URL=&quot;https://www.ubuntu.com/legal/terms-and-policies/privacy-policy&quot;
 
-UBUNTU_CODENAME=jammy</code></pre>
+UBUNTU_CODENAME=jammy{% endhighlight %}
 
 <p>&nbsp;</p>
 

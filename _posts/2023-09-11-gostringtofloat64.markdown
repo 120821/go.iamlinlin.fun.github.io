@@ -25,7 +25,7 @@ categories:
 
 &nbsp;&nbsp; &nbsp;{&quot;2028&quot;, &quot;52&quot;, &quot;32&quot;, &quot;22&quot;},
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>想要得到除去第一行和第一列的数据，后面的数据每一列作为一个[]float64，可以在循环里实现：</p>
 
@@ -76,7 +76,7 @@ categories:
 	<span style="color:#dcc6e0">for</span> j := <span style="color:#f5ab35">0</span>; j &lt; cols<span style="color:#f5ab35">-1</span>; j++ {
 		fmt.Println(columns[j])
 	}
-}</code></pre>
+}{% endhighlight %}
 
 <p>输出：</p>
 
@@ -84,5 +84,5 @@ categories:
 <code>[22<span style="color:#f5ab35"> 11 </span>22<span style="color:#f5ab35"> 44 </span>33<span style="color:#f5ab35"> 35 </span>52]
 [23<span style="color:#f5ab35"> 43 </span>42<span style="color:#f5ab35"> 53 </span>53<span style="color:#f5ab35"> 43 </span>32]
 [22<span style="color:#f5ab35"> 43 </span>34<span style="color:#f5ab35"> 34 </span>32<span style="color:#f5ab35"> 25 </span>22]
-</code></pre>
+{% endhighlight %}
 

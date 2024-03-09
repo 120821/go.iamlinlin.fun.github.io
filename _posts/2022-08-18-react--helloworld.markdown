@@ -30,7 +30,7 @@ categories:
 <div class="example">
 <div class="example_code">
 <pre class="hl-main">
-<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react@16/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react-dom@16/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/babel-standalone@6.15.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></code></pre>
+<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react@16/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react-dom@16/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/babel-standalone@6.15.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
 
 <div class="hl-main">也可以直接使用 Staticfile CDN 的 React CDN 库，地址如下</div>
 
@@ -38,7 +38,7 @@ categories:
 <div class="example">
 <div class="example_code">
 <pre class="hl-main">
-<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react/16.4.0/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span></code></pre>
+<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react/16.4.0/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
 </div>
 </div>
 </div>
@@ -60,7 +60,7 @@ ReactDOM.render(
 &nbsp;&nbsp; &nbsp;&lt;h1&gt;Hello, world!&lt;/h1&gt;,
 &nbsp;&nbsp; &nbsp;document.getElementById(&#39;example&#39;)
 );
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <div class="example">
 <div class="example_code">
@@ -102,12 +102,12 @@ react-<span class="hljs-reserved">native</span> init hello
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>出现了错误：</code></div>
 
 <pre>
-<code>TypeError: cli.init is not a function</code></pre>
+<code>TypeError: cli.init is not a function{% endhighlight %}
 
 <p>解决：<a href="https://stackoverflow.com/questions/72768245/typeerror-cli-init-is-not-a-function-for-react-native">https://stackoverflow.com/questions/72768245/typeerror-cli-init-is-not-a-function-for-react-native</a></p>
 
 <pre>
-<code>npx react-native init ProjectName --version 0.68.2</code></pre>
+<code>npx react-native init ProjectName --version 0.68.2{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>可以看到出现了两个项目，一个是有报错的的，一个是第二次生成的，内容不同。</code></div>
 
@@ -168,7 +168,7 @@ function App() {
 &nbsp;&nbsp;&nbsp; &lt;/div&gt;
 &nbsp; ); &nbsp;
 }
-export default App;</code></pre>
+export default App;{% endhighlight %}
 
 <p><img height="338" src="/uploads/ckeditor/pictures/275/image-20220818122929-1.png" width="964" /></p>
 

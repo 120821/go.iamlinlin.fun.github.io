@@ -11,7 +11,7 @@ categories:
 <p>按钮：</p>
 
 <pre>
-<code>&lt;%= link_to &#39;获取验证码&#39;, &#39;javascript:void(0)&#39;, id:&#39;send_validation_code&#39;, style: &quot;#{style}; margin-left: -121px; position: absolute;display: inline-block; text-align: center; width: 120px; height: 55px; border-radius: 12px; padding: 15px 16px; box-sizing: border-box; font-size: 16px; outline: none; display: inline-block; &quot; %&gt;</code></pre>
+<code>&lt;%= link_to &#39;获取验证码&#39;, &#39;javascript:void(0)&#39;, id:&#39;send_validation_code&#39;, style: &quot;#{style}; margin-left: -121px; position: absolute;display: inline-block; text-align: center; width: 120px; height: 55px; border-radius: 12px; padding: 15px 16px; box-sizing: border-box; font-size: 16px; outline: none; display: inline-block; &quot; %&gt;{% endhighlight %}
 
 <p>js jquery:</p>
 
@@ -75,7 +75,7 @@ categories:
 
 &nbsp; });
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>参考：</p>
 
@@ -152,5 +152,5 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
 
-&nbsp;&nbsp;&nbsp; });</code></pre>
+&nbsp;&nbsp;&nbsp; });{% endhighlight %}
 

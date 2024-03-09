@@ -13,7 +13,7 @@ categories:
 	<span style="color:#000">router</span> <span style="color:#ce5c00;font-weight:700">:=</span> <span style="color:#000">gin</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Default</span><span style="color:#000;font-weight:700">()</span>
 	<span style="color:#000">http</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">ListenAndServe</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">,</span> <span style="color:#000">router</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>或者这样：</p>
 
@@ -30,7 +30,7 @@ categories:
 	<span style="color:#000;font-weight:700">}</span>
 	<span style="color:#000">s</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">ListenAndServe</span><span style="color:#000;font-weight:700">()</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="190" src="/uploads/ckeditor/pictures/629/image-20221025100336-1.png" width="1216" /></p>
 

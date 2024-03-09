@@ -22,5 +22,5 @@ categories:
         <span style="color:#ffd700">default_type</span> text/html;
         <span style="color:#ffd700">return</span> <span style="color:#f5ab35">200</span> <span style="color:#abe338">&quot;hi&quot;</span>;
     }
-}</code></pre>
+}{% endhighlight %}
 

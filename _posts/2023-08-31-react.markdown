@@ -22,5 +22,5 @@ categories:
     <span style="color:#abe338">&quot;m_ser&quot;</span>: <span style="color:#abe338">&quot;m_ser&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; paramsObj.m_ser.length &gt; <span style="color:#f5ab35">0</span> ? paramsObj.m_ser.map(<span style="color:#f5ab35">value</span> =&gt; (value).toFixed(<span style="color:#f5ab35">1</span>)) : [],
     <span style="color:#abe338">&quot;years&quot;</span>: <span style="color:#abe338">&quot;year_start&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj &amp;&amp; <span style="color:#abe338">&quot;year_end&quot;</span> <span style="color:#dcc6e0">in</span> paramsObj ? <span style="color:#f5ab35">Array</span>.from({ length: paramsObj.year_end - paramsObj.year_start + <span style="color:#f5ab35">1</span> }, (<span style="color:#f5ab35">_, index</span>) =&gt; paramsObj.year_start + index) : []
   };
-}</code></pre>
+}{% endhighlight %}
 

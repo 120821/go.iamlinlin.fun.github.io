@@ -11,7 +11,7 @@ categories:
 <pre>
 <code><span style="color:#dcc6e0">a</span>:hover {
   <span style="color:#ffd700">text-decoration</span>: none;
-}</code></pre>
+}{% endhighlight %}
 
 <p>并不能生效，需要另外设置class:</p>
 
@@ -21,15 +21,15 @@ categories:
 <code><span style="color:#ffa07a">.no-hover-underline</span>,
 <span style="color:#ffa07a">.no-hover-underline</span>:hover {
   <span style="color:#ffd700">text-decoration</span>: none;
-}</code></pre>
+}{% endhighlight %}
 
 <p>然后使用：</p>
 
 <pre>
-<code>&lt;router-link to=&quot;/&quot; class=&quot;no-hover-underline&quot;&gt;Home&lt;/router-link&gt;</code></pre>
+<code>&lt;router-link to=&quot;/&quot; class=&quot;no-hover-underline&quot;&gt;Home&lt;/router-link&gt;{% endhighlight %}
 
 <p>或者：</p>
 
 <pre>
-<code>&lt;router-link :to=&quot;route&quot; :class=&quot;{ &#39;no-hover-underline&#39;: true }&quot;&gt;Link&lt;/router-link&gt;</code></pre>
+<code>&lt;router-link :to=&quot;route&quot; :class=&quot;{ &#39;no-hover-underline&#39;: true }&quot;&gt;Link&lt;/router-link&gt;{% endhighlight %}
 

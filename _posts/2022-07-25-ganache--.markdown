@@ -14,7 +14,7 @@ categories:
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
 <pre>
-<code>$ npm install ganache --global</code></pre>
+<code>$ npm install ganache --global{% endhighlight %}
 </div>
 
 <pre>
@@ -164,7 +164,7 @@ const web3 = new Web3(ganache.provider());</pre>
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto">
 <pre class="notranslate">
 <code>const web3 = new Web3(ganache.provider(), null, { transactionConfirmationBlocks: 1 });
-</code></pre>
+{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">作为 </font><a href="https://www.npmjs.com/package/ethers" rel="nofollow"><font style="vertical-align:inherit">ethers.js </font></a><font style="vertical-align:inherit">提供者： </font></p>

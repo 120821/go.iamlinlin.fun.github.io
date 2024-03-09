@@ -11,5 +11,5 @@ categories:
 <pre>
 <code>sudo apt-<span style="color:#dcc6e0">get</span> <span style="color:#dcc6e0">auto</span><span style="color:#d4d0ab">remove open-vm-tools</span>
 sudo apt-<span style="color:#dcc6e0">get</span> install <span style="color:#dcc6e0">open</span>-vm-tools
-sudo apt-<span style="color:#dcc6e0">get</span> install <span style="color:#dcc6e0">open</span>-vm-tools-desktop</code></pre>
+sudo apt-<span style="color:#dcc6e0">get</span> install <span style="color:#dcc6e0">open</span>-vm-tools-desktop{% endhighlight %}
 

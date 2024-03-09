@@ -15,16 +15,16 @@ categories:
 <p><code>1.安装</code></p>
 
 <pre>
-<code>使用dpkg命令进行安装。sudo &nbsp;dpkg &nbsp;-i &nbsp; deb文件名</code></pre>
+<code>使用dpkg命令进行安装。sudo &nbsp;dpkg &nbsp;-i &nbsp; deb文件名{% endhighlight %}
 
 <pre>
-<code>linlin@linlin-i5:~$ sudo&nbsp; dpkg&nbsp; -i /home/linlin/Downloads/linuxqq_3.1.1-11223_amd64.deb</code></pre>
+<code>linlin@linlin-i5:~$ sudo&nbsp; dpkg&nbsp; -i /home/linlin/Downloads/linuxqq_3.1.1-11223_amd64.deb{% endhighlight %}
 
 <p>2.卸载</p>
 
 <pre>
-<code>dpkg -l | grep qq</code></pre>
+<code>dpkg -l | grep qq{% endhighlight %}
 
 <pre>
-<code>sudo apt-get remove --purge linuxq</code></pre>
+<code>sudo apt-get remove --purge linuxq{% endhighlight %}
 

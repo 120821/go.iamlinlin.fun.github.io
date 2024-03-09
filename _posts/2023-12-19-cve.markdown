@@ -15,7 +15,7 @@ categories:
 There are <span style="color:#f5ab35">1</span> CVE Records that match your <span style="color:#dcc6e0">search</span>.
 <span style="color:#f5ab35">Name</span> 	Description
 CVE<span style="color:#f5ab35">-2023</span><span style="color:#f5ab35">-20867</span> 	A fully compromised ESXi host can force VMware Tools <span style="color:#dcc6e0">to</span> fail <span style="color:#dcc6e0">to</span> authenticate host-<span style="color:#dcc6e0">to</span>-guest operations, impacting the confidentiality <span style="color:#dcc6e0">and</span> integrity <span style="color:#dcc6e0">of</span> the guest virtual machine.
-</code></pre>
+{% endhighlight %}
 
 <p>该 CVE 记录的描述，CVE-2023-20867 是指完全被入侵的 ESXi 主机可以强制 VMware Tools 在主机与客户机之间的操作中无法进行身份验证，从而影响了客户虚拟机的机密性和完整性。</p>
 

@@ -10,7 +10,7 @@ categories:
 
 <pre class="default s-code-block">
 <code class="hljs language-undefined"><a href="https://stackoverflow.com/questions/60631953/warning-the-running-version-of-bundler-is-older-than-the-version-that-created-t">安装指定版本的bundle</a>
-gem install bundler -v 1.9</code></pre>
+gem install bundler -v 1.9{% endhighlight %}
 
 <p>gem install bundler:1.17.3</p>
 
@@ -33,7 +33,7 @@ gem install bundler -v 1.9</code></pre>
 <pre>
 <code>BUNDLED WITH
 
-&nbsp;&nbsp; 1.9.0</code></pre>
+&nbsp;&nbsp; 1.9.0{% endhighlight %}
 
 <p><img height="608" src="/uploads/ckeditor/pictures/291/image-20220819104721-1.png" width="1062" /></p>
 

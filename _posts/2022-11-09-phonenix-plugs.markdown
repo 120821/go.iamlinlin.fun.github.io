@@ -8,7 +8,7 @@ categories:
 
 <p>使用plugs：</p>
 
-<pre><code>def introspect(conn, _opts) do<br />
+{% highlight %}def introspect(conn, _opts) do<br />
 &nbsp; IO.puts &quot;&quot;&quot;<br />
 &nbsp; Verb: #{inspect(conn.method)}<br />
 &nbsp; Host: #{inspect(conn.host)}<br />
@@ -16,7 +16,7 @@ categories:
 &nbsp; &quot;&quot;&quot;
 
 &nbsp; conn<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>示例：</p>
 
@@ -24,7 +24,7 @@ end</code></pre>
 
 <p><code>内容：</code></p>
 
-<pre><code>defmodule HelloWeb.Endpoint do<br />
+{% highlight %}defmodule HelloWeb.Endpoint do<br />
 &nbsp; ...
 
 &nbsp; plug :introspect<br />
@@ -39,13 +39,13 @@ end</code></pre>
 
 &nbsp;&nbsp;&nbsp; conn<br />
 &nbsp; end<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>打开链接：<a href="http://localhost:4000/">http://localhost:4000/</a></p>
 
-<pre><code>Verb: &quot;GET&quot;<br />
+{% highlight %}Verb: &quot;GET&quot;<br />
 Host: &quot;localhost&quot;<br />
-Headers: [...]</code></pre>
+Headers: [...]{% endhighlight %}
 
 <p>&nbsp;</p>
 

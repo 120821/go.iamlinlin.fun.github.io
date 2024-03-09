@@ -31,7 +31,7 @@ class ChangeIndexTypeForUdts &lt; ActiveRecord::Migration[6.1]
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>运行bundle exec rake db:migrate</p>
 
@@ -41,5 +41,5 @@ end</code></pre>
 
 <p>只可以修改单个的index 为hash，混合列不可以</p>
 
-<pre><code>(access method &quot;hash&quot; does not support multicolumn indexes)</code></pre>
+{% highlight %}(access method &quot;hash&quot; does not support multicolumn indexes){% endhighlight %}
 

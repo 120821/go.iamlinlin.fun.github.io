@@ -57,7 +57,7 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.login = email unless email.blank?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
 &nbsp;&nbsp;&nbsp; end
-end</code></pre>
+end{% endhighlight %}
 
 <p>如果块内的代码太短以至于它适合一行，请考虑使用这种样式</p>
 
@@ -71,7 +71,7 @@ end</code></pre>
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>注意：callback必须放在private方法中：</code></div>
 
@@ -87,7 +87,7 @@ end</code></pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.login = email unless email.blank?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end
 &nbsp;&nbsp;&nbsp; end
-end</code></pre>
+end{% endhighlight %}
 
 <p>The following methods trigger callbacks:</p>
 
@@ -158,7 +158,7 @@ class Article &lt; ApplicationRecord
 &nbsp; def log_destroy_action
 &nbsp;&nbsp;&nbsp; puts &#39;Article destroyed&#39;
 &nbsp; end
-end</code></pre>
+end{% endhighlight %}
 
 <p>验证：</p>
 
@@ -167,7 +167,7 @@ end</code></pre>
 
 user.articles.create!
 
-user.destroy</code></pre>
+user.destroy{% endhighlight %}
 
 <p><a href="https://guides.rubyonrails.org/active_record_callbacks.html#conditional-callbacks">8个条件回调(进官网看吧）</a></p>
 

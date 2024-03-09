@@ -5,10 +5,10 @@ date: "2022-06-09"
 categories: 
 ---
 
-                    <pre><code>select_tag(name, option_tags = nil, options = {}) public</code></pre> 
+                    {% highlight %}select_tag(name, option_tags = nil, options = {}) public{% endhighlight %} 
 <p>创建一个下拉选择框，或者如果：multiple选项设置为true，则创建一个多选选择框。<br> Helpers:：FormOptions可用于创建常见的选择框，例如国家、时区或相关记录。option_tags是一个字符串，包含选择框的选项标记。</p> 
 <blockquote> 
- <pre><code>select_tag  'user_id', options_for_select(@users.collect{ |u| [u.name, u.id] })</code></pre> 
+ {% highlight %}select_tag  'user_id', options_for_select(@users.collect{ |u| [u.name, u.id] }){% endhighlight %} 
  <p>相当于</p> 
  <pre>&lt;select id="user_id" name="user_id"&gt;
   &lt;option value="1"&gt;Brad&lt;/option&gt;
@@ -16,22 +16,22 @@ categories:
   &lt;option value="3"&gt;Jenny&lt;/option&gt;
 &lt;/select&gt;
 </pre> 
- <pre><code>&lt;%= select_tag 'sex', options_for_select(['男', '女']) %&gt;</code></pre> 
+ {% highlight %}&lt;%= select_tag 'sex', options_for_select(['男', '女']) %&gt;{% endhighlight %} 
  <p>相当于</p> 
- <pre><code>&lt;select id="sex" name="sex"&gt;
+ {% highlight %}&lt;select id="sex" name="sex"&gt;
     &lt;option value="male"&gt;男&lt;/option&gt;
     &lt;option value="female"&gt;女&lt;/option&gt;
 &lt;/select&gt;
-</code></pre> 
+{% endhighlight %} 
  <p>也可以这么写</p> 
  <p>&lt;%= select_tag :sex, options_for_select(['男, '女 ']) %&gt;</p> 
- <pre><code>&lt;%= f.select :area, 
+ {% highlight %}&lt;%= f.select :area, 
     options_for_select([['a','a'],['b','b'],['c','c']], params[:area]),
-    {}, { :class =&gt; 'span3 controls controls-row' } %&gt;</code></pre> 
+    {}, { :class =&gt; 'span3 controls controls-row' } %&gt;{% endhighlight %} 
  <p>&lt;%= form.select :sex,options_for_select(['男','女']) %&gt;</p> 
 </blockquote> 
 <blockquote> 
- <pre><code>select_tag "people", options_from_collection_for_select(@people, "id", "name")
+ {% highlight %}select_tag "people", options_from_collection_for_select(@people, "id", "name")
 # &lt;select id="people" name="people"&gt;&lt;option value="1"&gt;David&lt;/option&gt;&lt;/select&gt;
 
 select_tag "people", options_from_collection_for_select(@people, "id", "name", "1")
@@ -71,6 +71,6 @@ select_tag "destination", raw("&lt;option&gt;NYC&lt;/option&gt;&lt;option&gt;Par
 
 select_tag "credit_card", options_for_select([ "VISA", "MasterCard" ], "MasterCard")
 # =&gt; &lt;select id="credit_card" name="credit_card"&gt;&lt;option&gt;VISA&lt;/option&gt;
-#    &lt;option selected="selected"&gt;MasterCard&lt;/option&gt;&lt;/select&gt;</code></pre> 
+#    &lt;option selected="selected"&gt;MasterCard&lt;/option&gt;&lt;/select&gt;{% endhighlight %} 
 </blockquote>
                 

@@ -18,7 +18,7 @@ function newFunction() {
     var hello = &#39;hello&#39;;
 }
 console.log(hello); // error: hello is not defined
-</code></pre>
+{% endhighlight %}
 
 <p>var变量可以重复声明和修改</p>
 
@@ -27,14 +27,14 @@ console.log(hello); // error: hello is not defined
 <pre>
 <code>var greeter = &#39;hey hi&#39;;
 var greeter = &#39;say Hello instead&#39;;
-</code></pre>
+{% endhighlight %}
 
 <p>例如：</p>
 
 <pre>
 <code>var greeter = &#39;hey hi&#39;;
 greeter = &#39;say Hello instead&#39;;
-</code></pre>
+{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -47,7 +47,7 @@ greeter = &#39;say Hello instead&#39;;
 
 <pre>
 <code>console.log(greeter);
-var greeter = &#39;say hello&#39;;</code></pre>
+var greeter = &#39;say hello&#39;;{% endhighlight %}
 
 <p><code>在编译的时候会被理解为：</code></p>
 
@@ -55,7 +55,7 @@ var greeter = &#39;say hello&#39;;</code></pre>
 <code>var greeter;
 console.log(greeter); // greeter is undefined
 greeter = &#39;say hello&#39;;
-</code></pre>
+{% endhighlight %}
 
 <p>例如写一个test.js：</p>
 

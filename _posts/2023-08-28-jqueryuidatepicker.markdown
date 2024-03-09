@@ -11,7 +11,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://code.jquery.com/ui/1.13.2/jquery-ui.js&quot;&gt;&lt;/script&gt;
 
-&nbsp;&nbsp;&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css&quot; integrity=&quot;sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot; /&gt;</code></pre>
+&nbsp;&nbsp;&nbsp; &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css&quot; integrity=&quot;sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==&quot; crossorigin=&quot;anonymous&quot; referrerpolicy=&quot;no-referrer&quot; /&gt;{% endhighlight %}
 
 <p>然后在layout页面增加：</p>
 
@@ -32,10 +32,10 @@ categories:
 
 &nbsp;&nbsp; } );
 
-&nbsp;&lt;/script&gt;</code></pre>
+&nbsp;&lt;/script&gt;{% endhighlight %}
 
 <p>在对应的视图页面就可以使用：</p>
 
 <pre>
-<code>&nbsp;&lt;%= text_field_tag :start_at_day, params[:start_at_day], id: &#39;datepicker&#39;, placeholder: &#39;开始日期时间&#39;, class: &#39;select_date&#39;, style: &#39;margin-top: 20px; margin-right: 20px;&#39; %&gt;</code></pre>
+<code>&nbsp;&lt;%= text_field_tag :start_at_day, params[:start_at_day], id: &#39;datepicker&#39;, placeholder: &#39;开始日期时间&#39;, class: &#39;select_date&#39;, style: &#39;margin-top: 20px; margin-right: 20px;&#39; %&gt;{% endhighlight %}
 

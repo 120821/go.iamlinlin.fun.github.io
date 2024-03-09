@@ -11,7 +11,7 @@ categories:
 <pre class="highlight plaintext">
 <code>$ go get -u gorm.io/gorm
 $ go get -u gorm.io/driver/postgres
-</code></pre>
+{% endhighlight %}
 
 <p>创建文件夹和新文件：</p>
 
@@ -26,7 +26,7 @@ $ go get -u gorm.io/driver/postgres
     <span class="n">Author</span> <span class="kt">string</span> <span class="s">`json:&quot;author&quot;`</span>
     <span class="n">Desc</span>   <span class="kt">string</span> <span class="s">`json:&quot;desc&quot;`</span>
 <span class="p">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>连接数据库：<code>pkg/db/db.go</code></p>
 
@@ -54,5 +54,5 @@ $ go get -u gorm.io/driver/postgres
 
     <span class="k">return</span> <span class="n">db</span>
 <span class="p">}</span>
-</code></pre>
+{% endhighlight %}
 

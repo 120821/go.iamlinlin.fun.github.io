@@ -13,12 +13,12 @@ categories:
 <p><code>然后增加 ~/.bashrc</code><code>：</code></p>
 
 <pre class="shiki" style="background-color:#272822;">
-<code><span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/asdf.sh</span></span></code></pre>
+<code><span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/asdf.sh</span></span>{% endhighlight %}
 
 <p>必须通过将以下内容添加到 .bashrc 来配置完成：</p>
 
 <pre class="shiki" style="background-color:#272822;">
-<code><span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/completions/asdf.bash</span></span></code></pre>
+<code><span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/completions/asdf.bash</span></span>{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>但是根据官网的内容，理论是打开两个文件，结果打开的是一个文件</code></div>
 
@@ -31,12 +31,12 @@ categories:
 <p>安装插件：</p>
 
 <pre class="shiki" style="background-color:#272822;">
-<code><span class="line"><span style="color:#F8F8F2;">asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git</span></span></code></pre>
+<code><span class="line"><span style="color:#F8F8F2;">asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git</span></span>{% endhighlight %}
 
 <p>现在我们有了一个 Node.js 插件，我们可以安装该工具的一个版本。安装最新的可用版本：</p>
 
 <pre class="shiki" style="background-color:#272822;">
-<code><span class="line"><span style="color:#F8F8F2;">asdf install nodejs latest</span></span></code></pre>
+<code><span class="line"><span style="color:#F8F8F2;">asdf install nodejs latest</span></span>{% endhighlight %}
 
 <p><img height="156" src="/uploads/ckeditor/pictures/672/image-20221102153728-3.png" width="905" /></p>
 
@@ -55,7 +55,7 @@ categories:
 <p><a href="https://github.com/asdf-vm/asdf-ruby">安装ruby插件</a>：</p>
 
 <pre class="notranslate">
-<code>asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git</code></pre>
+<code>asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git{% endhighlight %}
 
 <p><code>安装和本地一样版本的ruby :</code></p>
 

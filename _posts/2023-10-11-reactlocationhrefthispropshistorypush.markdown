@@ -11,7 +11,7 @@ categories:
 
 +&nbsp;&nbsp;&nbsp; location.href = newUrl
 
-+&nbsp;&nbsp;&nbsp; //this.props.history.push(newUrl);</code></pre>
++&nbsp;&nbsp;&nbsp; //this.props.history.push(newUrl);{% endhighlight %}
 
 <p>理解</p>
 

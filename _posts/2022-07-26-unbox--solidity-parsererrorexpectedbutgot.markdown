@@ -38,7 +38,7 @@ categories:
 <span class="hljs-string">Truffle</span> <span class="hljs-string">v5.5.19</span> <span class="hljs-string">(core:</span> <span class="hljs-number">5.5</span><span class="hljs-number">.19</span><span class="hljs-string">)</span>
 <span class="hljs-string">Node</span> <span class="hljs-string">v16.15.1</span>
 
-</code></pre>
+{% endhighlight %}
 
 <p>真实原因是：</p>
 
@@ -55,7 +55,7 @@ categories:
 <pre class="hljs nginx">
 <code class="language-Bash"><span class="hljs-comment"># 地址和端口号改为你自己的</span>
 <span class="hljs-attribute">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://<span class="hljs-number">127.0.0.1:7890</span>
-</code></pre>
+{% endhighlight %}
 
 <p>再次运行，成功。</p>
 
@@ -77,7 +77,7 @@ categories:
   <span class="hljs-attr">Compile contracts:</span> <span class="hljs-string">truffle</span> <span class="hljs-string">compile</span>
   <span class="hljs-attr">Migrate contracts:</span> <span class="hljs-string">truffle</span> <span class="hljs-string">migrate</span>
   <span class="hljs-attr">Test contracts:</span>    <span class="hljs-string">truffle</span> <span class="hljs-string">test</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code>无用，不能执行到最后</code></p>
 

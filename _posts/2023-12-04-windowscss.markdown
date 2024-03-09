@@ -170,5 +170,5 @@ categories:
 
 <span style="color:#dcc6e0">a</span>:hover {
   <span style="color:#ffd700">color</span>: white <span style="color:#f5ab35">!important</span>;
-}</code></pre>
+}{% endhighlight %}
 

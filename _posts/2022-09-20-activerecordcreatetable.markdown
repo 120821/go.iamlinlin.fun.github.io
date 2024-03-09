@@ -6,10 +6,10 @@ categories:
 ---
 <p>&nbsp;</p>
 
-<pre><code>cat app.rb<br />
-require &#39;active_record&#39;</code></pre>
+{% highlight %}cat app.rb<br />
+require &#39;active_record&#39;{% endhighlight %}
 
-<pre><code>ActiveRecord::Base.establish_connection(adapter: &#39;postgresql&#39;, database: &#39;datasetter_development&#39;)
+{% highlight %}ActiveRecord::Base.establish_connection(adapter: &#39;postgresql&#39;, database: &#39;datasetter_development&#39;)
 #连接本地的数据库
 
 class User &lt; ActiveRecord::Base<br />
@@ -53,7 +53,7 @@ end
 (1..80000).each do |i|<br />
 &nbsp; Account.create first_name: &quot;#{(&#39;A&#39;..&#39;Z&#39;).to_a.shuffle[0,5].join}&quot;, last_name: &quot;#{(&#39;A&#39;..&#39;Z&#39;).to_a.shuffle[0,5].join}&quot;<br />
 &nbsp; puts Account.all.size<br />
-end</code></pre>
+end{% endhighlight %}
 <br />
 &nbsp;</p>
 

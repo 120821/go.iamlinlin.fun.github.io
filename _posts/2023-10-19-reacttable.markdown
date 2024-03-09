@@ -24,7 +24,7 @@ Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</sp
 ​
 <span style="color:#f5ab35">6</span>: Array(<span style="color:#f5ab35">4</span>) [ <span style="color:#f5ab35">2027</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, &hellip; ]
 ​
-<span style="color:#f5ab35">7</span>: Array(<span style="color:#f5ab35">4</span>) [ <span style="color:#f5ab35">2028</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, &hellip; ]</code></pre>
+<span style="color:#f5ab35">7</span>: Array(<span style="color:#f5ab35">4</span>) [ <span style="color:#f5ab35">2028</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, &hellip; ]{% endhighlight %}
 
 <p><code>我需要写一个table来展示每个元素，但是不能动态展示，因为元素之间需要有其他内容，</code></p>
 
@@ -89,7 +89,7 @@ Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</sp
       {/* 其他使用 CustomTable 的示例 */}
     &lt;/div&gt;
   );
-};</code></pre>
+};{% endhighlight %}
 
 <p><code>在render中，注意使用的时候需要判断是否已经从接口得到了数据：</code></p>
 
@@ -108,7 +108,7 @@ if (processedData &amp;&amp; processedData[&#39;factorProductionDefaultData&#39;
 
 &nbsp; factorTuiYiTableData = processedData[&#39;factorTuiYiDefaultData&#39;]
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>在使用的时候，把第一行删除，使用第一行做header：</p>
 
@@ -119,7 +119,7 @@ if (processedData &amp;&amp; processedData[&#39;factorProductionDefaultData&#39;
 
 &nbsp; columns={factorTuiYiTableData[0]}
 
-/&gt;</code></pre>
+/&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

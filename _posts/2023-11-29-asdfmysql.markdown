@@ -7,15 +7,15 @@ categories:
 <p>1.查看是否Asdf已经安装了mysql</p>
 
 <pre>
-<code>asdf plugin-list</code></pre>
+<code>asdf plugin-list{% endhighlight %}
 
 <p>2.卸载asdf&nbsp; mysql 以及插件</p>
 
 <pre>
-<code>asdf uninstall mysql</code></pre>
+<code>asdf uninstall mysql{% endhighlight %}
 
 <pre>
-<code>asdf plugin-remove mysql</code></pre>
+<code>asdf plugin-remove mysql{% endhighlight %}
 
 <pre>
 <code><span style="color:#ffd700">asdf</span> plugin-list
@@ -28,12 +28,12 @@ categories:
 <span style="color:#ffd700">redis</span>
 <span style="color:#ffd700">ruby</span>
 <span style="color:#ffd700">yarn</span>
-<span style="color:#ffd700">linlin</span>@linlin-i<span style="color:#f5ab35">5</span>:~$ asdf uninstall mysql</code></pre>
+<span style="color:#ffd700">linlin</span>@linlin-i<span style="color:#f5ab35">5</span>:~$ asdf uninstall mysql{% endhighlight %}
 
 <p>3.设置mysql为系统安装的mysql</p>
 
 <pre>
-<code><span style="color:#ffd700">asdf</span> global mysql system</code></pre>
+<code><span style="color:#ffd700">asdf</span> global mysql system{% endhighlight %}
 
 <p>如果出现了：</p>
 
@@ -41,7 +41,7 @@ categories:
 <code>which mysql
 /<span style="color:#ffd700">home</span>/linlin/.asdf/shims/mysql
 <span style="color:#ffd700">linlin</span>@linlin-i<span style="color:#f5ab35">5</span>:/workspace$ mysql --version
-/<span style="color:#ffd700">usr</span>/bin/mysql  Ver <span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">35</span>-<span style="color:#f5ab35">0</span>ubuntu<span style="color:#f5ab35">0.22.04.1</span> for Linux <span style="color:#f5ab35">on</span> x<span style="color:#f5ab35">86</span>_<span style="color:#f5ab35">64</span> ((Ubuntu))</code></pre>
+/<span style="color:#ffd700">usr</span>/bin/mysql  Ver <span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">35</span>-<span style="color:#f5ab35">0</span>ubuntu<span style="color:#f5ab35">0.22.04.1</span> for Linux <span style="color:#f5ab35">on</span> x<span style="color:#f5ab35">86</span>_<span style="color:#f5ab35">64</span> ((Ubuntu)){% endhighlight %}
 
 <p>在which 和--version返回不同的时候，可以修改bashrc.</p>
 

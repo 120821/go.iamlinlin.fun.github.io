@@ -21,7 +21,7 @@ categories:
 <p>或者使用命令进行查看可以使用的版本：</p>
 
 <pre>
-<code>docker search nginx</code></pre>
+<code>docker search nginx{% endhighlight %}
 
 <pre>
 <code>$ docker search nginx
@@ -31,12 +31,12 @@ jwilder/nginx-proxy       Automated Nginx reverse proxy for docker c...   674   
 richarvey/nginx-php-fpm   Container running Nginx + PHP-FPM capable ...   207                  [OK]
 million12/nginx-php       Nginx + PHP-FPM 5.5, 5.6, 7.0 (NG), CentOS...   67                   [OK]
 maxexcloo/nginx-php       Docker framework container with Nginx and ...   57                   [OK]
-...</code></pre>
+...{% endhighlight %}
 
 <p>获取最新的Nginx</p>
 
 <pre>
-<code>$ docker pull nginx:latest</code></pre>
+<code>$ docker pull nginx:latest{% endhighlight %}
 
 <p><code>查看是否安装成功：</code></p>
 
@@ -49,7 +49,7 @@ $ docker images</pre>
 
 <pre>
 进行启动Nginx container：
-<code>$ docker run --name nginx-test -p 8080:80 -d nginx</code></pre>
+<code>$ docker run --name nginx-test -p 8080:80 -d nginx{% endhighlight %}
 
 <p>参数说明：</p>
 
@@ -72,5 +72,5 @@ $ nginx -s quit # 比较得体的停止
 
 $ nginx -s reload # 重新读取配置文件（ 重启）
 
-$ nginx -s reopen # 重新打开日志</code></pre>
+$ nginx -s reopen # 重新打开日志{% endhighlight %}
 

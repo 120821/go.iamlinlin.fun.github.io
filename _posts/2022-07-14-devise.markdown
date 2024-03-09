@@ -8,11 +8,11 @@ categories:
 
 <p>$bundle exec rials c</p>
 
-<pre><code>a = Account.new
+{% highlight %}a = Account.new
 a.password = &#39;22222222&#39;
 
 a.email = &#39;hi@email&#39;
-a.save!</code></pre>
+a.save!{% endhighlight %}
 
 <p>如果email重复了，重新输入a.email = &#39;hi@hihi&#39;即可，然后直接a.save!<br />
 2.设置该用户的密码 password=</p>
@@ -26,7 +26,7 @@ a.save!</code></pre>
 
 a.password = &#39;22222211&#39;
 
-a.save!</code></pre>
+a.save!{% endhighlight %}
 
 <p><br />
 3.验证密码的方法，.valid_password</p>
@@ -38,7 +38,7 @@ a.save!</code></pre>
 
 &nbsp; Account Load (0.2ms)&nbsp; SELECT &quot;accounts&quot;.* FROM &quot;accounts&quot; WHERE &quot;accounts&quot;.&quot;id&quot; = $1 LIMIT $2&nbsp; [[&quot;id&quot;, 26], [&quot;LIMIT&quot;, 1]]
 
-=&gt; true</code></pre>
+=&gt; true{% endhighlight %}
 
 <p>https://www.rubydoc.info/github/plataformatec/devise/Devise/Models/DatabaseAuthenticatable</p>
 
@@ -47,16 +47,16 @@ a.save!</code></pre>
 <span class="hljs-meta prompt_">&gt; </span><span class="language-bash">me.password = <span class="hljs-string">&#39;123456789&#39;</span></span>
 <span class="hljs-meta prompt_">&gt; </span><span class="language-bash">me.password_confirmation = <span class="hljs-string">&#39;123456789&#39;</span></span>
 <span class="hljs-meta prompt_">&gt; </span><span class="language-bash">me.save</span>
-</code></pre>
+{% endhighlight %}
 
 <pre class="default s-code-block">
 <code class="hljs language-ruby">user = User.find_by_email(params[<span class="hljs-symbol">:user</span>][<span class="hljs-symbol">:email</span>])
-user.valid_password?(params[<span class="hljs-symbol">:user</span>][<span class="hljs-symbol">:password</span>])</code></pre>
+user.valid_password?(params[<span class="hljs-symbol">:user</span>][<span class="hljs-symbol">:password</span>]){% endhighlight %}
 
 <p><code>参考：</code><a href="https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise">https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise</a></p>
 
 <p>4.在action进行使用上面的三步</p>
 
 <pre>
-<code>Account.create email: params[:email], mobile: params[:mobile], password: params[:account][:password]</code></pre>
+<code>Account.create email: params[:email], mobile: params[:mobile], password: params[:account][:password]{% endhighlight %}
 

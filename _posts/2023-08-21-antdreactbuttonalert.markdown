@@ -21,7 +21,7 @@ class MyComponent extends React.Component {
       &lt;/Button&gt;
     );
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -26,7 +26,7 @@ categories:
 
 <span class="c1"># print the response status code</span>
 <span class="nb">puts</span> <span class="s2">&quot;RESPONSE STATUS CODE: </span><span class="si">#{</span><span class="n">response</span><span class="p">.</span><span class="nf">code</span><span class="si">}</span><span class="s2">&quot;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>运行：</p>
 
@@ -34,7 +34,7 @@ categories:
 <pre class="highlight shell">
 <code><span class="nv">$ </span>ruby net_timeout_1.rb
 <span class="c"># =&gt; ../net/http.rb:904:in `initialize&#39;: execution expired (Net::OpenTimeout)</span>
-</code></pre>
+{% endhighlight %}
 
 <p>httparty允许设置时间：</p>
 
@@ -50,7 +50,7 @@ categories:
 <span class="k">end</span>
 
 <span class="no">SaneHTTPClient</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">&quot;www.example.com&quot;</span><span class="p">)</span>
-</code></pre>
+{% endhighlight %}
 </div>
 </div>
 

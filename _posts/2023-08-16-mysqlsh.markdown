@@ -34,5 +34,5 @@ mysqldump -h <span style="color:#abe338">&quot;</span><span style="color:#ffa07a
 sleep 24h
 
 <span style="color:#d4d0ab"># 执行脚本本身，实现每天的定时执行</span>
-/path/to/daily_backup.sh</code></pre>
+/path/to/daily_backup.sh{% endhighlight %}
 

@@ -10,14 +10,14 @@ categories:
 
 <p>成功的话看到这样的内容：</p>
 
-<pre><code>Starting ChromeDriver 108.0.5359.94 (713576b895246504ccc6b92c2fb8ce2d60194074-refs/branch-heads/5359_71@{#3}) on port 9515<br />
+{% highlight %}Starting ChromeDriver 108.0.5359.94 (713576b895246504ccc6b92c2fb8ce2d60194074-refs/branch-heads/5359_71@{#3}) on port 9515<br />
 Only local connections are allowed.<br />
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br />
-ChromeDriver was started successfully.</code></pre>
+ChromeDriver was started successfully.{% endhighlight %}
 
 <p>2.写一个脚本，类似这样：（可以获取页面的p,h3等信息，）</p>
 
-<pre><code>require &#39;selenium-webdriver&#39;<br />
+{% highlight %}require &#39;selenium-webdriver&#39;<br />
 #driver = Selenium::WebDriver.for :firefox（如果你使用的是Firefox，就替换这一行）<br />
 driver = Selenium::WebDriver.for :chrome#, service: service（如果你需要service，就在上边进行设置）<br />
 driver.manage.timeouts.implicit_wait = 10
@@ -40,18 +40,18 @@ begin<br />
 &nbsp; puts &quot;begin hihi&quot;<br />
 ensure<br />
 &nbsp; driver.quit<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>3.运行脚本就可以获得需要的内容：</p>
 
-<pre><code>title.text is:<br />
+{% highlight %}title.text is:<br />
 2022游戏安全行业峰会直播预约通道开启！<br />
 ele.text is:<br />
 foo is:<br />
 近年来，随着游戏用户规模不断扩大、游戏厂商全球化布局加速，游戏安全问题也变得愈加复杂。外挂、黑产、内容安全、DDoS攻击等问题层出不穷！安全问题已经成为游戏运营过程中的重中之重，除了传统的游戏大厂，越来越多的游戏厂商开始着手布局游戏安全的业务模块！<br />
 search_form is:<br />
 #&lt;Selenium::WebDriver::Element:0x45bbdf7170916ac id=&quot;97b5e53e-6294-45b2-a547-d4c2d5df9d40&quot;&gt;<br />
-begin hihi</code></pre>
+begin hihi{% endhighlight %}
 
 <p>&nbsp;</p>
 

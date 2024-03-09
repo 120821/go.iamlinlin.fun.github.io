@@ -23,5 +23,5 @@ categories:
     }
 
     <span style="color:#dcc6e0">return</span> calculationPlans, <span style="color:#f5ab35">nil</span>
-}</code></pre>
+}{% endhighlight %}
 

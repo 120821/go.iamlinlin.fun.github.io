@@ -24,5 +24,5 @@ root.render(
   &lt;/React.StrictMode&gt;
 );
 
-reportWebVitals();</code></pre>
+reportWebVitals();{% endhighlight %}
 

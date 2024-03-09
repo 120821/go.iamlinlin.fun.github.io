@@ -10,7 +10,7 @@ categories:
 <code>.disable-events {
   pointer-events: none;
 }
-</code></pre>
+{% endhighlight %}
 
 <p>禁用元素的鼠标事件响应，但保持鼠标指针可见，&nbsp;鼠标事件会穿透到元素下面的元素</p>
 
@@ -18,7 +18,7 @@ categories:
 <code>.disable-events-visible-pointer {
   pointer-events: none;
   cursor: default;
-}</code></pre>
+}{% endhighlight %}
 
 <p>禁用元素的鼠标事件响应，并隐藏鼠标指针</p>
 
@@ -26,5 +26,5 @@ categories:
 <code>.hide-pointer-events {
   pointer-events: none;
   cursor: none;
-}</code></pre>
+}{% endhighlight %}
 

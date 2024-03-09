@@ -14,7 +14,7 @@ categories:
 
 JavaScript 中:
 
-object.onchange=function(){SomeJavaScriptCode};</code></pre> 
+object.onchange=function(){SomeJavaScriptCode};{% endhighlight %} 
 </blockquote> 
 <pre><code class="language-html">&lt;script&gt;
 function myFunction(){
@@ -26,7 +26,7 @@ function myFunction(){
 &lt;body&gt;
 输入你的名字: &lt;input type="text" id="fname" onchange="myFunction()"&gt;
 &lt;p&gt;当你离开输入框后，将小写字母转为大写字母。&lt;/p&gt;
-&lt;/body&gt;</code></pre> 
+&lt;/body&gt;{% endhighlight %} 
 <p> <img alt="" height="93" src="https://img-blog.csdnimg.cn/ff51f1ca59b34f7385de6d07828d7d21.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_13,color_FFFFFF,t_70,g_se,x_16" width="476"></p> 
 <p>函数不同，产生效果不同，</p> 
 <pre><code class="language-html">&lt;html&gt;
@@ -46,7 +46,7 @@ document.getElementById(x).value=y.toUpperCase()
 Enter your name: &lt;input type="text" id="fname" onchange="upperCase(this.id)"&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre> 
+&lt;/html&gt;{% endhighlight %} 
 <p><img alt="" height="62" src="https://img-blog.csdnimg.cn/27a1190ee025481aad5a0169eeb89754.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_12,color_FFFFFF,t_70,g_se,x_16" width="445"> \</p> 
 <p>也可以用于下拉框，选择或者弹窗的形式</p> 
 <pre><code class="language-html">Select下拉框onchange事件获取option的value值
@@ -59,7 +59,7 @@ Enter your name: &lt;input type="text" id="fname" onchange="upperCase(this.id)"&
     function show_sub(val){     
         alert(val);     
     }     
-&lt;/script&gt;  </code></pre> 
+&lt;/script&gt;  {% endhighlight %} 
 <p><img alt="" height="65" src="https://img-blog.csdnimg.cn/c5deb0d03efc4be7aabc5f91bb9fdd12.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_14,color_FFFFFF,t_70,g_se,x_16" width="506"></p> 
 <p> </p>
                 

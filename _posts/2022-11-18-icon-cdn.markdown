@@ -46,7 +46,7 @@ categories:
 &lt;/div&gt;
 
 &lt;/body&gt;<br />
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;{% endhighlight %}
 
 <p><code>然后ctrl+s，保存后，修改文件的名称为：star.html,双击打开，看到</code></p>
 

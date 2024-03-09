@@ -74,7 +74,7 @@ Solidity 所支持的导入语句，其语法同 JavaScript（从 ES6 起）非�
 <span class="hljs-class"><span class="hljs-keyword">contract</span> <span class="hljs-title">HelloWorld</span> </span>{
     <span class="hljs-keyword">string</span> <span class="hljs-keyword">public</span> greet <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hello World!&quot;</span>;
 }
-</code></pre>
+{% endhighlight %}
 
 <p><code class="language-solidity">进入remix创建文件Test.sol ,把内容粘贴进文件，进行编译，选择合适的版本号，进行deploy，就可以在区块链看到自己的合约完成了</code></p>
 

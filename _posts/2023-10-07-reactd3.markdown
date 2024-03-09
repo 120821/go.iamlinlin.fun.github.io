@@ -49,22 +49,22 @@ const GridMap = () =&gt; {
   )<span style="color:#d4d0ab">;</span>
 }<span style="color:#d4d0ab">;</span>
 
-export default GridMap<span style="color:#d4d0ab">;</span></code></pre>
+export default GridMap<span style="color:#d4d0ab">;</span>{% endhighlight %}
 
 <p><strong>解决方法：</strong></p>
 
 <p>1.调整地图svg的大小:</p>
 
 <pre>
-<code>&lt;svg ref={svgRef} width={800} height={800}&gt;&lt;/svg&gt;</code></pre>
+<code>&lt;svg ref={svgRef} width={800} height={800}&gt;&lt;/svg&gt;{% endhighlight %}
 
 <p>2.调整网格间距的比例：（如果10太大，就继续调整为5，4， 3...）</p>
 
 <pre>
-<code>const grid = d3.geoGraticule().step([10, 10]); // 调整 step 的值来改变网格的间隔</code></pre>
+<code>const grid = d3.geoGraticule().step([10, 10]); // 调整 step 的值来改变网格的间隔{% endhighlight %}
 
 <p>3.调整投影的距离：</p>
 
 <pre>
-<code>const projection = d3.geoAlbers().fitSize([500, 500], chinaData); // 尝试不同的投影方式</code></pre>
+<code>const projection = d3.geoAlbers().fitSize([500, 500], chinaData); // 尝试不同的投影方式{% endhighlight %}
 

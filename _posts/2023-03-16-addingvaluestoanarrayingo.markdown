@@ -45,7 +45,7 @@ func main() {
 
 
 
-}</code></pre>
+}{% endhighlight %}
 
 <pre>
 <code>$&nbsp;</code>go run add_value_to_array.go</pre>
@@ -53,5 +53,5 @@ func main() {
 <p>得到返回结果：</p>
 
 <pre>
-<code>[Einstein Turing Lovelace Curie Franklin Hodgkin Hawkins] </code></pre>
+<code>[Einstein Turing Lovelace Curie Franklin Hodgkin Hawkins] {% endhighlight %}
 

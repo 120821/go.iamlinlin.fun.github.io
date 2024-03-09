@@ -34,14 +34,14 @@ HTTP request sent, awaiting response... 200 OK
 
 Length: 3220 (3.1K) [application/pgp-keys]
 
-Saving to: &lsquo;winehq.key&rsquo;</code></pre>
+Saving to: &lsquo;winehq.key&rsquo;{% endhighlight %}
 
 <pre>
 <code>winehq.key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%[===================&gt;]&nbsp;&nbsp; 3.14K&nbsp; --.-KB/s&nbsp;&nbsp;&nbsp; in 0s&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
 
 2022-06-12 17:16:03 (32.2 MB/s) - &lsquo;winehq.key&rsquo; saved [3220/3220]
 
-sudo mv /home/linlin/Downloads/winehq.key /usr/share/keyrings/winehq-archive.key</code></pre>
+sudo mv /home/linlin/Downloads/winehq.key /usr/share/keyrings/winehq-archive.key{% endhighlight %}
 
 <p>查看版本</p>
 

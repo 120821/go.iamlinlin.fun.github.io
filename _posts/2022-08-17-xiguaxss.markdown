@@ -35,7 +35,7 @@ categories:
 
 &nbsp; port: 5432
 
-&nbsp; host: localhost</code></pre>
+&nbsp; host: localhost{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">Gemfile：（增加gem pg, 注释sql）</div>
 
@@ -46,7 +46,7 @@ categories:
 
 gem &#39;pg&#39;
 
-gem &#39;figaro&#39;</code></pre>
+gem &#39;figaro&#39;{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">2.gem install bundler （注意版本)</div>
 
@@ -55,14 +55,14 @@ gem &#39;figaro&#39;</code></pre>
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了报错</div>
 
 <pre>
-<code>nokogiri-1.12.5-x86_64-linux requires ruby version &lt; 3.1.dev, &gt;= 2.5, which is incompatible with the current version, ruby 3.1.0p0</code></pre>
+<code>nokogiri-1.12.5-x86_64-linux requires ruby version &lt; 3.1.dev, &gt;= 2.5, which is incompatible with the current version, ruby 3.1.0p0{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><a href="https://github.com/sparklemotion/nokogiri/issues/2397">查找解决方法</a></div>
 
 <pre>
 <code>ruby -v
 
-ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-linux]</code></pre>
+ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-linux]{% endhighlight %}
 
 <pre>
 <code>bundle update nokogiri
@@ -71,7 +71,7 @@ Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; 
 
 Fetching gem metadata from https://gems.ruby-china.com/...........
 
-Resolving dependencies...</code></pre>
+Resolving dependencies...{% endhighlight %}
 
 <pre>
 <code>bundle
@@ -80,7 +80,7 @@ Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; 
 
 Using rake 13.0.6
 
-Using concurrent-ruby 1.1.9</code></pre>
+Using concurrent-ruby 1.1.9{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.bundle exec rake db:create</div>
 

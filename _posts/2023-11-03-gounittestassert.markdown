@@ -13,7 +13,7 @@ categories:
 <p>1.安装</p>
 
 <pre>
-<code>go get github.com/stretchr/testify</code></pre>
+<code>go get github.com/stretchr/testify{% endhighlight %}
 
 <p><code>2. 引入</code></p>
 
@@ -30,12 +30,12 @@ func TestSomething(t *testing.T) {
 
   assert.True(t, true, &quot;True is true!&quot;)
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>3.测试</p>
 
 <pre>
-<code>go test</code></pre>
+<code>go test{% endhighlight %}
 
 <p>&nbsp;</p>
 

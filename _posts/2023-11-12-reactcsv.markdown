@@ -27,7 +27,7 @@ categories:
             <span style="color:#abe338">&quot;0&quot;</span>
         ]
     ],
-</code></pre>
+{% endhighlight %}
 
 <p>可以写函数：</p>
 
@@ -74,5 +74,5 @@ for (let i = 0; i &lt; params.length; i++) {
     csvContent = processProduction(csvContent, parsedParams.production);
   }
 }
-</code></pre>
+{% endhighlight %}
 

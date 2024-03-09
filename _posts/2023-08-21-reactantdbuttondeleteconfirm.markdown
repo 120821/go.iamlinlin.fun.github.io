@@ -9,7 +9,7 @@ categories:
 <p>引入antd的model.confirm :</p>
 
 <pre>
-<code>import { Button, Modal, message } from &#39;antd&#39;;</code></pre>
+<code>import { Button, Modal, message } from &#39;antd&#39;;{% endhighlight %}
 
 <p><code>完整的示例：</code></p>
 
@@ -51,7 +51,7 @@ class MyComponent extends React.Component {
       &lt;/Button&gt;
     );
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

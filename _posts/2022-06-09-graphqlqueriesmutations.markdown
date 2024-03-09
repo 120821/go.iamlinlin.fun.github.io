@@ -7,35 +7,35 @@ categories:
 
                     <h1>GraphQL</h1> 
 <p><a class="has-card" href="https://graphql.org/" title="GraphQL | A query language for your API"><span class="link-card-box"><span class="link-title">GraphQL | A query language for your API</span><span class="link-link"><img class="link-link-icon" src="https://csdnimg.cn/release/blog_editor_html/release2.1.3/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=M4AD" alt="icon-default.png?t=M4AD">https://graphql.org/</span></span></a>GraphQL 是一种用于 API 的查询语言，也是一种服务器端运行时，用于使用您为自己定义的类型系统执行查询 数据。 GraphQL 不依赖于任何特定的数据库或存储引擎，而是由您现有的代码和数据支持。</p> 
-<pre><code>type Query {
+{% highlight %}type Query {
   me: User
 }
 
 type User {
   id: ID
   name: String
-}</code></pre> 
+}{% endhighlight %} 
 <p>以及每种类型的每个字段的功能：</p> 
-<pre><code>function Query_me(request) {
+{% highlight %}function Query_me(request) {
   return request.auth.user;
 }
 
 function User_name(user) {
   return user.getName();
-}</code></pre> 
+}{% endhighlight %} 
 <p>GraphQL 服务运行后（通常在 Web 服务上的 URL 处），它可以接收 GraphQL 查询以进行验证和执行。 该服务首先检查查询以确保它仅引用定义的类型和字段，然后运行提供的函数 产生一个结果。</p> 
 <p>例如，查询：</p> 
-<pre><code>{
+{% highlight %}{
   me {
     name
   }
-}</code></pre> 
+}{% endhighlight %} 
 <p>可以产生以下 JSON 结果：</p> 
-<pre><code>{
+{% highlight %}{
   "me": {
     "name": "Luke Skywalker"
   }
-}</code></pre> 
+}{% endhighlight %} 
 <p>字段</p> 
 <p>最简单的，GraphQL 是关于询问对象的特定字段。 让我们从一个非常简单的查询和运行它时得到的结果开始： <img alt="" height="129" src="https://img-blog.csdnimg.cn/f4a18d11d6ee48cba5b8e417a5f5abef.png" width="649"></p> 
 <p>The field <code>name</code> returns a <code>String</code> type, in this case the name of the main hero of Star Wars, <code>"R2-D2"</code>.</p> 
@@ -52,7 +52,7 @@ function User_name(user) {
 <p>fragment</p> 
 <p>这就是 GraphQL 包含称为 <em>片段 </em>。 片段让您可以构建字段集，然后将它们包含在您需要的查询中。 这是一个如何使用片段解决上述情况的示例：</p> 
 <p> 查询结果：您可以看到如果重复字段，上述查询将如何重复。 片段的概念经常用于将复杂的应用程序数据需求拆分为更小的块，尤其是当您需要将许多具有不同片段的 UI 组件组合到一个初始数据提取中时。</p> 
-<pre><code>{
+{% highlight %}{
   "data": {
     "leftComparison": {
       "name": "Luke Skywalker",
@@ -97,9 +97,9 @@ function User_name(user) {
     }
   }
 }
-</code></pre> 
+{% endhighlight %} 
 <p>片段可以访问查询或突变中声明的变量<img alt="" height="416" src="https://img-blog.csdnimg.cn/9d3b6b5a0e464c199b61daefb0fa9377.png" width="696"></p> 
-<pre><code>{
+{% highlight %}{
   "data": {
     "leftComparison": {
       "name": "Luke Skywalker",
@@ -148,7 +148,7 @@ function User_name(user) {
       }
     }
   }
-}</code></pre> 
+}{% endhighlight %} 
 <p> </p> 
 <p>到目前为止，我们一直在使用简写语法，我们省略了 <code>query</code>关键字和查询名称，但在生产应用程序中，使用它们可以使我们的代码不那么模棱两可。</p> 
 <p>这是一个包含关键字的示例 <code>query</code>作为 <em>操作类型 </em>和 <code>HeroNameAndFriends</code>作为 <em>操作名称 </em>： </p> 

@@ -46,14 +46,14 @@ categories:
 
 	<span style="color:#000">c</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">String</span><span style="color:#000;font-weight:700">(</span><span style="color:#0000cf;font-weight:700">200</span><span style="color:#000;font-weight:700">,</span> <span style="color:#4e9a06">&quot;Success&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>然后运行，在命令行：</p>
 
-<pre><code># bind by query<br />
+{% highlight %}# bind by query<br />
 $ curl -X GET &quot;localhost:8085/testing?name=appleboy&amp;address=xyz&quot;<br />
 # bind by json<br />
-$ curl -X GET localhost:8085/testing --data &#39;{&quot;name&quot;:&quot;JJ&quot;, &quot;address&quot;:&quot;xyz&quot;}&#39; -H &quot;Content-Type:application/json&quot;</code></pre>
+$ curl -X GET localhost:8085/testing --data &#39;{&quot;name&quot;:&quot;JJ&quot;, &quot;address&quot;:&quot;xyz&quot;}&#39; -H &quot;Content-Type:application/json&quot;{% endhighlight %}
 
 <p><img height="119" src="/uploads/ckeditor/pictures/620/image-20221025092430-1.png" width="1691" /></p>
 

@@ -25,7 +25,7 @@ categories:
 </span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">up</span><span class="pun">)</span><span class="pln">
 
 </span><span class="com"># Drop the table</span><span class="pln">
-</span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">down</span><span class="pun">)</span></code></pre>
+</span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">down</span><span class="pun">)</span>{% endhighlight %}
 
 <p><code>or up and down</code></p>
 
@@ -56,7 +56,7 @@ categories:
 </span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">up</span><span class="pun">)</span><span class="pln">
 
 </span><span class="com"># Drop the table</span><span class="pln">
-</span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">down</span><span class="pun">)</span></code></pre>
+</span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">down</span><span class="pun">)</span>{% endhighlight %}
 
 <p>日志记录</p>
 
@@ -76,5 +76,5 @@ categories:
 </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">User</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln"> </span><span class="typ">ActiveRecord</span><span class="pun">::</span><span class="typ">Base</span><span class="pln">
 </span><span class="kwd">end</span><span class="pln">
 
-</span><span class="typ">User</span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="str">&#39;NanoDano&#39;</span><span class="pun">)</span></code></pre>
+</span><span class="typ">User</span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="pln">name</span><span class="pun">:</span><span class="pln"> </span><span class="str">&#39;NanoDano&#39;</span><span class="pun">)</span>{% endhighlight %}
 

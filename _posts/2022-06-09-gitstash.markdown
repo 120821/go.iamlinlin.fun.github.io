@@ -58,7 +58,7 @@ git stash
 git pull  
 // 将stash中改动重新加回本地分支，就可以继续修改了，当然，如果改好了就是add,commit,push
 git stash pop 
-</code></pre>
+{% endhighlight %}
 
 <p id="32-不小心改动了其他分支">不小心改动了其他分支</p>
 
@@ -73,7 +73,7 @@ git stash
 git checkout test
 // 将改动pop到自己当前的分支
 git stash pop
-</code></pre>
+{% endhighlight %}
 
 <blockquote>
 <p>git status&nbsp;</p>

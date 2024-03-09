@@ -35,7 +35,7 @@ echo &quot;数据库备份完成：$backup_file&quot;
 sleep 24h
 
 ## 执行脚本本身，实现每天的定时执行
-/你的备份执行文件路径/backup.sh</code></pre>
+/你的备份执行文件路径/backup.sh{% endhighlight %}
 
 <p><code>执行一下，例如我修改为24s执行一次备份:</code></p>
 
@@ -44,7 +44,7 @@ sleep 24h
 <code>./backup.sh
 数据库备份完成：/xxx/20231130_112909.sql
 数据库备份完成：/xxx/20231130_112934.sql
-数据库备份完成：/xxx/20231130_112958.sql</code></code></pre>
+数据库备份完成：/xxx/20231130_112958.sql</code>{% endhighlight %}
 
 <p><code>&nbsp;</code></p>
 

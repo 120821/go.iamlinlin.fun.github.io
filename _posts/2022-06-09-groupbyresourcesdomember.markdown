@@ -53,7 +53,7 @@ categories:
  22         arrtributes: &#39;[]&#39;,
  23       }
  24     end
-</code></pre>
+{% endhighlight %}
 
 <pre>
 <code>resources :nft_assets, only: [:show] do
@@ -61,7 +61,7 @@ categories:
 103         post :update_nft_assets
 104       end
 105     end
-</code></pre>
+{% endhighlight %}
 
 <p style="margin-left:.0001pt">#{params[:id]}</p>
 

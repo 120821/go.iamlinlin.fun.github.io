@@ -6,7 +6,7 @@ categories:
 ---
 
                     <p>配置好数据库，选择postgres13.4</p> 
-<pre><code>version: '3' services:
+{% highlight %}version: '3' services:
   postgres14.3:
     container_name: "postgres14.3"
     image: postgres:14.3
@@ -22,7 +22,7 @@ categories:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=88888888
-</code></pre> 
+{% endhighlight %} 
 <p>sudo docker-compose up</p> 
 <p>在运行docker连接数据库的过程，出现报错</p> 
 <blockquote> 

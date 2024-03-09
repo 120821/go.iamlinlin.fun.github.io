@@ -21,7 +21,7 @@ categories:
 })}
 &lt;div style={{ marginLeft: &#39;-270px&#39;, marginTop: &#39;-170px&#39;, zIndex: -1 }}&gt;
   &lt;ChinaMapBorder /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>解决：使用CSS的<code>pointer-events</code>属性来控制交互事件</p>
 
@@ -30,7 +30,7 @@ categories:
 <pre>
 <code>&lt;div style={{ pointerEvents: &#39;none&#39; }}&gt;
   &lt;ChinaMapBorder /&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>通过将<code>pointer-events</code>属性设置为<code>none</code>，该容器将不会响应鼠标事件，从而避免南海地图的覆盖对不画南海的地图的交互产生影响。</p>
 

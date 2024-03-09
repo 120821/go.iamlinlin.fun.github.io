@@ -10,7 +10,7 @@ categories:
 </blockquote> 
 <blockquote>
  首先，粘贴链接 
- <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre> 
+ <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote>
  下拉表单 
@@ -20,21 +20,21 @@ categories:
   &lt;option&gt;3&lt;/option&gt;
   &lt;option&gt;4&lt;/option&gt;
   &lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;</code></pre> 
+&lt;/select&gt;{% endhighlight %} 
  <pre><code class="language-html">&lt;select multiple class="form-control"&gt;
   &lt;option&gt;1&lt;/option&gt;
   &lt;option&gt;2&lt;/option&gt;
   &lt;option&gt;3&lt;/option&gt;
   &lt;option&gt;4&lt;/option&gt;
   &lt;option&gt;5&lt;/option&gt;
-&lt;/select&gt;</code></pre> 
+&lt;/select&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>按钮</p> 
  <pre><code class="language-html">&lt;a class="btn btn-default" href="#" role="button"&gt;Link&lt;/a&gt;
 &lt;button class="btn btn-default" type="submit"&gt;Button&lt;/button&gt;
 &lt;input class="btn btn-default" type="button" value="Input"&gt;
-&lt;input class="btn btn-default" type="submit" value="Submit"&gt;+</code></pre> 
+&lt;input class="btn btn-default" type="submit" value="Submit"&gt;+{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>文本颜色：</p> 
@@ -43,7 +43,7 @@ categories:
 &lt;p class="text-success"&gt;...&lt;/p&gt;
 &lt;p class="text-info"&gt;...&lt;/p&gt;
 &lt;p class="text-warning"&gt;...&lt;/p&gt;
-&lt;p class="text-danger"&gt;...&lt;/p&gt;</code></pre> 
+&lt;p class="text-danger"&gt;...&lt;/p&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>背景颜色：</p> 
@@ -51,7 +51,7 @@ categories:
 &lt;p class="bg-success"&gt;...&lt;/p&gt;
 &lt;p class="bg-info"&gt;...&lt;/p&gt;
 &lt;p class="bg-warning"&gt;...&lt;/p&gt;
-&lt;p class="bg-danger"&gt;...&lt;/p&gt;</code></pre> 
+&lt;p class="bg-danger"&gt;...&lt;/p&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote>
  基本表单： 
@@ -75,7 +75,7 @@ categories:
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre> 
+&lt;/form&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote>
  内联表单 
@@ -88,7 +88,7 @@ categories:
     &lt;label for="exampleInputEmail2"&gt;Email&lt;/label&gt;
     &lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com"&gt;
   &lt;/div&gt;
-  &lt;button type="submit" class="btn btn-default"&gt;Send invitation&lt;/button&gt;</code></pre> 
+  &lt;button type="submit" class="btn btn-default"&gt;Send invitation&lt;/button&gt;{% endhighlight %} 
  <pre><code class="language-html">&lt;form class="form-inline"&gt;
   &lt;div class="form-group"&gt;
     &lt;label for="exampleInputName2"&gt;Name&lt;/label&gt;
@@ -99,7 +99,7 @@ categories:
     &lt;input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com"&gt;
   &lt;/div&gt;
   &lt;button type="submit" class="btn btn-default"&gt;Send invitation&lt;/button&gt;
-&lt;/form&gt;</code></pre> 
+&lt;/form&gt;{% endhighlight %} 
  <pre><code class="language-html">&lt;form class="form-inline"&gt;
   &lt;div class="form-group"&gt;
     &lt;label class="sr-only" for="exampleInputAmount"&gt;Amount (in dollars)&lt;/label&gt;
@@ -110,7 +110,7 @@ categories:
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;button type="submit" class="btn btn-primary"&gt;Transfer cash&lt;/button&gt;
-&lt;/form&gt;</code></pre> 
+&lt;/form&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>调整宽高：</strong> 通过 <code>.input-lg</code> 类似的类可以为控件设置高度，通过 <code>.col-lg-*</code> 类似的类可以为控件设置宽度。</p> 
@@ -120,7 +120,7 @@ categories:
 
 &lt;select class="form-control input-lg"&gt;...&lt;/select&gt;
 &lt;select class="form-control"&gt;...&lt;/select&gt;
-&lt;select class="form-control input-sm"&gt;...&lt;/select&gt;</code></pre> 
+&lt;select class="form-control input-sm"&gt;...&lt;/select&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote>
  水平表单 
@@ -151,14 +151,14 @@ categories:
       &lt;button type="submit" class="btn btn-default"&gt;Sign in&lt;/button&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/form&gt;</code></pre> 
+&lt;/form&gt;{% endhighlight %} 
  <p></p> 
 </blockquote> 
 <blockquote>
  输入框 
- <pre><code class="language-html">&lt;input type="text" class="form-control" placeholder="Text input"&gt;</code></pre> 
+ <pre><code class="language-html">&lt;input type="text" class="form-control" placeholder="Text input"&gt;{% endhighlight %} 
  <p>文本框</p> 
- <pre><code class="language-html">&lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;</code></pre> 
+ <pre><code class="language-html">&lt;textarea class="form-control" rows="3"&gt;&lt;/textarea&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p>单选多选</p> 
@@ -192,7 +192,7 @@ categories:
     &lt;input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
     Option three is disabled
   &lt;/label&gt;
-&lt;/div&gt;</code></pre> 
+&lt;/div&gt;{% endhighlight %} 
  <p></p> 
 </blockquote>
                 

@@ -45,12 +45,12 @@ task </span><span class="pun">:</span><span class="pln">shell </span><span class
 </span><span class="com"># Or try to apply a directory of migrations with migrator</span><span class="pln">
 </span><span class="com"># migrator = ActiveRecord::Migrator.open(Dir[&quot;migrations&quot;])</span><span class="pln">
 </span><span class="com"># puts &quot;Unapplied migrations: #{migrator.pending_migrations}&quot;</span><span class="pln">
-</span><span class="com"># migrator.migrate</span></code></pre>
+</span><span class="com"># migrator.migrate</span>{% endhighlight %}
 
 <p>Then run the tasks with the following commands:</p>
 
 <pre class="prettyprint">
 <code class="bash"><span class="pln">rake migrate</span><span class="pun">:</span><span class="pln">up
 rake shell
-rake migrate</span><span class="pun">:</span><span class="pln">down</span></code></pre>
+rake migrate</span><span class="pun">:</span><span class="pln">down</span>{% endhighlight %}
 

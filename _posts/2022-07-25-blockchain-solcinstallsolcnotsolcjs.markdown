@@ -16,7 +16,7 @@ categories:
 
 <pre>
 <code>cp ~/Downloads/solc-static-linux /workspace/coding_tools/
-</code></pre>
+{% endhighlight %}
 
 <p>把solc复制到workspace需要用到的工具文件夹</p>
 

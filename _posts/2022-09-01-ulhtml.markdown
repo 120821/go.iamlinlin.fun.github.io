@@ -7,7 +7,7 @@ categories:
 <pre>
 <a href="https://www.php.cn/website-design-ask-491315.html">https://www.php.cn/website-design-ask-491315.html</a></pre>
 
-<pre><code>
+{% highlight %}
 ul{
    list-style-type:none;
 }</code>

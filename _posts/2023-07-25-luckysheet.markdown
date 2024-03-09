@@ -33,7 +33,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp; })
 
-&nbsp; &lt;/script&gt;</code></pre>
+&nbsp; &lt;/script&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

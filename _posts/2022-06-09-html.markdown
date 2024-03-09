@@ -13,11 +13,11 @@ categories:
   &lt;li&gt;&lt;a href="/example/html/chap1.html" target="view_window"&gt;Chapter 1&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="/example/html/chap2.html" target="view_window"&gt;Chapter 2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href="/example/html/chap3.html" target="view_window"&gt;Chapter 3&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre> 
+&lt;/ul&gt;{% endhighlight %} 
  <pre><code class="language-html">&lt;frameset cols="100,*"&gt;
   &lt;frame src="toc.html"&gt;
   &lt;frame src="pref.html" name="view_frame"&gt;
-&lt;/frameset&gt; </code></pre> 
+&lt;/frameset&gt; {% endhighlight %} 
  <p style="text-align:center;"><img alt="" src="https://img-blog.csdnimg.cn/cc33c89064a049db864c7e28126eeddc.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
  <p><img alt="" height="74" src="https://img-blog.csdnimg.cn/1141255eabc744908e804862e561693a.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_9,color_FFFFFF,t_70,g_se,x_16" width="350"></p> 
  <p>调整链接文字的颜色。直接增加样式即可：   color：#1111111</p> 

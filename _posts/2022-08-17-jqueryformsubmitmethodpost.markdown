@@ -9,5 +9,5 @@ categories:
 <p>官网：<a href="https://api.jquery.com/submit/">https://api.jquery.com/submit/</a></p>
 
 <pre class="lang-js s-code-block">
-<code class="hljs language-javascript">$(<span class="hljs-string">&#39;#formId&#39;</span>).<span class="hljs-title function_">submit</span>();</code></pre>
+<code class="hljs language-javascript">$(<span class="hljs-string">&#39;#formId&#39;</span>).<span class="hljs-title function_">submit</span>();{% endhighlight %}
 

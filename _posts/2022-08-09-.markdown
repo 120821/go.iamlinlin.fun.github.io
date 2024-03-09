@@ -22,7 +22,7 @@ categories:
 &nbsp; 6&nbsp;&nbsp;&nbsp;&nbsp; mail to: to, subject: subject
 &nbsp; 7&nbsp;&nbsp; end
 &nbsp; 8
-&nbsp; 9 end</code></pre>
+&nbsp; 9 end{% endhighlight %}
 
 <p>正文：app/views/user_mailer/send_validation_email.html.erb</p>
 
@@ -65,5 +65,5 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/tr&gt;
 &nbsp;&nbsp;&nbsp; &lt;/tbody&gt;
 &nbsp; &lt;/table&gt;
-&lt;/body&gt;</code></pre>
+&lt;/body&gt;{% endhighlight %}
 

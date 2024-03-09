@@ -22,5 +22,5 @@ categories:
     },
   },
   <span style="color:#d4d0ab">// 其他配置项...</span>
-};</code></pre>
+};{% endhighlight %}
 

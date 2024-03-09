@@ -25,7 +25,7 @@ categories:
   <span style="color:#dcc6e0">return</span> (
     <span style="color:#d4d0ab">// 组件的 JSX</span>
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>上面的这个例子里，第一个useEffect是在<code>dependency1变化的时候会用触发， 第二个是dependency2变化的时候触发。每一个都是独立的。</code></p>
 

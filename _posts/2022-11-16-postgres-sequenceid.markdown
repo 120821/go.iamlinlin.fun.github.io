@@ -9,7 +9,7 @@ categories:
 <p>使用命令进入postgres：</p>
 
 <pre>
-<code>sudo -u postgres -i&nbsp;</code></pre>
+<code>sudo -u postgres -i&nbsp;{% endhighlight %}
 
 <p>进入数据库： psql</p>
 

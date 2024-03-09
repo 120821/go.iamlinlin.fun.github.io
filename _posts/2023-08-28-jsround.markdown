@@ -9,12 +9,12 @@ categories:
 <pre>
 <code><span style="color:#dcc6e0">let</span> num = <span style="color:#f5ab35">3.14159</span>;
 <span style="color:#dcc6e0">let</span> roundedNum = <span style="color:#f5ab35">Math</span>.round(num);
-<span style="color:#f5ab35">console</span>.log(roundedNum);  <span style="color:#d4d0ab">// 输出: 3</span></code></pre>
+<span style="color:#f5ab35">console</span>.log(roundedNum);  <span style="color:#d4d0ab">// 输出: 3</span>{% endhighlight %}
 
 <p>这样可以保留小数位：</p>
 
 <pre>
 <code><span style="color:#dcc6e0">let</span> num = <span style="color:#f5ab35">3.14159</span>;
 <span style="color:#dcc6e0">let</span> roundedNum = num.toFixed(<span style="color:#f5ab35">2</span>);  <span style="color:#d4d0ab">// 保留两位小数</span>
-<span style="color:#f5ab35">console</span>.log(roundedNum);  <span style="color:#d4d0ab">// 输出: 3.14</span></code></pre>
+<span style="color:#f5ab35">console</span>.log(roundedNum);  <span style="color:#d4d0ab">// 输出: 3.14</span>{% endhighlight %}
 

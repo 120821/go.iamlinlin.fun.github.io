@@ -10,7 +10,7 @@ categories:
 <code>&gt; Task :<span style="color:#dcc6e0">app</span>:compileDebugJavaWithJavac
 <span style="color:#dcc6e0">Note</span>: Some <span style="color:#dcc6e0">input</span> files <span style="color:#dcc6e0">use</span> or override a deprecated API.
 <span style="color:#dcc6e0">Note</span>: Recompile with -Xlint:deprecation <span style="color:#dcc6e0">for</span> details.
-</code></pre>
+{% endhighlight %}
 
 <p>意思是：</p>
 
@@ -33,7 +33,7 @@ categories:
         <span style="color:#d4d0ab">// 添加以下代码</span>
         <span style="color:#abe338">&quot;-Xlint:deprecation&quot;</span>
     }
-}</code></pre>
+}{% endhighlight %}
 
 <p>重新编译。即可。</p>
 

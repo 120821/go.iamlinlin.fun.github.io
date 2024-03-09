@@ -9,7 +9,7 @@ categories:
 <p>在css标签内，通过id设置div的样式，定义其position属性为绝对定位(position)，右对齐(right:0)</p>
 
 <pre>
-<code>&lt;div style=&quot;position: absolute; right: 0;&quot;&gt;&lt;/div&gt;</code></pre>
+<code>&lt;div style=&quot;position: absolute; right: 0;&quot;&gt;&lt;/div&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

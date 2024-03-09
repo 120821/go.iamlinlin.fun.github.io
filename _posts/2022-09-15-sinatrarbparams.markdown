@@ -13,7 +13,7 @@ categories:
 <code><span class="n">get</span> <span class="s1">&#39;/foo&#39;</span> <span class="k">do</span>
   <span class="c1"># Does not match &quot;GET /foo/&quot;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 </div>
 
 <pre class="highlight">
@@ -24,7 +24,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
   <span class="c1"># params[&#39;name&#39;] is &#39;foo&#39; or &#39;bar&#39;</span>
   <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="n">params</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="100" src="/uploads/ckeditor/pictures/403/image-20220915115242-1.png" width="506" /></p>
 
@@ -38,7 +38,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
   <span class="c1"># n stores params[&#39;name&#39;]</span>
   <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="n">n</span><span class="si">}</span><span class="s2">!&quot;</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="87" src="/uploads/ckeditor/pictures/405/image-20220915115711-2.png" width="326" /></p>
 
@@ -59,7 +59,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
 <span class="k">end</span>
 
 <span class="n">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span> <span class="p">{</span> <span class="no">Stream</span><span class="p">.</span><span class="nf">new</span> <span class="p">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="134" src="/uploads/ckeditor/pictures/406/image-20220915135506-1.png" width="1597" /></p>
 </div>
@@ -71,7 +71,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
 <code><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
   <span class="n">erb</span> <span class="ss">:index</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p>也可以直接传入模板内容，而不是模板名称：</p>
 
@@ -80,7 +80,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
   <span class="n">code</span> <span class="o">=</span> <span class="s2">&quot;&lt;%= Time.now %&gt;&quot;</span>
   <span class="n">erb</span> <span class="n">code</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="134" src="/uploads/ckeditor/pictures/407/image-20220915141420-2.png" width="469" /></p>
 </div>
@@ -91,7 +91,7 @@ get</span> <span class="s1">&#39;/hello/:name&#39;</span> <span class="k">do</sp
 <code><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
   <span class="n">erb</span> <span class="ss">:index</span><span class="p">,</span> <span class="ss">:layout</span> <span class="o">=&gt;</span> <span class="ss">:post</span>
 <span class="k">end</span>
-</code></pre>
+{% endhighlight %}
 
 <p>这将呈现嵌入在 views/post.erb 中的 views/index.erb（默认为 views/layout.erb，如果存在）。</p>
 

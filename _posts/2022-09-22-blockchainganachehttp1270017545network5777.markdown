@@ -7,7 +7,7 @@ categories:
 <p>进入文件夹，启动ganache</p>
 
 <pre>
-<code>~/Downloads$&nbsp; ./ganache-2.5.4-linux-x86_64.AppImage</code></pre>
+<code>~/Downloads$&nbsp; ./ganache-2.5.4-linux-x86_64.AppImage{% endhighlight %}
 
 <p>连接网络</p>
 

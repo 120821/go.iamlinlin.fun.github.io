@@ -27,7 +27,7 @@ config.action_mailer.smtp_settings = {
 
 &nbsp; open_timeout:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5,
 
-&nbsp; read_timeout:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 }</code></pre>
+&nbsp; read_timeout:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 }{% endhighlight %}
 
 <p>配置好后，创建user_mailer</p>
 
@@ -44,7 +44,7 @@ create    app/views/layouts/mailer.text.erb
 create    app/views/layouts/mailer.html.erb
 invoke  test_unit
 create    test/mailers/user_mailer_test.rb
-create    test/mailers/previews/user_mailer_preview.rb</span></code></pre>
+create    test/mailers/previews/user_mailer_preview.rb</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -123,7 +123,7 @@ create    test/mailers/previews/user_mailer_preview.rb</span></code></pre>
 
 &nbsp; });
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

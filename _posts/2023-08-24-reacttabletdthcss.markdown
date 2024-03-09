@@ -32,7 +32,7 @@ categories:
 
 <span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">td</span> {
   <span style="color:#ffd700">border</span>: <span style="color:#f5ab35">1px</span> solid <span style="color:#f5ab35">#ddd</span>; <span style="color:#d4d0ab">/* 设置单元格边框 */</span>
-}</code></pre>
+}{% endhighlight %}
 
 <p>(另外，不太建议，因为数据可能十位以上）如果想要固定每个th、td的宽度也可以尝试这样：</p>
 
@@ -47,5 +47,5 @@ categories:
 <span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">th</span>,
 <span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">td</span> {
   <span style="color:#ffd700">width</span>: <span style="color:#f5ab35">25%</span>; <span style="color:#d4d0ab">/* 设置宽度为相对于父元素的25% */</span>
-}</code></pre>
+}{% endhighlight %}
 

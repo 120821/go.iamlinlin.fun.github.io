@@ -49,7 +49,7 @@ const App = () =&gt; (
     &lt;h4&gt;step=null&lt;/h4&gt;
     &lt;Slider marks={marks} step={null} defaultValue={37} /&gt;
   &lt;/&gt;
-);</code></pre>
+);{% endhighlight %}
 
 <p>可以增加css:</p>
 
@@ -60,7 +60,7 @@ const App = () =&gt; (
 }
 #components-slider-demo-mark .ant-slider-with-marks {
   margin-bottom: 44px;
-}</code></pre>
+}{% endhighlight %}
 </div>
 
 <p>&nbsp;</p>

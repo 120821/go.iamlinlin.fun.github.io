@@ -13,17 +13,17 @@ categories:
       &lt;img src={require(&#39;./images/image.jpg&#39;)} alt=&quot;Example-Image&quot; /&gt;
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>2.使用引入：</p>
 
 <pre>
-<code><span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;</code></pre>
+<code><span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;{% endhighlight %}
 
 <p><code>然后：</code></p>
 
 <pre>
-<code>&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;</code></pre>
+<code>&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;{% endhighlight %}
 
 <p>比较完整的：</p>
 
@@ -41,7 +41,7 @@ class MyComponent extends Component {
   }
 }
 
-export default MyComponent;</code></pre>
+export default MyComponent;{% endhighlight %}
 
 <p>&nbsp;</p>
 

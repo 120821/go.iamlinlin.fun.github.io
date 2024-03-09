@@ -7,10 +7,10 @@ categories:
 <p>react for循环注意写的时候，都是;， 不要有，错误写法</p>
 
 <pre>
-<code>for (let i = 1; i &lt;= 20, i++) {</code></pre>
+<code>for (let i = 1; i &lt;= 20, i++) {{% endhighlight %}
 
 <p>正确：</p>
 
 <pre>
-<code>for (let i = 1; i &lt;= 20; i++) {</code></pre>
+<code>for (let i = 1; i &lt;= 20; i++) {{% endhighlight %}
 

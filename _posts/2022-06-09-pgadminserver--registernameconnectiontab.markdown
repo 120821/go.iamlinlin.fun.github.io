@@ -150,31 +150,31 @@ myname50   _temp   j   a23b9   retVal</pre>
 <hr>
 <h2>Go 语言的空格</h2> 
 <p>Go 语言中变量的声明必须使用空格隔开，如：</p> 
-<pre><code>var age int;</code></pre> 
+{% highlight %}var age int;{% endhighlight %} 
 <p>语句中适当使用空格能让程序更易阅读。</p> 
 <p>无空格：</p> 
-<pre><code>fruit=apples+oranges;</code></pre> 
+{% highlight %}fruit=apples+oranges;{% endhighlight %} 
 <p>在变量与运算符间加入空格，程序看起来更加美观，如：</p> 
-<pre><code>fruit = apples + oranges; </code></pre> 
+{% highlight %}fruit = apples + oranges; {% endhighlight %} 
 <hr>
 <h2>格式化字符串</h2> 
 <p>Go 语言中使用 fmt.Sprintf 格式化字符串并赋值给新串：</p> 
 <h2>实例</h2> 
-<pre><code>package main
+{% highlight %}package main
 
 import (
     "fmt"
 )
-</code></pre> 
-<pre><code>func main() {
+{% endhighlight %} 
+{% highlight %}func main() {
    // %d 表示整型数字，%s 表示字符串
     var stockcode=123
     var enddate="2020-12-31"
     var url="Code=%d&amp;endDate=%s"
     var target_url=fmt.Sprintf(url,stockcode,enddate)
     fmt.Println(target_url)
-}</code></pre> 
+}{% endhighlight %} 
 <p>输出结果为：</p> 
-<pre><code>Code=123&amp;endDate=2020-12-31</code></pre> 
+{% highlight %}Code=123&amp;endDate=2020-12-31{% endhighlight %} 
 <p></p>
                 

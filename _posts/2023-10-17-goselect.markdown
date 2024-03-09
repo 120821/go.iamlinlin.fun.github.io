@@ -7,5 +7,5 @@ categories:
 <p>在列表页面，有一些列根本用不上，直接不放即可：</p>
 
 <pre>
-<code>db.Select(&quot;name, id, created_at&quot;).Where(maps).Order(&quot;id desc&quot;).Offset((pageNum-1)*pageSize).Limit(pageSize).Find(&amp;datasets)</code></pre>
+<code>db.Select(&quot;name, id, created_at&quot;).Where(maps).Order(&quot;id desc&quot;).Offset((pageNum-1)*pageSize).Limit(pageSize).Find(&amp;datasets){% endhighlight %}
 

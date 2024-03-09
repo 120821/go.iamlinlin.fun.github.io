@@ -18,9 +18,9 @@ categories:
 <p>使用数据库创建的时候出现报错，那么与远程数据库无法连接，查看.toos-versions</p> 
 <blockquote> 
  <p>/home/linlin/.asdf/installs/ruby/2.6.9/lib/ruby/gems/2.6.0/gems/activesupport-4.2.8/lib/active_support/core_ext/object/duplicable.rb:111: warning: BigDecimal.new is deprecated; use BigDecimal() method instead.<br><span style="color:#fe2c24;">SCRAM authentication requires libpq version 10 or above</span><br> /home/linlin/.asdf/installs/ruby/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-4.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'<br> /home/linlin/.asdf/installs/ruby/2.6.9/lib/ruby/gems/2.6.0/gems/activerecord-4.2.8/lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'</p> 
- <pre><code>ruby 2.6.9
+ {% highlight %}ruby 2.6.9
 postgres 11.12
-</code></pre> 
+{% endhighlight %} 
  <p>把数据库版本调整到10以上。</p> 
  <p>bundle</p> 
  <p>bundle exec rake db:create</p> 

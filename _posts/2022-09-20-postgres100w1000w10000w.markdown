@@ -7,32 +7,32 @@ categories:
 <pre>
 <code><a href="https://www.cnblogs.com/mchina/archive/2013/04/19/3028573.html">查看index占用内存</a>
 查看每个表的数据总数：
-select count (*) from apples;</code></pre>
+select count (*) from apples;{% endhighlight %}
 
 <pre>
-<code>select count (*) from bananas;</code></pre>
+<code>select count (*) from bananas;{% endhighlight %}
 
 <pre>
-<code>select count (*) from cherries;</code></pre>
+<code>select count (*) from cherries;{% endhighlight %}
 
 <p><img height="113" src="/uploads/ckeditor/pictures/428/image-20220920160612-1.png" width="166" /><img height="144" src="/uploads/ckeditor/pictures/429/image-20220921091955-1.png" width="161" /><img height="115" src="/uploads/ckeditor/pictures/450/image-20220922084555-1.png" width="144" /></p>
 
 <p>查看数据first_name or last_name 是jim的数据，并记录时间：</p>
 
 <pre>
-<code>select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="440" src="/uploads/ckeditor/pictures/430/image-20220921092414-2.png" width="650" /></p>
 
 <pre>
-<code>select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="181" src="/uploads/ckeditor/pictures/431/image-20220921092457-3.png" width="597" /></p>
 
 <p><img height="181" src="/uploads/ckeditor/pictures/432/image-20220921092513-4.png" width="597" /></p>
 
 <pre>
-<code>select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="49" src="/uploads/ckeditor/pictures/451/image-20220922084701-2.png" width="566" /></p>
 
@@ -43,17 +43,17 @@ select count (*) from apples;</code></pre>
 <p>使用explain再次查询，记录时间：</p>
 
 <pre>
-<code>explain select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>explain select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="243" src="/uploads/ckeditor/pictures/433/image-20220921092540-5.png" width="521" /></p>
 
 <pre>
-<code>explain select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>explain select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="243" src="/uploads/ckeditor/pictures/434/image-20220921092558-6.png" width="521" /></p>
 
 <pre>
-<code>explain select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>explain select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="183" src="/uploads/ckeditor/pictures/454/image-20220922084903-5.png" width="496" /></p>
 
@@ -61,19 +61,19 @@ select count (*) from apples;</code></pre>
 1. 同样的SQL的查询时间, 包括 使用explain得到的结果也要记录。</p>
 
 <pre>
-<code>select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from apples where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="327" src="/uploads/ckeditor/pictures/439/image-20220921093951-7.png" width="503" /></p>
 
 <pre>
-<code>select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from bananas where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="147" src="/uploads/ckeditor/pictures/441/image-20220921094456-8.png" width="644" /></p>
 
 <p><img height="147" src="/uploads/ckeditor/pictures/442/image-20220921094559-9.png" width="644" /></p>
 
 <pre>
-<code>select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;</code></pre>
+<code>select * from cherries where first_name = &#39;jim&#39; or last_name = &#39;jim&#39;;{% endhighlight %}
 
 <p><img height="69" src="/uploads/ckeditor/pictures/456/image-20220922090146-2.png" width="561" /></p>
 
@@ -88,14 +88,14 @@ select count (*) from apples;</code></pre>
 <p>看一下index占用的空间(通过pg_admin应该可以看到，），可选任务。</p>
 
 <pre>
-<code>select pg_size_pretty(pg_relation_size(&#39;apple_names&#39;));</code></pre>
+<code>select pg_size_pretty(pg_relation_size(&#39;apple_names&#39;));{% endhighlight %}
 
 <p><img height="110" src="/uploads/ckeditor/pictures/447/image-20220921100730-1.png" width="181" /></p>
 
 <p><img height="201" src="/uploads/ckeditor/pictures/446/image-20220921095508-4.png" width="458" /></p>
 
 <pre>
-<code>select pg_size_pretty(pg_relation_size(&#39;banana_names&#39;));</code></pre>
+<code>select pg_size_pretty(pg_relation_size(&#39;banana_names&#39;));{% endhighlight %}
 
 <p><img height="138" src="/uploads/ckeditor/pictures/443/image-20220921095414-1.png" width="192" /></p>
 

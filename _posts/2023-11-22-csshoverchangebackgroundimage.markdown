@@ -31,5 +31,5 @@ categories:
     &lt;h2&gt; Change image on hover&lt;/h2&gt;
 	&lt;div class=&quot;change&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;{% endhighlight %}
 

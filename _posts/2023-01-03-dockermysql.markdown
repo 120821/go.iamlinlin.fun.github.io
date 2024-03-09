@@ -10,7 +10,7 @@ categories:
 
 <div class="prewrapper">
 <pre>
-<code>docker exec -it Docker容器名 mysqldump -uroot -p数据库密码 数据库名 &gt; 备份文件名.sql</code></pre>
+<code>docker exec -it Docker容器名 mysqldump -uroot -p数据库密码 数据库名 &gt; 备份文件名.sql{% endhighlight %}
 </div>
 
 <p><strong>还原MySQL数据库：</strong></p>
@@ -19,13 +19,13 @@ categories:
 
 <div class="prewrapper">
 <pre>
-<code>docker exec -it Docker容器名 mysql -uroot -p数据库密码 CREATE DATABASE 数据库名 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;</code></pre>
+<code>docker exec -it Docker容器名 mysql -uroot -p数据库密码 CREATE DATABASE 数据库名 DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;{% endhighlight %}
 </div>
 
 <p>还原：</p>
 
 <div class="prewrapper">
 <pre>
-<code>docker exec -i Docker容器名 mysql -uroot -p数据库密码 数据库名 &lt; 备份文件名.sql</code></pre>
+<code>docker exec -i Docker容器名 mysql -uroot -p数据库密码 数据库名 &lt; 备份文件名.sql{% endhighlight %}
 </div>
 

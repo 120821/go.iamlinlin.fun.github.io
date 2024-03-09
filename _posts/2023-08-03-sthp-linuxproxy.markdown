@@ -13,7 +13,7 @@ categories:
 
 /Downloads$ ll | grep sthp
 
--rw-rw-r--&nbsp; 1 linlin linlin&nbsp;&nbsp;&nbsp; 8696024&nbsp; 8月&nbsp; 3 09:56 sthp-linux</code></pre>
+-rw-rw-r--&nbsp; 1 linlin linlin&nbsp;&nbsp;&nbsp; 8696024&nbsp; 8月&nbsp; 3 09:56 sthp-linux{% endhighlight %}
 
 <p>2.我下载了linux版本的，进行安装：<br />
 首先变为可执行的文件</p>
@@ -21,7 +21,7 @@ categories:
 <pre>
 <code>chmod +x sthp-linux
 
-./sthp-linux</code></pre>
+./sthp-linux{% endhighlight %}
 
 <p>已经可以执行，设置端口号等配置，使用自己喜欢的端口：</p>
 
@@ -34,7 +34,7 @@ The application panicked (crashed).
 
 Message:&nbsp; error binding to 0.0.0.0:8080: error creating server listener: Address already in use (os error 98)
 
-Location: /home/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/hyper-0.14.26/src/server/server.rs:79</code></pre>
+Location: /home/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/hyper-0.14.26/src/server/server.rs:79{% endhighlight %}
 
 <p>查看本地的trojan的端口：</p>
 
@@ -53,12 +53,12 @@ trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 19u&nbsp; IPv4 11987105&nbsp;&n
 
 trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 25u&nbsp; IPv4 12206549&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:1090-&gt;localhost:40988 (ESTABLISHED)
 
-trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 45u&nbsp; IPv4 12298435&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:1090-&gt;localhost:52140 (ESTABLISHED)</code></pre>
+trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 45u&nbsp; IPv4 12298435&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:1090-&gt;localhost:52140 (ESTABLISHED){% endhighlight %}
 
 <p>设置端口：启动sthp:</p>
 
 <pre>
-<code>~/Downloads$ ./sthp-linux&nbsp; -p 8090 -s 127.0.0.1:1090</code></pre>
+<code>~/Downloads$ ./sthp-linux&nbsp; -p 8090 -s 127.0.0.1:1090{% endhighlight %}
 
 <p>写一个文件：~/env_source_env</p>
 
@@ -71,12 +71,12 @@ trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 45u&nbsp; IPv4 12298435&nbsp;&n
 
 &nbsp;&nbsp; export http_proxy=&quot;http://127.0.0.1:8090&quot;
 
-&nbsp;&nbsp; export https_proxy=&quot;http://127.0.0.1:8090&quot;</code></code></pre>
+&nbsp;&nbsp; export https_proxy=&quot;http://127.0.0.1:8090&quot;</code>{% endhighlight %}
 
 <p><code>打开一个新的命令行窗口：</code></p>
 
 <pre>
-<code><code>echo $HTTP_PROXY</code></code></pre>
+<code><code>echo $HTTP_PROXY</code>{% endhighlight %}
 
 <p><code>返回空，</code></p>
 
@@ -85,7 +85,7 @@ trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 45u&nbsp; IPv4 12298435&nbsp;&n
 
 linlin@linlin-i5:/workspace/dongtaipaifang_2_backend$ echo $HTTP_PROXY
 
-http://127.0.0.1:8090</code></code></pre>
+http://127.0.0.1:8090</code>{% endhighlight %}
 
 <p><code>这个时候，访问谷歌就非常快了，安装go react的依赖也会非常快。不会出现timeout的情况。</code></p>
 
@@ -102,7 +102,7 @@ The document has moved
 
 &lt;A HREF=&quot;http://www.google.com/&quot;&gt;here&lt;/A&gt;.
 
-&lt;/BODY&gt;&lt;/HTML&gt;</code></code></pre>
+&lt;/BODY&gt;&lt;/HTML&gt;</code>{% endhighlight %}
 
 <p><code>安装或者运行go</code></p>
 
@@ -115,7 +115,7 @@ go: downloading github.com/gin-contrib/cors v1.4.0
 
 go: downloading github.com/go-ini/ini v1.67.0</code>
 
-&nbsp;</code></pre>
+&nbsp;{% endhighlight %}
 
 <p><code>&nbsp;</code></p>
 

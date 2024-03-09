@@ -28,7 +28,7 @@ categories:
           return 0.8; // 设置南海边框宽度
         }
         return 0; // 隐藏其他省份的边框
-      });</code></pre>
+      });{% endhighlight %}
 
 <p>完整的代码：</p>
 
@@ -80,7 +80,7 @@ const ChinaMapBorder = () =&gt; {
   );
 };
 
-export default ChinaMapBorder;</code></pre>
+export default ChinaMapBorder;{% endhighlight %}
 
 <p>json数据是:&nbsp;<a href="https://github.com/120821/react_learn_for_d3_svg_path_20230912/blob/main/src/china_map_new.json">https://github.com/120821/react_learn_for_d3_svg_path_20230912/blob/main/src/china_map_new.json</a></p>
 

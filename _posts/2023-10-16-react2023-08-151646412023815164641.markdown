@@ -13,7 +13,7 @@ categories:
 186         dataIndex: &#39;created_at&#39;,
 187         key: &#39;created_at&#39;,
 188         render: (text) =&gt; new Date(text).toLocaleString(&#39;zh-CN&#39;, { timeZone: &#39;Asia/Shanghai&#39; }),
-189       },</code></pre>
+189       },{% endhighlight %}
 
 <p><code>显示的时间的格式是：</code>2023/8/15 16:46:41</p>
 
@@ -29,7 +29,7 @@ categories:
     const formattedDateWithDash = formattedDate.replace(/\//g, &#39;-&#39;);
     return formattedDateWithDash;
   },
-},</code></pre>
+},{% endhighlight %}
 
 <p>&nbsp;</p>
 

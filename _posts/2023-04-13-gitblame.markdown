@@ -11,7 +11,7 @@ categories:
 <p>使用 `git blame` 命令的格式如下：</p>
 
 <pre>
-<code>git blame &lt;file&gt;</code></pre>
+<code>git blame &lt;file&gt;{% endhighlight %}
 
 <p>其中 `&lt;file&gt;` 是你要查询的文件名。</p>
 
@@ -22,7 +22,7 @@ categories:
 
 c330cee7 (John Doe 2021-06-15 12:30:00 +0800 2)&nbsp;&nbsp; return x + y;
 
-c330cee7 (John Doe 2021-06-15 12:30:00 +0800 3) }</code></pre>
+c330cee7 (John Doe 2021-06-15 12:30:00 +0800 3) }{% endhighlight %}
 
 <p>在这个例子中，第一行代码提交者是 John Doe，提交时间为 2021-06-15 12:30:00 +0800，提交时该行代码的哈希值为 c330cee7。</p>
 
@@ -31,10 +31,10 @@ c330cee7 (John Doe 2021-06-15 12:30:00 +0800 3) }</code></pre>
 <p>Git blame is a Git command that allows you to see who last modified a particular line of code in a file, as well as the commit message and date and time for that modification. It can be useful for identifying when and by whom a particular change was made, and for tracking down bugs or issues in your code. The syntax for using git blame is as follows:</p>
 
 <pre>
-<code>git blame &lt;file path&gt;</code></pre>
+<code>git blame &lt;file path&gt;{% endhighlight %}
 
 <p>This will display each line of the file, along with the commit hash, author name, and date and time for the last modification of that line. Alternatively, you can also use the -L option followed by a range of line numbers to limit the output to a particular section of the file, like so:</p>
 
 <pre>
-<code>git blame -L &lt;start_line&gt;,&lt;end_line&gt; &lt;file path&gt;</code></pre>
+<code>git blame -L &lt;start_line&gt;,&lt;end_line&gt; &lt;file path&gt;{% endhighlight %}
 

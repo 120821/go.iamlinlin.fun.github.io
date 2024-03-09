@@ -11,13 +11,13 @@ categories:
 <pre>
 <code><span style="color:#dcc6e0">import</span> (
 	<span style="color:#abe338">&quot;time&quot;</span>
-)</code></pre>
+){% endhighlight %}
 
 <p>2.使用time.sleep</p>
 
 <pre>
 <code><span style="color:#d4d0ab">// 暂停程序执行 3 秒钟</span>
-time.Sleep(<span style="color:#f5ab35">3</span> * time.Second)</code></pre>
+time.Sleep(<span style="color:#f5ab35">3</span> * time.Second){% endhighlight %}
 
 <p><code>ai的解释：</code></p>
 

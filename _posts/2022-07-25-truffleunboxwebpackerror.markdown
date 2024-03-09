@@ -24,7 +24,7 @@ odules\truffle\build\webpack:\~\truffle-box\~\request\request.js:878:1)
     at ClientRequest.emit (events.js:211:7)
     at TLSSocket.socketErrorListener (_http_client.js:387:9)
     at emitOne (events.js:116:13)
-    at TLSSocket.emit (events.js:211:7)</code></pre>
+    at TLSSocket.emit (events.js:211:7){% endhighlight %}
 
 <p><strong>git clone https://github.com/trufflesuite/truffle-init-webpack.git</strong><br />
 Cloning into &#39;truffle-init-webpack&#39;...<br />

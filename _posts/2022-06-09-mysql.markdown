@@ -12,15 +12,15 @@ categories:
 <p><img alt="" src="https://img-blog.csdnimg.cn/e120330cb76c4b0fb767e22c7df34e18.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p>打开数据库创建新用户或者打开以前的用户，都不能顺利进行，都会看到报错。同样，在命令行看到的是这样。<img alt="" src="https://img-blog.csdnimg.cn/593ffb57736c481da471b8e4d707e1b5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p>那么首先在命令行进入MySQL，</p> 
-<pre><code>mysql -u root -p88888888</code></pre> 
+{% highlight %}mysql -u root -p88888888{% endhighlight %} 
 <p>输入命令，删除用户</p> 
-<pre><code>DROP USER 'mysql.infoschema'@'localhost';
-</code></pre> 
+{% highlight %}DROP USER 'mysql.infoschema'@'localhost';
+{% endhighlight %} 
 <p>然后，再次创建用户</p> 
-<pre><code>mysql&gt; CREATE USER 'mysql.infoschema'@'localhost' IDENTIFIED BY 'password';</code></pre> 
+{% highlight %}mysql&gt; CREATE USER 'mysql.infoschema'@'localhost' IDENTIFIED BY 'password';{% endhighlight %} 
 <p>最后，授予它权限</p> 
-<pre><code>mysql&gt; GRANT SELECT ON *.* TO `mysql.infoschema`@`localhost`;
-</code></pre> 
+{% highlight %}mysql&gt; GRANT SELECT ON *.* TO `mysql.infoschema`@`localhost`;
+{% endhighlight %} 
 <p>接下来就可以正常使用，也可以导入数据了。</p> 
 <blockquote> 
  <h3>常用命令</h3> 

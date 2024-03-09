@@ -10,7 +10,7 @@ categories:
 
 <pre>
 <code><span style="color:#f5ab35">#</span> 编辑服务单元文件
-sudo vim /etc/systemd/system/myservice.service</code></pre>
+sudo vim /etc/systemd/system/myservice.service{% endhighlight %}
 
 <p>内容如下：</p>
 
@@ -24,7 +24,7 @@ ExecStart=/path/to/your/service
 Type=simple
 
 [Install]
-WantedBy=multi-user.target</code></pre>
+WantedBy=multi-user.target{% endhighlight %}
 
 <p>例如：</p>
 
@@ -33,7 +33,7 @@ WantedBy=multi-user.target</code></pre>
 
 Description=My Service Start Trojan
 
-After=network.target</code></pre>
+After=network.target{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -46,32 +46,32 @@ WantedBy=multi-user.target</p>
 <p>2.保存好，重新加载：</p>
 
 <pre>
-<code>sudo systemctl daemon-reload</code></pre>
+<code>sudo systemctl daemon-reload{% endhighlight %}
 
 <p>3.启动：</p>
 
 <pre>
-<code>sudo systemctl enable myservice</code></pre>
+<code>sudo systemctl enable myservice{% endhighlight %}
 
 <p>手动启动：</p>
 
 <pre>
-<code>sudo systemctl start myservice</code></pre>
+<code>sudo systemctl start myservice{% endhighlight %}
 
 <p>手动停止：</p>
 
 <pre>
-<code>sudo systemctl stop myservice</code></pre>
+<code>sudo systemctl stop myservice{% endhighlight %}
 
 <p>重启：</p>
 
 <pre>
-<code>sudo systemctl restart myservice</code></pre>
+<code>sudo systemctl restart myservice{% endhighlight %}
 
 <p>查看状态：</p>
 
 <pre>
-<code>sudo systemctl status myservice</code></pre>
+<code>sudo systemctl status myservice{% endhighlight %}
 
 <p>不能这样写：</p>
 
@@ -85,7 +85,7 @@ ExecStart=/home/linlin/trojan
 Type=simple
 
 <span style="color:#00e0e0">[Install]</span>
-WantedBy=multi-user.target</code></pre>
+WantedBy=multi-user.target{% endhighlight %}
 
 <p>因为我的可执行文件start_trojan是一个需要到文件夹后在执行的文件：service是需要绝对路径，而不是相对路径。参考：<a href="https://blog.csdn.net/dreamstar613/article/details/124063201">https://blog.csdn.net/dreamstar613/article/details/124063201</a></p>
 
@@ -97,7 +97,7 @@ WantedBy=multi-user.target</code></pre>
 
 <pre>
 <code>sudo<span style="color:#dcc6e0"> system</span>ctl daemon-reload
-sudo<span style="color:#dcc6e0"> system</span>ctl start myservice</code></pre>
+sudo<span style="color:#dcc6e0"> system</span>ctl start myservice{% endhighlight %}
 
 <p>例如我终于成功后：</p>
 
@@ -114,7 +114,7 @@ firefox-b 6553 linlin&nbsp;&nbsp; 68u&nbsp; IPv4 558344&nbsp;&nbsp;&nbsp;&nbsp;&
 
 firefox-b 6553 linlin&nbsp;&nbsp; 91u&nbsp; IPv4 548605&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:40508-&gt;localhost:1090 (ESTABLISHED)
 
-firefox-b 6553 linlin&nbsp;&nbsp; 96u&nbsp; IPv4 568903&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:40512-&gt;localhost:1090 (ESTABLISHED)</code></pre>
+firefox-b 6553 linlin&nbsp;&nbsp; 96u&nbsp; IPv4 568903&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0t0&nbsp; TCP localhost:40512-&gt;localhost:1090 (ESTABLISHED){% endhighlight %}
 
 <p>可以看到之前失败的日志还保存着：</p>
 
@@ -173,7 +173,7 @@ firefox-b 6553 linlin&nbsp;&nbsp; 96u&nbsp; IPv4 568903&nbsp;&nbsp;&nbsp;&nbsp;&
 
 11月 19 14:18:38 linlin-i5 trojan[8887]: [2023-11-19 14:18:38] [INFO] 127.0.0.1:40500 requested connection to tch271958.tch.poe.com:443
 
-11月 19 14:18:38 linlin-i5 trojan[8887]: [2023-11-19 14:18:38] [ALL] 127.0.0.1:40500 demo2.nextc1oud.com is resolved to 154.39.65.3</code></pre>
+11月 19 14:18:38 linlin-i5 trojan[8887]: [2023-11-19 14:18:38] [ALL] 127.0.0.1:40500 demo2.nextc1oud.com is resolved to 154.39.65.3{% endhighlight %}
 
 <p>&nbsp;</p>
 

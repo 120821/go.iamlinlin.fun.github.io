@@ -9,12 +9,12 @@ categories:
 <p>1.首先安装gem:</p>
 
 <pre class="highlight">
-<code>gem <span class="nb">install </span>rack-test</code></pre>
+<code>gem <span class="nb">install </span>rack-test{% endhighlight %}
 
 <p><code>或者使用gemfile</code></p>
 
 <pre class="highlight">
-<code><span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span></code></pre>
+<code><span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span>{% endhighlight %}
 
 <p>2.假设有一个sinatra 的hello_world.rb APP文件</p>
 
@@ -23,7 +23,7 @@ categories:
 
 get &#39;/&#39; do
   &quot;Hello World #{params[:name]}&quot;.strip
-end</code></pre>
+end{% endhighlight %}
 
 <p>3.测试文件：test/*.rb</p>
 
@@ -46,7 +46,7 @@ RSpec.describe &#39;The HelloWorld App&#39; do
     expect(last_response).to be_ok
     expect(last_response.body).to eq(&#39;Hello World&#39;)
   end
-end</code></pre>
+end{% endhighlight %}
 
 <p>&nbsp;</p>
 

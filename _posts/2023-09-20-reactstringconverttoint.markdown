@@ -7,7 +7,7 @@ categories:
 <p>语法：</p>
 
 <pre>
-<code>const intValue = parseInt(this.state.inputValue, 10);</code></pre>
+<code>const intValue = parseInt(this.state.inputValue, 10);{% endhighlight %}
 
 <p>完整的示例：</p>
 
@@ -49,5 +49,5 @@ class MyComponent extends React.Component {
   }
 }
 
-export default MyComponent;</code></pre>
+export default MyComponent;{% endhighlight %}
 

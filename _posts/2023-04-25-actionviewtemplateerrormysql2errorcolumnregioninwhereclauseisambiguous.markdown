@@ -9,12 +9,12 @@ categories:
 <p>为了解决这个问题，需要在查询条件中指定表名或者使用别名。例如，如果查询中涉及了 users 表和 region 表，并且这两个表中都有 &#39;region&#39; 列，那么可以这样修改查询语句：</p>
 
 <pre>
-<code>SELECT users.* FROM users INNER JOIN region ON users.region_id=region.id WHERE region.region=&#39;xxx&#39;;</code></pre>
+<code>SELECT users.* FROM users INNER JOIN region ON users.region_id=region.id WHERE region.region=&#39;xxx&#39;;{% endhighlight %}
 
 <p>上述查询语句使用了 INNER JOIN 来链接 users 表和 region 表，同时将 users 表中的 region_id 列和 region 表中的 id 列进行关联。然后在查询条件 WHERE 中使用表名或者别名来指定 &#39;region&#39; 列属于哪个表，例如这里指定为 region.region。</p>
 
 <p>根据具体情况进行修改即可。</p>
 
 <pre>
-<code>@enterprise_personnels = @enterprise_personnels.joins(:region).where(&#39;regions.region = ?&#39;, params[:region]) if params[:region].present?</code></pre>
+<code>@enterprise_personnels = @enterprise_personnels.joins(:region).where(&#39;regions.region = ?&#39;, params[:region]) if params[:region].present?{% endhighlight %}
 

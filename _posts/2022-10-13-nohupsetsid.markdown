@@ -10,7 +10,7 @@ categories:
 
 <p>解决办法： 前面加上 setsid</p>
 
-<pre><code>setsid nohup bundle exec ruby app.rb &amp;</code></pre>
+{% highlight %}setsid nohup bundle exec ruby app.rb &amp;{% endhighlight %}
 
 <p>如果仍然不起作用：查看nohup的log nohup.out</p>
 

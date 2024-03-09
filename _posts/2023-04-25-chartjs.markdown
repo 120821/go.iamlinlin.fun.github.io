@@ -26,7 +26,7 @@ categories:
 <code>backgroundColor: [
   &#39;url(gradient1.png)&#39;,
   &#39;url(gradient2.png)&#39;
-]</code></pre>
+]{% endhighlight %}
 
 <p>其中，<code>gradient1.png</code> 和 <code>gradient2.png</code> 是两个渐变图片文件的 URL。这样就可以在 Chart.js 中使用线性渐变作为背景颜色了。</p>
 

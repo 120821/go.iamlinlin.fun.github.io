@@ -12,12 +12,12 @@ categories:
 <code>const data = this.state.data;
 const yearStart = this.state.yearStart;
 const yearEnd = this.state.yearEnd;
-const svgRef = this.state.svgRef;</code></pre>
+const svgRef = this.state.svgRef;{% endhighlight %}
 
 <p><code>写法2:</code></p>
 
 <p><code>简便写法</code></p>
 
 <pre>
-<code>const { data, yearStart, yearEnd, svgRef } = this.state;</code></pre>
+<code>const { data, yearStart, yearEnd, svgRef } = this.state;{% endhighlight %}
 

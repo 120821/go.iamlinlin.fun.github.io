@@ -15,21 +15,21 @@ class ApplicationJob &lt; ActiveJob::Base
 
 &nbsp; # Automatically retry jobs that encountered a deadlock
 
-&nbsp; # retry_on ActiveRecord::Deadlocked</code></pre>
+&nbsp; # retry_on ActiveRecord::Deadlocked{% endhighlight %}
 
 <pre>
 <code>&nbsp; # Most jobs are safe to ignore if the underlying records are no longer available
 
 &nbsp; # discard_on ActiveJob::DeserializationError
 
-end</code></pre>
+end{% endhighlight %}
 
 <pre>
 <code>cat app/jobs/say_hi_job.rb
 
 class SayHiJob &lt; ApplicationJob
 
-&nbsp; queue_as :default</code></pre>
+&nbsp; queue_as :default{% endhighlight %}
 
 <p><code>&nbsp; def perform(args)<br />
 &nbsp;&nbsp;&nbsp; # 演示如何获得参数<br />
@@ -52,24 +52,24 @@ class SayHiJob &lt; ApplicationJob
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <h3>一种是自己：</h3>
 
-<pre><code>cat app/jobs/guests_cleanup_job.rb<br />
+{% highlight %}cat app/jobs/guests_cleanup_job.rb<br />
 class GuestsCleanupJob &lt; ActiveJob::Base<br />
-&nbsp; queue_as :default</code></pre>
+&nbsp; queue_as :default{% endhighlight %}
 
-<pre><code>&nbsp; def perform(*args)<br />
+{% highlight %}&nbsp; def perform(*args)<br />
 &nbsp;&nbsp;&nbsp; # Do something later<br />
 &nbsp; end<br />
-end</code></pre>
+end{% endhighlight %}
 
-<pre><code>执行： 进入console</code></pre>
+{% highlight %}执行： 进入console{% endhighlight %}
 
-<pre><code>bundle exec rails c</code></pre>
+{% highlight %}bundle exec rails c{% endhighlight %}
 
-<pre><code>reload!<br />
+{% highlight %}reload!<br />
 Reloading...<br />
 =&gt; true<br />
 irb(main):002:0&gt; YunPianJob.perform_later<br />
@@ -84,7 +84,7 @@ Enqueued YunPianJob (Job ID: d5de572f-4f20-4db6-9263-2166b854ca07) to Async(defa
 &nbsp;@provider_job_id=&quot;456f4b94-a56e-47ed-97a4-884aa9c9a007&quot;,<br />
 &nbsp;@queue_name=&quot;default&quot;,<br />
 &nbsp;@timezone=&quot;UTC&quot;&gt;<br />
-Performing YunPianJob (Job ID: d5de572f-4f20-4db6-9263-2166b854ca07) from Async(default) enqueued at 2022-06-13T01:21:30Z</code></pre>
+Performing YunPianJob (Job ID: d5de572f-4f20-4db6-9263-2166b854ca07) from Async(default) enqueued at 2022-06-13T01:21:30Z{% endhighlight %}
 
 <p><img height="505" src="/uploads/ckeditor/pictures/14/image-20220613114308-1.png" width="1281" /></p>
 

@@ -12,27 +12,27 @@ categories:
 
 <p>安装其他版本，例如：</p>
 
-<pre><code>docker pull ubuntu:18.04</code></pre>
+{% highlight %}docker pull ubuntu:18.04{% endhighlight %}
 
 <p>拉取最新的Ubuntu镜像 ：</p>
 
 <pre>
-<code>$ docker pull ubuntu</code></pre>
+<code>$ docker pull ubuntu{% endhighlight %}
 
 <p>或者</p>
 
 <pre>
-<code>$ docker pull ubuntu:latest</code></pre>
+<code>$ docker pull ubuntu:latest{% endhighlight %}
 
 <p>查看本地镜像：</p>
 
 <pre>
-<code>$ docker images</code></pre>
+<code>$ docker images{% endhighlight %}
 
 <p>运行容器，并且可以通过 exec 命令进入 ubuntu 容器</p>
 
 <pre>
-<code>$ docker run -itd --name ubuntu-test ubuntu</code></pre>
+<code>$ docker run -itd --name ubuntu-test ubuntu{% endhighlight %}
 
 <p>安装成功</p>
 

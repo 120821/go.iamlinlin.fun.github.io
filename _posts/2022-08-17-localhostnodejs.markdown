@@ -31,7 +31,7 @@ export HTTPS_PROXY=&quot;http://192.168.0.102:8080&quot;
 
 export http_proxy=&quot;http://192.168.0.102:8080&quot;
 
-export https_proxy=&quot;http://192.168.0.102:8080&quot;</code></pre>
+export https_proxy=&quot;http://192.168.0.102:8080&quot;{% endhighlight %}
 
 <p>测试一些谷歌是否可以正常连接，</p>
 
@@ -46,7 +46,7 @@ The document has moved<br />
 <pre>
 <code>curl https://api.avax-test.network/ext/bc/C/rpc:443
 
-Not Foundlinlin@linlin-i5:/workspace/pns-airdrop-admin$</code></pre>
+Not Foundlinlin@linlin-i5:/workspace/pns-airdrop-admin${% endhighlight %}
 
 <p><img src="/uploads/ckeditor/pictures/233/image-20220817141016-1.png" style="height:200px; width:1124px" /></p>
 
@@ -79,7 +79,7 @@ Uncaught Error: Invalid JSON RPC response: undefined
 
 &nbsp;&nbsp;&nbsp; at RequestManager.send (/workspace/pns-airdrop-admin/node_modules/web3/lib/web3/requestmanager.js:58:32)
 
-&nbsp;&nbsp;&nbsp; at Eth.get [as accounts] (/workspace/pns-airdrop-admin/node_modules/web3/lib/web3/property.js:107:62)</code></pre>
+&nbsp;&nbsp;&nbsp; at Eth.get [as accounts] (/workspace/pns-airdrop-admin/node_modules/web3/lib/web3/property.js:107:62){% endhighlight %}
 
 <p>&nbsp;</p>
 

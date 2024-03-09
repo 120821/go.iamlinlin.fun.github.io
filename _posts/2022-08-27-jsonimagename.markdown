@@ -6,7 +6,7 @@ categories:
 ---
 <p>生成json</p>
 
-<pre><code>require &#39;json&#39;<br />
+{% highlight %}require &#39;json&#39;<br />
 (1..445).each do |i|<br />
 &nbsp; content = {<br />
 &nbsp;&nbsp;&nbsp; &quot;image&quot; =&gt; &quot;nft-data.raindrop.link/imgs/srvf-life/#{i}.jpg&quot;,<br />
@@ -16,7 +16,7 @@ categories:
 &nbsp;&nbsp;&nbsp; f.write(content.to_json)<br />
 &nbsp; end<br />
 end<br />
-&nbsp;&nbsp;&nbsp;</code></pre>
+&nbsp;&nbsp;&nbsp;{% endhighlight %}
 
 <div class="notranslate" style="all: initial;">&nbsp;</div>
 

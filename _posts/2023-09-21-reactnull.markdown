@@ -7,7 +7,7 @@ categories:
 <p>如果在接口返回的数据中存在null的数据，例如这样：</p>
 
 <pre>
-<code>{&quot;bank_count&quot;:<span style="color:#abe338">&quot;760.65874568&quot;</span>,&quot;emission_all&quot;:<span style="color:#abe338">&quot;712.14230283&quot;</span>,&quot;emission_discard&quot;:<span style="color:#abe338">&quot;225.96975736&quot;</span>,&quot;emission_init&quot;:<span style="color:#abe338">&quot;52.00000000&quot;</span>,&quot;emission_operation&quot;:<span style="color:#abe338">&quot;318.24504262&quot;</span>,&quot;emission_service&quot;:<span style="color:#abe338">&quot;115.92750285&quot;</span>,&quot;year&quot;:<span style="color:#f5ab35">2027</span>},<span style="color:#f5ab35">null</span>]&#39;, materialId: <span style="color:#f5ab35">16</span> }</code></pre>
+<code>{&quot;bank_count&quot;:<span style="color:#abe338">&quot;760.65874568&quot;</span>,&quot;emission_all&quot;:<span style="color:#abe338">&quot;712.14230283&quot;</span>,&quot;emission_discard&quot;:<span style="color:#abe338">&quot;225.96975736&quot;</span>,&quot;emission_init&quot;:<span style="color:#abe338">&quot;52.00000000&quot;</span>,&quot;emission_operation&quot;:<span style="color:#abe338">&quot;318.24504262&quot;</span>,&quot;emission_service&quot;:<span style="color:#abe338">&quot;115.92750285&quot;</span>,&quot;year&quot;:<span style="color:#f5ab35">2027</span>},<span style="color:#f5ab35">null</span>]&#39;, materialId: <span style="color:#f5ab35">16</span> }{% endhighlight %}
 
 <p>那么页面展示的时候会出现result undefind</p>
 
@@ -22,7 +22,7 @@ materialResults.forEach(result =&gt; {
   const year = result.year;
   const emissionAll = result.emission_all ? result.emission_all : null;
   // 其他处理逻辑...
-});</code></pre>
+});{% endhighlight %}
 
 <p>（2）在render里可以这样处理：</p>
 
@@ -37,5 +37,5 @@ materialResults.forEach(result =&gt; {
         ))}
       &lt;/tr&gt;
     ))}
-&lt;/tbody&gt;</code></pre>
+&lt;/tbody&gt;{% endhighlight %}
 

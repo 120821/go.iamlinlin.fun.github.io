@@ -22,7 +22,7 @@ categories:
   &lt;/div&gt;
   &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;
-</code></pre> 
+{% endhighlight %} 
 <p><img alt="" height="295" src="https://img-blog.csdnimg.cn/cc333c1c47b54aa38f82eb3af49bb6b6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="832"></p> 
 <p> </p>
                 

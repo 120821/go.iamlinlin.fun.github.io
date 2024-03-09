@@ -11,7 +11,7 @@ categories:
 <p>安装：</p>
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-sh" data-lang="sh">$ go get -u github.com/gin-gonic/gin</code></pre>
+<code class="language-sh" data-lang="sh">$ go get -u github.com/gin-gonic/gin{% endhighlight %}
 
 <p><img height="115" src="/uploads/ckeditor/pictures/603/image-20221024085553-1.png" width="774" /></p>
 
@@ -20,7 +20,7 @@ categories:
 <div class="highlight">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:700">import</span> <span style="color:#4e9a06">&quot;github.com/gin-gonic/gin&quot;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>在代码增加引入即可</p>
 
@@ -29,15 +29,15 @@ categories:
 <div class="highlight">
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:700">import</span> <span style="color:#4e9a06">&quot;net/http&quot;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>（1）创建目录并进入</p>
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-sh" data-lang="sh">$ mkdir -p <span style="color:#000">$GOPATH</span>/src/github.com/myusername/project <span style="color:#ce5c00;font-weight:700">&amp;&amp;</span> <span style="color:#204a87">cd</span> <span style="color:#4e9a06">&quot;</span><span style="color:#000">$_</span><span style="color:#4e9a06">&quot;</span></code></pre>
+<code class="language-sh" data-lang="sh">$ mkdir -p <span style="color:#000">$GOPATH</span>/src/github.com/myusername/project <span style="color:#ce5c00;font-weight:700">&amp;&amp;</span> <span style="color:#204a87">cd</span> <span style="color:#4e9a06">&quot;</span><span style="color:#000">$_</span><span style="color:#4e9a06">&quot;</span>{% endhighlight %}
 
 <pre>
-<code class="language-sh" data-lang="sh"><span style="color:#4e9a06">（2）获取文件：</span></code></pre>
+<code class="language-sh" data-lang="sh"><span style="color:#4e9a06">（2）获取文件：</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 
@@ -54,14 +54,14 @@ root@iZj6c56yutlhy1doylrr41Z:~/go-test# go run main.go
 
 [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
 
-[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.</code></pre>
+[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.{% endhighlight %}
 
 <p><img height="381" src="/uploads/ckeditor/pictures/605/image-20221024171839-1.png" width="1519" /></p>
 
 <p>快速开始：vim <code>example.go</code></p>
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<code class="language-sh" data-lang="sh"> go run example.go</code></pre>
+<code class="language-sh" data-lang="sh"> go run example.go{% endhighlight %}
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:700">package</span> <span style="color:#000">main</span>
@@ -77,7 +77,7 @@ root@iZj6c56yutlhy1doylrr41Z:~/go-test# go run main.go
 	<span style="color:#000;font-weight:700">})</span>
 	<span style="color:#000">r</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">()</span> <span style="color:#8f5902;font-style:italic">// listen and serve on 0.0.0.0:8080
 </span><span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><img height="331" src="/uploads/ckeditor/pictures/606/image-20221024172116-1.png" width="1519" /></p>
 

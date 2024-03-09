@@ -12,7 +12,7 @@ categories:
 	<li>打开命令行终端并进入要查看的 Git 仓库目录。</li>
 	<li>运行 <code>git blame</code> 命令并指定要查看的文件名。例如，要查看名为 <code>example.txt</code> 的文件，可以输入以下命令：
 	<pre>
-<code>git blame example.txt</code></pre>
+<code>git blame example.txt{% endhighlight %}
 	</li>
 	<li>此时终端会显示文件的每一行代码及其相应的作者和提交时间。每行代码前都会有一个哈希值，该哈希值与这次提交相关联。例如，以下是 <code>example.txt</code> 文件的示例输出：
 	<pre>
@@ -20,11 +20,11 @@ categories:
 12c3d223 (John Smith 2021-05-28 10:09:32 +0800 2) 
 1a2b3c4d (Jane Doe 2021-05-26 09:28:11 +0800 3) It is used for demonstrating Git commands.
 12c3d223 (John Smith 2021-05-28 10:09:32 +0800 4) 
-321cba98 (Bob Johnson 2021-05-25 16:00:00 +0800 5) Feel free to modify this file as needed.</code></pre>
+321cba98 (Bob Johnson 2021-05-25 16:00:00 +0800 5) Feel free to modify this file as needed.{% endhighlight %}
 	</li>
 	<li>可以结合 <code>-L &lt;start&gt;,&lt;end&gt;</code> 参数查看指定行范围的代码修改历史。例如，以下命令将查看 <code>example.txt</code> 文件的第 5 至第 10 行的修改历史：
 	<pre>
-<code>git blame -L 5,10 example.txt</code></pre>
+<code>git blame -L 5,10 example.txt{% endhighlight %}
 	</li>
 </ol>
 

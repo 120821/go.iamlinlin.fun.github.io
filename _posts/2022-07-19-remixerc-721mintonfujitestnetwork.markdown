@@ -68,8 +68,8 @@ categories:
 
 <p>结论是不行，如下图所示，&nbsp;</p>
 
-<pre><code>Gas estimation errored with the following message (see below). The transaction execution will likely fail. Do you want to force sending?<br />
-Internal JSON-RPC error. { &quot;code&quot;: 3, &quot;message&quot;: &quot;execution reverted: ERC721: transfer caller is not owner nor approved&quot;, &quot;data&quot;: &quot;0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000314552433732313a207472616e736665722063616c6c6572206973206e6f74206f776e6572206e6f7220617070726f766564000000000000000000000000000000&quot; }</code></pre>
+{% highlight %}Gas estimation errored with the following message (see below). The transaction execution will likely fail. Do you want to force sending?<br />
+Internal JSON-RPC error. { &quot;code&quot;: 3, &quot;message&quot;: &quot;execution reverted: ERC721: transfer caller is not owner nor approved&quot;, &quot;data&quot;: &quot;0x08c379a0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000314552433732313a207472616e736665722063616c6c6572206973206e6f74206f776e6572206e6f7220617070726f766564000000000000000000000000000000&quot; }{% endhighlight %}
 
 <p><img src="https://files.sweetysoft.com/blog_images/from_paste_20220430_152701.png" /></p>
 

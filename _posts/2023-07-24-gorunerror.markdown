@@ -25,7 +25,7 @@ models/models.go:9:2: github.com/jinzhu/gorm@v1.9.16: Get &quot;https://proxy.go
 
 models/calculation_plans.go:3:8: github.com/lib/pq@v1.10.9: Get &quot;https://proxy.golang.org/github.com/lib/pq/@v/v1.10.9.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout
 
-pkg/util/pagination.go:6:2: github.com/unknwon/com@v1.0.1: Get &quot;https://proxy.golang.org/github.com/unknwon/com/@v/v1.0.1.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout</code></pre>
+pkg/util/pagination.go:6:2: github.com/unknwon/com@v1.0.1: Get &quot;https://proxy.golang.org/github.com/unknwon/com/@v/v1.0.1.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout{% endhighlight %}
 
 <p>这个错误提示显示了在下载依赖包时出现了网络连接超时的问题。你可以尝试以下几个解决方法：</p>
 
@@ -38,12 +38,12 @@ pkg/util/pagination.go:6:2: github.com/unknwon/com@v1.0.1: Get &quot;https://pro
 <p>增加：</p>
 
 <pre>
-<code>export GOPROXY=https://goproxy.io</code></pre>
+<code>export GOPROXY=https://goproxy.io{% endhighlight %}
 
 <p>然后</p>
 
 <pre>
-<code>source ~/.bashrc</code></pre>
+<code>source ~/.bashrc{% endhighlight %}
 
 <p>重新运行即可</p>
 

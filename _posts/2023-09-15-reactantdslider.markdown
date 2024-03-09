@@ -25,7 +25,7 @@ const App = () =&gt; {
     &lt;/&gt;
   );
 };
-export default App;</code></pre>
+export default App;{% endhighlight %}
 
 <p>2.带有tooltip: 可以设置默认值和tooltip</p>
 
@@ -40,5 +40,5 @@ const App = () =&gt; (
     }}
   /&gt;
 );
-export default App;</code></pre>
+export default App;{% endhighlight %}
 

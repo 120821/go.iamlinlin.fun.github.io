@@ -7,12 +7,12 @@ categories:
 <p>nginx 启动(任意目录下）：/p&gt;</p>
 
 <pre>
-<code>nginx</code></pre>
+<code>nginx{% endhighlight %}
 
 <p>NGINX 停止（任意目录下）/p&gt;</p>
 
 <pre>
-<code>nginx -s stop</code></pre>
+<code>nginx -s stop{% endhighlight %}
 
 <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><code>nginx 配置文件：</code></div>
 
@@ -131,7 +131,7 @@ upstream linlin_fun_server{
 
 &nbsp; server localhost:3000;
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>然后在sites-enabled/文件夹内创建子文件，可以使用域名进行命名：</p>
 
@@ -192,7 +192,7 @@ upstream linlin_fun_server{
 
 &nbsp; server localhost:3000;
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>子域名也使用域名进行命名</p>
 
@@ -227,16 +227,16 @@ server {
 
 /var/log/nginx#
 
-tail -f error.log access.log</code></pre>
+tail -f error.log access.log{% endhighlight %}
 
 <p>nginx log的使用：</p>
 
 <p>进入/var/log/nginx# 目录下</p>
 
-<pre><code>cd /var/log/nginx#</code></pre>
+{% highlight %}cd /var/log/nginx#{% endhighlight %}
 
 <p>同时查看成功和报错的日志：</p>
 
-<pre><code>tail -f access.log error.log</code></pre>
+{% highlight %}tail -f access.log error.log{% endhighlight %}
 <p>&nbsp;</p>
 

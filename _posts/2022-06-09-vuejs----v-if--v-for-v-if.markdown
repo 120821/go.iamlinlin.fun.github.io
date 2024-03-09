@@ -7,7 +7,7 @@ categories:
 
                     <blockquote>
  如果没有下载vue，可以用链接的方法进行体验： 
- <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"&gt;&lt;/script&gt;</code></pre> 
+ {% highlight %}&lt;script src="https://cdn.jsdelivr.net/npm/vue@3.2.2"&gt;&lt;/script&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote>
  安装vue,直接输入命令即可   npm install -g @vue/cli@4.5.13 vue@3.2.2
@@ -19,7 +19,7 @@ categories:
 <p> 注意不要把$符号放在文件内</p> 
 <blockquote>
  创建新项目,输入命令 
- <pre><code>vue init webpack my-project</code></pre> 
+ {% highlight %}vue init webpack my-project{% endhighlight %} 
  <p style="text-align:center;">填写详细信息,如项目名称,作者等即可.<img alt="" src="https://img-blog.csdnimg.cn/9a866bbd883a43a884ec8a7a35b1eb6c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
  <p> 创建后 直接cd 进入项目 ： cd 项目名字</p> 
  <p style="text-align:center;">创建一个页面，需要创建路由和视图，进入路由文件进行修改<img alt="" src="https://img-blog.csdnimg.cn/c7f772dc9c544cdfa2a81ee4b19230e2.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 

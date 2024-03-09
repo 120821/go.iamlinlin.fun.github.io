@@ -15,7 +15,7 @@ categories:
 <p>2.在linux里查看软路由是：</p>
 
 <pre>
-<code>ip route</code></pre>
+<code>ip route{% endhighlight %}
 
 <p>在返回的结果里，默认路由：以&quot;default&quot;开头的行，指示了您的计算机发送数据包时要使用的下一跳网关。</p>
 

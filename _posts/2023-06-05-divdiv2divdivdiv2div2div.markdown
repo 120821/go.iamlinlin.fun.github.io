@@ -36,7 +36,7 @@ categories:
 		});
 	&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;{% endhighlight %}
 
 <p>在上面的代码中，我们使用了CSS将div2元素初始隐藏。然后，我们使用JavaScript获取div和div2元素，并为它们分别添加双击事件监听器。在事件处理程序中，我们使用CSS的display属性来切换它们的显示状态。</p>
 

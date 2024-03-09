@@ -11,7 +11,7 @@ categories:
 <p>i=1; for x in *.文件格式; do <strong>echo</strong> mv $x $i.文件格式; let i=i+1; done</p>
 
 <pre>
-<code>i=1; for x in *.jpeg; do $echo mv $x $i.jpeg; let i=i+1; done</code></pre>
+<code>i=1; for x in *.jpeg; do $echo mv $x $i.jpeg; let i=i+1; done{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>如果文件名称存在空格，那么进行批量修改名称的时候就会报错，自己手动进行修改就可以了，</code></div>
 

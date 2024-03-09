@@ -18,7 +18,7 @@ textStyle: {
     fontSize: 12,
     fontStyle: &#39;normal&#39;,
     fontWeight: &#39;normal&#39;
- },</code></pre>
+ },{% endhighlight %}
 
 <p>更具体的位置是：</p>
 
@@ -49,5 +49,5 @@ textStyle: {
 +          }
          }
        ],
-       yAxis: [</code></pre>
+       yAxis: [{% endhighlight %}
 

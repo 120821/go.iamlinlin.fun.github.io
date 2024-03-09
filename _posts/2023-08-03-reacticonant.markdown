@@ -9,17 +9,17 @@ categories:
 <p>1.引入ant</p>
 
 <pre>
-<code>npm install antd --save</code></pre>
+<code>npm install antd --save{% endhighlight %}
 
 <p>2.在页面引用：</p>
 
 <pre>
-<code>import { StarOutlined } from &#39;@ant-design/icons&#39;;</code></pre>
+<code>import { StarOutlined } from &#39;@ant-design/icons&#39;;{% endhighlight %}
 
 <p>如果想要引入多个icon，可以这样书写：</p>
 
 <pre>
-<code>import { UserOutlined, MailOutlined, PieChartOutlined } from &#39;@ant-design/icons&#39;;</code></pre>
+<code>import { UserOutlined, MailOutlined, PieChartOutlined } from &#39;@ant-design/icons&#39;;{% endhighlight %}
 
 <p>上面这行代码就是在页面引入了ant的icon StarOutlined,在页面显示的是一个空心的星星</p>
 
@@ -32,12 +32,12 @@ categories:
 
 &nbsp; 查看
 
-&lt;/Button&gt;</code></pre>
+&lt;/Button&gt;{% endhighlight %}
 
 <p>上面这段代码是在查看这个button左侧增加了这个星星icon，如果你想设置css，例如居右8px等，可以使用：</p>
 
 <pre>
-<code>&lt;StarOutlined style={{ marginRight: 8 }} /&gt;</code></pre>
+<code>&lt;StarOutlined style={{ marginRight: 8 }} /&gt;{% endhighlight %}
 
 <p>如果是在&#39;&#39;中引用，可以这样书写：</p>
 
@@ -51,5 +51,5 @@ categories:
     ),
     dataIndex: &#39;calculation_plan_name&#39;,
     key: &#39;calculation_plan_name&#39;,
-  },</code></pre>
+  },{% endhighlight %}
 

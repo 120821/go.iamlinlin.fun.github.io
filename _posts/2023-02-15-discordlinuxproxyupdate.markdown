@@ -11,12 +11,12 @@ categories:
 <p>2.安装</p>
 
 <pre>
-<code>sudo dpkg -i xxx.deb</code></pre>
+<code>sudo dpkg -i xxx.deb{% endhighlight %}
 
 <p>配置proxy</p>
 
 <pre>
-<code>pproxy -r socks5://127.0.0.1:1090 -vv</code></pre>
+<code>pproxy -r socks5://127.0.0.1:1090 -vv{% endhighlight %}
 
 <pre>
 <code>pproxy -r socks5://127.0.0.1:1090 -vv
@@ -53,12 +53,12 @@ Serving on :8080 by http,socks4,socks5
 
 2023-02-14 11:20:50 http 127.0.0.1:36300 -&gt; socks5 127.0.0.1:1090 -&gt; dl.discordapp.net:443
 
-2023-02-14 11:20:56 http 127.0.0.1:45658 -&gt; socks5 127.0.0.1:1090 -&gt; discordapp.com:443</code></pre>
+2023-02-14 11:20:56 http 127.0.0.1:45658 -&gt; socks5 127.0.0.1:1090 -&gt; discordapp.com:443{% endhighlight %}
 
 <p>3.使用</p>
 
 <pre>
-<code>env http_proxy=http://127.0.0.1:8080 https_proxy=http://127.0.0.1:8080 /usr/bin/discord --proxy-server=&quot;http://127.0.0.1:8080&quot;</code></pre>
+<code>env http_proxy=http://127.0.0.1:8080 https_proxy=http://127.0.0.1:8080 /usr/bin/discord --proxy-server=&quot;http://127.0.0.1:8080&quot;{% endhighlight %}
 
 <pre>
 <code>cd /home/linlin/Downloads/
@@ -101,7 +101,7 @@ Starting updater.
 
 2023-02-14T03:20:49.441Z [Modules] Host updates: enabled
 
-2023-02-14T03:20:49.441Z [Modules] Module updates: enabled</code></pre>
+2023-02-14T03:20:49.441Z [Modules] Module updates: enabled{% endhighlight %}
 
 <p>&nbsp;</p>
 

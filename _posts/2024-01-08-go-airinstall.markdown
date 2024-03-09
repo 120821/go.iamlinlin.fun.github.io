@@ -16,7 +16,7 @@ curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh
 # or install it into ./bin/
 curl -sSfL https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s
 
-air -v</code></pre>
+air -v{% endhighlight %}
 
 <p>然后就可以启动go项目了。</p>
 

@@ -11,7 +11,7 @@ categories:
 <pre>
 <code>title: {
   text: &#39;2 &lt;%#这里使用转义字符%&gt;&amp;lt; 3&#39;, 
-},</code></pre>
+},{% endhighlight %}
 
 <p>其中<code>&amp;lt;</code>表示字符<code>&lt;</code>的HTML实体名，也可以使用<code>&amp;#60;</code>代替。这样，Highcharts会正确显示<code>2 &lt; 3</code>作为标题的文本。</p>
 
@@ -26,5 +26,5 @@ end
 # 使用转义后的字符串
 title: {
   text: &quot;Title with &lt;%= escape_html(&quot;&lt;demo&gt;&quot;) %&gt;&quot;,
-},</code></pre>
+},{% endhighlight %}
 

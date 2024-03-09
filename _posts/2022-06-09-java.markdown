@@ -18,10 +18,10 @@ public class selfAddMinus{
         System.out.println("进行自减运算后的值等于"+d);
     }
 }
-</code></pre> 
+{% endhighlight %} 
 <p><strong>2、前缀自增自减法(++a,--a): </strong>先进行自增或者自减运算，再进行表达式运算。<img alt="" height="80" src="https://img-blog.csdnimg.cn/416434d2066b44deaf9d4cf0ca654f81.png" width="298"></p> 
 <p> </p> 
-<pre><code>
+{% highlight %}
 public class selfAddMinus{
     public static void main(String[] args){
         int a = 5;//定义一个变量；
@@ -32,7 +32,7 @@ public class selfAddMinus{
         System.out.println("自增运算符后缀运算后b="+b+",y="+y);
     }
 }
-</code></pre> 
+{% endhighlight %} 
 <p><strong>3、后缀自增自减法(a++,a--): </strong>先进行表达式运算，再进行自增或者自减运算 实例：</p> 
 <pre><code class="language-java">
 public class Test {
@@ -55,7 +55,7 @@ public class Test {
      System.out.println("++d   = " +  (++d) );
   }
 }
-</code></pre> 
+{% endhighlight %} 
 <h2>运行结果<img alt="" height="227" src="https://img-blog.csdnimg.cn/2aa72c6ae4f144d8be430c5ae1751a5b.png" width="264">
 </h2> 
 <p> </p> 
@@ -99,7 +99,7 @@ public class Test {
 <td>（A &lt;= B）为真。</td>
 </tr>
 </tbody></table>
-<pre><code>
+{% highlight %}
 Test.java 文件代码：
 public class Test {
  
@@ -114,7 +114,7 @@ public class Test {
      System.out.println("b &lt;= a = " + (b &lt;= a) );
   }
 }
-</code></pre> 
+{% endhighlight %} 
 <h2><img alt="" height="144" src="https://img-blog.csdnimg.cn/e1aeaa1228ec48b49fe659baa3010fc9.png" width="208"></h2> 
 <h2>逻辑运算符</h2> 
 <p>下表列出了逻辑运算符的基本运算，假设布尔变量A为真，变量B为假</p> 
@@ -141,7 +141,7 @@ public class Test {
 </tr>
 </tbody></table>
 <p> <img alt="" height="98" src="https://img-blog.csdnimg.cn/be61ebed1db7447e92906ff15b273440.png" width="222"></p> 
-<pre><code>
+{% highlight %}
 public class Test {
   public static void main(String[] args) {
      boolean a = true;
@@ -151,10 +151,10 @@ public class Test {
      System.out.println("!(a &amp;&amp; b) = " + !(a &amp;&amp; b));
   }
 }
-</code></pre> 
+{% endhighlight %} 
 <h2>条件运算符（?:）</h2> 
 <p>条件运算符也被称为三元运算符。该运算符有3个操作数，并且需要判断布尔表达式的值。该运算符的主要是决定哪个值应该赋值给变量。</p> 
-<pre><code>variable x = (expression) ? value if true : value if false</code></pre> 
+{% highlight %}variable x = (expression) ? value if true : value if false{% endhighlight %} 
 <h3>实例</h3> 
 <h2>Test.java 文件代码：</h2> 
 <pre><code class="language-java">
@@ -171,7 +171,7 @@ public class Test {
       System.out.println( "Value of b is : " + b );
    }
 }
-</code></pre> 
+{% endhighlight %} 
 <p>以上实例编译运行结果如下：</p> 
 <p><img alt="" height="79" src="https://img-blog.csdnimg.cn/8e2d8dfaa43e4a32897f917b390d58a4.png" width="246"></p> 
 <h2>Java运算符优先级</h2> 

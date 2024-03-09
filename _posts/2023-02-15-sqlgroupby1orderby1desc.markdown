@@ -17,6 +17,6 @@ categories:
           1           2
 
 FROM account
-GROUP BY 1;</code></pre>
+GROUP BY 1;{% endhighlight %}
 </div>
 

@@ -9,7 +9,7 @@ categories:
 <pre class="lang-js s-code-block">
 <code class="hljs language-javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(){
     $(<span class="hljs-string">&#39;&lt;form action=&quot;form2.html&quot;&gt;&lt;/form&gt;&#39;</span>).<span class="hljs-title function_">appendTo</span>(<span class="hljs-string">&#39;body&#39;</span>).<span class="hljs-title function_">submit</span>();
-});</code></pre>
+});{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><tt><code class="hljs language-javascript">使用.appendTo(&#39;body&#39;)才可以提交</code></tt></div>
 
@@ -26,10 +26,10 @@ categories:
         <span class="hljs-string">&#39;type&#39;</span>: <span class="hljs-string">&#39;hidden&#39;</span>
     }));
     newForm.<span class="hljs-title function_">submit</span>();
-});</code></pre>
+});{% endhighlight %}
 
 <pre>
-<code class="hljs language-javascript">修改为：newForm.<span class="hljs-title function_">appendTo(&#39;body&#39;).submit</span>();</code></pre>
+<code class="hljs language-javascript">修改为：newForm.<span class="hljs-title function_">appendTo(&#39;body&#39;).submit</span>();{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="hljs language-javascript">需要提交多个数据，就多个input即可</code></div>
 
@@ -51,7 +51,7 @@ categories:
 <span class="hljs-string">        &#39;type&#39;</span>: <span class="hljs-string">&#39;hidden&#39;</span>
 }));
     newForm.<span class="hljs-title function_">appendTo(&#39;body&#39;).submit</span>();
-});</code></pre>
+});{% endhighlight %}
 
 <p>然后增加csrf保护：</p>
 
@@ -109,5 +109,5 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }))
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; newForm.appendTo(&#39;body&#39;).submit();
 
- }&nbsp; &nbsp;</code></pre>
+ }&nbsp; &nbsp;{% endhighlight %}
 

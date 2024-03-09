@@ -12,5 +12,5 @@ categories:
   total={totalCount}
   onChange={this.handlePaginationChange}
   showSizeChanger={false} // 隐藏每页筛选几条的按钮
-/&gt;</code></pre>
+/&gt;{% endhighlight %}
 

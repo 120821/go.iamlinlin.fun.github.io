@@ -12,7 +12,7 @@ categories:
 <code class="hljs language-javascript"> <span class="hljs-keyword">var</span> date = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();
  <span class="hljs-keyword">var</span> minutes = <span class="hljs-number">30</span>;
  date.<span class="hljs-title function_">setTime</span>(date.<span class="hljs-title function_">getTime</span>() + (minutes * <span class="hljs-number">60</span> * <span class="hljs-number">1000</span>));
- $.<span class="hljs-title function_">cookie</span>(<span class="hljs-string">&quot;example&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>, { <span class="hljs-attr">expires</span>: date });</code></pre>
+ $.<span class="hljs-title function_">cookie</span>(<span class="hljs-string">&quot;example&quot;</span>, <span class="hljs-string">&quot;foo&quot;</span>, { <span class="hljs-attr">expires</span>: date });{% endhighlight %}
 
 <p><img height="438" src="/uploads/ckeditor/pictures/400/image-20220915102614-1.png" width="445" /></p>
 

@@ -18,10 +18,10 @@ get</span> <span class="s1">&#39;/posts&#39;</span> <span class="k">do</span><br
 
 <p>例如，在接口进行判断子域名是否完全显示：/name/:name?subdomains=yes就完全显示，否则不显示</p>
 
-<pre><code>if params[&#39;subdomains&#39;] == &#39;yes&#39;<br />
+{% highlight %}if params[&#39;subdomains&#39;] == &#39;yes&#39;<br />
 &nbsp; result[&#39;subdomains&#39;] = result_domain[&#39;subdomains&#39;]<br />
 end<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -29,7 +29,7 @@ function ExampleComponent() {
       {variable2} {/* 输出 &quot;undefined&quot; */}
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>variable1</code>是一个未定义的变量，它的值为<code>undefined</code>，而<code>variable2</code>是一个被赋值为字符串<code>&#39;undefined&#39;</code>的变量。当你在React组件中将它们作为内容输出时，<code>variable1</code>会显示为<code>undefined</code>，而<code>variable2</code>会显示为字符串<code>&#39;undefined&#39;</code></p>
 

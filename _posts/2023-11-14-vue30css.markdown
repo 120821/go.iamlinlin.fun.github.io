@@ -13,5 +13,5 @@ categories:
 <pre>
 <code>&lt;style&gt;
 @import &#39;./styles.css&#39;;
-&lt;/style&gt;</code></pre>
+&lt;/style&gt;{% endhighlight %}
 

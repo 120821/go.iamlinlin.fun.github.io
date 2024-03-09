@@ -34,7 +34,7 @@ class CreateSettings &lt; ActiveRecord::Migration
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -16,7 +16,7 @@ categories:
 
 <pre>
 <code>bundle clean --force
-bundle install</code></pre>
+bundle install{% endhighlight %}
 
 <ol start="2">
 	<li>更新Bundler版本和Gemfile.lock文件。</li>
@@ -24,7 +24,7 @@ bundle install</code></pre>
 
 <pre>
 <code>bundle update --bundler
-bundle update Gemfile.lock</code></pre>
+bundle update Gemfile.lock{% endhighlight %}
 
 <ol start="3">
 	<li>删除原有的Gemfile.lock文件和.lock文件夹，然后重新运行bundle install命令。</li>
@@ -33,7 +33,7 @@ bundle update Gemfile.lock</code></pre>
 <pre>
 <code>rm Gemfile.lock
 rm -rf .bundle
-bundle install</code></pre>
+bundle install{% endhighlight %}
 
 <ol start="4">
 	<li>确认debug gem是否存在，尝试手动安装debug。</li>
@@ -41,7 +41,7 @@ bundle install</code></pre>
 
 <pre>
 <code>gem list debug
-gem install debug -v &#39;1.7.1&#39;</code></pre>
+gem install debug -v &#39;1.7.1&#39;{% endhighlight %}
 
 <ol start="5">
 	<li>

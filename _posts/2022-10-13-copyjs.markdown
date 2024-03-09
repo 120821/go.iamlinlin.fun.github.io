@@ -27,7 +27,7 @@ function myFunction() {
 &nbsp; alert(&quot;Copied the text: &quot; + copyText.value);
 
 }
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;{% endhighlight %}
 
 <p><img height="112" src="/uploads/ckeditor/pictures/582/image-20221013085701-1.png" width="527" /><img height="112" src="/uploads/ckeditor/pictures/583/image-20221013085712-2.png" width="527" /></p>
 

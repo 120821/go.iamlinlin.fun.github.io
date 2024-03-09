@@ -33,7 +33,7 @@ categories:
 
 &nbsp; add_header &#39;Access-Control-Allow-Headers&#39; &#39;x-requested-with,content-type&#39;;
 
-&nbsp; #charset koi8-r;</code></pre>
+&nbsp; #charset koi8-r;{% endhighlight %}
 
 <p>&nbsp;</p>
 

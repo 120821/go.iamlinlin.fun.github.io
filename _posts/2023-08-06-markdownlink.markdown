@@ -10,6 +10,6 @@ categories:
 
 <div class="gatsby-highlight markdown-module--codeBlock--5aqoW">
 <pre>
-<code>[Link text Here](https://link-url-here.org)</code></pre>
+<code>[Link text Here](https://link-url-here.org){% endhighlight %}
 </div>
 

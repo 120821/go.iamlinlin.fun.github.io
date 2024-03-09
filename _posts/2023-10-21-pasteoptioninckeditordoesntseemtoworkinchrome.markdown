@@ -23,7 +23,7 @@ CKEDITOR.on(&quot;instanceReady&quot;, function(event) {
 			event.cancel();
 		}
 	})
-});</code></pre>
+});{% endhighlight %}
 
 <p>&nbsp;</p>
 

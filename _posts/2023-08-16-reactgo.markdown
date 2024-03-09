@@ -18,7 +18,7 @@ categories:
 
 <div aria-label="代码段 小部件" contenteditable="false" role="region" tabindex="-1">
 <pre data-widget="codeSnippet">
-<code class="language-Go hljs">apiv1.POST(<span class="hljs-string">&quot;/history_login_logs&quot;</span>, v1.AddHistoryLoginLog)</code></pre>
+<code class="language-Go hljs">apiv1.POST(<span class="hljs-string">&quot;/history_login_logs&quot;</span>, v1.AddHistoryLoginLog){% endhighlight %}
 <span style="background:rgba(220, 220, 220, 0.5) url(&quot;https://csdnimg.cn/release/blog_editor_html/release2.3.5/ckeditor/plugins/widget/images/handle.png&quot;); left:0px; top:0px"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
 
 <p>（2）在model里增加（例如：models/history_login_logs.go）<br />
@@ -35,7 +35,7 @@ categories:
     })
 
     <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-  }</code></pre>
+  }{% endhighlight %}
 <span style="background:rgba(220, 220, 220, 0.5) url(&quot;https://csdnimg.cn/release/blog_editor_html/release2.3.5/ckeditor/plugins/widget/images/handle.png&quot;); left:0px; top:0px"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
 
 <p><br />
@@ -96,7 +96,7 @@ City := location.City
 
   currentTime := time.Now()
 models.AddHistoryLoginLog(user.ID, ipAddress, City, currentTime)
-...</code></pre>
+...{% endhighlight %}
 <span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
 
 <p>&nbsp; （4）增加action （例如：routers/api/v1/history_login_log.go）（需要引入import&nbsp; &quot;net/http&quot;&nbsp;&nbsp; &quot;time&quot;&nbsp; &quot;fmt&quot;）<br />
@@ -120,7 +120,7 @@ models.AddHistoryLoginLog(user.ID, ipAddress, City, currentTime)
 
   models.AddHistoryLoginLog(request.UserID, request.IPAddress, request.City, request.CurrentTime)
 
-}</code></pre>
+}{% endhighlight %}
 <span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
 
 <p>3.在前端写一个展示的列表页面即可。（登录时间写现在的时间即可。）<br />
@@ -205,7 +205,7 @@ export <span class="hljs-keyword">default</span> class CalculationPlan extends C
         &lt;Table columns={columns} dataSource={data} loading={loading} /&gt;
     )
   }
-}</code></pre>
+}{% endhighlight %}
 <span style="background-color:rgba(220,220,220,0.5)"><img role="presentation" src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" style="height:15px; width:15px" title="点击并拖拽以移动" /></span></div>
 
 <p>&nbsp;</p>

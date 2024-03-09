@@ -9,7 +9,7 @@ categories:
 <p>在文件夹内替换字符串http://abc.com为https://abc.com</p>
 
 <pre>
-<code>find /path/to/folder -<span style="color:#f5ab35">type</span> f -<span style="color:#f5ab35">exec</span> sed -i <span style="color:#abe338">&#39;s|http://abc.com|https://abc.com|g&#39;</span> {} +</code></pre>
+<code>find /path/to/folder -<span style="color:#f5ab35">type</span> f -<span style="color:#f5ab35">exec</span> sed -i <span style="color:#abe338">&#39;s|http://abc.com|https://abc.com|g&#39;</span> {} +{% endhighlight %}
 
 <p><code>/path/to/folder</code>替换为您要进行替换操作的文件夹,例如</p>
 

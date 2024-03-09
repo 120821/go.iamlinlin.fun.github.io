@@ -8,48 +8,48 @@ categories:
 
 <p>路由文件(假设项目名为hello)：</p>
 
-<pre><code class="inline">lib/hello_web/router.ex</code></pre>
+<pre><code class="inline">lib/hello_web/router.ex{% endhighlight %}
 
 <p><code>在文件中增加路由：</code></p>
 
-<pre><code>scope &quot;/&quot;, HelloWeb do<br />
+{% highlight %}scope &quot;/&quot;, HelloWeb do<br />
 &nbsp; pipe_through :browser
 
 &nbsp; get &quot;/&quot;, PageController, :index<br />
 &nbsp; get &quot;/hello&quot;, HelloController, :index<br />
-end</code></pre>
+end{% endhighlight %}
 
-<pre><code>创建新的controller文件：</code><code class="inline">lib/hello_web/controllers/hello_controller.ex</code></pre>
+{% highlight %}创建新的controller文件：</code><code class="inline">lib/hello_web/controllers/hello_controller.ex{% endhighlight %}
 
 <p><code class="inline">内容：</code></p>
 
-<pre><code>defmodule HelloWeb.HelloController do<br />
+{% highlight %}defmodule HelloWeb.HelloController do<br />
 &nbsp; use HelloWeb, :controller</p>
 
 <p>&nbsp; def index(conn, _params) do<br />
 &nbsp;&nbsp;&nbsp; render(conn, &quot;index.html&quot;)<br />
 &nbsp; end<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>创建新的视图页面：</p>
 
-<pre><code class="inline">lib/hello_web/views/hello_view.ex</code></pre>
+<pre><code class="inline">lib/hello_web/views/hello_view.ex{% endhighlight %}
 
 <p><code class="inline">内容：</code></p>
 
-<pre><code>defmodule HelloWeb.HelloView do<br />
+{% highlight %}defmodule HelloWeb.HelloView do<br />
 &nbsp; use HelloWeb, :view<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>增加新的template：</p>
 
-<pre><code class="inline">lib/hello_web/templates/hello/index.html.heex</code></pre>
+<pre><code class="inline">lib/hello_web/templates/hello/index.html.heex{% endhighlight %}
 
 <p><code class="inline">内容：</code></p>
 
-<pre><code>&lt;section class=&quot;phx-hero&quot;&gt;<br />
+{% highlight %}&lt;section class=&quot;phx-hero&quot;&gt;<br />
 &nbsp; &lt;h2&gt;Hello World, from Phoenix!&lt;/h2&gt;<br />
-&lt;/section&gt;</code></pre>
+&lt;/section&gt;{% endhighlight %}
 
 <p>打开：<a href="http://localhost:4000/hello">http://localhost:4000/hello</a></p>
 
@@ -59,41 +59,41 @@ end</code></pre>
 
 <p>查看layout文件：</p>
 
-<pre><code class="inline">lib/hello_web/templates/layout/app.html.heex</code></pre>
+<pre><code class="inline">lib/hello_web/templates/layout/app.html.heex{% endhighlight %}
 
 <p><code class="inline">可以看到有以下内容：</code></p>
 
-<pre><code>&lt;%= @inner_content %&gt;</code></p>
+{% highlight %}&lt;%= @inner_content %&gt;</code></p>
 
 <p>在将 HTML 发送到浏览器之前，它将我们的模板注入到布局中。</p>
 
 <p>增加show页面，先增加路由：</p>
 
-<pre><code>scope &quot;/&quot;, HelloWeb do<br />
+{% highlight %}scope &quot;/&quot;, HelloWeb do<br />
 &nbsp; pipe_through :browser</p>
 
 <p>&nbsp; get &quot;/&quot;, PageController, :index<br />
 &nbsp; get &quot;/hello&quot;, HelloController, :index<br />
 &nbsp; get &quot;/hello/:messenger&quot;, HelloController, :show<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>然后修改controller：</p>
 
-<pre><code class="inline">lib/hello_web/controllers/hello_controller.ex</code></pre>
+<pre><code class="inline">lib/hello_web/controllers/hello_controller.ex{% endhighlight %}
 
 <p><code class="inline">内容：</code></p>
 
-<pre><code>def show(conn, %{&quot;messenger&quot; =&gt; messenger}) do<br />
+{% highlight %}def show(conn, %{&quot;messenger&quot; =&gt; messenger}) do<br />
 &nbsp; render(conn, &quot;show.html&quot;, messenger: messenger)<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p>增加视图页面：</p>
 
-<pre><code class="inline">show.html.heex</code></pre>
+<pre><code class="inline">show.html.heex{% endhighlight %}
 
-<pre><code>&lt;section class=&quot;phx-hero&quot;&gt;<br />
+{% highlight %}&lt;section class=&quot;phx-hero&quot;&gt;<br />
 &nbsp; &lt;h2&gt;Hello World, from &lt;%= @messenger %&gt;!&lt;/h2&gt;<br />
-&lt;/section&gt;</code></pre>
+&lt;/section&gt;{% endhighlight %}
 
 <p>打开页面：<a href="http://localhost:4000/hello/Frank">http://localhost:4000/hello/Frank</a></p>
 
@@ -101,7 +101,7 @@ end</code></pre>
 
 <p>如果需要这样的show/2， 则：</p>
 
-<pre><code>def show(conn, %{&quot;messenger&quot; =&gt; messenger} = params) do<br />
+{% highlight %}def show(conn, %{&quot;messenger&quot; =&gt; messenger} = params) do<br />
 &nbsp; ...<br />
-end</code></pre>
+end{% endhighlight %}
 

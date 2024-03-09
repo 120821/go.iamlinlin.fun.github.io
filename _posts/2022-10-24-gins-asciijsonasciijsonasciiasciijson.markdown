@@ -27,7 +27,7 @@ categories:
 	<span style="color:#8f5902;font-style:italic">// Listen and serve on 0.0.0.0:8080
 </span>	<span style="color:#000">r</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">(</span><span style="color:#4e9a06">&quot;:8080&quot;</span><span style="color:#000;font-weight:700">)</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>完整代码：</p>
 
@@ -54,7 +54,7 @@ categories:
 
 	<span class="hljs-comment">// 在 8080 端口启动服务</span>
 	r.Run(<span class="hljs-string">&quot;:8080&quot;</span>)
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>运行：</code>启动 Gin Web 服务，我们来访问地址 <code>http://localhost:8080/</code>testJSON</p>
 

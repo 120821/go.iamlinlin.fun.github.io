@@ -7,12 +7,12 @@ categories:
 <p>例如有一个input：</p>
 
 <pre>
-<code>&lt;input type=&quot;text&quot; class=&quot;login_input white-text&quot; id=&quot;phone&quot; v-model=&quot;phone&quot; placeholder=&quot;&nbsp;&nbsp; 请输入手机号&quot; /&gt;</code></pre>
+<code>&lt;input type=&quot;text&quot; class=&quot;login_input white-text&quot; id=&quot;phone&quot; v-model=&quot;phone&quot; placeholder=&quot;&nbsp;&nbsp; 请输入手机号&quot; /&gt;{% endhighlight %}
 
 <p>需要 使用这样的写法</p>
 
 <pre>
-<code>axios.get(<span style="color:#abe338">&#39;https://127.0.0.1:4567/booking/verify-mobile/send&#39;</span>, { params: { mobile: <span style="color:#f5ab35">this</span>.phone } })</code></pre>
+<code>axios.get(<span style="color:#abe338">&#39;https://127.0.0.1:4567/booking/verify-mobile/send&#39;</span>, { params: { mobile: <span style="color:#f5ab35">this</span>.phone } }){% endhighlight %}
 
 <p>这样就会发送这样的请求：</p>
 

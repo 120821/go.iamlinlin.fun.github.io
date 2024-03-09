@@ -14,21 +14,21 @@ categories:
 </ol>
 
 <pre>
-<code>sudo apt update</code></pre>
+<code>sudo apt update{% endhighlight %}
 
 <ol start="3">
 	<li>安装VLC媒体播放器：</li>
 </ol>
 
 <pre>
-<code>sudo apt install vlc</code></pre>
+<code>sudo apt install vlc{% endhighlight %}
 
 <ol start="4">
 	<li>安装完成后，你可以在应用程序菜单中找到VLC媒体播放器，或者使用以下命令启动它：</li>
 </ol>
 
 <pre>
-<code>vlc</code></pre>
+<code>vlc{% endhighlight %}
 
 <p>方法二：安装GNOME MPV</p>
 
@@ -38,21 +38,21 @@ categories:
 </ol>
 
 <pre>
-<code>sudo apt update</code></pre>
+<code>sudo apt update{% endhighlight %}
 
 <ol start="3">
 	<li>安装GNOME MPV：</li>
 </ol>
 
 <pre>
-<code>sudo apt install mpv</code></pre>
+<code>sudo apt install mpv{% endhighlight %}
 
 <ol start="4">
 	<li>安装完成后，你可以在应用程序菜单中找到GNOME MPV，或者使用以下命令启动它：</li>
 </ol>
 
 <pre>
-<code>gnome-mpv</code></pre>
+<code>gnome-mpv{% endhighlight %}
 
 <p>安装完成后，你就可以使用VLC媒体播放器或GNOME MPV来播放MP4文件了。</p>
 

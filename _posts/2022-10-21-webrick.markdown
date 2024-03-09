@@ -17,7 +17,7 @@ categories:
 <span class="ruby-identifier">trap</span> <span class="ruby-string">&#39;INT&#39;</span>  <span class="ruby-keyword">do</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-keyword">end</span>
 <span class="ruby-identifier">trap</span> <span class="ruby-string">&#39;TERM&#39;</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-keyword">end</span>
 
-<span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">start</span></code></pre>
+<span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">start</span>{% endhighlight %}
 
 <p><img height="122" src="/uploads/ckeditor/pictures/590/image-20221021094747-1.png" width="895" /></p>
 

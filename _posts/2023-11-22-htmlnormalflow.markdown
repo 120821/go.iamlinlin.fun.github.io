@@ -21,7 +21,7 @@ categories:
 &lt;span class=&quot;inline&quot;&gt;world&lt;/span&gt;
 &lt;div class=&quot;block&quot;&gt;
   hello world
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>span是内联元素，div是块级元素，增加边框：</p>
 
@@ -33,7 +33,7 @@ categories:
 .block{
     
     border:1px solid #ccc;
-}</code></pre>
+}{% endhighlight %}
 
 <p>可以看到内联元素是有空格分割的，块级元素是没有空格分割的：</p>
 
@@ -47,7 +47,7 @@ categories:
 hello
 &lt;div class=&quot;block&quot;&gt;
  hello world
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;{% endhighlight %}
 
 <p>看到的是：</p>
 

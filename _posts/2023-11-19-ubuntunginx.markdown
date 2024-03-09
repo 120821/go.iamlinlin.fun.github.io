@@ -24,21 +24,21 @@ Restart=always
 Type=forking
 
 [Install]
-WantedBy=multi-user.target</code></pre>
+WantedBy=multi-user.target{% endhighlight %}
 
 <p>2.写好后，可以使用命令启动一下nginx：</p>
 
 <pre>
 <code>sudo systemctl daemon-reload
-sudo systemctl start nginx</code></pre>
+sudo systemctl start nginx{% endhighlight %}
 
 <p>3.查看nginx状态：</p>
 
 <pre>
-<code>sudo systemctl status nginx</code></pre>
+<code>sudo systemctl status nginx{% endhighlight %}
 
 <p>4.设置自启动：</p>
 
 <pre>
-<code>sudo systemctl enable nginx</code></pre>
+<code>sudo systemctl enable nginx{% endhighlight %}
 

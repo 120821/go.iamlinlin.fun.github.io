@@ -25,7 +25,7 @@ HTTParty.post(
   <span class="hljs-string">&quot;https://www.acb.com/api/v2/market/LTC_BTC/&quot;</span>, 
   <span class="hljs-symbol">:query</span> =&gt; query,
   <span class="hljs-symbol">:headers</span> =&gt; headers
-)</code></pre>
+){% endhighlight %}
 
 <p>&nbsp;</p>
 

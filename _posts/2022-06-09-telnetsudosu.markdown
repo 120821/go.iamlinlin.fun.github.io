@@ -22,9 +22,9 @@ categories:
 <p><img alt="" height="585" src="https://img-blog.csdnimg.cn/e333f55af7474f17aaefa4463b081f44.png" width="1047"></p> 
 <p><strong>telnet 172.17.0.2 5432</strong></p> 
 <p>进行查看，<strong>端口的状态</strong>，可以看到，并没有创建连接</p> 
-<pre><code>Trying 172.17.0.2...
+{% highlight %}Trying 172.17.0.2...
 telnet: Unable to connect to remote host: Connection refused
-</code></pre> 
+{% endhighlight %} 
 <blockquote> 
  <p><strong>3．</strong><strong>命令参数：</strong></p> 
  <p style="margin-left:21pt;">-8 允许使用8位字符资料，包括输入与输出。</p> 

@@ -23,7 +23,7 @@ for (let i = 0; i &lt;= (endYear - startYear); i++) {
   
   defaultData.push(rowData);
 }
-console.log(&quot;== defaultData: &quot;, defaultData)</code></pre>
+console.log(&quot;== defaultData: &quot;, defaultData){% endhighlight %}
 
 <p>这样就可以得到第一列的数据（不包含第一行）</p>
 

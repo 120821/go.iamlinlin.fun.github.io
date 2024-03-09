@@ -19,7 +19,7 @@ categories:
 <span class="w">    </span>_mint<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>initialSupply<span class="p">);</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p>进行编译，注意选择正确的版本号</p>
 

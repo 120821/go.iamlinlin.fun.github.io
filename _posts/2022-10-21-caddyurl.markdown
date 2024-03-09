@@ -14,7 +14,7 @@ categories:
 
 <p>在Caddyfile文件中增加</p>
 
-<pre><code>&lt;你的测试URL&gt;{
+{% highlight %}&lt;你的测试URL&gt;{
 
 &nbsp; reverse_proxy baidu.com<br />
 &nbsp; #rewrite * baidu.com(不需要rewrite)<br />
@@ -25,7 +25,7 @@ categories:
 &nbsp; tls {<br />
 &nbsp;&nbsp;&nbsp; dns cloudflare &lt;你的域名证书&gt;<br />
 &nbsp; }<br />
-}</code></pre>
+}{% endhighlight %}
 
 <p>例如测试的域名url如下，显示的是siwei.me的页面</p>
 

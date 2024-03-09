@@ -8,5 +8,5 @@ categories:
 
 <pre>
 <code>this.setState({ processedData });
-this.setState({ processedData: processedData });</code></pre>
+this.setState({ processedData: processedData });{% endhighlight %}
 

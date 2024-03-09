@@ -61,7 +61,7 @@ categories:
 <pre>
 <code>CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
 
-42701b5edfd0&nbsp;&nbsp; postgres&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 2 seconds&nbsp;&nbsp; 5432/tcp&nbsp;&nbsp; laughing_faraday</code></pre>
+42701b5edfd0&nbsp;&nbsp; postgres&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 2 seconds&nbsp;&nbsp; 5432/tcp&nbsp;&nbsp; laughing_faraday{% endhighlight %}
 
 <p>docker inspect 4270</p>
 
@@ -70,20 +70,20 @@ categories:
 <p>5.安装go</p>
 
 <pre>
-<code>wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz</code></pre>
+<code>wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
 
 <pre>
-<code>tar -xvf go1.18.3.linux-amd64.tar.gz</code></pre>
+<code>tar -xvf go1.18.3.linux-amd64.tar.gz{% endhighlight %}
 
 <pre>
-<code>sudo mv go /usr/local/go_1.18.3</code></pre>
+<code>sudo mv go /usr/local/go_1.18.3{% endhighlight %}
 
 <p><code>vim </code>.bashrc</p>
 
 <p>export PATH=$PATH:/usr/local/go_1.18.3/bin</p>
 
 <pre>
-<code>go version</code></pre>
+<code>go version{% endhighlight %}
 
 <p>go version go1.18.3 linux/amd64</p>
 

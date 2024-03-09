@@ -9,7 +9,7 @@ categories:
 <p>1.使用vue3打包：</p>
 
 <pre>
-<code>npm run build</code></pre>
+<code>npm run build{% endhighlight %}
 
 <p>2.scp打包好的dist(整个文件夹）到服务器特定位置（自己确定）</p>
 
@@ -45,7 +45,7 @@ server {
   return 301 https://123.linlin.fun$request_uri;
 }
 
-</code></pre>
+{% endhighlight %}
 
 <p>如果不使用ssl：</p>
 
@@ -65,5 +65,5 @@ server {
 
 }
 
-</code></pre>
+{% endhighlight %}
 

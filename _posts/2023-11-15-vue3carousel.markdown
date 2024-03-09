@@ -12,7 +12,7 @@ categories:
 <code><span style="color:#ffcb6b">npm</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">install</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span>
 
 <em># or use yarn</em>
-<span style="color:#ffcb6b">yarn</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">add</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span></code></pre>
+<span style="color:#ffcb6b">yarn</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">add</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span>{% endhighlight %}
 
 <p>选择每页显示3个图：（把第二行的2.5修改为3即可，这里控制的是每页显示数据的多少）</p>
 
@@ -43,5 +43,5 @@ categories:
 <span style="color:#a6accd">    Navigation</span><span style="color:#89ddff">,</span>
 <span style="color:#a6accd">  </span><span style="color:#89ddff">},</span>
 <span style="color:#89ddff">}</span><span style="color:#a6accd">)</span>
-<span style="color:#89ddff">&lt;/</span><span style="color:#f07178">script</span><span style="color:#89ddff">&gt;</span></code></pre>
+<span style="color:#89ddff">&lt;/</span><span style="color:#f07178">script</span><span style="color:#89ddff">&gt;</span>{% endhighlight %}
 

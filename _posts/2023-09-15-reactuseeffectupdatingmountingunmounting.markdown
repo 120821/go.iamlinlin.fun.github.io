@@ -43,5 +43,5 @@ function MyComponent() {
       &lt;button onClick={incrementCount}&gt;Increment&lt;/button&gt;
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 

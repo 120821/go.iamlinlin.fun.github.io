@@ -25,7 +25,7 @@ function MyComponent() {
       &lt;p&gt;匹配结果: {matches &amp;&amp; matches.join(&#39;, &#39;)}&lt;/p&gt;
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>在使用antd进行顶部标签的显示的时候，出现一些空标签，这时候就需要把空标签删除，或者给/edit/:id这样的path增加匹配，这就需要使用正则表达式：</p>
 
@@ -40,7 +40,7 @@ function MyComponent() {
 
 &nbsp; exact: false
 
-}, </code></pre>
+}, {% endhighlight %}
 
 <p>在配置Antd标签的时候，就可以这样：</p>
 
@@ -55,7 +55,7 @@ function MyComponent() {
 
 &nbsp;&nbsp;&nbsp; children: [],
 
-&nbsp; },&nbsp; </code></pre>
+&nbsp; },&nbsp; {% endhighlight %}
 
 <p>然后在匹配标签的时候修改一下匹配的条件判断：</p>
 
@@ -110,5 +110,5 @@ function MyComponent() {
 
 &nbsp; return name
 
-}</code></pre>
+}{% endhighlight %}
 

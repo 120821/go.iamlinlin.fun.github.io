@@ -19,7 +19,7 @@ categories:
 <p>4.进行测试</p>
 
 <pre>
-<code>python3 sqlmap.py -r test_linlinfun_blog_show -v 3 --string=&#39;&quot;code&quot;:0&#39;</code></pre>
+<code>python3 sqlmap.py -r test_linlinfun_blog_show -v 3 --string=&#39;&quot;code&quot;:0&#39;{% endhighlight %}
 
 <p>返回结果：</p>
 
@@ -104,7 +104,7 @@ categories:
 [<span style="color:#ffa07a">15:29:51</span>] [<span style="color:#ffa07a">DEBUG</span>] too many <span style="color:#f5ab35">4</span>xx and/or <span style="color:#f5ab35">5</span>xx HTTP error codes could mean that some kind of protection is involved (<span style="color:#ffa07a">e.g.</span> WAF)
 
 [<span style="color:#f5ab35">*</span>] ending @ <span style="color:#f5ab35">15</span>:<span style="color:#f5ab35">29</span>:<span style="color:#f5ab35">51</span> /<span style="color:#f5ab35">2023</span><span style="color:#f5ab35">-12</span><span style="color:#f5ab35">-22</span>/
-</code></pre>
+{% endhighlight %}
 
 <p>可以看到结果提示，&ldquo;<code>[<span style="color:#ffa07a">CRITICAL</span>] all tested parameters do not appear to be injectable. </code>&rdquo;所有的测试已经结束，没有可以注入的点。</p>
 

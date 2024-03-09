@@ -13,7 +13,7 @@ categories:
 <p>2.创建app</p>
 
 <pre>
-<code>npx create-react-app my-app</code></pre>
+<code>npx create-react-app my-app{% endhighlight %}
 
 <p><code>3.</code>删除掉新项目中 <code>src/</code> 文件夹下的所有文件。</p>
 
@@ -31,7 +31,7 @@ rm -f *
 del *
 
 # 然后回到项目文件夹
-cd ..</code></pre>
+cd ..{% endhighlight %}
 
 <ol start="4">
 	<li>在 <code>src/</code> 文件夹中创建一个名为 <code>index.css</code> 的文件，并拷贝<a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100" rel="nofollow noopener noreferrer" target="_blank">这些 CSS 代码</a>。</li>
@@ -43,7 +43,7 @@ cd ..</code></pre>
 <pre>
 <code>import React from &#39;react&#39;;
 import ReactDOM from &#39;react-dom/client&#39;;
-import &#39;./index.css&#39;;</code></pre>
+import &#39;./index.css&#39;;{% endhighlight %}
 
 <p>现在，在项目文件夹下执行 <code>npm start</code> 命令，然后在浏览器访问 <code>http://localhost:3000</code>。这样你就可以在浏览器中看见一个空的井字棋的棋盘了。（这个已经做过了啊）</p>
 </div>

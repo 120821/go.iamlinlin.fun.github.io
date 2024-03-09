@@ -7,7 +7,7 @@ categories:
 <p>1.引入ant的 Table</p>
 
 <pre>
-<code>import { Table, Space, Button, message } from &#39;antd&#39;;</code></pre>
+<code>import { Table, Space, Button, message } from &#39;antd&#39;;{% endhighlight %}
 
 <p>2.获得接口的数据的时候增加上创建时间</p>
 
@@ -36,7 +36,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; year_range: `${item.start_year} - ${item.end_year}`,
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }));</code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }));{% endhighlight %}
 
 <p>3.对接口的数据进行处理</p>
 
@@ -45,12 +45,12 @@ categories:
  <span style="color:#f5ab35">96</span>         title: <span style="color:#d4d0ab">&#39;创建时间&#39;,</span>
  <span style="color:#f5ab35">97</span>         dataIndex: <span style="color:#d4d0ab">&#39;created_at&#39;,</span>
  <span style="color:#f5ab35">98</span>         <span style="color:#dcc6e0">key</span>: <span style="color:#d4d0ab">&#39;created_at&#39;,</span>
- <span style="color:#f5ab35">99</span>       },</code></pre>
+ <span style="color:#f5ab35">99</span>       },{% endhighlight %}
 
 <p>这样会显示数据：</p>
 
 <pre>
-<code>2023-07-24T15:10:38.820628+08:00</code></pre>
+<code>2023-07-24T15:10:38.820628+08:00{% endhighlight %}
 
 <p>需要修改为北京时间：</p>
 
@@ -87,5 +87,5 @@ const MyTable = () =&gt; {
 
 &nbsp; return &lt;Table dataSource={dataSource} columns={columns} /&gt;;
 
-};</code></pre>
+};{% endhighlight %}
 

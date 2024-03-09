@@ -17,5 +17,5 @@ categories:
     &lt;option&gt;Yellow&lt;/option&gt;
     &lt;option&gt;Brown&lt;/option&gt;
 &lt;/select&gt;
-</code></pre>
+{% endhighlight %}
 

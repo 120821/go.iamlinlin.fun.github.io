@@ -26,13 +26,13 @@ categories:
 
 <pre>
 <code>&lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>and the CSS link to this:</p>
 
 <pre>
 <code>&lt;link href=&quot;/assets/bootstrap.min.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; /&gt;
-</code></pre>
+{% endhighlight %}
 
 <p><img height="251" src="/uploads/ckeditor/pictures/213/image-20220812101717-2.png" width="896" /></p>
 </div>

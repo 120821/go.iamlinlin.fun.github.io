@@ -9,7 +9,7 @@ categories:
 <p>1.安装依赖：<a href="https://handsontable.com/docs/react-data-grid/installation/">https://handsontable.com/docs/react-data-grid/installation/</a></p>
 
 <pre>
-<code>npm install handsontable @handsontable/react</code></pre>
+<code>npm install handsontable @handsontable/react{% endhighlight %}
 
 <p>或在public/index.html引入：</p>
 
@@ -24,7 +24,7 @@ categories:
 
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@handsontable/react@13.0/dist/react-handsontable.min.js&quot;&gt;&lt;/script&gt;
 
-&lt;script src=&quot;https://handsontable.com/docs/scripts/fixer.js&quot;&gt;&lt;/script&gt;</code></pre>
+&lt;script src=&quot;https://handsontable.com/docs/scripts/fixer.js&quot;&gt;&lt;/script&gt;{% endhighlight %}
 
 <p>2.使用<br />
 可以创建组件进行使用：</p>
@@ -63,7 +63,7 @@ export default class ExcelHandsonTableDemo extends Component {
 
 &nbsp; }
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>然后在页面进行引入：</p>
 
@@ -264,7 +264,7 @@ nbsp;&nbsp;&nbsp; const tableData2 = tableData1;
 
 }
 
-export default Calculation;</code></pre>
+export default Calculation;{% endhighlight %}
 
 <p>在前端就完成了，注意这里对数据的处理与后端应该保持一致，例如数据的类型，以及传递参数使用json对handsontable的数据应该做一个处理：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; deviceSales: deviceSales.map(row =&gt; row.map(cell =&gt; String(cell))),</p>
 
@@ -313,5 +313,5 @@ nbsp; c.JSON(http.StatusOK, gin.H{
 
 &nbsp; })
 
-}</code></pre>
+}{% endhighlight %}
 

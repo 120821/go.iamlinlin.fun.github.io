@@ -13,11 +13,11 @@ categories:
 <pre>
 <code>let a = 20
 
-a.toString();    // &#39;20&#39;</code></pre>
+a.toString();    // &#39;20&#39;{% endhighlight %}
 
 <pre>
 <code>const myInt = 42;
-const myString = myInt.toString();</code></pre>
+const myString = myInt.toString();{% endhighlight %}
 
 <p>完整的例子：</p>
 
@@ -37,5 +37,5 @@ class MyComponent extends React.Component {
     );
   }
 }
-</code></pre>
+{% endhighlight %}
 

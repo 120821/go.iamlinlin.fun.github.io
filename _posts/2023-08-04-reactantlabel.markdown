@@ -18,7 +18,7 @@ categories:
   labelCol={{ span: 8 }} // 调整标签宽度
 &gt;
   {/* 表单控件 */}
-&lt;/Form.Item&gt;</code></pre>
+&lt;/Form.Item&gt;{% endhighlight %}
 
 <p>如果设置不同的宽度，可以在每一个form里进行调整(上面的方法），如果设置统一的宽度，可以：</p>
 
@@ -31,7 +31,7 @@ categories:
 
 &nbsp; wrapperCol: { span: 16 },
 
-};</code></pre>
+};{% endhighlight %}
 
 <p>然后使用：</p>
 
@@ -56,7 +56,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; className=&quot;custom-form&quot;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp; &nbsp;</code></code></pre>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp; &nbsp;</code>{% endhighlight %}
 
 <p><code>&nbsp;</code></p>
 

@@ -16,43 +16,43 @@ categories:
 <p><img alt="" height="792" src="https://img-blog.csdnimg.cn/80c5769fa6094c29b4fa91e2675baa7b.png" width="1200"></p> 
 <blockquote> 
  <h1 id="查看docker镜像">查看docker镜像</h1> 
- <pre><code>docker ps
-</code></pre> 
+ {% highlight %}docker ps
+{% endhighlight %} 
  <h1 id="运行镜像的脚本命令">运行镜像的脚本命令</h1> 
- <pre><code>docker exec -it 08 bash
+ {% highlight %}docker exec -it 08 bash
 # 选择id为08开头的镜像运行bash
-</code></pre> 
+{% endhighlight %} 
  <h1 id="登录数据库">登录数据库</h1> 
  <p>(1)直接登录</p> 
- <pre><code>执行命令：psql -h 172.16.35.179 -U username -d dbname 
+ {% highlight %}执行命令：psql -h 172.16.35.179 -U username -d dbname 
 # 其中username为数据库用户名，dbname为要连接的数据库名，执行后提示输入密码如下：
 # Password for user username: （在此输入密码）输入密码后即可进入psql环境了。
-</code></pre> 
+{% endhighlight %} 
  <p>(2)切换数据库</p> 
- <pre><code># 有时候需要在psql环境下切换数据库，此时执行如下psql命令：
+ {% highlight %}# 有时候需要在psql环境下切换数据库，此时执行如下psql命令：
 \c dbname username serverIP port
 # 其中除了数据库名外，其他的参数都是可选的，如果使用默认值可以使用-作为占位符
 # 执行这个命令后，也是提示输入密码。
-</code></pre> 
+{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p> </p> 
  <p>(1)列出所有的数据库</p> 
- <pre><code>psql: \l或\list
-</code></pre> 
+ {% highlight %}psql: \l或\list
+{% endhighlight %} 
  <p>(2)切换数据库</p> 
- <pre><code>psql: \c dbname
-</code></pre> 
+ {% highlight %}psql: \c dbname
+{% endhighlight %} 
  <p>(3)列出当前数据库下的数据表</p> 
- <pre><code>psql: \d
-</code></pre> 
+ {% highlight %}psql: \d
+{% endhighlight %} 
  <p>(4)列出指定表的所有字段</p> 
- <pre><code>psql: \d tablename
-</code></pre> 
+ {% highlight %}psql: \d tablename
+{% endhighlight %} 
  <p>(5)查看指定表的基本情况</p> 
- <pre><code>psql: \d+ tablename
-</code></pre> 
+ {% highlight %}psql: \d+ tablename
+{% endhighlight %} 
  <p>(6)退出登录</p> 
- <pre><code>psql:\q</code></pre> 
+ {% highlight %}psql:\q{% endhighlight %} 
 </blockquote>
                 

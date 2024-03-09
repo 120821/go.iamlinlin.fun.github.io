@@ -8,16 +8,16 @@ categories:
 
 <p>在 app.rb顶部增加：</p>
 
-<pre><code>require &#39;sinatra/custom_logger&#39;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
+{% highlight %}require &#39;sinatra/custom_logger&#39;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 require &#39;logger&#39;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
-set :logger, Logger.new(&#39;log.txt&#39;)&nbsp;&nbsp;&nbsp;</code></pre>
+set :logger, Logger.new(&#39;log.txt&#39;)&nbsp;&nbsp;&nbsp;{% endhighlight %}
 
 <p>既可以使用：</p>
 
-<pre><code>&nbsp;logger.info &quot;== response: #{response}&quot;</code></pre>
+{% highlight %}&nbsp;logger.info &quot;== response: #{response}&quot;{% endhighlight %}
 
 <p>在terminal查看：</p>
 
-<pre><code>tail -f log.txt</code></pre>
+{% highlight %}tail -f log.txt{% endhighlight %}
 

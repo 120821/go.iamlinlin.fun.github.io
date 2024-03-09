@@ -17,7 +17,7 @@ categories:
 
 &nbsp;create mode 100644 &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966139&quot;
 
-&nbsp;create mode 100644 &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966222&quot;</code></pre>
+&nbsp;create mode 100644 &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966222&quot;{% endhighlight %}
 
 <p>因为还没有进行push，所以进行回退</p>
 
@@ -30,7 +30,7 @@ commit 9a695f29923c585858a2c5d24b9c8400f38797 (HEAD -&gt; main)
 
 Author: xxx &lt;sxxxxei@sina.com&gt;
 
-Date:&nbsp;&nbsp; Thu Jun 23 14:42:56 2022 +0800</code></pre>
+Date:&nbsp;&nbsp; Thu Jun 23 14:42:56 2022 +0800{% endhighlight %}
 
 <p>&nbsp;&nbsp;&nbsp; public/upload_files/ 增加了目录，用来导入文件使用</p>
 
@@ -47,7 +47,7 @@ Date:&nbsp;&nbsp; Thu Jun 23 14:42:56 2022 +0800</code></pre>
 
 &nbsp;&nbsp; &nbsp;deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966139&quot;
 
-&nbsp;&nbsp; &nbsp;deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966222&quot;</code></pre>
+&nbsp;&nbsp; &nbsp;deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966222&quot;{% endhighlight %}
 
 <p>rm 之后，git&nbsp; rm 也不可以了，那么进行stash save</p>
 

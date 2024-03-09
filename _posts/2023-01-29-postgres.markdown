@@ -41,16 +41,16 @@ sudo apt-get -y install postgresql</pre>
 <p><a href="https://stackoverflow.com/questions/58239607/pgadmin-package-pgadmin4-has-no-installation-candidate">https://stackoverflow.com/questions/58239607/pgadmin-package-pgadmin4-has-no-installation-candidate</a></p>
 
 <pre>
-<code>curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add</code></pre>
+<code>curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add{% endhighlight %}
 
 <pre>
-<code>sudo sh -c &#39;echo &quot;deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main&quot; &gt; /etc/apt/sources.list.d/pgadmin4.list &amp;&amp; apt update&#39;</code></pre>
+<code>sudo sh -c &#39;echo &quot;deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main&quot; &gt; /etc/apt/sources.list.d/pgadmin4.list &amp;&amp; apt update&#39;{% endhighlight %}
 
 <pre>
-<code>sudo apt install pgadmin4</code></pre>
+<code>sudo apt install pgadmin4{% endhighlight %}
 
 <pre>
-<code>sudo /usr/pgadmin4/bin/setup-web.sh</code></pre>
+<code>sudo /usr/pgadmin4/bin/setup-web.sh{% endhighlight %}
 
 <p>然后打开桌面的postgres，输入密码，连接远程的某个数据库，可以使用，结束。</p>
 

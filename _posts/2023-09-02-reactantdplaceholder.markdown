@@ -14,7 +14,7 @@ categories:
 }
 
 &lt;Input placeholder=&quot;Enter your name&quot; className=&quot;my-input&quot; /&gt;
-</code></pre>
+{% endhighlight %}
 
 <p>可以使用这样的Css:</p>
 
@@ -30,14 +30,14 @@ const YourComponent = () =&gt; {
   );
 };
 
-export default YourComponent;</code></pre>
+export default YourComponent;{% endhighlight %}
 
 <p>在css文件增加：</p>
 
 <pre>
 <code><span style="color:#ffa07a">.ant-input-number-input</span>::placeholder {
   <span style="color:#ffd700">color</span>: red; <span style="color:#d4d0ab">/* 修改为你想要的颜色 */</span>
-}</code></pre>
+}{% endhighlight %}
 
 <p>（2）其他的同理：</p>
 
@@ -68,5 +68,5 @@ export default YourComponent;</code></pre>
 
 &nbsp; color: rgba(0, 0, 0, 0.68);
 
-}</code></pre>
+}{% endhighlight %}
 

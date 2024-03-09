@@ -43,7 +43,7 @@ categories:
 
 │&nbsp;&nbsp; └── ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 其他图片
 
-└── ...</code></pre>
+└── ...{% endhighlight %}
 
 <p>2.在app.js设置小程序的逻辑：</p>
 
@@ -55,7 +55,7 @@ categories:
   globalData: {
     <span style="color:#d4d0ab">// 全局变量</span>
   }
-});</code></pre>
+});{% endhighlight %}
 
 <p>3.在app.json配置文件写入路由等</p>
 
@@ -70,7 +70,7 @@ categories:
     &quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;我的小程序&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
     &quot;navigationBarBackgroundColor&quot;: <span style="color:#abe338">&quot;#ffffff&quot;</span>  <span style="color:#d4d0ab">// 导航栏背景色</span>
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>4.在app.xwss写入小程序的全局Css：</p>
 
@@ -87,7 +87,7 @@ categories:
     <span style="color:#d4d0ab">// 页面加载时执行的逻辑</span>
   },
   <span style="color:#d4d0ab">// 其他页面逻辑代码</span>
-});</code></pre>
+});{% endhighlight %}
 
 <p>在index.json组件设置，例如：</p>
 
@@ -97,17 +97,17 @@ categories:
   &quot;usingComponents&quot;: {
     <span style="color:#d4d0ab">// 可以引用自定义组件</span>
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>在index.wxml页面结构文件设置，例如：</code></p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
 <code>&lt;view&gt;
   &lt;text&gt;{{ message }}&lt;/text&gt;
-&lt;/view&gt;</code></pre>
+&lt;/view&gt;{% endhighlight %}
 
 <p>也可以引入图片：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;</code></pre>
+<code>&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;{% endhighlight %}
 

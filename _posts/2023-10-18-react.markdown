@@ -25,7 +25,7 @@ categories:
   }
 
   return defaultData;
-}</code></pre>
+}{% endhighlight %}
 
 <p><code>调用：</code></p>
 
@@ -36,7 +36,7 @@ categories:
   factorProductionDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;生产排放因子(factor_production)&#39;),
   factorByYearDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;年度排放因子(factor_by_year)&#39;),
   factorTuiYiDefaultData: generateDefaultData(startYear, endYear, data.data, materialName, &#39;退役排放因子(factor_tui_yi)&#39;),
-};</code></pre>
+};{% endhighlight %}
 
 <p>&nbsp;</p>
 

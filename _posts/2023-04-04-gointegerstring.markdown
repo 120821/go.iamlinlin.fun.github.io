@@ -9,7 +9,7 @@ categories:
 <p>示例：</p>
 
 <pre>
-<code>package main</code></pre>
+<code>package main{% endhighlight %}
 
 <pre>
 <code>import (
@@ -18,7 +18,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp; &quot;strconv&quot;
 
-)</code></pre>
+){% endhighlight %}
 
 <pre>
 <code>func main() {
@@ -33,7 +33,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp; fmt.Println(str) // 输出: &quot;42&quot;
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>另外，还可以使用 fmt.Sprintf() 函数将整数转换为字符串类型。</p>
 
@@ -66,7 +66,7 @@ func main() {
 
 &nbsp;&nbsp;&nbsp; fmt.Println(str) // 输出: &quot;42&quot;
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>另外，您还可以使用 fmt.Sprintf() 函数将整数转换为字符串类型。</p>
 
@@ -81,7 +81,7 @@ import (
 
 )
 
-</code></pre>
+{% endhighlight %}
 
 <p><code><code>在Go语言中，您可以将整数转换为字符串类型使用 strconv.Itoa() 函数。 示例： ```go package main import ( &quot;fmt&quot; &quot;strconv&quot; ) func main() { // 定义整数 num := 42 // 使用 strconv.Itoa() 转换为字符串类型 str := strconv.Itoa(num) fmt.Println(str) // 输出: &quot;42&quot; } ``` 另外，还可以使用 fmt.Sprintf() 函数将整数转换为字符串类型。 示例： ```go package main import ( &quot;fmt&quot; ) func main() { // 定义整数 num := 42 // 使用 fmt.Sprintf() 函数将整数转换为字符串类型 str := fmt.Sprintf(&quot;%d&quot;, num) fmt.Println(str) // 输出: &quot;42&quot; } func main() {<br />
 &nbsp;&nbsp;&nbsp; // 定义整数<br />
@@ -112,5 +112,5 @@ func main() {
 
 &nbsp;&nbsp;&nbsp; fmt.Println(str) // 输出: &quot;42&quot;
 
-}</code></code></pre>
+}</code>{% endhighlight %}
 

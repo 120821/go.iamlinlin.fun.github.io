@@ -7,7 +7,7 @@ categories:
 <p>我使用图片的时候发现图片并没有出现：(图片位于<code>src/assets</code>目录下)(<code>@</code>符号通常是用作别名，指向项目的根目录。)</p>
 
 <pre>
-<code><span style="color:#abe338">&quot;@/assets/zhuifeng_banner3.png&quot;</span></code></pre>
+<code><span style="color:#abe338">&quot;@/assets/zhuifeng_banner3.png&quot;</span>{% endhighlight %}
 
 <p>代码段是这样：</p>
 
@@ -16,7 +16,7 @@ categories:
         { imageUrl: <span style="color:#abe338">&quot;path/to/image1.jpg&quot;</span> },
         { imageUrl: <span style="color:#abe338">&quot;path/to/image2.jpg&quot;</span> },
         { imageUrl: <span style="color:#abe338">&quot;path/to/image3.jpg&quot;</span> },
-      ],</code></pre>
+      ],{% endhighlight %}
 
 <p>解决：需要修改格式例如这样：</p>
 
@@ -30,5 +30,5 @@ categories:
     ],
     swiper: null
   };
-},</code></pre>
+},{% endhighlight %}
 

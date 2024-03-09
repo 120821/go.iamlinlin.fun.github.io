@@ -29,7 +29,7 @@ categories:
 
 ├── priv
 
-└── test</code></pre>
+└── test{% endhighlight %}
 
 <p><font style="vertical-align:inherit">我们将一一浏览这些目录： </font></p>
 
@@ -59,14 +59,14 @@ categories:
 
 <p><code class="inline">lib/hello</code><font style="vertical-align:inherit">目录托管您的所有业务域。 由于我们的项目还没有任何业务逻辑，所以目录大多是空的。 您只会找到三个文件</font></p>
 
-<pre><code>lib/hello<br />
+{% highlight %}lib/hello<br />
 ├── application.ex<br />
 ├── mailer.ex<br />
-└── repo.ex</code></pre>
+└── repo.ex{% endhighlight %}
 
 <p><code class="inline">lib/hello/application.ex</code><font style="vertical-align:inherit">文件定义了一个名为 Elixir 的应用程序 </font><code class="inline">Hello.Application</code><font style="vertical-align:inherit">. 那是因为归根结底，Phoenix 应用程序只是 Elixir 应用程序。 这 </font><code class="inline">Hello.Application</code><font style="vertical-align:inherit">模块定义了哪些服务是我们应用程序的一部分： </font></p>
 
-<pre><code>children = [<br />
+{% highlight %}children = [<br />
 &nbsp; # Start the Ecto repository<br />
 &nbsp; Hello.Repo,<br />
 &nbsp; # Start the Telemetry supervisor<br />
@@ -77,25 +77,25 @@ categories:
 &nbsp; HelloWeb.Endpoint<br />
 &nbsp; # Start a worker by calling: Hello.Worker.start_link(arg)<br />
 &nbsp; # {Hello.Worker, arg}<br />
-]</code></pre>
+]{% endhighlight %}
 
 <p><code class="inline">lib/hello/mailer.ex</code><font style="vertical-align:inherit">文件包含 </font><code class="inline">Hello.Mailer</code><font style="vertical-align:inherit">模块，它定义了发送电子邮件的主界面： </font></p>
 
-<pre><code>defmodule Hello.Mailer do<br />
+{% highlight %}defmodule Hello.Mailer do<br />
 &nbsp; use Swoosh.Mailer, otp_app: :hello<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p><font style="vertical-align:inherit">在相同的 </font><code class="inline">lib/hello</code><font style="vertical-align:inherit">目录，我们会找到一个 </font><code class="inline">lib/hello/repo.ex</code><font style="vertical-align:inherit">. 它定义了一个 </font><code class="inline">Hello.Repo</code><font style="vertical-align:inherit">模块，它是我们与数据库的主要接口。 如果您使用 Postgres（默认数据库），您将看到如下内容： </font></p>
 
-<pre><code>defmodule Hello.Repo do<br />
+{% highlight %}defmodule Hello.Repo do<br />
 &nbsp; use Ecto.Repo,<br />
 &nbsp;&nbsp;&nbsp; otp_app: :hello,<br />
 &nbsp;&nbsp;&nbsp; adapter: Ecto.Adapters.Postgres<br />
-end</code></pre>
+end{% endhighlight %}
 
 <p><code class="inline">lib/hello_web</code><font style="vertical-align:inherit">目录包含我们应用程序的网络相关部分。 展开后是这样的：</font></p>
 
-<pre><code>lib/hello_web<br />
+{% highlight %}lib/hello_web<br />
 ├── controllers<br />
 │&nbsp;&nbsp; └── page_controller.ex<br />
 ├── templates<br />
@@ -113,7 +113,7 @@ end</code></pre>
 ├── endpoint.ex<br />
 ├── gettext.ex<br />
 ├── router.ex<br />
-└── telemetry.ex</code></pre>
+└── telemetry.ex{% endhighlight %}
 
 <p><font style="vertical-align:inherit">当前在 </font><code class="inline">controllers</code><font style="vertical-align:inherit">, </font><code class="inline">templates</code><font style="vertical-align:inherit">， 和 </font><code class="inline">views</code><font style="vertical-align:inherit">目录在那里创建&ldquo;欢迎来到凤凰！&rdquo; 中看到的页面。 </font><a href="https://hexdocs.pm/phoenix/up_and_running.html"><font style="vertical-align:inherit"> 我们在&ldquo;启动并运行 </font></a><font style="vertical-align:inherit">&rdquo;指南 </font></p>
 

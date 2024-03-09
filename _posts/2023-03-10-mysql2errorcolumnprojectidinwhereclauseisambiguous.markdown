@@ -8,12 +8,12 @@ categories:
 
 <pre>
 <code>WHERE project.id = &#39;3&#39;
-</code></pre>
+{% endhighlight %}
 
 <p>使用joins进行查询：</p>
 
 <pre>
-<code>&nbsp; @emails = @emails.joins(:project).where(&quot;projects.id = ?&quot;, params[:project_id]) if params[:project_id].present?</code></pre>
+<code>&nbsp; @emails = @emails.joins(:project).where(&quot;projects.id = ?&quot;, params[:project_id]) if params[:project_id].present?{% endhighlight %}
 
 <p>视图页面：</p>
 
@@ -28,7 +28,7 @@ categories:
 
 &nbsp; &lt;%= submit_tag &#39;search&#39; %&gt;
 
-&lt;% end %&gt;</code></pre>
+&lt;% end %&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

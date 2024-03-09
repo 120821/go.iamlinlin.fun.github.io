@@ -11,7 +11,7 @@ categories:
 <pre>
 <code>string = &quot;200吨&quot;
 ton = string.match(/\p{Han}+/)[0]
-puts ton # 输出：吨</code></pre>
+puts ton # 输出：吨{% endhighlight %}
 
 <p>这里使用了 Unicode 字符属性 <code>\p{Han}</code> 匹配汉字，加上 <code>+</code> 表示匹配一个或多个汉字。最后 <code>[0]</code> 取出匹配到的第一个汉字。</p>
 

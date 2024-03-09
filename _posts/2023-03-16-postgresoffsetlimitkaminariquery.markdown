@@ -29,7 +29,7 @@ categories:
 13.1
 12.2
 13.7
-</code></pre>
+{% endhighlight %}
 
 <p>The following is the time required for data query on the last ten pages, in seconds</p>
 
@@ -44,7 +44,7 @@ categories:
 2.374
 2.399
 2.377
-</code></pre>
+{% endhighlight %}
 
 <p>My paging uses gem &quot;kaminari&quot;.The usage is as follows<code>NFT.order(:id).page(params[:page]).per(10)</code> To display the index page. I added index to id. The query statement on the back end is:</p>
 
@@ -59,7 +59,7 @@ Processing by NftsController#index as JSON
   ↳ app/controllers/nfts_controller.rb:12:in `index&#39;
 Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations: 14400)
 
-</code></pre>
+{% endhighlight %}
 
 <p>How can I solve the problem of slow query on the last ten pages.</p>
 
@@ -76,7 +76,7 @@ Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations:
 8.[11ms, 16ms, 16ms, 11ms, 11ms, 9ms, 12ms, 12ms, 22ms, 11ms]
 9.[12ms, 10ms, 15ms, 9ms, 14ms ,10ms, 12ms, 15ms, 11ms, 14ms]
 10.[10ms, 23ms, 10ms, 11ms, 17ms, 11ms, 15ms, 10ms, 21ms, 9ms]
-</code></pre>
+{% endhighlight %}
 
 <p>The following is the time required for data query on each page of the last ten pages, in seconds</p>
 
@@ -91,14 +91,14 @@ Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations:
 -8.[2.39s, 2.38s, 2.37s, 2.39s, 2.34s, 2.37s, 2.37s, 2.35s, 2.40s, 2.38s]
 -9.[2.38s, 2.41s, 2.38s, 2.38s, 2.38s, 2.39s, 2.43s, 2.41s, 2.41s, 2.42s]
 -10.[2.37s, 2.40s, 2.33s, 2.37s, 2.38s, 2.37s, 2.40s, 2.38s, 2.39s, 2.38s]
-</code></pre>
+{% endhighlight %}
 
 <p>可以看到默认使用的是limit offset进行数据的查询，这样虽然可以查询到所有的数据，但是有一个很大的弊端： 获取后面的页面时，性能会变得更差。</p>
 
 <p>解决方法：</p>
 
 <pre>
-<code>select * from foo where ID &gt; [huge] order by ID limit 100</code></pre>
+<code>select * from foo where ID &gt; [huge] order by ID limit 100{% endhighlight %}
 </div>
 </div>
 

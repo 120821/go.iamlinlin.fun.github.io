@@ -203,7 +203,7 @@ categories:
 
 +
 
-+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.info(&quot;====================&quot;, nft_id)</code></pre>
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.info(&quot;====================&quot;, nft_id){% endhighlight %}
 
 <p>&nbsp;</p>
 

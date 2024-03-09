@@ -39,5 +39,5 @@ class MyComponent extends React.Component {
   }
 }
 
-export default withRouter(MyComponent);</code></pre>
+export default withRouter(MyComponent);{% endhighlight %}
 

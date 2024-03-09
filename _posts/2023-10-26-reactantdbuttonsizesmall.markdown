@@ -9,7 +9,7 @@ categories:
 <p>react使用antd的button， 可以调节大小，例如使用小号：</p>
 
 <pre>
-<code>&lt;Button size=&quot;small&quot;&gt;小号按钮&lt;/Button&gt;</code></pre>
+<code>&lt;Button size=&quot;small&quot;&gt;小号按钮&lt;/Button&gt;{% endhighlight %}
 
 <p>除了 <code>&#39;small&#39;</code>，Ant Design 的按钮还支持 <code>&#39;large&#39;</code>（大号）和默认尺寸（中号）。如果不设置 <code>size</code> 属性，默认为中号尺寸。</p>
 
@@ -28,5 +28,5 @@ const YourComponent = () =&gt; {
 };
 
 export default YourComponent;
-</code></pre>
+{% endhighlight %}
 

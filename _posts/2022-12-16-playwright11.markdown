@@ -23,7 +23,7 @@ categories:
       console.log(await newPage.title());
       // title of existing page
       console.log(await page.title());
-})</code></pre>
+}){% endhighlight %}
 
 <p>那么获得京东的首页，进入首页的秒杀页面，进入商品的详情页面就是这样的：</p>
 
@@ -82,7 +82,7 @@ test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
 
 &nbsp; console.log(await page.url());
 
-})</code></pre>
+}){% endhighlight %}
 
 <p>运行后，通过了：npx playwright test jing.spec.js --debug</p>
 
@@ -121,5 +121,5 @@ https://www.jd.com/?d
 
 To open last HTML report run:
 
-&nbsp; npx playwright show-report</code></pre>
+&nbsp; npx playwright show-report{% endhighlight %}
 

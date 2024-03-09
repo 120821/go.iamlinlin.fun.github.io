@@ -22,5 +22,5 @@ func TestSomething(t *testing.T) {
 
   assert.Equal(t, a, b, &quot;The two words should be the same.&quot;)
 
-}</code></pre>
+}{% endhighlight %}
 

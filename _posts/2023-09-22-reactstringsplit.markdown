@@ -11,5 +11,5 @@ categories:
 
 <span style="color:#dcc6e0">const</span> result = str.split(<span style="color:#abe338">&#39;?&#39;</span>)[<span style="color:#f5ab35">0</span>]; <span style="color:#d4d0ab">// 使用问号进行分割，获取问号前面的部分</span>
 
-<span style="color:#f5ab35">console</span>.log(result); <span style="color:#d4d0ab">// 输出 &quot;calculation_plan_id: 147&quot;</span></code></pre>
+<span style="color:#f5ab35">console</span>.log(result); <span style="color:#d4d0ab">// 输出 &quot;calculation_plan_id: 147&quot;</span>{% endhighlight %}
 

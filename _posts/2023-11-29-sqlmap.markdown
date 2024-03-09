@@ -11,7 +11,7 @@ categories:
 <p>1.安装成功后，使用sqlmap命令：</p>
 
 <pre>
-<code>sqlmap</code></pre>
+<code>sqlmap{% endhighlight %}
 
 <pre>
 <code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___
@@ -30,7 +30,7 @@ Usage: python3 sqlmap [options]
 
 sqlmap: error: missing a mandatory option (-d, -u, -l, -m, -r, -g, -c, --wizard, --shell, --update, --purge, --list-tampers or --dependencies). Use -h for basic and -hh for advanced help
 
-09:37:25] [WARNING] your sqlmap version is outdated</code></pre>
+09:37:25] [WARNING] your sqlmap version is outdated{% endhighlight %}
 
 <p>2.根据以上的提示，sqlmap的命令参数包含：</p>
 

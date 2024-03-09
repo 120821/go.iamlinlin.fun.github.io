@@ -7,31 +7,31 @@ categories:
 
                     <blockquote> 
  <p>不安装bootstrap的话，可以用链接，效果是一样的，使用的时候记住标签即可，记不住可以多熟悉一下，链接放在head即可</p> 
- <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre> 
+ <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>基本表格：</strong></p> 
  <pre><code class="language-html">&lt;table class="table"&gt;
   ...
-&lt;/table&gt;</code></pre> 
+&lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>条纹表格：</strong></p> 
  <pre><code class="language-html">&lt;table class="table table-striped"&gt;
   ...
-&lt;/table&gt;</code></pre> 
+&lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>边框表格</strong></p> 
  <pre><code class="language-html">&lt;table class="table table-bordered"&gt;
   ...
-&lt;/table&gt;</code></pre> 
+&lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>鼠标悬停</strong></p> 
  <pre><code class="language-html">&lt;table class="table table-hover"&gt;
   ...
-&lt;/table&gt;</code></pre> 
+&lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>颜色表格或者状态表格</strong></p> 
@@ -50,14 +50,14 @@ categories:
   &lt;td class="warning"&gt;...&lt;/td&gt;
   &lt;td class="danger"&gt;...&lt;/td&gt;
   &lt;td class="info"&gt;...&lt;/td&gt;
-&lt;/tr&gt;</code></pre> 
+&lt;/tr&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>紧缩表格</strong></p> 
  <p>其实也不算缩进太多，还是非常美观的</p> 
  <pre><code class="language-html">&lt;table class="table table-condensed"&gt;
   ...
-&lt;/table&gt;</code></pre> 
+&lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>表单</strong></p> 
@@ -82,7 +82,7 @@ categories:
     &lt;/label&gt;
   &lt;/div&gt;
   &lt;button type="submit" class="btn btn-default"&gt;Submit&lt;/button&gt;
-&lt;/form&gt;</code></pre> 
+&lt;/form&gt;{% endhighlight %} 
 </blockquote> 
 <p></p> 
 <p></p> 

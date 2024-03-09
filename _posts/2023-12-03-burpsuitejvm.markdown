@@ -9,10 +9,10 @@ categories:
 <p>一般设置为2g，如果电脑的内存足够，可以使用4g,或者电脑的内存很小，可以分配128m,例如：</p>
 
 <pre>
-<code>java -jar -Xmx2048M /your_burpsuite_path/burpsuite.jar</code></pre>
+<code>java -jar -Xmx2048M /your_burpsuite_path/burpsuite.jar{% endhighlight %}
 
 <p>参数-Xmx可以指定JVM的最大内存，单位是M或者G，如果使用G为单位，例如：</p>
 
 <pre>
-<code>java -jar -Xmx2G /your_burpsuite_path/burpsuite.jar</code></pre>
+<code>java -jar -Xmx2G /your_burpsuite_path/burpsuite.jar{% endhighlight %}
 

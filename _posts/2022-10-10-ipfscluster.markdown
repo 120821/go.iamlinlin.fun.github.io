@@ -8,25 +8,25 @@ categories:
 
 <p>在测试服务器：</p>
 
-<pre><code>&nbsp;wget https://dist.ipfs.tech/ipfs-cluster-ctl/v1.0.2/ipfs-cluster-ctl_v1.0.2_linux-amd64.tar.gz</code></pre>
+{% highlight %}&nbsp;wget https://dist.ipfs.tech/ipfs-cluster-ctl/v1.0.2/ipfs-cluster-ctl_v1.0.2_linux-amd64.tar.gz{% endhighlight %}
 
 <p>解压缩：</p>
 
-<pre><code>tar zxvf ipfs-cluster-ctl_v1.0.2_linux-amd64.tar.gz
+{% highlight %}tar zxvf ipfs-cluster-ctl_v1.0.2_linux-amd64.tar.gz
 
-cd ipfs-cluster-ctl/</code></pre>
+cd ipfs-cluster-ctl/{% endhighlight %}
 
 <p>获取文件：</p>
 
-<pre><code>wget https://raw.githubusercontent.com/ipfs/ipfs-cluster/v1.0.2/docker-compose.yml</code></pre>
+{% highlight %}wget https://raw.githubusercontent.com/ipfs/ipfs-cluster/v1.0.2/docker-compose.yml{% endhighlight %}
 
-<pre>启动：<code>sudo docker-compose up</code></pre>
+<pre>启动：<code>sudo docker-compose up{% endhighlight %}
 
-<pre>在新的窗口：<code>vim hi.txt</code></pre>
+<pre>在新的窗口：<code>vim hi.txt{% endhighlight %}
 
-<pre><code>./ipfs-cluster-ctl add hi.txt
+{% highlight %}./ipfs-cluster-ctl add hi.txt
 
-added QmXQrn3noXsMWHzHUUxZPWXQvdqEUZ2SurqzUVPKGLjE8t hi.txt</code></pre>
+added QmXQrn3noXsMWHzHUUxZPWXQvdqEUZ2SurqzUVPKGLjE8t hi.txt{% endhighlight %}
 
 <p>&nbsp;</p>
 

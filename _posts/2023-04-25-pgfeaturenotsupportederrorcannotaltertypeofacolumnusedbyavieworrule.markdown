@@ -36,7 +36,7 @@ UPDATE mytable SET new_column_name = old_column_name;
 ALTER TABLE mytable DROP COLUMN old_column_name;
 
 -- 将新列重命名为旧列的名称
-ALTER TABLE mytable RENAME COLUMN new_column_name TO old_column_name;</code></pre>
+ALTER TABLE mytable RENAME COLUMN new_column_name TO old_column_name;{% endhighlight %}
 
 <p>请注意，在执行此操作之前，请务必备份您的数据库！</p>
 

@@ -9,12 +9,12 @@ categories:
 <p>1.克隆dvwa项目</p>
 
 <pre>
-<code>git clone https://github.com/digininja/DVWA.git</code></pre>
+<code>git clone https://github.com/digininja/DVWA.git{% endhighlight %}
 
 <p>2.同时安装apache服务</p>
 
 <pre>
-<code>apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php</code></pre>
+<code>apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php{% endhighlight %}
 
 <p>3.进入克隆后的DVWA文件夹：</p>
 

@@ -23,7 +23,7 @@ categories:
 <p>例子： 运行 image: 933f6,&nbsp; 使用host ip,&nbsp; 并且把 host 的 /workspace 文件夹加载到container 中的 /workspace</p>
 
 <pre>
-<code>docker run -v /workspace:/workspace --net=host -it --hostname=admin-container 933f6</code></pre>
+<code>docker run -v /workspace:/workspace --net=host -it --hostname=admin-container 933f6{% endhighlight %}
 
 <p><strong>docker create&nbsp;</strong>&nbsp;创建一个新的container ,但是不启动</p>
 
@@ -83,7 +83,7 @@ busybox             latest              769b9341d937        7 weeks ago         
 fedora              rawhide             0d20aec6529d        7 weeks ago         387 MB
 fedora              20                  58394af37342        7 weeks ago         385.5 MB
 fedora              heisenbug           58394af37342        7 weeks ago         385.5 MB
-fedora              latest              58394af37342        7 weeks ago         385.5 MB</code></pre>
+fedora              latest              58394af37342        7 weeks ago         385.5 MB{% endhighlight %}
 
 <p><strong>docker import</strong>&nbsp;&nbsp; 把image 导入。（但是不运行，仅仅导入到本地的image 仓库）</p>
 
@@ -102,5 +102,5 @@ fedora              latest              58394af37342        7 weeks ago         
 <p>运行某个指定的yml文件：</p>
 
 <pre>
-<code>docker-compose -f ./docker-compose.yml up</code></pre>
+<code>docker-compose -f ./docker-compose.yml up{% endhighlight %}
 

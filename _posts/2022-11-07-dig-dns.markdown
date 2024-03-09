@@ -55,5 +55,5 @@ categories:
 
 &nbsp;<wbr />&nbsp;<wbr />TXT 域名对应的文本信息
 
-&nbsp;<wbr />&nbsp;<wbr />X25 域名对应的X.25地址记录</code></pre>
+&nbsp;<wbr />&nbsp;<wbr />X25 域名对应的X.25地址记录{% endhighlight %}
 

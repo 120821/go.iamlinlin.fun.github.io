@@ -8,5 +8,5 @@ categories:
 
 <pre>
 把密码放到环境变量里：
-<code>export PGPASSWORD=&#39;your password&#39;</code></pre>
+<code>export PGPASSWORD=&#39;your password&#39;{% endhighlight %}
 

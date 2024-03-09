@@ -9,12 +9,12 @@ categories:
 <p>使用命令：</p>
 
 <pre>
-<code>ffmpeg -i youtube.flv -c:v libx264 filename.mp4</code></pre>
+<code>ffmpeg -i youtube.flv -c:v libx264 filename.mp4{% endhighlight %}
 
 <p>例如：</p>
 
 <pre>
-linlin@linlin-i5:~/Videos$ <code>ffmpeg -i 动态排放功能介绍.mp4 -c:v libx264 动态排放功能介绍-new.mp4</code></pre>
+linlin@linlin-i5:~/Videos$ <code>ffmpeg -i 动态排放功能介绍.mp4 -c:v libx264 动态排放功能介绍-new.mp4{% endhighlight %}
 
 <p>&nbsp;</p>
 

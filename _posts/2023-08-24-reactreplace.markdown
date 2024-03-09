@@ -25,5 +25,5 @@ function MyComponent() {
       &lt;p&gt;替换结果: {replacedStr}&lt;/p&gt;
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 

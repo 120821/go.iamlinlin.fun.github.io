@@ -12,7 +12,7 @@ categories:
 <code>[GIN-debug] POST   /foo                      --&gt; main.main.func1 (3 handlers)
 [GIN-debug] GET    /bar                      --&gt; main.main.func2 (3 handlers)
 [GIN-debug] GET    /status                   --&gt; main.main.func3 (3 handlers)
-</code></pre>
+{% endhighlight %}
 
 <p>如果您想以给定格式（例如 JSON、键值或其他）记录此信息，则可以使用 gin.DebugPrintRouteFunc 定义此格式。&nbsp; 在下面的示例中，我们使用标准日志包记录所有路由，但您可以使用其他适合您需求的日志工具。</p>
 
@@ -45,7 +45,7 @@ categories:
 	<span style="color:#8f5902;font-style:italic">// Listen and Server in http://0.0.0.0:8080
 </span>	<span style="color:#000">r</span><span style="color:#000;font-weight:700">.</span><span style="color:#000">Run</span><span style="color:#000;font-weight:700">()</span>
 <span style="color:#000;font-weight:700">}</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code>运行：</code></p>
 

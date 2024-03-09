@@ -11,7 +11,7 @@ categories:
 
 a:active {color: #0f0;} /* 鼠标点中激活链接 绿色 */
 
-&lt;/style&gt;</code></pre>
+&lt;/style&gt;{% endhighlight %}
 
 <pre>
 

@@ -33,7 +33,7 @@ ii&nbsp; mysql-server-8.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 
 ii&nbsp; mysql-server-core-8.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.0.35-0ubuntu0.22.04.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL database server binaries
 
-ii&nbsp; php8.1-mysql&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.2-1ubuntu2.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL module for PHP</code></pre>
+ii&nbsp; php8.1-mysql&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1.2-1ubuntu2.14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL module for PHP{% endhighlight %}
 
 <p>把这些mysql都卸载：</p>
 
@@ -41,7 +41,7 @@ ii&nbsp; php8.1-mysql&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 <code>sudo apt purge mysql-server mysql-client mysql-<span style="color:#dcc6e0">common</span> mysql-server-core-* mysql-client-core-*
 sudo rm -rf /etc/mysql /var/lib/mysql
 sudo apt <span style="color:#dcc6e0">auto</span><span style="color:#d4d0ab">remove</span>
-sudo apt autoclean</code></pre>
+sudo apt autoclean{% endhighlight %}
 
 <p>再次查看是否真的删除：</p>
 
@@ -66,7 +66,7 @@ Processing triggers for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...</p>
 <p>3.重新安装mysql：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>sudo apt <span style="color:#dcc6e0">install</span> mysql-<span style="color:#dcc6e0">server</span></code></pre>
+<code>sudo apt <span style="color:#dcc6e0">install</span> mysql-<span style="color:#dcc6e0">server</span>{% endhighlight %}
 
 <p>成功安装后会提示已经运行了：</p>
 
@@ -93,7 +93,7 @@ Setting up mysql-server (8.0.35-0ubuntu0.22.04.1) ...
 
 Processing triggers for man-db (2.10.2-1) ...
 
-Processing triggers for libc-bin (2.35-0ubuntu3.4) ...</code></pre>
+Processing triggers for libc-bin (2.35-0ubuntu3.4) ...{% endhighlight %}
 
 <p>然后使用mysql -u root 就可以进入命令行的mysql了。</p>
 

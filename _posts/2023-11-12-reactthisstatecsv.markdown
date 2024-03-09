@@ -48,7 +48,7 @@ categories:
       &lt;/div&gt;
     );
   }
-}</code></pre>
+}{% endhighlight %}
 
 <p>&nbsp;</p>
 

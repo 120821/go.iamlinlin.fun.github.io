@@ -14,7 +14,7 @@ categories:
 <code>for(var i = 0;i&lt;5;i++){
  console.log(i)
 }
-</code></pre>
+{% endhighlight %}
 
 <p>2.for in 循环</p>
 
@@ -30,7 +30,7 @@ console.log(prop, obj[prop]);
 // 输出:
 // a,1
 // b,2
-// c,3</code></pre>
+// c,3{% endhighlight %}
 
 <p>3.for each循环（forEach循环里面没办法用break跳出循环。而且在IE中无法实现，需要做兼容处理）</p>
 
@@ -42,7 +42,7 @@ myArray.forEach(function (value, index) {
 //输出
 //&quot;123&quot;,1
 //&quot;qwewq&quot;,2
-//&quot;sfds&quot;,3</code></pre>
+//&quot;sfds&quot;,3{% endhighlight %}
 
 <p>4.for of 循环</p>
 
@@ -57,7 +57,7 @@ for(let item of arr){
 //输出
 //&#39;123&#39;
 //&#39;qwewq&#39;
-//&#39;sfds&#39;</code></pre>
+//&#39;sfds&#39;{% endhighlight %}
 
 <p>&nbsp;</p>
 

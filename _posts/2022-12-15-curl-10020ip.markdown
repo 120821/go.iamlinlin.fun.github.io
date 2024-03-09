@@ -72,7 +72,7 @@ loop do
 
 &nbsp; end
 
-end</code></pre>
+end{% endhighlight %}
 
 <p>&nbsp;</p>
 

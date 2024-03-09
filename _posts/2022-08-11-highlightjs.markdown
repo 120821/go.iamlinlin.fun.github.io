@@ -13,13 +13,13 @@ categories:
 <pre>
 <code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>
       <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css&quot;</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>{% endhighlight %}
 
 <p><code>然后，使用，</code></p>
 
 <pre>
 <code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-plaintext&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>就产生这样的效果：<img height="282" src="/uploads/ckeditor/pictures/206/image-20220811151326-1.png" width="725" /></p>
 
@@ -29,7 +29,7 @@ categories:
 <code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/path/to/styles/default.min.css&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/path/to/highlight.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>hljs.highlightAll();<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-</code></pre>
+{% endhighlight %}
 
 <p>然后刷新页面，是这样的效果：</p>
 

@@ -30,7 +30,7 @@ categories:
 
 <span style="color:#d4d0ab">// ...</span>
 
-&lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;</code></pre>
+&lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;{% endhighlight %}
 
 <p>2.console.warn</p>
 
@@ -46,7 +46,7 @@ categories:
 
 <span style="color:#d4d0ab">// ...</span>
 
-fetchData();</code></pre>
+fetchData();{% endhighlight %}
 
 <p>3.console.error</p>
 
@@ -61,5 +61,5 @@ fetchData();</code></pre>
 }
 
 <span style="color:#dcc6e0">const</span> result = divide(<span style="color:#f5ab35">10</span>, <span style="color:#f5ab35">0</span>);
-<span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&#39;Result:&#39;</span>, result);</code></pre>
+<span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&#39;Result:&#39;</span>, result);{% endhighlight %}
 

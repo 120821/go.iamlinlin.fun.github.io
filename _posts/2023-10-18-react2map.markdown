@@ -32,7 +32,7 @@ categories:
 ];
 
 const secondColumn = data.slice(1).map(row =&gt; row[1]);
-console.log(secondColumn);</code></pre>
+console.log(secondColumn);{% endhighlight %}
 
 <p>&nbsp;</p>
 

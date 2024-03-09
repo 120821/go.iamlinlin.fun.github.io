@@ -7,5 +7,5 @@ categories:
 <p>linux直接使用：</p>
 
 <pre>
-<code>echo $JAVA_HOME</code></pre>
+<code>echo $JAVA_HOME{% endhighlight %}
 

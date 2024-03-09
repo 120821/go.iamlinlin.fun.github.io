@@ -9,7 +9,7 @@ categories:
 <p>创建项目：</p>
 
 <pre>
-<code>yarn create playwright</code></pre>
+<code>yarn create playwright{% endhighlight %}
 
 <p>运行：</p>
 
@@ -32,10 +32,10 @@ Inside that directory, you can run several commands:
 &nbsp; yarn playwright codegen
 &nbsp;&nbsp;&nbsp; Auto generate tests with Codegen.
 We suggest that you begin by typing:
-</code></pre>
+{% endhighlight %}
 
 <pre>
-<code>&nbsp;&nbsp;&nbsp; yarn playwright test</code></pre>
+<code>&nbsp;&nbsp;&nbsp; yarn playwright test{% endhighlight %}
 
 <pre>
 <code>And check out the following files:
@@ -46,7 +46,7 @@ We suggest that you begin by typing:
 
 &nbsp; - ./playwright.config.ts - Playwright Test configuration Visit https://playwright.dev/docs/intro for more information. ✨ Happy hacking! 🎭
 
-Done in 29.67s.</code></pre>
+Done in 29.67s.{% endhighlight %}
 
 <p><img height="558" src="/uploads/ckeditor/pictures/360/image-20220830102418-1.png" width="1141" /></p>
 
@@ -57,7 +57,7 @@ Done in 29.67s.</code></pre>
   const content = await page.textContent(&#39;nav:first-child&#39;);
 
   expect(content).toBe(&#39;home&#39;);
-</code></pre>
+{% endhighlight %}
 
 <p>修改内容：（更换URL等）（tests/example.spec.ts）</p>
 
@@ -83,7 +83,7 @@ nbsp; // Click the get started link.
 
   &nbsp; //await expect(page).toHaveURL(/.*intro/);
 
-  });</code></pre>
+  });{% endhighlight %}
 
 <p>运行：yarn playwright test</p>
 

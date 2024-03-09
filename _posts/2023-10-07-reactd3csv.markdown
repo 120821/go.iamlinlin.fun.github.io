@@ -100,7 +100,7 @@ const GridMap = () =&gt; {
 };
 
 export default GridMap;
-</code></pre>
+{% endhighlight %}
 
 <p>但是把浏览器放大后，可以看到网格数据是正常的</p>
 

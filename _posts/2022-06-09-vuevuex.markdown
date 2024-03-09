@@ -14,13 +14,13 @@ categories:
 <code>  &quot;dependencies&quot;: {
     &quot;vuex&quot;: &quot;^2.3.1&quot;
   },
-</code></pre>
+{% endhighlight %}
 
 <p>如果不确定你的 vuex 用什么版本,就先手动安装一下:</p>
 
 <pre>
 <code>$ npm install vuex --verbose
-</code></pre>
+{% endhighlight %}
 
 <p>然后看安装过来的版本号就可以了.</p>
 

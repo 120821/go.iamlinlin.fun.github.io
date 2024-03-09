@@ -15,7 +15,7 @@ select id,tx_hash,cell_index,capacity from cell_outputs where tx_hash = decode(&
 
 select id,tx_hash,cell_index,capacity from cell_outputs where tx_hash = decode(&#39;8df812321b057cd3348927c5296dabb859e1ff9b00fcd0e92b57d6bf22c626dc&#39;, &#39;hex&#39;) and cell_index = 2 limit 1;
 
-explain analyze verbose select id,tx_hash,cell_index,capacity from cell_outputs where tx_hash = decode(&#39;8df812321b057cd3348927c5296dabb859e1ff9b00fcd0e92b57d6bf22c626dc&#39;, &#39;hex&#39;) and cell_index = 2 limit 1;</code></pre>
+explain analyze verbose select id,tx_hash,cell_index,capacity from cell_outputs where tx_hash = decode(&#39;8df812321b057cd3348927c5296dabb859e1ff9b00fcd0e92b57d6bf22c626dc&#39;, &#39;hex&#39;) and cell_index = 2 limit 1;{% endhighlight %}
 
 <p>&nbsp;</p>
 

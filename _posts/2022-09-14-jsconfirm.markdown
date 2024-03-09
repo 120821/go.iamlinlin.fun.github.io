@@ -7,7 +7,7 @@ categories:
 <p>视图页面：</p>
 
 <pre>
-<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;disConnect()&quot;&gt;Disconnect&lt;/a&gt;</code></pre>
+<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;disConnect()&quot;&gt;Disconnect&lt;/a&gt;{% endhighlight %}
 
 <p><code>js代码：</code></p>
 
@@ -47,7 +47,7 @@ function disConnect() {
 
 &nbsp; }
 
-}</code></pre>
+}{% endhighlight %}
 
 <p>点击退出，弹出确认与取消按钮进行确定</p>
 

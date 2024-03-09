@@ -17,7 +17,7 @@ categories:
 <pre class="language-html">
 <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>enableEthereumButton btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Enable Ethereum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sendEthButton btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Send Eth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
-</code></pre>
+{% endhighlight %}
 
 <p>js:</p>
 </div>
@@ -43,7 +43,7 @@ categories:
   <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&#39;eth_sendTransaction&#39;</span><span class="token punctuation">,</span>
   <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token punctuation">[</span>transactionParameters<span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+{% endhighlight %}
 
 <p><code><span class="token punctuation">js:</span></code></p>
 
@@ -81,7 +81,7 @@ ethereumButton<span class="token punctuation">.</span><span class="token functio
 <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getAccount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   accounts <span class="token operator">=</span> <span class="token keyword">await</span> ethereum<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token string">&#39;eth_requestAccounts&#39;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
+{% endhighlight %}
 </div>
 </section>
 </div>

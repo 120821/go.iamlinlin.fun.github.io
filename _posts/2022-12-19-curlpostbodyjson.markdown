@@ -9,12 +9,12 @@ categories:
 <p>使用-X POST 进行post，使用 -d传递参数</p>
 
 <pre>
-<code>curl -X POST https://reqbin.com/echo/post/json -H &#39;Content-Type: application/json&#39; -d &#39;{&quot;login&quot;:&quot;my_login&quot;,&quot;password&quot;:&quot;my_password&quot;}&#39;</code></pre>
+<code>curl -X POST https://reqbin.com/echo/post/json -H &#39;Content-Type: application/json&#39; -d &#39;{&quot;login&quot;:&quot;my_login&quot;,&quot;password&quot;:&quot;my_password&quot;}&#39;{% endhighlight %}
 
 <p>使用proxy进行post</p>
 
 <pre>
-<code>curl -ipv4 --socks5 #{ip}:#{port} #{url} -H &#39;Content-Type: application/json&#39; -d &#39;{&quot;id&quot;:&quot;#{i}&quot;}&#39;</code></pre>
+<code>curl -ipv4 --socks5 #{ip}:#{port} #{url} -H &#39;Content-Type: application/json&#39; -d &#39;{&quot;id&quot;:&quot;#{i}&quot;}&#39;{% endhighlight %}
 
 <p><code>此时不必要使用-X POST</code></p>
 

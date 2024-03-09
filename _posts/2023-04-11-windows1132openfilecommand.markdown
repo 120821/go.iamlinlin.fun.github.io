@@ -12,7 +12,7 @@ categories:
 For example to open a text file named file1.txt, we just need to type file1.txt in the command prompt and press <em>&lsquo;Enter&rsquo;.&nbsp;</em></p>
 
 <pre>
-<code>c:&gt; file1.txt</code></pre>
+<code>c:&gt; file1.txt{% endhighlight %}
 
 <p>Note that file name should have the extension as .txt otherwise command prompt would not be able to identify which application need to be used to open the file.</p>
 

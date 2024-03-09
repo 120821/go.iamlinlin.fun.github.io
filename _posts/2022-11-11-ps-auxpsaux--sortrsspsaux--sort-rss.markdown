@@ -8,13 +8,13 @@ categories:
 
 <p>升序：</p>
 
-<pre><code>ps aux --sort=+rss</code></pre>
+{% highlight %}ps aux --sort=+rss{% endhighlight %}
 
 <p><img height="250" src="/uploads/ckeditor/pictures/725/image-20221111175120-3.png" width="1521" /></p>
 
 <p>降序：</p>
 
-<pre><code>ps aux --sort=-rss</code></pre>
+{% highlight %}ps aux --sort=-rss{% endhighlight %}
 
 <p><img height="250" src="/uploads/ckeditor/pictures/724/image-20221111175113-2.png" width="1521" /></p>
 

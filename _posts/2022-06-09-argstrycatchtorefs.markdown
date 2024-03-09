@@ -23,14 +23,14 @@ categories:
 <blockquote> 
  <p><br> toRefs</p> 
  <p>https://v3.cn.vuejs.org/api/refs-api.html#torefs    </p> 
- <pre><code>&lt;ComponentCommunicationChildRef ref="child"&gt;&lt;/ComponentCommunicationChildRef&gt;
+ {% highlight %}&lt;ComponentCommunicationChildRef ref="child"&gt;&lt;/ComponentCommunicationChildRef&gt;
 
 methods: {
     get_child_value(){
       this.value_in_parent = this.$refs.child.value_in_child
     }
   }
- </code></pre> 
+ {% endhighlight %} 
  <p>将响应式对象转换为普通对象，其中结果对象的每个 property 都是指向原始对象相应 property 的 ref。<br> 当从组合式函数返回响应式对象时，toRefs 非常有用，这样消费组件就可以在不丢失响应性的情况下对返回的对象进行解构/展开：<br> toRefs 只会为源对象中包含的 property 生成 ref。<br>  <br>  </p> 
 </blockquote> 
 <p></p>

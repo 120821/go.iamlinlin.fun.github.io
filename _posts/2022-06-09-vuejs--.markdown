@@ -8,7 +8,7 @@ categories:
                     <p>官方文档与实际项目文档会有差别,实际项目中使用了 <code>vue-loader</code>, 会自动加载所有的内容，按照webpacke + vue的约定.</p> 
 <blockquote> 
  <p>官方文档是js文件</p> 
- <pre><code>var Child = {
+ {% highlight %}var Child = {
   template: '
 A custom component!
 '
@@ -19,15 +19,15 @@ new Vue({
     //  将只在父模板可用
     'my-component': Child
   }
-})</code></pre> 
+}){% endhighlight %} 
  <p>实际项目是</p> 
- <pre><code>&lt;template&gt;
+ {% highlight %}&lt;template&gt;
 ....
 &lt;/template&gt;
 &lt;script&gt;
 .....
 &lt;/script&gt;
 &lt;style&gt;
-&lt;/style&gt;</code></pre> 
+&lt;/style&gt;{% endhighlight %} 
 </blockquote>
                 

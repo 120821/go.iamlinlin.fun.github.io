@@ -9,29 +9,29 @@ categories:
 <p>1.确保已经安装依赖：</p>
 
 <pre>
-<code>npm install react-router-dom</code></pre>
+<code>npm install react-router-dom{% endhighlight %}
 
 <p><code>或：</code></p>
 
 <pre>
-<code>yarn add react-router-dom</code></pre>
+<code>yarn add react-router-dom{% endhighlight %}
 
 <p><code>2.在组建引入link:</code></p>
 
 <pre>
-<code>import { Link } from &#39;react-router-dom&#39;;</code></pre>
+<code>import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
 <p><code>3.在页面使用link:</code></p>
 
 <pre>
-<code>&lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;</code></pre>
+<code>&lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;{% endhighlight %}
 
 <p><span style="font-family:monospace">react 我已经有了button，而且button已经有事件：</span></p>
 
 <pre>
 <code>&lt;Button onClick={this.handleForgetPassword} size=&quot;small&quot; className=&quot;&quot;&gt;
   忘记密码?
-&lt;/Button&gt;</code></pre>
+&lt;/Button&gt;{% endhighlight %}
 
 <p><code>事件：</code></p>
 
@@ -39,19 +39,19 @@ categories:
 <code> handleForgetPassword = () =&gt; {
    //this.props.history.push(`forget_password`)
    alert(&#39;请联系管理员&#39;);
- }</code></pre>
+ }{% endhighlight %}
 
 <p><span style="font-family:monospace">修改为：</span></p>
 
 <p>1.增加：</p>
 
 <pre>
-<code>import { Link } from &#39;react-router-dom&#39;;</code></pre>
+<code>import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
 <p><code>2.修改button为link:</code></p>
 
 <pre>
 <code>&lt;Link to=&quot;/forget_password&quot; className=&quot;&quot; onClick={this.handleForgetPassword}&gt;
   忘记密码?
-&lt;/Link&gt;</code></pre>
+&lt;/Link&gt;{% endhighlight %}
 

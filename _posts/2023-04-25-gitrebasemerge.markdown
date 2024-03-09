@@ -83,14 +83,14 @@ categories:
 <p>使用格式如下：</p>
 
 <pre>
-<code>git format-patch &lt;start_commit&gt;..&lt;end_commit&gt; [--output-directory=&lt;dir&gt;]</code></pre>
+<code>git format-patch &lt;start_commit&gt;..&lt;end_commit&gt; [--output-directory=&lt;dir&gt;]{% endhighlight %}
 
 <p>其中，<code>&lt;start_commit&gt;</code> 和 <code>&lt;end_commit&gt;</code> 分别为起始提交和结束提交的 SHA-1 标识，中间用两个点号 <code>..</code> 连接。这里的提交可以是一个提交标记，也可以是一个分支名称。</p>
 
 <p>例如，执行以下命令：</p>
 
 <pre>
-<code>git format-patch HEAD~3..HEAD --output-directory=/path/to/patch</code></pre>
+<code>git format-patch HEAD~3..HEAD --output-directory=/path/to/patch{% endhighlight %}
 
 <p>该命令将生成最新的三个提交对应的 patch 文件，并将这些文件保存在 <code>/path/to/patch</code> 目录中。</p>
 
@@ -105,21 +105,21 @@ categories:
 <p>在 Git 中，将本地分支 push 到远程分支的命令为：</p>
 
 <pre>
-<code>git push &lt;remote&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;</code></pre>
+<code>git push &lt;remote&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;{% endhighlight %}
 
 <p>其中，<code>&lt;remote&gt;</code> 为远程仓库的名称；<code>&lt;local_branch&gt;</code> 为本地分支的名称；<code>&lt;remote_branch&gt;</code> 为远程分支的名称。</p>
 
 <p>假设你希望将本地分支 <code>dev</code> 的代码推送到远程仓库 <code>origin</code> 的分支 <code>dev</code> 上，可以使用以下命令：</p>
 
 <pre>
-<code>git push origin dev:dev</code></pre>
+<code>git push origin dev:dev{% endhighlight %}
 
 <p>如果远程分支不存在，则会自动创建一个同名的远程分支，并将本地分支的代码推送到该分支。</p>
 
 <p>如果想要将本地分支与远程分支建立关联关系，可以使用以下命令：</p>
 
 <pre>
-<code>git push -u origin dev</code></pre>
+<code>git push -u origin dev{% endhighlight %}
 
 <p>该命令会将本地分支 <code>dev</code> 的代码推送到远程仓库 <code>origin</code> 的分支 <code>dev</code> 上，并将两个分支建立关联关系，使得以后的 push 和 pull 操作都可以省略远程分支名称。例如，之后只需要执行 <code>git push</code> 和 <code>git pull</code> 命令即可。</p>
 </div>

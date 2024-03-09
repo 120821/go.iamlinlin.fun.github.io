@@ -21,22 +21,22 @@ categories:
 [root@cache01 test]# rename txt jpg *
 [root@cache01 test]# ls 
 01.jpg  03.jpg  05.jpg  07.jpg  09.jpg
-02.jpg  04.jpg  06.jpg  08.jpg  10.jpg</code></pre>
+02.jpg  04.jpg  06.jpg  08.jpg  10.jpg{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">增加后缀：（）</div>
 
 <pre class="prettyprint highlighter-hljs" has-selection="true" highlighted="true" name="code">
-<code class="hljs livecodeserver has-numbering highlighter-hljs language-lua"><span class="hljs-built_in">rename</span> <span class="hljs-string">&#39;s/$/\.txt/&#39;</span> *</code></pre>
+<code class="hljs livecodeserver has-numbering highlighter-hljs language-lua"><span class="hljs-built_in">rename</span> <span class="hljs-string">&#39;s/$/\.txt/&#39;</span> *{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="hljs livecodeserver has-numbering highlighter-hljs language-lua">修改后缀：</code></div>
 
 <pre class="prettyprint highlighter-hljs" has-selection="true" highlighted="true" name="code">
-<code class="hljs tex has-numbering highlighter-hljs language-lua"><span class="hljs-built_in">rename</span> <span class="hljs-string">&#39;s/\.txt/\.dat/&#39;</span> *</code></pre>
+<code class="hljs tex has-numbering highlighter-hljs language-lua"><span class="hljs-built_in">rename</span> <span class="hljs-string">&#39;s/\.txt/\.dat/&#39;</span> *{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="hljs tex has-numbering highlighter-hljs language-lua">删除后缀：</code></div>
 
 <pre>
-<code>rename &#39;s/\.dat//&#39; *</code></pre>
+<code>rename &#39;s/\.dat//&#39; *{% endhighlight %}
 
 <p>1. rename后接一个正则表达式，是perl语法规则的，&lsquo;s/&rsquo; 是正则匹配的开始的意思，然后第一个／和第二个／之间的部分是被匹配内容，第二个／和第三个／之间是要替换成的内容。最后＊是对当前文件夹下&nbsp;<br />
 所有文件进行匹配。&nbsp;<br />

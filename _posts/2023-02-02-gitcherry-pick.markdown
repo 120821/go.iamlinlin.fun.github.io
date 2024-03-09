@@ -12,30 +12,30 @@ categories:
 
 <p>1.首先切换到主分支上，例如</p>
 
-<pre><code>git checkout development</code></pre>
+{% highlight %}git checkout development{% endhighlight %}
 
 <p>2.把主分支上的代码进行更新到最新。</p>
 
-<pre><code>git pull origin development:development</code></pre>
+{% highlight %}git pull origin development:development{% endhighlight %}
 
 <p>3.创建新的分支并切换到该分支，用来保存已经commit的但是无法正常合并的内容</p>
 
-<pre><code>git branch new_branch</code></pre>
+{% highlight %}git branch new_branch{% endhighlight %}
 
-<pre><code>git checkout new_branch</code></pre>
+{% highlight %}git checkout new_branch{% endhighlight %}
 
 <p>4.在github网页或者本地打开异常的分支，查看commit的id(merge的id不需要cherry-pick）</p>
 
-<pre><code>git cherry-pick &lt;commit-id&gt;</code></pre>
+{% highlight %}git cherry-pick &lt;commit-id&gt;{% endhighlight %}
 
 <p>如果没有冲突，就会直接commit，有冲突的话就自己进行修改对应的文件，</p>
 
-<pre><code>git add &lt;file_name&gt;</code></pre>
+{% highlight %}git add &lt;file_name&gt;{% endhighlight %}
 
 <p>并且：</p>
 
 <pre>
-<code>git cherry-pick --continue</code></pre>
+<code>git cherry-pick --continue{% endhighlight %}
 
 <p>&nbsp;</p>
 

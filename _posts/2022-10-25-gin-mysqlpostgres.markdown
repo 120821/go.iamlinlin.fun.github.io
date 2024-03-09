@@ -18,7 +18,7 @@ categories:
 <span class="line">  <span class="comment">// refer https://github.com/go-sql-driver/mysql#dsn-data-source-name for details</span></span>
 <span class="line">  dsn := <span class="string">&quot;user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&amp;parseTime=True&amp;loc=Local&quot;</span></span>
 <span class="line">  db, err := gorm.Open(mysql.Open(dsn), &amp;gorm.Config{})</span>
-<span class="line">}</span></code></pre>
+<span class="line">}</span>{% endhighlight %}
 
 <p>MySQL Driver 提供了一些可在初始化期间使用的高级配置，例如：</p>
 
@@ -32,7 +32,7 @@ categories:
 <span class="line">  DontSupportRenameIndex: <span class="literal">true</span>, <span class="comment">// drop &amp; create when rename index, rename index not supported before MySQL 5.7, MariaDB</span></span>
 <span class="line">  DontSupportRenameColumn: <span class="literal">true</span>, <span class="comment">// `change` when rename column, rename column not supported before MySQL 8, MariaDB</span></span>
 <span class="line">  SkipInitializeWithVersion: <span class="literal">false</span>, <span class="comment">// auto configure based on currently MySQL version</span></span>
-<span class="line">}), &amp;gorm.Config{})</span></code></pre>
+<span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p><strong>NOTE:</strong><br />
 To handle <code>time.Time</code> correctly, you need to include <code>parseTime</code> as a parameter. (<a href="https://github.com/go-sql-driver/mysql#parameters" rel="noopener" target="_blank">more parameters</a>)<br />
@@ -50,11 +50,11 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">db, err := gorm.Open(mysql.New(mysql.Config{</span>
 <span class="line">  DriverName: <span class="string">&quot;my_mysql_driver&quot;</span>,</span>
 <span class="line">  DSN: <span class="string">&quot;gorm:gorm@tcp(localhost:9910)/gorm?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;</span>, <span class="comment">// data source name, refer https://github.com/go-sql-driver/mysql#dsn-data-source-name</span></span>
-<span class="line">}), &amp;gorm.Config{})</span></code></pre>
+<span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p><span class="line">对于已经存在的数据库的连接：</span></p>
 
-<pre><code>GORM allows to initialize *gorm.DB with an existing database connection
+{% highlight %}GORM allows to initialize *gorm.DB with an existing database connection
 <span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  <span class="string">&quot;database/sql&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/driver/mysql&quot;</span></span>
@@ -64,7 +64,7 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">sqlDB, err := sql.Open(<span class="string">&quot;mysql&quot;</span>, <span class="string">&quot;mydb_dsn&quot;</span>)</span>
 <span class="line">gormDB, err := gorm.Open(mysql.New(mysql.Config{</span>
 <span class="line">  Conn: sqlDB,</span>
-<span class="line">}), &amp;gorm.Config{})</span></code></pre>
+<span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p><span class="line">2.postgres连接：</span></p>
 
@@ -75,7 +75,7 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">)</span>
 
 <span class="line">dsn := <span class="string">&quot;host=localhost user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai&quot;</span></span>
-<span class="line">db, err := gorm.Open(postgres.Open(dsn), &amp;gorm.Config{})</span></code></pre>
+<span class="line">db, err := gorm.Open(postgres.Open(dsn), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p>我们使用 pgx 作为 postgres 的数据库/sql 驱动程序，它默认启用准备好的语句缓存，禁用它：</p>
 
@@ -86,7 +86,7 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">db, err := gorm.Open(postgres.New(postgres.Config{</span>
 <span class="line">  DSN: <span class="string">&quot;user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai&quot;</span>,</span>
 <span class="line">  PreferSimpleProtocol: <span class="literal">true</span>, <span class="comment">// disables implicit prepared statement usage</span></span>
-<span class="line">}), &amp;gorm.Config{})</span></code></pre>
+<span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p><code>GORM 允许使用 DriverName 选项自定义 PostgreSQL 驱动程序，例如：</code></p>
 
@@ -99,7 +99,7 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">db, err := gorm.Open(postgres.New(postgres.Config{</span>
 <span class="line">  DriverName: <span class="string">&quot;cloudsqlpostgres&quot;</span>,</span>
 <span class="line">  DSN: <span class="string">&quot;host=project:region:instance user=postgres dbname=postgres password=password sslmode=disable&quot;</span>,</span>
-<span class="line">})</span></code></pre>
+<span class="line">})</span>{% endhighlight %}
 
 <p><span class="line">对于已经存在的数据库的连接：</span></p>
 
@@ -115,7 +115,7 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 <span class="line">sqlDB, err := sql.Open(<span class="string">&quot;pgx&quot;</span>, <span class="string">&quot;mydb_dsn&quot;</span>)</span>
 <span class="line">gormDB, err := gorm.Open(postgres.New(postgres.Config{</span>
 <span class="line">  Conn: sqlDB,</span>
-<span class="line">}), &amp;gorm.Config{})</span></code></pre>
+<span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

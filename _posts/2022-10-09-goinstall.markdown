@@ -23,7 +23,7 @@ categories:
 
 <p>创建文件：</p>
 
-<pre><code>package main
+{% highlight %}package main
 
 import (<br />
 &nbsp; &quot;net/http&quot;
@@ -39,10 +39,10 @@ func main() {<br />
 &nbsp;&nbsp;&nbsp; })<br />
 &nbsp; })<br />
 &nbsp; r.Run() // listen and serve on 0.0.0.0:8080 (for windows &quot;localhost:8080&quot;)<br />
-}</code></pre>
+}{% endhighlight %}
 
-<pre><code># run example.go and visit 0.0.0.0:8080/ping (for windows &quot;localhost:8080/ping&quot;) on browser<br />
-$ go run example.go</code></pre>
+{% highlight %}# run example.go and visit 0.0.0.0:8080/ping (for windows &quot;localhost:8080/ping&quot;) on browser<br />
+$ go run example.go{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -47,14 +47,14 @@ func main() {
 
 &nbsp; myFunc2()
 
-}</code></pre>
+}{% endhighlight %}
 
 <pre>
 <code>$ go run func_main.go
 
 hi, 自定义函数必须被main函数调用，才能运行。
 
-Call myFunc2</code></pre>
+Call myFunc2{% endhighlight %}
 
 <p>main函数调用自定义函数，与函数位置无关。</p>
 
@@ -95,7 +95,7 @@ func sum(a, b int) int {
 
 &nbsp; fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,&nbsp; b)
 
-</code></pre>
+{% endhighlight %}
 
 <p><code><code>&nbsp; return a + b<br />
 }</code></code></p>
@@ -109,7 +109,7 @@ sum() 函数中 a = 10
 
 sum() 函数中 b = 20
 
-main()函数中 c = 30</code></code></pre>
+main()函数中 c = 30</code>{% endhighlight %}
 
 <p><code>&nbsp;</code></p>
 

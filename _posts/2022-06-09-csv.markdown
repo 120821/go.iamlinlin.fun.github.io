@@ -7,7 +7,7 @@ categories:
 
                     <p>在index页面，增加按钮下载功能，实现用户下载index页面表格内容</p> 
 <p>在需要下载的页面对应的controller文件中增加如下的内容</p> 
-<pre><code>def download_csv
+{% highlight %}def download_csv
     require 'csv'
     # 这个是获得数据的方法
 
@@ -23,14 +23,14 @@ categories:
       end
    end
     send_data file.encode("utf-8", "utf-8"), :type =&gt; 'text/csv; charset=utf-8; header=present', :disposition =&gt; "attachment;filename=domains.csv"
- end</code></pre> 
+ end{% endhighlight %} 
 <p>接着在视图页面index页面增加如下内容</p> 
-<pre><code>&lt;%= link_to '下载csv', download_csv_blogs_path %&gt;</code></pre> 
+{% highlight %}&lt;%= link_to '下载csv', download_csv_blogs_path %&gt;{% endhighlight %} 
 <p>然后在config/routes.rb文件中增加路由</p> 
-<pre><code> resources :blogs, only: [:index, :edit, :update] do
+{% highlight %} resources :blogs, only: [:index, :edit, :update] do
    collection do
      get :download_csv
    end
- end</code></pre> 
+ end{% endhighlight %} 
 <p>这样启动服务器进入页面点击按钮就可以下载了</p>
                 

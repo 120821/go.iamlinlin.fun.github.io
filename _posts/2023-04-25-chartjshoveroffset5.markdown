@@ -29,7 +29,7 @@ const myChart = new Chart(ctx, {
   type: &#39;bar&#39;,
   data: data,
   options: options
-});</code></pre>
+});{% endhighlight %}
 
 <p>在上面的代码示例中，我们将 <code>hoverOffset</code> 设置为 5 像素，当鼠标悬停在柱状图上时，标签将会向上或向下偏移 5 个像素。</p>
 

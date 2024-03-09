@@ -14,5 +14,5 @@ curl www.bing.com --output bing.htm</pre>
 <p>使用proxy保存图到本地：</p>
 
 <pre>
-<code>command_get_image = %Q{curl -s --socks5 #{proxy.ip}:#{proxy.port} #{image_src} --output public/blog_images/#{image_name}}</code></pre>
+<code>command_get_image = %Q{curl -s --socks5 #{proxy.ip}:#{proxy.port} #{image_src} --output public/blog_images/#{image_name}}{% endhighlight %}
 

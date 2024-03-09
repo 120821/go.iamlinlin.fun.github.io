@@ -15,7 +15,7 @@ categories:
       Hello{&#39; &#39;}World
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>2.使用编码 <code>&amp;nbsp;</code></p>
 
@@ -26,7 +26,7 @@ categories:
       Hello&amp;nbsp;World
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 
 <p>3.使用css:</p>
 
@@ -37,5 +37,5 @@ categories:
       Hello&lt;span style={{ marginRight: &#39;4px&#39; }}&gt;&lt;/span&gt;World
     &lt;/div&gt;
   );
-}</code></pre>
+}{% endhighlight %}
 

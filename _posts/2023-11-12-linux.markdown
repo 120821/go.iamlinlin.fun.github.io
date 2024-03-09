@@ -15,7 +15,7 @@ categories:
 
 baidunetdisk_4.17.7_amd64.deb&nbsp; baidunetdisk_4.3.0_amd64.deb&nbsp; &nbsp;
 
-linlin@linlin-i5:~/Downloads$ sudo dpkg -i baidunetdisk_4.3.0_amd64.deb </code></pre>
+linlin@linlin-i5:~/Downloads$ sudo dpkg -i baidunetdisk_4.3.0_amd64.deb {% endhighlight %}
 
 <p>安装的时候，在本机出现了错误：</p>
 
@@ -36,7 +36,7 @@ Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
 
 Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
 
-Processing triggers for hicolor-icon-theme (0.17-2) ...</code></pre>
+Processing triggers for hicolor-icon-theme (0.17-2) ...{% endhighlight %}
 
 <p>但是已经可以打开百度网盘，并使用了，不影响。</p>
 
@@ -45,7 +45,7 @@ Processing triggers for hicolor-icon-theme (0.17-2) ...</code></pre>
 <p>我运行：</p>
 
 <pre>
-<code>sudo apt-get install -f</code></pre>
+<code>sudo apt-get install -f{% endhighlight %}
 
 <p>但是并没有安装任何依赖：(应该没有问题了）</p>
 
@@ -69,7 +69,7 @@ The following packages were automatically installed <span style="color:#dcc6e0">
   <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-tmatch</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-typedarray-to-buffer</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-universalify</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-util-deprecate</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-validate-npm-package-license</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-webidl-conversions</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-whatwg-fetch</span> <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-wrappy</span>
   <span style="color:#dcc6e0">node</span><span style="color:#00e0e0">-yallist</span> nodejs-doc qml-module-qtqml qml-module-qtquick-controls tint2
 Use &#39;sudo apt autoremove&#39; to remove them.
-<span style="color:#f5ab35">0</span> to upgrade, <span style="color:#f5ab35">0</span> to newly install, <span style="color:#f5ab35">0</span> to remove <span style="color:#dcc6e0">and</span> <span style="color:#f5ab35">81</span> not to upgrade.</code></pre>
+<span style="color:#f5ab35">0</span> to upgrade, <span style="color:#f5ab35">0</span> to newly install, <span style="color:#f5ab35">0</span> to remove <span style="color:#dcc6e0">and</span> <span style="color:#f5ab35">81</span> not to upgrade.{% endhighlight %}
 
 <p>&nbsp;</p>
 

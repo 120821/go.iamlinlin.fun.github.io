@@ -15,7 +15,7 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 
-and the repository exists.</code></pre>
+and the repository exists.{% endhighlight %}
 
 <p>明确：</p>
 
@@ -37,7 +37,7 @@ and the repository exists.</code></pre>
 <p>使用：（这样也可以）</p>
 
 <pre>
-<code>git clone https://github.com/user/projectname --config &#39;http.proxy=socks5://127.0.0.1:8080&#39;</code></pre>
+<code>git clone https://github.com/user/projectname --config &#39;http.proxy=socks5://127.0.0.1:8080&#39;{% endhighlight %}
 
 <p><img height="371" src="/uploads/ckeditor/pictures/287/image-20220819100718-1.png" width="1420" /></p>
 

@@ -13,9 +13,9 @@ categories:
  <p>    1 在父组件的子组件标签上写上，比如@childFn="fatherFn"进行事件绑定</p> 
  <p>    2 在父组件的methods里面实现fatherFn方法</p> 
  <p>    3 在子组件里使用 this.$emit('childFn',参数)来调用父组件的fatherFn方法就行了<br>            </p> 
- <pre><code>单参数的时候：fatherFn接收到的第一个参数就是，子组件传过来的那个参数。
+ {% highlight %}单参数的时候：fatherFn接收到的第一个参数就是，子组件传过来的那个参数。
 
-多参数的时候：fatherFn接收到的argumnets参数是一个数组，内容是子组件传来的多个参数</code></pre> 
+多参数的时候：fatherFn接收到的argumnets参数是一个数组，内容是子组件传来的多个参数{% endhighlight %} 
  <p>父子组件有两种写法。</p> 
  <p>HTML。只需要一个文件即可实现父子组件。</p> 
  <p>并不提倡使用，学了没有什么意义。</p> 

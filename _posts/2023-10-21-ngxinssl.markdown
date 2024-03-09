@@ -26,5 +26,5 @@ categories:
 #          root html;
 #          index index.html index.htm;
 #      }   
-  }</code></pre>
+  }{% endhighlight %}
 

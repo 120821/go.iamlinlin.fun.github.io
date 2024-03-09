@@ -26,15 +26,15 @@ categories:
 promise1.then((value) =&gt; {
   console.log(value);
   // Expected output: &quot;Success!&quot;
-});</code></pre>
+});{% endhighlight %}
 
 <p>运行后输出：</p>
 
 <pre>
-<code>node promise_then.js</code></pre>
+<code>node promise_then.js{% endhighlight %}
 
 <pre>
-<code>&gt; &quot;Success!&quot;</code></pre>
+<code>&gt; &quot;Success!&quot;{% endhighlight %}
 
 <p><a href="http://siwei.me/blog/posts/es6-promise-new-promise-resolve">http://siwei.me/blog/posts/es6-promise-new-promise-resolve</a></p>
 
@@ -52,18 +52,18 @@ promise1.then((value) =&gt; {
 
 result.then( (temp) =&gt; {
   console.info(&quot;result : &quot;, temp)
-})</code></pre>
+}){% endhighlight %}
 
 <p>运行：</p>
 
 <pre>
-<code>node promise_then_2.js</code></pre>
+<code>node promise_then_2.js{% endhighlight %}
 
 <p>&nbsp;&nbsp;&nbsp; 输出：</p>
 
 <pre>
 <code>sleep n ms...
-result :  200</code></pre>
+result :  200{% endhighlight %}
 
 <p>demo:&nbsp; <a href="https://github.com/120821/react_test_20230724">https://github.com/120821/react_test_20230724</a></p>
 

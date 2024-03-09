@@ -65,5 +65,5 @@ class MyComponent extends Component {
       &lt;/div&gt;
     );
   }
-}</code></pre>
+}{% endhighlight %}
 

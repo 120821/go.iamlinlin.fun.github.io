@@ -7,7 +7,7 @@ categories:
 <p>参考：https://stackoverflow.com/questions/31880676/an-error-occurred-while-installing-eventmachine-1-0-3-and-bundler-cannot-cont</p>
 
 <pre class="lang-rb s-code-block">
-<code class="hljs language-ruby">gem install eventmachine -v <span class="hljs-string">&#39;1.0.4&#39;</span></code></pre>
+<code class="hljs language-ruby">gem install eventmachine -v <span class="hljs-string">&#39;1.0.4&#39;</span>{% endhighlight %}
 
 <p>gem install eventmachine -v &#39;1.0.4&#39;<br />
 Fetching eventmachine-1.0.4.gem<br />
