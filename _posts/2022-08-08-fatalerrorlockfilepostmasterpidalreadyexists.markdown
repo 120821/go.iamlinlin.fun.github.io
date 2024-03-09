@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "FATAL ERROR lock file "postmaster.pid" already exists"
+title: "FATAL ERROR lock file 'postmaster.pid' already exists"
 date: "2022-08-08"
-categories: 
+categories:
 ---
 <p>https://stackoverflow.com/questions/60859005/where-does-asdf-install-postgres</p>
 

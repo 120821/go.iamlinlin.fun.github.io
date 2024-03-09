@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "ERROR:  null value in column "created_at" of relation "blogs" violates not-null constraint (ActiveRecord::NotNullViolation)"
+title: "ERROR:  null value in column 'created_at' of relation 'blogs' violates not-null constraint (ActiveRecord::NotNullViolation)"
 date: "2022-12-30"
-categories: 
+categories:
 ---
 <p>refer: <a href="https://www.grepper.com/tpc/null+value+in+column+%22%22modified_by%22%22+violates+not-null+constraint">https://www.grepper.com/tpc/null+value+in+column+%22%22modified_by%22%22+violates+not-null+constraint</a></p>
 

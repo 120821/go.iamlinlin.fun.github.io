@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "The asset "ckeditor.js" is not present in the asset pipeline."
+title: "The asset 'ckeditor.js' is not present in the asset pipeline."
 date: "2022-06-22"
-categories: 
+categories:
 ---
 <p>参考：https://stackoverflow.com/questions/55816842/the-asset-ckeditor-init-js-is-not-present-in-the-asset-pipeline</p>
 

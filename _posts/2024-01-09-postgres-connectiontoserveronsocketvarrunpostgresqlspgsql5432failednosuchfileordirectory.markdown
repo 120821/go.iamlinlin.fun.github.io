@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "postgres-connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory"
+title: "postgres-connection to server on socket '/var/run/postgresql/.s.PGSQL.5432' failed: No such file or directory"
 date: "2024-01-09"
-categories: 
+categories:
 ---
 <p>refer: <a href="http://siwei.me/blog/posts/postgres-postgres">http://siwei.me/blog/posts/postgres-postgres</a></p>
 

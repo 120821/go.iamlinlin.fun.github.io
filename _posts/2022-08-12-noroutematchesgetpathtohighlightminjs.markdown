@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "No route matches [GET] "/path/to/highlight.min.js"
+title: "No route matches [GET] '/path/to/highlight.min.js'"
 date: "2022-08-12"
-categories: 
+categories:
 ---
 <p><a href="https://itecnote.com/tecnote/javascript-actioncontrollerroutingerror-no-route-matches-get-members-js-bootstrap-min-jsmissing-asset-files/">https://itecnote.com/tecnote/javascript-actioncontrollerroutingerror-no-route-matches-get-members-js-bootstrap-min-jsmissing-asset-files/</a></p>
 

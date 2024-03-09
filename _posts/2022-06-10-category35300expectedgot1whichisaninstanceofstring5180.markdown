@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Category(#35300) expected, got "1" which is an instance of String(#5180)"
+title: "Category(#35300) expected, got '1' which is an instance of String(#5180)"
 date: "2022-06-10"
-categories: 
+categories:
 ---
 <p>在创建关联关系的时候，出现了报错，类似这样的，<a class="question-hyperlink" href="https://stackoverflow.com/questions/62825423/category35300-expected-got-1-which-is-an-instance-of-string5180">Category(#35300) expected, got &quot;1&quot; which is an instance of String(#5180)</a></p>
 
