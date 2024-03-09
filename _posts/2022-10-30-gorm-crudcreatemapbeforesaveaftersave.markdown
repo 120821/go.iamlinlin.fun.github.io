@@ -25,9 +25,13 @@ result.RowsAffected // 返回插入记录的条数</code></pre>
 
 <p>创建记录并更新未给出的字段。</p>
 
-<pre><code>db.Omit(&quot;Name&quot;, &quot;Age&quot;, &quot;CreatedAt&quot;).Create(&amp;user)<br />
+
+{% highlight %}
+db.Omit(&quot;Name&quot;, &quot;Age&quot;, &quot;CreatedAt&quot;).Create(&amp;user)<br />
 // INSERT INTO `users` (`birthday`,`updated_at`) VALUES ("2020-01-01 00:00:00.000", "2020-07-04 11:05:21.775")
-</code></pre>
+{% endhighlight %}
+
+
 
 <p id="1f7cfd"><strong>批量插入</strong></p>
 
