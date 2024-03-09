@@ -6,15 +6,15 @@ categories:
 ---
 <p>如果在接口返回的数据中存在null的数据，例如这样：</p>
 
-<pre>
-<code>{&quot;bank_count&quot;:<span style="color:#abe338">&quot;760.65874568&quot;</span>,&quot;emission_all&quot;:<span style="color:#abe338">&quot;712.14230283&quot;</span>,&quot;emission_discard&quot;:<span style="color:#abe338">&quot;225.96975736&quot;</span>,&quot;emission_init&quot;:<span style="color:#abe338">&quot;52.00000000&quot;</span>,&quot;emission_operation&quot;:<span style="color:#abe338">&quot;318.24504262&quot;</span>,&quot;emission_service&quot;:<span style="color:#abe338">&quot;115.92750285&quot;</span>,&quot;year&quot;:<span style="color:#f5ab35">2027</span>},<span style="color:#f5ab35">null</span>]&#39;, materialId: <span style="color:#f5ab35">16</span> }{% endhighlight %}
+{% highlight %}
+{% highlight %}{&quot;bank_count&quot;:<span style="color:#abe338">&quot;760.65874568&quot;</span>,&quot;emission_all&quot;:<span style="color:#abe338">&quot;712.14230283&quot;</span>,&quot;emission_discard&quot;:<span style="color:#abe338">&quot;225.96975736&quot;</span>,&quot;emission_init&quot;:<span style="color:#abe338">&quot;52.00000000&quot;</span>,&quot;emission_operation&quot;:<span style="color:#abe338">&quot;318.24504262&quot;</span>,&quot;emission_service&quot;:<span style="color:#abe338">&quot;115.92750285&quot;</span>,&quot;year&quot;:<span style="color:#f5ab35">2027</span>},<span style="color:#f5ab35">null</span>]&#39;, materialId: <span style="color:#f5ab35">16</span> }{% endhighlight %}
 
 <p>那么页面展示的时候会出现result undefind</p>
 
 <p>可以这样进行修改</p>
 
-<pre>
-<code>const materialResults = JSON.parse(material.results)
+{% highlight %}
+{% highlight %}const materialResults = JSON.parse(material.results)
   .filter(result =&gt; result !== null); // 过滤掉 null 值
 
 materialResults.forEach(result =&gt; {
@@ -26,8 +26,8 @@ materialResults.forEach(result =&gt; {
 
 <p>（2）在render里可以这样处理：</p>
 
-<pre>
-<code>&lt;tbody&gt;
+{% highlight %}
+{% highlight %}&lt;tbody&gt;
   {details_item.results &amp;&amp; JSON.parse(details_item.results)
     .filter(item =&gt; item !== null) // 过滤掉 null 值
     .map((item, index) =&gt; (

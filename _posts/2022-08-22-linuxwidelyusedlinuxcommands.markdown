@@ -35,7 +35,7 @@ cat ldemo
 rm demo
 <span class="hljs-operator"><span class="hljs-keyword">kill</span> -<span class="hljs-number">9 把某个进行的进程强制结束， ps -ef | grep &#39;ruby &#39; 查看ruby运行的进程，可以根据进程号进行选择结束</span>
 crontab -e </span>linux自带的定时任务
-</pre>
+{% endhighlight %}
 
 <p>Linux&nbsp;crontab&nbsp;是用来定期执行程序的命令。<a href="https://www.runoob.com/linux/linux-comm-crontab.html">参考</a></p>
 
@@ -52,7 +52,7 @@ crontab -e </span>linux自带的定时任务
 	<li>2、个人执行的工作：某个用户定期要做的工作，例如每隔 10 分钟检查邮件服务器是否有新信，这些工作可由每个用户自行设置</li>
 </ul>
 
-<pre class="hljs sql"><code>
+<pre class="hljs sql">{% highlight %}
 <span class="hljs-operator">vim /etc/nginx 修改Nginx的配置等
 tail 方便查看log tail -f xx.log 可以实时查看log，而且可以进行保存log文件
 head </span>可用于查看文件的开头部分的内容，有一个常用的参数&nbsp;-n&nbsp;用于显示行数，默认为 10，即显示 10 行的内容，使用：{% endhighlight %}
@@ -60,24 +60,24 @@ head </span>可用于查看文件的开头部分的内容，有一个常用的�
 {% highlight %}
 head -n 10 runoon_notes.log{% endhighlight %}
 
-<pre class="hljs sql"><code>
+<pre class="hljs sql">{% highlight %}
  <a href="https://www.runoob.com/linux/linux-comm-head.html">参考</a><span class="hljs-operator">
 grep *** 重中之重啊。 一定要知道各种形式的参数， 以及各种变种。 比如：   $ grep -F <span class="hljs-string">&#39;fixed string&#39;</span> -R <span class="hljs-comment">--include=*rb</span>
 zgrep 搜索 压缩文件的内容
 find . 可以查看当前目录的所有文件， .表示当前文件夹
 rsync  传送文件
 sftp </span>ftp命令和sftp命令的用法基本相似连接ftp服务器并下载多个文件
-例如：</code>
-</pre>
+例如：{% endhighlight %}
+{% endhighlight %}
 
-<pre>
-<code>$ ftp IP/hostname
+{% highlight %}
+{% highlight %}$ ftp IP/hostname
 ftp&gt; mget *.html{% endhighlight %}
 
 <p>显示远程主机上文件列表</p>
 
-<pre>
-<code>ftp&gt; mls *.html -
+{% highlight %}
+{% highlight %}ftp&gt; mls *.html -
 /ftptest/features.html
 /ftptest/index.html
 /ftptest/othertools.html
@@ -96,22 +96,22 @@ chown </span>用于设置文件所有者和文件关联组的命令
 passwd 用来更改使用者的密码 <a href="https://www.runoob.com/linux/linux-comm-passwd.html">参考</a>
 例如： </span>{% endhighlight %}
 
-<pre>
-<code># passwd runoob  //设置runoob用户的密码
+{% highlight %}
+{% highlight %}# passwd runoob  //设置runoob用户的密码
 Enter new UNIX password:  //输入新密码，输入的密码无回显
 Retype new UNIX password:  //确认密码
 passwd: password updated successfully
 # 显示账号信息{% endhighlight %}
 
-<pre>
-<code># passwd -S runoob
+{% highlight %}
+{% highlight %}# passwd -S runoob
 runoob P 05/13/2010 0 99999 7 -1{% endhighlight %}
 
-<p><code>删除用户密码</code></p>
+<p>{% highlight %}删除用户密码{% endhighlight %}</p>
 
-<pre>
-<code># passwd -d lx138 
-passwd: password expiry information changed.</code><span class="hljs-operator">
+{% highlight %}
+{% highlight %}# passwd -d lx138 
+passwd: password expiry information changed.{% endhighlight %}<span class="hljs-operator">
 netstat </span>用于显示网络状态 <a href="https://www.runoob.com/linux/linux-comm-netstat.html">参考</a><span class="hljs-operator">
 ifconfig 查看网卡信息
 </span>netconfig命令用于设置网络环境 <a href="https://www.runoob.com/linux/linux-comm-netconfig.html">参考</a><span class="hljs-operator">
@@ -143,20 +143,20 @@ split </span>用于将一个文件分割成数个<a href="https://www.runoob.com
 
 <p>使用指令&quot;split&quot;将文件&quot;README&quot;每6行切割成一个文件，输入如下命令：</p>
 
-<pre>
-<code>$ split -6 README       #将README文件每六行分割成一个文件 </code><span class="hljs-operator">
+{% highlight %}
+{% highlight %}$ split -6 README       #将README文件每六行分割成一个文件 {% endhighlight %}<span class="hljs-operator">
 awk </span>是一种处理文本文件的语言，是一个强大的文本分析工具<a href="https://www.runoob.com/linux/linux-comm-awk.html">参考</a>
 例如：
 <span class="hljs-operator">用法1：
-</span></pre>
+</span>{% endhighlight %}
 
-<pre>
-<code>awk &#39;{[pattern] action}&#39; {filenames}   # 行匹配语句 awk &#39;&#39; 只能用单引号{% endhighlight %}
+{% highlight %}
+{% highlight %}awk &#39;{[pattern] action}&#39; {filenames}   # 行匹配语句 awk &#39;&#39; 只能用单引号{% endhighlight %}
 
 <p>使用：</p>
 
-<pre>
-<code># 每行按空格或TAB分割，输出文本中的1、4项
+{% highlight %}
+{% highlight %}# 每行按空格或TAB分割，输出文本中的1、4项
  $ awk &#39;{print $1,$4}&#39; log.txt
  ---------------------------------------------
  2 a
@@ -173,11 +173,11 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
 
 <p>用法2：</p>
 
-<pre>
-<code>awk -F  #-F相当于内置变量FS, 指定分割字符{% endhighlight %}
+{% highlight %}
+{% highlight %}awk -F  #-F相当于内置变量FS, 指定分割字符{% endhighlight %}
 
-<pre>
-<code># 使用&quot;,&quot;分割
+{% highlight %}
+{% highlight %}# 使用&quot;,&quot;分割
  $  awk -F, &#39;{print $1,$2}&#39;   log.txt
  ---------------------------------------------
  2 this is a test
@@ -201,11 +201,11 @@ awk </span>是一种处理文本文件的语言，是一个强大的文本分析
 
 <p>用法3</p>
 
-<pre>
-<code>awk -v  # 设置变量{% endhighlight %}
+{% highlight %}
+{% highlight %}awk -v  # 设置变量{% endhighlight %}
 
-<pre>
-<code>$ awk -va=1 &#39;{print $1,$1+a}&#39; log.txt
+{% highlight %}
+{% highlight %}$ awk -va=1 &#39;{print $1,$1+a}&#39; log.txt
  ---------------------------------------------
  2 3
  3 4

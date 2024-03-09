@@ -6,7 +6,7 @@ categories:
 ---
 <p>https://solidity-by-example.org/app/create2/</p>
 
-<p>Contract address can be precomputed, before the contract is deployed, using <code>create2</code></p>
+<p>Contract address can be precomputed, before the contract is deployed, using {% highlight %}create2{% endhighlight %}</p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>

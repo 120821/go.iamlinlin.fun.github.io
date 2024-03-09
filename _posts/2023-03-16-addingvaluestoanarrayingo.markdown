@@ -12,10 +12,10 @@ categories:
 
 <p>追加函数：appendfunction 是一个内置函数，它将元素附加到切片的末尾。 如果需要调整底层数组的大小以容纳任何新元素，它会负责分配底层数组，然后返回新的切片。</p>
 
-<p><code>package main</code></p>
+<p>{% highlight %}package main{% endhighlight %}</p>
 
-<pre>
-<code>import (
+{% highlight %}
+{% highlight %}import (
 
 &nbsp;&nbsp;&nbsp; &quot;fmt&quot;
 
@@ -47,11 +47,11 @@ func main() {
 
 }{% endhighlight %}
 
-<pre>
-<code>$&nbsp;</code>go run add_value_to_array.go</pre>
+{% highlight %}
+{% highlight %}$&nbsp;{% endhighlight %}go run add_value_to_array.go{% endhighlight %}
 
 <p>得到返回结果：</p>
 
-<pre>
-<code>[Einstein Turing Lovelace Curie Franklin Hodgkin Hawkins] {% endhighlight %}
+{% highlight %}
+{% highlight %}[Einstein Turing Lovelace Curie Franklin Hodgkin Hawkins] {% endhighlight %}
 

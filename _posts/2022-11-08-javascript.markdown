@@ -18,8 +18,8 @@ categories:
 
 <p>局部变量：只能在函数内部访问。</p>
 
-<pre>
-<code>&lt;p&gt;局部变量在声明的函数外不可以访问。&lt;/p&gt;
+{% highlight %}
+{% highlight %}&lt;p&gt;局部变量在声明的函数外不可以访问。&lt;/p&gt;
 &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
 &lt;script&gt;
 myFunction();
@@ -30,7 +30,7 @@ function myFunction()
 }
 &lt;/script&gt;{% endhighlight %}
 
-<p><code>2.全局作用域：</code>变量在函数外定义，即为全局变量。</p>
+<p>{% highlight %}2.全局作用域：{% endhighlight %}变量在函数外定义，即为全局变量。</p>
 
 <p>全局变量有 <strong>全局作用域</strong>: 网页中所有脚本和函数均可使用。</p>
 
@@ -51,7 +51,7 @@ function myFunction()<br />
 <p>以下实例中 carName 在函数内，但是为全局变量。</p>
 
 <div class="example">
-<pre class="example"><code>&lt;p&gt;<br />
+<pre class="example">{% highlight %}&lt;p&gt;<br />
 如果你的变量没有声明，它将自动成为全局变量：<br />
 &lt;/p&gt;<br />
 &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br />

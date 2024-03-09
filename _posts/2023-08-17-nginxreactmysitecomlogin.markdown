@@ -13,8 +13,8 @@ categories:
 远程服务器端文件是react 编译后的文件，<br />
 远程nginx的配置是：</p>
 
-<pre>
-<code><span style="color:#ffd700">server</span> {
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">server</span> {
 <span style="color:#ffd700">  listen</span>       80;
 <span style="color:#ffd700">  server_name  mysite</span>.com;
 <span style="color:#ffd700">  charset utf</span>-8;
@@ -27,15 +27,15 @@ categories:
 
 <p>其实这是nginx配置的问题，nginx没有正确处理react路由。修改一下配置nginx的代码，然后重启nginx之后，就可以访问mysite.com/login了。</p>
 
-<p><code>以下来自poe的回答：</code><br />
+<p>{% highlight %}以下来自poe的回答：{% endhighlight %}<br />
 当你在使用React项目部署到远程服务器上，并且使用Nginx作为Web服务器时，遇到404 not found错误的问题，可能是因为Nginx无法正确处理React路由。</p>
 
 <p>React应用程序使用前端路由来处理不同路径的页面。但是，当你使用Nginx作为反向代理时，它默认只会处理静态文件，而不会将路由请求重定向到React应用程序。</p>
 
 <p>要解决这个问题，你可以配置Nginx来处理React的前端路由。下面是一个示例配置：</p>
 
-<pre>
-<code><span style="color:#00e0e0">server</span> {
+{% highlight %}
+{% highlight %}<span style="color:#00e0e0">server</span> {
   <span style="color:#ffd700">listen</span> <span style="color:#f5ab35">80</span>;
   <span style="color:#ffd700">server_name</span> mysite.com;
   <span style="color:#ffd700">charset</span> utf-<span style="color:#f5ab35">8</span>;
@@ -48,7 +48,7 @@ categories:
   }
 }{% endhighlight %}
 
-<p>这个配置中，我们使用<code>try_files</code>指令来尝试匹配请求的文件路径。如果找不到文件，则将请求重定向到<code>index.html</code>。这样，React应用程序将能够处理路由并正确加载相应的页面。</p>
+<p>这个配置中，我们使用{% highlight %}try_files{% endhighlight %}指令来尝试匹配请求的文件路径。如果找不到文件，则将请求重定向到{% highlight %}index.html{% endhighlight %}。这样，React应用程序将能够处理路由并正确加载相应的页面。</p>
 
-<p>请确保将<code>root</code>指令的路径设置为你的React应用程序构建后的静态文件目录。在示例中，我使用了<code>/tmp/build</code>作为示例路径，你需要将其替换为你实际的构建目录。</p>
+<p>请确保将{% highlight %}root{% endhighlight %}指令的路径设置为你的React应用程序构建后的静态文件目录。在示例中，我使用了{% highlight %}/tmp/build{% endhighlight %}作为示例路径，你需要将其替换为你实际的构建目录。</p>
 

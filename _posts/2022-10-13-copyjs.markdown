@@ -8,8 +8,8 @@ categories:
 
 <p>使用js实现复制功能：</p>
 
-<pre>
-<code>&lt;p&gt;Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.&lt;/p&gt;
+{% highlight %}
+{% highlight %}&lt;p&gt;Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.&lt;/p&gt;
 &lt;input type=&quot;text&quot; value=&quot;Hello World&quot; id=&quot;myInput&quot;&gt;
 &lt;button onclick=&quot;myFunction()&quot;&gt;Copy text&lt;/button&gt;
 &lt;script&gt;

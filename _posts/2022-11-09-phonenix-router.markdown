@@ -10,13 +10,13 @@ categories:
 
 <p>查看所有的路由：</p>
 
-<pre>
+{% highlight %}
 <code class="makeup shell" translate="no"><span>mix phx.routes</span>{% endhighlight %}
 
 <p>在router文件增加：</p>
 
-<pre>
-<code>scope &quot;/&quot;, HelloWeb do
+{% highlight %}
+{% highlight %}scope &quot;/&quot;, HelloWeb do
 &nbsp; pipe_through :browser
 &nbsp; get &quot;/&quot;, PageController, :index
 &nbsp; resources &quot;/users&quot;, UserController
@@ -25,7 +25,7 @@ end{% endhighlight %}
 
 <p>然后使用命令查看所有的路由：（虽然没有user的controller，但是没有关系）</p>
 
-<pre>
+{% highlight %}
 <code class="makeup shell" translate="no"><span>mix phx.routes</span>{% endhighlight %}
 
 <p><img height="387" src="/uploads/ckeditor/pictures/704/image-20221109165628-1.png" width="1098" /></p>
@@ -43,16 +43,16 @@ post_path&nbsp; GET&nbsp;&nbsp;&nbsp;&nbsp; /posts/:id&nbsp; HelloWeb.PostContro
 
 {% highlight %}resources &quot;/comments&quot;, CommentController, except: [:delete]{% endhighlight %}
 
-<p><a class="no-underline" href="https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Routes.html"><code class="inline">mix phx.routes</code></a></p>
+<p><a class="no-underline" href="https://hexdocs.pm/phoenix/Mix.Tasks.Phx.Routes.html"><code class="inline">mix phx.routes{% endhighlight %}</a></p>
 
-<p>使用<code class="inline">iex -S mix可以进入相当于console 的环境</code></p>
+<p>使用<code class="inline">iex -S mix可以进入相当于console 的环境{% endhighlight %}</p>
 
 <p>输入：</p>
 
-<pre>
+{% highlight %}
 <code class="makeup elixir" translate="no"><span class="nc">HelloWeb.Router.Helpers</span><span class="o">.</span><span class="n">page_path</span><span class="p" data-group-id="4119530099-1">(</span><span class="nc">HelloWeb.Endpoint</span><span class="p">,</span><span class="w"> </span><span class="ss">:index</span><span class="p" data-group-id="4119530099-1">)</span>{% endhighlight %}
 
-<pre><code class="makeup elixir" translate="no"><span class="p" data-group-id="4119530099-1">得到结果： &lsquo;/&rsquo;</span>{% endhighlight %}
+{% highlight %}<code class="makeup elixir" translate="no"><span class="p" data-group-id="4119530099-1">得到结果： &lsquo;/&rsquo;</span>{% endhighlight %}
 
 <p><img height="66" src="/uploads/ckeditor/pictures/705/image-20221109170203-2.png" width="960" /></p>
 

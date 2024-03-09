@@ -8,13 +8,13 @@ categories:
 
 <p>在使用echarts的时候，可以设置字体，例如设置为宋体，设置字体颜色等：</p>
 
-<pre>
-<code>// 字体样式设置
+{% highlight %}
+{% highlight %}// 字体样式设置
 textStyle: {
     decoration: &#39;none&#39;,
     fontFamily: &#39;Arial, Verdana, sans-serif&#39;,
     fontFamily2: &#39;微软雅黑&#39;,    // IE8- 字体模糊并且不支持不同字体混排，额外指定一份
-    // 宋体是 </code>fontFamily:&#39;SimSun&#39;<code>
+    // 宋体是 {% endhighlight %}fontFamily:&#39;SimSun&#39;{% highlight %}
     fontSize: 12,
     fontStyle: &#39;normal&#39;,
     fontWeight: &#39;normal&#39;
@@ -22,8 +22,8 @@ textStyle: {
 
 <p>更具体的位置是：</p>
 
-<pre>
-<code>     return {
+{% highlight %}
+{% highlight %}     return {
        title: {
 -        text: <span style="color:#abe338">&#39;堆积图</span>&#39;
 +        text: <span style="color:#abe338">&#39;堆积图</span>&#39;,

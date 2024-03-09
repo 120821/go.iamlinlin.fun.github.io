@@ -6,10 +6,10 @@ categories:
 ---
 <pre class="kmconsole">
 https://www.kompulsa.com/geth-error-unable-to-attach-to-remote-geth/
-Fatal: Unable to attach to remote geth: dial unix /home/user/snap/geth/477/.ethereum/geth.ipc: connect: no such file or directory</pre>
+Fatal: Unable to attach to remote geth: dial unix /home/user/snap/geth/477/.ethereum/geth.ipc: connect: no such file or directory{% endhighlight %}
 
 <p>使用：</p>
 
 <pre class="kmconsole">
-geth attach http://127.0.0.1:8545</pre>
+geth attach http://127.0.0.1:8545{% endhighlight %}
 

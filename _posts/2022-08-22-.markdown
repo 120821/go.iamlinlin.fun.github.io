@@ -14,7 +14,7 @@ categories:
 
 <p>源的继承：</p>
 
-<p>在页面中通过 <code>about:blank</code> 或 <code>javascript:</code> URL 执行的脚本会继承打开该 URL 的文档的源，因为这些类型的 URLs 没有包含源服务器的相关信息。</p>
+<p>在页面中通过 {% highlight %}about:blank{% endhighlight %} 或 {% highlight %}javascript:{% endhighlight %} URL 执行的脚本会继承打开该 URL 的文档的源，因为这些类型的 URLs 没有包含源服务器的相关信息。</p>
 
 <p>允许跨域访源：</p>
 
@@ -26,15 +26,15 @@ categories:
 <ul>
 	<li>阻止跨源写操作，只要检测请求中的一个不可推测的标记 (CSRF token) 即可，这个标记被称为 <a class="external" href="https://owasp.org/www-community/attacks/csrf" rel=" noopener">Cross-Site Request Forgery (CSRF)</a> 标记。你必须使用这个标记来阻止页面的跨源读操作。</li>
 	<li>阻止资源的跨源读取，需要保证该资源是不可嵌入的。阻止嵌入行为是必须的，因为嵌入资源通常向其暴露信息。</li>
-	<li>阻止跨源嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 <code>Content-Type</code> 头部定义的类型。例如，如果您在 HTML 文档中指定 <code>&lt;script&gt;</code> 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
+	<li>阻止跨源嵌入，需要确保你的资源不能通过以上列出的可嵌入资源格式使用。浏览器可能不会遵守 {% highlight %}Content-Type{% endhighlight %} 头部定义的类型。例如，如果您在 HTML 文档中指定 {% highlight %}&lt;script&gt;{% endhighlight %} 标记，则浏览器将尝试将标签内部的 HTML 解析为 JavaScript。 当您的资源不是您网站的入口点时，您还可以使用 CSRF 令牌来防止嵌入。</li>
 </ul>
 
 <p>跨源脚本api访问：</p>
 
 <div class="section-content">
-<p>JavaScript 的 API 中，如 <a class="only-in-en-us" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement" title="Currently only available in English (US)">iframe.contentWindow (en-US)</a>、 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/parent"><code>window.parent</code></a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open"><code>window.open</code></a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/opener"><code>window.opener</code></a> 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window" rel=" noopener">Window</a> 和 <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location" rel=" noopener">Location</a>对象的访问添加限制，如下两节所述。</p>
+<p>JavaScript 的 API 中，如 <a class="only-in-en-us" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement" title="Currently only available in English (US)">iframe.contentWindow (en-US)</a>、 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/parent">{% highlight %}window.parent{% endhighlight %}</a>、<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/open">{% highlight %}window.open{% endhighlight %}</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/opener">{% highlight %}window.opener{% endhighlight %}</a> 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对 <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window" rel=" noopener">Window</a> 和 <a class="external" href="https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location" rel=" noopener">Location</a>对象的访问添加限制，如下两节所述。</p>
 
-<p>为了能让不同源中文档进行交流，可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage"><code>window.postMessage</code></a>。</p>
+<p>为了能让不同源中文档进行交流，可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage">{% highlight %}window.postMessage{% endhighlight %}</a>。</p>
 
 <p>规范: <a class="external" href="https://html.spec.whatwg.org/multipage/browsers.html#cross-origin-objects" rel=" noopener">HTML Living Standard &sect; Cross-origin objects</a> 。</p>
 </div>

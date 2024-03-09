@@ -8,8 +8,8 @@ categories:
 
 <p>路由的默认日志是：</p>
 
-<pre>
-<code>[GIN-debug] POST   /foo                      --&gt; main.main.func1 (3 handlers)
+{% highlight %}
+{% highlight %}[GIN-debug] POST   /foo                      --&gt; main.main.func1 (3 handlers)
 [GIN-debug] GET    /bar                      --&gt; main.main.func2 (3 handlers)
 [GIN-debug] GET    /status                   --&gt; main.main.func3 (3 handlers)
 {% endhighlight %}
@@ -47,7 +47,7 @@ categories:
 <span style="color:#000;font-weight:700">}</span>
 {% endhighlight %}
 
-<p><code>运行：</code></p>
+<p>{% highlight %}运行：{% endhighlight %}</p>
 
 <p><img height="132" src="/uploads/ckeditor/pictures/636/image-20221025103252-1.png" width="498" /></p>
 

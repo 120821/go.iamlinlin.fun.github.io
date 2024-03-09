@@ -6,9 +6,9 @@ categories:
 ---
 <p>使用：</p>
 
-<p><code>%s/,$//g</code></p>
+<p>{% highlight %}%s/,$//g{% endhighlight %}</p>
 
 <p>理解：</p>
 
-<p><code>,$</code> 表示匹配每一行末尾的逗号。</p>
+<p>{% highlight %},${% endhighlight %} 表示匹配每一行末尾的逗号。</p>
 

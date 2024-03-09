@@ -6,14 +6,14 @@ categories:
 ---
 <p>refer: <a href="https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/">https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/</a></p>
 
-<p><code>var</code>可以在全局范围声明或函数/局部范围内声明。</p>
+<p>{% highlight %}var{% endhighlight %}可以在全局范围声明或函数/局部范围内声明。</p>
 
-<p>当在最外层函数的外部声明<code>var</code>变量时，作用域是全局的。这意味着在最外层函数的外部用<code>var</code>声明的任何变量都可以在<code>windows</code>中使用。</p>
+<p>当在最外层函数的外部声明{% highlight %}var{% endhighlight %}变量时，作用域是全局的。这意味着在最外层函数的外部用{% highlight %}var{% endhighlight %}声明的任何变量都可以在{% highlight %}windows{% endhighlight %}中使用。</p>
 
 <p>例如：</p>
 
-<pre>
-<code>var tester = &#39;hey hi&#39;;
+{% highlight %}
+{% highlight %}var tester = &#39;hey hi&#39;;
 function newFunction() {
     var hello = &#39;hello&#39;;
 }
@@ -24,15 +24,15 @@ console.log(hello); // error: hello is not defined
 
 <p>例如：</p>
 
-<pre>
-<code>var greeter = &#39;hey hi&#39;;
+{% highlight %}
+{% highlight %}var greeter = &#39;hey hi&#39;;
 var greeter = &#39;say Hello instead&#39;;
 {% endhighlight %}
 
 <p>例如：</p>
 
-<pre>
-<code>var greeter = &#39;hey hi&#39;;
+{% highlight %}
+{% highlight %}var greeter = &#39;hey hi&#39;;
 greeter = &#39;say Hello instead&#39;;
 {% endhighlight %}
 
@@ -45,31 +45,31 @@ greeter = &#39;say Hello instead&#39;;
 
 <p>例如：</p>
 
-<pre>
-<code>console.log(greeter);
+{% highlight %}
+{% highlight %}console.log(greeter);
 var greeter = &#39;say hello&#39;;{% endhighlight %}
 
-<p><code>在编译的时候会被理解为：</code></p>
+<p>{% highlight %}在编译的时候会被理解为：{% endhighlight %}</p>
 
-<pre>
-<code>var greeter;
+{% highlight %}
+{% highlight %}var greeter;
 console.log(greeter); // greeter is undefined
 greeter = &#39;say hello&#39;;
 {% endhighlight %}
 
 <p>例如写一个test.js：</p>
 
-<p><code>console.log(greeter);<br />
+<p>{% highlight %}console.log(greeter);<br />
 var greeter = &#39;say hello&#39;;<br />
-console.log(greeter);</code></p>
+console.log(greeter);{% endhighlight %}</p>
 
 <p>然后运行：<br />
-<code>node test.js</code></p>
+{% highlight %}node test.js{% endhighlight %}</p>
 
 <p>输出：</p>
 
-<p><code>undefined<br />
-say hello</code></p>
+<p>{% highlight %}undefined<br />
+say hello{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

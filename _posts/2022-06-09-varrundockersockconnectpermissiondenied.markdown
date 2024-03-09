@@ -17,7 +17,7 @@ categories:
   <p>对于那些刚接触 shell 的人，命令：</p> 
   {% highlight %}$ sudo usermod -aG docker $USER
 {% endhighlight %} 
-  <p>需要有 <code>$USER</code>在您的外壳中定义。 默认情况下通常会出现这种情况，但您可能需要在某些 shell 中将该值设置为您的登录 ID。</p> 
+  <p>需要有 {% highlight %}$USER{% endhighlight %}在您的外壳中定义。 默认情况下通常会出现这种情况，但您可能需要在某些 shell 中将该值设置为您的登录 ID。</p> 
   <hr>
   <p>更改用户的组不会更改用户已打开的现有登录名、终端和 shell。 为避免再次执行登录，您可以简单地运行：</p> 
   {% highlight %}$ newgrp docker

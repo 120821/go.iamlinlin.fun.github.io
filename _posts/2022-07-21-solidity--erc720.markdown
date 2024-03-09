@@ -125,22 +125,22 @@ pragma solidity ^0.8.13;</p>
 
 <p id="contract-to-swap-tokens">Contract to swap tokens</p>
 
-<p>Here is an example contract, <code>TokenSwap</code>, to trade one ERC20 token for another.</p>
+<p>Here is an example contract, {% highlight %}TokenSwap{% endhighlight %}, to trade one ERC20 token for another.</p>
 
 <p>This contract will swap tokens by calling</p>
 
 <p>transferFrom(address sender, address recipient, uint256 amount)</p>
 
-<p>which will transfer <code>amount</code> of token from <code>sender</code> to <code>recipient</code>.</p>
+<p>which will transfer {% highlight %}amount{% endhighlight %} of token from {% highlight %}sender{% endhighlight %} to {% highlight %}recipient{% endhighlight %}.</p>
 
-<p>For <code>transferFrom</code> to succeed, <code>sender</code> must</p>
+<p>For {% highlight %}transferFrom{% endhighlight %} to succeed, {% highlight %}sender{% endhighlight %} must</p>
 
 <ul>
-	<li>have more than <code>amount</code> tokens in their balance</li>
-	<li>allowed <code>TokenSwap</code> to withdraw <code>amount</code> tokens by calling <code>approve</code></li>
+	<li>have more than {% highlight %}amount{% endhighlight %} tokens in their balance</li>
+	<li>allowed {% highlight %}TokenSwap{% endhighlight %} to withdraw {% highlight %}amount{% endhighlight %} tokens by calling {% highlight %}approve{% endhighlight %}</li>
 </ul>
 
-<p>prior to <code>TokenSwap</code> calling <code>transferFrom</code></p>
+<p>prior to {% highlight %}TokenSwap{% endhighlight %} calling {% highlight %}transferFrom{% endhighlight %}</p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>

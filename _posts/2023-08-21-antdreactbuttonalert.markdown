@@ -6,8 +6,8 @@ categories:
 ---
 <p>react 中使用Antd,在点击按钮忘记密码的时候会触发alert</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 class MyComponent extends React.Component {
   handleForgetPassword = () =&gt; {

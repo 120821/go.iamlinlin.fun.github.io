@@ -10,8 +10,8 @@ categories:
 
 <p>修改controller：</p>
 
-<pre>
-<code>@@ -33,7 +33,7 @@ class EnterprisesController &lt; ApplicationController
+{% highlight %}
+{% highlight %}@@ -33,7 +33,7 @@ class EnterprisesController &lt; ApplicationController
 
 &nbsp;&nbsp; # PATCH/PUT /enterprises/1
 
@@ -29,11 +29,11 @@ categories:
 
 <p>再次操作，就看到了错误提示：</p>
 
-<pre>
-<code>You must have ImageMagick or GraphicsMagick installed):{% endhighlight %}
+{% highlight %}
+{% highlight %}You must have ImageMagick or GraphicsMagick installed):{% endhighlight %}
 
 <p>安装：</p>
 
-<pre>
-<code>sudo apt-get install imagemagick{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get install imagemagick{% endhighlight %}
 

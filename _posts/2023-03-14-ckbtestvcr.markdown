@@ -16,8 +16,8 @@ categories:
 
 <p>（1）在test/test_helper.rb增加：</p>
 
-<pre>
-<code>VCR.configure do |config|
+{% highlight %}
+{% highlight %}VCR.configure do |config|
 
 &nbsp; config.cassette_library_dir = &quot;vcr_fixtures/vcr_cassettes&quot;
 
@@ -29,8 +29,8 @@ end{% endhighlight %}
 
 <p>（2）在单元测试增加：</p>
 
-<pre>
-<code>&nbsp;test &quot;should get transaction_fees, for pending tx&quot; do
+{% highlight %}
+{% highlight %}&nbsp;test &quot;should get transaction_fees, for pending tx&quot; do
 
 -&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; get transaction_fees_api_v2_statistics_url
 
@@ -64,8 +64,8 @@ end{% endhighlight %}
 
 <p>（3）单元测试的方法会生成这样的yml文件：</p>
 
-<pre>
-<code>&nbsp;&nbsp;&nbsp; vcr_fixtures/vcr_cassettes/get_post.yml
+{% highlight %}
+{% highlight %}&nbsp;&nbsp;&nbsp; vcr_fixtures/vcr_cassettes/get_post.yml
 
 &nbsp;&nbsp; &nbsp;vcr_fixtures/vcr_cassettes/get_transaction_fees.yml
 
@@ -77,8 +77,8 @@ end{% endhighlight %}
 
 <p>查看第一个文件：</p>
 
-<pre>
-<code>---
+{% highlight %}
+{% highlight %}---
 
 http_interactions:
 
@@ -152,8 +152,8 @@ http_interactions:
 
 <p>查看最后一个pending的文件：</p>
 
-<pre>
-<code>---
+{% highlight %}
+{% highlight %}---
 
 http_interactions:
 
@@ -225,9 +225,9 @@ http_interactions:
 
 <p>&nbsp;</p>
 
-<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#39;<br />
+<p>{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#39;<br />
 &nbsp; recorded_at: Tue, 14 Mar 2023 01:14:00 GMT<br />
-- request:</code></p>
+- request:{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

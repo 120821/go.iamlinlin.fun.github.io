@@ -16,27 +16,27 @@ categories:
 
 <p>let:</p>
 
-<pre>
-<code>{
+{% highlight %}
+{% highlight %}{
 &nbsp; let a = 0;
 &nbsp; a // 0 
 } 
 a // 报错 ReferenceError: a is not defined{% endhighlight %}
 
-<pre>
-<code>const：
+{% highlight %}
+{% highlight %}const：
 { 
 &nbsp; let a = 0;
 &nbsp; var b = 1;
 } 
 a // ReferenceError: a is not defined
-b // 1</code>
-</pre>
+b // 1{% endhighlight %}
+{% endhighlight %}
 
 <p>for 循环计数器很适合用 let</p>
 
-<pre>
-<code>for (var i = 0; i &lt; 10; i++) {
+{% highlight %}
+{% highlight %}for (var i = 0; i &lt; 10; i++) {
 
 &nbsp; setTimeout(function(){
 &nbsp; &nbsp; console.log(i); }

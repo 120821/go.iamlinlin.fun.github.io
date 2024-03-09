@@ -6,18 +6,18 @@ categories:
 ---
 <p>可以在一个 HTML 页面中显示多个 Chart.js 环形图。这里是一个例子，展示了如何在一个 HTML 页面中显示 6 个简单的环形图。</p>
 
-<p>首先，在 <code>&lt;head&gt;</code> 中引入 Chart.js 库：</p>
+<p>首先，在 {% highlight %}&lt;head&gt;{% endhighlight %} 中引入 Chart.js 库：</p>
 
-<pre>
-<code>&lt;head&gt;
+{% highlight %}
+{% highlight %}&lt;head&gt;
   &lt;title&gt;My Charts&lt;/title&gt;
   &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;{% endhighlight %}
 
-<p>然后，在 <code>&lt;body&gt;</code> 中添加 6 个 <code>&lt;canvas&gt;</code> 元素，用于显示 6 个环形图。这里的例子中，每个 <code>&lt;canvas&gt;</code> 元素都有一个唯一的 <code>id</code> 属性，方便在 JavaScript 代码中选中并对其进行设定。</p>
+<p>然后，在 {% highlight %}&lt;body&gt;{% endhighlight %} 中添加 6 个 {% highlight %}&lt;canvas&gt;{% endhighlight %} 元素，用于显示 6 个环形图。这里的例子中，每个 {% highlight %}&lt;canvas&gt;{% endhighlight %} 元素都有一个唯一的 {% highlight %}id{% endhighlight %} 属性，方便在 JavaScript 代码中选中并对其进行设定。</p>
 
-<pre>
-<code>&lt;body&gt;
+{% highlight %}
+{% highlight %}&lt;body&gt;
   &lt;canvas id=&quot;chart1&quot;&gt;&lt;/canvas&gt;
   &lt;canvas id=&quot;chart2&quot;&gt;&lt;/canvas&gt;
   &lt;canvas id=&quot;chart3&quot;&gt;&lt;/canvas&gt;
@@ -26,10 +26,10 @@ categories:
   &lt;canvas id=&quot;chart6&quot;&gt;&lt;/canvas&gt;
 &lt;/body&gt;{% endhighlight %}
 
-<p>编写 JavaScript 代码，在每个 <code>&lt;canvas&gt;</code> 上绘制环形图。这里的例子中，我们使用 <code>Chart</code> 构造函数来创建并绘制环形图。每个环形图都有一个唯一的 <code>id</code>，指定了它所在的 HTML 元素。在每个环形图的选项中，我们设置了 <code>data</code>（用于绘制的数据数组）和 <code>backgroundColor</code>（环形图的背景色）。此外，还可以设置其他选项，例如 <code>cutoutPercentage</code>（环形图的中心空洞占比）、<code>rotation</code>（环形图的旋转角度）等等。</p>
+<p>编写 JavaScript 代码，在每个 {% highlight %}&lt;canvas&gt;{% endhighlight %} 上绘制环形图。这里的例子中，我们使用 {% highlight %}Chart{% endhighlight %} 构造函数来创建并绘制环形图。每个环形图都有一个唯一的 {% highlight %}id{% endhighlight %}，指定了它所在的 HTML 元素。在每个环形图的选项中，我们设置了 {% highlight %}data{% endhighlight %}（用于绘制的数据数组）和 {% highlight %}backgroundColor{% endhighlight %}（环形图的背景色）。此外，还可以设置其他选项，例如 {% highlight %}cutoutPercentage{% endhighlight %}（环形图的中心空洞占比）、{% highlight %}rotation{% endhighlight %}（环形图的旋转角度）等等。</p>
 
-<pre>
-<code>&lt;script&gt;
+{% highlight %}
+{% highlight %}&lt;script&gt;
   // 环形图1
   var ctx1 = document.getElementById(&#39;chart1&#39;).getContext(&#39;2d&#39;);
   var chart1 = new Chart(ctx1, {

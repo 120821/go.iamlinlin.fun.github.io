@@ -4,8 +4,8 @@ title: "nohup.out --this exceeds GitHub's file size limit of 100.00"
 date: "2022-08-22"
 categories: 
 ---
-<pre>
-<code>git push的时候出现报错，提示文件最大是100M，现在文件超过限制了。
+{% highlight %}
+{% highlight %}git push的时候出现报错，提示文件最大是100M，现在文件超过限制了。
 
 find . -size +100M | cat &gt;&gt; .gitignore{% endhighlight %}
 

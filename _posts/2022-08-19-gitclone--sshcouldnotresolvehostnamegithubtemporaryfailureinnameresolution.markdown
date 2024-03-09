@@ -8,8 +8,8 @@ categories:
 
 <p>git clone 的时候，出现了报错, 说明网络跟github之间是断开的,&nbsp; 需要翻墙。</p>
 
-<pre>
-<code>&nbsp;ssh: Could not resolve hostname github: Temporary failure in name resolution
+{% highlight %}
+{% highlight %}&nbsp;ssh: Could not resolve hostname github: Temporary failure in name resolution
 
 fatal: Could not read from remote repository.
 
@@ -32,12 +32,12 @@ and the repository exists.{% endhighlight %}
     proxy = socks5h:<span class="hljs-comment">//192.168.0.10:1090</span>
 [https <span class="hljs-string">&quot;https://github.com&quot;</span>]
     proxy = socks5h:<span class="hljs-comment">//192.168.0.10:1090</span>
-</pre>
+{% endhighlight %}
 
 <p>使用：（这样也可以）</p>
 
-<pre>
-<code>git clone https://github.com/user/projectname --config &#39;http.proxy=socks5://127.0.0.1:8080&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}git clone https://github.com/user/projectname --config &#39;http.proxy=socks5://127.0.0.1:8080&#39;{% endhighlight %}
 
 <p><img height="371" src="/uploads/ckeditor/pictures/287/image-20220819100718-1.png" width="1420" /></p>
 

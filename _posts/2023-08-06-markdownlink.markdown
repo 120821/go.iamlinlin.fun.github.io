@@ -9,7 +9,7 @@ categories:
 <p>使用这样的语法：</p>
 
 <div class="gatsby-highlight markdown-module--codeBlock--5aqoW">
-<pre>
-<code>[Link text Here](https://link-url-here.org){% endhighlight %}
+{% highlight %}
+{% highlight %}[Link text Here](https://link-url-here.org){% endhighlight %}
 </div>
 

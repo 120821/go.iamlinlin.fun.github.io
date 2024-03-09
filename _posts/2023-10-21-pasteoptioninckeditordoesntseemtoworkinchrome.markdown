@@ -10,8 +10,8 @@ categories:
 
 <p>ck-editor不能在谷歌浏览器粘贴图片，但是在火狐可以，修改config.js</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 CKEDITOR.on(&quot;instanceReady&quot;, function(event) {
 	event.editor.on(&quot;beforeCommandExec&quot;, function(event) {
 		// Show the paste dialog for the paste buttons and right-click paste

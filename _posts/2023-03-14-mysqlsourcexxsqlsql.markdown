@@ -12,8 +12,8 @@ categories:
 
 <p>查看已经备份的文件：</p>
 
-<pre>
-<code>-rw-r--r-- 1 root root 12587685 Mar 13 19:00 2023_03_13_19_00_01.sql.zip
+{% highlight %}
+{% highlight %}-rw-r--r-- 1 root root 12587685 Mar 13 19:00 2023_03_13_19_00_01.sql.zip
 
 -rw-r--r-- 1 root root 12587735 Mar 13 20:00 2023_03_13_20_00_01.sql.zip
 
@@ -31,16 +31,16 @@ categories:
 
 <p>解压缩：</p>
 
-<pre>
-<code>unzip 2023_03_14_10_00_01.sql.zip{% endhighlight %}
+{% highlight %}
+{% highlight %}unzip 2023_03_14_10_00_01.sql.zip{% endhighlight %}
 
 <p>2.在命令行进入sql</p>
 
-<pre>
-<code>mysql -uroot -p  # 登录到数据库{% endhighlight %}
+{% highlight %}
+{% highlight %}mysql -uroot -p  # 登录到数据库{% endhighlight %}
 
-<pre>
-<code>mysql&gt; CREATE DATABASE test_db;&nbsp; //创建数据库表test_db
+{% highlight %}
+{% highlight %}mysql&gt; CREATE DATABASE test_db;&nbsp; //创建数据库表test_db
 
 Query OK, 1 row affected (0.42 sec)
 
@@ -58,8 +58,8 @@ Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功{% endhighlight %}
 
 <p>3.查看是否已经恢复：</p>
 
-<pre>
-<code>SHOW TABLES FROM test_db;&nbsp;&nbsp; //查看数据库下面所有的数据库表
+{% highlight %}
+{% highlight %}SHOW TABLES FROM test_db;&nbsp;&nbsp; //查看数据库下面所有的数据库表
 
 +---------------------+
 
@@ -73,8 +73,8 @@ Query OK, 0 rows affected (0.02 sec)&nbsp; //导入成功{% endhighlight %}
 
 6 rows in set (0.00 sec){% endhighlight %}
 
-<pre>
-<code>mysql&gt; DESC&nbsp; tbl_del_users;&nbsp; //查看tbl_del_users数据库表结构
+{% highlight %}
+{% highlight %}mysql&gt; DESC&nbsp; tbl_del_users;&nbsp; //查看tbl_del_users数据库表结构
 
 +-----------+-------------+------+-----+---------+-------+
 

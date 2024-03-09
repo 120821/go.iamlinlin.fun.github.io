@@ -10,8 +10,8 @@ categories:
 
 <p>使用migrate进行修改：</p>
 
-<pre>
-<code>cat db/migrate/20221009081118_change_index_type_for_udts.rb
+{% highlight %}
+{% highlight %}cat db/migrate/20221009081118_change_index_type_for_udts.rb
 
 class ChangeIndexTypeForUdts &lt; ActiveRecord::Migration[6.1]
 

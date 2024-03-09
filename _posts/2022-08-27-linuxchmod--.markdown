@@ -23,37 +23,37 @@ categories:
 <p>将文件 file1.txt 设为所有人皆可读取 :</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod ugo</span><span class="pun">+</span><span class="pln">r file1</span><span class="pun">.</span><span class="pln">txt</span></pre>
+<span class="pln">chmod ugo</span><span class="pun">+</span><span class="pln">r file1</span><span class="pun">.</span><span class="pln">txt</span>{% endhighlight %}
 
 <p>将文件 file1.txt 设为所有人皆可读取 :</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod a</span><span class="pun">+</span><span class="pln">r file1</span><span class="pun">.</span><span class="pln">txt</span></pre>
+<span class="pln">chmod a</span><span class="pun">+</span><span class="pln">r file1</span><span class="pun">.</span><span class="pln">txt</span>{% endhighlight %}
 
 <p>将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入 :</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod ug</span><span class="pun">+</span><span class="pln">w</span><span class="pun">,</span><span class="pln">o</span><span class="pun">-</span><span class="pln">w file1</span><span class="pun">.</span><span class="pln">txt file2</span><span class="pun">.</span><span class="pln">txt</span></pre>
+<span class="pln">chmod ug</span><span class="pun">+</span><span class="pln">w</span><span class="pun">,</span><span class="pln">o</span><span class="pun">-</span><span class="pln">w file1</span><span class="pun">.</span><span class="pln">txt file2</span><span class="pun">.</span><span class="pln">txt</span>{% endhighlight %}
 
 <p>为 ex1.py 文件拥有者增加可执行权限:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod u</span><span class="pun">+</span><span class="pln">x ex1</span><span class="pun">.</span><span class="pln">py</span></pre>
+<span class="pln">chmod u</span><span class="pun">+</span><span class="pln">x ex1</span><span class="pun">.</span><span class="pln">py</span>{% endhighlight %}
 
 <p>将目前目录下的所有文件与子目录皆设为任何人可读取 :</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod </span><span class="pun">-</span><span class="pln">R a</span><span class="pun">+</span><span class="pln">r </span><span class="pun">*</span></pre>
+<span class="pln">chmod </span><span class="pun">-</span><span class="pln">R a</span><span class="pun">+</span><span class="pln">r </span><span class="pun">*</span>{% endhighlight %}
 
 <p>此外chmod也可以用数字来表示权限如 :</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod </span><span class="lit">777</span><span class="pln"> file</span></pre>
+<span class="pln">chmod </span><span class="lit">777</span><span class="pln"> file</span>{% endhighlight %}
 
 <p>语法为：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod abc file</span></pre>
+<span class="pln">chmod abc file</span>{% endhighlight %}
 
 <p>其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。</p>
 
@@ -66,20 +66,20 @@ categories:
 </ul>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod a</span><span class="pun">=</span><span class="pln">rwx file</span></pre>
+<span class="pln">chmod a</span><span class="pun">=</span><span class="pln">rwx file</span>{% endhighlight %}
 
 <p>和</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod </span><span class="lit">777</span><span class="pln"> file</span></pre>
+<span class="pln">chmod </span><span class="lit">777</span><span class="pln"> file</span>{% endhighlight %}
 
 <p>效果相同</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod ug</span><span class="pun">=</span><span class="pln">rwx</span><span class="pun">,</span><span class="pln">o</span><span class="pun">=</span><span class="pln">x file</span></pre>
+<span class="pln">chmod ug</span><span class="pun">=</span><span class="pln">rwx</span><span class="pun">,</span><span class="pln">o</span><span class="pun">=</span><span class="pln">x file</span>{% endhighlight %}
 
 <p>和</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">chmod </span><span class="lit">771</span><span class="pln"> file</span></pre>
+<span class="pln">chmod </span><span class="lit">771</span><span class="pln"> file</span>{% endhighlight %}
 

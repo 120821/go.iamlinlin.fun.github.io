@@ -10,8 +10,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code>package main
+{% highlight %}
+{% highlight %}package main
 
 import (
     &quot;fmt&quot;
@@ -32,8 +32,8 @@ func main() {
 
 <p>示例：</p>
 
-<pre>
-<code>package main
+{% highlight %}
+{% highlight %}package main
 
 import (
     &quot;fmt&quot;
@@ -55,8 +55,8 @@ func main() {
 
 <p>For example:</p>
 
-<pre>
-<code># integer variable
+{% highlight %}
+{% highlight %}# integer variable
 num = 42
 
 # converting integer to string
@@ -68,8 +68,8 @@ print(string_num) # output: &quot;42&quot;{% endhighlight %}
 
 <p>Using format():</p>
 
-<pre>
-<code># integer variable
+{% highlight %}
+{% highlight %}# integer variable
 num = 42
 
 # converting integer to string using format()
@@ -79,8 +79,8 @@ print(string_num) # output: &quot;42&quot;{% endhighlight %}
 
 <p>Using f-strings:</p>
 
-<pre>
-<code># integer variable
+{% highlight %}
+{% highlight %}# integer variable
 num = 42
 
 # converting integer to string using f-string

@@ -9,8 +9,8 @@ categories:
 
 <p>1.简单的：这个例子是使用了一条只有一个圆圈的slider和一个带有两个特定的点且两个特定点之间是范围的slider</p>
 
-<pre>
-<code>import React, { useState } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useState } from &#39;react&#39;;
 import { Slider, Switch } from &#39;antd&#39;;
 const App = () =&gt; {
   const [disabled, setDisabled] = useState(false);
@@ -29,8 +29,8 @@ export default App;{% endhighlight %}
 
 <p>2.带有tooltip: 可以设置默认值和tooltip</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import { Slider } from &#39;antd&#39;;
 const App = () =&gt; (
   &lt;Slider

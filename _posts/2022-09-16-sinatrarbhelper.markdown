@@ -8,7 +8,7 @@ categories:
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="n">1.在顶部使用
+{% highlight %}<span class="n">1.在顶部使用
 helpers</span> <span class="k">do</span>
   <span class="k">def</span> <span class="nf">bar</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
     <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">bar&quot;</span>
@@ -24,7 +24,7 @@ helpers</span> <span class="k">do</span>
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="k">module</span> <span class="nn">FooUtils</span>
+{% highlight %}<span class="k">module</span> <span class="nn">FooUtils</span>
   <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">foo&quot;</span> <span class="k">end</span>
 <span class="k">end</span>
 

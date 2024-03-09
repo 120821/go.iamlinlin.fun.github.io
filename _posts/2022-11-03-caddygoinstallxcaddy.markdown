@@ -16,15 +16,15 @@ categories:
 
 <p>1. 下载go&nbsp; （把路径设置为安装的路径，不是asdf安装的路径，下载：<a href="https://go.dev/dl/">https://go.dev/dl/</a> ）</p>
 
-<pre>
-<code>wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+{% highlight %}
+{% highlight %}wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 
 tar zxvf ggo1.19.3.linux-amd64.tar.gz{% endhighlight %}
 
 <p>添加go 命令到 $PATH中。</p>
 
-<pre>
-<code>#golang安装目录
+{% highlight %}
+{% highlight %}#golang安装目录
 
 export GOROOT=/opt/app/go/go
 
@@ -40,13 +40,13 @@ export PATH=$GOPATH:$GOBIN:$GOROOT/bin:/opt/app/go/go:$PATH{% endhighlight %}
 
 <p>2. 下载xcaddy</p>
 
-<pre>
-<code>go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest{% endhighlight %}
+{% highlight %}
+{% highlight %}go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest{% endhighlight %}
 
 <p>3. 根据xcaddy来编译 caddy + cloudflare</p>
 
-<pre>
-<code>xcaddy build --with github.com/caddy-dns/cloudflare{% endhighlight %}
+{% highlight %}
+{% highlight %}xcaddy build --with github.com/caddy-dns/cloudflare{% endhighlight %}
 
 <p>这样一个新版的 caddy 就构建好了，放在当前目录下的 caddy文件夹中。</p>
 

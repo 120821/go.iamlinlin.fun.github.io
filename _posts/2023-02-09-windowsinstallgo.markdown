@@ -10,12 +10,12 @@ categories:
 
 <p>2.进入cmd进行查看go的版本，用来查看是否安装成功.显示了版本号码就是安装成功。</p>
 
-<p><code>go version</code></p>
+<p>{% highlight %}go version{% endhighlight %}</p>
 
 <p>3.查看go的环境变量：</p>
 
-<pre>
-<code>go env{% endhighlight %}
+{% highlight %}
+{% highlight %}go env{% endhighlight %}
 
 <p>4.进入gopath，没有go文件夹，就创建go文件夹。</p>
 
@@ -27,26 +27,26 @@ categories:
 
 <p>7.创建模块管理文件：go.mod</p>
 
-<pre>
-<code>go mod init src{% endhighlight %}
+{% highlight %}
+{% highlight %}go mod init src{% endhighlight %}
 
 <p>8.在src目录下再创建俩个文件夹，一个叫main,一个叫tool。</p>
 
-<pre>
-<code>cd src{% endhighlight %}
+{% highlight %}
+{% highlight %}cd src{% endhighlight %}
 
-<pre>
-<code>mkdir main tool{% endhighlight %}
+{% highlight %}
+{% highlight %}mkdir main tool{% endhighlight %}
 
 <p>9.在main文件夹写第一个测试文件hello_world.go：</p>
 
-<pre>
-<code>cat hello_world.go
+{% highlight %}
+{% highlight %}cat hello_world.go
 
 package main{% endhighlight %}
 
-<pre>
-<code>import &quot;fmt&quot;
+{% highlight %}
+{% highlight %}import &quot;fmt&quot;
 
 func main(){
 
@@ -58,13 +58,13 @@ func main(){
 
 <p>10.运行hello_world.go</p>
 
-<pre>
-<code>go run hello_world.go{% endhighlight %}
+{% highlight %}
+{% highlight %}go run hello_world.go{% endhighlight %}
 
 <p>返回结果：</p>
 
-<pre>
-<code>hello_world{% endhighlight %}
+{% highlight %}
+{% highlight %}hello_world{% endhighlight %}
 
 <p>&nbsp;</p>
 

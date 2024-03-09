@@ -8,25 +8,25 @@ categories:
 
 <p>1.使用ruby 安装：</p>
 
-<pre>
-<code>gem install selenium-webdriver{% endhighlight %}
+{% highlight %}
+{% highlight %}gem install selenium-webdriver{% endhighlight %}
 
 <p>或者使用Gemfile安装：</p>
 
-<pre>
-<code>gem &#39;selenium-webdriver&#39;, &#39;= 4.7.1&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &#39;selenium-webdriver&#39;, &#39;= 4.7.1&#39;{% endhighlight %}
 
 <p>2.安装浏览器驱动程序</p>
 
 <p>（1）使用Gemfile安装：</p>
 
-<pre>
-<code>gem &#39;webdrivers&#39;, &#39;~&gt; 5.0&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &#39;webdrivers&#39;, &#39;~&gt; 5.0&#39;{% endhighlight %}
 
 <p>（1.1）或者直接在文件使用：</p>
 
-<pre>
-<code>    require &#39;webdrivers&#39;
+{% highlight %}
+{% highlight %}    require &#39;webdrivers&#39;
 
     @driver = Selenium::WebDriver.for :chrome{% endhighlight %}
 
@@ -34,8 +34,8 @@ categories:
 
 <p>如果已经存在path：</p>
 
-<pre>
-<code>echo $PATH
+{% highlight %}
+{% highlight %}echo $PATH
 {% endhighlight %}
 
 <p>如果您的驱动程序的位置不在列出的目录中，您可以向 PATH 添加一个新目录：</p>
@@ -49,8 +49,8 @@ source ~/.bash_profile</p>
 
 <p>如果您的 PATH 在上面配置正确，您将看到一些与驱动程序启动相关的输出：</p>
 
-<pre>
-<code>Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
+{% highlight %}
+{% highlight %}Starting ChromeDriver 95.0.4638.54 (d31a821ec901f68d0d34ccdbaea45b4c86ce543e-refs/branch-heads/4638@{#871}) on port 9515
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.

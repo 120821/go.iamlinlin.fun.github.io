@@ -15,7 +15,7 @@ categories:
 <pre class="hljs coffeescript">
 <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">window</span>.ethereum !== <span class="hljs-string">&#39;undefined&#39;</span>) {
   <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#39;MetaMask is installed!&#39;</span>);
-}</pre>
+}{% endhighlight %}
 
 <p>对于以及安装过的的话，就打印，否则就返回undefined</p>
 

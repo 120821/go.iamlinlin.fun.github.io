@@ -8,15 +8,15 @@ categories:
 
 <p>在安装postgres后，使用postgres的时候，出现了错误：</p>
 
-<pre>
-<code>postgres@meiyi-Extensa<span style="color:#f5ab35">-2511</span>G:~$ psql
+{% highlight %}
+{% highlight %}postgres@meiyi-Extensa<span style="color:#f5ab35">-2511</span>G:~$ psql
 psql: error: <span style="color:#dcc6e0">connection</span> <span style="color:#dcc6e0">to</span> <span style="color:#dcc6e0">server</span> <span style="color:#dcc6e0">on</span> socket &quot;/var/run/postgresql/.s.PGSQL.5432&quot; failed: <span style="color:#dcc6e0">No</span> such file <span style="color:#dcc6e0">or</span> directory
 	<span style="color:#dcc6e0">Is</span> the <span style="color:#dcc6e0">server</span> running locally <span style="color:#dcc6e0">and</span> accepting connections <span style="color:#dcc6e0">on</span> that socket?{% endhighlight %}
 
 <p>1.查看postgres的状态</p>
 
-<pre>
-<code>sudo service postgresql status{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service postgresql status{% endhighlight %}
 
 <p>如果没有启动的话，可以启动：</p>
 
@@ -24,20 +24,20 @@ psql: error: <span style="color:#dcc6e0">connection</span> <span style="color:#d
 
 <p>然后检查文件：</p>
 
-<pre>
-<code>ls -la <span style="color:#ffa07a">/var/</span>run<span style="color:#ffa07a">/postgresql/</span>.s.PGSQL.<span style="color:#f5ab35">5432</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}ls -la <span style="color:#ffa07a">/var/</span>run<span style="color:#ffa07a">/postgresql/</span>.s.PGSQL.<span style="color:#f5ab35">5432</span>{% endhighlight %}
 
 <p>但是我没有发现该文件的存在：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">ls</span> -<span style="color:#dcc6e0">la</span> /<span style="color:#dcc6e0">var</span>/<span style="color:#dcc6e0">run</span>/postgresql/.s.PGSQL.5432
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">ls</span> -<span style="color:#dcc6e0">la</span> /<span style="color:#dcc6e0">var</span>/<span style="color:#dcc6e0">run</span>/postgresql/.s.PGSQL.5432
 <span style="color:#dcc6e0">ls</span>: cannot access &#39;/<span style="color:#dcc6e0">var</span>/<span style="color:#dcc6e0">run</span>/postgresql/.s.PGSQL.5432&#39;: <span style="color:#dcc6e0">No</span> such <span style="color:#dcc6e0">file</span> or directory
 {% endhighlight %}
 
 <p>如果postgres是启动的，（我刚才看到是启动的），那么就关闭</p>
 
-<pre>
-<code>sudo service postgresql stop{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service postgresql stop{% endhighlight %}
 
 <p>使用这些命令重新生成：</p>
 
@@ -48,8 +48,8 @@ sudo service postgresql start</p>
 
 <p>但是我启动的时候出现了错误：</p>
 
-<pre>
-<code><span style="color:#ffd700">ps</span> -ef | grep postgres
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">ps</span> -ef | grep postgres
 <span style="color:#ffd700">root</span>      <span style="color:#f5ab35">167756</span>  <span style="color:#f5ab35">167581</span>  <span style="color:#f5ab35">0</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">03</span> pts/<span style="color:#f5ab35">8</span>    <span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span> sudo -u postgres -i
 <span style="color:#ffd700">root</span>      <span style="color:#f5ab35">167763</span>  <span style="color:#f5ab35">167756</span>  <span style="color:#f5ab35">0</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">03</span> pts/<span style="color:#f5ab35">10</span>   <span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span> sudo -u postgres -i
 <span style="color:#ffd700">postgres</span>  <span style="color:#f5ab35">167764</span>  <span style="color:#f5ab35">167763</span>  <span style="color:#f5ab35">0</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">03</span> pts/<span style="color:#f5ab35">10</span>   <span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span>:<span style="color:#f5ab35">00</span> -bash
@@ -74,36 +74,36 @@ sudo service postgresql start</p>
 
 <p>也就是说具体的错误是：</p>
 
-<pre>
-<code><span style="color:#f5ab35">2024</span><span style="color:#f5ab35">-01</span><span style="color:#f5ab35">-09</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">07</span>:<span style="color:#f5ab35">28.130</span> CST [<span style="color:#f5ab35">168818</span>] LOG:  could not bind IPv4 address <span style="color:#abe338">&quot;127.0.0.1&quot;</span>: Address already in use
+{% highlight %}
+{% highlight %}<span style="color:#f5ab35">2024</span><span style="color:#f5ab35">-01</span><span style="color:#f5ab35">-09</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">07</span>:<span style="color:#f5ab35">28.130</span> CST [<span style="color:#f5ab35">168818</span>] LOG:  could not bind IPv4 address <span style="color:#abe338">&quot;127.0.0.1&quot;</span>: Address already in use
 <span style="color:#f5ab35">2024</span><span style="color:#f5ab35">-01</span><span style="color:#f5ab35">-09</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">07</span>:<span style="color:#f5ab35">28.130</span> CST [<span style="color:#f5ab35">168818</span>] HINT:  Is another postmaster already running on port <span style="color:#f5ab35">5432</span>? If not, wait a few seconds and retry.
 <span style="color:#f5ab35">2024</span><span style="color:#f5ab35">-01</span><span style="color:#f5ab35">-09</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">07</span>:<span style="color:#f5ab35">28.130</span> CST [<span style="color:#f5ab35">168818</span>] WARNING:  could not create listen socket for <span style="color:#abe338">&quot;localhost&quot;</span>
 <span style="color:#f5ab35">2024</span><span style="color:#f5ab35">-01</span><span style="color:#f5ab35">-09</span> <span style="color:#f5ab35">14</span>:<span style="color:#f5ab35">07</span>:<span style="color:#f5ab35">28.130</span> CST [<span style="color:#f5ab35">168818</span>] FATAL:  could not create any TCP/IP sockets{% endhighlight %}
 
 <p>那么先关闭：</p>
 
-<pre>
-<code>sudo service postgresql stop{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service postgresql stop{% endhighlight %}
 
 <p>然后查看是否启动</p>
 
-<pre>
-<code>ps -ef | grep postgres{% endhighlight %}
+{% highlight %}
+{% highlight %}ps -ef | grep postgres{% endhighlight %}
 
 <p>接着启动：</p>
 
-<pre>
-<code>sudo service postgresql start{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service postgresql start{% endhighlight %}
 
 <p>查看端口是否占用：</p>
 
-<pre>
-<code><span style="color:#ffd700">sudo</span> lsof -i:<span style="color:#f5ab35">5432</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">sudo</span> lsof -i:<span style="color:#f5ab35">5432</span>{% endhighlight %}
 
 <p>日志：</p>
 
-<pre>
-<code>meiyi@meiyi-Extensa-2511G:~/workspace/dongtaipaifang_2_frontend$ ps -ef | grep postgres
+{% highlight %}
+{% highlight %}meiyi@meiyi-Extensa-2511G:~/workspace/dongtaipaifang_2_frontend$ ps -ef | grep postgres
 root      167756  167581  0 14:03 pts/8    00:00:00 sudo -u postgres -i
 root      167763  167756  0 14:03 pts/10   00:00:00 sudo -u postgres -i
 postgres  167764  167763  0 14:03 pts/10   00:00:00 -bash
@@ -150,8 +150,8 @@ postgres 169260 postgres    6u  IPv4 1158076      0t0  TCP localhost:postgresql 
 
 <p>最后进入postgres命令行创建数据库，修改用户的密码：</p>
 
-<pre>
-<code>sudo -u postgres -i
+{% highlight %}
+{% highlight %}sudo -u postgres -i
 [sudo] password for meiyi: 
 postgres@meiyi-Extensa-2511G:~$ psql
 psql: error: connection to server on socket &quot;/var/run/postgresql/.s.PGSQL.5432&quot; failed: No such file or directory

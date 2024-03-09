@@ -14,8 +14,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code><span style="color:#ffa07a">.simple_table</span> {
+{% highlight %}
+{% highlight %}<span style="color:#ffa07a">.simple_table</span> {
   <span style="color:#ffd700">width</span>: <span style="color:#f5ab35">100%</span>; <span style="color:#d4d0ab">/* 设置表格宽度为100% */</span>
   <span style="color:#ffd700">border-collapse</span>: collapse; <span style="color:#d4d0ab">/* 合并边框 */</span>
 }
@@ -36,8 +36,8 @@ categories:
 
 <p>(另外，不太建议，因为数据可能十位以上）如果想要固定每个th、td的宽度也可以尝试这样：</p>
 
-<pre>
-<code><span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">th</span>,
+{% highlight %}
+{% highlight %}<span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">th</span>,
 <span style="color:#ffa07a">.simple_table</span> <span style="color:#dcc6e0">td</span> {
   <span style="color:#ffd700">width</span>: <span style="color:#f5ab35">100px</span>; <span style="color:#d4d0ab">/* 设置宽度为100px */</span>
 }

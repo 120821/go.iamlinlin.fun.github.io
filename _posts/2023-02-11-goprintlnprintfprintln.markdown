@@ -9,8 +9,8 @@ categories:
 <p><strong>Println :可以打印出字符串，和变量</strong><br />
 <strong>Printf : 只可以打印出格式化的字符串,可以输出字符串类型的变量，不可以输出整形变量和整形</strong></p>
 
-<pre>
-<code>a := 10
+{% highlight %}
+{% highlight %}a := 10
 fmt.Println(a)　　//right
 fmt.Println(&quot;abc&quot;)　　//right
 fmt.Printf(&quot;%d&quot;,a)　　//right

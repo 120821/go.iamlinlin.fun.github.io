@@ -8,9 +8,9 @@ categories:
 
 <p>安装：</p>
 
-<pre>
+{% highlight %}
 <span class="line">go get -u gorm.io/gorm</span>
-<span class="line">go get -u gorm.io/driver/sqlite</span></pre>
+<span class="line">go get -u gorm.io/driver/sqlite</span>{% endhighlight %}
 
 <p><img height="302" src="/uploads/ckeditor/pictures/645/image-20221025110012-1.png" width="780" /></p>
 

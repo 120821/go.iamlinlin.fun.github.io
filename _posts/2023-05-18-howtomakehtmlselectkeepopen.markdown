@@ -8,8 +8,8 @@ categories:
 
 <p>让下拉框一直显示可以使用mutiple,然后调整hight就可以了</p>
 
-<pre>
-<code>&lt;select class=&quot;select&quot; multiple=&quot;multiple&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;select class=&quot;select&quot; multiple=&quot;multiple&quot;&gt;
     &lt;option selected&gt;Select&lt;/option&gt;
     &lt;option&gt;Blue&lt;/option&gt;
     &lt;option &gt;Red&lt;/option&gt;

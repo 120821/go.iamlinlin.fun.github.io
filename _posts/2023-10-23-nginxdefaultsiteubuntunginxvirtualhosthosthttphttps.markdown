@@ -8,15 +8,15 @@ categories:
 
 <p>1.设置default_site</p>
 
-<pre>
-<code>listen <span style="color:#f5ab35">80</span> default_server<span style="color:#d4d0ab">;</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}listen <span style="color:#f5ab35">80</span> default_server<span style="color:#d4d0ab">;</span>{% endhighlight %}
 
 <p>增加上面这一行就可以了。</p>
 
 <p>如果是443：</p>
 
-<pre>
-<code><span style="color:#00e0e0">server</span> {
+{% highlight %}
+{% highlight %}<span style="color:#00e0e0">server</span> {
     <span style="color:#ffd700">listen</span> <span style="color:#f5ab35">443</span> ssl default_server;
     <span style="color:#ffd700">server_name</span> c.com www.c.com;
     <span style="color:#d4d0ab"># SSL 配置...</span>
@@ -27,8 +27,8 @@ categories:
 
 <p>2.把http://c.com设置为自动跳转到https://c.com,增加一段server</p>
 
-<pre>
-<code><span style="color:#00e0e0">server</span> {
+{% highlight %}
+{% highlight %}<span style="color:#00e0e0">server</span> {
     <span style="color:#ffd700">listen</span> <span style="color:#f5ab35">80</span>;
     <span style="color:#ffd700">server_name</span> c.com www.c.com;
     <span style="color:#ffd700">return</span> <span style="color:#f5ab35">301</span> https://c.com$request_uri;

@@ -8,15 +8,15 @@ categories:
                     <blockquote> 
  <p>数组通常被描述为“像列表一样的对象”; 简单来说，数组是一个包含了多个值的对象。数组对象可以存储在变量中，并且能用和其他任何类型的值完全相同的方式处理，区别在于我们可以单独访问列表中的每个值，并使用列表执行一些有用和高效的操作，如循环 - 它对数组中的每个元素都执行相同的操作。 也许我们有一系列产品和价格存储在一个数组中，我们想循环遍历所有这些产品，并将它们打印在发票上，同时将所有产品的价格统计在一起，然后将总价格打印在底部。</p> 
  <p>可以通过使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length" title="length">length</a> 属性获取数组的长度（数组中有多少项元素），这与查找字符串的长度（以字符为单位）完全相同 。 尝试以下代码：</p> 
- <pre><code class="language-javascript">sequence.length;
+ {% highlight %}<code class="language-javascript">sequence.length;
 // should return 7{% endhighlight %} 
  <p>虽然 length 属性也有其他用途，但最常用于循环（循环遍历数组中的所有项）。 例如：</p> 
- <pre><code class="language-javascript">let sequence = [1, 1, 2, 3, 5, 8, 13];
+ {% highlight %}<code class="language-javascript">let sequence = [1, 1, 2, 3, 5, 8, 13];
 for (let i = 0; i &lt; sequence.length; i++) {
   console.log(sequence[i]);
 }{% endhighlight %} 
  <p>实现这样的方法： 可以动态创建一个二维Array, 内容如下</p> 
- <pre>generate_array(4) 
+ {% highlight %}generate_array(4) 
 
 获得：
 
@@ -41,9 +41,9 @@ generate_array(5)
   [5,5,5,5,5]
 ]
 
-</pre> 
+{% endhighlight %} 
 </blockquote> 
-<pre><code class="language-html">&lt;body&gt;
+{% highlight %}<code class="language-html">&lt;body&gt;
   &lt;script&gt;
     var myarr=new Array(); //先声明一维
       for(var i=0;i&lt;2;i++){ //一维长度为2

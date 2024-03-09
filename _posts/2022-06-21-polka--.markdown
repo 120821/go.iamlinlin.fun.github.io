@@ -33,7 +33,7 @@ babel.config.js&nbsp; config&nbsp; db&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 <p>3.对应页面的js关键代码这样:&nbsp;</p>
 
 <pre class="hljs cs">
-<code><span class="hljs-comment">// 需要一个 </span><a class="polka_connect"><span class="hljs-comment">polka sign up</span></a>
+{% highlight %}<span class="hljs-comment">// 需要一个 </span><a class="polka_connect"><span class="hljs-comment">polka sign up</span></a>
 document.querySelector(<span class="hljs-string">&#39;a.polka_connect&#39;</span>).addEventListener(<span class="hljs-string">&#39;click&#39;</span>, <span class="hljs-keyword">async</span> () =&gt; {
   <span class="hljs-comment">// 启动polka 钱包</span>
   <span class="hljs-keyword">const</span> extensions = <span class="hljs-keyword">await</span> polka.web3Enable(window.location.hostname);

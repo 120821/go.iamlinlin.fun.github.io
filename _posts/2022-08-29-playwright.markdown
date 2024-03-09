@@ -8,8 +8,8 @@ categories:
 
 <p>安装：</p>
 
-<pre>
-<code>npm：
+{% highlight %}
+{% highlight %}npm：
 npm init playwright@latest
 yarn:
 yarn install playwright{% endhighlight %}
@@ -32,8 +32,8 @@ yarn install playwright{% endhighlight %}
 
 <p>Playwright 将下载所需的浏览器并创建以下文件:</p>
 
-<pre>
-<code>playwright.config.ts
+{% highlight %}
+{% highlight %}playwright.config.ts
 
 package.js
 
@@ -49,8 +49,8 @@ tests-examples/
 
 <p>默认情况下，测试将在所有 3 个浏览器上运行，chrome、firefox 和 webkit，使用 3 个 worker。&nbsp; 这可以在 playwright.config 文件中进行配置。&nbsp; 测试以无头模式运行，这意味着在运行测试时不会打开任何浏览器。&nbsp; 测试结果和测试日志将显示在终端中。</p>
 
-<pre>
-<code>npx playwright test
+{% highlight %}
+{% highlight %}npx playwright test
 {% endhighlight %}
 
 <p>&nbsp;请参阅关于<a href="https://playwright.dev/docs/running-tests">运行测试的文档</a>，以了解有关在 headed 模式下运行测试、运行多个测试、运行特定测试等的更多信息。</p>

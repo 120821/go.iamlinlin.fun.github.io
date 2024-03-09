@@ -7,7 +7,7 @@ categories:
 
                     <p>与普通的crud一样，增加 route controller view即可</p> 
 <p>在书写controller的 时候注意需要什么逻辑，可以进行注释，然后在书写 ，注意语法，参数的变动，URL的跳转。注意这里的编辑，不要根据id进行，因为根据id的话，别人也可以修改自己的，只能根据正确的用户进行判断。</p> 
-<pre><code class="language-ruby">class ManagerPasswordsController &lt; ApplicationController
+{% highlight %}<code class="language-ruby">class ManagerPasswordsController &lt; ApplicationController
   before_action :authenticate_manager!
   before_action :save_log
 
@@ -37,7 +37,7 @@ categories:
 end
 ~    {% endhighlight %} 
 <p>在routes文件增加路由，需要的仅仅是编辑和更新页面，因为密码页面不需要显示，密码都是在数据库加密显示的，显示也不起作用。</p> 
-<pre><code class="language-ruby">resources :manager_passwords do
+{% highlight %}<code class="language-ruby">resources :manager_passwords do
  11     collection do
  12       get :edit_password
  13       post :update_password
@@ -45,7 +45,7 @@ end
  15   end
 {% endhighlight %} 
 <p>视图页面就是普通的页面，注意是post不是put，还有就是form表单的首行，地址要写好。</p> 
-<pre><code class="language-html">&lt;h3&gt;修改密码&lt;/h3&gt;
+{% highlight %}<code class="language-html">&lt;h3&gt;修改密码&lt;/h3&gt;
 &lt;%= form_tag update_password_manager_passwords_path(id: @manager.id), method: 'post' do %&gt;
   &lt;p&gt;原密码：&lt;%= password_field_tag :old_password, '', class: 'form-control', style: 'display: inline; width: 200px' %&gt;&lt;/p&gt;
   &lt;p&gt;新密码：&lt;%= password_field_tag :new_password, '', class: 'form-control', style: 'display: inline; width: 200px' %&gt;&lt;/p&gt;

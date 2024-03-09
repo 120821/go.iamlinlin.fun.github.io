@@ -12,13 +12,13 @@ https://stackoverflow.com/questions/17598996/sass-use-variables-across-multiple-
 <span class="hljs-keyword">@use</span> <span class="hljs-string">&#39;gallery&#39;</span>;
 {% endhighlight %}
 
-<p><code>_variables.scss</code>:</p>
+<p>{% highlight %}_variables.scss{% endhighlight %}:</p>
 
 <pre class="lang-css s-code-block">
 <code class="hljs language-css">$primary: <span class="hljs-number">#ffffff</span>;
 {% endhighlight %}
 
-<p><code>_gallery.scss</code>:</p>
+<p>{% highlight %}_gallery.scss{% endhighlight %}:</p>
 
 <pre class="default s-code-block">
 <code class="hljs language-php"><span class="hljs-comment">#gallery {</span>

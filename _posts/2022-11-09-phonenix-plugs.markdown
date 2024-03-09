@@ -20,9 +20,9 @@ end{% endhighlight %}
 
 <p>示例：</p>
 
-<p>修改 <code class="inline">lib/hello_web/endpoint.ex</code></p>
+<p>修改 <code class="inline">lib/hello_web/endpoint.ex{% endhighlight %}</p>
 
-<p><code>内容：</code></p>
+<p>{% highlight %}内容：{% endhighlight %}</p>
 
 {% highlight %}defmodule HelloWeb.Endpoint do<br />
 &nbsp; ...

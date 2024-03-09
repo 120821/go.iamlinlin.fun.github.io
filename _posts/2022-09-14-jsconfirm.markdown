@@ -6,13 +6,13 @@ categories:
 ---
 <p>视图页面：</p>
 
-<pre>
-<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;disConnect()&quot;&gt;Disconnect&lt;/a&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;disConnect()&quot;&gt;Disconnect&lt;/a&gt;{% endhighlight %}
 
-<p><code>js代码：</code></p>
+<p>{% highlight %}js代码：{% endhighlight %}</p>
 
-<pre>
-<code>/**
+{% highlight %}
+{% highlight %}/**
 
 &nbsp;* 断开钱包
 

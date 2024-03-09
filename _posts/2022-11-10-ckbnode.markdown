@@ -8,35 +8,35 @@ categories:
 
 <p>（1）启动postgres</p>
 
-<pre>
-<code>docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres{% endhighlight %}
+{% highlight %}
+{% highlight %}docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres{% endhighlight %}
 
 <p>（2）查看postgres的id</p>
 
-<pre>
-<code>sudo docker ps -a{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo docker ps -a{% endhighlight %}
 
 <p>（3）查看postgres的ip：</p>
 
-<pre>
-<code>sudo docker inspect f1a6a66855f5，修改配置文件的host{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo docker inspect f1a6a66855f5，修改配置文件的host{% endhighlight %}
 
 <p>2.运行节点：</p>
 
-<pre>
-<code>./ckb run{% endhighlight %}
+{% highlight %}
+{% highlight %}./ckb run{% endhighlight %}
 
 <p>3.运行redis：</p>
 
-<pre>
-<code>redis-server{% endhighlight %}
+{% highlight %}
+{% highlight %}redis-server{% endhighlight %}
 
 <p>抓取数据</p>
 
-<pre>
-<code>ruby lib/ckb_block_node_processor.rb{% endhighlight %}
+{% highlight %}
+{% highlight %}ruby lib/ckb_block_node_processor.rb{% endhighlight %}
 
-<p><code>4.j进入container</code></p>
+<p>{% highlight %}4.j进入container{% endhighlight %}</p>
 
 <p>docker exec -it 4153c8a7c46f bash</p>
 

@@ -16,8 +16,8 @@ categories:
 
 <p>例如：</p>
 
-<pre>
-<code>&lt;span class=&quot;inline&quot;&gt;hello&lt;/span&gt;
+{% highlight %}
+{% highlight %}&lt;span class=&quot;inline&quot;&gt;hello&lt;/span&gt;
 &lt;span class=&quot;inline&quot;&gt;world&lt;/span&gt;
 &lt;div class=&quot;block&quot;&gt;
   hello world
@@ -25,8 +25,8 @@ categories:
 
 <p>span是内联元素，div是块级元素，增加边框：</p>
 
-<pre>
-<code>.inline{
+{% highlight %}
+{% highlight %}.inline{
     border:1px solid #ccc;
 }
 
@@ -41,8 +41,8 @@ categories:
 
 <p>就算是在内联元素的外部增加元素，也还是会用边框分割：</p>
 
-<pre>
-<code>&lt;span class=&quot;inline&quot;&gt;hello&lt;/span&gt;
+{% highlight %}
+{% highlight %}&lt;span class=&quot;inline&quot;&gt;hello&lt;/span&gt;
 &lt;span class=&quot;inline&quot;&gt;world&lt;/span&gt;
 hello
 &lt;div class=&quot;block&quot;&gt;

@@ -10,18 +10,18 @@ categories:
 
 <p>For the full html of the page, this is what you need:</p>
 
-<pre>
-<code>const html = await page.content(){% endhighlight %}
+{% highlight %}
+{% highlight %}const html = await page.content(){% endhighlight %}
 
 <p>To get the inner text of the div, this should work:</p>
 
-<pre>
-<code>const pageText = await page.innerText(&#39;div&#39;){% endhighlight %}
+{% highlight %}
+{% highlight %}const pageText = await page.innerText(&#39;div&#39;){% endhighlight %}
 
 <p>测试：</p>
 
-<pre>
-<code>const { test, expect } = require(&#39;@playwright/test&#39;);
+{% highlight %}
+{% highlight %}const { test, expect } = require(&#39;@playwright/test&#39;);
 test(&#39;localhost locator&#39;, async ({ page }) =&gt; {
 
 &nbsp; await&nbsp; page.goto(&quot;https://www.tafsirweb.com/3739-surat-yusuf-ayat-1.html&quot;)

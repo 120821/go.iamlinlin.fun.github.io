@@ -10,7 +10,7 @@ categories:
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="n">enable</span> <span class="ss">:sessions</span>
+{% highlight %}<span class="n">enable</span> <span class="ss">:sessions</span>
 
 <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
   <span class="s2">&quot;value = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">session</span><span class="p">[</span><span class="ss">:value</span><span class="p">].</span><span class="nf">inspect</span>
@@ -21,15 +21,15 @@ categories:
 <span class="k">end</span>
 {% endhighlight %}
 
-<p><code>创建session秘钥</code></p>
+<p>{% highlight %}创建session秘钥{% endhighlight %}</p>
 
 <pre class="highlight">
-<code>ruby -e &quot;require &#39;securerandom&#39;; puts SecureRandom.hex(64)&quot;{% endhighlight %}
+{% highlight %}ruby -e &quot;require &#39;securerandom&#39;; puts SecureRandom.hex(64)&quot;{% endhighlight %}
 
 <p>使用 sysrandom gem 更喜欢使用系统 RNG 工具来生成随机值，而不是 MRI Ruby 当前默认使用的用户空间 OpenSSL：</p>
 
 <pre class="highlight">
-<code>$ gem install sysrandom
+{% highlight %}$ gem install sysrandom
 Building native extensions.  This could take a while...
 Successfully installed sysrandom-1.x
 1 gem installed

@@ -6,7 +6,7 @@ categories:
 ---
 <p>https://solidity-by-example.org/hashing/</p>
 
-<p><code>keccak256</code> computes the Keccak-256 hash of the input.</p>
+<p>{% highlight %}keccak256{% endhighlight %} computes the Keccak-256 hash of the input.</p>
 
 <p>Some use cases are:</p>
 
@@ -16,7 +16,7 @@ categories:
 	<li>Compact cryptographic signature (by signing the hash instead of a larger input)</li>
 </ul>
 
-<p><code>keccak256</code><font style="vertical-align:inherit">计算输入的 Keccak-256 哈希。 </font></p>
+<p>{% highlight %}keccak256{% endhighlight %}<font style="vertical-align:inherit">计算输入的 Keccak-256 哈希。 </font></p>
 
 <p><font style="vertical-align:inherit">一些用例是： </font></p>
 

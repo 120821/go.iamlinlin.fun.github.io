@@ -18,23 +18,23 @@ categories:
 
 <p>Then create a normal user, set a password, then use that user to work.</p>
 
-<p><code>create user &#39;user&#39;@&#39;localhost&#39; identified by &#39;user1234&#39;;<br />
-grant all on your_database.* to &#39;user&#39;@&#39;localhost&#39;;</code></p>
+<p>{% highlight %}create user &#39;user&#39;@&#39;localhost&#39; identified by &#39;user1234&#39;;<br />
+grant all on your_database.* to &#39;user&#39;@&#39;localhost&#39;;{% endhighlight %}</p>
 
-<p><code>（例如： grant all on first_database.* to &#39;user&#39;@&#39;localhost&#39;;）</code></p>
+<p>{% highlight %}（例如： grant all on first_database.* to &#39;user&#39;@&#39;localhost&#39;;）{% endhighlight %}</p>
 
-<p><code>(grant all on first_database._test* to &#39;user&#39;@&#39;localhost&#39;;)<br />
-select host, user from mysql.user;</code></p>
+<p>{% highlight %}(grant all on first_database._test* to &#39;user&#39;@&#39;localhost&#39;;)<br />
+select host, user from mysql.user;{% endhighlight %}</p>
 
-<p><code>Then try to access:</code></p>
+<p>{% highlight %}Then try to access:{% endhighlight %}</p>
 
-<p><code>mysql -u user -puser1234</code></p>
+<p>{% highlight %}mysql -u user -puser1234{% endhighlight %}</p>
 
 <p>然后在config/database.yml修改user和password就可以migrate了</p>
 
-<p><code>user: user</code></p>
+<p>{% highlight %}user: user{% endhighlight %}</p>
 
-<p><code>password: user1234</code></p>
+<p>{% highlight %}password: user1234{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

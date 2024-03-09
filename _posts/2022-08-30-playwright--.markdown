@@ -8,13 +8,13 @@ categories:
 
 <p>创建项目：</p>
 
-<pre>
-<code>yarn create playwright{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn create playwright{% endhighlight %}
 
 <p>运行：</p>
 
-<pre>
-<code>yarn playwright test（运行端到端测试。）
+{% highlight %}
+{% highlight %}yarn playwright test（运行端到端测试。）
 &nbsp; yarn playwright test --project=chromium（仅在桌面Chrome上运行测试。）
 &nbsp; yarn playwright test example（在特定文件中运行测试。）
 &nbsp; yarn playwright test --debug（在调试模式下运行测试。）
@@ -34,11 +34,11 @@ Inside that directory, you can run several commands:
 We suggest that you begin by typing:
 {% endhighlight %}
 
-<pre>
-<code>&nbsp;&nbsp;&nbsp; yarn playwright test{% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp;&nbsp;&nbsp; yarn playwright test{% endhighlight %}
 
-<pre>
-<code>And check out the following files:
+{% highlight %}
+{% highlight %}And check out the following files:
 
 &nbsp; - ./tests/example.spec.ts - Example end-to-end test
 
@@ -52,8 +52,8 @@ Done in 29.67s.{% endhighlight %}
 
 <p>抓取内容（方法）：<a href="https://playwright.bootcss.com/docs/assertions">https://playwright.bootcss.com/docs/assertions</a></p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
   const content = await page.textContent(&#39;nav:first-child&#39;);
 
   expect(content).toBe(&#39;home&#39;);
@@ -61,8 +61,8 @@ Done in 29.67s.{% endhighlight %}
 
 <p>修改内容：（更换URL等）（tests/example.spec.ts）</p>
 
-<pre>
-<code>import { test, expect } from &#39;@playwright/test&#39;;
+{% highlight %}
+{% highlight %}import { test, expect } from &#39;@playwright/test&#39;;
 test(&#39;get page content&#39;, async ({ page }) =&gt; {
 
   &nbsp; //await page.goto(&#39;https://playwright.dev/&#39;);

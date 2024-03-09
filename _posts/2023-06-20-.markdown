@@ -8,10 +8,10 @@ categories:
 
 <p>可以使用正则表达式，如下所示：</p>
 
-<pre>
-<code>string = &quot;200吨&quot;
+{% highlight %}
+{% highlight %}string = &quot;200吨&quot;
 ton = string.match(/\p{Han}+/)[0]
 puts ton # 输出：吨{% endhighlight %}
 
-<p>这里使用了 Unicode 字符属性 <code>\p{Han}</code> 匹配汉字，加上 <code>+</code> 表示匹配一个或多个汉字。最后 <code>[0]</code> 取出匹配到的第一个汉字。</p>
+<p>这里使用了 Unicode 字符属性 {% highlight %}\p{Han}{% endhighlight %} 匹配汉字，加上 {% highlight %}+{% endhighlight %} 表示匹配一个或多个汉字。最后 {% highlight %}[0]{% endhighlight %} 取出匹配到的第一个汉字。</p>
 

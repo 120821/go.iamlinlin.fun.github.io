@@ -19,18 +19,18 @@ Ubuntu 22.04.1 LTS \n \l</p>
 
 <p>然后安装</p>
 
-<pre>
-<code>sudo dpkg -i fcitx-baidupinyin.deb{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo dpkg -i fcitx-baidupinyin.deb{% endhighlight %}
 
 <p>3，如果安装出现错误尝试：</p>
 
-<pre>
-<code>sudo apt update{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt update{% endhighlight %}
 
 <p>提示：</p>
 
-<pre>
-<code>sudo dpkg -i fcitx-baidupinyin.deb
+{% highlight %}
+{% highlight %}sudo dpkg -i fcitx-baidupinyin.deb
 
 Selecting previously unselected package fcitx-baidupinyin:amd64.
 
@@ -55,13 +55,13 @@ Errors were encountered while processing:
 
 <p>尝试解决：</p>
 
-<pre>
-<code>sudo apt-get install qml-<span style="color:#dcc6e0">module</span>-qtquick-controls{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get install qml-<span style="color:#dcc6e0">module</span>-qtquick-controls{% endhighlight %}
 
 <p>如果提示：</p>
 
-<pre>
-<code>Reading package lists... Done
+{% highlight %}
+{% highlight %}Reading package lists... Done
 
 Building dependency tree... Done
 
@@ -85,13 +85,13 @@ E: Unmet dependencies. Try &#39;apt --fix-broken install&#39; with no packages (
 
 <p>解决：</p>
 
-<pre>
-<code>sudo apt --fix-broken install{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt --fix-broken install{% endhighlight %}
 
 <p>然后继续安装：</p>
 
-<pre>
-<code>&nbsp;sudo dpkg -i fcitx-baidupinyin.deb
+{% highlight %}
+{% highlight %}&nbsp;sudo dpkg -i fcitx-baidupinyin.deb
 
 (Reading database ... 417167 files and directories currently installed.)
 

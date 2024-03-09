@@ -12,16 +12,16 @@ Cannot resolve symbol &#39;Html&#39;</p>
 
 <p>1.在配置文件里增加：</p>
 
-<p>在你的模块级别的 <code>build.gradle</code> 文件中</p>
+<p>在你的模块级别的 {% highlight %}build.gradle{% endhighlight %} 文件中</p>
 
-<pre>
-<code>implementation <span style="color:#abe338">&#39;androidx.appcompat:appcompat:1.3.1&#39;</span>
+{% highlight %}
+{% highlight %}implementation <span style="color:#abe338">&#39;androidx.appcompat:appcompat:1.3.1&#39;</span>
 implementation <span style="color:#abe338">&#39;androidx.core:core-ktx:1.6.0&#39;</span>{% endhighlight %}
 
 <p>在.java文件里增加：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">import</span> android.os.Build;
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">import</span> android.os.Build;
 <span style="color:#dcc6e0">import</span> android.text.Html;{% endhighlight %}
 
 <p>2.在顶部菜单里进行rebuild</p>

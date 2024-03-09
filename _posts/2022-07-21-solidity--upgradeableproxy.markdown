@@ -8,7 +8,7 @@ categories:
 
 <p>Example of upgradeable proxy contract. Never use this in production.</p>
 
-<p>This example shows how to use <code>delegatecall</code> and return data when <code>fallback</code> is called.</p>
+<p>This example shows how to use {% highlight %}delegatecall{% endhighlight %} and return data when {% highlight %}fallback{% endhighlight %} is called.</p>
 
 <p>可升级代理合约的示例。&nbsp; 永远不要在生产中使用它。</p>
 

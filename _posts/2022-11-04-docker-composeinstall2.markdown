@@ -26,14 +26,14 @@ categories:
 
 <p>delete old docker-compose file</p>
 
-<p>wget<code> https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64</code></p>
+<p>wget{% highlight %} https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64{% endhighlight %}</p>
 
 <p>sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose</p>
 
 <p>chmod +x /usr/local/bin/docker-compose</p>
 
-<p><code>docker-compose --version<br />
-Docker Compose version v2.5.0</code></p>
+<p>{% highlight %}docker-compose --version<br />
+Docker Compose version v2.5.0{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

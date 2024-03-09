@@ -31,7 +31,7 @@ categories:
 
 <p>完整代码：</p>
 
-<pre>
+{% highlight %}
 <code class="language-go hljs"><span class="hljs-keyword">package</span> main
 
 <span class="hljs-keyword">import</span> (
@@ -56,7 +56,7 @@ categories:
 	r.Run(<span class="hljs-string">&quot;:8080&quot;</span>)
 }{% endhighlight %}
 
-<p><code>运行：</code>启动 Gin Web 服务，我们来访问地址 <code>http://localhost:8080/</code>testJSON</p>
+<p>{% highlight %}运行：{% endhighlight %}启动 Gin Web 服务，我们来访问地址 {% highlight %}http://localhost:8080/{% endhighlight %}testJSON</p>
 
 <p><img height="303" src="/uploads/ckeditor/pictures/607/image-20221024172853-1.png" width="1519" /></p>
 

@@ -20,5 +20,5 @@ categories:
 <span class="hljs-built_in">export</span> HTTP_PROXY=<span class="hljs-string">&quot;http://192.168.10.3:8080&quot;</span>
 <span class="hljs-built_in">export</span> HTTPS_PROXY=<span class="hljs-string">&quot;http://192.168.10.3:8080&quot;</span>
 <span class="hljs-built_in">export</span> http_proxy=<span class="hljs-string">&quot;http://192.168.10.3:8080&quot;</span>
-<span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://192.168.10.3:8080&quot;</span></pre>
+<span class="hljs-built_in">export</span> https_proxy=<span class="hljs-string">&quot;http://192.168.10.3:8080&quot;</span>{% endhighlight %}
 

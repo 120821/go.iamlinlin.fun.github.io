@@ -8,8 +8,8 @@ categories:
 
 <p>1.MySQL：</p>
 
-<pre>
-<code><span class="line"><span class="keyword">import</span> (</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  <span class="string">&quot;gorm.io/driver/mysql&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/gorm&quot;</span></span>
 <span class="line">)</span>
@@ -24,8 +24,8 @@ categories:
 
 <p>MySQL Driver provides a <a href="https://github.com/go-gorm/mysql" rel="noopener" target="_blank">few advanced configurations</a> which can be used during initialization, for example:</p>
 
-<pre>
-<code><span class="line">db, err := gorm.Open(mysql.New(mysql.Config{</span>
+{% highlight %}
+{% highlight %}<span class="line">db, err := gorm.Open(mysql.New(mysql.Config{</span>
 <span class="line">  DSN: <span class="string">&quot;gorm:gorm@tcp(127.0.0.1:3306)/gorm?charset=utf8&amp;parseTime=True&amp;loc=Local&quot;</span>, <span class="comment">// data source name</span></span>
 <span class="line">  DefaultStringSize: <span class="number">256</span>, <span class="comment">// default size for string fields</span></span>
 <span class="line">  DisableDatetimePrecision: <span class="literal">true</span>, <span class="comment">// disable datetime precision, which not supported before MySQL 5.6</span></span>
@@ -35,13 +35,13 @@ categories:
 <span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
 <p><strong>NOTE:</strong><br />
-To handle <code>time.Time</code> correctly, you need to include <code>parseTime</code> as a parameter. (<a href="https://github.com/go-sql-driver/mysql#parameters" rel="noopener" target="_blank">more parameters</a>)<br />
-To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to <code>charset=utf8mb4</code>. See <a href="https://mathiasbynens.be/notes/mysql-utf8mb4" rel="noopener" target="_blank">this article</a> for a detailed explanation</p>
+To handle {% highlight %}time.Time{% endhighlight %} correctly, you need to include {% highlight %}parseTime{% endhighlight %} as a parameter. (<a href="https://github.com/go-sql-driver/mysql#parameters" rel="noopener" target="_blank">more parameters</a>)<br />
+To fully support UTF-8 encoding, you need to change {% highlight %}charset=utf8{% endhighlight %} to {% highlight %}charset=utf8mb4{% endhighlight %}. See <a href="https://mathiasbynens.be/notes/mysql-utf8mb4" rel="noopener" target="_blank">this article</a> for a detailed explanation</p>
 
 <p>GORM 允许使用 DriverName 选项自定义 MySQL 驱动程序，例如：</p>
 
-<pre>
-<code><span class="line"><span class="keyword">import</span> (</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  _ <span class="string">&quot;example.com/my_mysql_driver&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/driver/mysql&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/gorm&quot;</span></span>
@@ -68,8 +68,8 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 
 <p><span class="line">2.postgres连接：</span></p>
 
-<pre>
-<code><span class="line"><span class="keyword">import</span> (</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  <span class="string">&quot;gorm.io/driver/postgres&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/gorm&quot;</span></span>
 <span class="line">)</span>
@@ -81,17 +81,17 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 
 <p>We are using <a href="https://github.com/jackc/pgx" rel="noopener" target="_blank">pgx</a> as postgres&rsquo;s database/sql driver, it enables prepared statement cache by default, to disable it:</p>
 
-<pre>
-<code><span class="line"><span class="comment">// https://github.com/go-gorm/postgres</span></span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="comment">// https://github.com/go-gorm/postgres</span></span>
 <span class="line">db, err := gorm.Open(postgres.New(postgres.Config{</span>
 <span class="line">  DSN: <span class="string">&quot;user=gorm password=gorm dbname=gorm port=9920 sslmode=disable TimeZone=Asia/Shanghai&quot;</span>,</span>
 <span class="line">  PreferSimpleProtocol: <span class="literal">true</span>, <span class="comment">// disables implicit prepared statement usage</span></span>
 <span class="line">}), &amp;gorm.Config{})</span>{% endhighlight %}
 
-<p><code>GORM 允许使用 DriverName 选项自定义 PostgreSQL 驱动程序，例如：</code></p>
+<p>{% highlight %}GORM 允许使用 DriverName 选项自定义 PostgreSQL 驱动程序，例如：{% endhighlight %}</p>
 
-<pre>
-<code><span class="line"><span class="keyword">import</span> (</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  _ <span class="string">&quot;github.com/GoogleCloudPlatform/cloudsql-proxy/proxy/dialers/postgres&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/gorm&quot;</span></span>
 <span class="line">)</span>
@@ -103,10 +103,10 @@ To fully support UTF-8 encoding, you need to change <code>charset=utf8</code> to
 
 <p><span class="line">对于已经存在的数据库的连接：</span></p>
 
-<p><code>GORM allows to initialize *gorm.DB with an existing database connection</code></p>
+<p>{% highlight %}GORM allows to initialize *gorm.DB with an existing database connection{% endhighlight %}</p>
 
-<pre>
-<code><span class="line"><span class="keyword">import</span> (</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">import</span> (</span>
 <span class="line">  <span class="string">&quot;database/sql&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/driver/postgres&quot;</span></span>
 <span class="line">  <span class="string">&quot;gorm.io/gorm&quot;</span></span>

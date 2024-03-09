@@ -9,7 +9,7 @@ categories:
 <p>Linux ps （英文全拼：process status）命令用于显示当前进程的状态，类似于 windows 的任务管理器</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">ps </span><span class="pun">[</span><span class="pln">options</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">help</span><span class="pun">]</span></pre>
+<span class="pln">ps </span><span class="pun">[</span><span class="pln">options</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[--</span><span class="pln">help</span><span class="pun">]</span>{% endhighlight %}
 
 <ul>
 	<li>ps 的参数非常多, 在此仅列出几个常用的参数并大略介绍含义</li>
@@ -21,7 +21,7 @@ categories:
 	<p>au(x) 输出格式 :</p>
 
 	<pre class="prettyprint prettyprinted" style="">
-<span class="pln">USER PID </span><span class="pun">%</span><span class="pln">CPU </span><span class="pun">%</span><span class="pln">MEM VSZ RSS TTY STAT START TIME COMMAND</span></pre>
+<span class="pln">USER PID </span><span class="pun">%</span><span class="pln">CPU </span><span class="pun">%</span><span class="pln">MEM VSZ RSS TTY STAT START TIME COMMAND</span>{% endhighlight %}
 	</li>
 </ul>
 
@@ -56,28 +56,28 @@ categories:
 <p>查找指定进程格式：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">ps </span><span class="pun">-</span><span class="pln">ef </span><span class="pun">|</span><span class="pln"> grep </span><span class="pun">进程关键字</span></pre>
+<span class="pln">ps </span><span class="pun">-</span><span class="pln">ef </span><span class="pun">|</span><span class="pln"> grep </span><span class="pun">进程关键字</span>{% endhighlight %}
 
 <p><img height="262" src="/uploads/ckeditor/pictures/267/image-20220818110544-1.png" width="1322" /></p>
 
 <p>显示进程信息：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="com">ps -A </span></pre>
+<span class="com">ps -A </span>{% endhighlight %}
 
 <p><img height="299" src="/uploads/ckeditor/pictures/268/image-20220818110635-2.png" width="636" /></p>
 
 <p>显示指定用户信息</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="com"># ps -u root //显示root进程用户信息</span></pre>
+<span class="com"># ps -u root //显示root进程用户信息</span>{% endhighlight %}
 
 <p><img height="206" src="/uploads/ckeditor/pictures/269/image-20220818110745-3.png" width="628" /></p>
 
 <p>显示所有进程信息，连同命令行</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="com"># ps -ef //显示所有命令，连带命令行</span></pre>
+<span class="com"># ps -ef //显示所有命令，连带命令行</span>{% endhighlight %}
 
 <p><img height="280" src="/uploads/ckeditor/pictures/270/image-20220818110821-4.png" width="917" /></p>
 

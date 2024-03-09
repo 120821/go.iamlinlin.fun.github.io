@@ -10,26 +10,26 @@ categories:
 
 <p>1.首先安装:</p>
 
-<pre>
-<code>npm install d3 topojson{% endhighlight %}
+{% highlight %}
+{% highlight %}npm install d3 topojson{% endhighlight %}
 
-<p><code>或者使用</code></p>
+<p>{% highlight %}或者使用{% endhighlight %}</p>
 
-<pre>
-<code>yarn add d3 topojson{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn add d3 topojson{% endhighlight %}
 
-<p><code>2.</code>react中引入:</p>
+<p>{% highlight %}2.{% endhighlight %}react中引入:</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
 import china from &#39;./china.json&#39;; // 导入拓扑数据
 {% endhighlight %}
 
 <p dir="auto">3.同样，创建钩子:</p>
 
-<pre>
-<code>const ChinaMap = () =&gt; {
+{% highlight %}
+{% highlight %}const ChinaMap = () =&gt; {
   const svgRef = useRef(null);
 
   useEffect(() =&gt; {
@@ -59,7 +59,7 @@ import china from &#39;./china.json&#39;; // 导入拓扑数据
   return &lt;svg ref={svgRef} width=&quot;1000&quot; height=&quot;1000&quot; /&gt;;
 };{% endhighlight %}
 
-<p>上面的例子里使用了 D3 的 <code>select</code> 方法选择 SVG 元素，创建一个地理投影 <code>projection</code>用于将地理坐标转换为屏幕坐标。 然后，我们创建一个路径生成器 <code>pathGenerator</code>，它将根据地理投影生成路径</p>
+<p>上面的例子里使用了 D3 的 {% highlight %}select{% endhighlight %} 方法选择 SVG 元素，创建一个地理投影 {% highlight %}projection{% endhighlight %}用于将地理坐标转换为屏幕坐标。 然后，我们创建一个路径生成器 {% highlight %}pathGenerator{% endhighlight %}，它将根据地理投影生成路径</p>
 
 <p>多写几个例子应该会熟悉一点。</p>
 
@@ -69,8 +69,8 @@ import china from &#39;./china.json&#39;; // 导入拓扑数据
 <div class="Box Box--responsive js-code-block-container js-code-nav-container js-tagsearch-file md" id="readme">
 <div class="Box-body pb-5 px-5">
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import ChinaMap from &#39;./ChinaMap&#39;;
 
 const App = () =&gt; {

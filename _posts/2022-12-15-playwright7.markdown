@@ -14,8 +14,8 @@ categories:
 
 <p>我们将创建一个 PlaywrightDevPage 帮助类来封装 playwright.dev 页面上的常用操作。&nbsp; 在内部，它将使用页面对象。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// playwright-dev-page.js</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// playwright-dev-page.js</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">{</span> expect <span style="color:#393a34">}</span> <span style="color:#d73a49">=</span> <span style="color:#8250df">require</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;@playwright/test&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
 <span style="color:#393a34">exports<span style="color:#393a34">.</span>PlaywrightDevPage <span style="color:#d73a49">=</span> <span style="color:#cf222e">class</span> <span style="color:#116329">PlaywrightDevPage</span> <span style="color:#393a34">{</span>
@@ -48,8 +48,8 @@ categories:
 
 <p>现在我们可以在我们的测试中使用 PlaywrightDevPage 类。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// example.spec.js</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// example.spec.js</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">{</span> test<span style="color:#393a34">,</span> expect <span style="color:#393a34">}</span> <span style="color:#d73a49">=</span> <span style="color:#8250df">require</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;@playwright/test&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">{</span> PlaywrightDevPage <span style="color:#393a34">}</span> <span style="color:#d73a49">=</span> <span style="color:#8250df">require</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;./playwright-dev-page&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>

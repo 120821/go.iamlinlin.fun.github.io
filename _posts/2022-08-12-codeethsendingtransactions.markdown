@@ -6,16 +6,16 @@ categories:
 ---
 <p><a href="https://docs.metamask.io/guide/sending-transactions.html">https://docs.metamask.io/guide/sending-transactions.html</a></p>
 
-<p><font style="vertical-align:inherit">交易是区块链上的正式行动。 它们总是在 MetaMask 中通过调用 </font><code>eth_sendTransaction</code><font style="vertical-align:inherit">方法。 它们可能涉及简单的以太币发送，可能导致发送代币、创建新的智能合约或以多种方式更改区块链上的状态。 它们总是由来自 </font><em><font style="vertical-align:inherit">外部帐户 </font></em><font style="vertical-align:inherit">或简单的密钥对启动。 </font></p>
+<p><font style="vertical-align:inherit">交易是区块链上的正式行动。 它们总是在 MetaMask 中通过调用 </font>{% highlight %}eth_sendTransaction{% endhighlight %}<font style="vertical-align:inherit">方法。 它们可能涉及简单的以太币发送，可能导致发送代币、创建新的智能合约或以多种方式更改区块链上的状态。 它们总是由来自 </font><em><font style="vertical-align:inherit">外部帐户 </font></em><font style="vertical-align:inherit">或简单的密钥对启动。 </font></p>
 
-<p><font style="vertical-align:inherit">在 MetaMask 中，使用 </font><code>ethereum.request</code><font style="vertical-align:inherit">直接方法，发送交易将涉及组成这样的选项对象： </font></p>
+<p><font style="vertical-align:inherit">在 MetaMask 中，使用 </font>{% highlight %}ethereum.request{% endhighlight %}<font style="vertical-align:inherit">直接方法，发送交易将涉及组成这样的选项对象： </font></p>
 
 <p><font style="vertical-align:inherit">html:</font></p>
 
 <section class="tabs-component-panel" id="html" role="tabpanel" style="">
 <div class="language-html extra-class">
 <pre class="language-html">
-<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>enableEthereumButton btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Enable Ethereum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+{% highlight %}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>enableEthereumButton btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Enable Ethereum<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sendEthButton btn<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Send Eth<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 {% endhighlight %}
 
@@ -25,7 +25,7 @@ categories:
 
 <div class="language-javascript extra-class">
 <pre class="language-javascript">
-<code><span class="token keyword">const</span> transactionParameters <span class="token operator">=</span> <span class="token punctuation">{</span>
+{% highlight %}<span class="token keyword">const</span> transactionParameters <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">nonce</span><span class="token operator">:</span> <span class="token string">&#39;0x00&#39;</span><span class="token punctuation">,</span> <span class="token comment">// ignored by MetaMask</span>
   <span class="token literal-property property">gasPrice</span><span class="token operator">:</span> <span class="token string">&#39;0x09184e72a000&#39;</span><span class="token punctuation">,</span> <span class="token comment">// customizable by user during MetaMask confirmation.</span>
   <span class="token literal-property property">gas</span><span class="token operator">:</span> <span class="token string">&#39;0x2710&#39;</span><span class="token punctuation">,</span> <span class="token comment">// customizable by user during MetaMask confirmation.</span>
@@ -45,12 +45,12 @@ categories:
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 {% endhighlight %}
 
-<p><code><span class="token punctuation">js:</span></code></p>
+<p>{% highlight %}<span class="token punctuation">js:</span>{% endhighlight %}</p>
 
 <section class="tabs-component-panel" id="javascript" role="tabpanel" style="">
 <div class="language-javascript extra-class">
 <pre class="language-javascript">
-<code><span class="token keyword">const</span> ethereumButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&#39;.enableEthereumButton&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+{% highlight %}<span class="token keyword">const</span> ethereumButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&#39;.enableEthereumButton&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> sendEthButton <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&#39;.sendEthButton&#39;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token keyword">let</span> accounts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>

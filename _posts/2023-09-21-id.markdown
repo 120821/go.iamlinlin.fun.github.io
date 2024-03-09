@@ -8,8 +8,8 @@ categories:
 
 <p>2.简单的demo:</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -34,8 +34,8 @@ categories:
   map.setMapStyleV2({
     styleId: &#39;cc8f4d53a1c0cda26a1bb786686f8700&#39;
   });
-&lt;/script&gt;</code>
-</pre>
+&lt;/script&gt;{% endhighlight %}
+{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -8,13 +8,13 @@ categories:
 
 <p>引入link</p>
 
-<pre>
-<code>&nbsp;&nbsp; import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp;&nbsp; import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
 <p>然后在button处增加link</p>
 
-<pre>
-<code>&lt;Link to={`/view_calculation_results/`}&gt;
+{% highlight %}
+{% highlight %}&lt;Link to={`/view_calculation_results/`}&gt;
 
 &nbsp; &lt;Button type=&quot;primary&quot; style={{ marginRight: &#39;15px&#39; }}&gt;
 
@@ -28,8 +28,8 @@ categories:
 
 <p>首先写方法：类似这样：</p>
 
-<pre>
-<code>export default class CalculationViewResult extends Component {
+{% highlight %}
+{% highlight %}export default class CalculationViewResult extends Component {
 
 &nbsp; constructor(props) {
 
@@ -49,15 +49,15 @@ nbsp;&nbsp;&nbsp; this.state = {
 
 &nbsp;&nbsp;&nbsp; // 处理其他的逻辑，如果需要的话{% endhighlight %}
 
-<p><code>&nbsp;&nbsp;&nbsp; // 导航到参数详情页<br />
+<p>{% highlight %}&nbsp;&nbsp;&nbsp; // 导航到参数详情页<br />
 &nbsp;&nbsp;&nbsp; this.props.history.push(`/view_calculation_results/`);<br />
-&nbsp; }</code></p>
+&nbsp; }{% endhighlight %}</p>
 
 <p>然后在button里调用：</p>
 
-<p><code>&nbsp;&lt;Button type=&quot;primary&quot; onClick={() =&gt; this.handleViewClick(data.data.id)}&gt;<br />
+<p>{% highlight %}&nbsp;&lt;Button type=&quot;primary&quot; onClick={() =&gt; this.handleViewClick(data.data.id)}&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp; 查看参数<br />
-&lt;/Button&gt;</code></p>
+&lt;/Button&gt;{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

@@ -6,8 +6,8 @@ categories:
 ---
 <p>需要把yarn项目使用yarn启动，例如3000端口，需要把your_domain_or_ip,修改为域名或者ip, 例如192.168.187.133:3000</p>
 
-<pre>
-<code>server {
+{% highlight %}
+{% highlight %}server {
     listen <span style="color:#f5ab35">80</span>;
     server_name your_domain_or_ip;
 

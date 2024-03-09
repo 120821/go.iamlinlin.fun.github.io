@@ -89,9 +89,9 @@ library Array {<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
 
-<p><code>abi.encode</code> encodes data into <code>bytes</code>.</p>
+<p>{% highlight %}abi.encode{% endhighlight %} encodes data into {% highlight %}bytes{% endhighlight %}.</p>
 
-<p><code>abi.decode</code> decodes <code>bytes</code> back into data.</p>
+<p>{% highlight %}abi.decode{% endhighlight %} decodes {% highlight %}bytes{% endhighlight %} back into data.</p>
 
 <p>abi.encode 将数据编码为字节。</p>
 

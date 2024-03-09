@@ -18,8 +18,8 @@ categories:
 
 <p>安装完成就可以看到，需要的文件：package.json</p>
 
-<pre>
-<code>cat package.json
+{% highlight %}
+{% highlight %}cat package.json
 
 {
 

@@ -8,16 +8,16 @@ categories:
 
 <p>使用轮播图：</p>
 
-<pre>
-<code><span style="color:#ffcb6b">npm</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">install</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span>
+{% highlight %}
+{% highlight %}<span style="color:#ffcb6b">npm</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">install</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span>
 
 <em># or use yarn</em>
 <span style="color:#ffcb6b">yarn</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">add</span><span style="color:#a6accd"> </span><span style="color:#c3e88d">vue3-carousel</span>{% endhighlight %}
 
 <p>选择每页显示3个图：（把第二行的2.5修改为3即可，这里控制的是每页显示数据的多少）</p>
 
-<pre>
-<code><span style="color:#89ddff">&lt;</span><span style="color:#f07178">template</span><span style="color:#89ddff">&gt;</span>
+{% highlight %}
+{% highlight %}<span style="color:#89ddff">&lt;</span><span style="color:#f07178">template</span><span style="color:#89ddff">&gt;</span>
 <span style="color:#a6accd">  </span><span style="color:#89ddff">&lt;</span><span style="color:#f07178">Carousel</span><span style="color:#89ddff"> </span><span style="color:#c792ea">:items-to-show</span><span style="color:#89ddff">=</span><span style="color:#89ddff">&quot;</span><span style="color:#c3e88d">2.5</span><span style="color:#89ddff">&quot;</span><span style="color:#89ddff"> </span><span style="color:#c792ea">:wrap-around</span><span style="color:#89ddff">=</span><span style="color:#89ddff">&quot;</span><span style="color:#c3e88d">true</span><span style="color:#89ddff">&quot;</span><span style="color:#89ddff">&gt;</span>
 <span style="color:#a6accd">    </span><span style="color:#89ddff">&lt;</span><span style="color:#f07178">Slide</span><span style="color:#89ddff"> </span><span style="color:#c792ea">v-for</span><span style="color:#89ddff">=</span><span style="color:#89ddff">&quot;</span><span style="color:#c3e88d">slide in 10</span><span style="color:#89ddff">&quot;</span><span style="color:#89ddff"> </span><span style="color:#c792ea">:key</span><span style="color:#89ddff">=</span><span style="color:#89ddff">&quot;</span><span style="color:#c3e88d">slide</span><span style="color:#89ddff">&quot;</span><span style="color:#89ddff">&gt;</span>
 <span style="color:#a6accd">      </span><span style="color:#89ddff">&lt;</span><span style="color:#f07178">div</span><span style="color:#89ddff"> </span><span style="color:#c792ea">class</span><span style="color:#89ddff">=</span><span style="color:#89ddff">&quot;</span><span style="color:#c3e88d">carousel__item</span><span style="color:#89ddff">&quot;</span><span style="color:#89ddff">&gt;</span><span style="color:#a6accd">{{ slide }}</span><span style="color:#89ddff">&lt;/</span><span style="color:#f07178">div</span><span style="color:#89ddff">&gt;</span>

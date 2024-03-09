@@ -6,19 +6,19 @@ categories:
 ---
 <p>1.查看是否Asdf已经安装了mysql</p>
 
-<pre>
-<code>asdf plugin-list{% endhighlight %}
+{% highlight %}
+{% highlight %}asdf plugin-list{% endhighlight %}
 
 <p>2.卸载asdf&nbsp; mysql 以及插件</p>
 
-<pre>
-<code>asdf uninstall mysql{% endhighlight %}
+{% highlight %}
+{% highlight %}asdf uninstall mysql{% endhighlight %}
 
-<pre>
-<code>asdf plugin-remove mysql{% endhighlight %}
+{% highlight %}
+{% highlight %}asdf plugin-remove mysql{% endhighlight %}
 
-<pre>
-<code><span style="color:#ffd700">asdf</span> plugin-list
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">asdf</span> plugin-list
 <span style="color:#ffd700">asdf</span>-mongodb.<span style="color:#f5ab35">2</span>GXO
 <span style="color:#ffd700">golang</span>
 <span style="color:#ffd700">mongodb</span>
@@ -32,13 +32,13 @@ categories:
 
 <p>3.设置mysql为系统安装的mysql</p>
 
-<pre>
-<code><span style="color:#ffd700">asdf</span> global mysql system{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">asdf</span> global mysql system{% endhighlight %}
 
 <p>如果出现了：</p>
 
-<pre>
-<code>which mysql
+{% highlight %}
+{% highlight %}which mysql
 /<span style="color:#ffd700">home</span>/linlin/.asdf/shims/mysql
 <span style="color:#ffd700">linlin</span>@linlin-i<span style="color:#f5ab35">5</span>:/workspace$ mysql --version
 /<span style="color:#ffd700">usr</span>/bin/mysql  Ver <span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">35</span>-<span style="color:#f5ab35">0</span>ubuntu<span style="color:#f5ab35">0.22.04.1</span> for Linux <span style="color:#f5ab35">on</span> x<span style="color:#f5ab35">86</span>_<span style="color:#f5ab35">64</span> ((Ubuntu)){% endhighlight %}

@@ -7,7 +7,7 @@ categories:
 
                     <blockquote> 
  <h3 id="optionsfromcollectionforselect">options_from_collection_for_select</h3> 
- <p>如果这些options 来自于 数据库, 假设已经存在一个表<code>books</code>, 有两个列: <code>id</code>, <code>title</code>,</p> 
+ <p>如果这些options 来自于 数据库, 假设已经存在一个表{% highlight %}books{% endhighlight %}, 有两个列: {% highlight %}id{% endhighlight %}, {% highlight %}title{% endhighlight %},</p> 
  <p>这个表的值是:</p> 
  <table>
 <thead><tr>
@@ -30,7 +30,7 @@ categories:
 </tbody>
 </table>
  <p>于是,</p> 
- <pre><code class="language-ruby">&lt;%= options_from_collection_for_select Book.all, :id, :title %&gt;{% endhighlight %} 
+ {% highlight %}<code class="language-ruby">&lt;%= options_from_collection_for_select Book.all, :id, :title %&gt;{% endhighlight %} 
  <p>会生成:</p> 
  {% highlight %}&lt;option value="1"&gt;三体1&lt;/option&gt;
 &lt;option value="2"&gt;三体2&lt;/option&gt;

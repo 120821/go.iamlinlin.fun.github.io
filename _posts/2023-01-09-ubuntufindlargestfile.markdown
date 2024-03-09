@@ -8,8 +8,8 @@ categories:
 
 <p>首先进行磁盘空间使用情况的查看，可以看到电脑的内存已经使用了很多了。</p>
 
-<pre>
-<code>df -kh{% endhighlight %}
+{% highlight %}
+{% highlight %}df -kh{% endhighlight %}
 
 <p>Filesystem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Size&nbsp; Used Avail Use% Mounted on<br />
 tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6G&nbsp; 3.4M&nbsp; 1.6G&nbsp;&nbsp; 1% /run<br />
@@ -21,23 +21,23 @@ tmpfs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.6G&nbsp; 2.0
 
 <p>使用命令，进行查看前20个大文件，从大到小的顺序排列。</p>
 
-<pre>
-<code>du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}
+{% highlight %}
+{% highlight %}du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}
 
 <p>因为根据df -kh 查看的内容，我的大文件是放在根目录下的，/目录下，因此进行查看前1000个最大的文件，并且放入/tmp/largest文件内</p>
 
-<pre>
-<code>sudo du -a / | sort -n -r | head -n 1000 &gt; /tmp/largest{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo du -a / | sort -n -r | head -n 1000 &gt; /tmp/largest{% endhighlight %}
 
 <p>打开另一个窗口，使用tail命令进行时时查看：</p>
 
-<pre>
-<code>tail -f /tmp/largest{% endhighlight %}
+{% highlight %}
+{% highlight %}tail -f /tmp/largest{% endhighlight %}
 
 <p>接着就可以看到最大的几个文件：</p>
 
-<pre>
-<code>201386529&nbsp;&nbsp; &nbsp;/
+{% highlight %}
+{% highlight %}201386529&nbsp;&nbsp; &nbsp;/
 
 77590672&nbsp;&nbsp; &nbsp;/home
 

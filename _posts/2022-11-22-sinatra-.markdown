@@ -9,17 +9,17 @@ categories:
 <p>1.首先安装gem:</p>
 
 <pre class="highlight">
-<code>gem <span class="nb">install </span>rack-test{% endhighlight %}
+{% highlight %}gem <span class="nb">install </span>rack-test{% endhighlight %}
 
-<p><code>或者使用gemfile</code></p>
+<p>{% highlight %}或者使用gemfile{% endhighlight %}</p>
 
 <pre class="highlight">
-<code><span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span>{% endhighlight %}
+{% highlight %}<span class="n">gem</span> <span class="s1">&#39;rack-test&#39;</span>{% endhighlight %}
 
 <p>2.假设有一个sinatra 的hello_world.rb APP文件</p>
 
 <pre class="highlight">
-<code>require &#39;sinatra&#39;
+{% highlight %}require &#39;sinatra&#39;
 
 get &#39;/&#39; do
   &quot;Hello World #{params[:name]}&quot;.strip
@@ -28,7 +28,7 @@ end{% endhighlight %}
 <p>3.测试文件：test/*.rb</p>
 
 <pre class="highlight">
-<code>ENV[&#39;APP_ENV&#39;] = &#39;test&#39;
+{% highlight %}ENV[&#39;APP_ENV&#39;] = &#39;test&#39;
 
 require &#39;hello_world&#39;  # &lt;-- your sinatra app
 require &#39;rspec&#39;

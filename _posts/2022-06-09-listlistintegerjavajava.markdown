@@ -21,8 +21,8 @@ List&lt;List&lt;String&gt;&gt; 表示该数组是一个二维数组， 该数组
 ]</p>
 </blockquote>
 
-<pre>
-<code>    public static void main(String[] args)
+{% highlight %}
+{% highlight %}    public static void main(String[] args)
     {
         List&lt;List&lt;Integer&gt;&gt; a=new ArrayList&lt;List&lt;Integer&gt;&gt;();
         for(int i=0;i&lt;3:i++)
@@ -63,8 +63,8 @@ ArrayList 是 List的具体实现&nbsp;</p>
 
 <p>如果我们定义了这三个类去开发一个系统，那么这三个类中就存在大量重复的信息（属性：姓名，年龄。行为：吃饭，睡觉）。这样就导致了相同代码大量重复，代码显得很臃肿和冗余，那么如何解决呢？</p>
 
-<pre>
-<code>案例代码实现
+{% highlight %}
+{% highlight %}案例代码实现
 
 1.父类Human类
 

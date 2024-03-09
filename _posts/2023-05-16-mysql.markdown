@@ -6,18 +6,18 @@ categories:
 ---
 <p>使用以下命令查看MySQL数据库的用户和权限：</p>
 
-<pre>
-<code>SELECT * FROM mysql.user;
+{% highlight %}
+{% highlight %}SELECT * FROM mysql.user;
 SHOW GRANTS FOR &#39;root&#39;@&#39;%&#39;;{% endhighlight %}
 
 <p>得到结果：</p>
 
-<pre>
-<code>GRANT SELECT, UPDATE, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE ON *.* TO &#39;root&#39;@&#39;%&#39; WITH GRANT OPTION {% endhighlight %}
+{% highlight %}
+{% highlight %}GRANT SELECT, UPDATE, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE ON *.* TO &#39;root&#39;@&#39;%&#39; WITH GRANT OPTION {% endhighlight %}
 
 <p>这句 MySQL 命令是将 &#39;root&#39; 用户赋予了许多权限，因此可以允许从任何主机访问 MySQL 服务器。它授予了该用户对所有数据库和所有表进行 SELECT、UPDATE、RELOAD、SHUTDOWN、PROCESS、FILE、REFERENCES、INDEX、ALTER、SHOW DATABASES、SUPER、CREATE TEMPORARY TABLES、LOCK TABLES、EXECUTE、REPLICATION SLAVE、REPLICATION CLIENT、CREATE VIEW、SHOW VIEW、CREATE ROUTINE、ALTER ROUTINE、CREATE USER、EVENT、TRIGGER、CREATE TABLESPACE 的权限，并且还允许该用户将这些特权授权给其他用户。</p>
 
-<p>因此，如果你的 Rails 应用程序需要使用 &#39;root&#39; 用户访问 MySQL 数据库，这句命令应该允许你的应用程序连接到 MySQL 服务器。可以使用 Rails 应用程序的 <code>config/database.yml</code> 文件确保你已经正确设置连接到 MySQL 数据库的用户名、密码和数据库名称。</p>
+<p>因此，如果你的 Rails 应用程序需要使用 &#39;root&#39; 用户访问 MySQL 数据库，这句命令应该允许你的应用程序连接到 MySQL 服务器。可以使用 Rails 应用程序的 {% highlight %}config/database.yml{% endhighlight %} 文件确保你已经正确设置连接到 MySQL 数据库的用户名、密码和数据库名称。</p>
 
 <p>如果仍然不能连接到 MySQL 服务器，请确保 MySQL 服务器正在运行，并尝试使用 MySQL 命令行工具测试连接。另外，还可以查看 MySQL 服务器的日志文件，以查找导致连接问题的更多详细信息。</p>
 

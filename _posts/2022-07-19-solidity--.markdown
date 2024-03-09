@@ -14,9 +14,9 @@ categories:
 
 <p>地址后面的人可以选择自己投票，或者委托给他们信任的人来投票。</p>
 
-<p>在投票时间结束时，<code class="docutils literal notranslate"><span class="pre">winningProposal()</span></code> 将返回获得最多投票的提案。</p>
+<p>在投票时间结束时，<code class="docutils literal notranslate"><span class="pre">winningProposal()</span>{% endhighlight %} 将返回获得最多投票的提案。</p>
 
-<pre>
+{% highlight %}
 <span class="k">pragma</span> <span class="nx">solidity</span> <span class="o">^</span><span class="mf">0.4</span><span class="p">.</span><span class="mi">22</span><span class="p">;</span>
 
 <span class="cs">/// </span><span class="k">@title</span><span class="cs"> 委托投票</span>
@@ -144,5 +144,5 @@ categories:
     <span class="p">{</span>
         <span class="nx">winnerName_</span> <span class="o">=</span> <span class="nx">proposals</span><span class="p">[</span><span class="nx">winningProposal</span><span class="p">()].</span><span class="nx">name</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">}</span></pre>
+<span class="p">}</span>{% endhighlight %}
 

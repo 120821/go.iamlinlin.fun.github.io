@@ -6,13 +6,13 @@ categories:
 ---
 <p>react 修改为北京时间</p>
 
-<pre>
-<code><span style="color:#ffd700">2023</span>-<span style="color:#f5ab35">11</span>-<span style="color:#f5ab35">04</span>T<span style="color:#f5ab35">17</span>:<span style="color:#f5ab35">12</span>:<span style="color:#f5ab35">42</span>.<span style="color:#f5ab35">647</span>+<span style="color:#f5ab35">08</span>:<span style="color:#f5ab35">00</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">2023</span>-<span style="color:#f5ab35">11</span>-<span style="color:#f5ab35">04</span>T<span style="color:#f5ab35">17</span>:<span style="color:#f5ab35">12</span>:<span style="color:#f5ab35">42</span>.<span style="color:#f5ab35">647</span>+<span style="color:#f5ab35">08</span>:<span style="color:#f5ab35">00</span>{% endhighlight %}
 
 <p>去掉+80等，可以：</p>
 
-<pre>
-<code>&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to=&quot;/&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to=&quot;/&quot;&gt;
   {new Date(item.created_at).toLocaleString().slice(0, -3).replace(/\//g, &#39;-&#39;).replace(&#39; &#39;, &#39;T&#39;)}+08:00
   {item.title}
 &lt;/Link&gt;{% endhighlight %}

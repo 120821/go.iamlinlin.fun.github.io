@@ -19,8 +19,8 @@ end</p>
 
 <p>多种验证方法：</p>
 
-<pre>
-<code>class Person &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class Person &lt; ApplicationRecord
 
 &nbsp; validates :name, length: { minimum: 2 }
 
@@ -34,15 +34,15 @@ end{% endhighlight %}
 
 <p>示例：</p>
 
-<pre>
-<code>class Person &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class Person &lt; ApplicationRecord
 &nbsp; validates :name, presence: true, length: { minimum: 3 }
 end{% endhighlight %}
 
 <p>验证：</p>
 
-<pre>
-<code>person = Person.new
+{% highlight %}
+{% highlight %}person = Person.new
 
 person.valid?
 
@@ -62,8 +62,8 @@ person.errors.full_messages{% endhighlight %}
 
 <p>&nbsp;Proc :message 值有两个参数：被验证的对象，以及带有 :model、:attribute 和 :value 键值对的散列。</p>
 
-<pre>
-<code>class Person &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class Person &lt; ApplicationRecord
 
 &nbsp; # Hard-coded message
 

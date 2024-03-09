@@ -8,8 +8,8 @@ categories:
 
 <p>controller进行渲染编辑页面</p>
 
-<pre>
-<code>render :edit
+{% highlight %}
+{% highlight %}render :edit
 
 render action: :edit
 
@@ -23,8 +23,8 @@ render template: &quot;books/edit&quot;{% endhighlight %}
 
 <p>渲染其他内容：</p>
 
-<pre>
-<code>render plain: &quot;OK&quot;
+{% highlight %}
+{% highlight %}render plain: &quot;OK&quot;
 
 render html: helpers.tag.strong(&#39;Not Found&#39;)
 
@@ -40,13 +40,13 @@ render json: @product{% endhighlight %}
 
 <p>或者直接报错：</p>
 
-<pre>
-<code>render file: &quot;#{Rails.root}/public/404.html&quot;, layout: false
+{% highlight %}
+{% highlight %}render file: &quot;#{Rails.root}/public/404.html&quot;, layout: false
 
 controller进行设置渲染模板{% endhighlight %}
 
-<pre>
-<code>class ProductsController &lt; ApplicationController
+{% highlight %}
+{% highlight %}class ProductsController &lt; ApplicationController
 
 &nbsp;
 
@@ -68,8 +68,8 @@ end{% endhighlight %}
 
 <p>application_controller确认进行渲染的公共样式</p>
 
-<pre>
-<code>class ApplicationController &lt; ActionController::Base
+{% highlight %}
+{% highlight %}class ApplicationController &lt; ActionController::Base
 
 &nbsp; layout &quot;main&quot;
 
@@ -77,20 +77,20 @@ end{% endhighlight %}
 
 <p>不渲染：</p>
 
-<pre>
-<code>class OldArticlesController &lt; SpecialArticlesController
+{% highlight %}
+{% highlight %}class OldArticlesController &lt; SpecialArticlesController
 
 &nbsp; layout false{% endhighlight %}
 
-<pre>
-<code>&nbsp; def show
+{% highlight %}
+{% highlight %}&nbsp; def show
 
 &nbsp;&nbsp;&nbsp; @article = Article.find(params[:id])
 
 &nbsp; end{% endhighlight %}
 
-<pre>
-<code>&nbsp; def index
+{% highlight %}
+{% highlight %}&nbsp; def index
 
 &nbsp;&nbsp;&nbsp; @old_articles = Article.older
 

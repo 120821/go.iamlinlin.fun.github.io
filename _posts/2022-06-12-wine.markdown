@@ -10,19 +10,19 @@ categories:
 
 <p>如果您的系统是 64 位，请启用 32 位架构（如果您还没有）：</p>
 
-<pre>
+{% highlight %}
 sudo dpkg --add-architecture i386 
  下载并添加存储库密钥： 
-</pre>
+{% endhighlight %}
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/winehq.key" rel="nofollow">https://dl.winehq.org/wine-builds/winehq.key </a>
- sudo mv winehq.key /usr/share/keyrings/winehq-archive.key </code>
-</pre>
+ sudo mv winehq.key /usr/share/keyrings/winehq-archive.key {% endhighlight %}
+{% endhighlight %}
 
-<pre>
-<code>wget -nc https://dl.winehq.org/wine-builds/winehq.key
+{% highlight %}
+{% highlight %}wget -nc https://dl.winehq.org/wine-builds/winehq.key
 
 --2022-06-12 17:16:02--&nbsp; https://dl.winehq.org/wine-builds/winehq.key
 
@@ -36,8 +36,8 @@ Length: 3220 (3.1K) [application/pgp-keys]
 
 Saving to: &lsquo;winehq.key&rsquo;{% endhighlight %}
 
-<pre>
-<code>winehq.key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%[===================&gt;]&nbsp;&nbsp; 3.14K&nbsp; --.-KB/s&nbsp;&nbsp;&nbsp; in 0s&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+{% highlight %}
+{% highlight %}winehq.key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%[===================&gt;]&nbsp;&nbsp; 3.14K&nbsp; --.-KB/s&nbsp;&nbsp;&nbsp; in 0s&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
 
 2022-06-12 17:16:03 (32.2 MB/s) - &lsquo;winehq.key&rsquo; saved [3220/3220]
 
@@ -122,19 +122,19 @@ winehq-stable is already the newest version (7.0.0.0~impish-1).<br />
 		<tr>
 			<td>Ubuntu 22.04</td>
 			<td>
-			<pre>
+			{% highlight %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources </a>
  sudo mv winehq-jammy.sources /etc/apt/sources.list.d/ 
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 		<tr>
 			<td>Ubuntu 21.10</td>
 			<td>
-			<pre>
+			{% highlight %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources </a>
  sudo mv winehq-impish.sources /etc/apt/sources.list.d/ 
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 		<tr>
@@ -142,10 +142,10 @@ wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu
 			<p>Linux Mint 20.x</p>
 			</td>
 			<td>
-			<pre>
+			{% highlight %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources </a>
  sudo mv winehq-focal.sources /etc/apt/sources.list.d/ 
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 		<tr>
@@ -153,10 +153,10 @@ wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu
 			<p>Linux Mint 19.x</p>
 			</td>
 			<td>
-			<pre>
+			{% highlight %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources </a>
  sudo mv winehq-bionic.sources /etc/apt/sources.list.d/ 
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 	</tbody>
@@ -164,9 +164,9 @@ wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu
 
 <p>更新包：</p>
 
-<pre>
+{% highlight %}
 sudo apt 更新
- </pre>
+ {% endhighlight %}
 
 <p>然后安装 <strong>以下软件包之一 </strong>：</p>
 
@@ -175,25 +175,25 @@ sudo apt 更新
 		<tr>
 			<th>稳定的分支</th>
 			<td>
-			<pre>
+			{% highlight %}
 sudo apt install --install-recommends winehq-stable
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 		<tr>
 			<th>开发分公司</th>
 			<td>
-			<pre>
+			{% highlight %}
 sudo apt install --install-recommends winehq-devel
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 		<tr>
 			<th>暂存分支</th>
 			<td>
-			<pre>
+			{% highlight %}
 sudo apt install --install-recommends winehq-staging
- </pre>
+ {% endhighlight %}
 			</td>
 		</tr>
 	</tbody>

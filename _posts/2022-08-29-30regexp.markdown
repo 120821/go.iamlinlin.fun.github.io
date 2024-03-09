@@ -18,8 +18,8 @@ categories:
 
 <p><span class="regex">\b\w{6}\b</span> 匹配<span class="desc">刚好6个字符的单词</span>。</p>
 
-<pre>
-<code>代码/语法说明
+{% highlight %}
+{% highlight %}代码/语法说明
 . 匹配除换行符以外的任意字符&nbsp;
 \w 匹配字母或数字或下划线或汉字&nbsp;
 \s 匹配任意的空白符&nbsp;
@@ -76,6 +76,6 @@ $ 匹配字符串的结束&nbsp;
 
 (?(name)yes|no) 如果命名为name的组捕获到了内容，使用yes作为表达式；否则使用no&nbsp;
 
-(?(name)yes) 同上，只是使用空表达式作为no&nbsp;</code>
-</pre>
+(?(name)yes) 同上，只是使用空表达式作为no&nbsp;{% endhighlight %}
+{% endhighlight %}
 

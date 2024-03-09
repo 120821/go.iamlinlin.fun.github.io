@@ -8,8 +8,8 @@ categories:
 
 <p>代码：</p>
 
-<pre>
-<code>import React, { useState, useEffect, useRef } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useState, useEffect, useRef } from &#39;react&#39;;
 
 import ChinaMap from &#39;moment&#39;;
 

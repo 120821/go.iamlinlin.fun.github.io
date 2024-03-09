@@ -78,12 +78,12 @@ Total bytes written: 254228480 (243MiB, 15MiB/s)<br />
 <p>MongoDB 的可执行文件位于 bin 目录下，所以可以将其添加到 <strong>PATH</strong> 路径中：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="kwd">export</span><span class="pln"> PATH</span><span class="pun">=&lt;</span><span class="pln">mongodb</span><span class="pun">-</span><span class="pln">install</span><span class="pun">-</span><span class="pln">directory</span><span class="pun">&gt;/</span><span class="pln">bin</span><span class="pun">:</span><span class="pln">$PATH</span></pre>
+<span class="kwd">export</span><span class="pln"> PATH</span><span class="pun">=&lt;</span><span class="pln">mongodb</span><span class="pun">-</span><span class="pln">install</span><span class="pun">-</span><span class="pln">directory</span><span class="pun">&gt;/</span><span class="pln">bin</span><span class="pun">:</span><span class="pln">$PATH</span>{% endhighlight %}
 
 <p><strong>&lt;mongodb-install-directory&gt;</strong> 为你 MongoDB 的安装路径。如本文的 <strong>/usr/local/mongodb4</strong> 。</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="kwd">export</span><span class="pln"> PATH</span><span class="pun">=</span><span class="str">/usr/</span><span class="kwd">local</span><span class="pun">/</span><span class="pln">mongodb4</span><span class="pun">/</span><span class="pln">bin</span><span class="pun">:</span><span class="pln">$PATH</span></pre>
+<span class="kwd">export</span><span class="pln"> PATH</span><span class="pun">=</span><span class="str">/usr/</span><span class="kwd">local</span><span class="pun">/</span><span class="pln">mongodb4</span><span class="pun">/</span><span class="pln">bin</span><span class="pun">:</span><span class="pln">$PATH</span>{% endhighlight %}
 
 <p>选择MongoDB的安装包保存的位置。</p>
 
@@ -104,7 +104,7 @@ Total bytes written: 254228480 (243MiB, 15MiB/s)<br />
 <span class="pln">sudo mkdir </span><span class="pun">-</span><span class="pln">p </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo
 sudo mkdir </span><span class="pun">-</span><span class="pln">p </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb
 sudo chown </span><span class="str">`whoami`</span><span class="pln"> </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo     </span><span class="com"># 设置权限</span><span class="pln">
-sudo chown </span><span class="str">`whoami`</span><span class="pln"> </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb   </span><span class="com"># 设置权限</span></pre>
+sudo chown </span><span class="str">`whoami`</span><span class="pln"> </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb   </span><span class="com"># 设置权限</span>{% endhighlight %}
 
 <p><span class="com">可以在根目录进行创建，然后就可以查看log了。</span></p>
 
@@ -113,7 +113,7 @@ sudo chown </span><span class="str">`whoami`</span><span class="pln"> </span><sp
 <p>接下来<strong>启动 Mongodb 服务：</strong></p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">mongod </span><span class="pun">--</span><span class="pln">dbpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo </span><span class="pun">--</span><span class="pln">logpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb</span><span class="pun">/</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">log </span><span class="pun">--</span><span class="pln">fork</span></pre>
+<span class="pln">mongod </span><span class="pun">--</span><span class="pln">dbpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo </span><span class="pun">--</span><span class="pln">logpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb</span><span class="pun">/</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">log </span><span class="pun">--</span><span class="pln">fork</span>{% endhighlight %}
 
 <p>打开 /var/log/mongodb/mongod.log 文件看到以下信息，说明启动成功。</p>
 
@@ -121,7 +121,7 @@ sudo chown </span><span class="str">`whoami`</span><span class="pln"> </span><sp
 <span class="com"># tail -10f /var/log/mongodb/mongod.log</span><span class="pln">
 </span><span class="lit">2020</span><span class="pun">-</span><span class="lit">07</span><span class="pun">-</span><span class="lit">09T12</span><span class="pun">:</span><span class="lit">20</span><span class="pun">:</span><span class="lit">17.391</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I  NETWORK  </span><span class="pun">[</span><span class="pln">listener</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Listening</span><span class="pln"> on </span><span class="pun">/</span><span class="pln">tmp</span><span class="pun">/</span><span class="pln">mongodb</span><span class="pun">-</span><span class="lit">27017.sock</span><span class="pln">
 </span><span class="lit">2020</span><span class="pun">-</span><span class="lit">07</span><span class="pun">-</span><span class="lit">09T12</span><span class="pun">:</span><span class="lit">20</span><span class="pun">:</span><span class="lit">17.392</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I  NETWORK  </span><span class="pun">[</span><span class="pln">listener</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Listening</span><span class="pln"> on </span><span class="lit">127.0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pln">
-</span><span class="lit">2020</span><span class="pun">-</span><span class="lit">07</span><span class="pun">-</span><span class="lit">09T12</span><span class="pun">:</span><span class="lit">20</span><span class="pun">:</span><span class="lit">17.392</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I  NETWORK  </span><span class="pun">[</span><span class="pln">listener</span><span class="pun">]</span><span class="pln"> waiting </span><span class="kwd">for</span><span class="pln"> connections on port </span><span class="lit">27017</span></pre>
+</span><span class="lit">2020</span><span class="pun">-</span><span class="lit">07</span><span class="pun">-</span><span class="lit">09T12</span><span class="pun">:</span><span class="lit">20</span><span class="pun">:</span><span class="lit">17.392</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I  NETWORK  </span><span class="pun">[</span><span class="pln">listener</span><span class="pun">]</span><span class="pln"> waiting </span><span class="kwd">for</span><span class="pln"> connections on port </span><span class="lit">27017</span>{% endhighlight %}
 
 <p>MongoDB 后台管理 Shell</p>
 
@@ -139,7 +139,7 @@ connecting to</span><span class="pun">:</span><span class="pln"> mongodb</span><
 </span><span class="typ">Implicit</span><span class="pln"> session</span><span class="pun">:</span><span class="pln"> session </span><span class="pun">{</span><span class="pln"> </span><span class="str">&quot;id&quot;</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> UUID</span><span class="pun">(</span><span class="str">&quot;2cfdafc4-dd56-4cfc-933a-187b887119b3&quot;</span><span class="pun">)</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
 </span><span class="typ">MongoDB</span><span class="pln"> server version</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4.2</span><span class="pun">.</span><span class="lit">8</span><span class="pln">
 </span><span class="typ">Welcome</span><span class="pln"> to the </span><span class="typ">MongoDB</span><span class="pln"> shell</span><span class="pun">.</span><span class="pln">
-</span><span class="pun">&hellip;&hellip;</span></pre>
+</span><span class="pun">&hellip;&hellip;</span>{% endhighlight %}
 
 <p>由于它是一个JavaScript shell，您可以运行一些简单的算术运算:</p>
 
@@ -147,7 +147,7 @@ connecting to</span><span class="pun">:</span><span class="pln"> mongodb</span><
 <span class="pun">&gt;</span><span class="pln"> </span><span class="lit">2</span><span class="pun">+</span><span class="lit">2</span><span class="pln">
 </span><span class="lit">4</span><span class="pln">
 </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">3</span><span class="pun">+</span><span class="lit">6</span><span class="pln">
-</span><span class="lit">9</span></pre>
+</span><span class="lit">9</span>{% endhighlight %}
 
 <p>现在让我们插入一些简单的数据，并对插入的数据进行检索：</p>
 
@@ -156,26 +156,26 @@ connecting to</span><span class="pun">:</span><span class="pln"> mongodb</span><
 </span><span class="typ">WriteResult</span><span class="pun">({</span><span class="pln"> </span><span class="str">&quot;nInserted&quot;</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> </span><span class="pun">})</span><span class="pln">
 </span><span class="pun">&gt;</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">runoob</span><span class="pun">.</span><span class="pln">find</span><span class="pun">()</span><span class="pln">
 </span><span class="pun">{</span><span class="pln"> </span><span class="str">&quot;_id&quot;</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">ObjectId</span><span class="pun">(</span><span class="str">&quot;5f069bdb4e02f8baf90f1184&quot;</span><span class="pun">),</span><span class="pln"> </span><span class="str">&quot;x&quot;</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
-</span><span class="pun">&gt;</span><span class="pln"> </span></pre>
+</span><span class="pun">&gt;</span><span class="pln"> </span>{% endhighlight %}
 
 <p>第一个命令将数字 10 插入到 runoob 集合的 x 字段中。</p>
 
 <p>如果要<strong>停止 mongodb 可以使用以下命令：</strong></p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">mongod </span><span class="pun">--</span><span class="pln">dbpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo </span><span class="pun">--</span><span class="pln">logpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb</span><span class="pun">/</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">log </span><span class="pun">--</span><span class="pln">shutdown</span></pre>
+<span class="pln">mongod </span><span class="pun">--</span><span class="pln">dbpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">lib</span><span class="pun">/</span><span class="pln">mongo </span><span class="pun">--</span><span class="pln">logpath </span><span class="pun">/</span><span class="kwd">var</span><span class="pun">/</span><span class="pln">log</span><span class="pun">/</span><span class="pln">mongodb</span><span class="pun">/</span><span class="pln">mongod</span><span class="pun">.</span><span class="pln">log </span><span class="pun">--</span><span class="pln">shutdown</span>{% endhighlight %}
 
 <p>也可以在 mongo 的命令出口中实现：</p>
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pun">&gt;</span><span class="pln"> </span><span class="kwd">use</span><span class="pln"> admin
 switched to db admin
-</span><span class="pun">&gt;</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">shutdownServer</span><span class="pun">()</span></pre>
+</span><span class="pun">&gt;</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">shutdownServer</span><span class="pun">()</span>{% endhighlight %}
 
 <p>使用默认端口来连接 MongoDB 的服务。</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">mongodb</span><span class="pun">:</span><span class="com">//localhost</span></pre>
+<span class="pln">mongodb</span><span class="pun">:</span><span class="com">//localhost</span>{% endhighlight %}
 
 <p>通过 shell 连接 MongoDB 服务：</p>
 
@@ -183,7 +183,7 @@ switched to db admin
 <span class="pln">$ </span><span class="pun">./</span><span class="pln">mongo
 </span><span class="typ">MongoDB</span><span class="pln"> shell version</span><span class="pun">:</span><span class="pln"> </span><span class="lit">4.0</span><span class="pun">.</span><span class="lit">9</span><span class="pln">
 connecting to</span><span class="pun">:</span><span class="pln"> test
-</span><span class="pun">...</span><span class="pln"> </span></pre>
+</span><span class="pun">...</span><span class="pln"> </span>{% endhighlight %}
 
 <p>这时候你返回查看运行 <strong>./mongod</strong> 命令的窗口，可以看到是从哪里连接到MongoDB的服务器，您可以看到如下信息：</p>
 
@@ -193,5 +193,5 @@ connecting to</span><span class="pun">:</span><span class="pln"> test
 </span><span class="lit">2015</span><span class="pun">-</span><span class="lit">09</span><span class="pun">-</span><span class="lit">25T17</span><span class="pun">:</span><span class="lit">22</span><span class="pun">:</span><span class="lit">27.336</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I CONTROL  </span><span class="pun">[</span><span class="pln">initandlisten</span><span class="pun">]</span><span class="pln"> options</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> storage</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> dbPath</span><span class="pun">:</span><span class="pln"> </span><span class="str">&quot;/data/db&quot;</span><span class="pln"> </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span><span class="pln">
 </span><span class="lit">2015</span><span class="pun">-</span><span class="lit">09</span><span class="pun">-</span><span class="lit">25T17</span><span class="pun">:</span><span class="lit">22</span><span class="pun">:</span><span class="lit">27.350</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I NETWORK  </span><span class="pun">[</span><span class="pln">initandlisten</span><span class="pun">]</span><span class="pln"> waiting </span><span class="kwd">for</span><span class="pln"> connections on port </span><span class="lit">27017</span><span class="pln">
 </span><span class="lit">2015</span><span class="pun">-</span><span class="lit">09</span><span class="pun">-</span><span class="lit">25T17</span><span class="pun">:</span><span class="lit">22</span><span class="pun">:</span><span class="lit">36.012</span><span class="pun">+</span><span class="lit">0800</span><span class="pln"> I NETWORK  </span><span class="pun">[</span><span class="pln">initandlisten</span><span class="pun">]</span><span class="pln"> connection accepted </span><span class="kwd">from</span><span class="pln"> </span><span class="lit">127.0</span><span class="pun">.</span><span class="lit">0.1</span><span class="pun">:</span><span class="lit">37310</span><span class="pln"> </span><span class="com">#1 (1 connection now open)  # 该行表明一个来自本机的连接</span><span class="pln">
-</span></pre>
+</span>{% endhighlight %}
 

@@ -55,8 +55,8 @@ Truffle v4.0.1 - a development framework for Ethereum</p>
 
 <p>安装后，进行卸载，然后继续执行命令</p>
 
-<pre>
-<code>npm uninstall -g truffle
+{% highlight %}
+{% highlight %}npm uninstall -g truffle
 npm install -g truffle
 {% endhighlight %}
 

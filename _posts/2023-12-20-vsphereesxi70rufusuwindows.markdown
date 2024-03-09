@@ -20,35 +20,35 @@ categories:
 			<th>日期</th>
 		</tr>
 		<tr>
-			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3.exe"><code>rufus-4.3.exe</code></a></td>
+			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3.exe">{% highlight %}rufus-4.3.exe{% endhighlight %}</a></td>
 			<td>标准</td>
 			<td>Windows x64</td>
 			<td><span dir="ltr">1.4 MB</span></td>
 			<td>2023.10.19</td>
 		</tr>
 		<tr>
-			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3p.exe"><code>rufus-4.3p.exe</code></a></td>
+			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3p.exe">{% highlight %}rufus-4.3p.exe{% endhighlight %}</a></td>
 			<td>便携版</td>
 			<td>Windows x64</td>
 			<td><span dir="ltr">1.4 MB</span></td>
 			<td>2023.10.19</td>
 		</tr>
 		<tr>
-			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_x86.exe"><code>rufus-4.3_x86.exe</code></a></td>
+			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_x86.exe">{% highlight %}rufus-4.3_x86.exe{% endhighlight %}</a></td>
 			<td>标准</td>
 			<td>Windows x86</td>
 			<td><span dir="ltr">1.4 MB</span></td>
 			<td>2023.10.19</td>
 		</tr>
 		<tr>
-			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_arm64.exe"><code>rufus-4.3_arm64.exe</code></a></td>
+			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3/rufus-4.3_arm64.exe">{% highlight %}rufus-4.3_arm64.exe{% endhighlight %}</a></td>
 			<td>标准</td>
 			<td>Windows ARM64</td>
 			<td><span dir="ltr">4.6 MB</span></td>
 			<td>2023.10.19</td>
 		</tr>
 		<tr>
-			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3_BETA/rufus-4.3_BETA.exe"><code>rufus-4.3_BETA.exe</code></a></td>
+			<td><a href="https://github.com/pbatard/rufus/releases/download/v4.3_BETA/rufus-4.3_BETA.exe">{% highlight %}rufus-4.3_BETA.exe{% endhighlight %}</a></td>
 			<td><a href="https://github.com/pbatard/rufus/releases/tag/v4.3_BETA">BETA</a></td>
 			<td>Windows x64</td>
 			<td><span dir="ltr">1.4 MB</span></td>

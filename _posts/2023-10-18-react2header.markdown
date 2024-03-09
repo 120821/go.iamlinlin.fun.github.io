@@ -6,8 +6,8 @@ categories:
 ---
 <p>我想得到生产排放因子(factor_production)的每一年的数据：</p>
 
-<pre>
-<code>let foamParamsData = data.data.foam_params_data
+{% highlight %}
+{% highlight %}let foamParamsData = data.data.foam_params_data
 const dataParams = JSON.parse(foamParamsData)
 console.log(&quot;== dataParams: &quot;, dataParams)
 let factorProductionParam = dataParams.slice(1).map(row =&gt; row[1]);

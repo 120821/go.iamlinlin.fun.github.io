@@ -6,6 +6,6 @@ categories:
 ---
 <p>在修改nginx配置的时候，重新启动之前，最好测试一下文件修改的是否正确（如果错误，会根据具体情况提示语法错误等信息）</p>
 
-<pre>
-<code>nginx -t {% endhighlight %}
+{% highlight %}
+{% highlight %}nginx -t {% endhighlight %}
 

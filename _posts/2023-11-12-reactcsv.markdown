@@ -8,8 +8,8 @@ categories:
 
 <p>例如接口的数据有多个二维数组，其中有：</p>
 
-<pre>
-<code><span style="color:#abe338">&quot;production&quot;</span>:[
+{% highlight %}
+{% highlight %}<span style="color:#abe338">&quot;production&quot;</span>:[
         [
             <span style="color:#abe338">&quot;&quot;</span>,
             <span style="color:#abe338">&quot;R888&quot;</span>
@@ -31,8 +31,8 @@ categories:
 
 <p>可以写函数：</p>
 
-<pre>
-<code>function processProduction(csvContent, productionData) {
+{% highlight %}
+{% highlight %}function processProduction(csvContent, productionData) {
   csvContent += &#39;内销产量(production) \n&#39;;
 
   for (let i = 1; i &lt; productionData.length; i++) {
@@ -42,11 +42,11 @@ categories:
 
   return csvContent;
 }
-</code>然后调用：
-</pre>
+{% endhighlight %}然后调用：
+{% endhighlight %}
 
-<pre>
-<code>const params = details.map((item) =&gt; item.params);
+{% highlight %}
+{% highlight %}const params = details.map((item) =&gt; item.params);
 const results = details.map((item) =&gt; item.results);
 
 let csvContent = &#39;年份,初始库存量,总排放\n&#39;;

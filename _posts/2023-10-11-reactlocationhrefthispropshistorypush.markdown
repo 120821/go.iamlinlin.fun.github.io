@@ -6,8 +6,8 @@ categories:
 ---
 <p>react地图页面根据材料来显示不同的地图，点击材料后，不能正常显示地图，是因为导航方式不同，这样解决：</p>
 
-<pre>
-<code>+&nbsp;&nbsp;&nbsp; const newUrl = `/show_result_as_map/${calculationResultDetailId}?calculation_result_id=${calculationResultId}&amp;material_id=${materialIdUpdate}&amp;token=${getToken()}`
+{% highlight %}
+{% highlight %}+&nbsp;&nbsp;&nbsp; const newUrl = `/show_result_as_map/${calculationResultDetailId}?calculation_result_id=${calculationResultId}&amp;material_id=${materialIdUpdate}&amp;token=${getToken()}`
 
 +&nbsp;&nbsp;&nbsp; location.href = newUrl
 

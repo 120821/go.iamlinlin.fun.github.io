@@ -10,7 +10,7 @@ categories:
 
 <div class="highlight">
 <pre class="highlight ruby">
-<code><span class="c1"># net_timeout_1.rb</span>
+{% highlight %}<span class="c1"># net_timeout_1.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;net/http&#39;</span>
 
 <span class="c1"># create a new http connection object, the connection isn&#39;t made yet</span>
@@ -32,7 +32,7 @@ categories:
 
 <div class="highlight">
 <pre class="highlight shell">
-<code><span class="nv">$ </span>ruby net_timeout_1.rb
+{% highlight %}<span class="nv">$ </span>ruby net_timeout_1.rb
 <span class="c"># =&gt; ../net/http.rb:904:in `initialize&#39;: execution expired (Net::OpenTimeout)</span>
 {% endhighlight %}
 
@@ -40,7 +40,7 @@ categories:
 
 <div class="highlight">
 <pre class="highlight ruby">
-<code><span class="c1"># use an open_timeout of 100ms</span>
+{% highlight %}<span class="c1"># use an open_timeout of 100ms</span>
 <span class="no">HTTParty</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s1">&#39;http://www.example.com&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="ss">open_timeout: </span><span class="mf">0.1</span> <span class="p">})</span>
 
 <span class="c1"># use it in a custom client</span>

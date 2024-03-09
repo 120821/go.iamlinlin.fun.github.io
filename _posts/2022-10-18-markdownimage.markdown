@@ -8,7 +8,7 @@ categories:
 
 <p>使用项目的图片，有路径的情况下，不需要增加链接：</p>
 
-<pre>
-<code>![image info](./pictures/image.png)
+{% highlight %}
+{% highlight %}![image info](./pictures/image.png)
 {% endhighlight %}
 

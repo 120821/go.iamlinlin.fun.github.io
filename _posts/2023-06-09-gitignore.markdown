@@ -8,15 +8,15 @@ categories:
 
 <p>您需要将已经跟踪的`config/environments`文件从Git中删除，并将其添加到忽略列表中。 您可以使用以下命令完成此操作：</p>
 
-<pre>
+{% highlight %}
 
-<code>git rm --cached -r config/environments/
+{% highlight %}git rm --cached -r config/environments/
 
 git add .gitignore
 
-git commit -m &quot;忽略config/environments文件&quot;</code>
+git commit -m &quot;忽略config/environments文件&quot;{% endhighlight %}
 
-&nbsp;</pre>
+&nbsp;{% endhighlight %}
 
 <p>第一条命令将已经跟踪的文件从Git中删除，但不会从本地文件系统中删除。`--cached`选项告诉Git只删除索引中的文件，而不从工作树中删除文件。</p>
 

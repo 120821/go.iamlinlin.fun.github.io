@@ -6,8 +6,8 @@ categories:
 ---
 <p>1.文件目录：</p>
 
-<pre>
-<code>├── app.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序逻辑代码
+{% highlight %}
+{% highlight %}├── app.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序逻辑代码
 
 ├── app.json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序配置文件
 
@@ -48,7 +48,7 @@ categories:
 <p>2.在app.js设置小程序的逻辑：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>App({
+{% highlight %}App({
   onLaunch: <span style="color:#dcc6e0">function</span> () {
     <span style="color:#d4d0ab">// 小程序启动时执行的逻辑</span>
   },
@@ -60,7 +60,7 @@ categories:
 <p>3.在app.json配置文件写入路由等</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>{
+{% highlight %}{
   &quot;pages&quot;: [
     <span style="color:#abe338">&quot;pages/index/index&quot;</span>,  <span style="color:#d4d0ab">// 首页</span>
     <span style="color:#abe338">&quot;pages/blog/blog&quot;</span>     <span style="color:#d4d0ab">// 博客页面</span>
@@ -79,7 +79,7 @@ categories:
 <p>5.在页面index.js设置，例如：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>Page({
+{% highlight %}Page({
   data: {
     message: <span style="color:#abe338">&quot;Hello, World!&quot;</span>
   },
@@ -92,22 +92,22 @@ categories:
 <p>在index.json组件设置，例如：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>{
+{% highlight %}{
   &quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;首页&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
   &quot;usingComponents&quot;: {
     <span style="color:#d4d0ab">// 可以引用自定义组件</span>
   }
 }{% endhighlight %}
 
-<p><code>在index.wxml页面结构文件设置，例如：</code></p>
+<p>{% highlight %}在index.wxml页面结构文件设置，例如：{% endhighlight %}</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>&lt;view&gt;
+{% highlight %}&lt;view&gt;
   &lt;text&gt;{{ message }}&lt;/text&gt;
 &lt;/view&gt;{% endhighlight %}
 
 <p>也可以引入图片：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;{% endhighlight %}
+{% highlight %}&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;{% endhighlight %}
 

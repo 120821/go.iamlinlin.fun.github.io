@@ -12,15 +12,15 @@ categories:
 
 <p>在 Rails 项目的 Gemfile 文件中添加 MiniMagick 依赖库：</p>
 
-<pre>
-<code>gem &#39;mini_magick&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &#39;mini_magick&#39;{% endhighlight %}
 
 <p>然后运行 `bundle install` 命令来安装它。</p>
 
 <p>2. 在 `Product` 模型中添加对 `image` 列的处理。</p>
 
-<pre>
-<code>class Product &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class Product &lt; ApplicationRecord
 
 &nbsp; mount_uploader :image, ImageUploader # 上传器类名自行替换
 

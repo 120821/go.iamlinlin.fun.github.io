@@ -8,8 +8,8 @@ categories:
 
 <p>把CSV中某一年的数据展示为网格化地图：（地图和网格的比例还没有调整好）：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from &quot;react&quot;;
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from &quot;react&quot;;
 import * as d3 from &quot;d3&quot;;
 import chinaData from &quot;./china.json&quot;;
 import chinaPopulationData from &quot;./china_population.csv&quot;;

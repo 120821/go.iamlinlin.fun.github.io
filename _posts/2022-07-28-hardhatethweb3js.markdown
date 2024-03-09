@@ -57,7 +57,7 @@ contract SayHi {
     <span class="hljs-keyword">return</span> number;
   }
 }
-</pre>
+{% endhighlight %}
 
 <p><img height="72" src="/uploads/ckeditor/pictures/158/image-20220728180227-3.png" width="767" /></p>
 
@@ -80,7 +80,7 @@ main()
   .<span class="hljs-keyword">catch</span>(<span class="hljs-function"><span class="hljs-params">(error)</span> =&gt;</span> {
     <span class="hljs-built_in">console</span>.error(error);
     process.exit(<span class="hljs-number">1</span>);
-  });</pre>
+  });{% endhighlight %}
 
 <p>npx hardhat run scripts/sample-script.js&nbsp;</p>
 
@@ -90,12 +90,12 @@ main()
 <span class="hljs-title">npx</span> hardhat run scripts/sample-script.js
 SayHi deployed to: 0x5FbDB2315678afecb367f032d93F642f64180aa3
 
-2.4在本地运行轻节点：npx hardhat node&nbsp;&nbsp; （在本地运行 模拟的ETH节点）</pre>
+2.4在本地运行轻节点：npx hardhat node&nbsp;&nbsp; （在本地运行 模拟的ETH节点）{% endhighlight %}
 
 <p>运行上面的命令， 就可以看到提示：</p>
 
 <pre class="hljs javascript">
-Started HTTP and WebSocket <span class="hljs-built_in">JSON</span>-RPC server at http:<span class="hljs-comment">//127.0.0.1:8545/</span></pre>
+Started HTTP and WebSocket <span class="hljs-built_in">JSON</span>-RPC server at http:<span class="hljs-comment">//127.0.0.1:8545/</span>{% endhighlight %}
 
 <p><img height="624" src="/uploads/ckeditor/pictures/159/image-20220728180353-4.png" width="1328" /></p>
 
@@ -110,7 +110,7 @@ Started HTTP and WebSocket <span class="hljs-built_in">JSON</span>-RPC server at
 <span class="hljs-reserved">var</span> web3 = <span class="hljs-keyword">new</span> Web3(<span class="hljs-string">&#39;ws://localhost:8545&#39;</span>)
 web3.eth.getAccounts()
     .<span class="hljs-keyword">then</span>(<span class="hljs-built_in">console</span>.log);
-</pre>
+{% endhighlight %}
 
 <p>可以查询该 节点下的所有account:</p>
 

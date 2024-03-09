@@ -6,8 +6,8 @@ categories:
 ---
 <p>在使用接口的数据的时候，handsontable会出现没有默认数据的情况，可以判断，当数据抓到了，再渲染：</p>
 
-<pre>
-<code>{refrigerationDefaultData.length !== 0 &amp;&amp; (
+{% highlight %}
+{% highlight %}{refrigerationDefaultData.length !== 0 &amp;&amp; (
   &lt;HandsonTable
     ref={(ref) =&gt; { this.tableRefs[&#39;refrigerationParamsData&#39;] = ref; }}
     id=&quot;refrigerationParamsData&quot;

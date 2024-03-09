@@ -4,9 +4,9 @@ title: "An error occurred while installing debug (1.7.1), and Bundler cannot con
 date: "2023-05-26"
 categories: 
 ---
-<p><code>gem install debug -v &#39;1.7.1&#39;</code></p>
+<p>{% highlight %}gem install debug -v &#39;1.7.1&#39;{% endhighlight %}</p>
 
-<p><code>直接使用以上命令</code></p>
+<p>{% highlight %}直接使用以上命令{% endhighlight %}</p>
 
 <p>出现这个问题可能是因为您的bundle缓存中已经有一个损坏的版本或者Gemfile.lock文件与您运行bundle install命令的软件环境不匹配。以下是一些可能的解决方法：</p>
 
@@ -14,24 +14,24 @@ categories:
 	<li>清除bundle缓存并重新运行bundle install命令。</li>
 </ol>
 
-<pre>
-<code>bundle clean --force
+{% highlight %}
+{% highlight %}bundle clean --force
 bundle install{% endhighlight %}
 
 <ol start="2">
 	<li>更新Bundler版本和Gemfile.lock文件。</li>
 </ol>
 
-<pre>
-<code>bundle update --bundler
+{% highlight %}
+{% highlight %}bundle update --bundler
 bundle update Gemfile.lock{% endhighlight %}
 
 <ol start="3">
 	<li>删除原有的Gemfile.lock文件和.lock文件夹，然后重新运行bundle install命令。</li>
 </ol>
 
-<pre>
-<code>rm Gemfile.lock
+{% highlight %}
+{% highlight %}rm Gemfile.lock
 rm -rf .bundle
 bundle install{% endhighlight %}
 
@@ -39,8 +39,8 @@ bundle install{% endhighlight %}
 	<li>确认debug gem是否存在，尝试手动安装debug。</li>
 </ol>
 
-<pre>
-<code>gem list debug
+{% highlight %}
+{% highlight %}gem list debug
 gem install debug -v &#39;1.7.1&#39;{% endhighlight %}
 
 <ol start="5">

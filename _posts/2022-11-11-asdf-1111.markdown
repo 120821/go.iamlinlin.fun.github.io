@@ -8,7 +8,7 @@ categories:
 
 {% highlight %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}
 
-{% highlight %}然后增加 ~/.bashrc：(</code> source ./bashrc)</pre>
+{% highlight %}然后增加 ~/.bashrc：({% endhighlight %} source ./bashrc){% endhighlight %}
 
 <pre class="shiki" style="background-color:#272822;">
 <code class="hljs language-bash">. <span class="hljs-variable">$HOME</span>/.asdf/asdf.sh{% endhighlight %}
@@ -31,7 +31,7 @@ categories:
 <p>安装docker postgres</p>
 
 <pre class="hljs sql">
- sudo apt-get <span class="hljs-operator"><span class="hljs-keyword">update</span></span></pre>
+ sudo apt-get <span class="hljs-operator"><span class="hljs-keyword">update</span></span>{% endhighlight %}
 
 <pre class="hljs sql">
  sudo apt-get <span class="hljs-operator"><span class="hljs-keyword">update</span>
@@ -44,20 +44,20 @@ categories:
  sudo apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span>
  sudo apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">install</span> docker-ce docker-ce-cli containerd.io
  sudo docker run hello-world
- sudo docker run -it ubuntu bash</span></pre>
+ sudo docker run -it ubuntu bash</span>{% endhighlight %}
 
 <p><span class="hljs-operator">安装docker compose</span></p>
 
-<p>wget<code> https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64(网太差了吧）</code></p>
+<p>wget{% highlight %} https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64(网太差了吧）{% endhighlight %}</p>
 
 <p>sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose</p>
 
 <p>chmod +x /usr/local/bin/docker-compose</p>
 
-<p><code>docker-compose --version<br />
-Docker Compose version v2.5.0</code></p>
+<p>{% highlight %}docker-compose --version<br />
+Docker Compose version v2.5.0{% endhighlight %}</p>
 
-<p><code>实际上：</code></p>
+<p>{% highlight %}实际上：{% endhighlight %}</p>
 
 <p>sudo apt&nbsp; install docker-compose</p>
 
@@ -73,7 +73,7 @@ docker-compose version 1.29.2, build unknown</p>
 <p>~# docker-compose --version<br />
 Docker Compose version v2.5.0</p>
 
-<p><code>安装postgres</code></p>
+<p>{% highlight %}安装postgres{% endhighlight %}</p>
 
 <p>sudo docker pull postgres:14</p>
 
@@ -99,19 +99,19 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;
 <pre class="notranslate">
 <code class="hljs language-ruby"><span class="hljs-symbol">:PluginInstall</span>{% endhighlight %}
 
-<p><code class="hljs language-ruby"><span class="hljs-symbol">4.安装go caddy</span></code></p>
+<p><code class="hljs language-ruby"><span class="hljs-symbol">4.安装go caddy</span>{% endhighlight %}</p>
 
-<p><code>mkdir /opt/app/go</code></p>
+<p>{% highlight %}mkdir /opt/app/go{% endhighlight %}</p>
 
-<p><code>进入 /opt/app/go</code></p>
+<p>{% highlight %}进入 /opt/app/go{% endhighlight %}</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-bash">wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 {% endhighlight %}
 
 <p>tar zxvf go1.19.3.linux-amd64.tar.gz</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-bash"><span class="hljs-comment">#golang安装目录</span>
 
 <span class="hljs-built_in">export</span> GOROOT=/opt/app/go/go
@@ -133,7 +133,7 @@ go version go1.19.3 linux/amd64</p>
 
 <p>下载xcaddy</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-bash">go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest{% endhighlight %}
 
 <p>4.启动项目</p>

@@ -8,8 +8,8 @@ categories:
 
 <p>如果结果和预期结果不同，那么会返回err, 并显示两个结果的区别</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 import (
   &quot;testing&quot;
   &quot;github.com/stretchr/testify/assert&quot;

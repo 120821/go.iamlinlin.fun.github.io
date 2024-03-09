@@ -8,8 +8,8 @@ categories:
 
 <p>设置默认站点hi.c.com, 重启nginx，在非隐私窗口访问http://c.com， 可以定向到https://c.com</p>
 
-<pre>
-<code><span style="color:#00e0e0">server</span> {
+{% highlight %}
+{% highlight %}<span style="color:#00e0e0">server</span> {
     <span style="color:#ffd700">listen</span> <span style="color:#f5ab35">80</span> default_server;
     <span style="color:#ffd700">listen</span> [::]:<span style="color:#f5ab35">80</span> default_server;
 

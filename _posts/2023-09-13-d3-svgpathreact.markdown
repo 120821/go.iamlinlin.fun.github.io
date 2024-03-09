@@ -10,24 +10,24 @@ categories:
 
 <p>1.安装依赖d3库</p>
 
-<pre>
-<code>npm install d3{% endhighlight %}
+{% highlight %}
+{% highlight %}npm install d3{% endhighlight %}
 
-<p><code>或</code></p>
+<p>{% highlight %}或{% endhighlight %}</p>
 
-<pre>
-<code>yarn add d3{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn add d3{% endhighlight %}
 
-<p><code>2.</code>在React组件中导入D3和react的useEffect钩子</p>
+<p>{% highlight %}2.{% endhighlight %}在React组件中导入D3和react的useEffect钩子</p>
 
-<pre>
-<code>import React, { useEffect } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;{% endhighlight %}
 
-<p><code>3.</code>在钩子里使用D3：</p>
+<p>{% highlight %}3.{% endhighlight %}在钩子里使用D3：</p>
 
-<pre>
-<code>const MyComponent = () =&gt; {
+{% highlight %}
+{% highlight %}const MyComponent = () =&gt; {
   useEffect(() =&gt; {
     // D3 的路径生成器
     const pathGenerator = d3.path();
@@ -48,10 +48,10 @@ import * as d3 from &#39;d3&#39;;{% endhighlight %}
   return &lt;svg /&gt;;
 };{% endhighlight %}
 
-<p><code>4.</code>在jsx中渲染svg:</p>
+<p>{% highlight %}4.{% endhighlight %}在jsx中渲染svg:</p>
 
-<pre>
-<code>const MyComponent = () =&gt; {
+{% highlight %}
+{% highlight %}const MyComponent = () =&gt; {
   const svgRef = useRef(null);
 
   useEffect(() =&gt; {

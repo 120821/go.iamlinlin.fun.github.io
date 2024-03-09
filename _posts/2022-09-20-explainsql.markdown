@@ -13,7 +13,7 @@ categories:
 <span class="hljs-keyword">select</span>&nbsp;*&nbsp;<span class="hljs-keyword">from</span>&nbsp;emp&nbsp;<span class="hljs-keyword">where</span>&nbsp;<span class="hljs-keyword">name</span>&nbsp;=&nbsp;<span class="hljs-string">&#39;Jefabc&#39;</span>;
 <img height="677" src="/uploads/ckeditor/pictures/413/image-20220920141716-2.png" width="900" />
 <span class="hljs-comment">--&nbsp;查看SQL是否使用索引，前面加上explain即可</span>
-<span class="hljs-keyword">explain</span>&nbsp;<span class="hljs-keyword">select</span>&nbsp;*&nbsp;<span class="hljs-keyword">from</span>&nbsp;emp&nbsp;<span class="hljs-keyword">where</span>&nbsp;<span class="hljs-keyword">name</span>&nbsp;=&nbsp;<span class="hljs-string">&#39;Jefabc&#39;</span></pre>
+<span class="hljs-keyword">explain</span>&nbsp;<span class="hljs-keyword">select</span>&nbsp;*&nbsp;<span class="hljs-keyword">from</span>&nbsp;emp&nbsp;<span class="hljs-keyword">where</span>&nbsp;<span class="hljs-keyword">name</span>&nbsp;=&nbsp;<span class="hljs-string">&#39;Jefabc&#39;</span>{% endhighlight %}
 
 <p><img height="190" src="/uploads/ckeditor/pictures/414/image-20220920141908-1.png" width="769" /></p>
 
@@ -59,5 +59,5 @@ categories:
 
 <pre class="brush:sql;toolbar:false hljs">
 <span class="hljs-comment">--&nbsp;查看在研发部并且名字以Jef开头的员工，经典查询</span>
-<span class="hljs-keyword">explain</span>&nbsp;<span class="hljs-keyword">select</span>&nbsp;e.no,&nbsp;e.name&nbsp;<span class="hljs-keyword">from</span>&nbsp;emp&nbsp;e&nbsp;<span class="hljs-keyword">left</span>&nbsp;<span class="hljs-keyword">join</span>&nbsp;dept&nbsp;d&nbsp;<span class="hljs-keyword">on</span>&nbsp;e.dept_no&nbsp;=&nbsp;d.no&nbsp;<span class="hljs-keyword">where</span>&nbsp;e.name&nbsp;<span class="hljs-keyword">like</span>&nbsp;<span class="hljs-string">&#39;Jef%&#39;</span>&nbsp;<span class="hljs-keyword">and</span>&nbsp;d.name&nbsp;=&nbsp;<span class="hljs-string">&#39;研发部&#39;</span>;</pre>
+<span class="hljs-keyword">explain</span>&nbsp;<span class="hljs-keyword">select</span>&nbsp;e.no,&nbsp;e.name&nbsp;<span class="hljs-keyword">from</span>&nbsp;emp&nbsp;e&nbsp;<span class="hljs-keyword">left</span>&nbsp;<span class="hljs-keyword">join</span>&nbsp;dept&nbsp;d&nbsp;<span class="hljs-keyword">on</span>&nbsp;e.dept_no&nbsp;=&nbsp;d.no&nbsp;<span class="hljs-keyword">where</span>&nbsp;e.name&nbsp;<span class="hljs-keyword">like</span>&nbsp;<span class="hljs-string">&#39;Jef%&#39;</span>&nbsp;<span class="hljs-keyword">and</span>&nbsp;d.name&nbsp;=&nbsp;<span class="hljs-string">&#39;研发部&#39;</span>;{% endhighlight %}
 

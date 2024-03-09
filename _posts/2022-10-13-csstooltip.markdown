@@ -8,8 +8,8 @@ categories:
 
 <p>使用css实现tooltip（可以自行调整tooltip的宽度字体颜色背景色）：</p>
 
-<pre>
-<code>&lt;style&gt;
+{% highlight %}
+{% highlight %}&lt;style&gt;
 .tooltip {
 &nbsp; position: relative;
 &nbsp; display: inline-block;

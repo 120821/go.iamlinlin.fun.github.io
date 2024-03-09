@@ -8,12 +8,12 @@ categories:
 
 <p>使用：</p>
 
-<p><code>&lt;br /&gt;</code></p>
+<p>{% highlight %}&lt;br /&gt;{% endhighlight %}</p>
 
 <p>比较完整的例子：</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   return (
     &lt;div&gt;
       &lt;span&gt;第一行内容&lt;/span&gt;

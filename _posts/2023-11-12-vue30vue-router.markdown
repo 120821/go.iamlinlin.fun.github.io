@@ -8,14 +8,14 @@ categories:
 
 <p>1.安装依赖：</p>
 
-<pre>
-<code>npm install vue-router{% endhighlight %}
+{% highlight %}
+{% highlight %}npm install vue-router{% endhighlight %}
 
-<p><code>2.创建router.js,使用vue-router</code></p>
+<p>{% highlight %}2.创建router.js,使用vue-router{% endhighlight %}</p>
 
 <div class="extra-class language-js">
-<pre>
-<code>import Vue from &#39;vue&#39;
+{% highlight %}
+{% highlight %}import Vue from &#39;vue&#39;
 import VueRouter from &#39;vue-router&#39;
 
 Vue.use(VueRouter)
@@ -23,8 +23,8 @@ Vue.use(VueRouter)
 
 <p>例如：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">import</span> Vue <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;vue&#39;</span>;
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">import</span> Vue <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;vue&#39;</span>;
 <span style="color:#dcc6e0">import</span> VueRouter <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;vue-router&#39;</span>;
 
 <span style="color:#dcc6e0">import</span> HelloWorld <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./components/HelloWorld.vue&#39;</span>;

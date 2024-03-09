@@ -5,10 +5,10 @@ date: 2023-12-22
 categories: jekyll update
 ---
 <p>1.在命令行直接输入：</p>
-<pre>
-<code>pg_dumpall -U &lt;用户名&gt; -f &lt;备份文件路径&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}pg_dumpall -U &lt;用户名&gt; -f &lt;备份文件路径&gt;{% endhighlight %}
 <p>例如：</p>
-<pre>
-<code>pg_dumpall -U myuser -f /path/to/backup.sql{% endhighlight %}
+{% highlight %}
+{% highlight %}pg_dumpall -U myuser -f /path/to/backup.sql{% endhighlight %}
 <p>然后就等待执行结束，即可（我在本地使用的时候，没有提示输入密码，也没有输入密码，就备份完成了。6.9G数据）</p>
 

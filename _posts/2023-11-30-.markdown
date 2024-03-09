@@ -8,8 +8,8 @@ categories:
 
 <p>内容设置为：</p>
 
-<pre>
-<code># 设置备份目录和文件名
+{% highlight %}
+{% highlight %}# 设置备份目录和文件名
 backup_dir=&quot;/你的备份文件夹路径_xxx_backup_data&quot;
 backup_file=&quot;$backup_dir/$(date +%Y%m%d_%H%M%S).sql&quot;  # 使用了日期加时间命名
 
@@ -37,14 +37,14 @@ sleep 24h
 ## 执行脚本本身，实现每天的定时执行
 /你的备份执行文件路径/backup.sh{% endhighlight %}
 
-<p><code>执行一下，例如我修改为24s执行一次备份:</code></p>
+<p>{% highlight %}执行一下，例如我修改为24s执行一次备份:{% endhighlight %}</p>
 
-<pre>
-<code>
-<code>./backup.sh
+{% highlight %}
+{% highlight %}
+{% highlight %}./backup.sh
 数据库备份完成：/xxx/20231130_112909.sql
 数据库备份完成：/xxx/20231130_112934.sql
-数据库备份完成：/xxx/20231130_112958.sql</code>{% endhighlight %}
+数据库备份完成：/xxx/20231130_112958.sql{% endhighlight %}{% endhighlight %}
 
-<p><code>&nbsp;</code></p>
+<p>{% highlight %}&nbsp;{% endhighlight %}</p>
 

@@ -6,19 +6,19 @@ categories:
 ---
 <p>把id进行精确：</p>
 
-<pre>
-<code>WHERE project.id = &#39;3&#39;
+{% highlight %}
+{% highlight %}WHERE project.id = &#39;3&#39;
 {% endhighlight %}
 
 <p>使用joins进行查询：</p>
 
-<pre>
-<code>&nbsp; @emails = @emails.joins(:project).where(&quot;projects.id = ?&quot;, params[:project_id]) if params[:project_id].present?{% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp; @emails = @emails.joins(:project).where(&quot;projects.id = ?&quot;, params[:project_id]) if params[:project_id].present?{% endhighlight %}
 
 <p>视图页面：</p>
 
-<pre>
-<code>&lt;%= form_tag emails_path, method: &#39;GET&#39; do |f| %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form_tag emails_path, method: &#39;GET&#39; do |f| %&gt;
 
 &nbsp; &lt;b&gt;search by project:&lt;/b&gt;&lt;br/&gt;
 

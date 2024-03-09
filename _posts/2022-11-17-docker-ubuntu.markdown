@@ -16,23 +16,23 @@ categories:
 
 <p>拉取最新的Ubuntu镜像 ：</p>
 
-<pre>
-<code>$ docker pull ubuntu{% endhighlight %}
+{% highlight %}
+{% highlight %}$ docker pull ubuntu{% endhighlight %}
 
 <p>或者</p>
 
-<pre>
-<code>$ docker pull ubuntu:latest{% endhighlight %}
+{% highlight %}
+{% highlight %}$ docker pull ubuntu:latest{% endhighlight %}
 
 <p>查看本地镜像：</p>
 
-<pre>
-<code>$ docker images{% endhighlight %}
+{% highlight %}
+{% highlight %}$ docker images{% endhighlight %}
 
 <p>运行容器，并且可以通过 exec 命令进入 ubuntu 容器</p>
 
-<pre>
-<code>$ docker run -itd --name ubuntu-test ubuntu{% endhighlight %}
+{% highlight %}
+{% highlight %}$ docker run -itd --name ubuntu-test ubuntu{% endhighlight %}
 
 <p>安装成功</p>
 

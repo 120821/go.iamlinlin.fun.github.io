@@ -8,15 +8,15 @@ categories:
 
 <p>使用命令（生成一个可执行文件）</p>
 
-<pre>
-<code>go build{% endhighlight %}
+{% highlight %}
+{% highlight %}go build{% endhighlight %}
 
 <p>然后把生成的可执行文件进行执行即可。</p>
 
 <p>如果要在生产模式下执行，可以根据提示：</p>
 
-<pre>
-<code>[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.
+{% highlight %}
+{% highlight %}[GIN-debug] [WARNING] Running in &quot;debug&quot; mode. Switch to &quot;release&quot; mode in production.
 
 &nbsp;- using env:&nbsp;&nbsp; &nbsp;export GIN_MODE=release
 
@@ -24,8 +24,8 @@ categories:
 
 <p>运行：</p>
 
-<pre>
-<code>export GIN_MODE=release{% endhighlight %}
+{% highlight %}
+{% highlight %}export GIN_MODE=release{% endhighlight %}
 
 <p>然后执行可执行文件即可。</p>
 

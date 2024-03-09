@@ -25,7 +25,7 @@ bundle
 bundle <span class="hljs-built_in">exec</span> rails webpacker:install 
 bundle <span class="hljs-built_in">exec</span> rake db assets:compile 
 bundle <span class="hljs-built_in">exec</span> rails s -p <span class="hljs-number">3355</span>
-</pre>
+{% endhighlight %}
 
 <p>然后caddy中增加：</p>
 
@@ -45,5 +45,5 @@ homeland.yoursite.com {
   }
 }
 
-</pre>
+{% endhighlight %}
 

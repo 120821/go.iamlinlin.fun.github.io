@@ -7,24 +7,24 @@ categories:
 <p>1.需要已经安装了python,安装配置虚拟环境：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>python3 -m venv patator-env
+{% highlight %}python3 -m venv patator-env
 source patator-env/bin/activate{% endhighlight %}
 
 <p>2.在激活的虚拟环境安装patator:</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>pip install patator{% endhighlight %}
+{% highlight %}pip install patator{% endhighlight %}
 
 <p>3.运行</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>patator [patator-arguments]{% endhighlight %}
+{% highlight %}patator [patator-arguments]{% endhighlight %}
 
 <p>但是我安装失败了：</p>
 
 <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>Installing build dependencies ... <span style="color:#dcc6e0">done</span>
+{% highlight %}Installing build dependencies ... <span style="color:#dcc6e0">done</span>
   Getting requirements <span style="color:#dcc6e0">to</span> build wheel ... error
   error: subprocess-exited-<span style="color:#dcc6e0">with</span>-error
   
@@ -75,19 +75,19 @@ source patator-env/bin/activate{% endhighlight %}
 <p>设置环境变量：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>export MYSQLCLIENT_CFLAGS=&quot;-I/usr/include/mysql&quot;
+{% highlight %}export MYSQLCLIENT_CFLAGS=&quot;-I/usr/include/mysql&quot;
 export MYSQLCLIENT_LDFLAGS=&quot;-L/usr/lib/x86_64-linux-gnu -lmysqlclient&quot;{% endhighlight %}
 
 <p>重新安装：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>pip install patator{% endhighlight %}
+{% highlight %}pip install patator{% endhighlight %}
 
 <p>但是还是不行：</p>
 
 <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code> <span style="color:#ffd700">Running</span> setup.py clean for pysqlcipher<span style="color:#f5ab35">3</span>
+{% highlight %} <span style="color:#ffd700">Running</span> setup.py clean for pysqlcipher<span style="color:#f5ab35">3</span>
   <span style="color:#ffd700">Building</span> wheel for dsinternals (setup.py) ... done
   <span style="color:#ffd700">Created</span> wheel for dsinternals: filename=dsinternals-<span style="color:#f5ab35">1</span>.<span style="color:#f5ab35">2</span>.<span style="color:#f5ab35">4</span>-py<span style="color:#f5ab35">3</span>-none-any.whl size=<span style="color:#f5ab35">208334</span> sha<span style="color:#f5ab35">256</span>=<span style="color:#f5ab35">3</span>b<span style="color:#f5ab35">074</span>c<span style="color:#f5ab35">371</span>d<span style="color:#f5ab35">3</span>dd<span style="color:#f5ab35">0742</span>f<span style="color:#f5ab35">83</span>d<span style="color:#f5ab35">772</span>c<span style="color:#f5ab35">9</span>f<span style="color:#f5ab35">456</span>c<span style="color:#f5ab35">586</span>e<span style="color:#f5ab35">8</span>cd<span style="color:#f5ab35">086</span>b<span style="color:#f5ab35">37</span>ccca<span style="color:#f5ab35">1</span>a<span style="color:#f5ab35">6189</span>e<span style="color:#f5ab35">76662</span>d<span style="color:#f5ab35">8</span>df
   <span style="color:#ffd700">Stored</span> in directory: /home/linlin/.cache/pip/wheels/dd/dc/<span style="color:#f5ab35">71</span>/<span style="color:#f5ab35">93</span>fb<span style="color:#f5ab35">7</span>be<span style="color:#f5ab35">53723</span>b<span style="color:#f5ab35">600</span>c<span style="color:#f5ab35">4363</span>af<span style="color:#f5ab35">8</span>f<span style="color:#f5ab35">0</span>bc<span style="color:#f5ab35">1</span>b<span style="color:#f5ab35">88</span>aee<span style="color:#f5ab35">50</span>a<span style="color:#f5ab35">988</span>d<span style="color:#f5ab35">26266598</span>

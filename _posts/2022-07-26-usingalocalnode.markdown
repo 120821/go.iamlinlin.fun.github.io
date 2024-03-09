@@ -34,9 +34,9 @@ listen to truffle</p>
 
 <p>Geth needs to have a special CORS setting enabled to allow MetaMask to connect to it by default, so try starting it with this command:</p>
 
-<p><code>geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;</code></p>
+<p>{% highlight %}geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;{% endhighlight %}</p>
 
-<p><code>本地没有运行，切换网络后，进行命令的执行。</code></p>
+<p>{% highlight %}本地没有运行，切换网络后，进行命令的执行。{% endhighlight %}</p>
 
 <p>geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;<br />
 Incorrect Usage. flag provided but not defined: -rpc</p>

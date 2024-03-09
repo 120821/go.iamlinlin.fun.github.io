@@ -12,11 +12,11 @@ categories:
 
 <p>2.设置为可执行文件</p>
 
-<p><code>chmod +x ksnip-1.10.0-x86_64.AppImage</code></p>
+<p>{% highlight %}chmod +x ksnip-1.10.0-x86_64.AppImage{% endhighlight %}</p>
 
 <p>3.使用</p>
 
-<p><code>./ksnip-1.10.0-x86_64.AppImage</code></p>
+<p>{% highlight %}./ksnip-1.10.0-x86_64.AppImage{% endhighlight %}</p>
 
 <p>4.设置快捷键(可以参考siwei.me文章操作)</p>
 

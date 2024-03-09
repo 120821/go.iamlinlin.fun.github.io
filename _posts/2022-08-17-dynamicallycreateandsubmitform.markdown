@@ -11,7 +11,7 @@ categories:
     $(<span class="hljs-string">&#39;&lt;form action=&quot;form2.html&quot;&gt;&lt;/form&gt;&#39;</span>).<span class="hljs-title function_">appendTo</span>(<span class="hljs-string">&#39;body&#39;</span>).<span class="hljs-title function_">submit</span>();
 });{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><tt><code class="hljs language-javascript">使用.appendTo(&#39;body&#39;)才可以提交</code></tt></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><tt><code class="hljs language-javascript">使用.appendTo(&#39;body&#39;)才可以提交{% endhighlight %}</tt></div>
 
 <pre class="lang-js s-code-block">
 <code class="hljs language-javascript"><span class="hljs-title function_">jQuery</span>(<span class="hljs-string">&#39;#fire&#39;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>){
@@ -28,10 +28,10 @@ categories:
     newForm.<span class="hljs-title function_">submit</span>();
 });{% endhighlight %}
 
-<pre>
+{% highlight %}
 <code class="hljs language-javascript">修改为：newForm.<span class="hljs-title function_">appendTo(&#39;body&#39;).submit</span>();{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="hljs language-javascript">需要提交多个数据，就多个input即可</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="hljs language-javascript">需要提交多个数据，就多个input即可{% endhighlight %}</div>
 
 <pre class="lang-js s-code-block">
 <code class="hljs language-javascript"><span class="hljs-title function_">jQuery</span>(<span class="hljs-string">&#39;#fire&#39;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>){
@@ -55,8 +55,8 @@ categories:
 
 <p>然后增加csrf保护：</p>
 
-<pre>
-<code>let newForm = jQuery(&#39;&lt;form id=&quot;my_form&quot; action=&quot;/contracts/save_deploy_information&quot; method=&quot;POST&quot;&gt;&#39;)
+{% highlight %}
+{% highlight %}let newForm = jQuery(&#39;&lt;form id=&quot;my_form&quot; action=&quot;/contracts/save_deploy_information&quot; method=&quot;POST&quot;&gt;&#39;)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .append(jQuery(&#39;&lt;input&gt;&#39;, {
 

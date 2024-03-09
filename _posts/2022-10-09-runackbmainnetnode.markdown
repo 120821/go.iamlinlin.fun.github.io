@@ -23,8 +23,8 @@ rake aborted!</p>
 
 <p>解决：<a href="https://qiita.com/vaza__ta/items/1e7a780499b5effbfd65">https://qiita.com/vaza__ta/items/1e7a780499b5effbfd65</a></p>
 
-<pre>
-<code>bundle update --bundler {% endhighlight %}
+{% highlight %}
+{% highlight %}bundle update --bundler {% endhighlight %}
 
 <p>更新bundle的版本</p>
 
@@ -41,7 +41,7 @@ rake aborted!</p>
 gem <span class="token string">&#39;net-imap&#39;</span>
 gem <span class="token string">&#39;net-pop&#39;</span>{% endhighlight %}
 
-<p><code class="language-ruby"><span class="token string">然后bundle即可</span></code></p>
+<p><code class="language-ruby"><span class="token string">然后bundle即可</span>{% endhighlight %}</p>
 
 <p><img height="218" src="/uploads/ckeditor/pictures/530/image-20221009100037-2.png" width="1912" /></p>
 
@@ -52,8 +52,8 @@ Could not open library &#39;libsecp256k1.so&#39;: libsecp256k1.so: cannot open s
 
 <p>解决：<a href="https://github.com/cryptape/ruby-bitcoin-secp256k1">https://github.com/cryptape/ruby-bitcoin-secp256k1</a></p>
 
-<pre>
-sudo apt install libsecp256k1-dev</pre>
+{% highlight %}
+sudo apt install libsecp256k1-dev{% endhighlight %}
 
 <p><img height="218" src="/uploads/ckeditor/pictures/531/image-20221009100205-3.png" width="1912" /></p>
 
@@ -64,50 +64,50 @@ sudo apt install libsecp256k1-dev</pre>
 <p>安装14的postgres：<a href="https://citizix.com/how-to-install-and-configure-postgres-14-ubuntu-22-04/">https://citizix.com/how-to-install-and-configure-postgres-14-ubuntu-22-04/</a></p>
 
 <pre class="wp-block-code">
-<code>sudo apt update{% endhighlight %}
+{% highlight %}sudo apt update{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>udo apt -y upgrade{% endhighlight %}
+{% highlight %}udo apt -y upgrade{% endhighlight %}
 
-<p><code>或者：</code></p>
-
-<pre class="wp-block-code">
-<code>sudo apt update &amp;&amp; sudo apt -y full-upgrade{% endhighlight %}
-
-<p><code>重启：</code></p>
+<p>{% highlight %}或者：{% endhighlight %}</p>
 
 <pre class="wp-block-code">
-<code>[ -f /var/run/reboot-required ] &amp;&amp; sudo reboot -f{% endhighlight %}
+{% highlight %}sudo apt update &amp;&amp; sudo apt -y full-upgrade{% endhighlight %}
+
+<p>{% highlight %}重启：{% endhighlight %}</p>
 
 <pre class="wp-block-code">
-<code>sudo apt install vim curl wget gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates{% endhighlight %}
+{% highlight %}[ -f /var/run/reboot-required ] &amp;&amp; sudo reboot -f{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>apt policy postgresql{% endhighlight %}
+{% highlight %}sudo apt install vim curl wget gpg gnupg2 software-properties-common apt-transport-https lsb-release ca-certificates{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg{% endhighlight %}
+{% highlight %}apt policy postgresql{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;{% endhighlight %}
+{% highlight %}curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo apt  update{% endhighlight %}
-
-<p><code>安装：</code></p>
+{% highlight %}sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;{% endhighlight %}
 
 <pre class="wp-block-code">
-<code>sudo apt install postgresql-14{% endhighlight %}
+{% highlight %}sudo apt  update{% endhighlight %}
+
+<p>{% highlight %}安装：{% endhighlight %}</p>
 
 <pre class="wp-block-code">
-<code><mark class="has-inline-color has-luminous-vivid-amber-color" style="background-color:initial">查看状态：systemctl status postgresql@14-main.service</mark>{% endhighlight %}
+{% highlight %}sudo apt install postgresql-14{% endhighlight %}
+
+<pre class="wp-block-code">
+{% highlight %}<mark class="has-inline-color has-luminous-vivid-amber-color" style="background-color:initial">查看状态：systemctl status postgresql@14-main.service</mark>{% endhighlight %}
 
 <p><img height="624" src="/uploads/ckeditor/pictures/533/image-20221009111730-2.png" width="1920" /></p>
 
 <pre class="wp-block-code">
-<code>sudo -u postgres psql -c &quot;SELECT version();&quot;{% endhighlight %}
+{% highlight %}sudo -u postgres psql -c &quot;SELECT version();&quot;{% endhighlight %}
 
-<p><code>出现了报错：</code></p>
+<p>{% highlight %}出现了报错：{% endhighlight %}</p>
 
 <p>Warning: No existing cluster is suitable as a default target. Please see man pg_wrapper(1) how to specify one.<br />
 psql: error: connection to server on socket &quot;/var/run/postgresql/.s.PGSQL.5432&quot; failed: No such file or directory<br />

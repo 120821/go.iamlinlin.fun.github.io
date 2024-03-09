@@ -37,5 +37,5 @@ categories:
         }
       });
     }
-</span></pre>
+</span>{% endhighlight %}
 

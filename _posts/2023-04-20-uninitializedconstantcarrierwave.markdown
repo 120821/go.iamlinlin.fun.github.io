@@ -10,18 +10,18 @@ categories:
 
 <p>1. 确保将 CarrierWave gem 添加到了 Gemfile 中，然后运行 `bundle install` 来安装它。</p>
 
-<pre>
-<code>gem &#39;carrierwave&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &#39;carrierwave&#39;{% endhighlight %}
 
 <p>2. 确保在正确的地方要求 CarrierWave，例如在 `config/application.rb` 或 `config/environments/*.rb` 文件中添加：</p>
 
-<pre>
-<code>require &#39;carrierwave&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}require &#39;carrierwave&#39;{% endhighlight %}
 
 <p>3. 如果使用了 Rails，确保 `config/application.rb` 文件中有以下代码：</p>
 
-<pre>
-<code># 加载 Rails 应用程序框架，以便 CarrierWave 可以访问它
+{% highlight %}
+{% highlight %}# 加载 Rails 应用程序框架，以便 CarrierWave 可以访问它
 
 require_relative &#39;boot&#39;
 
@@ -41,13 +41,13 @@ end{% endhighlight %}
 
 <p>4. 如果在 Rails 中使用 CarrierWave，请确保在 `config/application.rb` 和 `config/environments/*.rb` 配置文件中有以下配置项：</p>
 
-<pre>
-<code>config.autoload_paths += %W(#{config.root}/app/uploaders){% endhighlight %}
+{% highlight %}
+{% highlight %}config.autoload_paths += %W(#{config.root}/app/uploaders){% endhighlight %}
 
 <p>5. 确保 CarrierWave 初始化配置正确，在 `config/initializers/carrierwave.rb` 文件中添加以下内容：</p>
 
-<pre>
-<code>require &#39;carrierwave&#39;
+{% highlight %}
+{% highlight %}require &#39;carrierwave&#39;
 
 require &#39;carrierwave/orm/activerecord&#39;
 

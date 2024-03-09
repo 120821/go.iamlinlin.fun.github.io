@@ -30,9 +30,9 @@ categories:
 <span style="color:#000;font-weight:700">}</span>
 {% endhighlight %}
 
-<p><code>补全代码：</code></p>
+<p>{% highlight %}补全代码：{% endhighlight %}</p>
 
-<p><code>增加代码中引入的内容和定义一下函数,可以把post修改为get，或者增加表单等</code></p>
+<p>{% highlight %}增加代码中引入的内容和定义一下函数,可以把post修改为get，或者增加表单等{% endhighlight %}</p>
 
 <p><img height="122" src="/uploads/ckeditor/pictures/642/image-20221025105217-2.png" width="479" /></p>
 

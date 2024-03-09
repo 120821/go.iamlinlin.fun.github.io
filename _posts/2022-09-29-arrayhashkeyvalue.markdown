@@ -6,8 +6,8 @@ categories:
 ---
 <p>使用array和hash查找并替换array的value</p>
 
-<pre>
-<code>1.9.3p194 :007 &gt; array1 = [{&quot;name&quot;=&gt;&quot;Bob&quot;}, {&quot;age&quot;=&gt;&quot;30&quot;}] 
+{% highlight %}
+{% highlight %}1.9.3p194 :007 &gt; array1 = [{&quot;name&quot;=&gt;&quot;Bob&quot;}, {&quot;age&quot;=&gt;&quot;30&quot;}] 
 =&gt; [{&quot;name&quot;=&gt;&quot;Bob&quot;}, {&quot;age&quot;=&gt;&quot;30&quot;}] 
 1.9.3p194 :008 &gt; hash1 = array1.find { |h| h[&#39;age&#39;] == &quot;30&quot; }
  =&gt; {&quot;age&quot;=&gt;&quot;30&quot;} 
@@ -20,8 +20,8 @@ categories:
 
 <p>字符串替换使用.sub</p>
 
-<pre>
-<code>a = &quot;foo,bar,baz&quot;
+{% highlight %}
+{% highlight %}a = &quot;foo,bar,baz&quot;
 
 b = a.sub( &quot;foo&quot;, &quot;boo&quot; ){% endhighlight %}
 
@@ -29,8 +29,8 @@ b = a.sub( &quot;foo&quot;, &quot;boo&quot; ){% endhighlight %}
 
 <p>subdomain是一个数组：</p>
 
-<pre>
-<code>&quot;subdomains&quot;:[{&quot;name&quot;:&quot;zfd2.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test6.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd10.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test1.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test3.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd3.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test2.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd11.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test4.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test5.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}}]{% endhighlight %}
+{% highlight %}
+{% highlight %}&quot;subdomains&quot;:[{&quot;name&quot;:&quot;zfd2.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test6.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd10.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test1.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test3.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd3.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test2.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;zfd11.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test4.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}},{&quot;name&quot;:&quot;test5.zzzzzzzzzzzzzzzzzzzzz.dot&quot;,&quot;owner&quot;:{&quot;id&quot;:&quot;0x0b23e3588c906c3f723c58ef4d6baee7840a977c&quot;}}]{% endhighlight %}
 
 <p><img height="363" src="/uploads/ckeditor/pictures/490/image-20220929151357-1.png" width="530" /></p>
 

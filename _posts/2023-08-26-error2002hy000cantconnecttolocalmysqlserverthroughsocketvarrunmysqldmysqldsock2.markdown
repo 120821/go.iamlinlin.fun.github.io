@@ -6,8 +6,8 @@ categories:
 ---
 <p>在启动MySQL的时候，连接不上：</p>
 
-<pre>
-<code>ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;/var/run/mysqld/mysqld.sock&#39; (2)
+{% highlight %}
+{% highlight %}ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;/var/run/mysqld/mysqld.sock&#39; (2)
 root@lueluelue:/opt/app/lueluelue-pc# sudo mysql -u root
 ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;/var/run/mysqld/mysqld.sock&#39; (2)
 root@lueluelue:/opt/app/lueluelue-pc# sudo mysql -u root -p
@@ -16,18 +16,18 @@ ERROR 2002 (HY000): Can&#39;t connect to local MySQL server through socket &#39;
 
 <p>查看是否启动：</p>
 
-<pre>
-<code>sudo service mysql status{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service mysql status{% endhighlight %}
 
 <p>没有启动就启动：</p>
 
-<pre>
-<code>sudo service mysql start{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo service mysql start{% endhighlight %}
 
 <p>但是启动不成功</p>
 
-<pre>
-<code>sudo service mysql status
+{% highlight %}
+{% highlight %}sudo service mysql status
 
 Unit mysql.service could not be found.
 
@@ -45,8 +45,8 @@ root@lueluelue:/opt/app/lueluelue-pc# which mysql
 
 <p>查看是否正确安装：</p>
 
-<pre>
-<code>dpkg -l | grep mysql{% endhighlight %}
+{% highlight %}
+{% highlight %}dpkg -l | grep mysql{% endhighlight %}
 
 <p>ii&nbsp; libmysqlclient-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.0.34-0ubuntu0.22.04.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL database development files<br />
 ii&nbsp; libmysqlclient21:amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.0.34-0ubuntu0.22.04.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL database client library<br />
@@ -55,14 +55,14 @@ ii&nbsp; mysql-common&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 
 <p>进行安装：</p>
 
-<pre>
-<code>sudo apt-get update
+{% highlight %}
+{% highlight %}sudo apt-get update
 sudo apt-get install mysql-server{% endhighlight %}
 
 <p>这时候安装后就自动启动了MySQL：</p>
 
-<pre>
-<code>update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+{% highlight %}
+{% highlight %}update-alternatives: using /etc/mysql/mysql.cnf to provide /etc/mysql/my.cnf (my.cnf) in auto mode
 
 Renaming removed key_buffer and myisam-recover options (if present)
 

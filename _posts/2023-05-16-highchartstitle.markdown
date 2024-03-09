@@ -4,14 +4,14 @@ title: "使用highcharts创建圆环图，不显示title"
 date: "2023-05-16"
 categories: 
 ---
-<p>可以使用Highcharts的<code>chart</code>和<code>title</code>选项来创建一个不显示标题的圆环图</p>
+<p>可以使用Highcharts的{% highlight %}chart{% endhighlight %}和{% highlight %}title{% endhighlight %}选项来创建一个不显示标题的圆环图</p>
 
-<p>在这个例子中，使用<code>chart</code>选项指定图表类型为<code>pie</code>，并启用了3D效果。然后，使用<code>title</code>选项将标题设置为<code>null</code>，这样就不会显示标题。最后，使用<code>series</code>选项指定了数据系列。</p>
+<p>在这个例子中，使用{% highlight %}chart{% endhighlight %}选项指定图表类型为{% highlight %}pie{% endhighlight %}，并启用了3D效果。然后，使用{% highlight %}title{% endhighlight %}选项将标题设置为{% highlight %}null{% endhighlight %}，这样就不会显示标题。最后，使用{% highlight %}series{% endhighlight %}选项指定了数据系列。</p>
 
-<p>请注意，这个例子中使用了一些随机数据，如果您想要使用自己的数据，请相应地修改<code>data</code>数组</p>
+<p>请注意，这个例子中使用了一些随机数据，如果您想要使用自己的数据，请相应地修改{% highlight %}data{% endhighlight %}数组</p>
 
-<pre>
-<code>Highcharts.chart(&#39;container&#39;, {
+{% highlight %}
+{% highlight %}Highcharts.chart(&#39;container&#39;, {
   chart: {
     type: &#39;pie&#39;,
     options3d: {

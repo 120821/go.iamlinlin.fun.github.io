@@ -31,7 +31,7 @@ categories:
 $ cd &lt;项目名&gt;
 {% endhighlight %} 
  <h3 id="新建-packagejson-文件">新建 package.json 文件</h3> 
- <p><code>package.json</code> 文件用来设定如何运行 <code>nuxt</code>：</p> 
+ <p>{% highlight %}package.json{% endhighlight %} 文件用来设定如何运行 {% highlight %}nuxt{% endhighlight %}：</p> 
  {% highlight %}{
   "name": "my-app",
   "scripts": {
@@ -39,16 +39,16 @@ $ cd &lt;项目名&gt;
   }
 }
 {% endhighlight %} 
- <p>上面的配置使得我们可以通过运行 <code>npm run dev</code> 来运行 <code>nuxt</code></p> 
- <p>过以下 npm 命令将 <code>nuxt</code> <strong>安装</strong>至项目中：</p> 
+ <p>上面的配置使得我们可以通过运行 {% highlight %}npm run dev{% endhighlight %} 来运行 {% highlight %}nuxt{% endhighlight %}</p> 
+ <p>过以下 npm 命令将 {% highlight %}nuxt{% endhighlight %} <strong>安装</strong>至项目中：</p> 
  {% highlight %}$ npm install --save nuxt
 {% endhighlight %} 
 </blockquote> 
 <blockquote> 
- <p>创建 <code>pages</code> 目录：</p> 
+ <p>创建 {% highlight %}pages{% endhighlight %} 目录：</p> 
  {% highlight %}$ mkdir pages
 {% endhighlight %} 
- <p>创建我们的第一个页面 <code>pages/index.vue</code>：</p> 
+ <p>创建我们的第一个页面 {% highlight %}pages/index.vue{% endhighlight %}：</p> 
  {% highlight %}&lt;template&gt;
   &lt;h1&gt;Hello world!&lt;/h1&gt;
 &lt;/template&gt;

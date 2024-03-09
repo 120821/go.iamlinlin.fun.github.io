@@ -70,7 +70,7 @@ end</p>
 &nbsp; end<br />
 end</p>
 
-<p>比较复杂的是：<a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Associations/ClassMethods.html#method-i-has_many"><code>has_many :through</code></a></p>
+<p>比较复杂的是：<a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Associations/ClassMethods.html#method-i-has_many">{% highlight %}has_many :through{% endhighlight %}</a></p>
 
 <p>class Physician &lt; ApplicationRecord<br />
 &nbsp; has_many :appointments<br />

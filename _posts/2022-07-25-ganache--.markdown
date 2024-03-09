@@ -13,12 +13,12 @@ categories:
 <p dir="auto"><font style="vertical-align:inherit">要全局安装 Ganache，请运行： </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
-<code>$ npm install ganache --global{% endhighlight %}
+{% highlight %}
+{% highlight %}$ npm install ganache --global{% endhighlight %}
 </div>
 
-<pre>
-<code>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install ganache --global
+{% highlight %}
+{% highlight %}linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install ganache --global
 
 added 3 packages, and audited 35 packages in 10s
 
@@ -26,9 +26,9 @@ added 3 packages, and audited 35 packages in 10s
 
 &nbsp; run `npm fund` for details
 
-found 0 vulnerabilities</code>
+found 0 vulnerabilities{% endhighlight %}
 
-Reshimming asdf nodejs...</pre>
+Reshimming asdf nodejs...{% endhighlight %}
 
 <p><font style="vertical-align:inherit">全局安装后，您可以直接从命令行启动 ganache：</font></p>
 
@@ -88,33 +88,33 @@ Base HD Path:&nbsp; m/44&#39;/60&#39;/0&#39;/0/{account_index}</p>
 <p dir="auto"><font style="vertical-align:inherit">要将 Ganache 安装到 npm 项目中，请运行： </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
-$ npm install ganache</pre>
+{% highlight %}
+$ npm install ganache{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">然后，您可以将 Ganache 添加到您的 package.json 脚本中： </font></p>
 
 <div class="highlight highlight-source-json notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 &quot;scripts&quot;: {
   &quot;ganache&quot;: &quot;ganache --wallet.seed myCustomSeed&quot;
-}</pre>
+}{% endhighlight %}
 
 <p dir="auto"><em><font style="vertical-align:inherit">请参阅 </font><a href="https://github.com/trufflesuite/ganache#documentation"><font style="vertical-align:inherit">文档 </font></a><font style="vertical-align:inherit">。 </font></em></p>
 
 <p dir="auto"><font style="vertical-align:inherit">然后启动它： </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
-$ npm run ganache</pre>
+{% highlight %}
+$ npm run ganache{% endhighlight %}
 
 <p dir="auto"><font style="vertical-align:inherit">程序化使用 </font></p>
 
 <p dir="auto"><font style="vertical-align:inherit">您可以从 Node.js 以编程方式使用 Ganache。 将 Ganache 安装到你的 npm 包中： </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
-$ npm install ganache</pre>
+{% highlight %}
+$ npm install ganache{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">然后，您可以仅将 ganache 用作 </font><a href="https://github.com/trufflesuite/ganache#as-an-eip-1193-provider-only"><font style="vertical-align:inherit">EIP-1193 提供程序 </font></a><font style="vertical-align:inherit">、 </font><a href="https://github.com/trufflesuite/ganache#as-an-eip-1193-provider-and-json-rpc-web-server"><font style="vertical-align:inherit">EIP-1193 提供程序和 JSON-RPC Web 服务器 </font></a><font style="vertical-align:inherit">、 </font><a href="https://github.com/trufflesuite/ganache#as-a-web3js-provider"><font style="vertical-align:inherit">Web3 提供程序 </font></a><font style="vertical-align:inherit">或 </font><a href="https://github.com/trufflesuite/ganache#as-an-ethersjs-provider"><font style="vertical-align:inherit">ethers 提供程序 </font></a><font style="vertical-align:inherit">。</font></p>
@@ -122,17 +122,17 @@ $ npm install ganache</pre>
 <h4 dir="auto"><font style="vertical-align:inherit">仅作为 EIP-1193 提供者： </font></h4>
 
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const ganache = require(&quot;ganache&quot;);
 const options = {};
 const provider = ganache.provider(options);
-const accounts = await provider.request({ method: &quot;eth_accounts&quot;, params: [] });</pre>
+const accounts = await provider.request({ method: &quot;eth_accounts&quot;, params: [] });{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">作为 EIP-1193 提供者和 JSON-RPC Web 服务器： </font></p>
 
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const ganache = require(&quot;ganache&quot;);
 const options = {};
 const server = ganache.server(options);
@@ -145,7 +145,7 @@ server.listen(PORT, async err =&gt; {
       method: &quot;eth_accounts&quot;,
       params: []
     });
-  });</pre>
+  });{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">作为 </font><a href="https://www.npmjs.com/package/web3" rel="nofollow"><font style="vertical-align:inherit">web3.js </font></a><font style="vertical-align:inherit">提供者： </font></p>
@@ -153,26 +153,26 @@ server.listen(PORT, async err =&gt; {
 <p dir="auto"><font style="vertical-align:inherit">要将 ganache 用作 Web3 提供程序： </font></p>
 
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const Web3 = require(&quot;web3&quot;);
 const ganache = require(&quot;ganache&quot;);
-const web3 = new Web3(ganache.provider());</pre>
+const web3 = new Web3(ganache.provider());{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">注意：根据您的 web3 版本，您可能需要设置多个确认块 </font></p>
 
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto">
 <pre class="notranslate">
-<code>const web3 = new Web3(ganache.provider(), null, { transactionConfirmationBlocks: 1 });
+{% highlight %}const web3 = new Web3(ganache.provider(), null, { transactionConfirmationBlocks: 1 });
 {% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">作为 </font><a href="https://www.npmjs.com/package/ethers" rel="nofollow"><font style="vertical-align:inherit">ethers.js </font></a><font style="vertical-align:inherit">提供者： </font></p>
 
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const ganache = require(&quot;ganache&quot;);
-const provider = new ethers.providers.Web3Provider(ganache.provider());</pre>
+const provider = new ethers.providers.Web3Provider(ganache.provider());{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">浏览器使用 </font></p>
@@ -180,18 +180,18 @@ const provider = new ethers.providers.Web3Provider(ganache.provider());</pre>
 <p dir="auto"><font style="vertical-align:inherit">您还可以通过将以下脚本添加到 HTML 中来在浏览器中使用 Ganache： </font></p>
 
 <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto">
-<pre>
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ganache@{VERSION}/dist/web/ganache.min.js&quot;&gt;&lt;/script&gt;</pre>
+{% highlight %}
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ganache@{VERSION}/dist/web/ganache.min.js&quot;&gt;&lt;/script&gt;{% endhighlight %}
 </div>
 
-<p dir="auto"><font style="vertical-align:inherit">注意： </font><code>{VERSION}</code><font style="vertical-align:inherit">上述路径中的需要替换为 </font><a href="https://www.npmjs.com/package/ganache?activeTab=versions" rel="nofollow"><font style="vertical-align:inherit">npm </font></a><font style="vertical-align:inherit">。 </font></p>
+<p dir="auto"><font style="vertical-align:inherit">注意： </font>{% highlight %}{VERSION}{% endhighlight %}<font style="vertical-align:inherit">上述路径中的需要替换为 </font><a href="https://www.npmjs.com/package/ganache?activeTab=versions" rel="nofollow"><font style="vertical-align:inherit">npm </font></a><font style="vertical-align:inherit">。 </font></p>
 
 <p dir="auto"><font style="vertical-align:inherit">从那里，Ganache 可以在您的浏览器中使用： </font></p>
 
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const options = {};
-const provider = Ganache.provider(options);</pre>
+const provider = Ganache.provider(options);{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">文档 </font></p>
@@ -200,19 +200,19 @@ const provider = Ganache.provider(options);</pre>
 
 <h3 dir="auto"><font style="vertical-align:inherit">启动选项 </font></h3>
 
-<p dir="auto"><font style="vertical-align:inherit">启动选项分组在 </font><code>chain</code><font style="vertical-align:inherit">, </font><code>database</code><font style="vertical-align:inherit">, </font><code>fork</code><font style="vertical-align:inherit">, </font><code>logging</code><font style="vertical-align:inherit">, </font><code>miner</code><font style="vertical-align:inherit">， 和 </font><code>wallet</code><font style="vertical-align:inherit">命名空间，并且应该在启动时使用，即 </font></p>
+<p dir="auto"><font style="vertical-align:inherit">启动选项分组在 </font>{% highlight %}chain{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}database{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}fork{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}logging{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}miner{% endhighlight %}<font style="vertical-align:inherit">， 和 </font>{% highlight %}wallet{% endhighlight %}<font style="vertical-align:inherit">命名空间，并且应该在启动时使用，即 </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
-ganache --namespace.option=&quot;value&quot;</pre>
+{% highlight %}
+ganache --namespace.option=&quot;value&quot;{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">用于 CLI，以及 </font></p>
 
 <div class="highlight highlight-source-ts notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 const options = { namespace: { option: &quot;value&quot;}};
-const provider = ganache.provider(options);</pre>
+const provider = ganache.provider(options);{% endhighlight %}
 </div>
 
 <p dir="auto"><font style="vertical-align:inherit">用于程序化使用。 </font></p>
@@ -220,7 +220,7 @@ const provider = ganache.provider(options);</pre>
 <p dir="auto"><font style="vertical-align:inherit">列出了以下选项供命令行使用，但也可以在项目中以编程方式运行 Ganache 时使用。 </font></p>
 
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-<pre>
+{% highlight %}
 Chain:
   --chain.allowUnlimitedContractSize    Allows unlimited contract sizes while debugging. Setting this to true
                                       will cause ganache to behave differently than production environments.                                                                                  [boolean] [default: false]
@@ -451,7 +451,7 @@ Server:
 
   -p, --server.port, --port             Port to listen on.
                                         deprecated aliases: --port
-                                                                              </pre>
+                                                                              {% endhighlight %}
 </div>
 </div>
 </div>

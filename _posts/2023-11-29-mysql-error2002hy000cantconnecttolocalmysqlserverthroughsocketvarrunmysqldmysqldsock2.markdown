@@ -12,8 +12,8 @@ categories:
 
 <p>2.查看安装了哪些mysql：</p>
 
-<pre>
-<code>sudo dpkg -l | grep mysql
+{% highlight %}
+{% highlight %}sudo dpkg -l | grep mysql
 
 ii&nbsp; libmysqlclient-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.0.35-0ubuntu0.22.04.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MySQL database development files
 
@@ -38,7 +38,7 @@ ii&nbsp; php8.1-mysql&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
 <p>把这些mysql都卸载：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>sudo apt purge mysql-server mysql-client mysql-<span style="color:#dcc6e0">common</span> mysql-server-core-* mysql-client-core-*
+{% highlight %}sudo apt purge mysql-server mysql-client mysql-<span style="color:#dcc6e0">common</span> mysql-server-core-* mysql-client-core-*
 sudo rm -rf /etc/mysql /var/lib/mysql
 sudo apt <span style="color:#dcc6e0">auto</span><span style="color:#d4d0ab">remove</span>
 sudo apt autoclean{% endhighlight %}
@@ -66,12 +66,12 @@ Processing triggers for libapache2-mod-php8.1 (8.1.2-1ubuntu2.14) ...</p>
 <p>3.重新安装mysql：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>sudo apt <span style="color:#dcc6e0">install</span> mysql-<span style="color:#dcc6e0">server</span>{% endhighlight %}
+{% highlight %}sudo apt <span style="color:#dcc6e0">install</span> mysql-<span style="color:#dcc6e0">server</span>{% endhighlight %}
 
 <p>成功安装后会提示已经运行了：</p>
 
-<pre>
-<code>done!
+{% highlight %}
+{% highlight %}done!
 
 update-alternatives: using /var/lib/mecab/dic/ipadic-utf8 to provide /var/lib/mecab/dic/debian (mecab-dictionary) in auto mode
 

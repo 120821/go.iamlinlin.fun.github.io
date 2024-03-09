@@ -7,12 +7,12 @@ categories:
 <p>在创建chatroom的时候，参照这篇文章，安装Redis，实现异步：https://iridakos.com/programming/2019/04/04/creating-chat-application-rails-websockets</p>
 
 <pre class="highlight">
-<code><span class="nb">sudo </span>apt update
+{% highlight %}<span class="nb">sudo </span>apt update
 <span class="nb">sudo </span>apt <span class="nb">install </span>redis-server
 {% endhighlight %}
 
 <pre class="highlight">
-<code>$ redis-cli
+{% highlight %}$ redis-cli
 127.0.0.1:6379&gt; ping
 PONG{% endhighlight %}
 

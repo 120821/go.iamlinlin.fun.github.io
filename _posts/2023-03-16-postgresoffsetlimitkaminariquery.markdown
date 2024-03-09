@@ -18,8 +18,8 @@ categories:
 
 <p>The following is the time required for data query of the first ten pages, in milliseconds</p>
 
-<pre>
-<code>20.5
+{% highlight %}
+{% highlight %}20.5
 12.9
 15.6
 13.6
@@ -33,8 +33,8 @@ categories:
 
 <p>The following is the time required for data query on the last ten pages, in seconds</p>
 
-<pre>
-<code>2.377
+{% highlight %}
+{% highlight %}2.377
 2.385
 2.389
 2.399
@@ -46,10 +46,10 @@ categories:
 2.377
 {% endhighlight %}
 
-<p>My paging uses gem &quot;kaminari&quot;.The usage is as follows<code>NFT.order(:id).page(params[:page]).per(10)</code> To display the index page. I added index to id. The query statement on the back end is:</p>
+<p>My paging uses gem &quot;kaminari&quot;.The usage is as follows{% highlight %}NFT.order(:id).page(params[:page]).per(10){% endhighlight %} To display the index page. I added index to id. The query statement on the back end is:</p>
 
-<pre>
-<code>Started GET &quot;/nfts?page=999992&quot; for ::1 at 2023-03-16 09:10:03 +0800
+{% highlight %}
+{% highlight %}Started GET &quot;/nfts?page=999992&quot; for ::1 at 2023-03-16 09:10:03 +0800
   ActiveRecord::SchemaMigration Pluck (1.1ms)  SELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC
 Processing by NftsController#index as JSON
   Parameters: {&quot;page&quot;=&gt;&quot;999992&quot;, &quot;nft&quot;=&gt;{}}
@@ -65,12 +65,12 @@ Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations:
 
 <p>Attach the time required for each page of the first ten pages and the last ten pages The following is the time required for data query on each page of the first ten pages, in milliseconds</p>
 
-<pre>
-<code>1:[77ms, 13ms, 10ms, 11ms, 17ms, 11ms, 17ms, 16ms, 12ms, 21ms]
+{% highlight %}
+{% highlight %}1:[77ms, 13ms, 10ms, 11ms, 17ms, 11ms, 17ms, 16ms, 12ms, 21ms]
 2.[16ms, 11ms, 12ms, 10ms, 11ms, 11ms, 10ms, 18ms, 11ms, 19ms]
 3.[23ms, 14ms, 16ms, 13ms, 23ms, 18ms, 12ms, 15ms, 12ms, 10ms]
 4.[15ms, 16ms, 16ms, 11ms, 11ms, 12ms, 10ms, 10ms, 15ms, 20ms]
-5.[22ms, 11ms, 11ms, 11ms, 12ms, 17ms, 12ms, 17ms, 16ms, 10ms]OFFSET</code>和 <code>LIMIT
+5.[22ms, 11ms, 11ms, 11ms, 12ms, 17ms, 12ms, 17ms, 16ms, 10ms]OFFSET{% endhighlight %}和 {% highlight %}LIMIT
 6.[13ms, 19ms, 19ms, 10ms, 16ms, 11ms, 10ms, 10ms, 10ms, 11ms]
 7.[11ms, 11ms, 20ms, 10ms, 16ms, 12ms, 9ms, 14ms, 11ms, 11ms]
 8.[11ms, 16ms, 16ms, 11ms, 11ms, 9ms, 12ms, 12ms, 22ms, 11ms]
@@ -80,8 +80,8 @@ Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations:
 
 <p>The following is the time required for data query on each page of the last ten pages, in seconds</p>
 
-<pre>
-<code>-1.[2.37s, 2.42s, 2.41s, 2.39s, 2.35s, 2.37s, 2.31s, 2.34s, 2.37s, 2.44s]
+{% highlight %}
+{% highlight %}-1.[2.37s, 2.42s, 2.41s, 2.39s, 2.35s, 2.37s, 2.31s, 2.34s, 2.37s, 2.44s]
 -2.[2.36s, 2.40s, 2.43s, 2.39s, 2.40s, 2.47s, 2.36s, 2.36s, 2.33s, 2.35s]
 -3.[2.34s, 2.37s, 2.40s, 2.41s, 2.41s, 2.37s, 2.52s, 2.37s, 2.35s, 2.35s]
 -4.[2.35s, 2.38s, 2.43s, 2.42s, 2.38s, 2.38s, 2.46s, 2.38s, 2.39s, 2.42s]
@@ -97,8 +97,8 @@ Completed 200 OK in 2480ms (Views: 9.2ms | ActiveRecord: 2466.1ms | Allocations:
 
 <p>解决方法：</p>
 
-<pre>
-<code>select * from foo where ID &gt; [huge] order by ID limit 100{% endhighlight %}
+{% highlight %}
+{% highlight %}select * from foo where ID &gt; [huge] order by ID limit 100{% endhighlight %}
 </div>
 </div>
 

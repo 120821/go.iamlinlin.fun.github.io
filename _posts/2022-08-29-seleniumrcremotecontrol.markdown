@@ -20,16 +20,16 @@ categories:
 
 <p>选择版本后，下载，安装：</p>
 
-<pre>
-<code>chmod +x selenium-server-4.4.0.jar
+{% highlight %}
+{% highlight %}chmod +x selenium-server-4.4.0.jar
 ./selenium-server-4.4.0.jar{% endhighlight %}
 
 <p><img height="611" src="/uploads/ckeditor/pictures/347/image-20220829110838-1.png" width="919" /></p>
 
 <p>脚本：</p>
 
-<pre>
-<code>require &#39;selenium-webdriver&#39; driver = Selenium::WebDriver.for :chrome driver.get &#39;https://selenium.dev&#39; driver.quit{% endhighlight %}
+{% highlight %}
+{% highlight %}require &#39;selenium-webdriver&#39; driver = Selenium::WebDriver.for :chrome driver.get &#39;https://selenium.dev&#39; driver.quit{% endhighlight %}
 
 <p>然后运行的时候出现了：Unable to find chromedriver. Please download the server from (Selenium::WebDriver::Error::WebDriverError</p>
 
@@ -39,8 +39,8 @@ categories:
 
 <p>解决：</p>
 
-<pre>
-<code>sudo apt-get install chromium-chromedriver{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get install chromium-chromedriver{% endhighlight %}
 
 <p>再次运行命令，执行脚本：</p>
 

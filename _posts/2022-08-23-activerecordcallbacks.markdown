@@ -11,44 +11,44 @@ categories:
 <h4 id="creating-an-object"><a class="anchorlink" href="https://guides.rubyonrails.org/active_record_callbacks.html#creating-an-object">3.1 Creating an Object</a></h4>
 
 <ul>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-before_validation"><code>before_validation</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-after_validation"><code>after_validation</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_save"><code>before_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_save"><code>around_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_create"><code>before_create</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_create"><code>around_create</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_create"><code>after_create</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_save"><code>after_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit"><code>after_commit</code></a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback"><code>after_rollback</code></a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-before_validation">{% highlight %}before_validation{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-after_validation">{% highlight %}after_validation{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_save">{% highlight %}before_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_save">{% highlight %}around_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_create">{% highlight %}before_create{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_create">{% highlight %}around_create{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_create">{% highlight %}after_create{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_save">{% highlight %}after_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit">{% highlight %}after_commit{% endhighlight %}</a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback">{% highlight %}after_rollback{% endhighlight %}</a></li>
 </ul>
 
 <h4 id="updating-an-object"><a class="anchorlink" href="https://guides.rubyonrails.org/active_record_callbacks.html#updating-an-object">3.2 Updating an Object</a></h4>
 
 <ul>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-before_validation"><code>before_validation</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-after_validation"><code>after_validation</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_save"><code>before_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_save"><code>around_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_update"><code>before_update</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_update"><code>around_update</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_update"><code>after_update</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_save"><code>after_save</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit"><code>after_commit</code></a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback"><code>after_rollback</code></a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-before_validation">{% highlight %}before_validation{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Validations/Callbacks/ClassMethods.html#method-i-after_validation">{% highlight %}after_validation{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_save">{% highlight %}before_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_save">{% highlight %}around_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_update">{% highlight %}before_update{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_update">{% highlight %}around_update{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_update">{% highlight %}after_update{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_save">{% highlight %}after_save{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit">{% highlight %}after_commit{% endhighlight %}</a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback">{% highlight %}after_rollback{% endhighlight %}</a></li>
 </ul>
 
 <h4 id="destroying-an-object"><a class="anchorlink" href="https://guides.rubyonrails.org/active_record_callbacks.html#destroying-an-object">3.3 Destroying an Object</a></h4>
 
 <ul>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_destroy"><code>before_destroy</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_destroy"><code>around_destroy</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_destroy"><code>after_destroy</code></a></li>
-	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit"><code>after_commit</code></a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback"><code>after_rollback</code></a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-before_destroy">{% highlight %}before_destroy{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-around_destroy">{% highlight %}around_destroy{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Callbacks/ClassMethods.html#method-i-after_destroy">{% highlight %}after_destroy{% endhighlight %}</a></li>
+	<li><a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_commit">{% highlight %}after_commit{% endhighlight %}</a> / <a href="https://api.rubyonrails.org/v7.0.3.1/classes/ActiveRecord/Transactions/ClassMethods.html#method-i-after_rollback">{% highlight %}after_rollback{% endhighlight %}</a></li>
 </ul>
 
 <p>callback用于注册：</p>
 
-<pre>
-<code>class User &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class User &lt; ApplicationRecord
 &nbsp; validates :login, :email, presence: true
 &nbsp; before_validation :ensure_login_has_a_value
 &nbsp; private
@@ -61,8 +61,8 @@ end{% endhighlight %}
 
 <p>如果块内的代码太短以至于它适合一行，请考虑使用这种样式</p>
 
-<pre>
-<code>class User &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class User &lt; ApplicationRecord
 
 &nbsp; validates :login, :email, presence: true
 &nbsp; before_create do
@@ -73,15 +73,15 @@ end{% endhighlight %}
 
 end{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>注意：callback必须放在private方法中：</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}注意：callback必须放在private方法中：{% endhighlight %}</div>
 
-<p><code>class User &lt; ApplicationRecord<br />
-&nbsp; validates :login, :email, presence: true</code></p>
+<p>{% highlight %}class User &lt; ApplicationRecord<br />
+&nbsp; validates :login, :email, presence: true{% endhighlight %}</p>
 
-<p><code>&nbsp; before_validation :ensure_login_has_a_value</code></p>
+<p>{% highlight %}&nbsp; before_validation :ensure_login_has_a_value{% endhighlight %}</p>
 
-<pre>
-<code>&nbsp; private
+{% highlight %}
+{% highlight %}&nbsp; private
 &nbsp;&nbsp;&nbsp; def ensure_login_has_a_value
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if login.nil?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; self.login = email unless email.blank?
@@ -92,65 +92,65 @@ end{% endhighlight %}
 <p>The following methods trigger callbacks:</p>
 
 <ul>
-	<li><code>create</code></li>
-	<li><code>create!</code></li>
-	<li><code>destroy</code></li>
-	<li><code>destroy!</code></li>
-	<li><code>destroy_all</code></li>
-	<li><code>destroy_by</code></li>
-	<li><code>save</code></li>
-	<li><code>save!</code></li>
-	<li><code>save(validate: false)</code></li>
-	<li><code>toggle!</code></li>
-	<li><code>touch</code></li>
-	<li><code>update_attribute</code></li>
-	<li><code>update</code></li>
-	<li><code>update!</code></li>
-	<li><code>valid?</code></li>
+	<li>{% highlight %}create{% endhighlight %}</li>
+	<li>{% highlight %}create!{% endhighlight %}</li>
+	<li>{% highlight %}destroy{% endhighlight %}</li>
+	<li>{% highlight %}destroy!{% endhighlight %}</li>
+	<li>{% highlight %}destroy_all{% endhighlight %}</li>
+	<li>{% highlight %}destroy_by{% endhighlight %}</li>
+	<li>{% highlight %}save{% endhighlight %}</li>
+	<li>{% highlight %}save!{% endhighlight %}</li>
+	<li>{% highlight %}save(validate: false){% endhighlight %}</li>
+	<li>{% highlight %}toggle!{% endhighlight %}</li>
+	<li>{% highlight %}touch{% endhighlight %}</li>
+	<li>{% highlight %}update_attribute{% endhighlight %}</li>
+	<li>{% highlight %}update{% endhighlight %}</li>
+	<li>{% highlight %}update!{% endhighlight %}</li>
+	<li>{% highlight %}valid?{% endhighlight %}</li>
 </ul>
 
-<p>Additionally, the <code>after_find</code> callback is triggered by the following finder methods:</p>
+<p>Additionally, the {% highlight %}after_find{% endhighlight %} callback is triggered by the following finder methods:</p>
 
 <ul>
-	<li><code>all</code></li>
-	<li><code>first</code></li>
-	<li><code>find</code></li>
-	<li><code>find_by</code></li>
-	<li><code>find_by_*</code></li>
-	<li><code>find_by_*!</code></li>
-	<li><code>find_by_sql</code></li>
-	<li><code>last</code></li>
+	<li>{% highlight %}all{% endhighlight %}</li>
+	<li>{% highlight %}first{% endhighlight %}</li>
+	<li>{% highlight %}find{% endhighlight %}</li>
+	<li>{% highlight %}find_by{% endhighlight %}</li>
+	<li>{% highlight %}find_by_*{% endhighlight %}</li>
+	<li>{% highlight %}find_by_*!{% endhighlight %}</li>
+	<li>{% highlight %}find_by_sql{% endhighlight %}</li>
+	<li>{% highlight %}last{% endhighlight %}</li>
 </ul>
 
-<p><code>跳过callback：</code></p>
+<p>{% highlight %}跳过callback：{% endhighlight %}</p>
 
 <ul>
-	<li><code>decrement!</code></li>
-	<li><code>decrement_counter</code></li>
-	<li><code>delete</code></li>
-	<li><code>delete_all</code></li>
-	<li><code>delete_by</code></li>
-	<li><code>increment!</code></li>
-	<li><code>increment_counter</code></li>
-	<li><code>insert</code></li>
-	<li><code>insert!</code></li>
-	<li><code>insert_all</code></li>
-	<li><code>insert_all!</code></li>
-	<li><code>touch_all</code></li>
-	<li><code>update_column</code></li>
-	<li><code>update_columns</code></li>
-	<li><code>update_all</code></li>
-	<li><code>update_counters</code></li>
-	<li><code>upsert</code></li>
-	<li><code>upsert_all</code></li>
+	<li>{% highlight %}decrement!{% endhighlight %}</li>
+	<li>{% highlight %}decrement_counter{% endhighlight %}</li>
+	<li>{% highlight %}delete{% endhighlight %}</li>
+	<li>{% highlight %}delete_all{% endhighlight %}</li>
+	<li>{% highlight %}delete_by{% endhighlight %}</li>
+	<li>{% highlight %}increment!{% endhighlight %}</li>
+	<li>{% highlight %}increment_counter{% endhighlight %}</li>
+	<li>{% highlight %}insert{% endhighlight %}</li>
+	<li>{% highlight %}insert!{% endhighlight %}</li>
+	<li>{% highlight %}insert_all{% endhighlight %}</li>
+	<li>{% highlight %}insert_all!{% endhighlight %}</li>
+	<li>{% highlight %}touch_all{% endhighlight %}</li>
+	<li>{% highlight %}update_column{% endhighlight %}</li>
+	<li>{% highlight %}update_columns{% endhighlight %}</li>
+	<li>{% highlight %}update_all{% endhighlight %}</li>
+	<li>{% highlight %}update_counters{% endhighlight %}</li>
+	<li>{% highlight %}upsert{% endhighlight %}</li>
+	<li>{% highlight %}upsert_all{% endhighlight %}</li>
 </ul>
 
 <h3 id="relational-callbacks"><a class="anchorlink" href="https://guides.rubyonrails.org/active_record_callbacks.html#relational-callbacks">Relational Callbacks</a></h3>
 
 <p>删除后进行调用：</p>
 
-<pre>
-<code>class User &lt; ApplicationRecord
+{% highlight %}
+{% highlight %}class User &lt; ApplicationRecord
 &nbsp; has_many :articles, dependent: :destroy
 end
 class Article &lt; ApplicationRecord
@@ -162,8 +162,8 @@ end{% endhighlight %}
 
 <p>验证：</p>
 
-<pre>
-<code>user = User.first
+{% highlight %}
+{% highlight %}user = User.first
 
 user.articles.create!
 

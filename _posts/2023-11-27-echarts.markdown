@@ -6,8 +6,8 @@ categories:
 ---
 <p>可以直接把saveAsImage属性设置为false,或者直接注释这一行即可：</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   toolbox: {
     feature: {

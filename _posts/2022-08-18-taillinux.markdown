@@ -11,7 +11,7 @@ categories:
 <p><span class="marked">tail -f filename</span> 会把 filename 文件里的最尾部的内容显示在屏幕上，并且不断刷新，只要 filename 更新就可以看到最新的文件内容。</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<code><span class="pln">tail </span><span class="pun">[参数]</span><span class="pln"> </span><span class="pun">[文件]</span><span class="pln">  </span>{% endhighlight %}
+{% highlight %}<span class="pln">tail </span><span class="pun">[参数]</span><span class="pln"> </span><span class="pun">[文件]</span><span class="pln">  </span>{% endhighlight %}
 
 <ul>
 	<li>-f 循环读取</li>
@@ -25,20 +25,20 @@ categories:
 </ul>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">tail notes</span><span class="pun">.</span><span class="pln">log         </span><span class="com"># 默认显示最后 10 行</span></pre>
+<span class="pln">tail notes</span><span class="pun">.</span><span class="pln">log         </span><span class="com"># 默认显示最后 10 行</span>{% endhighlight %}
 
 <p>跟踪名为 notes.log 的文件的增长情况（Ctrl c 停止）</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">tail </span><span class="pun">-</span><span class="pln">f notes</span><span class="pun">.</span><span class="pln">log</span></pre>
+<span class="pln">tail </span><span class="pun">-</span><span class="pln">f notes</span><span class="pun">.</span><span class="pln">log</span>{% endhighlight %}
 
 <p>显示文件 notes.log 的内容，从第 20 行至文件末尾:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">tail </span><span class="pun">-</span><span class="pln">n </span><span class="pun">+</span><span class="lit">20</span><span class="pln"> notes</span><span class="pun">.</span><span class="pln">log</span></pre>
+<span class="pln">tail </span><span class="pun">-</span><span class="pln">n </span><span class="pun">+</span><span class="lit">20</span><span class="pln"> notes</span><span class="pun">.</span><span class="pln">log</span>{% endhighlight %}
 
 <p>显示文件 notes.log 的最后 10 个字符:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">tail </span><span class="pun">-</span><span class="pln">c </span><span class="lit">10</span><span class="pln"> notes</span><span class="pun">.</span><span class="pln">log</span></pre>
+<span class="pln">tail </span><span class="pun">-</span><span class="pln">c </span><span class="lit">10</span><span class="pln"> notes</span><span class="pun">.</span><span class="pln">log</span>{% endhighlight %}
 

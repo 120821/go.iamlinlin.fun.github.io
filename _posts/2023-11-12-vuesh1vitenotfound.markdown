@@ -6,8 +6,8 @@ categories:
 ---
 <p>使用vue启动的时候，出现了：</p>
 
-<pre>
-<code>npm run serve
+{% highlight %}
+{% highlight %}npm run serve
 
 &gt; vue3-<span style="color:#dcc6e0">admin</span>@<span style="color:#f5ab35">0.0</span><span style="color:#f5ab35">.0</span> serve
 &gt; vite preview
@@ -19,37 +19,37 @@ dist    <span style="color:#dcc6e0">index</span>.html           node_modules  pa
 
 <p>说明没有安装需要的依赖vite</p>
 
-<pre>
-<code><span style="color:#abe338">npm</span> <span style="color:#abe338">install</span> -<span style="color:#abe338">g</span> <span style="color:#f5ab35">create-vite</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#abe338">npm</span> <span style="color:#abe338">install</span> -<span style="color:#abe338">g</span> <span style="color:#f5ab35">create-vite</span>{% endhighlight %}
 
 <p>或者</p>
 
-<pre>
-<code><span style="color:#abe338">yarn</span> <span style="color:#abe338">global</span> <span style="color:#abe338">add</span> <span style="color:#f5ab35">create-vite</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#abe338">yarn</span> <span style="color:#abe338">global</span> <span style="color:#abe338">add</span> <span style="color:#f5ab35">create-vite</span>{% endhighlight %}
 
 <p>然后：</p>
 
-<p>在项目文件夹，删除 <code>node_modules</code> 文件夹和 <code>package-lock.json</code>（或 <code>yarn.lock</code>）文件。</p>
+<p>在项目文件夹，删除 {% highlight %}node_modules{% endhighlight %} 文件夹和 {% highlight %}package-lock.json{% endhighlight %}（或 {% highlight %}yarn.lock{% endhighlight %}）文件。</p>
 
 <p>重新安装依赖：</p>
 
-<pre>
-<code>npm <span style="color:#dcc6e0">install</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}npm <span style="color:#dcc6e0">install</span>{% endhighlight %}
 
 <p>或</p>
 
-<pre>
-<code><span style="color:#ffd700">yarn</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">yarn</span>{% endhighlight %}
 
 <p>如果过程没有任何错误，就启动：</p>
 
-<p><code>npm run serve</code></p>
+<p>{% highlight %}npm run serve{% endhighlight %}</p>
 
 <hr />
 <p>以上是理想的情况，实际上我的：</p>
 
-<pre>
-<code>npm <span style="color:#dcc6e0">install</span> -g <span style="color:#dcc6e0">create</span>-vite
+{% highlight %}
+{% highlight %}npm <span style="color:#dcc6e0">install</span> -g <span style="color:#dcc6e0">create</span>-vite
 
 added <span style="color:#f5ab35">1</span> <span style="color:#dcc6e0">package</span> <span style="color:#dcc6e0">in</span> <span style="color:#f5ab35">1</span>s
 Reshimming asdf nodejs...
@@ -81,23 +81,23 @@ sh: <span style="color:#f5ab35">1</span>: vite: <span style="color:#dcc6e0">not<
 
 <p>然后我使用：</p>
 
-<pre>
-<code>yarn <span style="color:#f5ab35">add</span> vite{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn <span style="color:#f5ab35">add</span> vite{% endhighlight %}
 
 <p>继续使用：</p>
 
-<pre>
-<code><span style="color:#ffd700">yarn</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">yarn</span>{% endhighlight %}
 
 <p>启动（成功）</p>
 
-<pre>
-<code>npm <span style="color:#f5ab35">run</span> serve{% endhighlight %}
+{% highlight %}
+{% highlight %}npm <span style="color:#f5ab35">run</span> serve{% endhighlight %}
 
 <p>启动了：</p>
 
-<pre>
-<code>/<span style="color:#ffd700">workspace</span>/vue<span style="color:#f5ab35">3</span>_learn_admin$ npm run serve
+{% highlight %}
+{% highlight %}/<span style="color:#ffd700">workspace</span>/vue<span style="color:#f5ab35">3</span>_learn_admin$ npm run serve
 
 &gt; <span style="color:#ffd700">vue3</span>-admin@<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">0</span> serve
 &gt; <span style="color:#ffd700">vite</span> preview

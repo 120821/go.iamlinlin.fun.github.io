@@ -6,8 +6,8 @@ categories:
 ---
 <p>使用导入CSV的时候需要创建一个public/files/文件夹，进行测试数据的是时候，测试文件放在文件夹里一起提交了，</p>
 
-<pre>
-<code>git commit -m &#39;public/upload_files/ 增加了目录，用来导入文件使用&#39;
+{% highlight %}
+{% highlight %}git commit -m &#39;public/upload_files/ 增加了目录，用来导入文件使用&#39;
 
 [main 9a695f2] public/upload_files/ 增加了目录，用来导入文件使用
 
@@ -23,8 +23,8 @@ categories:
 
 <p>使用git log进行查看</p>
 
-<pre>
-<code>git log
+{% highlight %}
+{% highlight %}git log
 
 commit 9a695f29923c585858a2c5d24b9c8400f38797 (HEAD -&gt; main)
 
@@ -42,8 +42,8 @@ Date:&nbsp;&nbsp; Thu Jun 23 14:42:56 2022 +0800{% endhighlight %}
 
 <p>仍然看到</p>
 
-<pre>
-<code>deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966027&quot;
+{% highlight %}
+{% highlight %}deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966027&quot;
 
 &nbsp;&nbsp; &nbsp;deleted:&nbsp;&nbsp;&nbsp; &quot;public/upload_files/NFT\350\256\244\351\242\206\344\272\272CSV\344\270\212\344\274\240\347\244\272\344\276\213.csv1655966139&quot;
 

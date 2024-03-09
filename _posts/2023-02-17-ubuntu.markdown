@@ -8,24 +8,24 @@ categories:
 
 <p>1.查看所有已经安装的软件</p>
 
-<pre>
-<code>dpkg -l{% endhighlight %}
+{% highlight %}
+{% highlight %}dpkg -l{% endhighlight %}
 
 <p>2.查看是否安装了飞书</p>
 
-<pre>
-<code>dpkg -l | grep feishu{% endhighlight %}
+{% highlight %}
+{% highlight %}dpkg -l | grep feishu{% endhighlight %}
 
-<pre>
-<code>ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu){% endhighlight %}
+{% highlight %}
+{% highlight %}ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu){% endhighlight %}
 
 <p>3.卸载飞书</p>
 
-<pre>
-<code>sudo apt-get remove --purge bytedance-feishu-dev{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get remove --purge bytedance-feishu-dev{% endhighlight %}
 
-<pre>
-<code>Reading package lists... Done
+{% highlight %}
+{% highlight %}Reading package lists... Done
 
 Building dependency tree... Done
 

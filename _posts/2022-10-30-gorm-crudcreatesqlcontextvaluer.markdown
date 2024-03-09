@@ -6,10 +6,10 @@ categories:
 ---
 <p><a href="https://learnku.com/docs/gorm/v2/create/9732#46c90b">https://learnku.com/docs/gorm/v2/create/9732#46c90b</a></p>
 
-<p>GORM 允许使用 SQL 表达式插入数据，有两种方法实现这个目标。根据 <code>map[string]interface{}</code> 或 <a href="https://learnku.com/docs/gorm/v2/data_types#gorm_valuer_interface">自定义数据类型</a> 创建，例如：</p>
+<p>GORM 允许使用 SQL 表达式插入数据，有两种方法实现这个目标。根据 {% highlight %}map[string]interface{}{% endhighlight %} 或 <a href="https://learnku.com/docs/gorm/v2/data_types#gorm_valuer_interface">自定义数据类型</a> 创建，例如：</p>
 
-<pre>
-<code>// 通过 map 创建记录
+{% highlight %}
+{% highlight %}// 通过 map 创建记录
 
 db.Model(User{}).Create(map[string]interface{}{
 
@@ -47,10 +47,10 @@ func (loc *Location) Scan(v interface{}) error {<br />
 
 <p id="f43bde"><strong>关联创建</strong></p>
 
-<p>创建关联数据时，如果关联值是非零值，这些关联会被 upsert，且它们的 <code>Hook</code> 方法也会被调用</p>
+<p>创建关联数据时，如果关联值是非零值，这些关联会被 upsert，且它们的 {% highlight %}Hook{% endhighlight %} 方法也会被调用</p>
 
-<pre>
-<code>type CreditCard struct {
+{% highlight %}
+{% highlight %}type CreditCard struct {
 
 &nbsp; gorm.Model
 
@@ -82,10 +82,10 @@ db.Create(&amp;User{
 
 // INSERT INTO `credit_cards` ...{% endhighlight %}
 
-<p>您也可以通过 <code>Select</code>、 <code>Omit</code> 跳过关联保存，例如：</p>
+<p>您也可以通过 {% highlight %}Select{% endhighlight %}、 {% highlight %}Omit{% endhighlight %} 跳过关联保存，例如：</p>
 
-<pre>
-<code>db.Omit(&quot;CreditCard&quot;).Create(&amp;user)
+{% highlight %}
+{% highlight %}db.Omit(&quot;CreditCard&quot;).Create(&amp;user)
 
 // 跳过所有关联
 
@@ -93,10 +93,10 @@ db.Omit(clause.Associations).Create(&amp;user){% endhighlight %}
 
 <p id="225f3e"><strong>默认值</strong></p>
 
-<p>您可以通过标签 <code>default</code> 为字段定义默认值，如：</p>
+<p>您可以通过标签 {% highlight %}default{% endhighlight %} 为字段定义默认值，如：</p>
 
-<pre>
-<code>type User struct {
+{% highlight %}
+{% highlight %}type User struct {
 
 &nbsp; ID&nbsp;&nbsp; int64
 
@@ -108,10 +108,10 @@ db.Omit(clause.Associations).Create(&amp;user){% endhighlight %}
 
 <p>插入记录到数据库时，默认值 <em>会被用于</em> 填充值为 <a href="https://tour.golang.org/basics/12" rel="nofollow noopener noreferrer">零值</a> 的字段</p>
 
-<p>像 <code>0</code>、<code>&#39;&#39;</code>、<code>false</code> 等零值，不会将这些字段定义的默认值保存到数据库。您需要使用指针类型或 Scanner/Valuer 来避免这个问题，例如：</p>
+<p>像 {% highlight %}0{% endhighlight %}、{% highlight %}&#39;&#39;{% endhighlight %}、{% highlight %}false{% endhighlight %} 等零值，不会将这些字段定义的默认值保存到数据库。您需要使用指针类型或 Scanner/Valuer 来避免这个问题，例如：</p>
 
-<pre>
-<code>type User struct {
+{% highlight %}
+{% highlight %}type User struct {
 
 &nbsp; gorm.Model
 
@@ -123,14 +123,14 @@ db.Omit(clause.Associations).Create(&amp;user){% endhighlight %}
 
 }{% endhighlight %}
 
-<p>若要数据库有默认、虚拟 / 生成的值，你必须为字段设置 <code>default</code> 标签。若要在迁移时跳过默认值定义，你可以使用 <code>default:(-)</code>，例如：</p>
-<rep><code>type User struct {<br />
+<p>若要数据库有默认、虚拟 / 生成的值，你必须为字段设置 {% highlight %}default{% endhighlight %} 标签。若要在迁移时跳过默认值定义，你可以使用 {% highlight %}default:(-){% endhighlight %}，例如：</p>
+<rep>{% highlight %}type User struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string `gorm:&quot;default:uuid_generate_v3()&quot;` // 数据库函数<br />
 &nbsp; FirstName string<br />
 &nbsp; LastName&nbsp; string<br />
 &nbsp; Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint8<br />
 &nbsp; FullName&nbsp; string `gorm:&quot;-&gt;;type:GENERATED ALWAYS AS (concat(firstname,&#39; &#39;,lastname));default:(-);`<br />
-}</code>
+}{% endhighlight %}
 
 <p>使用虚拟 / 生成的值时，你可能需要禁用它的创建、更新权限，查看 <a href="https://learnku.com/docs/gorm/v2/models#field_permission">字段级权限</a> 获取详情</p>
 
@@ -138,8 +138,8 @@ db.Omit(clause.Associations).Create(&amp;user){% endhighlight %}
 
 <p>GORM 为不同数据库提供了兼容的 Upsert 支持</p>
 
-<pre>
-<code>import &quot;gorm.io/gorm/clause&quot;
+{% highlight %}
+{% highlight %}import &quot;gorm.io/gorm/clause&quot;
 
 // 有冲突时什么都不做
 

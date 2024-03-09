@@ -6,7 +6,7 @@ categories:
 ---
 <p><a href="https://blog.csdn.net/konghui099/article/details/88686654">https://blog.csdn.net/konghui099/article/details/88686654</a></p>
 
-<pre>
+{% highlight %}
 把密码放到环境变量里：
-<code>export PGPASSWORD=&#39;your password&#39;{% endhighlight %}
+{% highlight %}export PGPASSWORD=&#39;your password&#39;{% endhighlight %}
 

@@ -6,8 +6,8 @@ categories:
 ---
 <p>进入文件夹，启动ganache</p>
 
-<pre>
-<code>~/Downloads$&nbsp; ./ganache-2.5.4-linux-x86_64.AppImage{% endhighlight %}
+{% highlight %}
+{% highlight %}~/Downloads$&nbsp; ./ganache-2.5.4-linux-x86_64.AppImage{% endhighlight %}
 
 <p>连接网络</p>
 
@@ -15,7 +15,7 @@ categories:
 
 <p>进行编译合约：</p>
 
-<p><code>/workspace/blockchain/contract_on_goerli_using_infura$ truffle migrate --network development</code></p>
+<p>{% highlight %}/workspace/blockchain/contract_on_goerli_using_infura$ truffle migrate --network development{% endhighlight %}</p>
 
 <p><img height="528" src="/uploads/ckeditor/pictures/474/image-20220922172221-1.png" width="1920" /></p>
 

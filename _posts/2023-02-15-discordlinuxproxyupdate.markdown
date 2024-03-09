@@ -10,16 +10,16 @@ categories:
 
 <p>2.安装</p>
 
-<pre>
-<code>sudo dpkg -i xxx.deb{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo dpkg -i xxx.deb{% endhighlight %}
 
 <p>配置proxy</p>
 
-<pre>
-<code>pproxy -r socks5://127.0.0.1:1090 -vv{% endhighlight %}
+{% highlight %}
+{% highlight %}pproxy -r socks5://127.0.0.1:1090 -vv{% endhighlight %}
 
-<pre>
-<code>pproxy -r socks5://127.0.0.1:1090 -vv
+{% highlight %}
+{% highlight %}pproxy -r socks5://127.0.0.1:1090 -vv
 
 Serving on :8080 by http,socks4,socks5
 
@@ -57,11 +57,11 @@ Serving on :8080 by http,socks4,socks5
 
 <p>3.使用</p>
 
-<pre>
-<code>env http_proxy=http://127.0.0.1:8080 https_proxy=http://127.0.0.1:8080 /usr/bin/discord --proxy-server=&quot;http://127.0.0.1:8080&quot;{% endhighlight %}
+{% highlight %}
+{% highlight %}env http_proxy=http://127.0.0.1:8080 https_proxy=http://127.0.0.1:8080 /usr/bin/discord --proxy-server=&quot;http://127.0.0.1:8080&quot;{% endhighlight %}
 
-<pre>
-<code>cd /home/linlin/Downloads/
+{% highlight %}
+{% highlight %}cd /home/linlin/Downloads/
 
 linlin@linlin-i5:~/Downloads$ sudo dpkg -i discord
 

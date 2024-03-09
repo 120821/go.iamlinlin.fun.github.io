@@ -30,7 +30,7 @@ categories:
 <div class="example">
 <div class="example_code">
 <pre class="hl-main">
-<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react@16/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react-dom@16/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/babel-standalone@6.15.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
+{% highlight %}<span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react@16/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/react-dom@16/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://unpkg.com/babel-standalone@6.15.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
 
 <div class="hl-main">也可以直接使用 Staticfile CDN 的 React CDN 库，地址如下</div>
 
@@ -38,7 +38,7 @@ categories:
 <div class="example">
 <div class="example_code">
 <pre class="hl-main">
-<code><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react/16.4.0/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
+{% highlight %}<span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react/16.4.0/umd/react.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span><span class="hl-code"> </span><span class="hl-comment">&lt;!--</span><span class="hl-comment"> 生产环境中不建议使用 </span><span class="hl-comment">--&gt;</span><span class="hl-code"> </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">script</span><span class="hl-code"> </span><span class="hl-var">src</span><span class="hl-code">=</span><span class="hl-quotes">&quot;</span><span class="hl-string">https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">script</span><span class="hl-brackets">&gt;</span>{% endhighlight %}
 </div>
 </div>
 </div>
@@ -47,8 +47,8 @@ categories:
 
 <p>vim hello_world.html</p>
 
-<pre>
-<code>&lt;title&gt;Hello React!&lt;/title&gt;
+{% highlight %}
+{% highlight %}&lt;title&gt;Hello React!&lt;/title&gt;
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js&quot;&gt;&lt;/script&gt;
@@ -92,24 +92,24 @@ ReactDOM.render(
 
 <span class="hljs-comment"># 设置yarn的源</span>
 yarn config set registry <span class="hljs-attribute">https</span>:<span class="hljs-regexp">//</span>registry.<span class="hljs-built_in">npm</span>.taobao.org --<span class="hljs-built_in">global</span>
-yarn config set disturl <span class="hljs-attribute">https</span>:<span class="hljs-regexp">//</span><span class="hljs-built_in">npm</span>.taobao.org/dist --<span class="hljs-built_in">global</span></pre>
+yarn config set disturl <span class="hljs-attribute">https</span>:<span class="hljs-regexp">//</span><span class="hljs-built_in">npm</span>.taobao.org/dist --<span class="hljs-built_in">global</span>{% endhighlight %}
 
 <pre class="hljs coffeescript">
 创建新项目
 react-<span class="hljs-reserved">native</span> init hello
-<span class="hljs-comment"># 然后会看到一堆生成项目文件的消息。  很有意思。 </span></pre>
+<span class="hljs-comment"># 然后会看到一堆生成项目文件的消息。  很有意思。 </span>{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>出现了错误：</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}出现了错误：{% endhighlight %}</div>
 
-<pre>
-<code>TypeError: cli.init is not a function{% endhighlight %}
+{% highlight %}
+{% highlight %}TypeError: cli.init is not a function{% endhighlight %}
 
 <p>解决：<a href="https://stackoverflow.com/questions/72768245/typeerror-cli-init-is-not-a-function-for-react-native">https://stackoverflow.com/questions/72768245/typeerror-cli-init-is-not-a-function-for-react-native</a></p>
 
-<pre>
-<code>npx react-native init ProjectName --version 0.68.2{% endhighlight %}
+{% highlight %}
+{% highlight %}npx react-native init ProjectName --version 0.68.2{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>可以看到出现了两个项目，一个是有报错的的，一个是第二次生成的，内容不同。</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}可以看到出现了两个项目，一个是有报错的的，一个是第二次生成的，内容不同。{% endhighlight %}</div>
 
 <p><img height="220" src="/uploads/ckeditor/pictures/272/image-20220818115802-1.png" width="1836" /></p>
 
@@ -119,7 +119,7 @@ react-<span class="hljs-reserved">native</span> init hello
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pln">创建新的APP
-create</span><span class="pun">-</span><span class="pln">react</span><span class="pun">-</span><span class="pln">app </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">app</span></pre>
+create</span><span class="pun">-</span><span class="pln">react</span><span class="pun">-</span><span class="pln">app </span><span class="kwd">my</span><span class="pun">-</span><span class="pln">app</span>{% endhighlight %}
 
 <p><span class="pln">cd my-app</span></p>
 
@@ -145,14 +145,14 @@ create</span><span class="pun">-</span><span class="pln">react</span><span class
     </span><span class="typ">App</span><span class="pun">.</span><span class="pln">test</span><span class="pun">.</span><span class="pln">js
     index</span><span class="pun">.</span><span class="pln">css
     index</span><span class="pun">.</span><span class="pln">js
-    logo</span><span class="pun">.</span><span class="pln">svg</span></pre>
+    logo</span><span class="pun">.</span><span class="pln">svg</span>{% endhighlight %}
 
 <p><img height="430" src="/uploads/ckeditor/pictures/274/image-20220818121019-2.png" width="387" /></p>
 
 <p>manifest.json 指定了开始页面 index.html，一切的开始都从这里开始，所以这个是代码执行的源头。</p>
 
-<pre>
-<code>尝试修改 src/App.js 文件代码：
+{% highlight %}
+{% highlight %}尝试修改 src/App.js 文件代码：
 import logo from &#39;./logo.svg&#39;;
 import &#39;./App.css&#39;;
 function App() {

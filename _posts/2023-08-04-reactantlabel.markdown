@@ -6,8 +6,8 @@ categories:
 ---
 <p>使用ant design的labelCol来修改表单的标签的宽度。例如：</p>
 
-<pre>
-<code>&lt;Form.Item
+{% highlight %}
+{% highlight %}&lt;Form.Item
   name={&#39;initial_discharge_rate&#39;}
   label=&quot;首次充填环节-初次灌装排放率&quot;
   rules={[
@@ -24,8 +24,8 @@ categories:
 
 <p>首先定义：</p>
 
-<pre>
-<code>const layout = {
+{% highlight %}
+{% highlight %}const layout = {
 
 &nbsp; labelCol: { span: 10, offset: 1 },
 
@@ -35,8 +35,8 @@ categories:
 
 <p>然后使用：</p>
 
-<pre>
-<code>&nbsp;<code>&nbsp;&nbsp;&nbsp;&nbsp; &lt;Form
+{% highlight %}
+{% highlight %}&nbsp;{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp; &lt;Form
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {...layout}
 
@@ -56,7 +56,7 @@ categories:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; className=&quot;custom-form&quot;
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp; &nbsp;</code>{% endhighlight %}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;&nbsp; &nbsp;{% endhighlight %}{% endhighlight %}
 
-<p><code>&nbsp;</code></p>
+<p>{% highlight %}&nbsp;{% endhighlight %}</p>
 

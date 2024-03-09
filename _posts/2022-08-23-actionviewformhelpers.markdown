@@ -12,15 +12,15 @@ categories:
 
 <p>前端进行表单的书写：</p>
 
-<pre>
-<code>&lt;%= form_with model: @person do |form| %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form_with model: @person do |form| %&gt;
 
 &nbsp; &lt;%= form.file_field :picture %&gt;
 
 &lt;% end %&gt;{% endhighlight %}
 
-<pre>
-<code>&lt;%= form_with url: &quot;/uploads&quot;, multipart: true do |form| %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form_with url: &quot;/uploads&quot;, multipart: true do |form| %&gt;
 
 &nbsp; &lt;%= file_field_tag :picture %&gt;
 
@@ -28,8 +28,8 @@ categories:
 
 <p>后端进行方法的实现：</p>
 
-<pre>
-<code>def upload
+{% highlight %}
+{% highlight %}def upload
 
 &nbsp; uploaded_file = params[:picture]
 
@@ -43,55 +43,55 @@ end{% endhighlight %}
 
 <p>您会注意到 HTML 包含一个类型为 hidden 的 input 元素。&nbsp; 这个输入很重要，因为没有它就无法成功提交非 GET 表单。&nbsp; 名为authenticity_token 的隐藏输入元素是Rails 的一项安全功能，称为跨站点请求伪造保护，表单助手会为每个非GET 表单生成它（前提是启用了此安全功能）。&nbsp; 您可以在 Securing Rails Applications 指南中阅读更多相关信息。</p>
 
-<pre>
-<code>&lt;%= form_with do |form| %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form_with do |form| %&gt;
 &nbsp; Form contents
 &lt;% end %&gt;{% endhighlight %}
 
 <p>浏览器结果：</p>
 
-<pre>
-<code>&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;/&quot; method=&quot;post&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;form accept-charset=&quot;UTF-8&quot; action=&quot;/&quot; method=&quot;post&quot;&gt;
 &nbsp; &lt;input name=&quot;authenticity_token&quot; type=&quot;hidden&quot; value=&quot;J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=&quot; /&gt;
 &nbsp; Form contents
 &lt;/form&gt;{% endhighlight %}
 
 <p>复选框是表单控件，为用户提供了一组可以启用或禁用的选项：</p>
 
-<pre>
-<code>&lt;%= form.check_box :pet_dog %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form.check_box :pet_dog %&gt;
 &lt;%= form.label :pet_dog, &quot;I own a dog&quot; %&gt;
 &lt;%= form.check_box :pet_cat %&gt;
 &lt;%= form.label :pet_cat, &quot;I own a cat&quot; %&gt;{% endhighlight %}
 
 <p>generates:</p>
 
-<pre>
-<code>&lt;input type=&quot;checkbox&quot; id=&quot;pet_dog&quot; name=&quot;pet_dog&quot; value=&quot;1&quot; /&gt;
+{% highlight %}
+{% highlight %}&lt;input type=&quot;checkbox&quot; id=&quot;pet_dog&quot; name=&quot;pet_dog&quot; value=&quot;1&quot; /&gt;
 &lt;label for=&quot;pet_dog&quot;&gt;I own a dog&lt;/label&gt;
 &lt;input type=&quot;checkbox&quot; id=&quot;pet_cat&quot; name=&quot;pet_cat&quot; value=&quot;1&quot; /&gt;
 &lt;label for=&quot;pet_cat&quot;&gt;I own a cat&lt;/label&gt;{% endhighlight %}
 
 <p>单选按钮:</p>
 
-<pre>
-<code>&lt;%= form.radio_button :age, &quot;child&quot; %&gt;
+{% highlight %}
+{% highlight %}&lt;%= form.radio_button :age, &quot;child&quot; %&gt;
 &lt;%= form.label :age_child, &quot;I am younger than 21&quot; %&gt;
 &lt;%= form.radio_button :age, &quot;adult&quot; %&gt;
 &lt;%= form.label :age_adult, &quot;I am over 21&quot; %&gt;{% endhighlight %}
 
 <p>output:</p>
 
-<pre>
-<code>&lt;input type=&quot;radio&quot; id=&quot;age_child&quot; name=&quot;age&quot; value=&quot;child&quot; /&gt;
+{% highlight %}
+{% highlight %}&lt;input type=&quot;radio&quot; id=&quot;age_child&quot; name=&quot;age&quot; value=&quot;child&quot; /&gt;
 &lt;label for=&quot;age_child&quot;&gt;I am younger than 21&lt;/label&gt;
 &lt;input type=&quot;radio&quot; id=&quot;age_adult&quot; name=&quot;age&quot; value=&quot;adult&quot; /&gt;
 &lt;label for=&quot;age_adult&quot;&gt;I am over 21&lt;/label&gt;{% endhighlight %}
 
 <p>others:</p>
 
-<pre>
-<p43><code>&lt;%= form.text_area :message, size: &quot;70x5&quot; %&gt;
+{% highlight %}
+<p43>{% highlight %}&lt;%= form.text_area :message, size: &quot;70x5&quot; %&gt;
 
 &lt;%= form.hidden_field :parent_id, value: &quot;foo&quot; %&gt;
 
@@ -117,11 +117,11 @@ end{% endhighlight %}
 
 &lt;%= form.telephone_field :phone %&gt;
 
-&lt;%= form.url_field :homepage %&gt;</code></p43><p43>
+&lt;%= form.url_field :homepage %&gt;{% endhighlight %}</p43><p43>
 
-<code>&lt;%= form.color_field :favorite_color %&gt;</code></p43></pre>
+{% highlight %}&lt;%= form.color_field :favorite_color %&gt;{% endhighlight %}</p43>{% endhighlight %}
 
-<pre>
+{% highlight %}
 <code class="highlight erb">area： <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">text_area</span> <span class="ss">:body</span><span class="p">,</span> <span class="ss">size: </span><span class="s2">&quot;60x10&quot;</span> <span class="cp">%&gt;</span>{% endhighlight %}
 
 <p>select：&lt;%= form.select :city, [&quot;Berlin&quot;, &quot;Chicago&quot;, &quot;Madrid&quot;] %&gt;</p>

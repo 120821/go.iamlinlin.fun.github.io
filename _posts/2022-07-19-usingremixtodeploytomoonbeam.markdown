@@ -25,9 +25,9 @@ categories:
 
 <p><img alt="Compile MyToken.sol" src="https://docs.moonbeam.network/images/builders/build/eth-api/dev-env/remix/using-remix-6.png" /></p>
 
-<p>填写内容<code>8000000000000000000000000</code></p>
+<p>填写内容{% highlight %}8000000000000000000000000{% endhighlight %}</p>
 
-<p><code>进行deploy</code></p>
+<p>{% highlight %}进行deploy{% endhighlight %}</p>
 
 <p><img height="541" src="/uploads/ckeditor/pictures/110/image-20220719104203-1.png" width="1558" /></p>
 

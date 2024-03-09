@@ -6,8 +6,8 @@ categories:
 ---
 <p>https://www.w3schools.com/css/css_align.asp</p>
 
-<pre>
-&gt;<code><span class="cssselectorcolor" style="color:brown">.center <span class="cssdelimitercolor" style="color:black">{</span>
+{% highlight %}
+&gt;{% highlight %}<span class="cssselectorcolor" style="color:brown">.center <span class="cssdelimitercolor" style="color:black">{</span>
 
 <span class="csspropertycolor" style="color:red">&nbsp;&nbsp;margin<span class="csspropertyvaluecolor" style="color:mediumblue"><span class="cssdelimitercolor" style="color:black">:</span> auto<span class="cssdelimitercolor" style="color:black">;</span></span>
 

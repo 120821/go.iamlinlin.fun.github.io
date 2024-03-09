@@ -10,8 +10,8 @@ categories:
 
 <p>安装：</p>
 
-<pre>
-gem install nokogiri</pre>
+{% highlight %}
+gem install nokogiri{% endhighlight %}
 
 <p>然后bundle即可</p>
 
@@ -23,12 +23,12 @@ gem install nokogiri</pre>
 
 <p>存在这样的html：</p>
 
-<pre>
+{% highlight %}
 <code class="prettyprint lang-html"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">&quot;http://www.google.com&quot;</span><span class="tag">&gt;</span><span class="pln">Click here</span><span class="tag">&lt;/a&gt;</span>{% endhighlight %}
 
-<p><code class="prettyprint lang-html"><span class="tag">就可以使用这样的方法进行获得需要的内容：</span></code></p>
+<p><code class="prettyprint lang-html"><span class="tag">就可以使用这样的方法进行获得需要的内容：</span>{% endhighlight %}</p>
 
-<pre>
+{% highlight %}
 <code class="prettyprint"><span class="com"># set URL to point to where the page exists</span><span class="pln">
 page </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Nokogiri</span><span class="pun">::</span><span class="pln">HTML</span><span class="pun">(</span><span class="pln">open</span><span class="pun">(</span><span class="pln">PAGE_URL</span><span class="pun">))</span><span class="pln">
 links </span><span class="pun">=</span><span class="pln"> page</span><span class="pun">.</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;a&quot;</span><span class="pun">)</span><span class="pln">
@@ -38,17 +38,17 @@ puts links</span><span class="pun">[</span><span class="lit">0</span><span class
 
 <p>也可以使用多层的关系：</p>
 
-<pre>
+{% highlight %}
 <code class="prettyprint"><span class="pln">page</span><span class="pun">.</span><span class="pln">css</span><span class="pun">(</span><span class="str">&#39;p&#39;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;a[data-category=news]&quot;</span><span class="pun">).</span><span class="pln">css</span><span class="pun">(</span><span class="str">&quot;strong&quot;</span><span class="pun">)</span>{% endhighlight %}
 
-<p>In your case, after <code>response = RestClient.get get_url...</code> you should have variable <code>response</code> and ability to call <code>response.headers</code>, <code>response.code</code> or <code>response.body</code>.</p>
+<p>In your case, after {% highlight %}response = RestClient.get get_url...{% endhighlight %} you should have variable {% highlight %}response{% endhighlight %} and ability to call {% highlight %}response.headers{% endhighlight %}, {% highlight %}response.code{% endhighlight %} or {% highlight %}response.body{% endhighlight %}.</p>
 
-<p><span class="comment-copy">You can pass <code>response.body</code> to nokogiri: <code>Nokogiri::HTML(response.body).at(&#39;body&#39;)</code></span></p>
+<p><span class="comment-copy">You can pass {% highlight %}response.body{% endhighlight %} to nokogiri: {% highlight %}Nokogiri::HTML(response.body).at(&#39;body&#39;){% endhighlight %}</span></p>
 
 <p>以下是解析和查询文档的示例用法（不是很清晰，可以看顶部的教程）：</p>
 
-<pre>
-<code>#! /usr/bin/env ruby
+{% highlight %}
+{% highlight %}#! /usr/bin/env ruby
 
 require &#39;nokogiri&#39;
 

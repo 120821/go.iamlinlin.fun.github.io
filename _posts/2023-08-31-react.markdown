@@ -6,8 +6,8 @@ categories:
 ---
 <p>在页面进行判断参数是否存在，存在就显示（使用let声明，然后使用if + typeof来判断）：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">let</span> displayedParams = {};
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">let</span> displayedParams = {};
 
 <span style="color:#dcc6e0">if</span> (<span style="color:#dcc6e0">typeof</span> paramsObj.r !== <span style="color:#abe338">&quot;undefined&quot;</span>) {
   displayedParams = {

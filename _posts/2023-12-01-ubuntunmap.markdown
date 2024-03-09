@@ -7,7 +7,7 @@ categories:
 <p>1.需要已经安装了docker，查询可用的nmap有哪些版本：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code><span style="color:#ffd700">docker</span> search nmap
+{% highlight %}<span style="color:#ffd700">docker</span> search nmap
 <span style="color:#ffd700">NAME</span>                                                     DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 <span style="color:#ffd700">securecodebox</span>/nmap                                       A Docker image containing the NMAP security &hellip;   <span style="color:#f5ab35">27</span>                   
 <span style="color:#ffd700">eclipse</span>/ubuntu_jdk<span style="color:#f5ab35">8</span>                                      Ubuntu, JDK<span style="color:#f5ab35">8</span>, Maven <span style="color:#f5ab35">3</span>, git, curl, nmap, mc, &hellip;   <span style="color:#f5ab35">15</span>                  <span style="color:#f5ab35"> [OK]</span>
@@ -38,7 +38,7 @@ categories:
 <p>2.安装需要的版本：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>docker pull uzyexe/<span style="color:#dcc6e0">nmap</span>
+{% highlight %}docker pull uzyexe/<span style="color:#dcc6e0">nmap</span>
 Using default <span style="color:#dcc6e0">ta</span><span style="color:#ffa07a">g:</span> latest
 lates<span style="color:#ffa07a">t:</span> Pulling from uzyexe/<span style="color:#dcc6e0">nmap</span>
 b0dc45cd432d: Pull <span style="color:#f5ab35">complete</span> 
@@ -58,7 +58,7 @@ docker.io/uzyexe/<span style="color:#dcc6e0">nmap</span>:latest{% endhighlight %
 <p>使用 uzyexe/nmap 镜像对 baidu.com 进行了端口1-1000进行扫描:</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code><span style="color:#ffd700">docker</span> run --rm uzyexe/nmap -p <span style="color:#f5ab35">1</span>-<span style="color:#f5ab35">1000</span> baidu.com
+{% highlight %}<span style="color:#ffd700">docker</span> run --rm uzyexe/nmap -p <span style="color:#f5ab35">1</span>-<span style="color:#f5ab35">1000</span> baidu.com
 <span style="color:#ffd700">Starting</span> Nmap <span style="color:#f5ab35">7</span>.<span style="color:#f5ab35">80</span> ( https://nmap.org ) at <span style="color:#f5ab35">2023</span>-<span style="color:#f5ab35">12</span>-<span style="color:#f5ab35">01</span> <span style="color:#f5ab35">01</span>:<span style="color:#f5ab35">09</span> UTC
 <span style="color:#ffd700">Nmap</span> scan report for baidu.com (<span style="color:#f5ab35">39.156.66.10</span>)
 <span style="color:#ffd700">Host</span> is up (<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">055</span>s latency).
@@ -74,28 +74,28 @@ docker.io/uzyexe/<span style="color:#dcc6e0">nmap</span>:latest{% endhighlight %
 
 <ul style="margin-left:0px; margin-right:0px">
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>Starting Nmap 7.80</code>：扫描的Nmap的版本信息</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}Starting Nmap 7.80{% endhighlight %}：扫描的Nmap的版本信息</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>Nmap scan report for baidu.com (39.156.66.10)</code>：意思是扫描的是baidu.com, baidu.com的ip是<code>39.156.66.10</code>。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}Nmap scan report for baidu.com (39.156.66.10){% endhighlight %}：意思是扫描的是baidu.com, baidu.com的ip是{% highlight %}39.156.66.10{% endhighlight %}。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>Host is up (0.055s latency)</code>：意思是baidu.com的主机是可以到达的，延迟时间是0.055s。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}Host is up (0.055s latency){% endhighlight %}：意思是baidu.com的主机是可以到达的，延迟时间是0.055s。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>Not shown: 998 filtered ports</code>：表示扫描的时候，998个端口没有显示出来。&quot;Filtered&quot; 意味着在扫描期间无法确定这些端口的状态，可能是由于防火墙或其他网络设备的过滤。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}Not shown: 998 filtered ports{% endhighlight %}：表示扫描的时候，998个端口没有显示出来。&quot;Filtered&quot; 意味着在扫描期间无法确定这些端口的状态，可能是由于防火墙或其他网络设备的过滤。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>PORT STATE SERVICE</code>：这是扫描结果的标题，标题下是扫描到的各个端口的状态和对应的服务。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}PORT STATE SERVICE{% endhighlight %}：这是扫描结果的标题，标题下是扫描到的各个端口的状态和对应的服务。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>80/tcp open http</code>：这表示端口 80 的状态为 &quot;open&quot;，即端口是开放的，并且服务是 HTTP。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}80/tcp open http{% endhighlight %}：这表示端口 80 的状态为 &quot;open&quot;，即端口是开放的，并且服务是 HTTP。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>443/tcp open https</code>：这表示端口 443 的状态为 &quot;open&quot;，即端口是开放的，并且服务是 HTTPS。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}443/tcp open https{% endhighlight %}：这表示端口 443 的状态为 &quot;open&quot;，即端口是开放的，并且服务是 HTTPS。</p>
 	</li>
 	<li>
-	<p style="margin-left:0px; margin-right:0px"><code>Nmap done: 1 IP address (1 host up) scanned in 5.80 seconds</code>：这表示扫描已完成，总共扫描了 1 个 IP 地址（1 台主机），扫描过程耗时 5.80 秒。</p>
+	<p style="margin-left:0px; margin-right:0px">{% highlight %}Nmap done: 1 IP address (1 host up) scanned in 5.80 seconds{% endhighlight %}：这表示扫描已完成，总共扫描了 1 个 IP 地址（1 台主机），扫描过程耗时 5.80 秒。</p>
 	</li>
 </ul>
 

@@ -4,8 +4,8 @@ title: "html <u> 点状下划线 "
 date: "2023-03-10"
 categories: 
 ---
-<pre>
-<code>&lt;p&gt;&lt;u&gt;今天的天气真好啊！&lt;/u&gt;&lt;/p&gt;
+{% highlight %}
+{% highlight %}&lt;p&gt;&lt;u&gt;今天的天气真好啊！&lt;/u&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;u&gt;27&lt;/u&gt;&lt;/p&gt;
 

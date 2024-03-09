@@ -14,8 +14,8 @@ categories:
 
 <p>注意：（在使用struct的时候，需要吧json右边的格式写完整，双引号不能少，空格不要多）</p>
 
-<pre>
-<code>+&nbsp; InitialFillingAmount float64 `json:&quot;initialFillingAmount&quot;`
+{% highlight %}
+{% highlight %}+&nbsp; InitialFillingAmount float64 `json:&quot;initialFillingAmount&quot;`
 
 +&nbsp; OperatingDischargeRate float64 `json:&quot;operatingDischargeRate&quot;`
 
@@ -29,8 +29,8 @@ categories:
 
 <p>然后再在Error里自己自己的error的打印：</p>
 
-<pre>
-<code>var req UpdateCalculationTemplateRequest
+{% highlight %}
+{% highlight %}var req UpdateCalculationTemplateRequest
 
 &nbsp;&nbsp; if err := c.ShouldBindJSON(&amp;req); err != nil {
 
@@ -44,8 +44,8 @@ categories:
 
 <p>格式修改完整后，继续在前端发起请求，发现出现了error，说明还是格式不对，仔细对比发现input不匹配，应该使用inputnumber</p>
 
-<pre>
-<code>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Input className=&quot;custom-form-item&quot; defaultValue={data.data.initial_filling_amount}/&gt;
+{% highlight %}
+{% highlight %}-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Input className=&quot;custom-form-item&quot; defaultValue={data.data.initial_filling_amount}/&gt;
 
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;InputNumber defaultValue={data.data.initial_filling_amount} step={0.01} min={0} max={100} precision={2} className=&quot;custom-input&quot; /&gt;{% endhighlight %}
 

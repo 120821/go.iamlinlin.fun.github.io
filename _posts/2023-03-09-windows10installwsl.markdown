@@ -25,7 +25,7 @@ categories:
 	<li>2. 运行以下命令：</li>
 </ul>
 
-<p><code>&nbsp;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code></p>
+<p>{% highlight %}&nbsp;dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart{% endhighlight %}</p>
 
 <p>&nbsp;如果出现了报错：</p>
 
@@ -33,46 +33,46 @@ categories:
 
 <p>使用以下命令：</p>
 
-<p>PS C:\Windows\system32&gt;<code> ./dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code></p>
+<p>PS C:\Windows\system32&gt;{% highlight %} ./dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart{% endhighlight %}</p>
 
-<p><code>部署映像服务和管理工具<br />
-版本: 10.0.17763.3406</code></p>
+<p>{% highlight %}部署映像服务和管理工具<br />
+版本: 10.0.17763.3406{% endhighlight %}</p>
 
-<p><code>映像版本: 10.0.17763.4131</code></p>
+<p>{% highlight %}映像版本: 10.0.17763.4131{% endhighlight %}</p>
 
-<p><code>启用一个或多个功能<br />
-[==================&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32.5%</code></p>
+<p>{% highlight %}启用一个或多个功能<br />
+[==================&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32.5%{% endhighlight %}</p>
 
-<p><code>提示操作完成即可：</code></p>
+<p>{% highlight %}提示操作完成即可：{% endhighlight %}</p>
 
-<p><code>映像版本: 10.0.17763.4131</code></p>
+<p>{% highlight %}映像版本: 10.0.17763.4131{% endhighlight %}</p>
 
-<p><code>启用一个或多个功能<br />
+<p>{% highlight %}启用一个或多个功能<br />
 [==========================100.0%==========================]<br />
-操作成功完成。</code></p>
+操作成功完成。{% endhighlight %}</p>
 
 <ul>
 	<li>3. 运行以下命令以启用虚拟机功能：</li>
-	<li><code>&nbsp;&nbsp;&nbsp; dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></li>
-	<li><code>同上，如果出现了错误：</code></li>
+	<li>{% highlight %}&nbsp;&nbsp;&nbsp; dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart{% endhighlight %}</li>
+	<li>{% highlight %}同上，如果出现了错误：{% endhighlight %}</li>
 	<li>
-	<p><code>Suggestion [3,General]: 找不到命令 dism.exe，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入&ldquo;.\dism.exe&rdquo;。有关详细信息，请参阅 &quot;get-help about_Command_Precedence&quot;。</code><br />
+	<p>{% highlight %}Suggestion [3,General]: 找不到命令 dism.exe，但它确实存在于当前位置。默认情况下，Windows PowerShell 不会从当前位置加载命令。如果信任此命令，请改为键入&ldquo;.\dism.exe&rdquo;。有关详细信息，请参阅 &quot;get-help about_Command_Precedence&quot;。{% endhighlight %}<br />
 	那么就使用以下命令：</p>
 	</li>
 	<li>
-	<p><code>PS C:\Windows\system32&gt; ./dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code></p>
+	<p>{% highlight %}PS C:\Windows\system32&gt; ./dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart{% endhighlight %}</p>
 
-	<p><code>部署映像服务和管理工具<br />
-	版本: 10.0.17763.3406</code></p>
+	<p>{% highlight %}部署映像服务和管理工具<br />
+	版本: 10.0.17763.3406{% endhighlight %}</p>
 
-	<p><code>映像版本: 10.0.17763.4131</code></p>
+	<p>{% highlight %}映像版本: 10.0.17763.4131{% endhighlight %}</p>
 
-	<p><code>启用一个或多个功能<br />
+	<p>{% highlight %}启用一个或多个功能<br />
 	[==========================100.0%==========================]<br />
-	操作成功完成。</code></p>
+	操作成功完成。{% endhighlight %}</p>
 	</li>
 	<li>4. 重新启动计算机。</li>
-	<li>5. 下载并安装&ldquo;WSL2 Linux内核更新包&rdquo;，可以在此处下载：<a href="http://https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel"><code> https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel</code></a></li>
+	<li>5. 下载并安装&ldquo;WSL2 Linux内核更新包&rdquo;，可以在此处下载：<a href="http://https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel">{% highlight %} https://docs.microsoft.com/zh-cn/windows/wsl/wsl2-kernel{% endhighlight %}</a></li>
 	<li>6. 安装完后，打开Microsoft Store并搜索你想要的Linux发行版，例如Ubuntu、Debian等。</li>
 	<li>请注意，WSL2需要在Windows 10版本2004或更高版本上运行。如果你的Windows版本太旧，可能无法通过这种方式安装WSL。</li>
 </ul>

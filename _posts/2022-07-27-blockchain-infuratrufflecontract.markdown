@@ -87,13 +87,13 @@ module.exports = {<br />
 
 {% highlight %}$ truffle compile{% endhighlight %}
 
-<p class="hljs markdown"><code><span class="hljs-header">Compiling your contracts...<br />
+<p class="hljs markdown">{% highlight %}<span class="hljs-header">Compiling your contracts...<br />
 ===========================</span><br />
 <span class="hljs-blockquote">&gt; Compiling ./contracts/Demo.sol</span><br />
 <span class="hljs-blockquote">&gt; Compiling ./contracts/Migrations.sol</span><br />
 <span class="hljs-blockquote">&gt; Artifacts written to /mnt/d/workspace/test_truffle/build/contracts</span><br />
 <span class="hljs-blockquote">&gt; Compiled successfully using:</span><br />
-&nbsp;&nbsp; - solc: 0.5.16+commit.9c3226ce.Emscripten.clang</code></p>
+&nbsp;&nbsp; - solc: 0.5.16+commit.9c3226ce.Emscripten.clang{% endhighlight %}</p>
 
 <p>contracts 目录下</p>
 
@@ -115,15 +115,15 @@ module.exports = {<br />
 ===========================<br />
 &gt; Everything is up to date, there is nothing to compile.{% endhighlight %}
 
-<pre><br />
-<code>Starting migrations...<br />
+{% highlight %}<br />
+{% highlight %}Starting migrations...<br />
 ======================<br />
 &gt; Network name:&nbsp;&nbsp;&nbsp; &#39;development&#39;<br />
 &gt; Network id:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1658894263086<br />
 &gt; Block gas limit: 30000000 (0x1c9c380){% endhighlight %}
 
-<pre>
-<code>1_initial_migration.js<br />
+{% highlight %}
+{% highlight %}1_initial_migration.js<br />
 ======================{% endhighlight %}
 
 {% highlight %}&nbsp;&nbsp; Deploying &#39;Migrations&#39;<br />
@@ -145,8 +145,8 @@ module.exports = {<br />
 &nbsp;&nbsp; -------------------------------------<br />
 &nbsp;&nbsp; &gt; Total cost:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.00084426975 ETH{% endhighlight %}
 
-<pre><br />
-<code>2_deploy_contract.js<br />
+{% highlight %}<br />
+{% highlight %}2_deploy_contract.js<br />
 ===================={% endhighlight %}
 
 {% highlight %}&nbsp;&nbsp; Deploying &#39;Demo&#39;<br />
@@ -311,7 +311,7 @@ eth_sendTransaction{% endhighlight %}
 
 {% highlight %}eth_getTransactionReceipt{% endhighlight %}
 
-{% highlight %}linlin@linlin-i5:/workspace/blockchain$ truffle deploy --network development --verbose-rpc --interactive</code></p>
+{% highlight %}linlin@linlin-i5:/workspace/blockchain$ truffle deploy --network development --verbose-rpc --interactive{% endhighlight %}</p>
 
 {% highlight %}Compiling your contracts...<br />
 ===========================<br />
@@ -430,11 +430,11 @@ eth_sendTransaction{% endhighlight %}
 &nbsp;&lt;&nbsp;&nbsp;&nbsp;&nbsp; &quot;jsonrpc&quot;: &quot;2.0&quot;,<br />
 &nbsp;&lt;&nbsp;&nbsp;&nbsp;&nbsp; &quot;result&quot;: &quot;0x0000000000000000000000000000000000000000000000000000000000000002&quot;<br />
 &nbsp;&lt;&nbsp;&nbsp; }<br />
-Network up to date.</code></p>
+Network up to date.{% endhighlight %}</p>
 
 <p>如果要在本地的7545进行部署就需要安装APP的ganache</p>
 
-<p><code>linlin@linlin-i5:~/Downloads$ ll |grep ganache<br />
+<p>{% highlight %}linlin@linlin-i5:~/Downloads$ ll |grep ganache<br />
 -rw-rw-r--&nbsp; 1 linlin linlin 153130048&nbsp; 7月 25 14:57 ganache-2.5.4-linux-x86_64.AppImage<br />
 linlin@linlin-i5:~/Downloads$ chmod +x ganache-2.5.4-linux-x86_64.AppImage ^C<br />
 linlin@linlin-i5:~/Downloads$ chmod +x ganache-2.5.4-linux-x86_64.AppImage<br />
@@ -448,17 +448,17 @@ listen to truffle<br />
 &nbsp;&nbsp;&nbsp; at SimpleURLLoaderWrapper.&lt;anonymous&gt; (electron/js2c/browser_init.js:2519:21)<br />
 &nbsp;&nbsp;&nbsp; at SimpleURLLoaderWrapper.emit (events.js:210:5)<br />
 eth_unsubscribe<br />
-eth_unsubscribe</code></p>
+eth_unsubscribe{% endhighlight %}</p>
 
-<p><code>eth_unsubscribe<br />
-eth_unsubscribe</code></p>
+<p>{% highlight %}eth_unsubscribe<br />
+eth_unsubscribe{% endhighlight %}</p>
 
-<p><code>eth_unsubscribe<br />
-eth_unsubscribe</code></p>
+<p>{% highlight %}eth_unsubscribe<br />
+eth_unsubscribe{% endhighlight %}</p>
 
 <p>这里是卡住了，然后断开了，因此需要重新启动</p>
 
-<p><code>linlin@linlin-i5:~/Downloads$ ./ganache-2.5.4-linux-x86_64.AppImage</code></p>
+<p>{% highlight %}linlin@linlin-i5:~/Downloads$ ./ganache-2.5.4-linux-x86_64.AppImage{% endhighlight %}</p>
 
 <p><img height="823" src="/uploads/ckeditor/pictures/152/image-20220728115706-4.png" width="1185" /></p>
 

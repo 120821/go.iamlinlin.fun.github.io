@@ -6,8 +6,8 @@ categories:
 ---
 <p>go删除数组的0元素，加在末尾：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">package</span> main
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">package</span> main
 
 <span style="color:#dcc6e0">import</span> <span style="color:#abe338">&quot;fmt&quot;</span>
 

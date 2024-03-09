@@ -10,10 +10,10 @@ categories:
 
 <p><img height="578" src="/uploads/ckeditor/pictures/172/image-20220809162723-2.png" width="776" /></p>
 
-<p><code>user_mailer.rb ：</code></p>
+<p>{% highlight %}user_mailer.rb ：{% endhighlight %}</p>
 
-<pre>
-<code>&nbsp;class UserMailer &lt; ApplicationMailer
+{% highlight %}
+{% highlight %}&nbsp;class UserMailer &lt; ApplicationMailer
 
 &nbsp; 2&nbsp;&nbsp; default from: &#39; web3@163.com&#39;
 &nbsp; 3
@@ -26,8 +26,8 @@ categories:
 
 <p>正文：app/views/user_mailer/send_validation_email.html.erb</p>
 
-<pre>
-<code>&lt;body style=&quot;font-size:14px;font-family:arial,verdana,sans-serif;line-height:1.666;padding:0;margin:0;overflow:auto;white-space:normal;word-wrap:break-word;min-height:100px;
+{% highlight %}
+{% highlight %}&lt;body style=&quot;font-size:14px;font-family:arial,verdana,sans-serif;line-height:1.666;padding:0;margin:0;overflow:auto;white-space:normal;word-wrap:break-word;min-height:100px;
 &nbsp; &lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellspacing=&quot;0&quot; style=&quot;width:700px;&quot;&gt;
 &nbsp;&nbsp;&nbsp; &lt;tbody&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;

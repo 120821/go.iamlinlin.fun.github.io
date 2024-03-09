@@ -8,8 +8,8 @@ categories:
 
 <p>使用post httparty</p>
 
-<pre>
-<code>cat scripts/get_blogs_from_kanxue_use_httparty.rb
+{% highlight %}
+{% highlight %}cat scripts/get_blogs_from_kanxue_use_httparty.rb
 
 ENV[&#39;RAILS_ENV&#39;] = ARGV.first || ENV[&#39;RAILS_ENV&#39;] || &#39;development&#39;
 

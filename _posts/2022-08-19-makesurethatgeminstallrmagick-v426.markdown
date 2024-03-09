@@ -16,9 +16,9 @@ categories:
 <code class="sh">解决：使用命令
 sudo apt-get install libmagickwand-dev{% endhighlight %}
 
-<p><code class="sh">然后继续bundle install</code></p>
+<p><code class="sh">然后继续bundle install{% endhighlight %}</p>
 
-<p><code>安装成功</code></p>
+<p>{% highlight %}安装成功{% endhighlight %}</p>
 
 <p><img height="832" src="/uploads/ckeditor/pictures/302/image-20220819163757-3.png" width="1494" /></p>
 

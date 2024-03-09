@@ -5,7 +5,7 @@ date: "2022-06-09"
 categories: 
 ---
 
-                    <p>官方文档与实际项目文档会有差别,实际项目中使用了 <code>vue-loader</code>, 会自动加载所有的内容，按照webpacke + vue的约定.</p> 
+                    <p>官方文档与实际项目文档会有差别,实际项目中使用了 {% highlight %}vue-loader{% endhighlight %}, 会自动加载所有的内容，按照webpacke + vue的约定.</p> 
 <blockquote> 
  <p>官方文档是js文件</p> 
  {% highlight %}var Child = {

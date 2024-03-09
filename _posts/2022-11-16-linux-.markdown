@@ -8,8 +8,8 @@ categories:
 
 <p>磁盘空间：</p>
 
-<pre>
-<code>df -h 显示已经挂载的分区列表
+{% highlight %}
+{% highlight %}df -h 显示已经挂载的分区列表
 ls -lSr |more 以尺寸大小排列文件和目录
 du -sh dir1 估算目录 &#39;dir1&#39; 已经使用的磁盘空间&#39;
 du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小
@@ -18,8 +18,8 @@ dpkg-query -W -f=&#39;${Installed-Size;10}t${Package}n&#39; | sort -k1,1n 以大
 
 <p>文件和目录：</p>
 
-<pre>
-<code>cd /home 进入 &#39;/ home&#39; 目录&#39;
+{% highlight %}
+{% highlight %}cd /home 进入 &#39;/ home&#39; 目录&#39;
 cd .. 返回上一级目录
 cd ../.. 返回上两级目录
 cd 进入个人的主目录
@@ -55,8 +55,8 @@ find . -maxdepth 1 -name *.jpg -print -exec convert &quot;{}&quot; -resize 80x60
 
 <p>文件搜索：</p>
 
-<pre>
-<code>find / -name file1 从 &#39;/&#39; 开始进入根文件系统搜索文件和目录
+{% highlight %}
+{% highlight %}find / -name file1 从 &#39;/&#39; 开始进入根文件系统搜索文件和目录
 find / -user user1 搜索属于用户 &#39;user1&#39; 的文件和目录
 find /home/user1 -name \*.bin 在目录 &#39;/ home/user1&#39; 中搜索带有&#39;.bin&#39; 结尾的文件
 find /usr/bin -type f -atime +100 搜索在过去100天内未被使用过的执行文件
@@ -69,8 +69,8 @@ which halt 显示一个二进制文件或可执行文件的完整路径{% endhig
 
 <p>打包和压缩：</p>
 
-<pre>
-<code>bunzip2 file1.bz2 解压一个叫做 &#39;file1.bz2&#39;的文件
+{% highlight %}
+{% highlight %}bunzip2 file1.bz2 解压一个叫做 &#39;file1.bz2&#39;的文件
 bzip2 file1 压缩一个叫做 &#39;file1&#39; 的文件
 gunzip file1.gz 解压一个叫做 &#39;file1.gz&#39;的文件
 gzip file1 压缩一个叫做 &#39;file1&#39;的文件
@@ -94,8 +94,8 @@ unzip file1.zip 解压一个zip格式压缩包{% endhighlight %}
 
 <p>查看文件内容：</p>
 
-<pre>
-<code>cat file1 从第一个字节开始正向查看文件的内容
+{% highlight %}
+{% highlight %}cat file1 从第一个字节开始正向查看文件的内容
 tac file1 从最后一行开始反向查看一个文件的内容
 more file1 查看一个长文件的内容
 less file1 类似于 &#39;more&#39; 命令，但是它允许在文件中和正向操作一样的反向操作
@@ -105,8 +105,8 @@ tail -f /var/log/messages 实时查看被添加到一个文件中的内容{% end
 
 <p>文本处理：</p>
 
-<pre>
-<code>cat file1 file2 ... | command &lt;&gt; file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT
+{% highlight %}
+{% highlight %}cat file1 file2 ... | command &lt;&gt; file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT
 cat file1 | command( sed, grep, awk, grep, etc...) &gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个新文件中
 cat file1 | command( sed, grep, awk, grep, etc...) &gt;&gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个已有的文件中
 grep Aug /var/log/messages 在文件 &#39;/var/log/messages&#39;中查找关键词&quot;Aug&quot;
@@ -140,8 +140,8 @@ comm -3 file1 file2 比较两个文件的内容只删除两个文件共有的部
 
 <p>备份：</p>
 
-<pre>
-<code>dump -0aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的完整备份
+{% highlight %}
+{% highlight %}dump -0aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的完整备份
 dump -1aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的交互式备份
 restore -if /tmp/home0.bak 还原一个交互式备份
 rsync -rogpav --delete /home /tmp 同步两边的目录

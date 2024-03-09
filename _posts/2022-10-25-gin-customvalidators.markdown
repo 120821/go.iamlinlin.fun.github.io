@@ -61,7 +61,7 @@ categories:
 <span style="color:#000;font-weight:700">}</span>
 {% endhighlight %}
 
-<p><code class="language-go" data-lang="go">测试：</code></p>
+<p><code class="language-go" data-lang="go">测试：{% endhighlight %}</p>
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-sh" data-lang="sh">$ curl <span style="color:#4e9a06">&quot;localhost:8085/bookable?check_in=2118-04-16&amp;check_out=2118-04-17&quot;</span>

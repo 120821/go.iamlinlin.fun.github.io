@@ -6,6 +6,6 @@ categories:
 ---
 <p>linux直接使用：</p>
 
-<pre>
-<code>echo $JAVA_HOME{% endhighlight %}
+{% highlight %}
+{% highlight %}echo $JAVA_HOME{% endhighlight %}
 

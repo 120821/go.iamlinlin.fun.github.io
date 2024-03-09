@@ -5,7 +5,7 @@ date: "2022-06-09"
 categories: 
 ---
 
-                    <pre><code class="language-html">
+                    {% highlight %}<code class="language-html">
 &lt;form action=""&gt;
   &lt;div class="form-group"&gt;
   &lt;label for="email"&gt;Email address:&lt;/label&gt;

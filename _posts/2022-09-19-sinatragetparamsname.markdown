@@ -9,7 +9,7 @@ categories:
 <p>在文件末尾添加以下路由（请求处理程序）到您的程序：</p>
 
 <pre class="highlight ruby">
-<code><span class="n">get</span> <span class="s2">&quot;/monstas/:name&quot;</span> <span class="k">do</span>
+{% highlight %}<span class="n">get</span> <span class="s2">&quot;/monstas/:name&quot;</span> <span class="k">do</span>
   <span class="s2">&quot;Hello </span><span class="si">#{</span><span class="n">params</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span><span class="si">}</span><span class="s2">!&quot;</span>
 <span class="k">end</span>
 {% endhighlight %}

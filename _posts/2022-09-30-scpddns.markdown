@@ -39,7 +39,7 @@ categories:
  <span class="hljs-number">2010</span>  sudo apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">update</span>
  <span class="hljs-number">2011</span>  sudo apt-<span class="hljs-keyword">get</span> <span class="hljs-keyword">install</span> docker-ce docker-ce-cli containerd.io
  <span class="hljs-number">2012</span>  sudo docker run hello-world
- <span class="hljs-number">2013</span>  docker run -it ubuntu bash</span></pre>
+ <span class="hljs-number">2013</span>  docker run -it ubuntu bash</span>{% endhighlight %}
 
 <p>安装docker-compose:&nbsp;</p>
 

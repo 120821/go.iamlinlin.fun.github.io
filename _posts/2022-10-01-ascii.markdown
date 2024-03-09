@@ -20,7 +20,7 @@ categories:
      (|     | ) 
     /<span class="hljs-string">&#39;\_   _/`\
     \___)=(___/
-&lt; 欢迎来到测试服务器&rdquo; &gt; </span></pre>
+&lt; 欢迎来到测试服务器&rdquo; &gt; </span>{% endhighlight %}
 
 <p>&nbsp;</p>
 

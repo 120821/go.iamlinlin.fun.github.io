@@ -8,9 +8,9 @@ categories:
 
 <p>[][]inteface 是一个二维切片，类型，包含多个切片。</p>
 
-<p><code>interface{}</code>：代表任意类型的值，<strong>用于存储和操作</strong>各种不同类型的值是一种通用类型。</p>
+<p>{% highlight %}interface{}{% endhighlight %}：代表任意类型的值，<strong>用于存储和操作</strong>各种不同类型的值是一种通用类型。</p>
 
-<p><code>[]interface{}</code>：代表一个切片，其中的元素可以是任意类型的值，是一种切片类型。</p>
+<p>{% highlight %}[]interface{}{% endhighlight %}：代表一个切片，其中的元素可以是任意类型的值，是一种切片类型。</p>
 
-<p><code>[][]interface{}</code>：代表一个二维切片，其中的每个元素都是一个切片，而每个切片中的元素又可以是任意类型的值。</p>
+<p>{% highlight %}[][]interface{}{% endhighlight %}：代表一个二维切片，其中的每个元素都是一个切片，而每个切片中的元素又可以是任意类型的值。</p>
 

@@ -34,8 +34,8 @@ categories:
 
 <p>并且：</p>
 
-<pre>
-<code>git cherry-pick --continue{% endhighlight %}
+{% highlight %}
+{% highlight %}git cherry-pick --continue{% endhighlight %}
 
 <p>&nbsp;</p>
 

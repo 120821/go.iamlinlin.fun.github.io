@@ -6,13 +6,13 @@ categories:
 ---
 <p>1.在models/model.go增加atuoMigrate</p>
 
-<pre>
-<code>&nbsp;db.AutoMigrate(Datasets{}){% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp;db.AutoMigrate(Datasets{}){% endhighlight %}
 
 <p>完整：</p>
 
-<pre>
-<code>package models
+{% highlight %}
+{% highlight %}package models
 
 import (
 
@@ -124,8 +124,8 @@ func CloseDB() {
 
 <p>2.增加models/datasets.go,写增删改查的方法。类似于：</p>
 
-<pre>
-<code>package models
+{% highlight %}
+{% highlight %}package models
 
 type Datasets struct {
 
@@ -221,9 +221,9 @@ nbsp;&nbsp; &nbsp;return true
 
 <p>3.注意我在models/dataset.go使用了convertToString的方法，但是没有声明，是因为在其他model已经写了，在Dataset中可以直接调用，不需要重复声明：</p>
 
-<pre>
+{% highlight %}
 
-<code>func convertToString(data [][]string) string {
+{% highlight %}func convertToString(data [][]string) string {
 
 &nbsp; var result string
 

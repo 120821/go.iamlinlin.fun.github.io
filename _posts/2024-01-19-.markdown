@@ -8,8 +8,8 @@ categories:
 
 <p>时间复杂度需要根据循环递归等计算。</p>
 
-<pre>
-<code><span style="color:#ffa07a">for</span> <span style="color:#ffa07a">i</span> <span style="color:#dcc6e0">in</span> <span style="color:#00e0e0">range</span>(<span style="color:#ffa07a">n</span>):
+{% highlight %}
+{% highlight %}<span style="color:#ffa07a">for</span> <span style="color:#ffa07a">i</span> <span style="color:#dcc6e0">in</span> <span style="color:#00e0e0">range</span>(<span style="color:#ffa07a">n</span>):
     <span style="color:#00e0e0">print</span>(<span style="color:#ffa07a">i</span>)
 {% endhighlight %}
 

@@ -52,7 +52,7 @@ Explorer: https://testnet.snowtrace.io/</p>
 
 <p>内容如下</p>
 
-<pre>
+{% highlight %}
 // SPDX-License-Identifier: GPL-3.0
 
 pragma solidity 0.8.15;
@@ -170,7 +170,7 @@ contract CompleteNftExample is ERC721URIStorage {
     else return bytes1(uint8(b) + 0x57);
   }
 }
-</pre>
+{% endhighlight %}
 
 <p><img height="153" src="/uploads/ckeditor/pictures/97/image-20220715145643-2.png" width="490" /></p>
 

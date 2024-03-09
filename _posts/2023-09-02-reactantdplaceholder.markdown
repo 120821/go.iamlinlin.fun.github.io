@@ -8,8 +8,8 @@ categories:
 
 <p>在react 中使用ant design 的inpu inpunumber select ，如果想要修改 placeholder的颜色，不能直接定义Css,例如下面这样，这样是不生效的：</p>
 
-<pre>
-<code>.my-input::placeholder {
+{% highlight %}
+{% highlight %}.my-input::placeholder {
   color: red;
 }
 
@@ -20,8 +20,8 @@ categories:
 
 <p>（1）input-number:</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import { InputNumber } from &#39;antd&#39;;
 
 const YourComponent = () =&gt; {
@@ -34,15 +34,15 @@ export default YourComponent;{% endhighlight %}
 
 <p>在css文件增加：</p>
 
-<pre>
-<code><span style="color:#ffa07a">.ant-input-number-input</span>::placeholder {
+{% highlight %}
+{% highlight %}<span style="color:#ffa07a">.ant-input-number-input</span>::placeholder {
   <span style="color:#ffd700">color</span>: red; <span style="color:#d4d0ab">/* 修改为你想要的颜色 */</span>
 }{% endhighlight %}
 
 <p>（2）其他的同理：</p>
 
-<pre>
-<code>.ant-select-selection__placeholder {
+{% highlight %}
+{% highlight %}.ant-select-selection__placeholder {
 
 &nbsp; color: rgba(0, 0, 0, 0.68);
 

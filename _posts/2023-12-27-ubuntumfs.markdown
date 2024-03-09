@@ -10,8 +10,8 @@ categories:
 
 <p>使用官方的脚本：（推荐）</p>
 
-<pre>
-<code>curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \chmod 755 msfinstall &amp;&amp; \./msfinstall{% endhighlight %}
+{% highlight %}
+{% highlight %}curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb &gt; msfinstall &amp;&amp; \chmod 755 msfinstall &amp;&amp; \./msfinstall{% endhighlight %}
 
 <p>如果不行，可以使用手动安装，进入参考文章里看。</p>
 
@@ -25,26 +25,26 @@ categories:
 
 <p>更新一下MSF：</p>
 
-<pre>
-<code>sudo msfupdate{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo msfupdate{% endhighlight %}
 
 <p>启动MSF</p>
 
-<pre>
-<code>msfconsole {% endhighlight %}
+{% highlight %}
+{% highlight %}msfconsole {% endhighlight %}
 
 <p>连接数据库：（自己根据用户名密码数据库进行修改）</p>
 
-<pre>
-<code>db_connect postgres:hehehe@127.0.0.1/test //用户名，密码，地址，自己随意编造的名字。{% endhighlight %}
+{% highlight %}
+{% highlight %}db_connect postgres:hehehe@127.0.0.1/test //用户名，密码，地址，自己随意编造的名字。{% endhighlight %}
 
 <p>查看数据库的状态：</p>
 
-<pre>
-<code>db_status //查看数据库连接状态 {% endhighlight %}
+{% highlight %}
+{% highlight %}db_status //查看数据库连接状态 {% endhighlight %}
 
-<pre>
-<code>msf6 &gt; db_status
+{% highlight %}
+{% highlight %}msf6 &gt; db_status
 
 [*] Connected to blogs. Connection type: postgresql.{% endhighlight %}
 
@@ -52,11 +52,11 @@ categories:
 
 <p>测试是否可以访问目标机器：</p>
 
-<pre>
-<code>ping 192.168.174.129{% endhighlight %}
+{% highlight %}
+{% highlight %}ping 192.168.174.129{% endhighlight %}
 
-<pre>
-<code>ping 192.168.174.129
+{% highlight %}
+{% highlight %}ping 192.168.174.129
 
 [*] exec: ping 192.168.174.129
 
@@ -70,8 +70,8 @@ PING 192.168.174.129 (192.168.174.129) 56(84) bytes of data.
 
 <p>根据漏洞的编号进行搜索：</p>
 
-<pre>
-<code>search ms17_010
+{% highlight %}
+{% highlight %}search ms17_010
 
 msf6 &gt; search ms17_010
 
@@ -96,11 +96,11 @@ Interact with a module by name or index. For example info 3, use 3 or use auxili
 
 <p>搜索某年的漏洞：</p>
 
-<pre>
-<code>msf6 &gt; search cve-2023{% endhighlight %}
+{% highlight %}
+{% highlight %}msf6 &gt; search cve-2023{% endhighlight %}
 
-<pre>
-<code>Matching Modules
+{% highlight %}
+{% highlight %}Matching Modules
 
 ================
 

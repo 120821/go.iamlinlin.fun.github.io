@@ -15,14 +15,14 @@ categories:
 <hr>
 <h2>Go 标记</h2> 
 <p>Go 程序可以由多个标记组成，可以是关键字，标识符，常量，字符串，符号。如以下 GO 语句由 6 个标记组成：</p> 
-<pre>fmt.Println("Hello, World!")</pre> 
+{% highlight %}fmt.Println("Hello, World!"){% endhighlight %} 
 <p>6 个标记是(每行一个)：</p> 
-<pre>1. fmt
+{% highlight %}1. fmt
 2. .
 3. Println
 4. (
 5. "Hello, World!"
-6. )</pre> 
+6. ){% endhighlight %} 
 <hr>
 <h2>行分隔符</h2> 
 <p>在 Go 程序中，一行代表一个语句结束。每个语句不需要像 C 家族中的其它语言一样以分号 ; 结尾，因为这些工作都将由 Go 编译器自动完成。</p> 
@@ -33,17 +33,17 @@ categories:
 <h2>注释</h2> 
 <p>注释不会被编译，每一个包应该有相关注释。</p> 
 <p>单行注释是最常见的注释形式，你可以在任何地方使用以 // 开头的单行注释。多行注释也叫块注释，均已以 /* 开头，并以 */ 结尾。如：</p> 
-<pre>// 单行注释
+{% highlight %}// 单行注释
 /*
  Author by 菜鸟教程
  我是多行注释
- */</pre> 
+ */{% endhighlight %} 
 <hr>
 <h2>标识符</h2> 
 <p>标识符用来命名变量、类型等程序实体。一个标识符实际上就是一个或是多个字母(A~Z和a~z)数字(0~9)、下划线_组成的序列，但是第一个字符必须是字母或下划线而不能是数字。</p> 
 <p>以下是有效的标识符：</p> 
-<pre>mahesh   kumar   abc   move_name   a_123
-myname50   _temp   j   a23b9   retVal</pre> 
+{% highlight %}mahesh   kumar   abc   move_name   a_123
+myname50   _temp   j   a23b9   retVal{% endhighlight %} 
 <p>以下是无效的标识符：</p> 
 <ul>
 <li>1ab（以数字开头）</li>
@@ -56,7 +56,7 @@ myname50   _temp   j   a23b9   retVal</pre>
 <h2>实例</h2> 
 <p>package main<br> import "fmt"<br> func main() {<!-- --><br>     fmt.Println("Google" + "Runoob")<br> }</p> 
 <p>以上实例输出结果为：</p> 
-<pre>GoogleRunoob</pre> 
+{% highlight %}GoogleRunoob{% endhighlight %} 
 <hr>
 <h2>关键字</h2> 
 <p>下面列举了 Go 代码中会使用到的 25 个关键字或保留字：</p> 

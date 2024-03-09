@@ -46,13 +46,13 @@ categories:
 <p id="31-有人与我改动同一分支">有人与我改动同一分支</p>
 
 <blockquote>
-<p>我在本地修改好后，发现远程分支已经被改动了，此时我本地也被改动了就造成了冲突，无法&nbsp;<code>push</code>&nbsp;或者&nbsp;<code>pull</code>。</p>
+<p>我在本地修改好后，发现远程分支已经被改动了，此时我本地也被改动了就造成了冲突，无法&nbsp;{% highlight %}push{% endhighlight %}&nbsp;或者&nbsp;{% highlight %}pull{% endhighlight %}。</p>
 </blockquote>
 
-<p>此时，就可以用&nbsp;<code>git stash</code>&nbsp;来处理</p>
+<p>此时，就可以用&nbsp;{% highlight %}git stash{% endhighlight %}&nbsp;来处理</p>
 
-<pre>
-<code>// 把本地的改动暂存起来
+{% highlight %}
+{% highlight %}// 把本地的改动暂存起来
 git stash 
 // 拉取远程分支（此时本地分支会回滚到上次commit的情况，你的改动都存在stash中）
 git pull  
@@ -63,11 +63,11 @@ git stash pop
 <p id="32-不小心改动了其他分支">不小心改动了其他分支</p>
 
 <blockquote>
-<p>例如忘记切换，将代码写错了分支，直接在&nbsp;<code>master</code>&nbsp;分支上做改动，这里假设我的分支是&nbsp;<code>feature/category_vechice</code>&nbsp;分支。</p>
+<p>例如忘记切换，将代码写错了分支，直接在&nbsp;{% highlight %}master{% endhighlight %}&nbsp;分支上做改动，这里假设我的分支是&nbsp;{% highlight %}feature/category_vechice{% endhighlight %}&nbsp;分支。</p>
 </blockquote>
 
-<pre>
-<code>// 把本地当前改动暂存起来，此时master分支就恢复到了上次拉取时的状态
+{% highlight %}
+{% highlight %}// 把本地当前改动暂存起来，此时master分支就恢复到了上次拉取时的状态
 git stash
 // 切换到需要改动的分支
 git checkout test

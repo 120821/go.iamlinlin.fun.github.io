@@ -7,8 +7,8 @@ categories:
 <p>refer:&nbsp; <a href="http://siwei.me/blog/posts/backup_db-sh">http://siwei.me/blog/posts/backup_db-sh</a><br />
 使用.sh文件进行数据库的数据库每天进行备份，例如：（修改好参数就可以使用了。）</p>
 
-<pre>
-<code><span style="color:#f5ab35">#!/bin/bash</span>
+{% highlight %}
+{% highlight %}<span style="color:#f5ab35">#!/bin/bash</span>
 
 <span style="color:#d4d0ab"># 设置备份目录和文件名</span>
 backup_dir=<span style="color:#abe338">&quot;/path/to/backup/directory&quot;</span>

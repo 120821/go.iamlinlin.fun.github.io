@@ -8,7 +8,7 @@ categories:
 
 <pre class="default s-code-block">
 （安装）https://linuxize.com/post/how-to-install-ffmpeg-on-ubuntu-18-04/
-</pre>
+{% endhighlight %}
 
 <pre class="terminal">
 <code class="terminal-line" prefix="$">sudo apt update{% endhighlight %}
@@ -22,8 +22,8 @@ categories:
 <p>要打印所有可用的 FFmpeg 编码器和解码器，请键入：</p>
 
 <pre class="default s-code-block">
-<code class="terminal-line" prefix="$">ffmpeg -encoders</code>
-<code class="terminal-line" prefix="$">ffmpeg -decoders</code>
+<code class="terminal-line" prefix="$">ffmpeg -encoders{% endhighlight %}
+<code class="terminal-line" prefix="$">ffmpeg -decoders{% endhighlight %}
 <code class="hljs language-css"><span class="hljs-selector-class">使用：</span>ffmpeg -<span class="hljs-selector-tag">i</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-class">.svg</span> output<span class="hljs-selector-class">.png</span>{% endhighlight %}
 
 <p>ffmpeg -i 2012.svg 2012.png(保留原来的SVG，生成新的png图片）<br />

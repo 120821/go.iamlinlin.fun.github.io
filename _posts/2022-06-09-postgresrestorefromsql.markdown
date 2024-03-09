@@ -6,8 +6,8 @@ categories:
 ---
 <p>首先把lueluelue.sql 文件下载至本地，确定本地存在的sql用户名 和下载好了的lueluelue.sql文件的地址，根据以下命令进行执行</p>
 
-<pre>
-<code>psql -U username -f backupfile.sql{% endhighlight %}
+{% highlight %}
+{% highlight %}psql -U username -f backupfile.sql{% endhighlight %}
 
 <p>&nbsp;遇到报错的话 <span style="color:#fe2c24">psql: FATAL:&nbsp; database &quot;admin&quot; does not exist</span></p>
 
@@ -15,8 +15,8 @@ categories:
 
 <p><span style="color:#0d0016">那么使用图中的命令进行导入</span></p>
 
-<pre>
-<code>psql -U username postgres
+{% highlight %}
+{% highlight %}psql -U username postgres
 进入数据库
 \c databasename
 进入数据库执行命令

@@ -10,8 +10,8 @@ categories:
 
 <p>还有一个效果是鼠标拖动也可以切换图片的位置。</p>
 
-<pre>
-<code>&lt;template&gt;
+{% highlight %}
+{% highlight %}&lt;template&gt;
   &lt;div class=&quot;carousel&quot;&gt;
     &lt;div class=&quot;&quot;&gt;
       &lt;div class=&quot;caroursel-title&quot;&gt;

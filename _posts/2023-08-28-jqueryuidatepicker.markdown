@@ -6,8 +6,8 @@ categories:
 ---
 <p>引入jquery ui的cdn:</p>
 
-<pre>
-<code>&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.js&quot;&gt;&lt;/script&gt;
+{% highlight %}
+{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://code.jquery.com/jquery-3.6.0.js&quot;&gt;&lt;/script&gt;
 
 &nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://code.jquery.com/ui/1.13.2/jquery-ui.js&quot;&gt;&lt;/script&gt;
 
@@ -15,8 +15,8 @@ categories:
 
 <p>然后在layout页面增加：</p>
 
-<pre>
-<code>&lt;script&gt;
+{% highlight %}
+{% highlight %}&lt;script&gt;
 
 &nbsp;&nbsp; $( function() {
 
@@ -36,6 +36,6 @@ categories:
 
 <p>在对应的视图页面就可以使用：</p>
 
-<pre>
-<code>&nbsp;&lt;%= text_field_tag :start_at_day, params[:start_at_day], id: &#39;datepicker&#39;, placeholder: &#39;开始日期时间&#39;, class: &#39;select_date&#39;, style: &#39;margin-top: 20px; margin-right: 20px;&#39; %&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp;&lt;%= text_field_tag :start_at_day, params[:start_at_day], id: &#39;datepicker&#39;, placeholder: &#39;开始日期时间&#39;, class: &#39;select_date&#39;, style: &#39;margin-top: 20px; margin-right: 20px;&#39; %&gt;{% endhighlight %}
 

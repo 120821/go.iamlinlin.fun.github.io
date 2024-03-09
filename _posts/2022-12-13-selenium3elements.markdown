@@ -9,8 +9,8 @@ categories:
 <div class="pattern-example-brief">例如：有一端html：</div>
 
 <div class="pattern-example-brief">
-<pre>
-<code>&lt;ol id=&quot;vegetables&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;ol id=&quot;vegetables&quot;&gt;
  &lt;li class=&quot;potatoes&quot;&gt;&hellip;
  &lt;li class=&quot;onions&quot;&gt;&hellip;
  &lt;li class=&quot;tomatoes&quot;&gt;&lt;span&gt;Tomato is a Vegetable&lt;/span&gt;&hellip;
@@ -43,12 +43,12 @@ fruit = fruits.find_element(class: &#39;tomatoes&#39;){% endhighlight %}
 driver = Selenium::WebDriver.for :firefox<br />
 begin<br />
 &nbsp;&nbsp;&nbsp;&nbsp; # Navigate to URL<br />
-&nbsp; driver.get &#39;https://www.example.com&#39;</code></p>
+&nbsp; driver.get &#39;https://www.example.com&#39;{% endhighlight %}</p>
 
-<p><code>&nbsp;&nbsp;&nbsp;&nbsp; # Get all the elements available with tag name &#39;p&#39;<br />
-&nbsp; elements = driver.find_elements(:tag_name,&#39;p&#39;)</code></p>
+<p>{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp; # Get all the elements available with tag name &#39;p&#39;<br />
+&nbsp; elements = driver.find_elements(:tag_name,&#39;p&#39;){% endhighlight %}</p>
 
-<p><code>&nbsp; elements.each { |e|<br />
+<p>{% highlight %}&nbsp; elements.each { |e|<br />
 &nbsp;&nbsp;&nbsp; puts e.text<br />
 &nbsp; }<br />
 ensure<br />
@@ -56,7 +56,7 @@ ensure<br />
 end{% endhighlight %}
 <p>从元素中查找元素</p>
 
-<pre>&nbsp; <code>require &#39;selenium-webdriver&#39;<br />
+{% highlight %}&nbsp; {% highlight %}require &#39;selenium-webdriver&#39;<br />
 &nbsp; driver = Selenium::WebDriver.for :chrome<br />
 &nbsp; begin<br />
 &nbsp;&nbsp;&nbsp; # Navigate to URL<br />
@@ -76,7 +76,7 @@ end{% endhighlight %}
 &nbsp; end{% endhighlight %}
 <p>获取活动元素</p>
 
-<pre>&nbsp;<code> require &#39;selenium-webdriver&#39;<br />
+{% highlight %}&nbsp;{% highlight %} require &#39;selenium-webdriver&#39;<br />
 &nbsp; driver = Selenium::WebDriver.for :chrome<br />
 &nbsp; begin<br />
 &nbsp;&nbsp;&nbsp; driver.get &#39;https://www.google.com&#39;<br />
@@ -87,7 +87,7 @@ end{% endhighlight %}
 &nbsp;&nbsp;&nbsp; puts attr<br />
 &nbsp; ensure<br />
 &nbsp;&nbsp;&nbsp; driver.quit<br />
-&nbsp; end</code><br />
+&nbsp; end{% endhighlight %}<br />
 &nbsp;{% endhighlight %}
 
 <p>&nbsp;</p>

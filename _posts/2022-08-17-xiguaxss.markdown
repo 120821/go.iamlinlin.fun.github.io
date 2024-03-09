@@ -12,10 +12,10 @@ categories:
 
 <p>vim config/puma.rb(查看是否需要修改，不需要修改就修改其他的数据)</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>vim config/database.yml</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}vim config/database.yml{% endhighlight %}</div>
 
-<pre>
-<code>default: &amp;default
+{% highlight %}
+{% highlight %}default: &amp;default
 
 &nbsp; adapter: postgresql
 
@@ -39,8 +39,8 @@ categories:
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">Gemfile：（增加gem pg, 注释sql）</div>
 
-<pre>
-<code>gem &#39;rails&#39;, &#39;6.1.4.1&#39;
+{% highlight %}
+{% highlight %}gem &#39;rails&#39;, &#39;6.1.4.1&#39;
 
 #gem &#39;mysql2&#39;, &#39;0.5.3&#39;
 
@@ -54,18 +54,18 @@ gem &#39;figaro&#39;{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了报错</div>
 
-<pre>
-<code>nokogiri-1.12.5-x86_64-linux requires ruby version &lt; 3.1.dev, &gt;= 2.5, which is incompatible with the current version, ruby 3.1.0p0{% endhighlight %}
+{% highlight %}
+{% highlight %}nokogiri-1.12.5-x86_64-linux requires ruby version &lt; 3.1.dev, &gt;= 2.5, which is incompatible with the current version, ruby 3.1.0p0{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><a href="https://github.com/sparklemotion/nokogiri/issues/2397">查找解决方法</a></div>
 
-<pre>
-<code>ruby -v
+{% highlight %}
+{% highlight %}ruby -v
 
 ruby 3.1.0p0 (2021-12-25 revision fb4df44d16) [x86_64-linux]{% endhighlight %}
 
-<pre>
-<code>bundle update nokogiri
+{% highlight %}
+{% highlight %}bundle update nokogiri
 
 Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)&#39; instead.
 
@@ -73,8 +73,8 @@ Fetching gem metadata from https://gems.ruby-china.com/...........
 
 Resolving dependencies...{% endhighlight %}
 
-<pre>
-<code>bundle
+{% highlight %}
+{% highlight %}bundle
 
 Calling `DidYouMean::SPELL_CHECKERS.merge!(error_name =&gt; spell_checker)&#39; has been deprecated. Please call `DidYouMean.correct_error(error_name, spell_checker)&#39; instead.
 
@@ -96,7 +96,7 @@ Using concurrent-ruby 1.1.9{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">出现了error：<img height="256" src="/uploads/ckeditor/pictures/220/image-20220817094758-1.png" width="1873" /></div>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2.2安装：<code>bin/rails webpacker:install</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">4.2.2安装：{% highlight %}bin/rails webpacker:install{% endhighlight %}</div>
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">.4.2.3编译：bundle exec rails webpacker:compile</div>
 
@@ -126,7 +126,7 @@ Using concurrent-ruby 1.1.9{% endhighlight %}
 
 <p>layout替换：</p>
 
-<p><code>&lt;link href=&quot;https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;</code></p>
+<p>{% highlight %}&lt;link href=&quot;https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;{% endhighlight %}</p>
 
 <p>替换后仍然不能使用：https://www.javazxz.com/thread-11054-1-1.html</p>
 

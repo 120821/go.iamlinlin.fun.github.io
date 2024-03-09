@@ -6,7 +6,7 @@ categories:
 ---
 <p>https://docs.dappnode.io/get-started/installation/custom-hardware/installation/script</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">安装：<code>sudo wget -O - https://prerequisites.dappnode.io | sudo bash</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">安装：{% highlight %}sudo wget -O - https://prerequisites.dappnode.io | sudo bash{% endhighlight %}</div>
 
 <p>linlin@linlin-i5:/workspace/blockchain$ sudo wget -O - https://prerequisites.dappnode.io | sudo bash<br />
 [sudo] password for linlin:<br />
@@ -44,9 +44,9 @@ Saving to: &lsquo;STDOUT&rsquo;</p>
 <p>&nbsp;lsof is already installed<br />
 Interfaces not found</p>
 
-<p><code>重启：shutdown -r now</code></p>
+<p>{% highlight %}重启：shutdown -r now{% endhighlight %}</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>安装后</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}安装后{% endhighlight %}</div>
 
 <p class="anchor anchorWithStickyNavbar_mojV" id="post-installation">Post-Installation</p>
 
@@ -61,22 +61,22 @@ Interfaces not found</p>
 
 <p class="anchor anchorWithStickyNavbar_mojV" id="linux">Linux</p>
 
-<p>To use wireguard in ubuntu, you will need to use the terminal in the installation process. Firstly, it is needed to install the prerequisites: <code>sudo apt install openresolv</code></p>
+<p>To use wireguard in ubuntu, you will need to use the terminal in the installation process. Firstly, it is needed to install the prerequisites: {% highlight %}sudo apt install openresolv{% endhighlight %}</p>
 
-<p>Then, you can install Wireguard: <code>sudo apt install wireguard</code></p>
+<p>Then, you can install Wireguard: {% highlight %}sudo apt install wireguard{% endhighlight %}</p>
 
-<p>Create the configuration file and paste the configuration you have copied before (The configuration text you have obtained on the wireguard tab on dappnode UI): <code>sudo nano /etc/wireguard/wg0.conf</code></p>
+<p>Create the configuration file and paste the configuration you have copied before (The configuration text you have obtained on the wireguard tab on dappnode UI): {% highlight %}sudo nano /etc/wireguard/wg0.conf{% endhighlight %}</p>
 
-<p>Finally, type the following command: <code>sudo wg-quick up wg0</code></p>
+<p>Finally, type the following command: {% highlight %}sudo wg-quick up wg0{% endhighlight %}</p>
 
 <p>To check you are connected you can do 2 things:</p>
 
 <ol>
-	<li><code>ifconfig</code> and check if there is an interface &quot;new&quot;.</li>
+	<li>{% highlight %}ifconfig{% endhighlight %} and check if there is an interface &quot;new&quot;.</li>
 	<li>Try to access the dappnode UI, if you can access it&#39;s ok.</li>
 </ol>
 
-<p>In case you can, type: <code>sudo wg show</code></p>
+<p>In case you can, type: {% highlight %}sudo wg show{% endhighlight %}</p>
 
 <p>The output of this command should be something like:</p>
 
@@ -90,7 +90,7 @@ Interfaces not found</p>
 <span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">&nbsp; endpoint: 173.249.33.176:51820</span></span><br />
 <span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">&nbsp; allowed ips: 172.33.0.0/16, 10.20.0.0/24</span></span><br />
 <span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">&nbsp; latest handshake: 36 seconds ago</span></span><br />
-<span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">&nbsp; transfer: 222.36 KiB received, 81.86 KiB sent</span></span></code></p>
+<span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">&nbsp; transfer: 222.36 KiB received, 81.86 KiB sent</span></span>{% endhighlight %}</p>
 </div>
 </div>
 
@@ -154,13 +154,13 @@ Interfaces not found</p>
 
 <p align="center"><img class="img_E7b_" loading="lazy" src="https://github.com/dappnode/DAppNode/raw/master/doc/openvpn/ubuntu6.png" /></p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>卸载：wget -qO - https://uninstaller.dappnode.io | sudo bash</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}卸载：wget -qO - https://uninstaller.dappnode.io | sudo bash{% endhighlight %}</div>
 
 <p class="anchor anchorWithStickyNavbar_mojV" id="restore-to-the-latest-version-from-a-script">Restore to the latest version from a script</p>
 
 <p>If you are experiencing any problem or just want to make sure you are running the latest DAppNode versions, execute this command in the DAppNode terminal. This will update the core packages to the latest versions without erasing any data from your volumes.</p>
 
 <blockquote>
-<p>⚠️ Please note that volumes are not deleted, but any EXTRA_OPTS set by the user in the packages config must be set again after using this script to restore the system <code>sudo wget -O - https://installer.dappnode.io | sudo UPDATE=true bash</code></p>
+<p>⚠️ Please note that volumes are not deleted, but any EXTRA_OPTS set by the user in the packages config must be set again after using this script to restore the system {% highlight %}sudo wget -O - https://installer.dappnode.io | sudo UPDATE=true bash{% endhighlight %}</p>
 </blockquote>
 

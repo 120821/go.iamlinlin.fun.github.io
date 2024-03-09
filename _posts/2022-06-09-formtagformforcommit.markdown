@@ -8,7 +8,7 @@ categories:
                     {% highlight %}form_tag(url_for_options = {}, options = {}, &amp;block) public{% endhighlight %} 
 <p>启动一个表单标记，将操作指向一个配置了url_for_选项的url，就像ActionController:：Base#url_for一样。表单的方法默认为POST。</p> 
 <blockquote>
- <code>使用方法是地址加上方法，使用get和post都可以</code> 
+ {% highlight %}使用方法是地址加上方法，使用get和post都可以{% endhighlight %} 
  {% highlight %}&lt;%= form_tag("/search", method: "get") do %&gt;
   &lt;%= label_tag(:q, "Search for:") %&gt;
   &lt;%= text_field_tag(:q) %&gt;

@@ -10,13 +10,13 @@ categories:
 
 <p dir="auto"><strong>1.安装的是 vim 7.3+ 版本。</strong></p>
 
-<p dir="auto">Ubuntu: <code>$ apt install vim</code></p>
+<p dir="auto">Ubuntu: {% highlight %}$ apt install vim{% endhighlight %}</p>
 
 <p dir="auto">把两个配置文件，都放到home目录下。</p>
 
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-<pre>
-<code>$ unzip vim_folder.zip      # 解压缩 这个文件.
+{% highlight %}
+{% highlight %}$ unzip vim_folder.zip      # 解压缩 这个文件.
 $ cp .vim ~ -r              # 把 解压缩出来的.vim 文件夹放到 HOME目录
 $ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
 {% endhighlight %}
@@ -26,34 +26,34 @@ $ cp .vimrc ~               # 把 配置文件 .vimrc 放到 HOME 目录.
 <p dir="auto">1.安装vundle :</p>
 
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-<pre>
-<code>git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+{% highlight %}
+{% highlight %}git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 {% endhighlight %}
 </div>
 
 <p dir="auto">2.clone本项目:</p>
 
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-<pre>
-<code>cp dot_vimrc_for_vim8 ~/.vimrc
+{% highlight %}
+{% highlight %}cp dot_vimrc_for_vim8 ~/.vimrc
 {% endhighlight %}
 </div>
 
 <p dir="auto">3.进入到vim中,然后</p>
 
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-<pre>
-<code>:PluginInstall
+{% highlight %}
+{% highlight %}:PluginInstall
 {% endhighlight %}
 </div>
 
 <p dir="auto">就成功了</p>
 
-<p dir="auto"><code>(没有.vimrc/dot_vimrc_for_vim8的话，就复制粘贴这端代码，到~/.vimrc,就可以看到行数和字体的颜色，也可以使用ctrl e查看历史编辑的文件等了)</code></p>
-<code>filetype on</code>
+<p dir="auto">{% highlight %}(没有.vimrc/dot_vimrc_for_vim8的话，就复制粘贴这端代码，到~/.vimrc,就可以看到行数和字体的颜色，也可以使用ctrl e查看历史编辑的文件等了){% endhighlight %}</p>
+{% highlight %}filetype on{% endhighlight %}
 
-<pre>
-<code>set langmenu=none
+{% highlight %}
+{% highlight %}set langmenu=none
 set fileencodings=utf-8
 set fileencoding=utf-8
 set encoding=utf8
@@ -223,6 +223,6 @@ let g:fuf_enumeratingLimit = 60
 
 {% endhighlight %}
 
-<p dir="auto"><code><code><code><code><img src="/uploads/ckeditor/pictures/676/image-20221102164105-1.png" style="height:1074px; width:1004px" /></code></code></code></code></p>
+<p dir="auto">{% highlight %}{% highlight %}{% highlight %}{% highlight %}<img src="/uploads/ckeditor/pictures/676/image-20221102164105-1.png" style="height:1074px; width:1004px" />{% endhighlight %}{% endhighlight %}{% endhighlight %}{% endhighlight %}</p>
 </div>
 

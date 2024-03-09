@@ -10,8 +10,8 @@ categories:
 
 <p>首先需要申请账户，申请AK，然后使用例如这样的内容：</p>
 
-<pre>
-<code>&lt;!DOCTYPE html&gt;
+{% highlight %}
+{% highlight %}&lt;!DOCTYPE html&gt;
 
 &lt;html&gt;
 

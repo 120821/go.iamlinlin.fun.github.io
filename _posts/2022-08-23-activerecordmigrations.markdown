@@ -8,8 +8,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code>class CreateProducts &lt; ActiveRecord::Migration[7.0]
+{% highlight %}
+{% highlight %}class CreateProducts &lt; ActiveRecord::Migration[7.0]
 &nbsp; def change
 &nbsp;&nbsp;&nbsp; create_table :products do |t|
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t.string :name
@@ -41,20 +41,20 @@ end{% endhighlight %}
 
 <p>列的增加或者重命名：</p>
 
-<pre>
+{% highlight %}
 <code class="highlight ruby"><span class="n">add_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:home_page_url</span><span class="p">,</span> <span class="ss">:string</span>
     <span class="n">rename_column</span> <span class="ss">:users</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">:email_address</span>{% endhighlight %}
 
 <p>删除表：</p>
 
-<pre>
+{% highlight %}
 <code class="highlight ruby"><span class="n">drop_table</span> <span class="ss">:distributors
 <span class="ss">回滚：</span></span>{% endhighlight %}
 
 <p>这将通过恢复 change 方法或运行 down 方法回滚最新的迁移。&nbsp; 如果您需要撤消多个迁移，您可以提供一个 STEP 参数：</p>
 
-<pre>
-<code>bin/rails db:rollback
+{% highlight %}
+{% highlight %}bin/rails db:rollback
 
 bin/rails db:rollback STEP=3{% endhighlight %}
 
@@ -72,8 +72,8 @@ bin/rails db:rollback STEP=3{% endhighlight %}
 
 <p>执行migrate的时候进行创建数据删除数据：</p>
 
-<pre>
-<code>class AddInitialProducts &lt; ActiveRecord::Migration[7.0]
+{% highlight %}
+{% highlight %}class AddInitialProducts &lt; ActiveRecord::Migration[7.0]
 
 &nbsp; def up
 
@@ -85,8 +85,8 @@ bin/rails db:rollback STEP=3{% endhighlight %}
 
 &nbsp; end{% endhighlight %}
 
-<pre>
-<code>&nbsp; def down
+{% highlight %}
+{% highlight %}&nbsp; def down
 
 &nbsp;&nbsp;&nbsp; Product.delete_all
 

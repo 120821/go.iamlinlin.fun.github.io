@@ -6,14 +6,14 @@ categories:
 ---
 <p><a href="https://ask.csdn.net/questions/7667939">https://ask.csdn.net/questions/7667939</a></p>
 
-<pre>
-<code>&lt;style type=&quot;text/css&quot;&gt; a:link {color: #00f;} /* 未被访问的链接 蓝色 */ a:visited {color: #00f;} /* 已被访问过的链接 蓝色 */ a.click {color: #f0f;} /* 鼠标点击后链接 紫色 */ a:hover {color: #f00;} /* 鼠标悬浮在上的链接 红色 */
+{% highlight %}
+{% highlight %}&lt;style type=&quot;text/css&quot;&gt; a:link {color: #00f;} /* 未被访问的链接 蓝色 */ a:visited {color: #00f;} /* 已被访问过的链接 蓝色 */ a.click {color: #f0f;} /* 鼠标点击后链接 紫色 */ a:hover {color: #f00;} /* 鼠标悬浮在上的链接 红色 */
 
 a:active {color: #0f0;} /* 鼠标点中激活链接 绿色 */
 
 &lt;/style&gt;{% endhighlight %}
 
-<pre>
+{% highlight %}
 
-&nbsp;</pre>
+&nbsp;{% endhighlight %}
 

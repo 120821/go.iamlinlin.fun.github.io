@@ -8,8 +8,8 @@ categories:
 
 <p>代码：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from <span style="color:#abe338">&#39;react</span>&#39;<span style="color:#d4d0ab">;</span>
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from <span style="color:#abe338">&#39;react</span>&#39;<span style="color:#d4d0ab">;</span>
 import * as d<span style="color:#f5ab35">3</span> from <span style="color:#abe338">&#39;d3</span>&#39;<span style="color:#d4d0ab">;</span>
 //import chinaData from <span style="color:#abe338">&#39;./china.json</span>&#39;<span style="color:#d4d0ab">;</span>
 import chinaData from <span style="color:#abe338">&#39;./china_map_new.json</span>&#39;<span style="color:#d4d0ab">;</span>

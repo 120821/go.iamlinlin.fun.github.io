@@ -6,8 +6,8 @@ categories:
 ---
 <p>&nbsp;</p>
 
-<pre>
-<code>select count(*) from cell_outputs;
+{% highlight %}
+{% highlight %}select count(*) from cell_outputs;
 
 select id,tx_hash,cell_index,capacity from cell_outputs where id = 59153523 limit 1;
 

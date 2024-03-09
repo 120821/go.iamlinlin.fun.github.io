@@ -10,8 +10,8 @@ categories:
 
 <p>.go 文件（例如 main.go）</p>
 
-<pre>
-<code>package main
+{% highlight %}
+{% highlight %}package main
 
 import (
 

@@ -8,11 +8,11 @@ categories:
 
 <p>使用--output就可保存图片（文件）了</p>
 
-<pre>
-curl www.bing.com --output bing.htm</pre>
+{% highlight %}
+curl www.bing.com --output bing.htm{% endhighlight %}
 
 <p>使用proxy保存图到本地：</p>
 
-<pre>
-<code>command_get_image = %Q{curl -s --socks5 #{proxy.ip}:#{proxy.port} #{image_src} --output public/blog_images/#{image_name}}{% endhighlight %}
+{% highlight %}
+{% highlight %}command_get_image = %Q{curl -s --socks5 #{proxy.ip}:#{proxy.port} #{image_src} --output public/blog_images/#{image_name}}{% endhighlight %}
 

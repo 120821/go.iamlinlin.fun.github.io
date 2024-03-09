@@ -10,12 +10,12 @@ categories:
 <blockquote> 
  {% highlight %}select_tag  'user_id', options_for_select(@users.collect{ |u| [u.name, u.id] }){% endhighlight %} 
  <p>相当于</p> 
- <pre>&lt;select id="user_id" name="user_id"&gt;
+ {% highlight %}&lt;select id="user_id" name="user_id"&gt;
   &lt;option value="1"&gt;Brad&lt;/option&gt;
   &lt;option value="2"&gt;Angie&lt;/option&gt;
   &lt;option value="3"&gt;Jenny&lt;/option&gt;
 &lt;/select&gt;
-</pre> 
+{% endhighlight %} 
  {% highlight %}&lt;%= select_tag 'sex', options_for_select(['男', '女']) %&gt;{% endhighlight %} 
  <p>相当于</p> 
  {% highlight %}&lt;select id="sex" name="sex"&gt;

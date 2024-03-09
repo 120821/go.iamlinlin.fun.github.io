@@ -8,8 +8,8 @@ categories:
 
 <p>在某个页面想要根据不同的条件进行渲染，可以使用函数调用，例如：（根据情况，在renderIcon中自行增加判断）</p>
 
-<pre>
-<code>import React, { Component, PropTypes } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { Component, PropTypes } from &#39;react&#39;;
 
 export default class PatientTable extends Component {
       constructor(props) {

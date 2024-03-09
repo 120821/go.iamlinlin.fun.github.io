@@ -10,19 +10,19 @@ categories:
 
 <p>例如：</p>
 
-<pre>
-<code>let a = 20
+{% highlight %}
+{% highlight %}let a = 20
 
 a.toString();    // &#39;20&#39;{% endhighlight %}
 
-<pre>
-<code>const myInt = 42;
+{% highlight %}
+{% highlight %}const myInt = 42;
 const myString = myInt.toString();{% endhighlight %}
 
 <p>完整的例子：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 class MyComponent extends React.Component {
   render() {

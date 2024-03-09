@@ -4,12 +4,12 @@ title: "truffle unbox webpack error"
 date: "2022-07-25"
 categories: 
 ---
-<p><code>truffle unbox webpack</code>初始化时：Truffle Box at URL https://github.com/truffle-box/webpack-box doesn&rsquo;t exist.</p>
+<p>{% highlight %}truffle unbox webpack{% endhighlight %}初始化时：Truffle Box at URL https://github.com/truffle-box/webpack-box doesn&rsquo;t exist.</p>
 
 <p>或者</p>
 
-<pre>
-<code>Error: Error making request to https://raw.githubusercontent.com/truffle-box/web
+{% highlight %}
+{% highlight %}Error: Error making request to https://raw.githubusercontent.com/truffle-box/web
 pack-box/master/truffle.js. Got error: connect ECONNREFUSED 151.101.8.133:443. P
 lease check the format of the requested resource.
     at Request._callback (C:\Users\Administrator\AppData\Roaming\npm\node_module

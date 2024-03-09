@@ -6,16 +6,16 @@ categories:
 ---
 
                     <blockquote> 
- <p><strong><code>Address</code>元素(&lt;address&gt;)</strong>是用来存放地址信息的，与&lt;article&gt;来提供文章作者的联系信息。注意以下几点：</p> 
+ <p><strong>{% highlight %}Address{% endhighlight %}元素(&lt;address&gt;)</strong>是用来存放地址信息的，与&lt;article&gt;来提供文章作者的联系信息。注意以下几点：</p> 
  <ul>
-<li>如果行文中出现了一些随意的地址，就不使用&lt;address&gt;元素，选择使用普通的<code>&lt;p&gt;</code>元素就行了。</li>
+<li>如果行文中出现了一些随意的地址，就不使用&lt;address&gt;元素，选择使用普通的{% highlight %}&lt;p&gt;{% endhighlight %}元素就行了。</li>
 <li>&lt;address&gt;元素里应该只存放地址信息，不要放置其它跟地址不相关的信息，比如出版时间，需要放&lt;time&gt;元素里。</li>
 <li>建议把&lt;address&gt;放到&lt;footer&gt;里。</li>
 </ul>
  <div>
   &lt;address&gt;元素显示样式和
-  <code>&lt;i&gt;</code>和
-  <code>&lt;em&gt;</code>等元素的样式相同，但当遇到涉及地址的联系信息时，使用&lt;address&gt;元素更合适，因为它体现了更明确的语义信息
+  {% highlight %}&lt;i&gt;{% endhighlight %}和
+  {% highlight %}&lt;em&gt;{% endhighlight %}等元素的样式相同，但当遇到涉及地址的联系信息时，使用&lt;address&gt;元素更合适，因为它体现了更明确的语义信息
   <br>   
   {% highlight %}&lt;address&gt;
     你可以到&lt;a href="http://know.webhek.com/html5/contact"&gt;www.webhek.com&lt;/a&gt;这个网站和作者取得联系。&lt;br&gt;

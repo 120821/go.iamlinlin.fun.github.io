@@ -8,8 +8,8 @@ categories:
 
 <p>echarts,设置x/y轴的字体颜色为黑色</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   xAxis: {
     <span style="color:#d4d0ab">// 其他 xAxis 配置...</span>

@@ -22,7 +22,7 @@ categories:
     &lt;td&gt;&lt;%=player.avg_ranking %&gt;&lt;/td&gt;      column in the same row
   &lt;/tr&gt;
   &lt;% end %&gt;
- &lt;/table&gt;</span></pre>
+ &lt;/table&gt;</span>{% endhighlight %}
 
 <p>使用排序的列表页面</p>
 
@@ -40,7 +40,7 @@ categories:
     &lt;td&gt;  &lt;%=player.avg_ranking %&gt;&lt;/td&gt;
   &lt;/tr&gt;
   &lt;% end %&gt;
-  &lt;/table&gt;</span></pre>
+  &lt;/table&gt;</span>{% endhighlight %}
 
 <p><img height="439" src="/uploads/ckeditor/pictures/48/image-20220621115346-1.png" width="725" /></p>
 
@@ -51,7 +51,7 @@ categories:
 <pre class="mm mn mo mp gz mq bt mr">
 <span class="gc ms lk ja mt b do mu mv l mw" data-selectable-paragraph="" id="14f0">class PlayersController &lt; ApplicationController</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="7a70">  def index
     <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.order(params[:sort])
-  end</span></pre>
+  end</span>{% endhighlight %}
 
 <p>增加:</p>
 
@@ -65,7 +65,7 @@ categories:
     else
       <a class="au nc" href="http://twitter.com/players" rel="noopener ugc nofollow" target="_blank">@players</a> = Player.all
     end
-  end</span></pre>
+  end</span>{% endhighlight %}
 
 <p>使用form表单：</p>
 
@@ -74,7 +74,7 @@ categories:
   &lt;p&gt; Search for a player &lt;/p&gt;
   &lt;%= text_field_tag(:search, params[:search]) %&gt;
   &lt;%= submit_tag (&quot;Search&quot;) %&gt;
-&lt;% end %&gt;</span></pre>
+&lt;% end %&gt;</span>{% endhighlight %}
 
 <p><img height="383" src="/uploads/ckeditor/pictures/49/image-20220621115508-2.png" width="637" /></p>
 
@@ -98,7 +98,7 @@ categories:
     end
   end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="fdd1">def show
     <a class="au nc" href="http://twitter.com/player" rel="noopener ugc nofollow" target="_blank">@player</a> = Player.find(params[:id])
-  end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="86e6">end</span></pre>
+  end</span><span class="gc ms lk ja mt b do mx my mz na nb mv l mw" data-selectable-paragraph="" id="86e6">end</span>{% endhighlight %}
 
 <p><img alt="" class="cf kg kh" height="496" loading="lazy" role="presentation" src="https://miro.medium.com/max/760/1*SkEjMUceoCwS3gUxT3U8BQ.gif" width="380" /></p>
 

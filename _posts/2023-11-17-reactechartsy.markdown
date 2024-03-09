@@ -8,8 +8,8 @@ categories:
 
 <p>把y轴显示为竖线，设置宽度为1，如果需要加粗效果可以调整为2</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   yAxis: {
     axisLine: {

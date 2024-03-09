@@ -8,8 +8,8 @@ categories:
 
 <p>做判断，如果是南海，就显示border，否则不显示：</p>
 
-<pre>
-<code>svg.selectAll(&#39;path&#39;)
+{% highlight %}
+{% highlight %}svg.selectAll(&#39;path&#39;)
       .data(chinaData.features)
       .enter()
       .append(&#39;path&#39;)
@@ -32,8 +32,8 @@ categories:
 
 <p>完整的代码：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
 import chinaData from &#39;./china_map_new.json&#39;;
 

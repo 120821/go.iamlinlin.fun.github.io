@@ -19,13 +19,13 @@ asdf global nodejs latest
 nodejs 16.5.0{% endhighlight %} 
 </blockquote> 
 <blockquote> 
- <p>本地版本在$PWD/中定义。需要增加<code>$PWD/.tool-versions</code>工具版本文件（当前工作目录），文件内容是所需要的软件名字加上版本号码。通常，这将是Git对项目的响应。在所需目录中执行：</p> 
+ <p>本地版本在$PWD/中定义。需要增加{% highlight %}$PWD/.tool-versions{% endhighlight %}工具版本文件（当前工作目录），文件内容是所需要的软件名字加上版本号码。通常，这将是Git对项目的响应。在所需目录中执行：</p> 
  {% highlight %}asdf local nodejs latest{% endhighlight %} 
  <p>$PWD/。工具版本将如下所示：</p> 
  {% highlight %}nodejs 16.5.0{% endhighlight %} 
  <p></p> 
 </blockquote> 
-<pre><code class="language-html">可用插件清单:
+{% highlight %}<code class="language-html">可用插件清单:
 asdf plugin-list-all
 安装插件:
 asdf plugin-add {<!-- -->{插件名}}

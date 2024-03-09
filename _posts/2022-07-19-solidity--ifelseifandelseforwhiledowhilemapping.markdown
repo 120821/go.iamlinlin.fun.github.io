@@ -63,11 +63,11 @@ pragma solidity ^0.8.13;</p>
 
 <p>映射是使用语法映射（keyType =&gt; valueType）创建的。 keyType 可以是任何内置值类型、字节、字符串或任何协定。 valueType 可以是任何类型，包括另一个映射或数组。 映射是不可迭代的。</p>
 
-<p>Maps are created with the syntax <code>mapping(keyType =&gt; valueType)</code>.</p>
+<p>Maps are created with the syntax {% highlight %}mapping(keyType =&gt; valueType){% endhighlight %}.</p>
 
-<p>The <code>keyType</code> can be any built-in value type, bytes, string, or any contract.</p>
+<p>The {% highlight %}keyType{% endhighlight %} can be any built-in value type, bytes, string, or any contract.</p>
 
-<p><code>valueType</code> can be any type including another mapping or an array.</p>
+<p>{% highlight %}valueType{% endhighlight %} can be any type including another mapping or an array.</p>
 
 <p>Mappings are not iterable.</p>
 

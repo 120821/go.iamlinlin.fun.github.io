@@ -6,8 +6,8 @@ categories:
 ---
 <p>点击下载的按钮，可以下载原始的数据（未经处理，不会每次刷新就自动下载文件）例如：</p>
 
-<pre>
-<code>export default class CalculationViewResult extends Component {
+{% highlight %}
+{% highlight %}export default class CalculationViewResult extends Component {
   // 省略其他代码
 
   exportToCSV(resultData) {

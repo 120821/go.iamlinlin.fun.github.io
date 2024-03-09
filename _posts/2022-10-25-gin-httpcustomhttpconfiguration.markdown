@@ -6,7 +6,7 @@ categories:
 ---
 <p><a href="https://gin-gonic.com/docs/examples/custom-http-config/">https://gin-gonic.com/docs/examples/custom-http-config/</a></p>
 
-<p>直接使用：<code>http.ListenAndServe()，示例：</code></p>
+<p>直接使用：{% highlight %}http.ListenAndServe()，示例：{% endhighlight %}</p>
 
 <pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <code class="language-go" data-lang="go"><span style="color:#204a87;font-weight:700">func</span> <span style="color:#000">main</span><span style="color:#000;font-weight:700">()</span> <span style="color:#000;font-weight:700">{</span>

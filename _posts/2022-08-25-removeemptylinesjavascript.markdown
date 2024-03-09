@@ -24,7 +24,7 @@ btnRemove.addEventListener(&quot;click&quot;, () =&gt; {
   let regex = /^\s*$(?:\r\n?|\n)/gm;
   let result = myString.replace(regex, &quot;&quot;);
   output.innerText = result;
-});</pre>
+});{% endhighlight %}
 
 <p>使用.replace方法就可以进行替换，然后传入参数把空白行进行删除.replace(/^\s*$(?:\r\n?|\n)/gm, &quot;&quot;)</p>
 

@@ -8,13 +8,13 @@ categories:
 
 <p>设置cookie 需要注意：</p>
 
-<pre>
-<code>axios.get(BASE_URL + &#39;/todos&#39;, { withCredentials: true });{% endhighlight %}
+{% highlight %}
+{% highlight %}axios.get(BASE_URL + &#39;/todos&#39;, { withCredentials: true });{% endhighlight %}
 
 <p>也可以：</p>
 
-<pre>
-<code>axios.defaults.withCredentials = true{% endhighlight %}
+{% highlight %}
+{% highlight %}axios.defaults.withCredentials = true{% endhighlight %}
 
-<p>同时<code>Access-Control-Allow-Origin设置为https://a.com（客户端器）（不能设置为*）</code></p>
+<p>同时{% highlight %}Access-Control-Allow-Origin设置为https://a.com（客户端器）（不能设置为*）{% endhighlight %}</p>
 

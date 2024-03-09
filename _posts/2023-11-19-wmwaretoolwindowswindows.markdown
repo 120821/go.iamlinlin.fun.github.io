@@ -27,11 +27,11 @@ $ sudo reboot&nbsp; &nbsp;&nbsp;</p>
 
 <p><span style="white-space:pre-wrap">To enable advanced X features (e.g., guest resolution fit, drag and drop, and </span></p>
 
-<pre>
+{% highlight %}
 file and text copy/paste), you will need to do one (or more) of the following:
 1. Manually start /usr/bin/vmware-user
 2. Log out and log back into your desktop session
-3. Restart your X session.</pre>
+3. Restart your X session.{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -27,7 +27,7 @@ categories:
 </span><span class="com"># Drop the table</span><span class="pln">
 </span><span class="typ">CreateUserTable</span><span class="pun">.</span><span class="pln">migrate</span><span class="pun">(:</span><span class="pln">down</span><span class="pun">)</span>{% endhighlight %}
 
-<p><code>or up and down</code></p>
+<p>{% highlight %}or up and down{% endhighlight %}</p>
 
 <pre class="prettyprint">
 <code class="ruby"><span class="kwd">require</span><span class="pln"> </span><span class="str">&#39;active_record&#39;</span><span class="pln">

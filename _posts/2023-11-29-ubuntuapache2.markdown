@@ -6,8 +6,8 @@ categories:
 ---
 <p>apache2占用着80端口，导致无法启动docker的DVWA:</p>
 
-<pre>
-<code>sudo lsof -i:80
+{% highlight %}
+{% highlight %}sudo lsof -i:80
 
 COMMAND&nbsp; PID&nbsp;&nbsp;&nbsp;&nbsp; USER&nbsp;&nbsp; FD&nbsp;&nbsp; TYPE DEVICE SIZE/OFF NODE NAME
 
@@ -25,8 +25,8 @@ apache2 8569 www-data&nbsp;&nbsp;&nbsp; 4u&nbsp; IPv6 460130&nbsp;&nbsp;&nbsp;&n
 
 <p>直接使用kill -9 不能直接关闭进程，可以把pid关闭，但是apache2会自动启动，需要：</p>
 
-<pre>
-<code><span style="color:#ffd700">sudo</span> service apache<span style="color:#f5ab35">2</span> stop{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffd700">sudo</span> service apache<span style="color:#f5ab35">2</span> stop{% endhighlight %}
 
 <p>只有使用上面的命令才可以停止：</p>
 

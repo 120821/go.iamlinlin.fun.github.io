@@ -8,31 +8,31 @@ categories:
 
 <p>1.需要已经安装了sqlmap，例如：</p>
 
-<pre>
-<code>sqlmap <span style="color:#d4d0ab">--version</span>
+{% highlight %}
+{% highlight %}sqlmap <span style="color:#d4d0ab">--version</span>
 <span style="color:#f5ab35">1.6</span><span style="color:#f5ab35">.4</span>#<span style="color:#dcc6e0">stable</span>
 [<span style="color:#f5ab35">09</span>:<span style="color:#f5ab35">09</span>:<span style="color:#f5ab35">05</span>] [<span style="color:#f5ab35">WARNING</span>] your sqlmap <span style="color:#dcc6e0">version</span> <span style="color:#dcc6e0">is</span> outdated{% endhighlight %}
 
-<p><code>2.如果要消除警告，可以更新sqlmap的版本</code></p>
+<p>{% highlight %}2.如果要消除警告，可以更新sqlmap的版本{% endhighlight %}</p>
 
-<pre>
-<code>sudo sqlmap --<span style="color:#dcc6e0">update</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo sqlmap --<span style="color:#dcc6e0">update</span>{% endhighlight %}
 
 <p>3.查看安装的版本：</p>
 
-<pre>
-<code>sqlmap <span style="color:#d4d0ab">--version</span>
+{% highlight %}
+{% highlight %}sqlmap <span style="color:#d4d0ab">--version</span>
 {% endhighlight %}
 
 <p>或者使用</p>
 
-<pre>
-<code><span style="color:#ffa07a">/usr/</span>bin<span style="color:#ffa07a">/python3 /</span>path<span style="color:#ffa07a">/to/</span>sqlmap --version{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#ffa07a">/usr/</span>bin<span style="color:#ffa07a">/python3 /</span>path<span style="color:#ffa07a">/to/</span>sqlmap --version{% endhighlight %}
 
-<pre>
-<code>将 `<span style="color:#ffa07a">/path/</span>to/sqlmap` 替换为实际的 `sqlmap` 路径。{% endhighlight %}
+{% highlight %}
+{% highlight %}将 `<span style="color:#ffa07a">/path/</span>to/sqlmap` 替换为实际的 `sqlmap` 路径。{% endhighlight %}
 
-<p><code>得到了</code>，例如这样的</p>
+<p>{% highlight %}得到了{% endhighlight %}，例如这样的</p>
 
 <p>1.7.11.3#dev</p>
 

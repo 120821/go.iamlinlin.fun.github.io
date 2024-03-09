@@ -6,11 +6,11 @@ categories:
 ---
 <p>go的数据库配置放在conf/app.ini文件中</p>
 
-<pre>
-<code>cat conf/app.ini{% endhighlight %}
+{% highlight %}
+{% highlight %}cat conf/app.ini{% endhighlight %}
 
-<pre>
-<code>#debug or release
+{% highlight %}
+{% highlight %}#debug or release
 
 RUN_MODE = debug
 

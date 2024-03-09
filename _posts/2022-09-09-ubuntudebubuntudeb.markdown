@@ -12,19 +12,19 @@ categories:
 
 <p>下载适合的版本：<a href="https://dldir1.qq.com/qqfile/qq/QQNT/2355235c/linuxqq_3.1.1-11223_arm64.deb">https://dldir1.qq.com/qqfile/qq/QQNT/2355235c/linuxqq_3.1.1-11223_arm64.deb</a></p>
 
-<p><code>1.安装</code></p>
+<p>{% highlight %}1.安装{% endhighlight %}</p>
 
-<pre>
-<code>使用dpkg命令进行安装。sudo &nbsp;dpkg &nbsp;-i &nbsp; deb文件名{% endhighlight %}
+{% highlight %}
+{% highlight %}使用dpkg命令进行安装。sudo &nbsp;dpkg &nbsp;-i &nbsp; deb文件名{% endhighlight %}
 
-<pre>
-<code>linlin@linlin-i5:~$ sudo&nbsp; dpkg&nbsp; -i /home/linlin/Downloads/linuxqq_3.1.1-11223_amd64.deb{% endhighlight %}
+{% highlight %}
+{% highlight %}linlin@linlin-i5:~$ sudo&nbsp; dpkg&nbsp; -i /home/linlin/Downloads/linuxqq_3.1.1-11223_amd64.deb{% endhighlight %}
 
 <p>2.卸载</p>
 
-<pre>
-<code>dpkg -l | grep qq{% endhighlight %}
+{% highlight %}
+{% highlight %}dpkg -l | grep qq{% endhighlight %}
 
-<pre>
-<code>sudo apt-get remove --purge linuxq{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get remove --purge linuxq{% endhighlight %}
 

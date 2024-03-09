@@ -9,27 +9,27 @@ categories:
 <p>安装：https://geth.ethereum.org/docs/install-and-build/installing-geth</p>
 
 <pre class="highlight">
-<code><span class="nb">Ubuntu安装：sudo </span>add-apt-repository <span class="nt">-y</span> ppa:ethereum/ethereum
+{% highlight %}<span class="nb">Ubuntu安装：sudo </span>add-apt-repository <span class="nt">-y</span> ppa:ethereum/ethereum
 {% endhighlight %}
 
 <pre class="highlight">
-<code><span class="nb">更新（</span></code>安装 go-ethereum 的稳定版本：<code><span class="nb">）：sudo </span>apt-get update{% endhighlight %}
+{% highlight %}<span class="nb">更新（</span>{% endhighlight %}安装 go-ethereum 的稳定版本：{% highlight %}<span class="nb">）：sudo </span>apt-get update{% endhighlight %}
 
 <p>或者，或者开发版本：</p>
 
 <pre class="highlight">
-<code><span class="nb">sudo </span>apt-get update
+{% highlight %}<span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get <span class="nb">install </span>ethereum-unstable
 {% endhighlight %}
 
-<p><font style="vertical-align:inherit">这些命令安装核心 Geth 软件和以下开发人员工具： </font><code class="language-plaintext highlighter-rouge">clef</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">devp2p</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">abigen</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">bootnode</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">evm</code><font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">rlpdump</code><font style="vertical-align:inherit">和 </font><code class="language-plaintext highlighter-rouge">puppeth</code><font style="vertical-align:inherit">. 这些工具中的每一个的二进制文件都保存在 </font><code class="language-plaintext highlighter-rouge">/usr/local/bin/</code><font style="vertical-align:inherit">. 命令行选项的完整列表可以在 </font><a href="https://geth.ethereum.org/docs/interface/command-line-options"><font style="vertical-align:inherit">这里 </font></a><font style="vertical-align:inherit">在终端运行 </font><code class="language-plaintext highlighter-rouge">geth --help</code><font style="vertical-align:inherit">. </font></p>
+<p><font style="vertical-align:inherit">这些命令安装核心 Geth 软件和以下开发人员工具： </font><code class="language-plaintext highlighter-rouge">clef{% endhighlight %}<font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">devp2p{% endhighlight %}<font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">abigen{% endhighlight %}<font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">bootnode{% endhighlight %}<font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">evm{% endhighlight %}<font style="vertical-align:inherit">, </font><code class="language-plaintext highlighter-rouge">rlpdump{% endhighlight %}<font style="vertical-align:inherit">和 </font><code class="language-plaintext highlighter-rouge">puppeth{% endhighlight %}<font style="vertical-align:inherit">. 这些工具中的每一个的二进制文件都保存在 </font><code class="language-plaintext highlighter-rouge">/usr/local/bin/{% endhighlight %}<font style="vertical-align:inherit">. 命令行选项的完整列表可以在 </font><a href="https://geth.ethereum.org/docs/interface/command-line-options"><font style="vertical-align:inherit">这里 </font></a><font style="vertical-align:inherit">在终端运行 </font><code class="language-plaintext highlighter-rouge">geth --help{% endhighlight %}<font style="vertical-align:inherit">. </font></p>
 
 <p><font style="vertical-align:inherit">可以通过停止节点并运行以下命令来将现有的 Geth 安装更新到最新版本： </font></p>
 
 <div class="language-shell highlighter-rouge">
 <div class="highlight">
 <pre class="highlight">
-<code>sudo apt-get update
+{% highlight %}sudo apt-get update
 sudo apt-get install ethereum
 sudo apt-get upgrade geth
 {% endhighlight %}

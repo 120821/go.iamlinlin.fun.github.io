@@ -6,8 +6,8 @@ categories:
 ---
 <p>查看docker的id</p>
 
-<pre>
-<code>sudo docker ps -a
+{% highlight %}
+{% highlight %}sudo docker ps -a
 
 CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
 
@@ -21,13 +21,13 @@ c8eb7b3234d6&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hel
 
 a1d96b0835f4&nbsp;&nbsp; postgres:14.2&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 2 months ago&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wizardly_joliot
 
-75204b0a6b92&nbsp;&nbsp; mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 3 months ago&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sharp_bardeen</code>
-</pre>
+75204b0a6b92&nbsp;&nbsp; mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 3 months ago&nbsp;&nbsp; Exited (0) 5 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sharp_bardeen{% endhighlight %}
+{% endhighlight %}
 
 <p>进入目标bash</p>
 
-<pre>
-<code>ubuntu@VM-0-13-ubuntu:/opt/app/lueluelue-admin/releases/20220528173100$ sudo docker exec -it 0404 bash
+{% highlight %}
+{% highlight %}ubuntu@VM-0-13-ubuntu:/opt/app/lueluelue-admin/releases/20220528173100$ sudo docker exec -it 0404 bash
 
 root@0404f4be99a2:/# ls -altrh
 
@@ -43,8 +43,8 @@ drwxr-xr-x&nbsp;&nbsp; 1 root root 4.0K Apr 18 00:00 usr{% endhighlight %}
 
 <p>进入数据库</p>
 
-<pre>
-<code>root@0404f4be99a2:/# su postgres
+{% highlight %}
+{% highlight %}root@0404f4be99a2:/# su postgres
 
 postgres@0404f4be99a2:/$ pg_d
 
@@ -72,17 +72,17 @@ drwxr-xr-x&nbsp;&nbsp; 2 root root 4096 Mar 19 13:46 boot{% endhighlight %}
 
 <p>导出数据</p>
 
-<p><code>postgres@0404f4be99a2:/$ pg_dump --username=postgres --dbname=lueluelue --host=localhost &gt; /tmp/20220718.sql<br />
+<p>{% highlight %}postgres@0404f4be99a2:/$ pg_dump --username=postgres --dbname=lueluelue --host=localhost &gt; /tmp/20220718.sql<br />
 postgres@0404f4be99a2:/$ ls -al /tmp/<br />
 total 105220<br />
 drwxrwxrwt 1 root&nbsp;&nbsp;&nbsp;&nbsp; root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Jul 18 02:20 .<br />
 drwxr-xr-x 1 root&nbsp;&nbsp;&nbsp;&nbsp; root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Jun&nbsp; 6 08:41 ..<br />
--rw-r--r-- 1 postgres postgres 107733080 Jul 18 02:20 20220718.sql</code></p>
+-rw-r--r-- 1 postgres postgres 107733080 Jul 18 02:20 20220718.sql{% endhighlight %}</p>
 
 <p>复制到当前目录下</p>
 
-<pre>
-<code>sudo docker cp 0404:/tmp/20220718.sql .
+{% highlight %}
+{% highlight %}sudo docker cp 0404:/tmp/20220718.sql .
 
 ubuntu@VM-0-13-ubuntu:/opt/app/lueluelue-admin/releases/20220528173100$ ls
 
@@ -100,8 +100,8 @@ ubuntu@VM-0-13-ubuntu:/opt/app/lueluelue-admin/releases/20220528173100$ ls
 
 <p>scp到远程</p>
 
-<pre>
-<code>scp ubuntu@api-rpc.lueluelue.link:/opt/app/lueluelue-admin/releases/20220528173100/20220718.sql /workspace/lueluelue-backend-rails/20220718.sql
+{% highlight %}
+{% highlight %}scp ubuntu@api-rpc.lueluelue.link:/opt/app/lueluelue-admin/releases/20220528173100/20220718.sql /workspace/lueluelue-backend-rails/20220718.sql
 
 20220718.sql&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%&nbsp; 103MB 120.7KB/s&nbsp;&nbsp; 14:31{% endhighlight %}
 

@@ -8,8 +8,8 @@ categories:
 
 <p>每个 BrowserContext 可以有多个页面。&nbsp; 页面是指浏览器上下文中的单个选项卡或弹出窗口。&nbsp; 它应该用于导航到 URL 并与页面内容交互。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Create a page.</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Create a page.</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> page <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> context<span style="color:#393a34">.</span><span style="color:#8250df">newPage</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
 <span style="color:#393a34"><em>// Navigate explicitly, similar to entering a URL in the browser.</em>
@@ -29,8 +29,8 @@ categories:
 <p>（1）&nbsp;&nbsp; 每个页面都像一个聚焦的活动页面。&nbsp; 不需要将页面置于最前面。<br />
 &nbsp;&nbsp; （2）上下文中的页面遵循上下文级别的模拟，例如视口大小、自定义网络路由或浏览器区域设置。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Create two pages</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Create two pages</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> pageOne <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> context<span style="color:#393a34">.</span><span style="color:#8250df">newPage</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> pageTwo <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> context<span style="color:#393a34">.</span><span style="color:#8250df">newPage</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
@@ -41,8 +41,8 @@ categories:
 
 <p>浏览器上下文中的页面事件可用于获取在上下文中创建的新页面。&nbsp; 这可用于处理由 target=&quot;_blank&quot; 链接打开的新页面。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Get page after a specific action (e.g. clicking a link)</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Get page after a specific action (e.g. clicking a link)</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">[</span>newPage<span style="color:#393a34">]</span> <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> <span style="color:#116329">Promise</span><span style="color:#393a34">.</span><span style="color:#8250df">all</span><span style="color:#393a34">(</span><span style="color:#393a34">[</span>
 </span><span style="color:#393a34">  context<span style="color:#393a34">.</span><span style="color:#8250df">waitForEvent</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;page&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">,</span>
 </span><span style="color:#393a34">  page<span style="color:#393a34">.</span><span style="color:#8250df">locator</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;a[target=&quot;_blank&quot;]&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span> <em>// Opens a new tab</em>
@@ -52,8 +52,8 @@ categories:
 
 <p>如果触发新页面的操作未知，可以使用以下模式。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Get all new pages (including popups) in the context</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Get all new pages (including popups) in the context</em>
 </span><span style="color:#393a34">context<span style="color:#393a34">.</span><span style="color:#8250df">on</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;page&#39;</span><span style="color:#393a34">,</span> <span style="color:#cf222e">async</span> <span style="color:#953800">page</span> <span style="color:#d73a49">=&gt;</span> <span style="color:#393a34">{</span>
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">waitForLoadState</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">  <span style="color:#116329">console</span><span style="color:#393a34">.</span><span style="color:#8250df">log</span><span style="color:#393a34">(</span><span style="color:#cf222e">await</span> page<span style="color:#393a34">.</span><span style="color:#8250df">title</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
@@ -65,8 +65,8 @@ categories:
 
 <p>&nbsp;除了 browserContext.on(&#39;page&#39;) 事件之外，还会发出此事件，但仅针对与此页面相关的弹出窗口。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Note that Promise.all prevents a race condition</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Note that Promise.all prevents a race condition</em>
 </span><span style="color:#393a34"><em>// between clicking and waiting for the popup.</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">[</span>popup<span style="color:#393a34">]</span> <span style="color:#d73a49">=</span> <span style="color:#cf222e">await</span> <span style="color:#116329">Promise</span><span style="color:#393a34">.</span><span style="color:#8250df">all</span><span style="color:#393a34">(</span><span style="color:#393a34">[</span>
 </span><span style="color:#393a34">  <em>// It is important to call waitForEvent before click to set up waiting.</em>
@@ -79,8 +79,8 @@ categories:
 
 <p>如果触发弹出窗口的操作未知，则可以使用以下模式。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// Get all popups when they open</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// Get all popups when they open</em>
 </span><span style="color:#393a34">page<span style="color:#393a34">.</span><span style="color:#8250df">on</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;popup&#39;</span><span style="color:#393a34">,</span> <span style="color:#cf222e">async</span> <span style="color:#953800">popup</span> <span style="color:#d73a49">=&gt;</span> <span style="color:#393a34">{</span>
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> popup<span style="color:#393a34">.</span><span style="color:#8250df">waitForLoadState</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34">  <span style="color:#cf222e">await</span> popup<span style="color:#393a34">.</span><span style="color:#8250df">title</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>

@@ -8,8 +8,8 @@ categories:
 
 <p>具体来说，命令是这样的：</p>
 
-<pre>
-<code>git checkout -b &lt;branch_name&gt; &lt;commit_id&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}git checkout -b &lt;branch_name&gt; &lt;commit_id&gt;{% endhighlight %}
 
 <p>其中：</p>
 

@@ -14,10 +14,10 @@ categories:
       <span class="code-quotes">&#39;</span><span class="code-text">Put this in your pipe &amp; smoke it!</span><span class="code-quotes">&#39;</span>
     <span class="code-block">end</span>{% endhighlight %}
 
-<p><code>创建新的文件夹，创建新的文件</code></p>
+<p>{% highlight %}创建新的文件夹，创建新的文件{% endhighlight %}</p>
 
 <pre class="highlight">
-<code><span class="c1"># myapp.rb</span>
+{% highlight %}<span class="c1"># myapp.rb</span>
 <span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
 
 <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>

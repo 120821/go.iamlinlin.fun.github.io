@@ -7,36 +7,36 @@ categories:
 
                     <blockquote> 
  <p>不安装bootstrap的话，可以用链接，效果是一样的，使用的时候记住标签即可，记不住可以多熟悉一下，链接放在head即可</p> 
- <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;{% endhighlight %} 
+ {% highlight %}<code class="language-html">&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>基本表格：</strong></p> 
- <pre><code class="language-html">&lt;table class="table"&gt;
+ {% highlight %}<code class="language-html">&lt;table class="table"&gt;
   ...
 &lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>条纹表格：</strong></p> 
- <pre><code class="language-html">&lt;table class="table table-striped"&gt;
+ {% highlight %}<code class="language-html">&lt;table class="table table-striped"&gt;
   ...
 &lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>边框表格</strong></p> 
- <pre><code class="language-html">&lt;table class="table table-bordered"&gt;
+ {% highlight %}<code class="language-html">&lt;table class="table table-bordered"&gt;
   ...
 &lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>鼠标悬停</strong></p> 
- <pre><code class="language-html">&lt;table class="table table-hover"&gt;
+ {% highlight %}<code class="language-html">&lt;table class="table table-hover"&gt;
   ...
 &lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>颜色表格或者状态表格</strong></p> 
  <p>不同的版本可能颜色不同，或者不显示颜色，影响不大，自己调试</p> 
- <pre><code class="language-html">&lt;!-- On rows --&gt;
+ {% highlight %}<code class="language-html">&lt;!-- On rows --&gt;
 &lt;tr class="active"&gt;...&lt;/tr&gt;
 &lt;tr class="success"&gt;...&lt;/tr&gt;
 &lt;tr class="warning"&gt;...&lt;/tr&gt;
@@ -55,14 +55,14 @@ categories:
 <blockquote> 
  <p><strong>紧缩表格</strong></p> 
  <p>其实也不算缩进太多，还是非常美观的</p> 
- <pre><code class="language-html">&lt;table class="table table-condensed"&gt;
+ {% highlight %}<code class="language-html">&lt;table class="table table-condensed"&gt;
   ...
 &lt;/table&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
  <p><strong>表单</strong></p> 
  <p>同样记住标签即可，不要将表单组直接和<a href="https://v3.bootcss.com/components/#input-groups" title="输入框组">输入框组</a>混合使用，可以嵌套</p> 
- <pre><code class="language-html">&lt;form&gt;
+ {% highlight %}<code class="language-html">&lt;form&gt;
   &lt;div class="form-group"&gt;
     &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
     &lt;input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"&gt;

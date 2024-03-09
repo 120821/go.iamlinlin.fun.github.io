@@ -6,8 +6,8 @@ categories:
 ---
 <p>我在go有这样的update代码:</p>
 
-<pre>
-<code>type UpdateCalculationTemplateRequest struct {
+{% highlight %}
+{% highlight %}type UpdateCalculationTemplateRequest struct {
   Name string `json:&quot;name&quot;`
   FoamParamsData [][]string `json:&quot;foamParamsData&quot;`
   RefrigerationParamsData [][]string `json:&quot;refrigerationParamsData&quot;`
@@ -49,8 +49,8 @@ func UpdateCalculationTemplate(c *gin.Context) {
 
 <p>在前端已经可以看到发送了请求，数据格式也是正确的，在go也可以打印出数据，但是不能udpate：</p>
 
-<pre>
-<code>== data:  map[foam_params_data:[[第n年 生产排放因子(factor_production) 年度排放因子(factor_by_year) 退役排放因子(factor_tui_yi)] [1 0.02 0.01 0.01] [2 0.02 0.01 0.01] [3 0.02 0.01 0.01] [4 0.02 0.01 0.01] [5 0.02 0.01 0.01] [6 0.02 0.01 0.01] [7 0.02 0.01 0.01] [8 0.02 0.01 0.01] [9 0.02 0.01 0.01] [10 0.02 0.01 0.01] [11 0.02 0.01 0.01] [12 0.02 0.01 0.01] [13 0.02 0.01 0.01] [14 0.02 0.01 0.01] [15 0.02 0.01 0.01] [16 0.2 0.2 0.2] [17 0.2 0.2 0.2] [18 0.2 0.2 0.2] [19 0.2 0.2 0.2] [20 0.2 0.2 0.2]]]
+{% highlight %}
+{% highlight %}== data:  map[foam_params_data:[[第n年 生产排放因子(factor_production) 年度排放因子(factor_by_year) 退役排放因子(factor_tui_yi)] [1 0.02 0.01 0.01] [2 0.02 0.01 0.01] [3 0.02 0.01 0.01] [4 0.02 0.01 0.01] [5 0.02 0.01 0.01] [6 0.02 0.01 0.01] [7 0.02 0.01 0.01] [8 0.02 0.01 0.01] [9 0.02 0.01 0.01] [10 0.02 0.01 0.01] [11 0.02 0.01 0.01] [12 0.02 0.01 0.01] [13 0.02 0.01 0.01] [14 0.02 0.01 0.01] [15 0.02 0.01 0.01] [16 0.2 0.2 0.2] [17 0.2 0.2 0.2] [18 0.2 0.2 0.2] [19 0.2 0.2 0.2] [20 0.2 0.2 0.2]]]
 
 (/workspace/dongtaipaifang_2_backend/models/calculation_templates.go:82) 
 [2023-10-17 14:43:26]  [0.49ms]  UPDATE &quot;calculation_templates&quot; SET &quot;foam_params_data&quot; = &#39;&#39;, &quot;updated_at&quot; = &#39;2023-10-17 14:43:26&#39;  WHERE (id = 22)  
@@ -60,12 +60,12 @@ func UpdateCalculationTemplate(c *gin.Context) {
 
 <p>目的是：</p>
 
-<p><code><span style="font-family:sans-serif, Arial, Verdana, Trebuchet MS">把</span>[][]string</code>保存到PostgreSQL数据库中的<code>text</code>字段，数据转换为JSON格式进行存储。</p>
+<p>{% highlight %}<span style="font-family:sans-serif, Arial, Verdana, Trebuchet MS">把</span>[][]string{% endhighlight %}保存到PostgreSQL数据库中的{% highlight %}text{% endhighlight %}字段，数据转换为JSON格式进行存储。</p>
 
-<p>（在Go语言中，可以使用<code>encoding/json</code>包来实现JSON序列化和反序列化。）</p>
+<p>（在Go语言中，可以使用{% highlight %}encoding/json{% endhighlight %}包来实现JSON序列化和反序列化。）</p>
 
-<pre>
-<code>package main
+{% highlight %}
+{% highlight %}package main
 
 import (
 	&quot;database/sql&quot;

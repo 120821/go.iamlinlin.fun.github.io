@@ -4,10 +4,10 @@ title: "使用user_mailer发送邮件"
 date: "2022-08-26"
 categories: 
 ---
-<p>首先进行配置文件的修改，增加email的地址，设置密码，在<code>config/environments/$RAILS_ENV.rb</code></p>
+<p>首先进行配置文件的修改，增加email的地址，设置密码，在{% highlight %}config/environments/$RAILS_ENV.rb{% endhighlight %}</p>
 
-<pre>
-<code>config.action_mailer.delivery_method = :smtp
+{% highlight %}
+{% highlight %}config.action_mailer.delivery_method = :smtp
 
 config.action_mailer.smtp_settings = {
 
@@ -35,7 +35,7 @@ config.action_mailer.smtp_settings = {
 
 <p>会自动生成多个文件：</p>
 
-<pre>
+{% highlight %}
 <code class="highlight console"><span class="go">create  app/mailers/user_mailer.rb
 create  app/mailers/application_mailer.rb
 invoke  erb
@@ -48,8 +48,8 @@ create    test/mailers/previews/user_mailer_preview.rb</span>{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<pre>
-<code>&lt;script&gt;
+{% highlight %}
+{% highlight %}&lt;script&gt;
 
 &nbsp; jQuery(&#39;#send_validation_code&#39;).click(function () {
 

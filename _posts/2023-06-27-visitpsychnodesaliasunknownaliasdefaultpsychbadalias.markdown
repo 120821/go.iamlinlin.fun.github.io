@@ -17,6 +17,6 @@ Alias parsing was not enabled. To enable it, pass `aliases: true` to `Psych::loa
 
 <p>解决：</p>
 
-<pre>
-<code>gem &#39;psych&#39;, &#39;&lt; 4{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &#39;psych&#39;, &#39;&lt; 4{% endhighlight %}
 

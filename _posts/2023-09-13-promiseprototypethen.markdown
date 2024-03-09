@@ -18,8 +18,8 @@ categories:
 
 <p>demo1: vim promise_then.js</p>
 
-<pre>
-<code>const promise1 = new Promise((resolve, reject) =&gt; {
+{% highlight %}
+{% highlight %}const promise1 = new Promise((resolve, reject) =&gt; {
   resolve(&#39;Success!&#39;);
 });
 
@@ -30,18 +30,18 @@ promise1.then((value) =&gt; {
 
 <p>运行后输出：</p>
 
-<pre>
-<code>node promise_then.js{% endhighlight %}
+{% highlight %}
+{% highlight %}node promise_then.js{% endhighlight %}
 
-<pre>
-<code>&gt; &quot;Success!&quot;{% endhighlight %}
+{% highlight %}
+{% highlight %}&gt; &quot;Success!&quot;{% endhighlight %}
 
 <p><a href="http://siwei.me/blog/posts/es6-promise-new-promise-resolve">http://siwei.me/blog/posts/es6-promise-new-promise-resolve</a></p>
 
 <p>demo2: vim promise_then_2.js</p>
 
-<pre>
-<code>let result = new Promise( (resolve, reject ) =&gt; {
+{% highlight %}
+{% highlight %}let result = new Promise( (resolve, reject ) =&gt; {
   let result = 0
   setTimeout( () =&gt; {
     console.info(&quot;sleep n ms...&quot;)
@@ -56,13 +56,13 @@ result.then( (temp) =&gt; {
 
 <p>运行：</p>
 
-<pre>
-<code>node promise_then_2.js{% endhighlight %}
+{% highlight %}
+{% highlight %}node promise_then_2.js{% endhighlight %}
 
 <p>&nbsp;&nbsp;&nbsp; 输出：</p>
 
-<pre>
-<code>sleep n ms...
+{% highlight %}
+{% highlight %}sleep n ms...
 result :  200{% endhighlight %}
 
 <p>demo:&nbsp; <a href="https://github.com/120821/react_test_20230724">https://github.com/120821/react_test_20230724</a></p>

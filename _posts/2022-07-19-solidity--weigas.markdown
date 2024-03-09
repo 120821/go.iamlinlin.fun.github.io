@@ -6,9 +6,9 @@ categories:
 ---
 <p>交易是用以太币支付的。 类似于 1 美元等于 100 美分，1 以太币等于 10的18次方 wei。</p>
 
-<p>Transactions are paid with <code>ether</code>.</p>
+<p>Transactions are paid with {% highlight %}ether{% endhighlight %}.</p>
 
-<p>Similar to how one dollar is equal to 100 cent, one <code>ether</code> is equal to 10<sup>18</sup> <code>wei</code>.</p>
+<p>Similar to how one dollar is equal to 100 cent, one {% highlight %}ether{% endhighlight %} is equal to 10<sup>18</sup> {% highlight %}wei{% endhighlight %}.</p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
@@ -26,11 +26,11 @@ pragma solidity ^0.8.13;</p>
 <p>Gas:你需要为一笔交易支付多少以太币？ 你支付的 gas 花费 * gas price 的以太币数量，其中 气体是计算单位 消耗的气体是交易中使用的气体总量 汽油价格是您愿意为每种汽油支付多少以太币 具有较高gas价格的交易具有更高的优先级被包含在一个块中。</p>
 
 <ul>
-	<li><code>gas</code> is a unit of computation</li>
-	<li><code>gas spent</code> is the total amount of <code>gas</code> used in a transaction</li>
-	<li><code>gas price</code> is how much <code>ether</code> you are willing to pay per <code>gas</code></li>
-	<li><code>gas limit</code> (max amount of gas you&#39;re willing to use for your transaction, set by you)</li>
-	<li><code>block gas limit</code> (max amount of gas allowed in a block, set by the network)</li>
+	<li>{% highlight %}gas{% endhighlight %} is a unit of computation</li>
+	<li>{% highlight %}gas spent{% endhighlight %} is the total amount of {% highlight %}gas{% endhighlight %} used in a transaction</li>
+	<li>{% highlight %}gas price{% endhighlight %} is how much {% highlight %}ether{% endhighlight %} you are willing to pay per {% highlight %}gas{% endhighlight %}</li>
+	<li>{% highlight %}gas limit{% endhighlight %} (max amount of gas you&#39;re willing to use for your transaction, set by you)</li>
+	<li>{% highlight %}block gas limit{% endhighlight %} (max amount of gas allowed in a block, set by the network)</li>
 </ul>
 
 <p>// SPDX-License-Identifier: MIT<br />

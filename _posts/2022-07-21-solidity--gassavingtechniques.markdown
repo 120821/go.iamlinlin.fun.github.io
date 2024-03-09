@@ -9,9 +9,9 @@ categories:
 <p><font style="vertical-align:inherit">一些节气技术。 </font></p>
 
 <ul>
-	<li><font style="vertical-align:inherit">更换 </font><code>memory</code><font style="vertical-align:inherit">和 </font><code>calldata</code></li>
+	<li><font style="vertical-align:inherit">更换 </font>{% highlight %}memory{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight %}calldata{% endhighlight %}</li>
 	<li><font style="vertical-align:inherit">将状态变量加载到内存 </font></li>
-	<li><font style="vertical-align:inherit">替换 for 循环 </font><code>i++</code><font style="vertical-align:inherit">和 </font><code>++i</code></li>
+	<li><font style="vertical-align:inherit">替换 for 循环 </font>{% highlight %}i++{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight %}++i{% endhighlight %}</li>
 	<li><font style="vertical-align:inherit">缓存数组元素 </font></li>
 	<li><font style="vertical-align:inherit">短路 </font></li>
 </ul>
@@ -19,9 +19,9 @@ categories:
 <p>Some gas saving techniques.</p>
 
 <ul>
-	<li>Replacing <code>memory</code> with <code>calldata</code></li>
+	<li>Replacing {% highlight %}memory{% endhighlight %} with {% highlight %}calldata{% endhighlight %}</li>
 	<li>Loading state variable to memory</li>
-	<li>Replace for loop <code>i++</code> with <code>++i</code></li>
+	<li>Replace for loop {% highlight %}i++{% endhighlight %} with {% highlight %}++i{% endhighlight %}</li>
 	<li>Caching array elements</li>
 	<li>Short circuit</li>
 </ul>

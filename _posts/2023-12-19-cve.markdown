@@ -10,8 +10,8 @@ categories:
 
 <p>例如：<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-20867">https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-20867</a></p>
 
-<pre>
-<code><span style="color:#dcc6e0">Search</span> Results
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">Search</span> Results
 There are <span style="color:#f5ab35">1</span> CVE Records that match your <span style="color:#dcc6e0">search</span>.
 <span style="color:#f5ab35">Name</span> 	Description
 CVE<span style="color:#f5ab35">-2023</span><span style="color:#f5ab35">-20867</span> 	A fully compromised ESXi host can force VMware Tools <span style="color:#dcc6e0">to</span> fail <span style="color:#dcc6e0">to</span> authenticate host-<span style="color:#dcc6e0">to</span>-guest operations, impacting the confidentiality <span style="color:#dcc6e0">and</span> integrity <span style="color:#dcc6e0">of</span> the guest virtual machine.

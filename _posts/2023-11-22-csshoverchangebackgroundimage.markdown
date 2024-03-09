@@ -8,8 +8,8 @@ categories:
 
 <p>使用这样的写法即可：</p>
 
-<pre>
-<code>&lt;!DOCTYPE html&gt;
+{% highlight %}
+{% highlight %}&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;

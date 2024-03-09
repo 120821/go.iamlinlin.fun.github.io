@@ -22,8 +22,8 @@ categories:
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp; 示例：在 CSS 中</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 body{
  color: #ffffff;
  font: $ubuntu-font: &#39;Ubuntu&#39;, 

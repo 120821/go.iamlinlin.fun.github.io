@@ -12,8 +12,8 @@ categories:
 
 <p>在react中可以使用replace(), 然后使用正则表达式，/as/g来进行替换，例如：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 function MyComponent() {
   const str = &#39;asdfasd&#39;;

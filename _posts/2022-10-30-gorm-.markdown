@@ -20,7 +20,7 @@ categories:
 &nbsp; UpdatedAt&nbsp;&nbsp;&nbsp; time.Time<br />
 }{% endhighlight %}
 
-<p>GORM 定义一个 <code>gorm.Model</code> 结构体，其包括字段 <code>ID</code>、<code>CreatedAt</code>、<code>UpdatedAt</code>、<code>DeletedAt</code></p>
+<p>GORM 定义一个 {% highlight %}gorm.Model{% endhighlight %} 结构体，其包括字段 {% highlight %}ID{% endhighlight %}、{% highlight %}CreatedAt{% endhighlight %}、{% highlight %}UpdatedAt{% endhighlight %}、{% highlight %}DeletedAt{% endhighlight %}</p>
 
 {% highlight %}// gorm.Model 的定义<br />
 type Model struct {<br />
@@ -49,14 +49,14 @@ type User struct {<br />
 &nbsp; Name string<br />
 }{% endhighlight %}
 
-<p>对于正常的结构体字段，你也可以通过标签 <code>embedded</code> 将其嵌入，例如：</p>
+<p>对于正常的结构体字段，你也可以通过标签 {% highlight %}embedded{% endhighlight %} 将其嵌入，例如：</p>
 
 {% highlight %}type Author struct {<br />
 &nbsp;&nbsp;&nbsp; Name&nbsp; string<br />
 &nbsp;&nbsp;&nbsp; Email string<br />
-}</code></p>
+}{% endhighlight %}</p>
 
-<p><code>type Blog struct {<br />
+<p>{% highlight %}type Blog struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />
 &nbsp; Author&nbsp; Author `gorm:&quot;embedded&quot;`<br />
 &nbsp; Upvotes int32<br />
@@ -69,7 +69,7 @@ type Blog struct {<br />
 &nbsp; Upvotes&nbsp; int32<br />
 }{% endhighlight %}
 
-<p>可以使用标签 <code>embeddedPrefix</code> 来为 db 中的字段名添加前缀，例如：</p>
+<p>可以使用标签 {% highlight %}embeddedPrefix{% endhighlight %} 来为 db 中的字段名添加前缀，例如：</p>
 
 {% highlight %}type Blog struct {<br />
 &nbsp; ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int<br />

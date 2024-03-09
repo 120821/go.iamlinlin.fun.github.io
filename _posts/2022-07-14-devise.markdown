@@ -21,8 +21,8 @@ a.save!{% endhighlight %}
 
 <p>devise是不能进行email的更改的</p>
 
-<pre>
-<code>a= Account.find(1)
+{% highlight %}
+{% highlight %}a= Account.find(1)
 
 a.password = &#39;22222211&#39;
 
@@ -33,8 +33,8 @@ a.save!{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<pre>
-<code>Account.find(26).valid_password?(&#39;33333333&#39;)
+{% highlight %}
+{% highlight %}Account.find(26).valid_password?(&#39;33333333&#39;)
 
 &nbsp; Account Load (0.2ms)&nbsp; SELECT &quot;accounts&quot;.* FROM &quot;accounts&quot; WHERE &quot;accounts&quot;.&quot;id&quot; = $1 LIMIT $2&nbsp; [[&quot;id&quot;, 26], [&quot;LIMIT&quot;, 1]]
 
@@ -53,10 +53,10 @@ a.save!{% endhighlight %}
 <code class="hljs language-ruby">user = User.find_by_email(params[<span class="hljs-symbol">:user</span>][<span class="hljs-symbol">:email</span>])
 user.valid_password?(params[<span class="hljs-symbol">:user</span>][<span class="hljs-symbol">:password</span>]){% endhighlight %}
 
-<p><code>参考：</code><a href="https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise">https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise</a></p>
+<p>{% highlight %}参考：{% endhighlight %}<a href="https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise">https://stackoverflow.com/questions/4320921/how-to-verify-a-users-password-in-devise</a></p>
 
 <p>4.在action进行使用上面的三步</p>
 
-<pre>
-<code>Account.create email: params[:email], mobile: params[:mobile], password: params[:account][:password]{% endhighlight %}
+{% highlight %}
+{% highlight %}Account.create email: params[:email], mobile: params[:mobile], password: params[:account][:password]{% endhighlight %}
 

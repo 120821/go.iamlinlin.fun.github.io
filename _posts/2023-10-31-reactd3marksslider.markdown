@@ -8,8 +8,8 @@ categories:
 
 <p>如果显示20年，就是每一年都显示一个标记点，但是现在需要超过50年，那么需要做判断，超过20年，就5年显示一个标记点：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">const</span> marks = {};
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">const</span> marks = {};
 
 <span style="color:#dcc6e0">if</span> (<span style="color:#f5ab35">Object</span>.keys(updatedYearlyData).length &gt; <span style="color:#f5ab35">20</span>) {
   <span style="color:#f5ab35">Object</span>.keys(updatedYearlyData).forEach(<span style="color:#f5ab35">year</span> =&gt; {
@@ -26,10 +26,10 @@ categories:
 
 <p>同时修改slider:</p>
 
-<p>(使用 <code>marks</code> 属性标注分段式滑块，使用 <code>value</code> / <code>defaultValue</code> 指定滑块位置。当 <code>included=false</code> 时，表明不同标记间为并列关系。当 <code>step=null</code> 时，Slider 的可选值仅有 <code>marks</code> 标出来的部分。)</p>
+<p>(使用 {% highlight %}marks{% endhighlight %} 属性标注分段式滑块，使用 {% highlight %}value{% endhighlight %} / {% highlight %}defaultValue{% endhighlight %} 指定滑块位置。当 {% highlight %}included=false{% endhighlight %} 时，表明不同标记间为并列关系。当 {% highlight %}step=null{% endhighlight %} 时，Slider 的可选值仅有 {% highlight %}marks{% endhighlight %} 标出来的部分。)</p>
 
-<pre>
-<code>&lt;Slider  min={firstYear} max={lastYear} marks={marks} onChange={handleSliderChange} defaultValue={firstYear} tooltipVisible tipFormatter={(value) =&gt; `${value}年`} /&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;Slider  min={firstYear} max={lastYear} marks={marks} onChange={handleSliderChange} defaultValue={firstYear} tooltipVisible tipFormatter={(value) =&gt; `${value}年`} /&gt;{% endhighlight %}
 
 <p>&nbsp;</p>
 

@@ -8,16 +8,16 @@ categories:
 
 <p>写法1：</p>
 
-<pre>
-<code>const data = this.state.data;
+{% highlight %}
+{% highlight %}const data = this.state.data;
 const yearStart = this.state.yearStart;
 const yearEnd = this.state.yearEnd;
 const svgRef = this.state.svgRef;{% endhighlight %}
 
-<p><code>写法2:</code></p>
+<p>{% highlight %}写法2:{% endhighlight %}</p>
 
-<p><code>简便写法</code></p>
+<p>{% highlight %}简便写法{% endhighlight %}</p>
 
-<pre>
-<code>const { data, yearStart, yearEnd, svgRef } = this.state;{% endhighlight %}
+{% highlight %}
+{% highlight %}const { data, yearStart, yearEnd, svgRef } = this.state;{% endhighlight %}
 

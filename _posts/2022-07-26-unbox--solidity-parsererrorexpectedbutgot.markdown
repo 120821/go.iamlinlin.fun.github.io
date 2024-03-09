@@ -43,7 +43,7 @@ categories:
 <p>真实原因是：</p>
 
 <ul>
-	<li>无法访问 <code>github</code>。</li>
+	<li>无法访问 {% highlight %}github{% endhighlight %}。</li>
 </ul>
 
 <p>解决方法：</p>
@@ -79,7 +79,7 @@ categories:
   <span class="hljs-attr">Test contracts:</span>    <span class="hljs-string">truffle</span> <span class="hljs-string">test</span>
 {% endhighlight %}
 
-<p><code>无用，不能执行到最后</code></p>
+<p>{% highlight %}无用，不能执行到最后{% endhighlight %}</p>
 
 <p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ truffle unbox webpack<br />
 This directory is non-empty...<br />

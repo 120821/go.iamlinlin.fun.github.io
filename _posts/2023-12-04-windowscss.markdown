@@ -7,7 +7,7 @@ categories:
 <p>对于我react的css,我需要转化为这样的内容：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code><span style="color:#dcc6e0">body</span> {
+{% highlight %}<span style="color:#dcc6e0">body</span> {
   <span style="color:#ffd700">background-image</span>: <span style="color:#f5ab35">url</span>(<span style="color:#abe338">&#39;friends.jpeg&#39;</span>);
   <span style="color:#ffd700">height</span>: <span style="color:#f5ab35">100%</span>;
   <span style="color:#ffd700">background-position</span>: center center;

@@ -6,11 +6,11 @@ categories:
 ---
 <p>创建sh脚本， xx.sh</p>
 
-<pre>
-<code>chmod +x xx.sh{% endhighlight %}
+{% highlight %}
+{% highlight %}chmod +x xx.sh{% endhighlight %}
 
-<pre>
-<code><span style="color:#f5ab35">#!/bin/bash
+{% highlight %}
+{% highlight %}<span style="color:#f5ab35">#!/bin/bash
 </span>脚本内容可以是：
 
 <span style="color:#d4d0ab"># 数据库连接参数</span>
@@ -49,6 +49,6 @@ algorithm_names=(<span style="color:#abe338">&quot;算法1&quot;</span> <span st
 
 <p>执行</p>
 
-<pre>
-<code>./xx.sh{% endhighlight %}
+{% highlight %}
+{% highlight %}./xx.sh{% endhighlight %}
 

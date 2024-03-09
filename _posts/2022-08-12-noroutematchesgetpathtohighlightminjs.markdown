@@ -24,14 +24,14 @@ categories:
 <div class="bg-transparent mb-3">
 <p>Change the Javascript file import to this:</p>
 
-<pre>
-<code>&lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+{% highlight %}
+{% highlight %}&lt;script src=&quot;/assets/bootstrap.min.js&quot;&gt;&lt;/script&gt;
 {% endhighlight %}
 
 <p>and the CSS link to this:</p>
 
-<pre>
-<code>&lt;link href=&quot;/assets/bootstrap.min.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; /&gt;
+{% highlight %}
+{% highlight %}&lt;link href=&quot;/assets/bootstrap.min.css&quot; media=&quot;all&quot; rel=&quot;stylesheet&quot; /&gt;
 {% endhighlight %}
 
 <p><img height="251" src="/uploads/ckeditor/pictures/213/image-20220812101717-2.png" width="896" /></p>

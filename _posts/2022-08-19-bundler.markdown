@@ -28,10 +28,10 @@ gem install bundler -v 1.9{% endhighlight %}
 
 <p>增加一个文件，指定bundle的版本</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>cat Gemfile.lock</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}cat Gemfile.lock{% endhighlight %}</div>
 
-<pre>
-<code>BUNDLED WITH
+{% highlight %}
+{% highlight %}BUNDLED WITH
 
 &nbsp;&nbsp; 1.9.0{% endhighlight %}
 

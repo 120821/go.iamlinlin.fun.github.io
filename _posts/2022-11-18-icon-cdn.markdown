@@ -6,8 +6,8 @@ categories:
 ---
 <p>发现新的使用icon的方式，电脑还没好，使用记事本，star.txt, 内容如下：</p>
 
-<pre>
-<code>&lt;!DOCTYPE html&gt;
+{% highlight %}
+{% highlight %}&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &nbsp; &lt;title&gt;Foundation 实例&lt;/title&gt;
@@ -48,7 +48,7 @@ categories:
 &lt;/body&gt;<br />
 &lt;/html&gt;{% endhighlight %}
 
-<p><code>然后ctrl+s，保存后，修改文件的名称为：star.html,双击打开，看到</code></p>
+<p>{% highlight %}然后ctrl+s，保存后，修改文件的名称为：star.html,双击打开，看到{% endhighlight %}</p>
 
 <p><img height="443" src="/uploads/ckeditor/pictures/734/image-20221118151106-1.png" width="837" /></p>
 

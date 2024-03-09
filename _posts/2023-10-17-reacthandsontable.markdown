@@ -8,8 +8,8 @@ categories:
 
 <p>例如：</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   const { tableData } = this.state;
 
   // 如果 tableData 长度小于等于 1，则不渲染 HandsonTable 组件
@@ -34,8 +34,8 @@ categories:
 <p>handsontable的组件可以这样写（普通的，没有使用双向绑定）：<br />
 &nbsp;</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import Handsontable from &#39;handsontable&#39;;
 import &#39;handsontable/dist/handsontable.full.min.css&#39;;
 
@@ -69,13 +69,13 @@ class HandsonTable extends React.Component {
   }
 }
 
-export default HandsonTable;</code>
-</pre>
+export default HandsonTable;{% endhighlight %}
+{% endhighlight %}
 
 <p>可以在引用的时候增加双向绑定：</p>
 
-<pre>
-<code>import React, { useState } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useState } from &#39;react&#39;;
 import HandsonTable from &#39;./HandsonTable&#39;;
 
 function App() {

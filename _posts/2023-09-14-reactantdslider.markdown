@@ -10,16 +10,16 @@ categories:
 
 <p>2.增加：</p>
 
-<pre>
-<code>import { Slider } from &#39;antd&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}import { Slider } from &#39;antd&#39;;{% endhighlight %}
 
-<p><code>3</code>.增加滑动的数据：</p>
+<p>{% highlight %}3{% endhighlight %}.增加滑动的数据：</p>
 
-<pre>
-<code>const formatter = (value: number) =&gt; `${value}%`;{% endhighlight %}
+{% highlight %}
+{% highlight %}const formatter = (value: number) =&gt; `${value}%`;{% endhighlight %}
 
-<pre>
-<code>&lt;&gt;
+{% highlight %}
+{% highlight %}&lt;&gt;
   &lt;Slider tooltip={{ formatter }} /&gt;
   &lt;Slider tooltip={{ formatter: null }} /&gt;
 &lt;/&gt;{% endhighlight %}

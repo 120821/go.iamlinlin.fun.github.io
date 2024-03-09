@@ -40,7 +40,7 @@ categories:
     }
 ]
 
-</pre>
+{% endhighlight %}
 
 <p>使用的时候,直接 叫它的名字就行,不用加上文件的路径.&nbsp;</p>
 

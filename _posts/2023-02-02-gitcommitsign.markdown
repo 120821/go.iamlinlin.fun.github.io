@@ -12,37 +12,37 @@ categories:
 
 <p>1.创建一个新的gpg:&nbsp;</p>
 
-<pre>
-<code># Ubuntu
+{% highlight %}
+{% highlight %}# Ubuntu
 
 sudo apt-get install gpa seahorse{% endhighlight %}
 
 <p>2. 生成:&nbsp;</p>
 
-<pre>
-<code>gpg --gen-key{% endhighlight %}
+{% highlight %}
+{% highlight %}gpg --gen-key{% endhighlight %}
 
 <p>3. 列出来:</p>
 
-<pre>
-<code>gpg --list-secret-keys --keyid-format=long{% endhighlight %}
+{% highlight %}
+{% highlight %}gpg --list-secret-keys --keyid-format=long{% endhighlight %}
 
 <p>看到输出结果：</p>
 
-<pre>
-sec   rsa3072/&lt;你的秘钥&gt;</pre>
+{% highlight %}
+sec   rsa3072/&lt;你的秘钥&gt;{% endhighlight %}
 
 <p>4. 复制上面的 &lt;你的秘钥&gt;&nbsp; ，然后列出它的完整内容：</p>
 
-<pre>
-<code>$ gpg --armor --export &lt;你的秘钥&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}$ gpg --armor --export &lt;你的秘钥&gt;{% endhighlight %}
 
 <p>把输出的结果从begin行到end行复制到GitHub中，路径为：settings -&gt; ssh and gpg keys -&gt; new gpg key</p>
 
 <p>5.修改本地的 .git/config 或者 ~/.gitconfig</p>
 
-<pre>
-<code>[user]
+{% highlight %}
+{% highlight %}[user]
   name = &lt;name&gt;
   email = &lt;email&gt;
   signingkey = &lt;你的秘钥&gt; (增加这一行)

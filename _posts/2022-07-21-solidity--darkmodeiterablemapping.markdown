@@ -6,9 +6,9 @@ categories:
 ---
 <p>https://solidity-by-example.org/app/iterable-mapping/</p>
 
-<p>You cannot iterate through a <code>mapping</code>. So here is an example of how to create an iterable <code>mapping</code>.</p>
+<p>You cannot iterate through a {% highlight %}mapping{% endhighlight %}. So here is an example of how to create an iterable {% highlight %}mapping{% endhighlight %}.</p>
 
-<p><font style="vertical-align:inherit">你不能遍历一个 </font><code>mapping</code><font style="vertical-align:inherit">. 所以这里是一个如何创建可迭代的示例 </font><code>mapping</code><font style="vertical-align:inherit">. </font></p>
+<p><font style="vertical-align:inherit">你不能遍历一个 </font>{% highlight %}mapping{% endhighlight %}<font style="vertical-align:inherit">. 所以这里是一个如何创建可迭代的示例 </font>{% highlight %}mapping{% endhighlight %}<font style="vertical-align:inherit">. </font></p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>

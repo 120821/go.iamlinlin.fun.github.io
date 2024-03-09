@@ -9,7 +9,7 @@ categories:
 <p>Linux df（英文全拼：disk free） 命令用于显示目前在 Linux 系统上的文件系统磁盘使用情况统计。</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">df </span><span class="pun">[选项]...</span><span class="pln"> </span><span class="pun">[</span><span class="pln">FILE</span><span class="pun">]...</span></pre>
+<span class="pln">df </span><span class="pun">[选项]...</span><span class="pln"> </span><span class="pun">[</span><span class="pln">FILE</span><span class="pun">]...</span>{% endhighlight %}
 
 <ul>
 	<li>文件-a, --all 包含所有的具有 0 Blocks 的文件系统</li>
@@ -40,7 +40,7 @@ categories:
 udev             </span><span class="lit">1536756</span><span class="pln">       </span><span class="lit">4</span><span class="pln">     </span><span class="lit">1536752</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="pun">/</span><span class="pln">dev 
 tmpfs             </span><span class="lit">617620</span><span class="pln">     </span><span class="lit">888</span><span class="pln">     </span><span class="lit">616732</span><span class="pln">     </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="pun">/</span><span class="pln">run 
 none                </span><span class="lit">5120</span><span class="pln">       </span><span class="lit">0</span><span class="pln">     </span><span class="lit">5120</span><span class="pln">       </span><span class="lit">0</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="kwd">lock</span><span class="pln"> 
-none             </span><span class="lit">1544044</span><span class="pln">     </span><span class="lit">156</span><span class="pln">     </span><span class="lit">1543888</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="pln">shm </span></pre>
+none             </span><span class="lit">1544044</span><span class="pln">     </span><span class="lit">156</span><span class="pln">     </span><span class="lit">1543888</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="pln">shm </span>{% endhighlight %}
 
 <p><img height="184" src="/uploads/ckeditor/pictures/251/image-20220818104707-1.png" width="721" /></p>
 
@@ -53,7 +53,7 @@ none             </span><span class="lit">1544044</span><span class="pln">     <
 <pre class="prettyprint prettyprinted" style="">
 <span class="com"># df test </span><span class="pln">
 </span><span class="typ">Filesystem</span><span class="pln">     </span><span class="lit">1K</span><span class="pun">-</span><span class="pln">blocks    </span><span class="typ">Used</span><span class="pln">      </span><span class="typ">Available</span><span class="pln"> </span><span class="typ">Use</span><span class="pun">%</span><span class="pln"> </span><span class="typ">Mounted</span><span class="pln"> on 
-</span><span class="pun">/</span><span class="pln">dev</span><span class="pun">/</span><span class="pln">sda6       </span><span class="lit">29640780</span><span class="pln">    </span><span class="lit">4320600</span><span class="pln">   </span><span class="lit">23814492</span><span class="pln">  </span><span class="lit">16</span><span class="pun">%</span><span class="pln">       </span><span class="pun">/</span><span class="pln"> </span></pre>
+</span><span class="pun">/</span><span class="pln">dev</span><span class="pun">/</span><span class="pln">sda6       </span><span class="lit">29640780</span><span class="pln">    </span><span class="lit">4320600</span><span class="pln">   </span><span class="lit">23814492</span><span class="pln">  </span><span class="lit">16</span><span class="pun">%</span><span class="pln">       </span><span class="pun">/</span><span class="pln"> </span>{% endhighlight %}
 
 <p><img height="96" src="/uploads/ckeditor/pictures/252/image-20220818104806-2.png" width="717" /></p>
 
@@ -66,7 +66,7 @@ none             </span><span class="lit">1544044</span><span class="pln">     <
 udev           </span><span class="lit">212748</span><span class="pln">     </span><span class="lit">560</span><span class="pln">      </span><span class="lit">212188</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">         </span><span class="pun">/</span><span class="pln">dev 
 tmpfs          </span><span class="lit">216392</span><span class="pln">     </span><span class="lit">477</span><span class="pln">      </span><span class="lit">215915</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">         </span><span class="pun">/</span><span class="pln">run 
 none           </span><span class="lit">216392</span><span class="pln">     </span><span class="lit">3</span><span class="pln">        </span><span class="lit">216389</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">         </span><span class="str">/run/</span><span class="kwd">lock</span><span class="pln"> 
-none           </span><span class="lit">216392</span><span class="pln">     </span><span class="lit">8</span><span class="pln">        </span><span class="lit">216384</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">         </span><span class="str">/run/</span><span class="pln">shm </span></pre>
+none           </span><span class="lit">216392</span><span class="pln">     </span><span class="lit">8</span><span class="pln">        </span><span class="lit">216384</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">         </span><span class="str">/run/</span><span class="pln">shm </span>{% endhighlight %}
 
 <p><img height="186" src="/uploads/ckeditor/pictures/253/image-20220818104843-3.png" width="732" /></p>
 
@@ -80,7 +80,7 @@ udev             </span><span class="lit">1536756</span><span class="pln">      
 tmpfs             </span><span class="lit">617620</span><span class="pln">     </span><span class="lit">892</span><span class="pln">    </span><span class="lit">616728</span><span class="pln">    </span><span class="lit">1</span><span class="pun">%</span><span class="pln">      </span><span class="pun">/</span><span class="pln">run 
 none                </span><span class="lit">5120</span><span class="pln">       </span><span class="lit">0</span><span class="pln">    </span><span class="lit">5120</span><span class="pln">      </span><span class="lit">0</span><span class="pun">%</span><span class="pln">      </span><span class="str">/run/</span><span class="kwd">lock</span><span class="pln"> 
 none             </span><span class="lit">1544044</span><span class="pln">     </span><span class="lit">156</span><span class="pln">    </span><span class="lit">1543888</span><span class="pln">   </span><span class="lit">1</span><span class="pun">%</span><span class="pln">      </span><span class="str">/run/</span><span class="pln">shm 
-total           </span><span class="lit">33344320</span><span class="pln"> </span><span class="lit">4321772</span><span class="pln">    </span><span class="lit">27516860</span><span class="pln">  </span><span class="lit">14</span><span class="pun">%</span><span class="pln"> </span></pre>
+total           </span><span class="lit">33344320</span><span class="pln"> </span><span class="lit">4321772</span><span class="pln">    </span><span class="lit">27516860</span><span class="pln">  </span><span class="lit">14</span><span class="pun">%</span><span class="pln"> </span>{% endhighlight %}
 
 <p><img height="200" src="/uploads/ckeditor/pictures/254/image-20220818104941-4.png" width="746" /></p>
 
@@ -95,7 +95,7 @@ total           </span><span class="lit">33344320</span><span class="pln"> </spa
 udev            </span><span class="lit">1.5G</span><span class="pln">  </span><span class="lit">4.0K</span><span class="pln">   </span><span class="lit">1.5G</span><span class="pln">   </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="pun">/</span><span class="pln">dev 
 tmpfs           </span><span class="lit">604M</span><span class="pln">  </span><span class="lit">892K</span><span class="pln">   </span><span class="lit">603M</span><span class="pln">   </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="pun">/</span><span class="pln">run 
 none            </span><span class="lit">5.0M</span><span class="pln">     </span><span class="lit">0</span><span class="pln">   </span><span class="lit">5.0M</span><span class="pln">   </span><span class="lit">0</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="kwd">lock</span><span class="pln"> 
-none            </span><span class="lit">1.5G</span><span class="pln">  </span><span class="lit">156K</span><span class="pln">   </span><span class="lit">1.5G</span><span class="pln">   </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="pln">shm </span></pre>
+none            </span><span class="lit">1.5G</span><span class="pln">  </span><span class="lit">156K</span><span class="pln">   </span><span class="lit">1.5G</span><span class="pln">   </span><span class="lit">1</span><span class="pun">%</span><span class="pln">     </span><span class="str">/run/</span><span class="pln">shm </span>{% endhighlight %}
 
 <p><img height="186" src="/uploads/ckeditor/pictures/255/image-20220818105019-5.png" width="657" /></p>
 

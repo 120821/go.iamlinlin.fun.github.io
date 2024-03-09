@@ -6,8 +6,8 @@ categories:
 ---
 <p>对于数据：</p>
 
-<pre>
-<code>maintenanceFillingRate := [][]string{
+{% highlight %}
+{% highlight %}maintenanceFillingRate := [][]string{
 
 &nbsp;&nbsp; &nbsp;{&quot;&quot;, &quot;R41022&quot;, &quot;R410&quot;, &quot;R3332&quot;},
 
@@ -31,8 +31,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">package</span> main
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">package</span> main
 
 <span style="color:#dcc6e0">import</span> (
 	<span style="color:#abe338">&quot;fmt&quot;</span>
@@ -80,8 +80,8 @@ categories:
 
 <p>输出：</p>
 
-<pre>
-<code>[22<span style="color:#f5ab35"> 11 </span>22<span style="color:#f5ab35"> 44 </span>33<span style="color:#f5ab35"> 35 </span>52]
+{% highlight %}
+{% highlight %}[22<span style="color:#f5ab35"> 11 </span>22<span style="color:#f5ab35"> 44 </span>33<span style="color:#f5ab35"> 35 </span>52]
 [23<span style="color:#f5ab35"> 43 </span>42<span style="color:#f5ab35"> 53 </span>53<span style="color:#f5ab35"> 43 </span>32]
 [22<span style="color:#f5ab35"> 43 </span>34<span style="color:#f5ab35"> 34 </span>32<span style="color:#f5ab35"> 25 </span>22]
 {% endhighlight %}

@@ -7,7 +7,7 @@ categories:
 <p>1.博客列表的视图页面可以这样写</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>&lt;!-- index.wxml --&gt;
+{% highlight %}&lt;!-- index.wxml --&gt;
 &lt;view class=&quot;container&quot;&gt;
   &lt;block wx:for=&quot;{{blogList}}&quot; wx:key=&quot;index&quot;&gt;
     &lt;view class=&quot;blog-item&quot; bindtap=&quot;goToDetail&quot; data-id=&quot;{{item.id}}&quot;&gt;
@@ -20,7 +20,7 @@ categories:
 <p>2.博客列表的js代码可以这样写：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code><span style="color:#d4d0ab">// index.js</span>
+{% highlight %}<span style="color:#d4d0ab">// index.js</span>
 Page({
   data: {
     blogList: [
@@ -42,7 +42,7 @@ Page({
 <p>3.博客详情的视图代码可以这样：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>&lt;!-- detail.wxml --&gt;
+{% highlight %}&lt;!-- detail.wxml --&gt;
 &lt;view class=&quot;container&quot;&gt;
   &lt;view class=&quot;blog-title&quot;&gt;{{blog.title}}&lt;/view&gt;
   &lt;view class=&quot;blog-content&quot;&gt;{{blog.content}}&lt;/view&gt;
@@ -51,7 +51,7 @@ Page({
 <p>4.博客的详情的js代码可以这样：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code><span style="color:#d4d0ab">// detail.js</span>
+{% highlight %}<span style="color:#d4d0ab">// detail.js</span>
 Page({
   data: {
     blog: {}, <span style="color:#d4d0ab">// 博客详情数据</span>

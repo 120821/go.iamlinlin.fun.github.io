@@ -12,24 +12,24 @@ categories:
 
 <p>（1）使用npm</p>
 
-<pre>
-<code><span style="color:#393a34"><span style="color:#8250df">npm</span> init playwright@latest</span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><span style="color:#8250df">npm</span> init playwright@latest</span>{% endhighlight %}
 
 <p>（2）使用yarn</p>
 
-<pre>
-<code>yarn create playwright{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn create playwright{% endhighlight %}
 
 <p>（3）安装的是这些：</p>
 
-<pre>
-<code>playwright.config.ts(添加配置的地方,</code>例如修改您希望在哪些浏览器上运行 Playwright。 如果您在现有项目中运行测试，那么依赖项将直接添加到您的 package.json.<code>)
+{% highlight %}
+{% highlight %}playwright.config.ts(添加配置的地方,{% endhighlight %}例如修改您希望在哪些浏览器上运行 Playwright。 如果您在现有项目中运行测试，那么依赖项将直接添加到您的 package.json.{% highlight %})
 
 package.json
 
 package-lock.json
 
-tests/（</code>包含一个基本示例测试，可帮助您开始测试。 有关更详细的示例，请查看 tests-examples包含为测试待办事项应用程序而编写的测试的文件夹）<code>）
+tests/（{% endhighlight %}包含一个基本示例测试，可帮助您开始测试。 有关更详细的示例，请查看 tests-examples包含为测试待办事项应用程序而编写的测试的文件夹）{% highlight %}）
 
 &nbsp; example.spec.ts
 
@@ -39,8 +39,8 @@ tests-examples/
 
 <p>(4)运行测试示例</p>
 
-<pre>
-<code><span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#393a34">npx playwright <span style="color:#116329">test</span></span>{% endhighlight %}
 
 <p>（5）html测试报告</p>
 

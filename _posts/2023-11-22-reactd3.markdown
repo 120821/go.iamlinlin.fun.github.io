@@ -6,8 +6,8 @@ categories:
 ---
 <p>d3有自带的比色卡，可以使用最大值最小值来设置地图等的比色卡，例如这样：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
 
 const ColorCard = ({ minValue, maxValue }) =&gt; {

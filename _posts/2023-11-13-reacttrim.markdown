@@ -6,8 +6,8 @@ categories:
 ---
 <p>对于数据，如下，在保存的时候会多加一个&#39;\n&#39;,使用的handsontable默认会增加，所以需要去除：</p>
 
-<pre>
-<code>第<span style="color:#ffd700">n</span>年,初次灌装排放率(EF_ini),单位设备初始充填量(m_ini),运行排放率(EF_ope),维修排放率(EF_ser),维修充填率(m_ser),逐年维修率(r),报废排放率(EF_dis),逐年报废率(f)
+{% highlight %}
+{% highlight %}第<span style="color:#ffd700">n</span>年,初次灌装排放率(EF_ini),单位设备初始充填量(m_ini),运行排放率(EF_ope),维修排放率(EF_ser),维修充填率(m_ser),逐年维修率(r),报废排放率(EF_dis),逐年报废率(f)
 <span style="color:#ffd700">1</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>
 <span style="color:#ffd700">2</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>
 <span style="color:#ffd700">3</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>,<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">01</span>
@@ -21,8 +21,8 @@ categories:
 
 <p>使用：</p>
 
-<pre>
-<code>if (refrigerationParamsData.length !== 0) {
+{% highlight %}
+{% highlight %}if (refrigerationParamsData.length !== 0) {
   const rows = refrigerationParamsData.trim().split(&quot;\n&quot;);
   refrigerationDefaultData = rows.map(row =&gt; row.split(&quot;,&quot;));
   console.log(&quot;== refrigerationDefaultData: &quot;, refrigerationDefaultData);

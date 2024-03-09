@@ -4,13 +4,13 @@ title: "vue3 设置打包的端口，例如https://127.0.0.1:4567"
 date: "2023-11-17"
 categories: 
 ---
-<p>我需要把项目设置为<code>https://127.0.0.1:4567启动，那么，修改配置文件，</code><br />
-修改 <code>vue.config.js文件，设置devServer：</code></p>
+<p>我需要把项目设置为{% highlight %}https://127.0.0.1:4567启动，那么，修改配置文件，{% endhighlight %}<br />
+修改 {% highlight %}vue.config.js文件，设置devServer：{% endhighlight %}</p>
 
-<p><code>例如：</code></p>
+<p>{% highlight %}例如：{% endhighlight %}</p>
 
-<pre>
-<code><span style="color:#dcc6e0">const</span> { defineConfig } = <span style="color:#f5ab35">require</span>(<span style="color:#abe338">&#39;@vue/cli-service&#39;</span>)
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">const</span> { defineConfig } = <span style="color:#f5ab35">require</span>(<span style="color:#abe338">&#39;@vue/cli-service&#39;</span>)
 
 <span style="color:#f5ab35">module</span>.exports = defineConfig({
   transpileDependencies: <span style="color:#f5ab35">true</span>,
@@ -20,5 +20,5 @@ categories:
   }
 }){% endhighlight %}
 
-<p>重新启动就可以<code>https://127.0.0.1:4567</code>访问了。</p>
+<p>重新启动就可以{% highlight %}https://127.0.0.1:4567{% endhighlight %}访问了。</p>
 

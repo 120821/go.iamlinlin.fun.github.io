@@ -6,8 +6,8 @@ categories:
 ---
 <p>react 我使用d3 网格化中国地图，但是地图太小了，网格很大（长宽很大）：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from <span style="color:#abe338">&quot;react&quot;</span><span style="color:#d4d0ab">;</span>
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from <span style="color:#abe338">&quot;react&quot;</span><span style="color:#d4d0ab">;</span>
 import * as d<span style="color:#f5ab35">3</span> from <span style="color:#abe338">&quot;d3&quot;</span><span style="color:#d4d0ab">;</span>
 import chinaData from <span style="color:#abe338">&quot;./china.json&quot;</span><span style="color:#d4d0ab">;</span>
 
@@ -55,16 +55,16 @@ export default GridMap<span style="color:#d4d0ab">;</span>{% endhighlight %}
 
 <p>1.调整地图svg的大小:</p>
 
-<pre>
-<code>&lt;svg ref={svgRef} width={800} height={800}&gt;&lt;/svg&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;svg ref={svgRef} width={800} height={800}&gt;&lt;/svg&gt;{% endhighlight %}
 
 <p>2.调整网格间距的比例：（如果10太大，就继续调整为5，4， 3...）</p>
 
-<pre>
-<code>const grid = d3.geoGraticule().step([10, 10]); // 调整 step 的值来改变网格的间隔{% endhighlight %}
+{% highlight %}
+{% highlight %}const grid = d3.geoGraticule().step([10, 10]); // 调整 step 的值来改变网格的间隔{% endhighlight %}
 
 <p>3.调整投影的距离：</p>
 
-<pre>
-<code>const projection = d3.geoAlbers().fitSize([500, 500], chinaData); // 尝试不同的投影方式{% endhighlight %}
+{% highlight %}
+{% highlight %}const projection = d3.geoAlbers().fitSize([500, 500], chinaData); // 尝试不同的投影方式{% endhighlight %}
 

@@ -9,10 +9,10 @@ categories:
 <p><a href="https://www.knowledgehut.com/blog/web-development/react-navigation">参考</a></p>
 
 <pre class="froala-code relative">
-yarn add @react-navigation/native</pre>
+yarn add @react-navigation/native{% endhighlight %}
 
 <pre class="froala-code relative">
-npm install --save react-navigation-stack</pre>
+npm install --save react-navigation-stack{% endhighlight %}
 
 <p>然后发现并不能行的通，还是需要学习其他的内容。</p>
 

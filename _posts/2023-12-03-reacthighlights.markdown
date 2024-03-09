@@ -9,25 +9,25 @@ categories:
 <p>1.在React项目中引入依赖：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:left">
-<code>yarn add highlight.js
+{% highlight %}yarn add highlight.js
 {% endhighlight %}
 
 <p>或者使用：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:left">
-<code>npm install highlight.js
+{% highlight %}npm install highlight.js
 {% endhighlight %}
 
 <p>2.在页面引入highlights:</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:left">
-<code><span style="color:#dcc6e0">import</span> hljs <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;highlight.js&#39;</span>;
+{% highlight %}<span style="color:#dcc6e0">import</span> hljs <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;highlight.js&#39;</span>;
 <span style="color:#dcc6e0">import</span> <span style="color:#abe338">&#39;highlight.js/styles/default.css&#39;</span>; <span style="color:#d4d0ab">// 导入highlight.js的默认样式</span>{% endhighlight %}
 
 <p>3.在生命周期使用：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:left">
-<code><span style="color:#00e0e0">componentDidMount</span>() {
+{% highlight %}<span style="color:#00e0e0">componentDidMount</span>() {
   hljs.initHighlightingOnLoad(); <span style="color:#d4d0ab">// 初始化highlight.js</span>
   hljs.highlightAll(); <span style="color:#d4d0ab">// 应用highlight.js的高亮效果</span>
 }{% endhighlight %}
@@ -35,7 +35,7 @@ categories:
 <p>4.在得到文章内容后使用：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>if (response.statusText === &quot;OK&quot;) {
+{% highlight %}if (response.statusText === &quot;OK&quot;) {
     this.setState(
       {
         // ...

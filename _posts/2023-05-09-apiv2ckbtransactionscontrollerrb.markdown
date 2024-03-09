@@ -7,8 +7,8 @@ categories:
 <p>怎么在Rails应用写一个接口/api/v2/ckb_transaction/0x../detials<br />
 首先，在你的 Rails 应用中创建一个控制器来处理 /api/v2/ckb_transaction/0x../details 请求：</p>
 
-<pre>
-<code>&nbsp;# app/controllers/api/v2/ckb_transactions_controller.rb
+{% highlight %}
+{% highlight %}&nbsp;# app/controllers/api/v2/ckb_transactions_controller.rb
 
 module Api
 
@@ -30,8 +30,8 @@ end{% endhighlight %}
 
 <p>接下来，你需要将该路由指定到该控制器的 details 动作。你可以在 config/routes.rb 文件中添加以下代码：</p>
 
-<pre>
-<code>&nbsp;namespace :api do
+{% highlight %}
+{% highlight %}&nbsp;namespace :api do
 
 &nbsp; namespace :v2 do
 
@@ -45,8 +45,8 @@ end{% endhighlight %}
 
 <p>最后，在 details 动作中，你可以访问 tx_hash 参数，以进行后续的处理。</p>
 
-<pre>
-&nbsp;<code># app/controllers/api/v2/ckb_transactions_controller.rb
+{% highlight %}
+&nbsp;{% highlight %}# app/controllers/api/v2/ckb_transactions_controller.rb
 
 module Api
 

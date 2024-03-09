@@ -6,13 +6,13 @@ categories:
 ---
 <p>1.引入ant的 Table</p>
 
-<pre>
-<code>import { Table, Space, Button, message } from &#39;antd&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}import { Table, Space, Button, message } from &#39;antd&#39;;{% endhighlight %}
 
 <p>2.获得接口的数据的时候增加上创建时间</p>
 
-<pre>
-<code>&nbsp;const response = await axios.get(`${Config.BASE_URL}/api/v1/calculation_plans?token=${getToken()}`);
+{% highlight %}
+{% highlight %}&nbsp;const response = await axios.get(`${Config.BASE_URL}/api/v1/calculation_plans?token=${getToken()}`);
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (response.data.message === &#39;ok&#39;) {
 
@@ -40,8 +40,8 @@ categories:
 
 <p>3.对接口的数据进行处理</p>
 
-<pre>
-<code><span style="color:#abe338">95 </span>      {
+{% highlight %}
+{% highlight %}<span style="color:#abe338">95 </span>      {
  <span style="color:#f5ab35">96</span>         title: <span style="color:#d4d0ab">&#39;创建时间&#39;,</span>
  <span style="color:#f5ab35">97</span>         dataIndex: <span style="color:#d4d0ab">&#39;created_at&#39;,</span>
  <span style="color:#f5ab35">98</span>         <span style="color:#dcc6e0">key</span>: <span style="color:#d4d0ab">&#39;created_at&#39;,</span>
@@ -49,15 +49,15 @@ categories:
 
 <p>这样会显示数据：</p>
 
-<pre>
-<code>2023-07-24T15:10:38.820628+08:00{% endhighlight %}
+{% highlight %}
+{% highlight %}2023-07-24T15:10:38.820628+08:00{% endhighlight %}
 
 <p>需要修改为北京时间：</p>
 
 <p>最后做出这样的修改：(显示为北京时间：2023/7/24 15:10:38）</p>
 
-<pre>
-<code>import { Table } from &#39;antd&#39;;
+{% highlight %}
+{% highlight %}import { Table } from &#39;antd&#39;;
 
 const dataSource = [
 

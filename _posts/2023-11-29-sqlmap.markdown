@@ -10,11 +10,11 @@ categories:
 
 <p>1.安装成功后，使用sqlmap命令：</p>
 
-<pre>
-<code>sqlmap{% endhighlight %}
+{% highlight %}
+{% highlight %}sqlmap{% endhighlight %}
 
-<pre>
-<code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___
+{% highlight %}
+{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ___
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __H__
 

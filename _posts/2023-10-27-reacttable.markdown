@@ -8,13 +8,13 @@ categories:
 
 <p>最开始使用这样的代码，在render里是不能展示的：</p>
 
-<pre>
-<code>{yearlyObjArray}{% endhighlight %}
+{% highlight %}
+{% highlight %}{yearlyObjArray}{% endhighlight %}
 
 <p>需要处理：</p>
 
-<pre>
-<code>{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
+{% highlight %}
+{% highlight %}{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
   if (yearlyObjArray[0].year === value) {
     return (
       &lt;div key={index}&gt;
@@ -34,8 +34,8 @@ categories:
 
 <p>进一步做一个table：</p>
 
-<pre>
-<code>{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
+{% highlight %}
+{% highlight %}{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
   if (yearlyObjArray[0].year === value) {
     return (
       &lt;div key={index}&gt;
@@ -67,8 +67,8 @@ categories:
 
 <p>可以增加边框：</p>
 
-<pre>
-<code>// CSS样式
+{% highlight %}
+{% highlight %}// CSS样式
 &lt;style&gt;
   table {
     border-collapse: collapse;

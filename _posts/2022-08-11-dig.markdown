@@ -6,18 +6,18 @@ categories:
 ---
 <p><a href="https://apidock.com/rails/v6.0.0/ActionController/Parameters/dig">https://apidock.com/rails/v6.0.0/ActionController/Parameters/dig</a></p>
 
-<p><code><strong>dig</strong>(*keys)</code> <em>public</em></p>
+<p>{% highlight %}<strong>dig</strong>(*keys){% endhighlight %} <em>public</em></p>
 
 <div class="description">
 <p>Extracts the nested parameter from the given <tt><a href="https://apidock.com/rails/ActionController/Parameters/keys">keys</a></tt> by calling <tt><a href="https://apidock.com/rails/ActionController/Parameters/dig">dig</a></tt> at <a href="https://apidock.com/rails/ActionController/Parameters/each">each</a> step. Returns <tt>nil</tt> if any intermediate step is <tt>nil</tt>.</p>
 
-<pre>
+{% highlight %}
 <span class="ident">params</span> <span class="punct">=</span> <span class="constant"><a href="https://apidock.com/rails/ActionController">ActionController</a></span><span class="punct">::</span><span class="constant">Parameters</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/new/class">new</a></span><span class="punct">(</span><span class="ident">foo</span><span class="punct">:</span> <span class="punct">{</span> <span class="ident">bar</span><span class="punct">:</span> <span class="punct">{</span> <span class="ident">baz</span><span class="punct">:</span> <span class="number">1</span> <span class="punct">}</span> <span class="punct">})</span>
 <span class="ident">params</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/dig">dig</a></span><span class="punct">(</span><span class="symbol">:foo</span><span class="punct">,</span> <span class="symbol">:bar</span><span class="punct">,</span> <span class="symbol">:baz</span><span class="punct">)</span> <span class="comment"># =&gt; 1</span>
 <span class="ident">params</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/dig">dig</a></span><span class="punct">(</span><span class="symbol">:foo</span><span class="punct">,</span> <span class="symbol">:zot</span><span class="punct">,</span> <span class="symbol">:xyz</span><span class="punct">)</span> <span class="comment"># =&gt; nil</span>
 
 <span class="ident">params2</span> <span class="punct">=</span> <span class="constant"><a href="https://apidock.com/rails/ActionController">ActionController</a></span><span class="punct">::</span><span class="constant">Parameters</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/new/class">new</a></span><span class="punct">(</span><span class="ident">foo</span><span class="punct">:</span> <span class="punct">[</span><span class="number">10</span><span class="punct">,</span> <span class="number">11</span><span class="punct">,</span> <span class="number">12</span><span class="punct">])</span>
-<span class="ident">params2</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/dig">dig</a></span><span class="punct">(</span><span class="symbol">:foo</span><span class="punct">,</span> <span class="number">1</span><span class="punct">)</span> <span class="comment"># =&gt; 11</span></pre>
+<span class="ident">params2</span><span class="punct">.</span><span class="ident"><a href="https://apidock.com/rails/ActionController/Parameters/dig">dig</a></span><span class="punct">(</span><span class="symbol">:foo</span><span class="punct">,</span> <span class="number">1</span><span class="punct">)</span> <span class="comment"># =&gt; 11</span>{% endhighlight %}
 
 <p><img height="97" src="/uploads/ckeditor/pictures/204/image-20220811112121-1.png" width="710" /></p>
 

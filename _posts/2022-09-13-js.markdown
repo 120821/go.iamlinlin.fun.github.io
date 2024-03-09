@@ -20,7 +20,7 @@ categories:
     <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>{% endhighlight %}
 
-<p><code>or</code></p>
+<p>{% highlight %}or{% endhighlight %}</p>
 
 <div class="cnblogs_code">
 <pre class="language-javascript" tabindex="0">
@@ -32,7 +32,7 @@ categories:
     <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>{% endhighlight %}
 
-<p><code>理解：</code></p>
+<p>{% highlight %}理解：{% endhighlight %}</p>
 
 <p><span style="color:#ff0000;"><strong>正则里面的中括号[]只能匹配其中一个，如果要匹配特定几组字符串的话，那就必须使用小括号()加或|，我还以为在中括号中也能使用或|符号，原来|在中括号里面也是一个字符，并不代表或。[3457]匹配3或者4或者5或者7，而(3457)只匹配3457，若要跟前面一样可以加或(3|4|5|7)。[34|57]匹配3或者4或者|或者5或者7.而(34|57)能匹配34或者57。</strong></span></p>
 

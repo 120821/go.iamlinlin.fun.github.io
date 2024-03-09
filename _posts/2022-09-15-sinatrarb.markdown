@@ -8,23 +8,23 @@ categories:
 
 <p>1.安装sinatra， 创建rb文件</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">在新的文件夹：<code class="language-plaintext highlighter-rouge">gem install sinatra</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">在新的文件夹：<code class="language-plaintext highlighter-rouge">gem install sinatra{% endhighlight %}</div>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="language-plaintext highlighter-rouge">创建一个rb文件：suffragist.rb</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code class="language-plaintext highlighter-rouge">创建一个rb文件：suffragist.rb{% endhighlight %}</div>
 
 <figure class="highlight">
-<p><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span></code></p>
+<p><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>{% endhighlight %}</p>
 
 <p><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="s1">&#39;Hello, voter!&#39;</span><br />
 <span class="k">end</span></p>
 </figure>
 
-<p><code class="language-plaintext highlighter-rouge">运行：ruby suffragist.rb</code>.</p>
+<p><code class="language-plaintext highlighter-rouge">运行：ruby suffragist.rb{% endhighlight %}.</p>
 
 <p>打开视图： <a href="localhost:4567" target="_blank">localhost:4567</a>.</p>
 
-<p>2.新建视图页面 内容：<code class="language-plaintext highlighter-rouge">index.erb</code></p>
+<p>2.新建视图页面 内容：<code class="language-plaintext highlighter-rouge">index.erb{% endhighlight %}</p>
 
 <p><code class="language-erb" data-lang="erb"><span class="nt">&lt;html&gt;</span><br />
 &nbsp; <span class="nt">&lt;head&gt;</span><br />
@@ -48,9 +48,9 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&#39;submit&#39;</span> <span class="na">class=</span><span class="s">&#39;btn btn-primary&#39;</span><span class="nt">&gt;</span>Cast this vote!<span class="nt">&lt;/button&gt;</span><br />
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;/form&gt;</span><br />
 &nbsp; <span class="nt">&lt;/body&gt;</span><br />
-<span class="nt">&lt;/html&gt;</span></code></p>
+<span class="nt">&lt;/html&gt;</span>{% endhighlight %}</p>
 
-<p>在rb文件增加一些可供选择的数据<code class="language-plaintext highlighter-rouge">&nbsp; suffragist.rb</code>:</p>
+<p>在rb文件增加一些可供选择的数据<code class="language-plaintext highlighter-rouge">&nbsp; suffragist.rb{% endhighlight %}:</p>
 
 <figure class="highlight">
 <p><code class="language-ruby" data-lang="ruby"><span class="no">Choices</span> <span class="o">=</span> <span class="p">{</span><br />
@@ -58,7 +58,7 @@ categories:
 &nbsp; <span class="s1">&#39;PIZ&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Pizza&#39;</span><span class="p">,</span><br />
 &nbsp; <span class="s1">&#39;CUR&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Curry&#39;</span><span class="p">,</span><br />
 &nbsp; <span class="s1">&#39;NOO&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Noodles&#39;</span><span class="p">,</span><br />
-<span class="p">}</span></code></p>
+<span class="p">}</span>{% endhighlight %}</p>
 </figure>
 
 <p>使用get请求</p>
@@ -66,22 +66,22 @@ categories:
 <figure class="highlight">
 <p><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="n">erb</span> <span class="ss">:index</span><br />
-<span class="k">end</span></code></p>
+<span class="k">end</span>{% endhighlight %}</p>
 </figure>
 
-<p>重启ruby：<code class="language-plaintext highlighter-rouge">ruby suffragist.rb</code></p>
+<p>重启ruby：<code class="language-plaintext highlighter-rouge">ruby suffragist.rb{% endhighlight %}</p>
 
 <p>3.在视图页面增加title，在后台增加变量</p>
 
 <p><code class="language-erb" data-lang="erb">&nbsp; <span class="nt">&lt;body</span> <span class="na">class=</span><span class="s">&#39;container&#39;</span><span class="nt">&gt;</span><br />
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="vi">@title</span> <span class="cp">%&gt;</span><span class="nt">&lt;/h1&gt;</span><br />
-&nbsp;&nbsp;&nbsp; <span class="nt">&lt;p&gt;</span>What&#39;s for dinner?<span class="nt">&lt;/p&gt;</span></code></p>
+&nbsp;&nbsp;&nbsp; <span class="nt">&lt;p&gt;</span>What&#39;s for dinner?<span class="nt">&lt;/p&gt;</span>{% endhighlight %}</p>
 
 <figure class="highlight">
 <p><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="vi">@title</span> <span class="o">=</span> <span class="s1">&#39;Welcome to the Suffragist!&#39;</span><br />
 &nbsp; <span class="n">erb</span> <span class="ss">:index</span><br />
-<span class="k">end</span></code></p>
+<span class="k">end</span>{% endhighlight %}</p>
 </figure>
 
 <p>4.增加post请求：</p>
@@ -91,7 +91,7 @@ categories:
 &nbsp; <span class="vi">@title</span> <span class="o">=</span> <span class="s1">&#39;Thanks for casting your vote!&#39;</span><br />
 &nbsp; <span class="vi">@vote</span>&nbsp; <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;vote&#39;</span><span class="p">]</span><br />
 &nbsp; <span class="n">erb</span> <span class="ss">:cast</span><br />
-<span class="k">end</span></code></p>
+<span class="k">end</span>{% endhighlight %}</p>
 </figure>
 
 <p>4.2增加cast.erb</p>
@@ -107,9 +107,9 @@ categories:
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;p&gt;</span>You cast: <span class="cp">&lt;%=</span> <span class="no">Choices</span><span class="p">[</span><span class="vi">@vote</span><span class="p">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/p&gt;</span><br />
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&#39;/results&#39;</span><span class="nt">&gt;</span>See the results!<span class="nt">&lt;/a&gt;&lt;/p&gt;</span><br />
 &nbsp; <span class="nt">&lt;/body&gt;</span><br />
-<span class="nt">&lt;/html&gt;</span></code></p>
+<span class="nt">&lt;/html&gt;</span>{% endhighlight %}</p>
 
-<p>4.3增加layout页面<code class="language-plaintext highlighter-rouge"> layout.erb</code></p>
+<p>4.3增加layout页面<code class="language-plaintext highlighter-rouge"> layout.erb{% endhighlight %}</p>
 
 <p><code class="language-erb" data-lang="erb"><span class="nt">&lt;html&gt;</span><br />
 &nbsp; <span class="nt">&lt;head&gt;</span><br />
@@ -121,7 +121,7 @@ categories:
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;h1&gt;</span><span class="cp">&lt;%=</span> <span class="vi">@title</span> <span class="cp">%&gt;</span><span class="nt">&lt;/h1&gt;</span><br />
 &nbsp;&nbsp;&nbsp; <span class="cp">&lt;%=</span> <span class="k">yield</span> <span class="cp">%&gt;</span><br />
 &nbsp; <span class="nt">&lt;/body&gt;</span><br />
-<span class="nt">&lt;/html&gt;</span></code></p>
+<span class="nt">&lt;/html&gt;</span>{% endhighlight %}</p>
 
 <p>4.4增加结果页面，并新增一些假数据</p>
 
@@ -129,7 +129,7 @@ categories:
 <p><code class="language-ruby" data-lang="ruby"><span class="n">get</span> <span class="s1">&#39;/results&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="vi">@votes</span> <span class="o">=</span> <span class="p">{</span> <span class="s1">&#39;HAM&#39;</span> <span class="o">=&gt;</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;PIZ&#39;</span> <span class="o">=&gt;</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;CUR&#39;</span> <span class="o">=&gt;</span> <span class="mi">3</span> <span class="p">}</span><br />
 &nbsp; <span class="n">erb</span> <span class="ss">:results</span><br />
-<span class="k">end</span></code></p>
+<span class="k">end</span>{% endhighlight %}</p>
 </figure>
 
 <figure class="highlight">
@@ -142,13 +142,13 @@ categories:
 &nbsp;&nbsp;&nbsp; <span class="nt">&lt;/tr&gt;</span><br />
 &nbsp; <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span><br />
 <span class="nt">&lt;/table&gt;</span><br />
-<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&#39;/&#39;</span><span class="nt">&gt;</span>Cast more votes!<span class="nt">&lt;/a&gt;&lt;/p&gt;</span></code></p>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">&#39;/&#39;</span><span class="nt">&gt;</span>Cast more votes!<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>{% endhighlight %}</p>
 </figure>
 
 <p>5.替换假数据，进行数据保存</p>
 
 <figure class="highlight">
-<p><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;yaml/store&#39;</span></code></p>
+<p><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;yaml/store&#39;</span>{% endhighlight %}</p>
 </figure>
 
 <p>修改action</p>
@@ -164,7 +164,7 @@ categories:
 &nbsp;&nbsp;&nbsp; <span class="vi">@store</span><span class="p">[</span><span class="s1">&#39;votes&#39;</span><span class="p">][</span><span class="vi">@vote</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><br />
 &nbsp; <span class="k">end</span><br />
 &nbsp; <span class="n">erb</span> <span class="ss">:cast</span><br />
-<span class="k">end</span></code></p>
+<span class="k">end</span>{% endhighlight %}</p>
 
 <p><span class="n">get</span> <span class="s1">&#39;/results&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="vi">@title</span> <span class="o">=</span> <span class="s1">&#39;Results so far:&#39;</span><br />

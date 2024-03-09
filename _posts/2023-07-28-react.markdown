@@ -8,17 +8,17 @@ categories:
 
 <p>1. 单行注释：使用`//`符号开头，后面跟着注释内容。这种注释方式只对当前行有效。</p>
 
-<pre>
-<code>// 这是一个单行注释{% endhighlight %}
+{% highlight %}
+{% highlight %}// 这是一个单行注释{% endhighlight %}
 
 <p>2. 多行注释：使用`{/* */}`包裹注释内容。</p>
 
 <p>&nbsp;</p>
 
-<pre>
+{% highlight %}
 （这种注释方式可以跨多行，并且可以嵌套使用。）
 
-<code>{/*
+{% highlight %}{/*
 
 &nbsp; 这是一个多行注释
 
@@ -28,8 +28,8 @@ categories:
 
 <p>一般会在组件的开头或者特定部分添加注释，对组件的功能、参数、返回值等进行说明。例如：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 /**
 

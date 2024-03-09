@@ -12,13 +12,13 @@ categories:
 
 <ul>
 	<li>
-	<p><code>transfer</code> (2300 gas, throws error)</p>
+	<p>{% highlight %}transfer{% endhighlight %} (2300 gas, throws error)</p>
 	</li>
 	<li>
-	<p><code>send</code> (2300 gas, returns bool)</p>
+	<p>{% highlight %}send{% endhighlight %} (2300 gas, returns bool)</p>
 	</li>
 	<li>
-	<p><code>call</code> (forward all gas or set gas, returns bool)</p>
+	<p>{% highlight %}call{% endhighlight %} (forward all gas or set gas, returns bool)</p>
 	</li>
 </ul>
 
@@ -28,18 +28,18 @@ categories:
 
 <ul>
 	<li>
-	<p><code>receive() external payable</code></p>
+	<p>{% highlight %}receive() external payable{% endhighlight %}</p>
 	</li>
 	<li>
-	<p><code>fallback() external payable</code></p>
+	<p>{% highlight %}fallback() external payable{% endhighlight %}</p>
 	</li>
 </ul>
 
-<p><code>receive()</code> is called if <code>msg.data</code> is empty, otherwise <code>fallback()</code> is called.</p>
+<p>{% highlight %}receive(){% endhighlight %} is called if {% highlight %}msg.data{% endhighlight %} is empty, otherwise {% highlight %}fallback(){% endhighlight %} is called.</p>
 
 <p id="which-method-should-you-use">Which method should you use?</p>
 
-<p><code>call</code> in combination with re-entrancy guard is the recommended method to use after December 2019.</p>
+<p>{% highlight %}call{% endhighlight %} in combination with re-entrancy guard is the recommended method to use after December 2019.</p>
 
 <p>Guard against re-entrancy by</p>
 
@@ -57,9 +57,9 @@ categories:
 <p><font style="vertical-align:inherit">您可以通过以下方式将以太币发送到其他合约 </font></p>
 
 <ul>
-	<li><code>transfer</code><font style="vertical-align:inherit">（2300 gas，抛出错误） </font></li>
-	<li><code>send</code><font style="vertical-align:inherit">（2300 气体，返回布尔值） </font></li>
-	<li><code>call</code><font style="vertical-align:inherit">（转发所有气体或设置气体，返回布尔值） </font></li>
+	<li>{% highlight %}transfer{% endhighlight %}<font style="vertical-align:inherit">（2300 gas，抛出错误） </font></li>
+	<li>{% highlight %}send{% endhighlight %}<font style="vertical-align:inherit">（2300 气体，返回布尔值） </font></li>
+	<li>{% highlight %}call{% endhighlight %}<font style="vertical-align:inherit">（转发所有气体或设置气体，返回布尔值） </font></li>
 </ul>
 
 <p id="how-to-receive-ether"><font style="vertical-align:inherit">如何接收以太币？ </font></p>
@@ -67,15 +67,15 @@ categories:
 <p><font style="vertical-align:inherit">接收 Ether 的合约必须至少具有以下功能之一 </font></p>
 
 <ul>
-	<li><code>receive() external payable</code></li>
-	<li><code>fallback() external payable</code></li>
+	<li>{% highlight %}receive() external payable{% endhighlight %}</li>
+	<li>{% highlight %}fallback() external payable{% endhighlight %}</li>
 </ul>
 
-<p><code>receive()</code><font style="vertical-align:inherit">被称为如果 </font><code>msg.data</code><font style="vertical-align:inherit">为空，否则 </font><code>fallback()</code><font style="vertical-align:inherit">叫做。 </font></p>
+<p>{% highlight %}receive(){% endhighlight %}<font style="vertical-align:inherit">被称为如果 </font>{% highlight %}msg.data{% endhighlight %}<font style="vertical-align:inherit">为空，否则 </font>{% highlight %}fallback(){% endhighlight %}<font style="vertical-align:inherit">叫做。 </font></p>
 
 <p id="which-method-should-you-use"><font style="vertical-align:inherit">您应该使用哪种方法？ </font></p>
 
-<p><code>call</code><font style="vertical-align:inherit">2019 年 12 月后推荐使用与重入防护结合使用的方法。 </font></p>
+<p>{% highlight %}call{% endhighlight %}<font style="vertical-align:inherit">2019 年 12 月后推荐使用与重入防护结合使用的方法。 </font></p>
 
 <p><font style="vertical-align:inherit">通过以下方式防止重新进入 </font></p>
 
@@ -88,7 +88,7 @@ categories:
 	</li>
 </ul>
 
-<pre>
+{% highlight %}
 <code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 

@@ -6,12 +6,12 @@ categories:
 ---
 <p>1.写一个css文件：</p>
 
-<p><code>styles.css</code></p>
+<p>{% highlight %}styles.css{% endhighlight %}</p>
 
-<p>2.引入：（打开你的Vue组件文件（<code>.vue</code>文件），在文件的顶部添加一个<code>&lt;style&gt;</code>标签。）</p>
+<p>2.引入：（打开你的Vue组件文件（{% highlight %}.vue{% endhighlight %}文件），在文件的顶部添加一个{% highlight %}&lt;style&gt;{% endhighlight %}标签。）</p>
 
-<pre>
-<code>&lt;style&gt;
+{% highlight %}
+{% highlight %}&lt;style&gt;
 @import &#39;./styles.css&#39;;
 &lt;/style&gt;{% endhighlight %}
 

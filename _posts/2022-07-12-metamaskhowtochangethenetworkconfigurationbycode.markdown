@@ -24,7 +24,7 @@ categories:
       rpcUrls: [&#39;https://api.avax-test.network/ext/bc/C/rpc&#39;],     blockExplorerUrls: [&#39;https://cchain.explorer.avax-test.network/&#39;]
 }]
 })
-}</span></pre>
+}</span>{% endhighlight %}
 
 <p><img height="77" src="/uploads/ckeditor/pictures/88/image-20220712175331-2.png" width="389" /></p>
 

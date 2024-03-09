@@ -9,19 +9,19 @@ categories:
 <p>创建分支命令：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git branch </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span></pre>
+<span class="pln">git branch </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span>{% endhighlight %}
 
 <p>切换分支命令:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git checkout </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span></pre>
+<span class="pln">git checkout </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span>{% endhighlight %}
 
 <p>当你切换分支的时候，Git 会用该分支的最后提交的快照替换你的工作目录的内容， 所以多个分支不需要多个目录。</p>
 
 <p>合并分支命令:</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git merge </span></pre>
+<span class="pln">git merge </span>{% endhighlight %}
 
 <p>你可以多次合并到统一分支， 也可以选择在合并之后直接删除被并入的分支。</p>
 
@@ -37,7 +37,7 @@ $ git add README
 $ git commit </span><span class="pun">-</span><span class="pln">m </span><span class="str">&#39;第一次版本提交&#39;</span><span class="pln">
 </span><span class="pun">[</span><span class="pln">master </span><span class="pun">(</span><span class="pln">root</span><span class="pun">-</span><span class="pln">commit</span><span class="pun">)</span><span class="pln"> </span><span class="lit">3b58100</span><span class="pun">]</span><span class="pln"> </span><span class="pun">第一次版本提交</span><span class="pln">
  </span><span class="lit">1</span><span class="pln"> file changed</span><span class="pun">,</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> insertions</span><span class="pun">(+),</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> deletions</span><span class="pun">(-)</span><span class="pln">
- create mode </span><span class="lit">100644</span><span class="pln"> README</span></pre>
+ create mode </span><span class="lit">100644</span><span class="pln"> README</span>{% endhighlight %}
 
 <hr />
 <p>Git 分支管理</p>
@@ -47,13 +47,13 @@ $ git commit </span><span class="pun">-</span><span class="pln">m </span><span c
 <p>列出分支基本命令：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git branch</span></pre>
+<span class="pln">git branch</span>{% endhighlight %}
 
 <p>没有参数时，<strong>git branch</strong> 会列出你在本地的分支。</p>
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pln">$ git branch
-</span><span class="pun">*</span><span class="pln"> master</span></pre>
+</span><span class="pun">*</span><span class="pln"> master</span>{% endhighlight %}
 
 <p>此例的意思就是，我们有一个叫做 <strong>master</strong> 的分支，并且该分支是当前分支。</p>
 
@@ -65,7 +65,7 @@ $ git commit </span><span class="pun">-</span><span class="pln">m </span><span c
 <span class="pln">$ git branch testing
 $ git branch
 </span><span class="pun">*</span><span class="pln"> master
-  testing</span></pre>
+  testing</span>{% endhighlight %}
 
 <p>现在我们可以看到，有了一个新分支 <strong>testing</strong>。</p>
 
@@ -87,7 +87,7 @@ README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pu
 $ git checkout testing
 </span><span class="typ">Switched</span><span class="pln"> to branch </span><span class="str">&#39;testing&#39;</span><span class="pln">
 $ ls
-README</span></pre>
+README</span>{% endhighlight %}
 
 <p>当我们切换到 <strong>testing</strong> 分支的时候，我们添加的新文件 test.txt 被移除了。切换回 <strong>master</strong> 分支的时候，它们又重新出现了。</p>
 
@@ -95,7 +95,7 @@ README</span></pre>
 <span class="pln">$ git checkout master
 </span><span class="typ">Switched</span><span class="pln"> to branch </span><span class="str">&#39;master&#39;</span><span class="pln">
 $ ls
-README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pun">.</span><span class="pln">txt</span></pre>
+README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pun">.</span><span class="pln">txt</span>{% endhighlight %}
 
 <p>我们也可以使用 git checkout -b (branchname) 命令来创建新分支并立即切换到该分支下，从而在该分支中操作。</p>
 
@@ -119,7 +119,7 @@ $ git checkout master
 </span><span class="typ">Switched</span><span class="pln"> to branch </span><span class="str">&#39;master&#39;</span><span class="pln">
 $ ls
 README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pun">.</span><span class="pln">txt
-</span></pre>
+</span>{% endhighlight %}
 
 <p>如你所见，我们创建了一个分支，在该分支上移除了一些文件 test.txt，并添加了 runoob.php 文件，然后切换回我们的主分支，删除的 test.txt 文件又回来了，且新增加的 runoob.php 不存在主分支中。</p>
 
@@ -130,7 +130,7 @@ README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pu
 <p>删除分支命令：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git branch </span><span class="pun">-</span><span class="pln">d </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span></pre>
+<span class="pln">git branch </span><span class="pun">-</span><span class="pln">d </span><span class="pun">(</span><span class="pln">branchname</span><span class="pun">)</span>{% endhighlight %}
 
 <p>例如我们要删除 testing 分支：</p>
 
@@ -141,14 +141,14 @@ README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;test</span><span class="pu
 $ git branch </span><span class="pun">-</span><span class="pln">d testing
 </span><span class="typ">Deleted</span><span class="pln"> branch testing </span><span class="pun">(</span><span class="pln">was </span><span class="lit">85fc7e7</span><span class="pun">).</span><span class="pln">
 $ git branch
-</span><span class="pun">*</span><span class="pln"> master</span></pre>
+</span><span class="pun">*</span><span class="pln"> master</span>{% endhighlight %}
 
 <h3>分支合并</h3>
 
 <p>一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用以下命令将任何分支合并到当前分支中去：</p>
 
 <pre class="prettyprint prettyprinted" style="">
-<span class="pln">git merge</span></pre>
+<span class="pln">git merge</span>{% endhighlight %}
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pln">$ git branch
@@ -166,7 +166,7 @@ $ git merge newtest
  </span><span class="kwd">delete</span><span class="pln"> mode </span><span class="lit">100644</span><span class="pln"> test</span><span class="pun">.</span><span class="pln">txt
 $ ls
 README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runoob</span><span class="pun">.</span><span class="pln">php
-</span></pre>
+</span>{% endhighlight %}
 
 <p>以上实例中我们将 newtest 分支合并到主分支去，test.txt 文件被删除。</p>
 
@@ -174,11 +174,11 @@ README&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;runoob</span><span class="
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pln">$ git branch </span><span class="pun">-</span><span class="pln">d newtest
-</span><span class="typ">Deleted</span><span class="pln"> branch newtest </span><span class="pun">(</span><span class="pln">was c1501a2</span><span class="pun">).</span></pre>
+</span><span class="typ">Deleted</span><span class="pln"> branch newtest </span><span class="pun">(</span><span class="pln">was c1501a2</span><span class="pun">).</span>{% endhighlight %}
 
 <p>删除后， 就只剩下 master 分支了：</p>
 
 <pre class="prettyprint prettyprinted" style="">
 <span class="pln">$ git branch
-</span><span class="pun">*</span><span class="pln"> master</span></pre>
+</span><span class="pun">*</span><span class="pln"> master</span>{% endhighlight %}
 

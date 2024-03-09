@@ -47,9 +47,9 @@ production:<br />
 &nbsp; &lt;&lt;: *default<br />
 &nbsp; database: chatroom_rails_development</p>
 
-<p><code>安装node， yarn， 编译assets:&nbsp; rake assets:precompile RAILS_ENV=production</code></p>
+<p>{% highlight %}安装node， yarn， 编译assets:&nbsp; rake assets:precompile RAILS_ENV=production{% endhighlight %}</p>
 
-<p><code>修改config/production.rb:</code></p>
+<p>{% highlight %}修改config/production.rb:{% endhighlight %}</p>
 
 <p>-&nbsp; config.public_file_server.enabled = ENV[&quot;RAILS_SERVE_STATIC_FILES&quot;].present?<br />
 +&nbsp; config.public_file_server.enabled = true # ENV[&quot;RAILS_SERVE_STATIC_FILES&quot;].present?</p>

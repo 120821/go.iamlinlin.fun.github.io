@@ -12,20 +12,20 @@ categories:
 <span style="color:#0000ff;"><span style="color:#000000;">SpecialGroup.group(:special_type).count</span>
 select special_type,<span style="color:#ff00ff;">count(<span style="color:#808080;">*) <span style="color:#0000ff;">from special_groups <span style="color:#0000ff;">group <span style="color:#0000ff;">by special_type
 
-</span></span></span></span></span></span></pre>
+</span></span></span></span></span></span>{% endhighlight %}
 
 <pre data-index="1">
 <span style="color:#000000;">SpecialGroup.group(:special_type).count(:sno)
 </span><span style="color:#0000ff;">select special_type,<span style="color:#ff00ff;">count(sno) <span style="color:#0000ff;">from special_groups <span style="color:#0000ff;">group <span style="color:#0000ff;">by special_type
 
-</span></span></span></span></span></pre>
+</span></span></span></span></span>{% endhighlight %}
 
 <pre data-index="2">
 <span style="color:#000000;">SpecialGroup.group(:special_type).count(<span style="color:#800000;">&quot;<span style="color:#800000;">distinct sno<span style="color:#800000;">&quot;)
 </span></span></span></span><span style="color:#0000ff;">select special_type,<span style="color:#ff00ff;">count(<span style="color:#0000ff;">distinct sno) <span style="color:#0000ff;">from special_groups <span style="color:#0000ff;">group <span style="color:#0000ff;">by special_type
 
 <span style="color:#000000;">SpecialGroup.group</span><span style="color:#000000;">(:user_id, :name).sum(:count<span style="color:#800000;"><span style="color:#800000;"><span style="color:#800000;">)</span></span></span></span>
-SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`count`) AS sum_count, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`user_id` AS <span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>_user_id, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`name` AS <span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>_name FROM `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>` GROUP BY `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`user_id`, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`name</span></span></span></span></span></span></pre>
+SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`count`) AS sum_count, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`user_id` AS <span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>_user_id, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`name` AS <span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>_name FROM `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>` GROUP BY `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`user_id`, `<span style="color:#0000ff;"><span style="color:#ff00ff;"><span style="color:#0000ff;"><span style="color:#0000ff;">special_groups</span></span></span></span>`.`name</span></span></span></span></span></span>{% endhighlight %}
 
 <p><span style="font-family:Tahoma; font-size:14px; line-height:24px">uby按精度保留小数</span></p>
 
@@ -36,7 +36,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 </div>
 
 <div class="hljs-ln-code">
-<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round</code></div>
+<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round{% endhighlight %}</div>
 </div>
 
 <ol class="hljs-ln" style="width:100%">
@@ -46,7 +46,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 	</div>
 
 	<div class="hljs-ln-code">
-	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2</span></code></div>
+	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2</span>{% endhighlight %}</div>
 	</div>
 	</li>
 	<li>
@@ -55,7 +55,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 	</div>
 
 	<div class="hljs-ln-code">
-	<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round(<span class="hljs-number">2</span>)</code></div>
+	<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round(<span class="hljs-number">2</span>){% endhighlight %}</div>
 	</div>
 	</li>
 	<li>
@@ -64,7 +64,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 	</div>
 
 	<div class="hljs-ln-code">
-	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2.35</span></code></div>
+	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2.35</span>{% endhighlight %}</div>
 	</div>
 	</li>
 	<li>
@@ -73,7 +73,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 	</div>
 
 	<div class="hljs-ln-code">
-	<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round(<span class="hljs-number">3</span>)</code></div>
+	<div class="hljs-ln-line"><code class="language-ruby hljs"><span class="hljs-meta">&gt;&gt;</span> <span class="hljs-number">2.3465</span>.round(<span class="hljs-number">3</span>){% endhighlight %}</div>
 	</div>
 	</li>
 	<li>
@@ -82,7 +82,7 @@ SELECT SUM(`<span style="color:#0000ff;"><span style="color:#ff00ff;"><span styl
 	</div>
 
 	<div class="hljs-ln-code">
-	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2.347</span></code></div>
+	<div class="hljs-ln-line"><code class="language-ruby hljs">=&gt; <span class="hljs-number">2.347</span>{% endhighlight %}</div>
 	</div>
 	</li>
 </ol>

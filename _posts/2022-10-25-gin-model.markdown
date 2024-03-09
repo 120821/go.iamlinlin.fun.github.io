@@ -10,8 +10,8 @@ categories:
 
 <p>例如：</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
 <span class="line">  ID           <span class="type">uint</span></span>
 <span class="line">  Name         <span class="type">string</span></span>
 <span class="line">  Email        *<span class="type">string</span></span>
@@ -27,10 +27,10 @@ categories:
 
 <p>&nbsp;如果您遵循 GORM 采用的约定，您将需要编写非常少的配置/代码。&nbsp; 如果约定不符合您的要求，GORM 允许您配置它们</p>
 
-<p>GORM defined a <code>gorm.Model</code> struct, which includes fields <code>ID</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>, <code>DeletedAt</code></p>
+<p>GORM defined a {% highlight %}gorm.Model{% endhighlight %} struct, which includes fields {% highlight %}ID{% endhighlight %}, {% highlight %}CreatedAt{% endhighlight %}, {% highlight %}UpdatedAt{% endhighlight %}, {% highlight %}DeletedAt{% endhighlight %}</p>
 
-<pre>
-<code><span class="line"><span class="comment">// gorm.Model definition</span></span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="comment">// gorm.Model definition</span></span>
 <span class="line"><span class="keyword">type</span> Model <span class="keyword">struct</span> {</span>
 <span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:&quot;primaryKey&quot;`</span></span>
 <span class="line">  CreatedAt time.Time</span>
@@ -42,8 +42,8 @@ categories:
 
 <p>使用 GORM 进行 CRUD 时，导出的字段具有所有权限，并且 GORM 允许您使用标签更改字段级别的权限，因此您可以将字段设置为只读、只写、只创建、只更新或忽略</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-:create&quot;`</span> <span class="comment">// allow read and create</span></span>
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-:update&quot;`</span> <span class="comment">// allow read and update</span></span>
 <span class="line">  Name <span class="type">string</span> <span class="string">`gorm:&quot;&lt;-&quot;`</span>        <span class="comment">// allow read and write (create and update)</span></span>
@@ -58,8 +58,8 @@ categories:
 
 <p>创建/更新时间/Unix (Milli/Nano) 秒跟踪</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
 <span class="line">  CreatedAt time.Time <span class="comment">// Set to current time if it is zero on creating</span></span>
 <span class="line">  UpdatedAt <span class="type">int</span>       <span class="comment">// Set to current unix seconds on updating or if it is zero on creating</span></span>
 <span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:&quot;autoUpdateTime:nano&quot;`</span> <span class="comment">// Use unix nano seconds as updating time</span></span>
@@ -73,8 +73,8 @@ categories:
 
 <p>For anonymous fields, GORM will include its fields into its parent struct, for example:</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span>
 <span class="line">  gorm.Model</span>
 <span class="line">  Name <span class="type">string</span></span>
 <span class="line">}</span>
@@ -87,10 +87,10 @@ categories:
 <span class="line">  Name <span class="type">string</span></span>
 <span class="line">}</span>{% endhighlight %}
 
-<p>For a normal struct field, you can embed （嵌入）it with the tag <code>embedded（嵌入式）</code>, for example:</p>
+<p>For a normal struct field, you can embed （嵌入）it with the tag {% highlight %}embedded（嵌入式）{% endhighlight %}, for example:</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> Author <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> Author <span class="keyword">struct</span> {</span>
 <span class="line">  Name  <span class="type">string</span></span>
 <span class="line">  Email <span class="type">string</span></span>
 <span class="line">}</span>
@@ -108,10 +108,10 @@ categories:
 <span class="line">  Upvotes  <span class="type">int32</span></span>
 <span class="line">}</span>{% endhighlight %}
 
-<p>And you can use tag <code>embeddedPrefix</code>（嵌入式前缀） to add prefix to embedded fields&rsquo; db name, for example:</p>
+<p>And you can use tag {% highlight %}embeddedPrefix{% endhighlight %}（嵌入式前缀） to add prefix to embedded fields&rsquo; db name, for example:</p>
 
-<pre>
-<code><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
+{% highlight %}
+{% highlight %}<span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span>
 <span class="line">  ID      <span class="type">int</span></span>
 <span class="line">  Author  Author <span class="string">`gorm:&quot;embedded;embeddedPrefix:author_&quot;`</span></span>
 <span class="line">  Upvotes <span class="type">int32</span></span>

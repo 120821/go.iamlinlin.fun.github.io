@@ -18,7 +18,7 @@ categories:
 {% endhighlight %} 
 <p><img alt="" height="1200" src="https://img-blog.csdnimg.cn/6985104f46444bdd84678be7e4090b2d.png" width="1200"></p> 
 {% highlight %}skip_before_action :verify_authenticity_token{% endhighlight %} 
-<pre><code class="language-ruby"># To send custom user agents to identify your application to a web service (or mask as a specific browser for testing), send "User-Agent" as a hash to headers as shown below.
+{% highlight %}<code class="language-ruby"># To send custom user agents to identify your application to a web service (or mask as a specific browser for testing), send "User-Agent" as a hash to headers as shown below.
 
 dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))
 require File.join(dir, 'httparty')

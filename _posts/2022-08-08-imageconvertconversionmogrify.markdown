@@ -21,7 +21,7 @@ categories:
   command = <span class="hljs-string">&quot;<span class="hljs-subst">#{inkscape}</span> -o <span class="hljs-subst">#{file.sub(<span class="hljs-string">&#39;.svg&#39;</span>, <span class="hljs-string">&#39;&#39;</span>)}</span>.png -w 1080 <span class="hljs-subst">#{file}</span>&quot;</span>
   <span class="hljs-string">`<span class="hljs-subst">#{command}</span>`</span>
 <span class="hljs-keyword">end</span>
-</pre>
+{% endhighlight %}
 
 <p>png -&gt; jpg</p>
 
@@ -33,5 +33,5 @@ categories:
   command = <span class="hljs-string">&quot;mogrify -format jpg <span class="hljs-subst">#{file}</span>&quot;</span>
   <span class="hljs-string">`<span class="hljs-subst">#{command}</span>`</span>
 <span class="hljs-keyword">end</span>
-</pre>
+{% endhighlight %}
 

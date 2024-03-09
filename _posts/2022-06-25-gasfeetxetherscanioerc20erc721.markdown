@@ -23,16 +23,16 @@ categories:
 <p class="SharedStyledComponents__Paragraph-sc-1cr9zfr-22 kjQfNB">所提交的交易包括下列信息：</p>
 
 <ul>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>recipient</code> &ndash; 接收地址（如果为一个外部持有的帐户，交易将传输值。 如果为合约帐户，交易将执行合约代码）</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>signature</code> &ndash; 发送者的标识符。 当通过发送者的私钥签名交易来确保发送者已授权此交易时，生成此签名。</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>value</code> &ndash; 从发件人向收件人转移 ETH 的金额 （以 WEI 为单位，ETH 的一种面值单位）</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>data</code> &ndash; 可包括任意数据的可选字段</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>gasLimit</code> &ndash; 交易可以消耗的 Gas 的最大数量。 Gas 单位代表了计算步骤</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>maxPriorityFeePerGas</code> - 作为矿工小费包含的最大 gas 数量</li>
-	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu"><code>maxFeePerGas</code> - 愿意为交易支付的最大 gas 数量（包括 <code>baseFeePerGas</code> 和 <code>maxPriorityFeePerGas</code>）</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}recipient{% endhighlight %} &ndash; 接收地址（如果为一个外部持有的帐户，交易将传输值。 如果为合约帐户，交易将执行合约代码）</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}signature{% endhighlight %} &ndash; 发送者的标识符。 当通过发送者的私钥签名交易来确保发送者已授权此交易时，生成此签名。</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}value{% endhighlight %} &ndash; 从发件人向收件人转移 ETH 的金额 （以 WEI 为单位，ETH 的一种面值单位）</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}data{% endhighlight %} &ndash; 可包括任意数据的可选字段</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}gasLimit{% endhighlight %} &ndash; 交易可以消耗的 Gas 的最大数量。 Gas 单位代表了计算步骤</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}maxPriorityFeePerGas{% endhighlight %} - 作为矿工小费包含的最大 gas 数量</li>
+	<li class="SharedStyledComponents__ListItem-sc-1cr9zfr-28 fhHVqu">{% highlight %}maxFeePerGas{% endhighlight %} - 愿意为交易支付的最大 gas 数量（包括 {% highlight %}baseFeePerGas{% endhighlight %} 和 {% highlight %}maxPriorityFeePerGas{% endhighlight %}）</li>
 </ul>
 
-<p class="SharedStyledComponents__Paragraph-sc-1cr9zfr-22 kjQfNB">Gas 是指矿工处理交易所需的算力。 用户必须为此计算支付费用。 <code>gasLimit</code> 和 <code>gasPrice</code> 决定支付给矿工的最高交易费用</p>
+<p class="SharedStyledComponents__Paragraph-sc-1cr9zfr-22 kjQfNB">Gas 是指矿工处理交易所需的算力。 用户必须为此计算支付费用。 {% highlight %}gasLimit{% endhighlight %} 和 {% highlight %}gasPrice{% endhighlight %} 决定支付给矿工的最高交易费用</p>
 
 <p class="SharedStyledComponents__Paragraph-sc-1cr9zfr-22 kjQfNB"><strong>区块链浏览器:</strong> <a href="https://etherscan.io/">https://etherscan.io/</a></p>
 

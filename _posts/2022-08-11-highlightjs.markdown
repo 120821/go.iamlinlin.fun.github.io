@@ -10,14 +10,14 @@ categories:
 
 <p>增加：app/views/application.html.erb</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span>
       <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>{% endhighlight %}
 
-<p><code>然后，使用，</code></p>
+<p>{% highlight %}然后，使用，{% endhighlight %}</p>
 
-<pre>
+{% highlight %}
 <code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;language-plaintext&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span>
 {% endhighlight %}
 
@@ -25,7 +25,7 @@ categories:
 
 <p>使用全局的js</p>
 
-<pre>
+{% highlight %}
 <code class="language-html hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/path/to/styles/default.min.css&quot;</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;/path/to/highlight.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>hljs.highlightAll();<span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>

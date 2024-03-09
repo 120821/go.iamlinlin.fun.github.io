@@ -9,7 +9,7 @@ categories:
 <p>使用下面这段代码，就可以使用8000端口进行代理。</p>
 
 <pre class="ruby">
-<code><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick&#39;</span>
+{% highlight %}<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick&#39;</span>
 <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick/httpproxy&#39;</span>
 
 <span class="ruby-identifier">proxy</span> = <span class="ruby-constant">WEBrick</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPProxyServer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">Port:</span> <span class="ruby-value">8000</span>

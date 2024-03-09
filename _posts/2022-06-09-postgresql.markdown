@@ -37,7 +37,7 @@ createuser --interactive{% endhighlight %}
  <h2>createuser</h2> 
  <p>createuser — define a new PostgreSQL user account</p> 
  <h2>Synopsis</h2> 
- <p id="id-1.9.4.5.4.1"><code>createuser</code> [<em><code>connection-option</code></em>...] [<em><code>option</code></em>...] [<em><code>username</code></em>]</p> 
+ <p id="id-1.9.4.5.4.1">{% highlight %}createuser{% endhighlight %} [<em>{% highlight %}connection-option{% endhighlight %}</em>...] [<em>{% highlight %}option{% endhighlight %}</em>...] [<em>{% highlight %}username{% endhighlight %}</em>]</p> 
  <p><a class="has-card" href="https://cdn.ckeditor.com/" title="CKEditor CDN"><span class="link-card-box"><span class="link-title">CKEditor CDN</span><span class="link-link"><img alt="" class="link-link-icon" src="https://csdnimg.cn/release/blog_editor_html/release2.0.8/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=M276">https://cdn.ckeditor.com/</span></span></a><a href="http://www.chenxm.cc/article/1048.html" title="Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客">Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客</a></p> 
  <p> </p> 
 </blockquote>

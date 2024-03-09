@@ -8,47 +8,47 @@ categories:
 
 <p>2.安装docker</p>
 
-<pre>
- sudo apt-get update</pre>
+{% highlight %}
+ sudo apt-get update{% endhighlight %}
 
-<pre>
- sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common</pre>
+{% highlight %}
+ sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common{% endhighlight %}
 
-<pre>
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</pre>
+{% highlight %}
+ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -{% endhighlight %}
 
-<pre>
- sudo apt-key fingerprint 0EBFCD88</pre>
+{% highlight %}
+ sudo apt-key fingerprint 0EBFCD88{% endhighlight %}
 
-<pre>
+{% highlight %}
  sudo add-apt-repository    &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
-   stable&quot;</pre>
+   stable&quot;{% endhighlight %}
 
-<pre>
- sudo apt-get update</pre>
+{% highlight %}
+ sudo apt-get update{% endhighlight %}
 
-<pre>
- sudo apt-get install docker-ce docker-ce-cli containerd.io</pre>
+{% highlight %}
+ sudo apt-get install docker-ce docker-ce-cli containerd.io{% endhighlight %}
 
-<pre>
- sudo docker run hello-world</pre>
+{% highlight %}
+ sudo docker run hello-world{% endhighlight %}
 
 <p>3.安装docker compose</p>
 
 <p>这个命令需要代理，而且网速很慢（可以使用scp下载, 链接: https://pan.baidu.com/s/1YoPO1StZkGOoArkPkIjFAA 提取码: hbdg ）</p>
 
-<p>wget<code> https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64</code></p>
+<p>wget{% highlight %} https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64{% endhighlight %}</p>
 
 <p>sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose</p>
 
-<p><code>docker-compose --version</code></p>
+<p>{% highlight %}docker-compose --version{% endhighlight %}</p>
 
 <p>输出：</p>
 
-<p><code>Docker Compose version v2.5.0</code></p>
+<p>{% highlight %}Docker Compose version v2.5.0{% endhighlight %}</p>
 
-<p><code>4。安装docker postgres15</code></p>
+<p>{% highlight %}4。安装docker postgres15{% endhighlight %}</p>
 
 <p>sudo docker pull postgres:15</p>
 
@@ -58,8 +58,8 @@ categories:
 
 <p>输出：</p>
 
-<pre>
-<code>CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
+{% highlight %}
+{% highlight %}CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
 
 42701b5edfd0&nbsp;&nbsp; postgres&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 2 seconds&nbsp;&nbsp; 5432/tcp&nbsp;&nbsp; laughing_faraday{% endhighlight %}
 
@@ -69,21 +69,21 @@ categories:
 
 <p>5.安装go</p>
 
-<pre>
-<code>wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
+{% highlight %}
+{% highlight %}wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
 
-<pre>
-<code>tar -xvf go1.18.3.linux-amd64.tar.gz{% endhighlight %}
+{% highlight %}
+{% highlight %}tar -xvf go1.18.3.linux-amd64.tar.gz{% endhighlight %}
 
-<pre>
-<code>sudo mv go /usr/local/go_1.18.3{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo mv go /usr/local/go_1.18.3{% endhighlight %}
 
-<p><code>vim </code>.bashrc</p>
+<p>{% highlight %}vim {% endhighlight %}.bashrc</p>
 
 <p>export PATH=$PATH:/usr/local/go_1.18.3/bin</p>
 
-<pre>
-<code>go version{% endhighlight %}
+{% highlight %}
+{% highlight %}go version{% endhighlight %}
 
 <p>go version go1.18.3 linux/amd64</p>
 

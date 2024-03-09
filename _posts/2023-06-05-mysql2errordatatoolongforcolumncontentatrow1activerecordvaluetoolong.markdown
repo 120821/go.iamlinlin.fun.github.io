@@ -22,7 +22,7 @@ categories:
 
 <p>sudo mysql -uroot&nbsp; -p进入mysql，修改即可：</p>
 
-<p><code>alter table blogs change content content longtext;</code></p>
+<p>{% highlight %}alter table blogs change content content longtext;{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 

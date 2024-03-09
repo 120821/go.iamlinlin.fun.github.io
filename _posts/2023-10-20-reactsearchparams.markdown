@@ -8,8 +8,8 @@ categories:
 
 <p>例如：</p>
 
-<pre>
-<code>import React, { useEffect } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect } from &#39;react&#39;;
 
 const MyComponent = () =&gt; {
   useEffect(() =&gt; {
@@ -39,10 +39,10 @@ const MyComponent = () =&gt; {
 
 export default MyComponent;{% endhighlight %}
 
-<p><code>对于</code><a href="http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18" target="_blank">http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18</a></p>
+<p>{% highlight %}对于{% endhighlight %}<a href="http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18" target="_blank">http://localhost:3000/show_result_as_map/1446?calculation_result_id=1175&amp;material_id=18</a></p>
 
-<pre>
-<code>import React, { useEffect } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect } from &#39;react&#39;;
 
 const MyComponent = () =&gt; {
   useEffect(() =&gt; {
@@ -75,5 +75,5 @@ const MyComponent = () =&gt; {
 
 export default MyComponent;{% endhighlight %}
 
-<p>上面的代码中使用了React的<code>useEffect</code>钩子，并将其依赖数组设置为空数组<code>[]</code>，以确保只在组件加载时执行一次。这样可以在组件加载时对URL的查询参数进行处理。</p>
+<p>上面的代码中使用了React的{% highlight %}useEffect{% endhighlight %}钩子，并将其依赖数组设置为空数组{% highlight %}[]{% endhighlight %}，以确保只在组件加载时执行一次。这样可以在组件加载时对URL的查询参数进行处理。</p>
 

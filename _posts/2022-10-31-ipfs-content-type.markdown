@@ -14,7 +14,7 @@ categories:
 
 <p>使用sinatra就可以进行这样的header替换</p>
 
-<pre>&nbsp; <code>get &#39;/ipfs/*&#39; do<br />
+{% highlight %}&nbsp; {% highlight %}get &#39;/ipfs/*&#39; do<br />
 &nbsp;&nbsp;&nbsp; logger.info &quot;== request.referer: #{request.referrer}, inspect: #{request.referrer == nil}&quot;
 
 &nbsp;&nbsp;&nbsp; url = &#39;&#39;<br />

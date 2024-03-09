@@ -8,8 +8,8 @@ categories:
 
 <p>使用命令进入postgres：</p>
 
-<pre>
-<code>sudo -u postgres -i&nbsp;{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo -u postgres -i&nbsp;{% endhighlight %}
 
 <p>进入数据库： psql</p>
 
@@ -30,15 +30,15 @@ categories:
 <p>如果我们插入一笔记录，我们希望系统自动为我们分配一个ID，那么我们需要使用serial type。如果我们创建表的时候，自动创建一个serial类型（包smallserial and bigserial），系统会自动帮我们创建sequence这种数据库对象。</p>
 
 <ol start="1">
-	<li><code>create&nbsp;table&nbsp;employ(</code></li>
-	<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id serial,</code></li>
-	<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;varchar(64),</code></li>
-	<li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;department&nbsp;varchar(64)</code></li>
-	<li><code>)&nbsp;;</code></li>
+	<li>{% highlight %}create&nbsp;table&nbsp;employ({% endhighlight %}</li>
+	<li>{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id serial,{% endhighlight %}</li>
+	<li>{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;varchar(64),{% endhighlight %}</li>
+	<li>{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;department&nbsp;varchar(64){% endhighlight %}</li>
+	<li>{% highlight %})&nbsp;;{% endhighlight %}</li>
 </ol>
 
 <ol start="1">
-	<li><code>manu_db=# create table employ(id serial,name varchar(64),department varchar(128)) ;<br />
+	<li>{% highlight %}manu_db=# create table employ(id serial,name varchar(64),department varchar(128)) ;<br />
 	NOTICE: &nbsp;CREATE TABLE will create implicit sequence &quot;employ_id_seq&quot; for serial column &quot;employ.id&quot;<br />
 	CREATE TABLE<br />
 	manu_db=# \d<br />
@@ -47,15 +47,15 @@ categories:
 	--------+---------------+----------+-------<br />
 	&nbsp;public | employ &nbsp; &nbsp; &nbsp; &nbsp;| table &nbsp; &nbsp;| manu<br />
 	&nbsp;public | employ_id_seq | sequence | manu<br />
-	(2 rows)</code></li>
+	(2 rows){% endhighlight %}</li>
 	<li>&nbsp;</li>
-	<li><code>manu_db-# \d employ<br />
+	<li>{% highlight %}manu_db-# \d employ<br />
 	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Table &quot;public.employ&quot;<br />
 	&nbsp; &nbsp;Column &nbsp; | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Modifiers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
 	------------+------------------------+-----------------------------------------------------<br />
 	&nbsp;id &nbsp; &nbsp; &nbsp; &nbsp; | integer &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| not null default nextval(&#39;employ_id_seq&#39;::regclass)<br />
 	&nbsp;name &nbsp; &nbsp; &nbsp; | character varying(64) &nbsp;|&nbsp;<br />
-	&nbsp;department | character varying(128) |&nbsp;</code></li>
+	&nbsp;department | character varying(128) |&nbsp;{% endhighlight %}</li>
 </ol>
 
 <p>我们看到，postgres自动帮助我们创建了一个sequence，命名原则是&nbsp;tablename_columnname_seq.<br />

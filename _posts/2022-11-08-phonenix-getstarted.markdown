@@ -8,13 +8,13 @@ categories:
 
 <p>创建新的框架：</p>
 
-<pre>
-<code>mix phx.new hello{% endhighlight %}
+{% highlight %}
+{% highlight %}mix phx.new hello{% endhighlight %}
 
 <p>然后就会看到自动生成以下文件：</p>
 
-<pre>
-<code>mix phx.new hello
+{% highlight %}
+{% highlight %}mix phx.new hello
 
 * creating hello/config/config.exs
 
@@ -29,8 +29,8 @@ Fetch and install dependencies? [Yn]{% endhighlight %}
 
 <p>完成就会提示接下来的操作：</p>
 
-<pre>
-<code>Fetch and install dependencies? [Yn] Y
+{% highlight %}
+{% highlight %}Fetch and install dependencies? [Yn] Y
 
 * running mix deps.get
 
@@ -58,8 +58,8 @@ You can also run your app inside IEx (Interactive Elixir) as:
 
 <p>创建文件：</p>
 
-<pre>
-<code>mix ecto.create
+{% highlight %}
+{% highlight %}mix ecto.create
 
 Compiling 13 files (.ex)
 
@@ -69,8 +69,8 @@ The database for Hello.Repo has been created{% endhighlight %}
 
 <p>启动server</p>
 
-<pre>
-<code>mix phx.server
+{% highlight %}
+{% highlight %}mix phx.server
 
 [info] Running HelloWeb.Endpoint with cowboy 2.9.0 at 127.0.0.1:4000 (http)
 

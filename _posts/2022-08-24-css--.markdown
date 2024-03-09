@@ -37,7 +37,7 @@ categories:
 	</tbody>
 </table>
 
-<pre>
+{% highlight %}
 <code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
 <span class="hljs-selector-tag">p</span>             { <span class="hljs-attribute">color</span>: red}               <span class="hljs-comment">/* 权重 1 */</span>
 <span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">p</span>         { <span class="hljs-attribute">color</span>: blue}              <span class="hljs-comment">/* 权重 2 */</span>

@@ -20,8 +20,8 @@ categories:
 
 <p>第五个是只能滑动到特定的点。</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import { Slider } from &#39;antd&#39;;
 const marks = {
   0: &#39;0&deg;C&#39;,
@@ -54,8 +54,8 @@ const App = () =&gt; (
 <p>可以增加css:</p>
 
 <div class="ant-tabs-tabpane ant-tabs-tabpane-active" id="rc-tabs-3-panel-style">
-<pre>
-<code>#components-slider-demo-mark h4 {
+{% highlight %}
+{% highlight %}#components-slider-demo-mark h4 {
   margin: 0 0 16px;
 }
 #components-slider-demo-mark .ant-slider-with-marks {

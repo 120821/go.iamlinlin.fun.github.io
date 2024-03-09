@@ -6,16 +6,16 @@ categories:
 ---
 <p>当运行migrate的时候：</p>
 
-<pre>
-<code>rake db:migrate RAILS_ENV=test{% endhighlight %}
+{% highlight %}
+{% highlight %}rake db:migrate RAILS_ENV=test{% endhighlight %}
 
-<pre>
-<code>error&nbsp; failed: SCRAM authentication requires libpq version 10 or above{% endhighlight %}
+{% highlight %}
+{% highlight %}error&nbsp; failed: SCRAM authentication requires libpq version 10 or above{% endhighlight %}
 
 <p>查看版本：</p>
 
-<pre>
-<code>pg_config --version{% endhighlight %}
+{% highlight %}
+{% highlight %}pg_config --version{% endhighlight %}
 
 <p><img height="60" src="/uploads/ckeditor/pictures/717/image-20221110174209-1.png" width="658" /></p>
 
@@ -49,8 +49,8 @@ categories:
 
 <p>无效：官网：<a href="https://www.postgresql.org/download/linux/ubuntu/">https://www.postgresql.org/download/linux/ubuntu/</a></p>
 
-<pre>
-<code>sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;
+{% highlight %}
+{% highlight %}sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;
 
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 
@@ -60,8 +60,8 @@ sudo apt-get -y install postgresql{% endhighlight %}
 
 <div>最后一个命令换成 sudo apt-get -y install postgresql-14</div>
 
-<pre>
-<code>The following packages were automatically installed and are no longer required:
+{% highlight %}
+{% highlight %}The following packages were automatically installed and are no longer required:
 
 &nbsp; libcurl3-gnutls:i386 libgdbm-compat4:i386 libgdbm6:i386 libglu1-mesa:i386 libieee1284-3:i386 libnspr4:i386 libnss3:i386 libntfs-3g883 libodbc1 libodbc1:i386 libodbccr2
 

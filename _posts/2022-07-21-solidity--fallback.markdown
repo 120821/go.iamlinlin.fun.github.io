@@ -10,7 +10,7 @@ categories:
 
 <p>&nbsp;It executes when a function that does not exist or ether is sent directly to the contract, but receive() does not exist or msg.data is not empty fallback is called with a limit of 2300 gas when transfer or send is called.</p>
 
-<p><code>fallback</code><font style="vertical-align:inherit">是一个不接受任何参数且不返回任何内容的函数。 </font></p>
+<p>{% highlight %}fallback{% endhighlight %}<font style="vertical-align:inherit">是一个不接受任何参数且不返回任何内容的函数。 </font></p>
 
 <p><font style="vertical-align:inherit">它在何时执行 </font></p>
 
@@ -19,11 +19,11 @@ categories:
 	<p><font style="vertical-align:inherit">调用不存在的函数或 </font></p>
 	</li>
 	<li>
-	<p><font style="vertical-align:inherit">以太币直接发送到合约，但 </font><code>receive()</code><font style="vertical-align:inherit">不存在或 </font><code>msg.data</code><font style="vertical-align:inherit">不为空 </font></p>
+	<p><font style="vertical-align:inherit">以太币直接发送到合约，但 </font>{% highlight %}receive(){% endhighlight %}<font style="vertical-align:inherit">不存在或 </font>{% highlight %}msg.data{% endhighlight %}<font style="vertical-align:inherit">不为空 </font></p>
 	</li>
 </ul>
 
-<p><code>fallback</code><font style="vertical-align:inherit">被调用时有 2300 气体限制 </font><code>transfer</code><font style="vertical-align:inherit">或者 </font><code>send</code><font style="vertical-align:inherit">. </font></p>
+<p>{% highlight %}fallback{% endhighlight %}<font style="vertical-align:inherit">被调用时有 2300 气体限制 </font>{% highlight %}transfer{% endhighlight %}<font style="vertical-align:inherit">或者 </font>{% highlight %}send{% endhighlight %}<font style="vertical-align:inherit">. </font></p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>

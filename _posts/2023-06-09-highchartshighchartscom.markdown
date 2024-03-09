@@ -6,8 +6,8 @@ categories:
 ---
 <p>可以通过设置credits.enabled属性来隐藏Highcharts的版权信息。例如：</p>
 
-<pre>
-<code>credits: {
+{% highlight %}
+{% highlight %}credits: {
   enabled: false
 }{% endhighlight %}
 
@@ -15,8 +15,8 @@ categories:
 
 <p>可以将这段代码放在Highcharts配置对象的顶层。例如：</p>
 
-<pre>
-<code>var options = {
+{% highlight %}
+{% highlight %}var options = {
   credits: {
     enabled: false
   },

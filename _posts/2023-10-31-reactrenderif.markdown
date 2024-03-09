@@ -8,8 +8,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 class YourComponent extends React.Component {
   render() {

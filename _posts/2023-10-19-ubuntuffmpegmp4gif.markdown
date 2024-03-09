@@ -18,8 +18,8 @@ categories:
 
 <p>使用ffmpeg:&nbsp;</p>
 
-<pre>
-<code>linlin@linlin-i5:~/Videos$ ffmpeg -t 3 -ss 00:00:01 -i Tooltip.mp4 &nbsp;tooltip.gif{% endhighlight %}
+{% highlight %}
+{% highlight %}linlin@linlin-i5:~/Videos$ ffmpeg -t 3 -ss 00:00:01 -i Tooltip.mp4 &nbsp;tooltip.gif{% endhighlight %}
 
 <p>-t 要截取的视频时长</p>
 

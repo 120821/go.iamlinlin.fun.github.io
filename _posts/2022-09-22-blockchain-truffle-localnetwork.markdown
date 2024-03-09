@@ -10,23 +10,23 @@ categories:
 
 <p>运行部署</p>
 
-<pre>
-<code>truffle deploy --network=ganache{% endhighlight %}
+{% highlight %}
+{% highlight %}truffle deploy --network=ganache{% endhighlight %}
 
 <p>运行某个脚本</p>
 
-<pre>
-<code>truffle exec &lt;yourfile.js&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}truffle exec &lt;yourfile.js&gt;{% endhighlight %}
 
 <p>查看帮助</p>
 
-<pre>
-<code>truffle help{% endhighlight %}
+{% highlight %}
+{% highlight %}truffle help{% endhighlight %}
 
 <p>仅仅运行某个migration</p>
 
-<pre>
-<code>truffle migrate --f 9 --network=ganache{% endhighlight %}
+{% highlight %}
+{% highlight %}truffle migrate --f 9 --network=ganache{% endhighlight %}
 
 <p>$truffle develop</p>
 

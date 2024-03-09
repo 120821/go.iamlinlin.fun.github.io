@@ -8,6 +8,6 @@ categories:
 
 <p>mysql -h数据库地址 -u数据库账号 --default-character-set=utf8 -p数据库连接密码&nbsp; 数据库名 &lt; 待导入数据的存放路径</p>
 
-<pre>
-<code>mysql -hlocalhost -uroot --default-character-set=utf8 -p88888888&nbsp; database_name &lt; file_address.sql{% endhighlight %}
+{% highlight %}
+{% highlight %}mysql -hlocalhost -uroot --default-character-set=utf8 -p88888888&nbsp; database_name &lt; file_address.sql{% endhighlight %}
 

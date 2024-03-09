@@ -6,8 +6,8 @@ categories:
 ---
 <p>根据在<a href="https://doveip.com/index.php?s=index/login.html&amp;lang=en-us">doveip proxy</a> 获得的ip 可以进行换ip进行curl</p>
 
-<pre>
-<code>require &#39;json&#39;
+{% highlight %}
+{% highlight %}require &#39;json&#39;
 #url = &quot;https://curl.se/docs/sslcerts.html&quot;
 
 url = &quot;https://www.google.com&quot;

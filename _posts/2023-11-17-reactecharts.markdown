@@ -10,8 +10,8 @@ categories:
 
 <p>直接隐藏：</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   yAxis: {
     splitLine: {
@@ -23,8 +23,8 @@ categories:
 
 <p>或者设置为透明：</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   yAxis: {
     splitLine: {

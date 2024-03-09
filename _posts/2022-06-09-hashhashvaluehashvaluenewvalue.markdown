@@ -6,15 +6,15 @@ categories:
 ---
 
                     <blockquote> 
- <pre>hash1 = { "k1" =&gt; 'v1' , 'k2' =&gt; 'v2'}
+ {% highlight %}hash1 = { "k1" =&gt; 'v1' , 'k2' =&gt; 'v2'}
 
 hash2 = create_new_hash hash1
 
 puts hash1  # =&gt; { "k1" =&gt; 'v1' , 'k2' =&gt; 'v2'}
 puts hash2  # =&gt; { "k1" =&gt; 'v1 new value' , 'k2' =&gt; 'v2 new value'}
-</pre> 
+{% endhighlight %} 
  <p>提示：只能使用for 循环. 不能使用其他的第三方方法，例如 map, each</p> 
- <pre><code class="language-ruby">#根据已有的hash，创建一个新的hash， value为已有的hash的value + " new value"
+ {% highlight %}<code class="language-ruby">#根据已有的hash，创建一个新的hash， value为已有的hash的value + " new value"
 def creat_new_hash_value_add_new_value
   #首先创建一个hash，key为kn ，value为vn
   #hash为给定的值

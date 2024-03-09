@@ -7,7 +7,7 @@ categories:
 <p>在使用awvs创建target. scan的时候，如果提示：</p>
 
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-<code>Network <span style="color:#dcc6e0">Scanner </span>is not configured. Kindly configure network <span style="color:#dcc6e0">scanner </span><span style="color:#dcc6e0">before </span>running a network <span style="color:#dcc6e0">scan.</span>{% endhighlight %}
+{% highlight %}Network <span style="color:#dcc6e0">Scanner </span>is not configured. Kindly configure network <span style="color:#dcc6e0">scanner </span><span style="color:#dcc6e0">before </span>running a network <span style="color:#dcc6e0">scan.</span>{% endhighlight %}
 
 <p>那么，可以删除target,然后重新创建target.并进行Scan:</p>
 

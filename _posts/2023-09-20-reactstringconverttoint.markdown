@@ -6,13 +6,13 @@ categories:
 ---
 <p>语法：</p>
 
-<pre>
-<code>const intValue = parseInt(this.state.inputValue, 10);{% endhighlight %}
+{% highlight %}
+{% highlight %}const intValue = parseInt(this.state.inputValue, 10);{% endhighlight %}
 
 <p>完整的示例：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 class MyComponent extends React.Component {
   constructor(props) {

@@ -6,8 +6,8 @@ categories:
 ---
 <p>对抓取的数据进行去重，取最新的数据，hash array的使用</p>
 
-<pre>
-<code>def get_result_hash_for_lueluelue_result_sets
+{% highlight %}
+{% highlight %}def get_result_hash_for_lueluelue_result_sets
   #对数据进行确认，无论怎么进行修改用户的列的id是不会变化的，只会随着修改时间进行增加数据，后者取代前者
 &nbsp; temp_hash = {
 

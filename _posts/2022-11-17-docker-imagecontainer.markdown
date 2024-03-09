@@ -22,8 +22,8 @@ categories:
 
 <p>例子： 运行 image: 933f6,&nbsp; 使用host ip,&nbsp; 并且把 host 的 /workspace 文件夹加载到container 中的 /workspace</p>
 
-<pre>
-<code>docker run -v /workspace:/workspace --net=host -it --hostname=admin-container 933f6{% endhighlight %}
+{% highlight %}
+{% highlight %}docker run -v /workspace:/workspace --net=host -it --hostname=admin-container 933f6{% endhighlight %}
 
 <p><strong>docker create&nbsp;</strong>&nbsp;创建一个新的container ,但是不启动</p>
 
@@ -58,8 +58,8 @@ ubuntu add_vim 4efbaa2d43fc About a minute ago 167MB</p>
 
 <p>例如：&nbsp;导入镜像：</p>
 
-<pre>
-<code>$ docker image ls
+{% highlight %}
+{% highlight %}$ docker image ls
 
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 
@@ -101,6 +101,6 @@ fedora              latest              58394af37342        7 weeks ago         
 
 <p>运行某个指定的yml文件：</p>
 
-<pre>
-<code>docker-compose -f ./docker-compose.yml up{% endhighlight %}
+{% highlight %}
+{% highlight %}docker-compose -f ./docker-compose.yml up{% endhighlight %}
 

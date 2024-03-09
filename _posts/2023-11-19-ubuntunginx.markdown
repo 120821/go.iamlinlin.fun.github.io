@@ -6,12 +6,12 @@ categories:
 ---
 <p>1.写一个启动的文件：</p>
 
-<p><code>/etc/systemd/system/nginx.service</code></p>
+<p>{% highlight %}/etc/systemd/system/nginx.service{% endhighlight %}</p>
 
 <p>内容是这样的：</p>
 
-<pre>
-<code>[Unit]
+{% highlight %}
+{% highlight %}[Unit]
 Description=Nginx HTTP server
 After=network.target
 
@@ -28,17 +28,17 @@ WantedBy=multi-user.target{% endhighlight %}
 
 <p>2.写好后，可以使用命令启动一下nginx：</p>
 
-<pre>
-<code>sudo systemctl daemon-reload
+{% highlight %}
+{% highlight %}sudo systemctl daemon-reload
 sudo systemctl start nginx{% endhighlight %}
 
 <p>3.查看nginx状态：</p>
 
-<pre>
-<code>sudo systemctl status nginx{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl status nginx{% endhighlight %}
 
 <p>4.设置自启动：</p>
 
-<pre>
-<code>sudo systemctl enable nginx{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl enable nginx{% endhighlight %}
 

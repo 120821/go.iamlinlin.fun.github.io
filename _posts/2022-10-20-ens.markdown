@@ -11,17 +11,17 @@ categories:
 <p>安装web3</p>
 
 <div class="highlight highlight-source-shell">
-<pre>
-<span>npm install web3</span></pre>
+{% highlight %}
+<span>npm install web3</span>{% endhighlight %}
 
 <p>安装namehash</p>
 
-<p><span><code>npm install @ensdomains/eth-ens-namehash -S</code></span></p>
+<p><span>{% highlight %}npm install @ensdomains/eth-ens-namehash -S{% endhighlight %}</span></p>
 
 <p>反向解析的脚本： cat reverse_name.js</p>
 
-<pre>
-<code>const web3=&quot;require(&#39;web3&#39;)&quot;;
+{% highlight %}
+{% highlight %}const web3=&quot;require(&#39;web3&#39;)&quot;;
 const web3 = new Web3(&#39;https://mainnet.infura.io/v3/6d5b3edb39ed4ac39731a6f107540942&#39;);
 var namehash = require(&#39;@ensdomains/eth-ens-namehash&#39;)
 async function reverse(address) {

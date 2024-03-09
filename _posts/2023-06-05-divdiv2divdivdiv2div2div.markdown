@@ -6,8 +6,8 @@ categories:
 ---
 <p>可以使用JavaScript为div和div2元素添加双击事件监听器，然后在事件处理程序中切换它们的显示状态。以下是一个基本的实现：</p>
 
-<pre>
-<code>&lt;!DOCTYPE html&gt;
+{% highlight %}
+{% highlight %}&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 	&lt;title&gt;双击切换显示&lt;/title&gt;

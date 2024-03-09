@@ -6,16 +6,16 @@ categories:
 ---
 <p>1.在Windows里查看软路由使用命令：</p>
 
-<pre>
-<code>ipconfig /all</code>
-</pre>
+{% highlight %}
+{% highlight %}ipconfig /all{% endhighlight %}
+{% endhighlight %}
 
 <p>名为&quot;以太网适配器&quot;或&quot;无线局域网适配器&quot;的部分，其中列出了有关您的网络连接的详细信息</p>
 
 <p>2.在linux里查看软路由是：</p>
 
-<pre>
-<code>ip route{% endhighlight %}
+{% highlight %}
+{% highlight %}ip route{% endhighlight %}
 
 <p>在返回的结果里，默认路由：以&quot;default&quot;开头的行，指示了您的计算机发送数据包时要使用的下一跳网关。</p>
 

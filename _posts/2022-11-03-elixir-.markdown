@@ -10,7 +10,7 @@ categories:
 
 <p>安装：</p>
 
-<pre>
+{% highlight %}
 <code class="language-plaintext highlighter-rouge">sudo apt-get install elixir{% endhighlight %}
 
 <p><img height="138" src="/uploads/ckeditor/pictures/683/image-20221104084544-1.png" width="1002" /></p>

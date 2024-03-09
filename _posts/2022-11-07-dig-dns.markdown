@@ -11,15 +11,15 @@ categories:
 <p>一个典型的 <span>dig</span> 查询以下<span style="color:#fff">浏览器</span></p>
 
 <pre class="hljs nginx">
-<span class="hljs-title">dig</span> <span class="hljs-variable">@</span><span><span class="hljs-variable">server</span></span> <span>name</span> <span>type</span> </pre>
+<span class="hljs-title">dig</span> <span class="hljs-variable">@</span><span><span class="hljs-variable">server</span></span> <span>name</span> <span>type</span> {% endhighlight %}
 
 <pre class="hljs nginx">
-<span><span class="hljs-title">dig</span>&nbsp;<wbr /><span class="hljs-variable">@server</span>&nbsp;<wbr />xxx.com.cn. </span></pre>
+<span><span class="hljs-title">dig</span>&nbsp;<wbr /><span class="hljs-variable">@server</span>&nbsp;<wbr />xxx.com.cn. </span>{% endhighlight %}
 
 <p>type类型</p>
 
-<pre>
-&nbsp;<code>&nbsp; A 地址记录(Ipv4)
+{% highlight %}
+&nbsp;{% highlight %}&nbsp; A 地址记录(Ipv4)
 
 &nbsp;<wbr />&nbsp;<wbr />AAAA 地址记录（Ipv6）
 

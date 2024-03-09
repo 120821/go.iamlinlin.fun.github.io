@@ -12,13 +12,13 @@ categories:
 
 <p>进入irb环境：</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-ruby">&gt; <span class="hljs-keyword">require</span> <span class="hljs-string">&#39;aliyun/oss&#39;</span>
 =&gt; true{% endhighlight %}
 
-<p><code class="hljs language-ruby">创建client</code></p>
+<p><code class="hljs language-ruby">创建client{% endhighlight %}</p>
 
-<pre>
+{% highlight %}
 <code class="hljs language-php">&gt; client = <span class="hljs-title class_">Aliyun</span>::<span class="hljs-variable constant_">OSS</span>::<span class="hljs-variable constant_">Client</span>.<span class="hljs-keyword">new</span>(
 &gt;   endpoint: <span class="hljs-string">&#39;endpoint&#39;</span>,
 &gt;   access_key_id: <span class="hljs-string">&#39;AccessKeyId&#39;</span>,

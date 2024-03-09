@@ -22,8 +22,8 @@ categories:
 
 <p>1.console.log</p>
 
-<pre>
-<code><span style="color:#dcc6e0">const</span> handleClick = () =&gt; {
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">const</span> handleClick = () =&gt; {
   <span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&#39;Button clicked!&#39;</span>);
   <span style="color:#d4d0ab">// 执行其他逻辑</span>
 }
@@ -34,8 +34,8 @@ categories:
 
 <p>2.console.warn</p>
 
-<pre>
-<code><span style="color:#dcc6e0">const</span> fetchData = () =&gt; {
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">const</span> fetchData = () =&gt; {
   <span style="color:#dcc6e0">if</span> (!isConnected) {
     <span style="color:#f5ab35">console</span>.warn(<span style="color:#abe338">&#39;No internet connection. Retrieving data from cache.&#39;</span>);
     <span style="color:#d4d0ab">// 从缓存中获取数据</span>
@@ -50,8 +50,8 @@ fetchData();{% endhighlight %}
 
 <p>3.console.error</p>
 
-<pre>
-<code><span style="color:#dcc6e0">const</span> divide = (<span style="color:#f5ab35">a, b</span>) =&gt; {
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">const</span> divide = (<span style="color:#f5ab35">a, b</span>) =&gt; {
   <span style="color:#dcc6e0">if</span> (b === <span style="color:#f5ab35">0</span>) {
     <span style="color:#f5ab35">console</span>.error(<span style="color:#abe338">&#39;Division by zero error!&#39;</span>);
     <span style="color:#dcc6e0">return</span> <span style="color:#f5ab35">NaN</span>;

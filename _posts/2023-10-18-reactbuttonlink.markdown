@@ -8,35 +8,35 @@ categories:
 
 <p>1.确保已经安装依赖：</p>
 
-<pre>
-<code>npm install react-router-dom{% endhighlight %}
+{% highlight %}
+{% highlight %}npm install react-router-dom{% endhighlight %}
 
-<p><code>或：</code></p>
+<p>{% highlight %}或：{% endhighlight %}</p>
 
-<pre>
-<code>yarn add react-router-dom{% endhighlight %}
+{% highlight %}
+{% highlight %}yarn add react-router-dom{% endhighlight %}
 
-<p><code>2.在组建引入link:</code></p>
+<p>{% highlight %}2.在组建引入link:{% endhighlight %}</p>
 
-<pre>
-<code>import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
-<p><code>3.在页面使用link:</code></p>
+<p>{% highlight %}3.在页面使用link:{% endhighlight %}</p>
 
-<pre>
-<code>&lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;{% endhighlight %}
 
 <p><span style="font-family:monospace">react 我已经有了button，而且button已经有事件：</span></p>
 
-<pre>
-<code>&lt;Button onClick={this.handleForgetPassword} size=&quot;small&quot; className=&quot;&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;Button onClick={this.handleForgetPassword} size=&quot;small&quot; className=&quot;&quot;&gt;
   忘记密码?
 &lt;/Button&gt;{% endhighlight %}
 
-<p><code>事件：</code></p>
+<p>{% highlight %}事件：{% endhighlight %}</p>
 
-<pre>
-<code> handleForgetPassword = () =&gt; {
+{% highlight %}
+{% highlight %} handleForgetPassword = () =&gt; {
    //this.props.history.push(`forget_password`)
    alert(&#39;请联系管理员&#39;);
  }{% endhighlight %}
@@ -45,13 +45,13 @@ categories:
 
 <p>1.增加：</p>
 
-<pre>
-<code>import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}import { Link } from &#39;react-router-dom&#39;;{% endhighlight %}
 
-<p><code>2.修改button为link:</code></p>
+<p>{% highlight %}2.修改button为link:{% endhighlight %}</p>
 
-<pre>
-<code>&lt;Link to=&quot;/forget_password&quot; className=&quot;&quot; onClick={this.handleForgetPassword}&gt;
+{% highlight %}
+{% highlight %}&lt;Link to=&quot;/forget_password&quot; className=&quot;&quot; onClick={this.handleForgetPassword}&gt;
   忘记密码?
 &lt;/Link&gt;{% endhighlight %}
 

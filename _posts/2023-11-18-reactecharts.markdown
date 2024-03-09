@@ -8,8 +8,8 @@ categories:
 
 <p>在echarts里这样使用：（注意必须增加边框的宽度和颜色，不然设置了也不显示。）</p>
 
-<pre>
-<code>grid: {
+{% highlight %}
+{% highlight %}grid: {
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; left: &#39;3%&#39;,
 
@@ -27,5 +27,5 @@ categories:
 
 &nbsp;&nbsp;&nbsp; },{% endhighlight %}
 
-<p>这里的grid是和<code>yAxis并列的。</code></p>
+<p>这里的grid是和{% highlight %}yAxis并列的。{% endhighlight %}</p>
 

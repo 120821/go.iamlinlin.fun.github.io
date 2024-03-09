@@ -8,13 +8,13 @@ categories:
 
 <p>引入antd的model.confirm :</p>
 
-<pre>
-<code>import { Button, Modal, message } from &#39;antd&#39;;{% endhighlight %}
+{% highlight %}
+{% highlight %}import { Button, Modal, message } from &#39;antd&#39;;{% endhighlight %}
 
-<p><code>完整的示例：</code></p>
+<p>{% highlight %}完整的示例：{% endhighlight %}</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import { Button, Modal, message } from &#39;antd&#39;;
 import { DeleteOutlined } from &#39;@ant-design/icons&#39;;
 

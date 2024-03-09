@@ -82,19 +82,19 @@ categories:
 
 <p>使用格式如下：</p>
 
-<pre>
-<code>git format-patch &lt;start_commit&gt;..&lt;end_commit&gt; [--output-directory=&lt;dir&gt;]{% endhighlight %}
+{% highlight %}
+{% highlight %}git format-patch &lt;start_commit&gt;..&lt;end_commit&gt; [--output-directory=&lt;dir&gt;]{% endhighlight %}
 
-<p>其中，<code>&lt;start_commit&gt;</code> 和 <code>&lt;end_commit&gt;</code> 分别为起始提交和结束提交的 SHA-1 标识，中间用两个点号 <code>..</code> 连接。这里的提交可以是一个提交标记，也可以是一个分支名称。</p>
+<p>其中，{% highlight %}&lt;start_commit&gt;{% endhighlight %} 和 {% highlight %}&lt;end_commit&gt;{% endhighlight %} 分别为起始提交和结束提交的 SHA-1 标识，中间用两个点号 {% highlight %}..{% endhighlight %} 连接。这里的提交可以是一个提交标记，也可以是一个分支名称。</p>
 
 <p>例如，执行以下命令：</p>
 
-<pre>
-<code>git format-patch HEAD~3..HEAD --output-directory=/path/to/patch{% endhighlight %}
+{% highlight %}
+{% highlight %}git format-patch HEAD~3..HEAD --output-directory=/path/to/patch{% endhighlight %}
 
-<p>该命令将生成最新的三个提交对应的 patch 文件，并将这些文件保存在 <code>/path/to/patch</code> 目录中。</p>
+<p>该命令将生成最新的三个提交对应的 patch 文件，并将这些文件保存在 {% highlight %}/path/to/patch{% endhighlight %} 目录中。</p>
 
-<p>git format-patch 命令还提供了一些选项，如指定输出文件名的前缀、邮件补丁的作者和时间信息等，具体使用方法可以通过 <code>git format-patch --help</code> 查看相关文档。</p>
+<p>git format-patch 命令还提供了一些选项，如指定输出文件名的前缀、邮件补丁的作者和时间信息等，具体使用方法可以通过 {% highlight %}git format-patch --help{% endhighlight %} 查看相关文档。</p>
 
 <p>需要注意的是，执行 git format-patch 命令并不会自动发送邮件补丁，需要手动将生成的 patch 文件发送给目标用户或者使用其他工具进行自动化的发送处理。</p>
 
@@ -104,24 +104,24 @@ categories:
 <div>
 <p>在 Git 中，将本地分支 push 到远程分支的命令为：</p>
 
-<pre>
-<code>git push &lt;remote&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}git push &lt;remote&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;{% endhighlight %}
 
-<p>其中，<code>&lt;remote&gt;</code> 为远程仓库的名称；<code>&lt;local_branch&gt;</code> 为本地分支的名称；<code>&lt;remote_branch&gt;</code> 为远程分支的名称。</p>
+<p>其中，{% highlight %}&lt;remote&gt;{% endhighlight %} 为远程仓库的名称；{% highlight %}&lt;local_branch&gt;{% endhighlight %} 为本地分支的名称；{% highlight %}&lt;remote_branch&gt;{% endhighlight %} 为远程分支的名称。</p>
 
-<p>假设你希望将本地分支 <code>dev</code> 的代码推送到远程仓库 <code>origin</code> 的分支 <code>dev</code> 上，可以使用以下命令：</p>
+<p>假设你希望将本地分支 {% highlight %}dev{% endhighlight %} 的代码推送到远程仓库 {% highlight %}origin{% endhighlight %} 的分支 {% highlight %}dev{% endhighlight %} 上，可以使用以下命令：</p>
 
-<pre>
-<code>git push origin dev:dev{% endhighlight %}
+{% highlight %}
+{% highlight %}git push origin dev:dev{% endhighlight %}
 
 <p>如果远程分支不存在，则会自动创建一个同名的远程分支，并将本地分支的代码推送到该分支。</p>
 
 <p>如果想要将本地分支与远程分支建立关联关系，可以使用以下命令：</p>
 
-<pre>
-<code>git push -u origin dev{% endhighlight %}
+{% highlight %}
+{% highlight %}git push -u origin dev{% endhighlight %}
 
-<p>该命令会将本地分支 <code>dev</code> 的代码推送到远程仓库 <code>origin</code> 的分支 <code>dev</code> 上，并将两个分支建立关联关系，使得以后的 push 和 pull 操作都可以省略远程分支名称。例如，之后只需要执行 <code>git push</code> 和 <code>git pull</code> 命令即可。</p>
+<p>该命令会将本地分支 {% highlight %}dev{% endhighlight %} 的代码推送到远程仓库 {% highlight %}origin{% endhighlight %} 的分支 {% highlight %}dev{% endhighlight %} 上，并将两个分支建立关联关系，使得以后的 push 和 pull 操作都可以省略远程分支名称。例如，之后只需要执行 {% highlight %}git push{% endhighlight %} 和 {% highlight %}git pull{% endhighlight %} 命令即可。</p>
 </div>
 </div>
 </div>

@@ -12,10 +12,10 @@ categories:
 
 <p>&nbsp;Node.js 以 process.argv 的形式为每个正在运行的进程公开这个数组&mdash;&mdash;让我们看一个例子。&nbsp; 创建一个名为 argv.js 的文件并添加以下行：</p>
 
-<pre>
+{% highlight %}
 <code class="language-js hljs language-javascript"><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(process.<span class="hljs-property">argv</span>);{% endhighlight %}
 
-<pre>
+{% highlight %}
 <code class="language-bash hljs">$ node argv.js one two three four five
 [ <span class="hljs-string">&#39;node&#39;</span>,
   <span class="hljs-string">&#39;/home/avian/argvdemo/argv.js&#39;</span>,
@@ -27,8 +27,8 @@ categories:
 
 <p>使用方法实例：</p>
 
-<pre>
-<code>const myArgs = process.argv.slice(2);
+{% highlight %}
+{% highlight %}const myArgs = process.argv.slice(2);
 
 &nbsp; let rpc_server = myArgs[0]
 

@@ -14,8 +14,8 @@ categories:
 
 <p>使用demo2.nextc1oud.com.crt命名，内容如下：</p>
 
-<pre>
-<code>-----BEGIN CERTIFICATE-----
+{% highlight %}
+{% highlight %}-----BEGIN CERTIFICATE-----
 
 MIIF/DCCBOSgAwIBAgIQDgIBBhNAWTpz5E6JDYRTxDANBgkqhkiG9w0BAQsFADBu
 
@@ -87,8 +87,8 @@ bOhtlL65enbPLRJUpe6pJnF0nM9EGK1TG/Xj+JMWDlR2+PT93D5pQxY4Mver7I7U
 
 <p>&nbsp;</p>
 
-<pre>
-<code>{
+{% highlight %}
+{% highlight %}{
 
 &nbsp;&nbsp;&nbsp; &quot;run_type&quot;: &quot;client&quot;,
 

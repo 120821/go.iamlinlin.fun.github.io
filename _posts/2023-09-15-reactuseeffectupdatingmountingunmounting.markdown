@@ -14,8 +14,8 @@ categories:
 
 <p>（也就是说，useEffect可以参与卸载更新挂载）</p>
 
-<pre>
-<code>import React, { useState, useEffect } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useState, useEffect } from &#39;react&#39;;
 
 function MyComponent() {
   const [count, setCount] = useState(0);

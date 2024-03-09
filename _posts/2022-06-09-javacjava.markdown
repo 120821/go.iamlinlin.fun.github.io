@@ -15,7 +15,7 @@ categories:
 <blockquote> 
  <p>javac 可以将java源文件编译为class字节码文件<br> 如 javac HelloWorld.java<br><br> 运行javac命令后，如果成功编译没有错误的话，会出现一个HelloWorld.class的文件。<br><br> java 可以运行class字节码文件<br> 如 java HelloWorld<br><br> 注意java命令后面不要加.class<img alt="" height="230" src="https://img-blog.csdnimg.cn/0876be4367224e668633c2bef0d42121.png" width="631"></p> 
  <p> </p> 
- <pre><code class="language-java">
+ {% highlight %}<code class="language-java">
 EmployeeTest.java 文件代码：
 import java.io.*;
 public class EmployeeTest{
@@ -38,7 +38,7 @@ public class EmployeeTest{
    }
 }
 {% endhighlight %} 
- <pre><code class="language-java">
+ {% highlight %}<code class="language-java">
 Employee.java 文件代码：
 import java.io.*;
  

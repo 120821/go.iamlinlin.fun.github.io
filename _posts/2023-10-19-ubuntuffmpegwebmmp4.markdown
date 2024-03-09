@@ -14,11 +14,11 @@ categories:
 
 <p>1.进入有webm视频的文件夹：</p>
 
-<pre>
-<code>cd /home/linlin/Videos/Screencasts/{% endhighlight %}
+{% highlight %}
+{% highlight %}cd /home/linlin/Videos/Screencasts/{% endhighlight %}
 
-<p>2.使用命令转换（很方便)：(<code>-vf</code> 后面所带参数的意义是，将视频的长宽强制转换为偶数，否则可能遇到 <strong>&ldquo;width not divisible by 2&rdquo;</strong> 的问题。)</p>
+<p>2.使用命令转换（很方便)：({% highlight %}-vf{% endhighlight %} 后面所带参数的意义是，将视频的长宽强制转换为偶数，否则可能遇到 <strong>&ldquo;width not divisible by 2&rdquo;</strong> 的问题。)</p>
 
-<pre>
-<code>&nbsp;ffmpeg -i Tooltip.webm -vf &#39;scale=trunc(iw/2)*2:trunc(ih/2)*2&#39; tooltip.mp4{% endhighlight %}
+{% highlight %}
+{% highlight %}&nbsp;ffmpeg -i Tooltip.webm -vf &#39;scale=trunc(iw/2)*2:trunc(ih/2)*2&#39; tooltip.mp4{% endhighlight %}
 

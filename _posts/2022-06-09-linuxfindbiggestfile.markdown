@@ -21,7 +21,7 @@ categories:
 <li>还要检查 <a href="https://www.cyberciti.biz/open-source/install-ncdu-on-linux-unix-ncurses-disk-usage/?utm_source=Linux_Unix_Command&amp;utm_medium=faq&amp;utm_campaign=nixcmd" title="ncdu 命令 ">ncdu 命令 </a>以获取目录中最大的文件</li>
 </ol>
 <h3>Linux 在 / 中找到最大的文件</h3> 
-<p>运行命令：<br><code>$ sudo du -a /dir/ | sort -n -r | head -n 20</code><br> 或者<br><code>$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20</code></p> 
+<p>运行命令：<br>{% highlight %}$ sudo du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}<br> 或者<br>{% highlight %}$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20{% endhighlight %}</p> 
 {% highlight %}
     Open the terminal application
     Login as root user using the sudo -i command

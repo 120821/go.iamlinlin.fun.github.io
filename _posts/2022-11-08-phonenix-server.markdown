@@ -6,13 +6,13 @@ categories:
 ---
 <p>配置数据库信息 ：</p>
 
-<pre>
-<code>vim config/dev.exs{% endhighlight %}
+{% highlight %}
+{% highlight %}vim config/dev.exs{% endhighlight %}
 
 <p>与本地数据库或者docker的数据库进行连接例如这样：</p>
 
-<pre>
-<code># Configure your database
+{% highlight %}
+{% highlight %}# Configure your database
 
 config :lueluelue_backend, LueLueLueBackend.Repo,
 
@@ -70,8 +70,8 @@ config :lueluelue_backend, LueLueLueBackendWeb.Endpoint,
 
 <p>启动server：</p>
 
-<pre>
-<code>mix phx.server{% endhighlight %}
+{% highlight %}
+{% highlight %}mix phx.server{% endhighlight %}
 
 <p>打开浏览器</p>
 

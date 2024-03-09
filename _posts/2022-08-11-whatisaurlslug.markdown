@@ -6,7 +6,7 @@ categories:
 ---
 <p><a href="https://www.semrush.com/blog/what-is-a-url-slug/">https://www.semrush.com/blog/what-is-a-url-slug/</a></p>
 
-<p>URL slug 是 URL 中最后一个反斜杠之后的部分。&nbsp; 例如，URL：<code class="b-blog__code__code">https://www.semrush.com/blog/what-is-a-url-slug</code></p>
+<p>URL slug 是 URL 中最后一个反斜杠之后的部分。&nbsp; 例如，URL：<code class="b-blog__code__code">https://www.semrush.com/blog/what-is-a-url-slug{% endhighlight %}</p>
 
 <p>The URL&rsquo;s slug is &ldquo;/what-is-a-url-slug.&rdquo;</p>
 

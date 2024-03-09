@@ -23,7 +23,7 @@ categories:
 
 <span class="hljs-reserved">let</span> v0_vitalik_eth = contentHash.decode(string_from_ens_query_of_vitalik_eth)
 <span class="hljs-built_in">console</span>.info(<span class="hljs-string">&quot;== vitalik.eth, result:&quot;</span>, v0_vitalik_eth)
-<span class="hljs-built_in">console</span>.info(<span class="hljs-string">&quot;== vitalik.eth, CID v1:&quot;</span>, contentHash.helpers.cidV0ToV1Base32(v0_vitalik_eth))</pre>
+<span class="hljs-built_in">console</span>.info(<span class="hljs-string">&quot;== vitalik.eth, CID v1:&quot;</span>, contentHash.helpers.cidV0ToV1Base32(v0_vitalik_eth)){% endhighlight %}
 
 <p>运行node content-hash.js， 输出：</p>
 

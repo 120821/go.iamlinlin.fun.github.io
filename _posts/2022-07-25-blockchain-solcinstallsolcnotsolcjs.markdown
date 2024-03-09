@@ -14,18 +14,18 @@ categories:
 
 <p><img src="https://files.sweetysoft.com/blog_images/from_paste_20220723_155128.png" /></p>
 
-<pre>
-<code>cp ~/Downloads/solc-static-linux /workspace/coding_tools/
+{% highlight %}
+{% highlight %}cp ~/Downloads/solc-static-linux /workspace/coding_tools/
 {% endhighlight %}
 
 <p>把solc复制到workspace需要用到的工具文件夹</p>
 
 <p>复制到usr/bin文件夹</p>
 
-<pre>
-<code>linlin@linlin-i5:/workspace$ sudo cp&nbsp; ~/Downloads/solc-static-linux /usr/bin/
-[sudo] password for linlin:</code>
-</pre>
+{% highlight %}
+{% highlight %}linlin@linlin-i5:/workspace$ sudo cp&nbsp; ~/Downloads/solc-static-linux /usr/bin/
+[sudo] password for linlin:{% endhighlight %}
+{% endhighlight %}
 
 <p>solcjs的使用</p>
 

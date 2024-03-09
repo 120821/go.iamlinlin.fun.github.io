@@ -8,8 +8,8 @@ categories:
 
 <p>HTML代码：</p>
 
-<pre>
-<code>&lt;div class=&quot;scroll-box&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;div class=&quot;scroll-box&quot;&gt;
   &lt;div class=&quot;scroll-content&quot;&gt;
     &lt;div&gt;内容1&lt;/div&gt;
     &lt;div&gt;内容2&lt;/div&gt;
@@ -21,8 +21,8 @@ categories:
 
 <p>CSS代码：</p>
 
-<pre>
-<code>.scroll-box {
+{% highlight %}
+{% highlight %}.scroll-box {
   overflow: hidden;
 }
 
@@ -50,18 +50,18 @@ div {
 </div>
 </div>
 
-<p>一个页面可以用多个滚动的 <code>div</code>。</p>
+<p>一个页面可以用多个滚动的 {% highlight %}div{% endhighlight %}。</p>
 
-<p>可能是你的另一个 <code>div</code> 没有设置正确的样式，比如 <code>overflow: hidden</code> 或者缺少必要的样式。你可以检查一下另一个 <code>div</code> 的 CSS 样式，确保它设置正确。同时也需要注意，如果两个 <code>div</code> 的滚动速度相差很大，可能会导致其中一个 <code>div</code> 被另一个 <code>div</code> 盖住，这时可以通过调整 <code>z-index</code> 属性来解决。</p>
+<p>可能是你的另一个 {% highlight %}div{% endhighlight %} 没有设置正确的样式，比如 {% highlight %}overflow: hidden{% endhighlight %} 或者缺少必要的样式。你可以检查一下另一个 {% highlight %}div{% endhighlight %} 的 CSS 样式，确保它设置正确。同时也需要注意，如果两个 {% highlight %}div{% endhighlight %} 的滚动速度相差很大，可能会导致其中一个 {% highlight %}div{% endhighlight %} 被另一个 {% highlight %}div{% endhighlight %} 盖住，这时可以通过调整 {% highlight %}z-index{% endhighlight %} 属性来解决。</p>
 
-<p>另外，有些浏览器可能会在某些情况下出现某些元素无法滚动的问题，这时可以试试添加 <code>-webkit-overflow-scrolling: touch</code> 样式来修复。</p>
+<p>另外，有些浏览器可能会在某些情况下出现某些元素无法滚动的问题，这时可以试试添加 {% highlight %}-webkit-overflow-scrolling: touch{% endhighlight %} 样式来修复。</p>
 
 <p>2可以使用CSS的动画或JavaScript的定时器来实现自动滚动效果。以下是使用JavaScript的示例代码：</p>
 
 <p>HTML代码：</p>
 
-<pre>
-<code>&lt;div class=&quot;scroll-box&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;div class=&quot;scroll-box&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;内容1&lt;/li&gt;
     &lt;li&gt;内容2&lt;/li&gt;
@@ -73,8 +73,8 @@ div {
 
 <p>CSS代码：</p>
 
-<pre>
-<code>.scroll-box {
+{% highlight %}
+{% highlight %}.scroll-box {
   overflow: hidden;
 }
 
@@ -91,8 +91,8 @@ li {
 
 <p>JavaScript代码：</p>
 
-<pre>
-<code>function autoScroll() {
+{% highlight %}
+{% highlight %}function autoScroll() {
   var box = document.querySelector(&#39;.scroll-box&#39;);
   var ul = box.querySelector(&#39;ul&#39;);
   var liHeight = ul.querySelector(&#39;li&#39;).offsetHeight;

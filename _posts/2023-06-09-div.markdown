@@ -14,13 +14,13 @@ categories:
 
 <p>代码示例：</p>
 
-<pre>
-<code>&lt;div style=&quot;height: 200px; overflow: auto;&quot;&gt;
+{% highlight %}
+{% highlight %}&lt;div style=&quot;height: 200px; overflow: auto;&quot;&gt;
    &lt;!-- 这里放数据 --&gt;
 &lt;/div&gt;{% endhighlight %}
 
-<pre>
-<code>div::-webkit-scrollbar {
+{% highlight %}
+{% highlight %}div::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -37,8 +37,8 @@ div::-webkit-scrollbar-thumb {
 	<li>隐藏滚动条</li>
 </ol>
 
-<pre>
-<code>div::-webkit-scrollbar {
+{% highlight %}
+{% highlight %}div::-webkit-scrollbar {
   display: none;
 }{% endhighlight %}
 
@@ -46,8 +46,8 @@ div::-webkit-scrollbar-thumb {
 	<li>将滚动条变细</li>
 </ol>
 
-<pre>
-<code>div::-webkit-scrollbar {
+{% highlight %}
+{% highlight %}div::-webkit-scrollbar {
   width: 6px; /* 设置滚动条宽度 */
   height: 6px; /* 设置滚动条高度 */
 }
@@ -63,14 +63,14 @@ div::-webkit-scrollbar-track {
 
 <p>以上代码将滚动条宽度设置为 6px，高度设置为 6px，滑块圆角设置为 3px，滑块颜色设置为灰色半透明，滑块轨道颜色设置为浅灰色半透明。你可以根据需要进行调整。</p>
 
-<p>如果要针对一个带有 <code>.class-name</code> 类的 <code>div</code> 元素进行样式设置，只需在 CSS 选择器中加入类选择器即可，如下所示：</p>
+<p>如果要针对一个带有 {% highlight %}.class-name{% endhighlight %} 类的 {% highlight %}div{% endhighlight %} 元素进行样式设置，只需在 CSS 选择器中加入类选择器即可，如下所示：</p>
 
 <ol>
 	<li>隐藏滚动条</li>
 </ol>
 
-<pre>
-<code>div.class-name::-webkit-scrollbar {
+{% highlight %}
+{% highlight %}div.class-name::-webkit-scrollbar {
   display: none;
 }{% endhighlight %}
 
@@ -78,8 +78,8 @@ div::-webkit-scrollbar-track {
 	<li>将滚动条变细</li>
 </ol>
 
-<pre>
-<code>div.class-name::-webkit-scrollbar {
+{% highlight %}
+{% highlight %}div.class-name::-webkit-scrollbar {
   width: 6px; /* 设置滚动条宽度 */
   height: 6px; /* 设置滚动条高度 */
 }
@@ -93,5 +93,5 @@ div.class-name::-webkit-scrollbar-track {
   background-color: rgba(0,0,0,0.05); /* 设置滑块轨道颜色 */
 }{% endhighlight %}
 
-<p>类选择器的语法是在选择器名称前加上 <code>.class-name</code>，其中 <code>class-name</code> 是你要选择的元素的类名。请注意，通常情况下，隐藏滚动条和将滚动条变细的代码适用于所有 <code>div</code> 元素，因此不需要加上 <code>.class-name</code>。只有在你想要针对特定的 <code>div</code> 元素进行样式设置时才需要使用类选择器。</p>
+<p>类选择器的语法是在选择器名称前加上 {% highlight %}.class-name{% endhighlight %}，其中 {% highlight %}class-name{% endhighlight %} 是你要选择的元素的类名。请注意，通常情况下，隐藏滚动条和将滚动条变细的代码适用于所有 {% highlight %}div{% endhighlight %} 元素，因此不需要加上 {% highlight %}.class-name{% endhighlight %}。只有在你想要针对特定的 {% highlight %}div{% endhighlight %} 元素进行样式设置时才需要使用类选择器。</p>
 

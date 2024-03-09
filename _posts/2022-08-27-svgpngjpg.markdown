@@ -10,10 +10,10 @@ categories:
 
 <p>1-2脚本的书写：</p>
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>require &#39;csv&#39;</code></div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}require &#39;csv&#39;{% endhighlight %}</div>
 
-<pre>
-<code>a = CSV.read(&quot;nan-ao.csv&quot;)
+{% highlight %}
+{% highlight %}a = CSV.read(&quot;nan-ao.csv&quot;)
 
 b = File.read(&quot;nan-ao.svg&quot;)
 
@@ -43,12 +43,12 @@ csv.each do |row|
 
 end{% endhighlight %}
 
-<p><code>3.生成png jpg文件</code></p>
+<p>{% highlight %}3.生成png jpg文件{% endhighlight %}</p>
 
-<p><code>脚本：</code>ffmpeg SVG&gt;&gt;jpg</p>
+<p>{% highlight %}脚本：{% endhighlight %}ffmpeg SVG&gt;&gt;jpg</p>
 
-<pre>
-<code>Dir.entries(&#39;.&#39;).each do |e|
+{% highlight %}
+{% highlight %}Dir.entries(&#39;.&#39;).each do |e|
 
 &nbsp; if e.include? &#39;svg&#39;
 
@@ -64,8 +64,8 @@ end{% endhighlight %}
 
 <p>ffmpeg png&gt;&gt;jpg</p>
 
-<pre>
-<code>Dir.entries(&#39;.&#39;).each do |e|
+{% highlight %}
+{% highlight %}Dir.entries(&#39;.&#39;).each do |e|
 
 &nbsp; if e.include? &#39;png&#39;
 
@@ -84,8 +84,8 @@ end&nbsp;&nbsp;&nbsp;&nbsp;{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<pre>
-<code>Dir.glob(&#39;*.svg&#39;).each do |file|
+{% highlight %}
+{% highlight %}Dir.glob(&#39;*.svg&#39;).each do |file|
 
 &nbsp; puts &quot;== processing file: #{file}&quot;
 
@@ -100,7 +100,7 @@ end{% endhighlight %}
 <p>Inkscape png&gt;&gt;jpg</p>
 
 <pre class="hljs ruby">
-<code><span class="hljs-constant">Dir</span>.glob(<span class="hljs-string">&#39;*.png&#39;</span>).each <span class="hljs-keyword">do</span> |file|
+{% highlight %}<span class="hljs-constant">Dir</span>.glob(<span class="hljs-string">&#39;*.png&#39;</span>).each <span class="hljs-keyword">do</span> |file|
   puts <span class="hljs-string">&quot;== processing file: <span class="hljs-subst">#{file}</span>&quot;</span>
   command = <span class="hljs-string">&quot;mogrify -format jpg <span class="hljs-subst">#{file}</span>&quot;</span>
   <span class="hljs-string">`<span class="hljs-subst">#{command}</span>`</span>

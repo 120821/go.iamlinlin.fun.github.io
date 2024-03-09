@@ -8,8 +8,8 @@ categories:
 
 <p>首先在app/views/application.html.erb文件底部增加这样一段内容。</p>
 
-<pre>
-<code>&nbsp;&lt;footer&gt;
+{% highlight %}
+{% highlight %}&nbsp;&lt;footer&gt;
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;
 

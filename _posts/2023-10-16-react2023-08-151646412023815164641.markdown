@@ -7,20 +7,20 @@ categories:
 <p>react 我有这样的代码：<br />
 &nbsp;</p>
 
-<pre>
-<code>184       {
+{% highlight %}
+{% highlight %}184       {
 185         title: &#39;创建时间&#39;,
 186         dataIndex: &#39;created_at&#39;,
 187         key: &#39;created_at&#39;,
 188         render: (text) =&gt; new Date(text).toLocaleString(&#39;zh-CN&#39;, { timeZone: &#39;Asia/Shanghai&#39; }),
 189       },{% endhighlight %}
 
-<p><code>显示的时间的格式是：</code>2023/8/15 16:46:41</p>
+<p>{% highlight %}显示的时间的格式是：{% endhighlight %}2023/8/15 16:46:41</p>
 
 <p>我想得到用-连接的时间，例如 2023-08-15 16:46:41，使用：</p>
 
-<pre>
-<code>{
+{% highlight %}
+{% highlight %}{
   title: &#39;创建时间&#39;,
   dataIndex: &#39;created_at&#39;,
   key: &#39;created_at&#39;,

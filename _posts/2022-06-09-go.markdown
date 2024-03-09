@@ -36,14 +36,14 @@ $ ./hello
 Hello, World!{% endhighlight %} <p></p> 
   <blockquote> 
    <p>将 /usr/local/go/bin 目录添加至 PATH 环境变量：</p> 
-   <pre>export PATH=$PATH:/usr/local/go/bin</pre> 
+   {% highlight %}export PATH=$PATH:/usr/local/go/bin{% endhighlight %} 
    <p>以上只能暂时添加 PATH，关闭终端下次再登录就没有了。</p> 
    <p>我们可以编辑 ~/.bash_profile 或者 /etc/profile，并将以下命令添加该文件的末尾，这样就永久生效了：</p> 
-   <pre>export PATH=$PATH:/usr/local/go/bin</pre> 
+   {% highlight %}export PATH=$PATH:/usr/local/go/bin{% endhighlight %} 
    <p>添加后需要执行：</p> 
-   <pre>source ~/.bash_profile
+   {% highlight %}source ~/.bash_profile
 或
-source /etc/profile</pre> 
+source /etc/profile{% endhighlight %} 
   </blockquote> {% highlight %}linlin@linlin-i5:/workspace/go_test$ vim ~/.bashrc
 linlin@linlin-i5:/workspace/go_test$ source ~/.bashrc
 linlin@linlin-i5:/workspace/go_test${% endhighlight %} <p></p> </li>

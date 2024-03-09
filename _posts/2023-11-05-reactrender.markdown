@@ -8,8 +8,8 @@ categories:
 
 <p>1.直接用空格：</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   return (
     &lt;div&gt;
       Hello{&#39; &#39;}World
@@ -17,10 +17,10 @@ categories:
   );
 }{% endhighlight %}
 
-<p>2.使用编码 <code>&amp;nbsp;</code></p>
+<p>2.使用编码 {% highlight %}&amp;nbsp;{% endhighlight %}</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   return (
     &lt;div&gt;
       Hello&amp;nbsp;World
@@ -30,8 +30,8 @@ categories:
 
 <p>3.使用css:</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   return (
     &lt;div&gt;
       Hello&lt;span style={{ marginRight: &#39;4px&#39; }}&gt;&lt;/span&gt;World

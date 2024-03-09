@@ -8,5 +8,5 @@ categories:
 
 <p>在命令行使用命令：</p>
 
-<div><code>ifconfig</code></div>
+<div>{% highlight %}ifconfig{% endhighlight %}</div>
 

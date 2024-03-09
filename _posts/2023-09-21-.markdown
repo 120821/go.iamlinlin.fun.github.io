@@ -13,8 +13,8 @@ categories:
 
 <p>3.增加（替换为自己的id）</p>
 
-<pre>
+{% highlight %}
 map.setMapStyleV2({&nbsp; &nbsp; &nbsp;
   styleId: &#39;3d71dc5a4ce6222d3396801dee06622d&#39;
-});</pre>
+});{% endhighlight %}
 

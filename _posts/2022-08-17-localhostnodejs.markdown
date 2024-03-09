@@ -22,8 +22,8 @@ categories:
 
 <p>查看env_file</p>
 
-<pre>
-<code>cat ~/env_file
+{% highlight %}
+{% highlight %}cat ~/env_file
 
 export HTTP_PROXY=&quot;http://192.168.0.102:8080&quot;
 
@@ -43,8 +43,8 @@ The document has moved<br />
 &lt;A HREF=&quot;http://www.google.com/&quot;&gt;here&lt;/A&gt;.<br />
 &lt;/BODY&gt;&lt;/HTML&gt;</p>
 
-<pre>
-<code>curl https://api.avax-test.network/ext/bc/C/rpc:443
+{% highlight %}
+{% highlight %}curl https://api.avax-test.network/ext/bc/C/rpc:443
 
 Not Foundlinlin@linlin-i5:/workspace/pns-airdrop-admin${% endhighlight %}
 
@@ -68,8 +68,8 @@ Not Foundlinlin@linlin-i5:/workspace/pns-airdrop-admin${% endhighlight %}
 
 <p>但是web3.eth.accounts并不能得到数据</p>
 
-<pre>
-<code>web3.eth.accounts
+{% highlight %}
+{% highlight %}web3.eth.accounts
 
 Uncaught Error: Invalid JSON RPC response: undefined
 

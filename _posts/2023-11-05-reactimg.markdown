@@ -6,8 +6,8 @@ categories:
 ---
 <p>1.使用普通的img</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   return (
     &lt;div&gt;
       &lt;img src={require(&#39;./images/image.jpg&#39;)} alt=&quot;Example-Image&quot; /&gt;
@@ -17,18 +17,18 @@ categories:
 
 <p>2.使用引入：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;{% endhighlight %}
 
-<p><code>然后：</code></p>
+<p>{% highlight %}然后：{% endhighlight %}</p>
 
-<pre>
-<code>&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;{% endhighlight %}
 
 <p>比较完整的：</p>
 
-<pre>
-<code>import React, { Component } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { Component } from &#39;react&#39;;
 import HeadImage from &#39;./fairy.jpeg&#39;;
 
 class MyComponent extends Component {

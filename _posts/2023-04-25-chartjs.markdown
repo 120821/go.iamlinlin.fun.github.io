@@ -22,13 +22,13 @@ categories:
 
 <p>例如，将上述渐变转换为图片并将其作为 Chart.js 背景颜色的示例代码如下：</p>
 
-<pre>
-<code>backgroundColor: [
+{% highlight %}
+{% highlight %}backgroundColor: [
   &#39;url(gradient1.png)&#39;,
   &#39;url(gradient2.png)&#39;
 ]{% endhighlight %}
 
-<p>其中，<code>gradient1.png</code> 和 <code>gradient2.png</code> 是两个渐变图片文件的 URL。这样就可以在 Chart.js 中使用线性渐变作为背景颜色了。</p>
+<p>其中，{% highlight %}gradient1.png{% endhighlight %} 和 {% highlight %}gradient2.png{% endhighlight %} 是两个渐变图片文件的 URL。这样就可以在 Chart.js 中使用线性渐变作为背景颜色了。</p>
 
 <p>&nbsp;</p>
 

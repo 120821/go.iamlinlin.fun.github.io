@@ -36,7 +36,7 @@ categories:
   }
 }, <span class="hljs-number">1000</span>);{% endhighlight %}
 
-<p><code class="hljs language-javascript">视图页面的</code></p>
+<p><code class="hljs language-javascript">视图页面的{% endhighlight %}</p>
 
 <pre class="snippet-code-html lang-html s-code-block">
 <code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;demo&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;countdown-live&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>{% endhighlight %}

@@ -82,7 +82,7 @@ end{% endhighlight %}
 
 <p>创建脚本，连接数据库，并运行</p>
 
-<p><code>require &#39;active_record&#39;</code></p>
+<p>{% highlight %}require &#39;active_record&#39;{% endhighlight %}</p>
 
 {% highlight %}ActiveRecord::Base.establish_connection(adapter: &#39;postgresql&#39;, database: &#39;datasetter_development&#39;)
 class User &lt; ActiveRecord::Base<br />

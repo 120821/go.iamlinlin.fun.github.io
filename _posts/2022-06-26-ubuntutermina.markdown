@@ -23,7 +23,7 @@ categories:
   PS1=<span class="hljs-variable">${ORIG}</span><span class="hljs-variable">${TITLE}</span>
 }
 
-</pre>
+{% endhighlight %}
 
 <p>找不到符合的内容，就直接粘贴好了</p>
 
@@ -38,5 +38,5 @@ categories:
 <pre class="lang-bash s-code-block">
 <code class="hljs language-bash"><span class="hljs-built_in">source</span> ~/.bashrc{% endhighlight %}
 
-<p><code>然后进行renametab hihihi</code></p>
+<p>{% highlight %}然后进行renametab hihihi{% endhighlight %}</p>
 

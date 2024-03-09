@@ -8,8 +8,8 @@ categories:
 
 <p>1.在blog的类里增加方法：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">public</span> String <span style="color:#00e0e0">getFormattedContent</span><span style="color:#f5ab35">()</span> {
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">public</span> String <span style="color:#00e0e0">getFormattedContent</span><span style="color:#f5ab35">()</span> {
     <span style="color:#dcc6e0">if</span> (content != <span style="color:#dcc6e0">null</span>) {
         <span style="color:#d4d0ab">// 将内容转换为可显示的HTML格式</span>
         <span style="color:#dcc6e0">if</span> (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) {
@@ -27,8 +27,8 @@ categories:
 
 <p>例如在博客详情页面使用：</p>
 
-<pre>
-<code><span style="color:#d4d0ab">// 在UI线程更新UI</span>
+{% highlight %}
+{% highlight %}<span style="color:#d4d0ab">// 在UI线程更新UI</span>
 runOnUiThread(() -&gt; {
     <span style="color:#d4d0ab">// 在TextView中显示博客内容（格式化后的）</span>
     contentTextView.setText(blog.getFormattedContent());

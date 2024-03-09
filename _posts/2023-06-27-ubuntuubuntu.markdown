@@ -8,27 +8,27 @@ categories:
 
 <p>1、查看内核版本号</p>
 
-<pre>
-<code>uname -a{% endhighlight %}
+{% highlight %}
+{% highlight %}uname -a{% endhighlight %}
 
-<pre>
-<code>Linux linlin-i5 5.19.0-45-generic #46~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 7 15:06:04 UTC 20 x86_64 x86_64 x86_64 GNU/Linux{% endhighlight %}
+{% highlight %}
+{% highlight %}Linux linlin-i5 5.19.0-45-generic #46~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Jun 7 15:06:04 UTC 20 x86_64 x86_64 x86_64 GNU/Linux{% endhighlight %}
 
 <p>2、查看ubuntu版本号</p>
 
-<pre>
-<code>cat /etc/issue{% endhighlight %}
+{% highlight %}
+{% highlight %}cat /etc/issue{% endhighlight %}
 
-<pre>
-<code>Ubuntu 22.04.1 LTS \n \l{% endhighlight %}
+{% highlight %}
+{% highlight %}Ubuntu 22.04.1 LTS \n \l{% endhighlight %}
 
 <p>3、查看ubuntu版本号</p>
 
-<pre>
-<code>sudo lsb_release -a{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo lsb_release -a{% endhighlight %}
 
-<pre>
-<code>[sudo] password for linlin:
+{% highlight %}
+{% highlight %}[sudo] password for linlin:
 
 No LSB modules are available.
 
@@ -42,13 +42,13 @@ Codename:&nbsp;&nbsp; &nbsp;jammy{% endhighlight %}
 
 <p>4. 查看版本号</p>
 
-<pre>
-<code>cat /etc/*release*{% endhighlight %}
+{% highlight %}
+{% highlight %}cat /etc/*release*{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<pre>
-<code>DISTRIB_ID=Ubuntu
+{% highlight %}
+{% highlight %}DISTRIB_ID=Ubuntu
 
 DISTRIB_RELEASE=22.04
 

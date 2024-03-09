@@ -6,8 +6,8 @@ categories:
 ---
 <p>缺少了配置文件：</p>
 
-<pre>
-<code>sudo apt-get install libmysqlclient-dev{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get install libmysqlclient-dev{% endhighlight %}
 
-<p><code>然后继续bundle install 即可。</code></p>
+<p>{% highlight %}然后继续bundle install 即可。{% endhighlight %}</p>
 

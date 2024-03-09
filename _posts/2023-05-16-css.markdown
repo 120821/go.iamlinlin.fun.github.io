@@ -22,8 +22,8 @@ categories:
 
 <p>代码：</p>
 
-<pre>
-<code>&lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;
+{% highlight %}
+{% highlight %}&lt;div id=&quot;allmap&quot;&gt;&lt;/div&gt;
 
 &lt;style&gt;
 

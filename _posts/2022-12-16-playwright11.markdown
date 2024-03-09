@@ -8,8 +8,8 @@ categories:
 
 <p>例如这样的：</p>
 
-<pre>
-<code>test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
+{% highlight %}
+{% highlight %}test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
     const page = await context.newPage();
     await page.goto(&quot;https://www.programsbuzz.com/&quot;)
 
@@ -27,8 +27,8 @@ categories:
 
 <p>那么获得京东的首页，进入首页的秒杀页面，进入商品的详情页面就是这样的：</p>
 
-<pre>
-<code>const { test, expect } = require(&#39;@playwright/test&#39;);
+{% highlight %}
+{% highlight %}const { test, expect } = require(&#39;@playwright/test&#39;);
 
 test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
 
@@ -86,8 +86,8 @@ test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
 
 <p>运行后，通过了：npx playwright test jing.spec.js --debug</p>
 
-<pre>
-<code>Running 2 tests using 1 worker
+{% highlight %}
+{% highlight %}Running 2 tests using 1 worker
 
 [firefox] &rsaquo; jing.spec.js:3:6 &rsaquo; verify multiple tabs
 

@@ -6,11 +6,11 @@ categories:
 ---
 <p><a href="https://caddyserver.com/">https://caddyserver.com/</a></p>
 
-<p>http 反向代理：<code class="block">reverse-proxy --from example.com --to localhost:9000</code></p>
+<p>http 反向代理：<code class="block">reverse-proxy --from example.com --to localhost:9000{% endhighlight %}</p>
 
-<p><font style="vertical-align:inherit">通过 HTTPS 的公共文件服务器：</font><code class="block">file-server --domain example.com</code></p>
+<p><font style="vertical-align:inherit">通过 HTTPS 的公共文件服务器：</font><code class="block">file-server --domain example.com{% endhighlight %}</p>
 
-<p><font style="vertical-align:inherit">在工作目录中使用 Caddyfile 运行服务器（如果存在）：</font><code class="block">caddy run</code></p>
+<p><font style="vertical-align:inherit">在工作目录中使用 Caddyfile 运行服务器（如果存在）：</font><code class="block">caddy run{% endhighlight %}</p>
 
 <p>在Caddyfile文件中增加</p>
 

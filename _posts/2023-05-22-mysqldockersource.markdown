@@ -9,34 +9,34 @@ categories:
 <p>有两种方法可以将本地文件复制到Docker容器中：</p>
 
 <ol>
-	<li>在Dockerfile中使用 <code>COPY</code> 命令将本地文件复制到容器中：</li>
+	<li>在Dockerfile中使用 {% highlight %}COPY{% endhighlight %} 命令将本地文件复制到容器中：</li>
 </ol>
 
-<pre>
-<code>COPY /path/to/local/file /path/inside/container{% endhighlight %}
+{% highlight %}
+{% highlight %}COPY /path/to/local/file /path/inside/container{% endhighlight %}
 
-<p>其中，<code>/path/to/local/file</code> 是本地文件的路径，<code>/path/inside/container</code> 是容器内的路径。</p>
+<p>其中，{% highlight %}/path/to/local/file{% endhighlight %} 是本地文件的路径，{% highlight %}/path/inside/container{% endhighlight %} 是容器内的路径。</p>
 
 <ol start="2">
-	<li>使用 <code>docker cp</code> 命令将本地文件复制到运行中的容器中：</li>
+	<li>使用 {% highlight %}docker cp{% endhighlight %} 命令将本地文件复制到运行中的容器中：</li>
 </ol>
 
-<pre>
-<code>docker cp /path/to/local/file container_name:/path/inside/container{% endhighlight %}
+{% highlight %}
+{% highlight %}docker cp /path/to/local/file container_name:/path/inside/container{% endhighlight %}
 
-<p>其中，<code>/path/to/local/file</code> 是本地文件的路径，<code>container_name</code> 是容器名称，<code>/path/inside/container</code> 是容器内的路径。</p>
+<p>其中，{% highlight %}/path/to/local/file{% endhighlight %} 是本地文件的路径，{% highlight %}container_name{% endhighlight %} 是容器名称，{% highlight %}/path/inside/container{% endhighlight %} 是容器内的路径。</p>
 
 <p>2.进入mysql，选择数据库，备份的恢复</p>
 
 <p>把sql的zip文件解压缩，然后复制到docker</p>
 
-<pre>
-<code>sudo docker cp /opt/app/xxx/xxx_20230130.sql 80018a5fe677:/opt{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo docker cp /opt/app/xxx/xxx_20230130.sql 80018a5fe677:/opt{% endhighlight %}
 
 <p>sudo docker ps(查看msyql的id)</p>
 
-<pre>
-<code>sudo docker ps
+{% highlight %}
+{% highlight %}sudo docker ps
 
 CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
 
@@ -61,11 +61,11 @@ Server version: 5.7.40 MySQL Community Server (GPL)</p>
 
 <p>选择数据库</p>
 
-<pre>
-<code>use xxx;{% endhighlight %}
+{% highlight %}
+{% highlight %}use xxx;{% endhighlight %}
 
 <p>恢复数据：</p>
 
-<pre>
-<code>source /opt/xxx_20230130.sql{% endhighlight %}
+{% highlight %}
+{% highlight %}source /opt/xxx_20230130.sql{% endhighlight %}
 

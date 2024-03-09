@@ -64,7 +64,7 @@ db.CreateInBatches(用户, 100){% endhighlight %}
 &nbsp;&nbsp;&nbsp; return<br />
 }{% endhighlight %}
 
-<p>如果您想跳过 <code>钩子</code> 方法，您可以使用 <code>SkipHooks</code> 会话模式，例如：</p>
+<p>如果您想跳过 {% highlight %}钩子{% endhighlight %} 方法，您可以使用 {% highlight %}SkipHooks{% endhighlight %} 会话模式，例如：</p>
 
 {% highlight %}DB.Session(&amp;gorm.Session{SkipHooks: true}).Create(&amp;user)
 
@@ -74,7 +74,7 @@ DB.Session(&amp;gorm.Session{SkipHooks: true}).CreateInBatches(users, 100){% end
 
 <p id="e3913c"><strong>根据 Map 创建</strong></p>
 
-<p>GORM 支持根据 <code>map[string]interface{}</code> 和 <code>[]map[string]interface{}{}</code> 创建记录，例如：</p>
+<p>GORM 支持根据 {% highlight %}map[string]interface{}{% endhighlight %} 和 {% highlight %}[]map[string]interface{}{}{% endhighlight %} 创建记录，例如：</p>
 
 {% highlight %}db.Model(&amp;User{}).Create(map[string]interface{}{<br />
 &nbsp; &quot;Name&quot;: &quot;jinzhu&quot;, &quot;Age&quot;: 18,<br />

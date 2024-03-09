@@ -4,10 +4,10 @@ title: "react 数组根据列处理数据格式， 显示第2列（map)"
 date: "2023-10-18"
 categories: 
 ---
-<p>在去除第一列的基础上，使用<code>map()</code>函数来提取第二列的元素</p>
+<p>在去除第一列的基础上，使用{% highlight %}map(){% endhighlight %}函数来提取第二列的元素</p>
 
-<pre>
-<code>const data = [
+{% highlight %}
+{% highlight %}const data = [
   [&quot;第n年&quot;, &quot;生产排放因子(factor_production)&quot;, &quot;年度排放因子(factor_by_year)&quot;, &quot;退役排放因子(factor_tui_yi)&quot;],
   [&quot;1&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
   [&quot;2&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],

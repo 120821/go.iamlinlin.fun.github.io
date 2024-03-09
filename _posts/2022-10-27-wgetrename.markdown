@@ -8,8 +8,8 @@ categories:
 
 <p>示例：</p>
 
-<pre>
-<code>wget -cO - https://gist.github.com/chales/11359952/archive/25f48802442b7986070036d214a2a37b8486282d.zip &gt; db-connection-test.zip{% endhighlight %}
+{% highlight %}
+{% highlight %}wget -cO - https://gist.github.com/chales/11359952/archive/25f48802442b7986070036d214a2a37b8486282d.zip &gt; db-connection-test.zip{% endhighlight %}
 
 <p>测试：</p>
 

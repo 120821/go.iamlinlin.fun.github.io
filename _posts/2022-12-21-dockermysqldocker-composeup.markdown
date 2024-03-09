@@ -8,18 +8,18 @@ categories:
 
 <p>1.使用docker安装MySQL：</p>
 
-<pre>
-docker pull mysql:latest</pre>
+{% highlight %}
+docker pull mysql:latest{% endhighlight %}
 
 <p>2.进行配置数据库的内容，把数据库的数据保存到服务器的文件，不然重新启动数据库数据会丢失。</p>
 
 <p>在/opt/app/文件夹下，增加docker-compose.yml，内容如下：</p>
 
-<p><code>version: &#39;3&#39;<br />
-services:</code></p>
+<p>{% highlight %}version: &#39;3&#39;<br />
+services:{% endhighlight %}</p>
 
-<pre>
-<code>&nbsp; mysql5.7:
+{% highlight %}
+{% highlight %}&nbsp; mysql5.7:
 
 &nbsp;&nbsp;&nbsp; container_name: &quot;mysql5.7&quot;
 
@@ -49,6 +49,6 @@ services:</code></p>
 
 <p>3.启动数据库：</p>
 
-<pre>
-<code>sudo docker-compose up{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo docker-compose up{% endhighlight %}
 

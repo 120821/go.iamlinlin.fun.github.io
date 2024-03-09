@@ -8,18 +8,18 @@ categories:
 
 <p>假设,我们有两个页面: &quot;页面1&quot; 和&quot;页面2&quot; , 共同使用一个变量: counter. 页面1对 &quot;counter&quot; + 1 后, 页面2的值也会发生变化.</p>
 
-<p id="1修改packagejson">1.修改<code>package.json</code>:</p>
+<p id="1修改packagejson">1.修改{% highlight %}package.json{% endhighlight %}:</p>
 
-<pre>
-<code>  &quot;dependencies&quot;: {
+{% highlight %}
+{% highlight %}  &quot;dependencies&quot;: {
     &quot;vuex&quot;: &quot;^2.3.1&quot;
   },
 {% endhighlight %}
 
 <p>如果不确定你的 vuex 用什么版本,就先手动安装一下:</p>
 
-<pre>
-<code>$ npm install vuex --verbose
+{% highlight %}
+{% highlight %}$ npm install vuex --verbose
 {% endhighlight %}
 
 <p>然后看安装过来的版本号就可以了.</p>

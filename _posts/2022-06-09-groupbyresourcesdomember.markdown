@@ -42,8 +42,8 @@ categories:
 
 <p style="margin-left:.0001pt">这样也是可以的。那么上边的内容就可以直接换掉</p>
 
-<pre>
-<code>def show
+{% highlight %}
+{% highlight %}def show
  16       render json: {
  17         image: &quot;ipfs://QmQMJX4azuY2yREjprkwEUvX9caSAbPHE8MnwzpzLJungk&quot;,
  18         external_url: &quot;https://www.lueluelue.link/&quot;,
@@ -55,8 +55,8 @@ categories:
  24     end
 {% endhighlight %}
 
-<pre>
-<code>resources :nft_assets, only: [:show] do
+{% highlight %}
+{% highlight %}resources :nft_assets, only: [:show] do
 102       collection do
 103         post :update_nft_assets
 104       end

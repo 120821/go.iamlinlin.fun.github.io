@@ -8,10 +8,10 @@ categories:
 
 <p><strong>查看目录：</strong></p>
 
-<p><code>//进入d盘<br />
+<p>{% highlight %}//进入d盘<br />
 D:<br />
 //进入F盘<br />
-F:</code></p>
+F:{% endhighlight %}</p>
 
 <p><br />
 &nbsp;</p>

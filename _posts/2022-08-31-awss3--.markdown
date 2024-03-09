@@ -8,8 +8,8 @@ categories:
 
 <p>在命令行输入命令：</p>
 
-<pre>
-<code>aws configure{% endhighlight %}
+{% highlight %}
+{% highlight %}aws configure{% endhighlight %}
 
 <p>就可以进行初始化更换bucket，</p>
 
@@ -17,8 +17,8 @@ categories:
 
 <p>然后输入id 和秘钥就可以了。</p>
 
-<pre>
-<code>1.yum -y install python-pip
+{% highlight %}
+{% highlight %}1.yum -y install python-pip
 
 2.pip install awscli
 

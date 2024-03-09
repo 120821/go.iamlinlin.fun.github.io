@@ -36,7 +36,7 @@ categories:
 
 <p>在devise不能直接使用create，需要进行new+save！</p>
 
-<p><code><strong>save!</strong>()</code> <em>public</em></p>
+<p>{% highlight %}<strong>save!</strong>(){% endhighlight %} <em>public</em></p>
 
 <div class="description">
 <p>Saves the model.</p>
@@ -49,7 +49,7 @@ categories:
 
 <p>&nbsp;</p>
 
-<p><code><strong>save</strong>(*args, &amp;block)</code> <em>public</em></p>
+<p>{% highlight %}<strong>save</strong>(*args, &amp;block){% endhighlight %} <em>public</em></p>
 
 <div class="description">
 <p>Saves the model.</p>

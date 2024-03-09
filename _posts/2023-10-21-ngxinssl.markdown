@@ -8,8 +8,8 @@ categories:
 
 <p>申请了阿里云ssl证书后，下载nginx的文件，scp到服务器，然后修改nginx配置，重新启动，就可以访问https:www.linlin.fun</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
   server {
       listen 443;   # 或者 这里 listen 443 ssl, 就不需要下面的ssl on 了。
       server_name www.linlin.fun;

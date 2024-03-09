@@ -10,8 +10,8 @@ categories:
 
 <p>需要处理URL得到ID，可以这样：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">async</span> <span style="color:#00e0e0">fetchData</span>() {
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">async</span> <span style="color:#00e0e0">fetchData</span>() {
   <span style="color:#dcc6e0">try</span> {
     <span style="color:#dcc6e0">const</span> currentURL = <span style="color:#f5ab35">window</span>.location.href;
     <span style="color:#f5ab35">console</span>.log(<span style="color:#abe338">&quot;== currentURL: &quot;</span>, currentURL);

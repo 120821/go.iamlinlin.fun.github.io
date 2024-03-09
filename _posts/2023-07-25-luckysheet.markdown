@@ -10,8 +10,8 @@ categories:
 
 <p>根据官方文档，把script文件的配置修改：</p>
 
-<pre>
-<code>&nbsp; &lt;script&gt;
+{% highlight %}
+{% highlight %}&nbsp; &lt;script&gt;
 
 &nbsp;&nbsp;&nbsp; $(function () {
 

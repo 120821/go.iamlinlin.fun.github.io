@@ -37,7 +37,7 @@ categories:
 <span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="5532">PRIVATE_KEY = &quot;sendor&#39;s metamask private key&quot;</span>
 <span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="fee8">PUBLIC_KEY = &quot;sendor&#39;s metamask wallet address&quot;</span>
 <span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="0dad">CONTRACT_ADDRESS = &quot;deployed contract address&quot;</span>
-<span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="e401">USER_ADDRESS = &quot;recipient&#39;s wallet address&quot;</span></pre>
+<span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="e401">USER_ADDRESS = &quot;recipient&#39;s wallet address&quot;</span>{% endhighlight %}
 
 <p class="nc nd jv bn ne nf ng nh ni nj nk nl nm mc nn no np mg nq nr ns mk nt nu nv kb gy" data-selectable-paragraph="" id="1c24">Create nft-trasnfer.js file</p>
 
@@ -66,12 +66,12 @@ const wallet = new ethers.Wallet(PRIVATE_KEY, provider);</strong></span><span cl
 );</strong></span><span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="8e9a">//Estimate gas limit
 <strong class="pr kf">const gasLimit = await nftContract.estimateGas[&quot;safeTransferFrom(address,address,uint256)&quot;](PUBLIC_KEY, USER_ADDRESS, tokenId, { gasPrice });</strong></span><span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="2838">//Call the safetransfer method
 <strong class="pr kf">const transaction = await nftContract[&quot;safeTransferFrom(address,address,uint256)&quot;](PUBLIC_KEY, USER_ADDRESS, tokenId, { gasLimit });</strong></span><span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="cc3c">//Wait for the transaction to complete
-<strong class="pr kf">await transaction.wait();</strong></span><span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="9d1a"><strong class="pr kf">console.log(&quot;Transaction Hash: &quot;, transaction.hash);</strong></span></pre>
+<strong class="pr kf">await transaction.wait();</strong></span><span class="gy nc nd jv pr b dn pv pw px py pz pt l pu" data-selectable-paragraph="" id="9d1a"><strong class="pr kf">console.log(&quot;Transaction Hash: &quot;, transaction.hash);</strong></span>{% endhighlight %}
 
 <p>运行后是这样的结果:</p>
 
 <pre class="mr ms mt mu hv pp fd pq">
-<span class="gy nc nd jv pr b dn ps pt l pu" data-selectable-paragraph="" id="a830">Transaction Hash: 0xfcfaf0afb6ed3b38ab7583d90a8fd9b10cb0c17c1218c0668c94c33482283c5f</span></pre>
+<span class="gy nc nd jv pr b dn ps pt l pu" data-selectable-paragraph="" id="a830">Transaction Hash: 0xfcfaf0afb6ed3b38ab7583d90a8fd9b10cb0c17c1218c0668c94c33482283c5f</span>{% endhighlight %}
 
 <p><font style="vertical-align:inherit">在 mumbai polygonscan 上</font><a href="https://mumbai.polygonscan.com/">验证交易</a></p>
 

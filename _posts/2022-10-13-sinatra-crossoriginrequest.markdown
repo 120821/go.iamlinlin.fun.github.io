@@ -8,21 +8,21 @@ categories:
 
 <p>安装：在Gemfile增加gem，然后bundle</p>
 
-<pre>
-<code>gem &quot;sinatra-cross_origin&quot;, &quot;~&gt; 0.3.1&quot;{% endhighlight %}
+{% highlight %}
+{% highlight %}gem &quot;sinatra-cross_origin&quot;, &quot;~&gt; 0.3.1&quot;{% endhighlight %}
 
 <p>使用：在app.rb增加这样的内容</p>
 
-<pre>
-<code>require &#39;sinatra&#39;
+{% highlight %}
+{% highlight %}require &#39;sinatra&#39;
 require &#39;sinatra/cross_origin&#39;
 configure do
 &nbsp; enable :cross_origin
 end{% endhighlight %}
 
-<p><code>使用：</code><img height="53" src="/uploads/ckeditor/pictures/586/image-20221013140955-2.png" width="321" /></p>
+<p>{% highlight %}使用：{% endhighlight %}<img height="53" src="/uploads/ckeditor/pictures/586/image-20221013140955-2.png" width="321" /></p>
 
-<p><code>返回结果例如：</code><img height="94" src="/uploads/ckeditor/pictures/587/image-20221013141008-3.png" width="779" /></p>
+<p>{% highlight %}返回结果例如：{% endhighlight %}<img height="94" src="/uploads/ckeditor/pictures/587/image-20221013141008-3.png" width="779" /></p>
 
 <p>&nbsp;</p>
 

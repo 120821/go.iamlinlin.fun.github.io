@@ -8,11 +8,11 @@ categories:
                     <p>docker，如何 只启动container, 不启动命令： cmd: tail -F /dev/null</p> 
 <p>database.yml 文件进行修改即可使用，连接数据库，不然会报错</p> 
 <blockquote> 
- <p>如果没有这个附加命令，当 <code>shuf</code>命令完成，容器将停止。<br> 有了它，容器将保持空闲状态，这使得以后更容易连接到它（ <code>docker exec -it container_name bash</code>).</p> 
- <p><code>tail -f /dev/null</code>是一个无限运行且不使用任何 CPU 的命令，因为无法从中读取任何内容 <code>/dev/null</code>我们要求从中获得无尽的阅读。</p> 
+ <p>如果没有这个附加命令，当 {% highlight %}shuf{% endhighlight %}命令完成，容器将停止。<br> 有了它，容器将保持空闲状态，这使得以后更容易连接到它（ {% highlight %}docker exec -it container_name bash{% endhighlight %}).</p> 
+ <p>{% highlight %}tail -f /dev/null{% endhighlight %}是一个无限运行且不使用任何 CPU 的命令，因为无法从中读取任何内容 {% highlight %}/dev/null{% endhighlight %}我们要求从中获得无尽的阅读。</p> 
  <p><a class="has-card" href="https://github.com/docker/getting-started/issues/201" title="Why run tail -f /dev/null to keep the container running? · Issue #201 · docker/getting-started · GitHub"><span class="link-card-box"><span class="link-title">Why run tail -f /dev/null to keep the container running? · Issue #201 · docker/getting-started · GitHub</span><span class="link-link"><img class="link-link-icon" src="https://csdnimg.cn/release/blog_editor_html/release2.1.3/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=M4AD" alt="icon-default.png?t=M4AD">https://github.com/docker/getting-started/issues/201</span></span></a></p> 
- <p>Without this additional command, when the <code>shuf</code> command is finished, the container will stop.<br> With it, the container will remain idle, which makes it easier to connect to it later (<code>docker exec -it container_name bash</code>).</p> 
- <p><code>tail -f /dev/null</code> is a command that runs endlessly and doesn't use any CPU because nothing can be read from <code>/dev/null</code> and we are asking for an endless read from it.</p> 
+ <p>Without this additional command, when the {% highlight %}shuf{% endhighlight %} command is finished, the container will stop.<br> With it, the container will remain idle, which makes it easier to connect to it later ({% highlight %}docker exec -it container_name bash{% endhighlight %}).</p> 
+ <p>{% highlight %}tail -f /dev/null{% endhighlight %} is a command that runs endlessly and doesn't use any CPU because nothing can be read from {% highlight %}/dev/null{% endhighlight %} and we are asking for an endless read from it.</p> 
 </blockquote> 
 <p>bundle exec rake db:create</p> 
 <p>使用数据库创建的时候出现报错，那么与远程数据库无法连接，查看.toos-versions</p> 

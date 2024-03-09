@@ -12,13 +12,13 @@ categories:
 
 <p>1.安装</p>
 
-<pre>
-<code>go get github.com/stretchr/testify{% endhighlight %}
+{% highlight %}
+{% highlight %}go get github.com/stretchr/testify{% endhighlight %}
 
-<p><code>2. 引入</code></p>
+<p>{% highlight %}2. 引入{% endhighlight %}</p>
 
-<pre>
-<code>
+{% highlight %}
+{% highlight %}
 package yours
 
 import (
@@ -34,8 +34,8 @@ func TestSomething(t *testing.T) {
 
 <p>3.测试</p>
 
-<pre>
-<code>go test{% endhighlight %}
+{% highlight %}
+{% highlight %}go test{% endhighlight %}
 
 <p>&nbsp;</p>
 

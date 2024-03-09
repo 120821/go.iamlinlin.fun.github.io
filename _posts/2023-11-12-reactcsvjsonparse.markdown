@@ -8,8 +8,8 @@ categories:
 
 <p>我使用这样的测试，但是是不可以使用的：</p>
 
-<pre>
-<code>const resultsData = [
+{% highlight %}
+{% highlight %}const resultsData = [
   {&quot;bank_count&quot;: 908, &quot;result&quot;: 18, &quot;year&quot;: 2010},
   {&quot;bank_count&quot;: 953, &quot;result&quot;: 37, &quot;year&quot;: 2011},
   {&quot;bank_count&quot;: 1861, &quot;result&quot;: 56, &quot;year&quot;: 2012},
@@ -33,11 +33,11 @@ resultsData.forEach((result, index) =&gt; {
 });
 
 console.log(formattedResults);
-</code>我发现接口展示的的数据，和React里实际进行处理的数据是不同的：（需要进一步处理）
-</pre>
+{% endhighlight %}我发现接口展示的的数据，和React里实际进行处理的数据是不同的：（需要进一步处理）
+{% endhighlight %}
 
-<pre>
-<code>const rawString = &quot;[{\&quot;bank_count\&quot;:908,\&quot;result\&quot;:18,\&quot;year\&quot;:2010},{\&quot;bank_count\&quot;:953,\&quot;result\&quot;:37,\&quot;year\&quot;:2011},{\&quot;bank_count\&quot;:1861,\&quot;result\&quot;:56,\&quot;year\&quot;:2012},{\&quot;bank_count\&quot;:1906,\&quot;result\&quot;:75,\&quot;year\&quot;:2013},{\&quot;bank_count\&quot;:2814,\&quot;result\&quot;:94,\&quot;year\&quot;:2014},{\&quot;bank_count\&quot;:2859,\&quot;result\&quot;:113,\&quot;year\&quot;:2015},{\&quot;bank_count\&quot;:3767,\&quot;result\&quot;:133,\&quot;year\&quot;:2016},{\&quot;bank_count\&quot;:3812,\&quot;result\&quot;:152,\&quot;year\&quot;:2017},{\&quot;bank_count\&quot;:4720,\&quot;result\&quot;:171,\&quot;year\&quot;:2018},{\&quot;bank_count\&quot;:4765,\&quot;result\&quot;:190,\&quot;year\&quot;:2019},{\&quot;bank_count\&quot;:5673,\&quot;result\&quot;:209,\&quot;year\&quot;:2020}]&quot;;
+{% highlight %}
+{% highlight %}const rawString = &quot;[{\&quot;bank_count\&quot;:908,\&quot;result\&quot;:18,\&quot;year\&quot;:2010},{\&quot;bank_count\&quot;:953,\&quot;result\&quot;:37,\&quot;year\&quot;:2011},{\&quot;bank_count\&quot;:1861,\&quot;result\&quot;:56,\&quot;year\&quot;:2012},{\&quot;bank_count\&quot;:1906,\&quot;result\&quot;:75,\&quot;year\&quot;:2013},{\&quot;bank_count\&quot;:2814,\&quot;result\&quot;:94,\&quot;year\&quot;:2014},{\&quot;bank_count\&quot;:2859,\&quot;result\&quot;:113,\&quot;year\&quot;:2015},{\&quot;bank_count\&quot;:3767,\&quot;result\&quot;:133,\&quot;year\&quot;:2016},{\&quot;bank_count\&quot;:3812,\&quot;result\&quot;:152,\&quot;year\&quot;:2017},{\&quot;bank_count\&quot;:4720,\&quot;result\&quot;:171,\&quot;year\&quot;:2018},{\&quot;bank_count\&quot;:4765,\&quot;result\&quot;:190,\&quot;year\&quot;:2019},{\&quot;bank_count\&quot;:5673,\&quot;result\&quot;:209,\&quot;year\&quot;:2020}]&quot;;
 
 // 解析原始字符串为JavaScript对象
 const parsedObject = JSON.parse(rawString);
@@ -49,8 +49,8 @@ const resultsArray = Array.isArray(parsedObject) ? parsedObject : [];
 const jsonString = JSON.stringify(resultsArray);
 
 console.log(jsonString);
-</code>
-</pre>
+{% endhighlight %}
+{% endhighlight %}
 
 <p>&nbsp;</p>
 

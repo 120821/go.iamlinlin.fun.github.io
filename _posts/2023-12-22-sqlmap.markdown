@@ -18,13 +18,13 @@ categories:
 
 <p>4.进行测试</p>
 
-<pre>
-<code>python3 sqlmap.py -r test_linlinfun_blog_show -v 3 --string=&#39;&quot;code&quot;:0&#39;{% endhighlight %}
+{% highlight %}
+{% highlight %}python3 sqlmap.py -r test_linlinfun_blog_show -v 3 --string=&#39;&quot;code&quot;:0&#39;{% endhighlight %}
 
 <p>返回结果：</p>
 
-<pre>
-<code>[<span style="color:#ffa07a">15:29:50</span>] [<span style="color:#ffa07a">DEBUG</span>] skipping test <span style="color:#abe338">&#39;PostgreSQL</span> &gt; <span style="color:#f5ab35">8.1</span> time-based blind - ORDER BY, GROUP BY clause&#39; because the level (<span style="color:#ffa07a">3</span>) is higher than the provided (<span style="color:#ffa07a">1</span>)
+{% highlight %}
+{% highlight %}[<span style="color:#ffa07a">15:29:50</span>] [<span style="color:#ffa07a">DEBUG</span>] skipping test <span style="color:#abe338">&#39;PostgreSQL</span> &gt; <span style="color:#f5ab35">8.1</span> time-based blind - ORDER BY, GROUP BY clause&#39; because the level (<span style="color:#ffa07a">3</span>) is higher than the provided (<span style="color:#ffa07a">1</span>)
 [<span style="color:#ffa07a">15:29:50</span>] [<span style="color:#ffa07a">DEBUG</span>] skipping test <span style="color:#abe338">&#39;PostgreSQL</span> time-based blind - ORDER BY, GROUP BY clause (<span style="color:#ffa07a">heavy</span> query)&#39; because the risk (<span style="color:#ffa07a">2</span>) is higher than the provided (<span style="color:#ffa07a">1</span>)
 [<span style="color:#ffa07a">15:29:50</span>] [<span style="color:#ffa07a">DEBUG</span>] skipping test <span style="color:#abe338">&#39;Microsoft</span> SQL Server/Sybase time-based blind - ORDER BY clause (<span style="color:#ffa07a">heavy</span> query)&#39; because the risk (<span style="color:#ffa07a">2</span>) is higher than the provided (<span style="color:#ffa07a">1</span>)
 [<span style="color:#ffa07a">15:29:50</span>] [<span style="color:#ffa07a">DEBUG</span>] skipping test <span style="color:#abe338">&#39;Oracle</span> time-based blind - ORDER BY, GROUP BY clause (<span style="color:#ffa07a">DBMS_LOCK.SLEEP</span>)&#39; because the level (<span style="color:#ffa07a">3</span>) is higher than the provided (<span style="color:#ffa07a">1</span>)
@@ -106,5 +106,5 @@ categories:
 [<span style="color:#f5ab35">*</span>] ending @ <span style="color:#f5ab35">15</span>:<span style="color:#f5ab35">29</span>:<span style="color:#f5ab35">51</span> /<span style="color:#f5ab35">2023</span><span style="color:#f5ab35">-12</span><span style="color:#f5ab35">-22</span>/
 {% endhighlight %}
 
-<p>可以看到结果提示，&ldquo;<code>[<span style="color:#ffa07a">CRITICAL</span>] all tested parameters do not appear to be injectable. </code>&rdquo;所有的测试已经结束，没有可以注入的点。</p>
+<p>可以看到结果提示，&ldquo;{% highlight %}[<span style="color:#ffa07a">CRITICAL</span>] all tested parameters do not appear to be injectable. {% endhighlight %}&rdquo;所有的测试已经结束，没有可以注入的点。</p>
 

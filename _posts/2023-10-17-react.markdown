@@ -6,8 +6,8 @@ categories:
 ---
 <p>在列表页面增加所属材料列，不考虑数据，可以现在column里增加：</p>
 
-<pre>
-<code>{
+{% highlight %}
+{% highlight %}{
     title: &#39;所属材料&#39;,
     dataIndex: &#39;materials&#39;,
     key: &#39;materials&#39;
@@ -15,8 +15,8 @@ categories:
 
 <p>然后得到数据，处理数据：</p>
 
-<pre>
-<code>state = {
+{% highlight %}
+{% highlight %}state = {
   data: [],
   materialData: [], // 添加materialData属性
   loading: true,
@@ -28,8 +28,8 @@ categories:
 <p><span style="font-family:monospace">接口中得到数据：</span><br />
 &nbsp;</p>
 
-<pre>
-<code>async fetchMaterialsData() {
+{% highlight %}
+{% highlight %}async fetchMaterialsData() {
   try {
     const response = await axios.get(`${Config.BASE_URL}/api/v1/all_materials`, {
       withCredentials: true
@@ -46,8 +46,8 @@ categories:
 
 <p>以及和列表页面的数据关联：</p>
 
-<pre>
-<code>async fetchData(page = 1) {
+{% highlight %}
+{% highlight %}async fetchData(page = 1) {
   try {
     const response = await axios.get(`${Config.BASE_URL}/api/v1/calculation_results?page=${page}`, {
       withCredentials: true
@@ -77,10 +77,10 @@ categories:
   }
 }{% endhighlight %}
 
-<p><code>增加一个函数，用来把材料的ID和名称进行匹配：</code></p>
+<p>{% highlight %}增加一个函数，用来把材料的ID和名称进行匹配：{% endhighlight %}</p>
 
-<pre>
-<code>getMaterialName(materialIds) {
+{% highlight %}
+{% highlight %}getMaterialName(materialIds) {
   const { materialData } = this.state;
   const material = materialData.find((item) =&gt; item.id === materialIds[0]);
   return material ? material.name : &#39;&#39;;
@@ -88,8 +88,8 @@ categories:
 
 <p>修改数据：</p>
 
-<pre>
-<code>const columns = [
+{% highlight %}
+{% highlight %}const columns = [
   // ...
   {
     title: &#39;所属材料&#39;,
@@ -102,8 +102,8 @@ categories:
 <p>考虑到材料是多个（数组），可以修改函数：<br />
 &nbsp;</p>
 
-<pre>
-<code>getMaterialName(materialIds) {
+{% highlight %}
+{% highlight %}getMaterialName(materialIds) {
   const { materialData } = this.state;
   const materialNames = materialIds.map(materialId =&gt; {
     const material = materialData.find(item =&gt; item.id === materialId);

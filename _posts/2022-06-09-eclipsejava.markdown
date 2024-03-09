@@ -22,10 +22,10 @@ categories:
 </blockquote> 
 <p>192.168.1.4</p> 
 <p>然后直接运行命令</p> 
-<pre>export HTTP_PROXY="http://192.168.1.4:8080"
+{% highlight %}export HTTP_PROXY="http://192.168.1.4:8080"
 export HTTPS_PROXY="http://192.168.1.4:8080"
 export http_proxy="http://192.168.1.4:8080"
-export https_proxy="http://192.168.1.4:8080"</pre> 
+export https_proxy="http://192.168.1.4:8080"{% endhighlight %} 
 <p><img alt="" height="1080" src="https://img-blog.csdnimg.cn/fca965d4d7294356886a63c26be32978.png" width="1200"></p> 
 <p>  ctrl +鼠标左键 点击 某个变量，就可以看到该变量的出处</p>
                 

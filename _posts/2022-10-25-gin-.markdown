@@ -38,8 +38,8 @@ categories:
 
 <p>使用时需要引入包：</p>
 
-<pre>
-<code>import (
+{% highlight %}
+{% highlight %}import (
 
 &nbsp; &quot;github.com/gin-gonic/gin&quot;
 
@@ -49,7 +49,7 @@ categories:
 
 ){% endhighlight %}
 
-<p><code>不然会报错：</code><img height="122" src="/uploads/ckeditor/pictures/630/image-20221025100929-1.png" width="704" /></p>
+<p>{% highlight %}不然会报错：{% endhighlight %}<img height="122" src="/uploads/ckeditor/pictures/630/image-20221025100929-1.png" width="704" /></p>
 
 <p>设置好后，刷新页面就会在log显示时间：</p>
 
@@ -62,17 +62,17 @@ categories:
 <p>2.1：引入</p>
 
 <pre class="highlight go">
-<code><span class="k">import</span> <span class="p">(</span>
+{% highlight %}<span class="k">import</span> <span class="p">(</span>
     <span class="s">&quot;log&quot;</span>
     <span class="s">&quot;log/syslog&quot;</span>
     <span class="s">&quot;os&quot;</span>
 <span class="p">)</span>
 {% endhighlight %}
 
-<p><code>增加log设置：</code></p>
+<p>{% highlight %}增加log设置：{% endhighlight %}</p>
 
 <pre class="highlight go">
-<code><span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+{% highlight %}<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="c">// log to custom file</span>
     <span class="n">LOG_FILE</span> <span class="o">:=</span> <span class="s">&quot;/tmp/myapp_log&quot;</span>
     <span class="c">// open log file</span>
@@ -91,10 +91,10 @@ categories:
     <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">&quot;Logging to custom file&quot;</span><span class="p">)</span>
 <span class="p">}</span>{% endhighlight %}
 
-<p><code><span class="p">运行：</span></code></p>
+<p>{% highlight %}<span class="p">运行：</span>{% endhighlight %}</p>
 
 <pre class="highlight shell">
-<code><span class="nb">tail</span> <span class="nt">-f</span> /tmp/myapp_log{% endhighlight %}
+{% highlight %}<span class="nb">tail</span> <span class="nt">-f</span> /tmp/myapp_log{% endhighlight %}
 
 <p><img height="74" src="/uploads/ckeditor/pictures/632/image-20221025101653-1.png" width="767" /></p>
 

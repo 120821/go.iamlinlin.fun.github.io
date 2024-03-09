@@ -10,8 +10,8 @@ categories:
 
 <p>(条件运算&amp;&amp;可以进行确定只有不是&lsquo;&rsquo;而且不是null才会渲染匹配结果）</p>
 
-<pre>
-<code>mport React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}mport React from &#39;react&#39;;
 
 function MyComponent() {
   const string = &#39;Hello, 12345 World!&#39;;
@@ -31,8 +31,8 @@ function MyComponent() {
 
 <p>例如， 在router中有这样的路由：</p>
 
-<pre>
-<code>{&nbsp; &nbsp;
+{% highlight %}
+{% highlight %}{&nbsp; &nbsp;
 
 &nbsp; path: &#39;/edit_users/:id&#39;,
 
@@ -44,8 +44,8 @@ function MyComponent() {
 
 <p>在配置Antd标签的时候，就可以这样：</p>
 
-<pre>
-<code>&nbsp; {
+{% highlight %}
+{% highlight %}&nbsp; {
 
 &nbsp;&nbsp;&nbsp; id: &quot;/edit_users/:id&quot;,
 
@@ -59,8 +59,8 @@ function MyComponent() {
 
 <p>然后在匹配标签的时候修改一下匹配的条件判断：</p>
 
-<pre>
-<code>const returnName = (data, value)=&gt;{
+{% highlight %}
+{% highlight %}const returnName = (data, value)=&gt;{
 
 &nbsp; let name = &#39;&#39;
 

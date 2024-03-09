@@ -12,14 +12,14 @@ categories:
 
 <p><font style="vertical-align:inherit">这是我们的文件夹结构。 </font></p>
 
-<pre>
-<code>├── Import.sol
+{% highlight %}
+{% highlight %}├── Import.sol
 └── Foo.sol
 {% endhighlight %}
 
 <p><font style="vertical-align:inherit">foo.sol </font></p>
 
-<pre>
+{% highlight %}
 <code class="language-solidity">// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
@@ -41,7 +41,7 @@ contract Foo {
 
 <p><font style="vertical-align:inherit">import.sol </font></p>
 
-<pre>
+{% highlight %}
 <code class="language-solidity">// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 

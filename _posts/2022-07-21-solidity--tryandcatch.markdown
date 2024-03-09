@@ -6,13 +6,13 @@ categories:
 ---
 <p>https://solidity-by-example.org/try-catch/</p>
 
-<p><code>try / catch</code> can only catch errors from external function calls and contract creation.</p>
+<p>{% highlight %}try / catch{% endhighlight %} can only catch errors from external function calls and contract creation.</p>
 
 <div class="App_main__nhgh3">
 <div class="Example_component__4Fiv8">
 <div class="Example_content__6NsNh">
 <div>
-<p><code>try / catch</code><font style="vertical-align:inherit">只能从外部函数调用和合约创建中捕获错误。 </font></p>
+<p>{% highlight %}try / catch{% endhighlight %}<font style="vertical-align:inherit">只能从外部函数调用和合约创建中捕获错误。 </font></p>
 
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>

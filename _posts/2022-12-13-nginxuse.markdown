@@ -6,18 +6,18 @@ categories:
 ---
 <p>nginx 启动(任意目录下）：/p&gt;</p>
 
-<pre>
-<code>nginx{% endhighlight %}
+{% highlight %}
+{% highlight %}nginx{% endhighlight %}
 
 <p>NGINX 停止（任意目录下）/p&gt;</p>
 
-<pre>
-<code>nginx -s stop{% endhighlight %}
+{% highlight %}
+{% highlight %}nginx -s stop{% endhighlight %}
 
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px"><code>nginx 配置文件：</code></div>
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">{% highlight %}nginx 配置文件：{% endhighlight %}</div>
 
-<pre>
-<code>cd /etc/nginx
+{% highlight %}
+{% highlight %}cd /etc/nginx
 
 cat nginx.conf
 
@@ -135,8 +135,8 @@ upstream linlin_fun_server{
 
 <p>然后在sites-enabled/文件夹内创建子文件，可以使用域名进行命名：</p>
 
-<pre>
-<code>cd /etc/nginx/sites-enabled#
+{% highlight %}
+{% highlight %}cd /etc/nginx/sites-enabled#
 
 cat linlin.fun
 
@@ -196,8 +196,8 @@ upstream linlin_fun_server{
 
 <p>子域名也使用域名进行命名</p>
 
-<pre>
-<code> cat hi.linlin.fun
+{% highlight %}
+{% highlight %} cat hi.linlin.fun
 
 server {
 

@@ -8,7 +8,7 @@ categories:
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="n">在路由使用fliter
+{% highlight %}<span class="n">在路由使用fliter
 before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span class="sr">/Songbird/</span> <span class="k">do</span>
   <span class="c1"># ...</span>
 <span class="k">end</span>
@@ -18,11 +18,11 @@ before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span 
 <span class="k">end</span>
 {% endhighlight %}
 
-<p><code>例如：</code></p>
+<p>{% highlight %}例如：{% endhighlight %}</p>
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="n">before</span> <span class="k">do</span>
+{% highlight %}<span class="n">before</span> <span class="k">do</span>
   <span class="vi">@note</span> <span class="o">=</span> <span class="s1">&#39;Hi!&#39;</span>
   <span class="n">request</span><span class="p">.</span><span class="nf">path_info</span> <span class="o">=</span> <span class="s1">&#39;/foo/bar/baz&#39;</span>
 <span class="k">end</span>
@@ -33,11 +33,11 @@ before</span> <span class="ss">:agent</span> <span class="o">=&gt;</span> <span 
 <span class="k">end</span>
 {% endhighlight %}
 
-<p><code><span class="k">或者进行身份验证：</span></code></p>
+<p>{% highlight %}<span class="k">或者进行身份验证：</span>{% endhighlight %}</p>
 
 <div class="language-ruby highlighter-rouge">
 <pre class="highlight">
-<code><span class="n">before</span> <span class="s1">&#39;/protected/*&#39;</span> <span class="k">do</span>
+{% highlight %}<span class="n">before</span> <span class="s1">&#39;/protected/*&#39;</span> <span class="k">do</span>
   <span class="n">authenticate!</span>
 <span class="k">end</span>
 

@@ -6,7 +6,7 @@ categories:
 ---
 <p><a href="https://caddyserver.com/docs/build">https://caddyserver.com/docs/build</a></p>
 
-<pre>
+{% highlight %}
 <code class="cmd bash">获得资源
 git clone &quot;https://github.com/caddyserver/caddy.git&quot;{% endhighlight %}
 
@@ -22,10 +22,10 @@ git clone &quot;https://github.com/caddyserver/caddy.git&quot;{% endhighlight %}
 
 <p><a href="https://gist.github.com/nikhita/432436d570b89cab172dcf2894465753">可以删除本地的go：</a></p>
 
-<pre>
-<code>sudo rm -rf /usr/local/go{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo rm -rf /usr/local/go{% endhighlight %}
 
-<p><code><a href="https://tecadmin.net/install-go-on-ubuntu/">安装1.17</a>：</code>wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz</p>
+<p>{% highlight %}<a href="https://tecadmin.net/install-go-on-ubuntu/">安装1.17</a>：{% endhighlight %}wget https://dl.google.com/go/go1.17.7.linux-amd64.tar.gz</p>
 
 <p>解压缩：sudo tar -xvf go1.17.7.linux-amd64.tar.gz</p>
 
@@ -33,7 +33,7 @@ git clone &quot;https://github.com/caddyserver/caddy.git&quot;{% endhighlight %}
 
 <p><img height="97" src="/uploads/ckeditor/pictures/600/image-20221021111321-2.png" width="501" /></p>
 
-<p><code>服务器上的go是在这个文件夹：</code>usr/bin/go</p>
+<p>{% highlight %}服务器上的go是在这个文件夹：{% endhighlight %}usr/bin/go</p>
 
 <p>那么进行替换即可</p>
 

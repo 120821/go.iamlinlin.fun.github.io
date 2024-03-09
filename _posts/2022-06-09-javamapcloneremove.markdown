@@ -7,7 +7,7 @@ categories:
 
                     <p>java clone</p> 
 <p>使用clone 可以复制原来的map，即使在map经过了remove，也可以保证输出map原来的数据。</p> 
-<pre><code class="language-java">package java_test;
+{% highlight %}<code class="language-java">package java_test;
 
 import java.util.HashMap;
 
@@ -30,7 +30,7 @@ public class hashmap {
 
 }{% endhighlight %} 
 <p>在使用getter和setter方法的时候，要保证数据类型完整，需要的person数据要有定义。注意一般使用大写，便于区分。</p> 
-<pre><code class="language-java">package java_test;
+{% highlight %}<code class="language-java">package java_test;
 
 public class Person {
 	int age;
@@ -62,7 +62,7 @@ public class Person {
 }
 {% endhighlight %} 
 <p>在test页面就可以调用。person数据类型。调用方法是没有顺序之分的，因为在使用方法之前，java会读取所有的class内容，然后再进行编译， 进而调用。</p> 
-<pre><code class="language-java">package java_test;
+{% highlight %}<code class="language-java">package java_test;
 
 public class test {
 	public static void main(String[]args){

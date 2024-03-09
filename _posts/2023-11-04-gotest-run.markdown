@@ -10,8 +10,8 @@ categories:
 
 <p>例如测试A B：</p>
 
-<pre>
-<code>package main
+{% highlight %}
+{% highlight %}package main
 
 import (
     &quot;testing&quot;
@@ -28,11 +28,11 @@ func TestB(t *testing.T) {
 
 <p>如果都测试使用：</p>
 
-<pre>
-<code>go test{% endhighlight %}
+{% highlight %}
+{% highlight %}go test{% endhighlight %}
 
 <p>如果仅仅测试其中一个：</p>
 
-<pre>
-<code>go test -run B{% endhighlight %}
+{% highlight %}
+{% highlight %}go test -run B{% endhighlight %}
 

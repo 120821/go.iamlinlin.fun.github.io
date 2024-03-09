@@ -35,7 +35,7 @@ window.onload = function(){<br />
       rpcUrls: [&#39;https://api.avax-test.network/ext/bc/C/rpc&#39;],     blockExplorerUrls: [&#39;https://cchain.explorer.avax-test.network/&#39;]
 }]
 })
-}}</span></pre>
+}}</span>{% endhighlight %}
 
 <p>第二种&lt;html&gt;<br />
 &lt;head&gt;<br />

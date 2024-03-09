@@ -8,8 +8,8 @@ categories:
 
 <p>单行注释以 # 开头</p>
 
-<pre>
-<code># 这是一个注释
+{% highlight %}
+{% highlight %}# 这是一个注释
 
 print(&quot;Hello, World!&quot;)
 

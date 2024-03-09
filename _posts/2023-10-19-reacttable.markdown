@@ -6,8 +6,8 @@ categories:
 ---
 <p>react我有这样的数据：</p>
 
-<pre>
-<code>processedData[&#39;scrapDischargeRateDefaultData&#39;]:  
+{% highlight %}
+{% highlight %}processedData[&#39;scrapDischargeRateDefaultData&#39;]:  
 Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;], (<span style="color:#f5ab35">4</span>) [&hellip;] ]
 ​
 <span style="color:#f5ab35">0</span>: Array(<span style="color:#f5ab35">4</span>) [ <span style="color:#abe338">&quot;&quot;</span>, <span style="color:#abe338">&quot;R888&quot;</span>, <span style="color:#abe338">&quot;R41022&quot;</span>, &hellip; ]
@@ -26,12 +26,12 @@ Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</sp
 ​
 <span style="color:#f5ab35">7</span>: Array(<span style="color:#f5ab35">4</span>) [ <span style="color:#f5ab35">2028</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, <span style="color:#abe338">&quot;0.16&quot;</span>, &hellip; ]{% endhighlight %}
 
-<p><code>我需要写一个table来展示每个元素，但是不能动态展示，因为元素之间需要有其他内容，</code></p>
+<p>{% highlight %}我需要写一个table来展示每个元素，但是不能动态展示，因为元素之间需要有其他内容，{% endhighlight %}</p>
 
-<p><code>首先定义table：</code></p>
+<p>{% highlight %}首先定义table：{% endhighlight %}</p>
 
-<pre>
-<code>const CustomTable = ({ data, columns }) =&gt; {
+{% highlight %}
+{% highlight %}const CustomTable = ({ data, columns }) =&gt; {
   return (
     &lt;div&gt;
       &lt;table className=&quot;custom-table&quot;&gt;
@@ -55,13 +55,13 @@ Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</sp
     &lt;/div&gt;
   );
 };
-</code>然后定义数据源：
-</pre>
+{% endhighlight %}然后定义数据源：
+{% endhighlight %}
 
 <p>例如这样使用：</p>
 
-<pre>
-<code>const MyComponent = () =&gt; {
+{% highlight %}
+{% highlight %}const MyComponent = () =&gt; {
   const processedData = {
     scrapDischargeRateDefaultData: [
       [&quot;Year&quot;, &quot;Value 1&quot;, &quot;Value 2&quot;, &quot;Value 3&quot;],
@@ -91,10 +91,10 @@ Array(<span style="color:#f5ab35">8</span>) [ (<span style="color:#f5ab35">4</sp
   );
 };{% endhighlight %}
 
-<p><code>在render中，注意使用的时候需要判断是否已经从接口得到了数据：</code></p>
+<p>{% highlight %}在render中，注意使用的时候需要判断是否已经从接口得到了数据：{% endhighlight %}</p>
 
-<pre>
-<code>let factorProductionTableData = [[]]
+{% highlight %}
+{% highlight %}let factorProductionTableData = [[]]
 
 let factorByYearTableData = [[]]
 
@@ -112,8 +112,8 @@ if (processedData &amp;&amp; processedData[&#39;factorProductionDefaultData&#39;
 
 <p>在使用的时候，把第一行删除，使用第一行做header：</p>
 
-<pre>
-<code>&lt;CustomTable
+{% highlight %}
+{% highlight %}&lt;CustomTable
 
 &nbsp; data={factorTuiYiTableData.slice(1)}
 

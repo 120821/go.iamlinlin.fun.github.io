@@ -8,20 +8,20 @@ categories:
 
 <p>有这样的语句就是类组件：</p>
 
-<pre>
-<code>export <span style="color:#dcc6e0">default</span> <span style="color:#dcc6e0">class</span> <span style="color:#00e0e0">ShowResultAsMap</span> <span style="color:#dcc6e0">extends</span> <span style="color:#00e0e0">Component</span> {{% endhighlight %}
+{% highlight %}
+{% highlight %}export <span style="color:#dcc6e0">default</span> <span style="color:#dcc6e0">class</span> <span style="color:#00e0e0">ShowResultAsMap</span> <span style="color:#dcc6e0">extends</span> <span style="color:#00e0e0">Component</span> {{% endhighlight %}
 
 <p>函数组件示例：</p>
 
-<pre>
-<code>function FunctionComponent(props) {
+{% highlight %}
+{% highlight %}function FunctionComponent(props) {
   return &lt;div&gt;Hello, {props.name}!&lt;/div&gt;;
 }{% endhighlight %}
 
-<p><code>类组件示例：</code></p>
+<p>{% highlight %}类组件示例：{% endhighlight %}</p>
 
-<pre>
-<code>class ClassComponent extends React.Component {
+{% highlight %}
+{% highlight %}class ClassComponent extends React.Component {
   render() {
     return &lt;div&gt;Hello, {this.props.name}!&lt;/div&gt;;
   }
@@ -29,8 +29,8 @@ categories:
 
 <p>使用useState的函数组件完整示例：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">import</span> React, { useState } <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;react&#39;</span>;
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">import</span> React, { useState } <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;react&#39;</span>;
 
 <span style="color:#dcc6e0">function</span> <span style="color:#00e0e0">MyComponent</span>() {
   <span style="color:#dcc6e0">const</span> [count, setCount] = useState(<span style="color:#f5ab35">0</span>);

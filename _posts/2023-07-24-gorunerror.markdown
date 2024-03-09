@@ -6,8 +6,8 @@ categories:
 ---
 <p>运行go run main.go的时候出现了错误：</p>
 
-<pre>
-<code>routers/api/v1/verification_code.go:10:2: github.com/aliyun/alibaba-cloud-sdk-go@v1.62.429: Get &quot;https://proxy.golang.org/github.com/aliyun/alibaba-cloud-sdk-go/@v/v1.62.429.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout
+{% highlight %}
+{% highlight %}routers/api/v1/verification_code.go:10:2: github.com/aliyun/alibaba-cloud-sdk-go@v1.62.429: Get &quot;https://proxy.golang.org/github.com/aliyun/alibaba-cloud-sdk-go/@v/v1.62.429.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout
 
 routers/api/auth.go:7:2: github.com/astaxie/beego@v1.12.3: Get &quot;https://proxy.golang.org/github.com/astaxie/beego/@v/v1.12.3.zip&quot;: dial tcp 142.251.42.241:443: i/o timeout
 
@@ -37,13 +37,13 @@ pkg/util/pagination.go:6:2: github.com/unknwon/com@v1.0.1: Get &quot;https://pro
 
 <p>增加：</p>
 
-<pre>
-<code>export GOPROXY=https://goproxy.io{% endhighlight %}
+{% highlight %}
+{% highlight %}export GOPROXY=https://goproxy.io{% endhighlight %}
 
 <p>然后</p>
 
-<pre>
-<code>source ~/.bashrc{% endhighlight %}
+{% highlight %}
+{% highlight %}source ~/.bashrc{% endhighlight %}
 
 <p>重新运行即可</p>
 

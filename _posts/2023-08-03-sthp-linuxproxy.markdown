@@ -8,8 +8,8 @@ categories:
 
 <p>1.先到GitHub下载需要的sthp,在assets里找到自己需要的版本。</p>
 
-<pre>
-<code>https://github.com/KaranGauswami/socks-to-http-proxy/releases
+{% highlight %}
+{% highlight %}https://github.com/KaranGauswami/socks-to-http-proxy/releases
 
 /Downloads$ ll | grep sthp
 
@@ -18,15 +18,15 @@ categories:
 <p>2.我下载了linux版本的，进行安装：<br />
 首先变为可执行的文件</p>
 
-<pre>
-<code>chmod +x sthp-linux
+{% highlight %}
+{% highlight %}chmod +x sthp-linux
 
 ./sthp-linux{% endhighlight %}
 
 <p>已经可以执行，设置端口号等配置，使用自己喜欢的端口：</p>
 
-<pre>
-<code>~/Downloads$ chmod +x sthp-linux
+{% highlight %}
+{% highlight %}~/Downloads$ chmod +x sthp-linux
 
 linlin@linlin-i5:~/Downloads$ ./sthp-linux
 
@@ -38,8 +38,8 @@ Location: /home/runner/.cargo/registry/src/index.crates.io-6f17d22bba15001f/hype
 
 <p>查看本地的trojan的端口：</p>
 
-<pre>
-<code>lsof -i:1090
+{% highlight %}
+{% highlight %}lsof -i:1090
 
 COMMAND&nbsp;&nbsp;&nbsp; PID&nbsp;&nbsp; USER&nbsp;&nbsp; FD&nbsp;&nbsp; TYPE&nbsp;&nbsp; DEVICE SIZE/OFF NODE NAME
 
@@ -57,40 +57,40 @@ trojan&nbsp;&nbsp;&nbsp; 5250 linlin&nbsp;&nbsp; 45u&nbsp; IPv4 12298435&nbsp;&n
 
 <p>设置端口：启动sthp:</p>
 
-<pre>
-<code>~/Downloads$ ./sthp-linux&nbsp; -p 8090 -s 127.0.0.1:1090{% endhighlight %}
+{% highlight %}
+{% highlight %}~/Downloads$ ./sthp-linux&nbsp; -p 8090 -s 127.0.0.1:1090{% endhighlight %}
 
 <p>写一个文件：~/env_source_env</p>
 
 <p>内容：</p>
 
-<pre>
-<code>&nbsp;&nbsp; <code>export HTTP_PROXY=&quot;http://127.0.0.1:8090&quot;
+{% highlight %}
+{% highlight %}&nbsp;&nbsp; {% highlight %}export HTTP_PROXY=&quot;http://127.0.0.1:8090&quot;
 
 &nbsp;&nbsp; export HTTPS_PROXY=&quot;http://127.0.0.1:8090&quot;
 
 &nbsp;&nbsp; export http_proxy=&quot;http://127.0.0.1:8090&quot;
 
-&nbsp;&nbsp; export https_proxy=&quot;http://127.0.0.1:8090&quot;</code>{% endhighlight %}
+&nbsp;&nbsp; export https_proxy=&quot;http://127.0.0.1:8090&quot;{% endhighlight %}{% endhighlight %}
 
-<p><code>打开一个新的命令行窗口：</code></p>
+<p>{% highlight %}打开一个新的命令行窗口：{% endhighlight %}</p>
 
-<pre>
-<code><code>echo $HTTP_PROXY</code>{% endhighlight %}
+{% highlight %}
+{% highlight %}{% highlight %}echo $HTTP_PROXY{% endhighlight %}{% endhighlight %}
 
-<p><code>返回空，</code></p>
+<p>{% highlight %}返回空，{% endhighlight %}</p>
 
-<pre>
-<code><code>source ~/env_source_env
+{% highlight %}
+{% highlight %}{% highlight %}source ~/env_source_env
 
 linlin@linlin-i5:/workspace/dongtaipaifang_2_backend$ echo $HTTP_PROXY
 
-http://127.0.0.1:8090</code>{% endhighlight %}
+http://127.0.0.1:8090{% endhighlight %}{% endhighlight %}
 
-<p><code>这个时候，访问谷歌就非常快了，安装go react的依赖也会非常快。不会出现timeout的情况。</code></p>
+<p>{% highlight %}这个时候，访问谷歌就非常快了，安装go react的依赖也会非常快。不会出现timeout的情况。{% endhighlight %}</p>
 
-<pre>
-<code><code>curl google.com
+{% highlight %}
+{% highlight %}{% highlight %}curl google.com
 
 &lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
 
@@ -102,20 +102,20 @@ The document has moved
 
 &lt;A HREF=&quot;http://www.google.com/&quot;&gt;here&lt;/A&gt;.
 
-&lt;/BODY&gt;&lt;/HTML&gt;</code>{% endhighlight %}
+&lt;/BODY&gt;&lt;/HTML&gt;{% endhighlight %}{% endhighlight %}
 
-<p><code>安装或者运行go</code></p>
+<p>{% highlight %}安装或者运行go{% endhighlight %}</p>
 
-<pre>
-<code><code>go run main.go
+{% highlight %}
+{% highlight %}{% highlight %}go run main.go
 
 go: downloading github.com/gin-gonic/gin v1.9.1
 
 go: downloading github.com/gin-contrib/cors v1.4.0
 
-go: downloading github.com/go-ini/ini v1.67.0</code>
+go: downloading github.com/go-ini/ini v1.67.0{% endhighlight %}
 
 &nbsp;{% endhighlight %}
 
-<p><code>&nbsp;</code></p>
+<p>{% highlight %}&nbsp;{% endhighlight %}</p>
 

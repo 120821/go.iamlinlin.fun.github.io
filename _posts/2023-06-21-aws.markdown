@@ -13,10 +13,10 @@ categories:
 	<li>
 	<p>使用您保存的.pem私钥文件将您的AWS服务器用户名和公共IPv4地址（或域名）与SSH命令结合使用。命令示例：</p>
 
-	<pre>
-<code>ssh -i /path/to/your/key.pem username@public-ip-address{% endhighlight %}
+	{% highlight %}
+{% highlight %}ssh -i /path/to/your/key.pem username@public-ip-address{% endhighlight %}
 
-	<p>在上述命令中，将<code>/path/to/your/key.pem</code>替换为您保存的.pem私钥文件的路径，<code>username</code>替换为您的AWS服务器用户名，<code>public-ip-address</code>替换为您的AWS服务器的公共IPv4地址或域名。</p>
+	<p>在上述命令中，将{% highlight %}/path/to/your/key.pem{% endhighlight %}替换为您保存的.pem私钥文件的路径，{% highlight %}username{% endhighlight %}替换为您的AWS服务器用户名，{% highlight %}public-ip-address{% endhighlight %}替换为您的AWS服务器的公共IPv4地址或域名。</p>
 
 	<p>注意：请确保.pem私钥文件的权限为600（仅所有者可读写）。</p>
 	</li>

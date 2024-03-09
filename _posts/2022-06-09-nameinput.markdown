@@ -9,7 +9,7 @@ categories:
  <p>name属性可能是&lt;input&gt;元素最重要的属性。它不是验证的严格要求，但永远不应该忽略它。当表单提交到服务器时，表单中的数据将包含在HTTP请求中。数据打包为一系列名称-值对。每个名称-值对的名称是每个输入的名称属性，值是用户输入（或预先指定）的值。如果没有name属性，&lt;input&gt;元素无法在表单提交时向服务器提供其值。</p> 
  <p>作用：指定输入元素的名称。提交表单时，每个输入元素的名称和值都包含在HTTP请求中。</p> 
 </blockquote> 
-<pre><code class="language-html">&lt;%= form_for @domain do |f| %&gt;
+{% highlight %}<code class="language-html">&lt;%= form_for @domain do |f| %&gt;
   4 
   5   &lt;form action="/domains" method="POST"&gt;
   6     name&lt;input type="text" name="domain[name]" value=""&gt;&lt;br/&gt;

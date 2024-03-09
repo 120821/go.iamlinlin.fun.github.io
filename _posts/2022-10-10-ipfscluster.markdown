@@ -20,9 +20,9 @@ cd ipfs-cluster-ctl/{% endhighlight %}
 
 {% highlight %}wget https://raw.githubusercontent.com/ipfs/ipfs-cluster/v1.0.2/docker-compose.yml{% endhighlight %}
 
-<pre>启动：<code>sudo docker-compose up{% endhighlight %}
+{% highlight %}启动：{% highlight %}sudo docker-compose up{% endhighlight %}
 
-<pre>在新的窗口：<code>vim hi.txt{% endhighlight %}
+{% highlight %}在新的窗口：{% highlight %}vim hi.txt{% endhighlight %}
 
 {% highlight %}./ipfs-cluster-ctl add hi.txt
 

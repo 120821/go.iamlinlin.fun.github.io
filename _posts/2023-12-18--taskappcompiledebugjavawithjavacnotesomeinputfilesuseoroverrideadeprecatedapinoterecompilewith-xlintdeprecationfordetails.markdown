@@ -6,8 +6,8 @@ categories:
 ---
 <p>在安装依赖的时候，提示：</p>
 
-<pre>
-<code>&gt; Task :<span style="color:#dcc6e0">app</span>:compileDebugJavaWithJavac
+{% highlight %}
+{% highlight %}&gt; Task :<span style="color:#dcc6e0">app</span>:compileDebugJavaWithJavac
 <span style="color:#dcc6e0">Note</span>: Some <span style="color:#dcc6e0">input</span> files <span style="color:#dcc6e0">use</span> or override a deprecated API.
 <span style="color:#dcc6e0">Note</span>: Recompile with -Xlint:deprecation <span style="color:#dcc6e0">for</span> details.
 {% endhighlight %}
@@ -18,12 +18,12 @@ categories:
 
 <p>解决：</p>
 
-<p>打开你的模块级别的 <code>build.gradle</code> 文件。</p>
+<p>打开你的模块级别的 {% highlight %}build.gradle{% endhighlight %} 文件。</p>
 
 <p>然后增加：</p>
 
-<pre>
-<code>android {
+{% highlight %}
+{% highlight %}android {
     <span style="color:#d4d0ab">// 其他配置...</span>
 
     <span style="color:#d4d0ab">// 启用编译器警告提示</span>

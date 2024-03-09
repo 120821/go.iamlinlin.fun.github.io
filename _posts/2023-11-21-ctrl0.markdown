@@ -5,7 +5,7 @@ date: "2023-11-21"
 categories: 
 ---
 <ul>
-	<li>Windows和Linux系统：按下<code>Ctrl + 0</code>键</li>
-	<li>macOS系统：按下<code>Command + 0</code>键</li>
+	<li>Windows和Linux系统：按下{% highlight %}Ctrl + 0{% endhighlight %}键</li>
+	<li>macOS系统：按下{% highlight %}Command + 0{% endhighlight %}键</li>
 </ul>
 

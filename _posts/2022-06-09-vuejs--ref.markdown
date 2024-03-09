@@ -8,7 +8,7 @@ categories:
                     <p>ref与emit作用相类似，不使用HTML的形式，在webpack的环境下进行，按照书写路由，视图的形式，写父文件和子文件。</p> 
 <blockquote> 
  <p>首先，父文件仍然在视图文件夹下，创建一个父组件：（src/views/Ref.vue）</p> 
- <pre><code class="language-html">&lt;template&gt;
+ {% highlight %}<code class="language-html">&lt;template&gt;
   &lt;div class="hello"&gt;
     &lt;p&gt;本页面是parent页面, 会引用 ChildRef &lt;/p&gt;
     &lt;input type='button' @click='get_child_value' value="获取child中变量的值"/&gt; :
@@ -41,7 +41,7 @@ export default {
 </blockquote> 
 <blockquote> 
  <p style="margin-left:.0001pt;text-align:justify;">然后我们继续创建上面的父组件应用的src/components/ChildRef.vue文件，内容如下</p> 
- <pre><code class="language-html">&lt;template&gt;
+ {% highlight %}<code class="language-html">&lt;template&gt;
   &lt;div style='border: 1px solid red; margin-left: 50px; width: 600px'&gt;
     本页面是child: &lt;br/&gt;
     value_in_child: &lt;input type="text" v-model="value_in_child"/&gt;

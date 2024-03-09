@@ -10,8 +10,8 @@ categories:
 
 <p>css调试好，出现了新的报错：</p>
 
-<pre>
-<code>Unexpected error while processing request: Missing `secret_token` and `secret_key_base` for &#39;production&#39; environment, set these values in `config/secrets.yml`{% endhighlight %}
+{% highlight %}
+{% highlight %}Unexpected error while processing request: Missing `secret_token` and `secret_key_base` for &#39;production&#39; environment, set these values in `config/secrets.yml`{% endhighlight %}
 
 <p><img height="353" src="/uploads/ckeditor/pictures/324/image-20220824090726-1.png" width="1917" /></p>
 

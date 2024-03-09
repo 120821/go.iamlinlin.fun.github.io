@@ -10,7 +10,7 @@ categories:
 
 <p>参考模板：</p>
 
-<pre>
+{% highlight %}
 <span class="guide-left-side__coin-guide-content__text text-grey-700" style="max-width: 100vw; overflow-x: hidden;">pragma solidity ^0.4.24;
  
 //Safe Math Interface
@@ -123,7 +123,7 @@ contract QKCToken is ERC20Interface, SafeMath {
     function () public payable {
         revert();
     }
-}</span></pre>
+}</span>{% endhighlight %}
 
 <p><span class="guide-left-side__coin-guide-content__text text-grey-700" style="max-width: 100vw; overflow-x: hidden;">进行替换内容：</span><img height="167" src="/uploads/ckeditor/pictures/106/image-20220719094529-1.png" width="896" /></p>
 

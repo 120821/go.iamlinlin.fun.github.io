@@ -4,7 +4,7 @@ title: "PG::FeatureNotSupported: ERROR: cannot alter type of a column used by a 
 date: "2023-04-25"
 categories: 
 ---
-<p>如果您在尝试修改某个视图或规则正在使用的列的类型时遇到 <code>PG::FeatureNotSupported: ERROR: cannot alter type of a column used by a view or rule</code> 错误，可以考虑以下两种解决方法：</p>
+<p>如果您在尝试修改某个视图或规则正在使用的列的类型时遇到 {% highlight %}PG::FeatureNotSupported: ERROR: cannot alter type of a column used by a view or rule{% endhighlight %} 错误，可以考虑以下两种解决方法：</p>
 
 <ol>
 	<li>删除视图或规则</li>
@@ -22,8 +22,8 @@ categories:
 
 <p>以下是一个示例 SQL 代码：</p>
 
-<pre>
-<code>-- 添加一个新的列
+{% highlight %}
+{% highlight %}-- 添加一个新的列
 ALTER TABLE mytable ADD COLUMN new_column_name new_data_type;
 
 -- 将旧列中的数据复制到新列中

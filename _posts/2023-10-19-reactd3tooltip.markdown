@@ -9,8 +9,8 @@ categories:
 <p>我使用z-index调整了俩个svg的位置，但是不生效，放在不同的容器也不行：<br />
 &nbsp;</p>
 
-<pre>
-<code>{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
+{% highlight %}
+{% highlight %}{yearlyDataArray.map((yearlyObjArray, index) =&gt; {
   if (yearlyObjArray[0].year === value) {
     return (
       &lt;div key={index}&gt;
@@ -23,16 +23,16 @@ categories:
   &lt;ChinaMapBorder /&gt;
 &lt;/div&gt;{% endhighlight %}
 
-<p>解决：使用CSS的<code>pointer-events</code>属性来控制交互事件</p>
+<p>解决：使用CSS的{% highlight %}pointer-events{% endhighlight %}属性来控制交互事件</p>
 
 <p>代码：</p>
 
-<pre>
-<code>&lt;div style={{ pointerEvents: &#39;none&#39; }}&gt;
+{% highlight %}
+{% highlight %}&lt;div style={{ pointerEvents: &#39;none&#39; }}&gt;
   &lt;ChinaMapBorder /&gt;
 &lt;/div&gt;{% endhighlight %}
 
-<p>通过将<code>pointer-events</code>属性设置为<code>none</code>，该容器将不会响应鼠标事件，从而避免南海地图的覆盖对不画南海的地图的交互产生影响。</p>
+<p>通过将{% highlight %}pointer-events{% endhighlight %}属性设置为{% highlight %}none{% endhighlight %}，该容器将不会响应鼠标事件，从而避免南海地图的覆盖对不画南海的地图的交互产生影响。</p>
 
 <p>同时，z-index还是需要正确的叠放两个地图。确保没有南海的地图的z-index层级更高。</p>
 

@@ -10,8 +10,8 @@ categories:
 
 <p>2.安装</p>
 
-<pre>
-<code>~/Downloads$ sudo dpkg -i baidunetdisk_4.
+{% highlight %}
+{% highlight %}~/Downloads$ sudo dpkg -i baidunetdisk_4.
 
 baidunetdisk_4.17.7_amd64.deb&nbsp; baidunetdisk_4.3.0_amd64.deb&nbsp; &nbsp;
 
@@ -19,8 +19,8 @@ linlin@linlin-i5:~/Downloads$ sudo dpkg -i baidunetdisk_4.3.0_amd64.deb {% endhi
 
 <p>安装的时候，在本机出现了错误：</p>
 
-<pre>
-<code>(Reading database ... 420232 files and directories currently installed.)
+{% highlight %}
+{% highlight %}(Reading database ... 420232 files and directories currently installed.)
 
 Preparing to unpack baidunetdisk_4.3.0_amd64.deb ...
 
@@ -44,13 +44,13 @@ Processing triggers for hicolor-icon-theme (0.17-2) ...{% endhighlight %}
 
 <p>我运行：</p>
 
-<pre>
-<code>sudo apt-get install -f{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get install -f{% endhighlight %}
 
 <p>但是并没有安装任何依赖：(应该没有问题了）</p>
 
-<pre>
-<code>~/Downloads$ sudo apt-get install -f
+{% highlight %}
+{% highlight %}~/Downloads$ sudo apt-get install -f
 Reading package lists... Done
 Building dependency tree... Done
 Reading state <span style="color:#f5ab35">inf</span>ormation... Done

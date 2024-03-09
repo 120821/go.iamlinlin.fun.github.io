@@ -6,8 +6,8 @@ categories:
 ---
 <p>在render中这样写：</p>
 
-<pre>
-<code>render() {
+{% highlight %}
+{% highlight %}render() {
   const { data } = this.state;
 
   return (

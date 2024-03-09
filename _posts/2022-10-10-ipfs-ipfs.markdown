@@ -71,7 +71,7 @@ services:
           <span class="hljs-comment"># - &quot;9095:9095&quot; # Cluster IPFS Proxy endpoint</span>
           <span class="hljs-comment"># - &quot;9096:9096&quot; # Cluster swarm endpoint</span>
     volumes:
-      - ./compose/cluster0:/data/ipfs-cluster</span></pre>
+      - ./compose/cluster0:/data/ipfs-cluster</span>{% endhighlight %}
 
 <p>sudo docker-compose up</p>
 

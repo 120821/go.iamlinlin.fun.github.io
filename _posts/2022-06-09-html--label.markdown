@@ -5,7 +5,7 @@ date: "2022-06-09"
 categories: 
 ---
 
-                    <pre><code class="language-html">&lt;html&gt;
+                    {% highlight %}<code class="language-html">&lt;html&gt;
 &lt;body&gt;
 
 &lt;p&gt;请点击文本标记之一，就可以触发相关控件：&lt;/p&gt;

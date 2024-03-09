@@ -6,8 +6,8 @@ categories:
 ---
 <p>安装vim&nbsp;<a href="http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim">http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim</a></p>
 
-<pre>
-<code>git clone&nbsp; https://github.com/sg552/happy_book_vim.git{% endhighlight %}
+{% highlight %}
+{% highlight %}git clone&nbsp; https://github.com/sg552/happy_book_vim.git{% endhighlight %}
 
 <p>1.安装vundle :</p>
 
@@ -22,7 +22,7 @@ categories:
 {% highlight %}:PluginInstall{% endhighlight %}
 
 <p>创建新目录</p>
-<p><code>sudo mkdir /opt/app -p{% endhighlight %}
+<p>{% highlight %}sudo mkdir /opt/app -p{% endhighlight %}
 
 <p>进入新的目录</p>
 {% highlight %}cd /opt/app{% endhighlight %}

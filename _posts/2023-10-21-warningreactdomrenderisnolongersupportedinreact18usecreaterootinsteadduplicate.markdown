@@ -10,8 +10,8 @@ categories:
 
 <p>解决，修改index.js为这样的格式（不推荐，可以尝试吧package.json的^的版本都修改为yarn .lock的准确的版本，^都删除）</p>
 
-<pre>
-<code>import React from &quot;react&quot;;
+{% highlight %}
+{% highlight %}import React from &quot;react&quot;;
 import ReactDOM from &quot;react-dom/client&quot;;
 import &quot;./index.css&quot;;
 import App from &quot;./App&quot;;

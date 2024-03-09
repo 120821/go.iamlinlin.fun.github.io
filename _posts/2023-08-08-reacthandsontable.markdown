@@ -8,13 +8,13 @@ categories:
 
 <p>1.安装依赖：<a href="https://handsontable.com/docs/react-data-grid/installation/">https://handsontable.com/docs/react-data-grid/installation/</a></p>
 
-<pre>
-<code>npm install handsontable @handsontable/react{% endhighlight %}
+{% highlight %}
+{% highlight %}npm install handsontable @handsontable/react{% endhighlight %}
 
 <p>或在public/index.html引入：</p>
 
-<pre>
-<code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/handsontable@13.0/dist/handsontable.full.min.js&quot;&gt;&lt;/script&gt;
+{% highlight %}
+{% highlight %}&lt;script src=&quot;https://cdn.jsdelivr.net/npm/handsontable@13.0/dist/handsontable.full.min.js&quot;&gt;&lt;/script&gt;
 
 &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/handsontable@13.0/dist/handsontable.full.min.css&quot; /&gt;
 
@@ -31,8 +31,8 @@ categories:
 
 <p>创建组件：cat src/pages/Table/ExcelHandsonTableDemo/index.jsx</p>
 
-<pre>
-<code>import React, { Component } from &#39;react&#39;
+{% highlight %}
+{% highlight %}import React, { Component } from &#39;react&#39;
 
 import { Table, Space, Button, message } from &#39;antd&#39;;
 
@@ -67,8 +67,8 @@ export default class ExcelHandsonTableDemo extends Component {
 
 <p>然后在页面进行引入：</p>
 
-<pre>
-<code>cat src/pages/Table/Calculation/index.jsx
+{% highlight %}
+{% highlight %}cat src/pages/Table/Calculation/index.jsx
 
 import React, { Component } from &#39;react&#39;;
 
@@ -272,8 +272,8 @@ export default Calculation;{% endhighlight %}
 
 <p>后端go是这样：</p>
 
-<pre>
-<code>type CalculationPlanRequest struct {
+{% highlight %}
+{% highlight %}type CalculationPlanRequest struct {
 
 &nbsp; Sales [][]string `json:&quot;sales&quot;`
 

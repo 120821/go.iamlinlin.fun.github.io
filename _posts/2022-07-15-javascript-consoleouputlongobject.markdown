@@ -6,8 +6,8 @@ categories:
 ---
 <p>参考：<a href="https://stackoverflow.com/questions/10729276/how-can-i-get-the-full-object-in-node-jss-console-log-rather-than-object">https://stackoverflow.com/questions/10729276/how-can-i-get-the-full-object-in-node-jss-console-log-rather-than-object</a></p>
 
-<pre>
-<code>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.info(&quot;====================&quot;)
+{% highlight %}
+{% highlight %}+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.info(&quot;====================&quot;)
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.log(JSON.stringify(result, null, 4));
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.info(&quot;-------------------------------&quot;)
 +&nbsp;&nbsp;&nbsp;&nbsp;<strong>&nbsp; console.log(JSON.stringify(result, null, 4));</strong>

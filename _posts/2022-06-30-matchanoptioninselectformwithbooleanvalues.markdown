@@ -9,7 +9,7 @@ categories:
 <pre class="default s-code-block">
 <code class="hljs language-lua">f.<span class="hljs-built_in">select</span> :active, <span class="hljs-string">[[&#39;Active&#39;, true], [&#39;Inactive&#39;, false]]</span>{% endhighlight %}
 
-<p><code class="hljs language-lua"><span class="hljs-string">将会得到：</span></code></p>
+<p><code class="hljs language-lua"><span class="hljs-string">将会得到：</span>{% endhighlight %}</p>
 
 <pre class="default s-code-block">
 <code class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;model[active]&quot;</span>&gt;</span>

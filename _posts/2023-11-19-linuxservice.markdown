@@ -8,14 +8,14 @@ categories:
 
 <p>1 需要编辑文件：</p>
 
-<pre>
-<code><span style="color:#f5ab35">#</span> 编辑服务单元文件
+{% highlight %}
+{% highlight %}<span style="color:#f5ab35">#</span> 编辑服务单元文件
 sudo vim /etc/systemd/system/myservice.service{% endhighlight %}
 
 <p>内容如下：</p>
 
-<pre>
-<code>[Unit]
+{% highlight %}
+{% highlight %}[Unit]
 Description=My Service
 After=network.target
 
@@ -28,8 +28,8 @@ WantedBy=multi-user.target{% endhighlight %}
 
 <p>例如：</p>
 
-<pre>
-<code>[Unit]
+{% highlight %}
+{% highlight %}[Unit]
 
 Description=My Service Start Trojan
 
@@ -45,38 +45,38 @@ WantedBy=multi-user.target</p>
 
 <p>2.保存好，重新加载：</p>
 
-<pre>
-<code>sudo systemctl daemon-reload{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl daemon-reload{% endhighlight %}
 
 <p>3.启动：</p>
 
-<pre>
-<code>sudo systemctl enable myservice{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl enable myservice{% endhighlight %}
 
 <p>手动启动：</p>
 
-<pre>
-<code>sudo systemctl start myservice{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl start myservice{% endhighlight %}
 
 <p>手动停止：</p>
 
-<pre>
-<code>sudo systemctl stop myservice{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl stop myservice{% endhighlight %}
 
 <p>重启：</p>
 
-<pre>
-<code>sudo systemctl restart myservice{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl restart myservice{% endhighlight %}
 
 <p>查看状态：</p>
 
-<pre>
-<code>sudo systemctl status myservice{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo systemctl status myservice{% endhighlight %}
 
 <p>不能这样写：</p>
 
-<pre>
-<code><span style="color:#00e0e0">[Unit]</span>
+{% highlight %}
+{% highlight %}<span style="color:#00e0e0">[Unit]</span>
 Description=My Service Start Trojan
 After=network.target
 
@@ -91,18 +91,18 @@ WantedBy=multi-user.target{% endhighlight %}
 
 <p>如果没有启动成功，使用命令查看日志：</p>
 
-<p><code>journalctl -u myservice</code></p>
+<p>{% highlight %}journalctl -u myservice{% endhighlight %}</p>
 
 <p>修改文件后，需要重启：</p>
 
-<pre>
-<code>sudo<span style="color:#dcc6e0"> system</span>ctl daemon-reload
+{% highlight %}
+{% highlight %}sudo<span style="color:#dcc6e0"> system</span>ctl daemon-reload
 sudo<span style="color:#dcc6e0"> system</span>ctl start myservice{% endhighlight %}
 
 <p>例如我终于成功后：</p>
 
-<pre>
-<code>sudo systemctl daemon-reload
+{% highlight %}
+{% highlight %}sudo systemctl daemon-reload
 
 sudo systemctl start myservice
 
@@ -118,8 +118,8 @@ firefox-b 6553 linlin&nbsp;&nbsp; 96u&nbsp; IPv4 568903&nbsp;&nbsp;&nbsp;&nbsp;&
 
 <p>可以看到之前失败的日志还保存着：</p>
 
-<pre>
-<code>journalctl -u myservice
+{% highlight %}
+{% highlight %}journalctl -u myservice
 
 11月 19 14:08:37 linlin-i5 systemd[1]: Started My Service Start Trojan.
 

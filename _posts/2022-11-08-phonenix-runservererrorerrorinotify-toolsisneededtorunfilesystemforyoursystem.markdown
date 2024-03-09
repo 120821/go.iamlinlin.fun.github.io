@@ -10,5 +10,5 @@ categories:
 
 <p>解决：</p>
 
-<p><code>apt-get install inotify-tools</code></p>
+<p>{% highlight %}apt-get install inotify-tools{% endhighlight %}</p>
 

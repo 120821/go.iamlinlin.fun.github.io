@@ -10,16 +10,16 @@ categories:
 
 <p>如果用户已经存在，只是修改密码：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">ALTER</span> <span style="color:#dcc6e0">USER</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#dcc6e0">BY</span> <span style="color:#abe338">&#39;88888888&#39;</span>;{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">ALTER</span> <span style="color:#dcc6e0">USER</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> IDENTIFIED <span style="color:#dcc6e0">BY</span> <span style="color:#abe338">&#39;88888888&#39;</span>;{% endhighlight %}
 
 <p>2.给该用户所有权限：</p>
 
-<pre>
-<code><span style="color:#dcc6e0">GRANT</span> <span style="color:#dcc6e0">ALL</span> PRIVILEGES <span style="color:#dcc6e0">ON</span> *.* <span style="color:#dcc6e0">TO</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> <span style="color:#dcc6e0">WITH</span> <span style="color:#dcc6e0">GRANT</span> OPTION;{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#dcc6e0">GRANT</span> <span style="color:#dcc6e0">ALL</span> PRIVILEGES <span style="color:#dcc6e0">ON</span> *.* <span style="color:#dcc6e0">TO</span> <span style="color:#abe338">&#39;root&#39;</span>@<span style="color:#abe338">&#39;localhost&#39;</span> <span style="color:#dcc6e0">WITH</span> <span style="color:#dcc6e0">GRANT</span> OPTION;{% endhighlight %}
 
 <p>3.刷新权限：</p>
 
-<pre>
-<code>FLUSH PRIVILEGES;{% endhighlight %}
+{% highlight %}
+{% highlight %}FLUSH PRIVILEGES;{% endhighlight %}
 

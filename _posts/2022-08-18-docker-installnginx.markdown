@@ -20,11 +20,11 @@ categories:
 
 <p>或者使用命令进行查看可以使用的版本：</p>
 
-<pre>
-<code>docker search nginx{% endhighlight %}
+{% highlight %}
+{% highlight %}docker search nginx{% endhighlight %}
 
-<pre>
-<code>$ docker search nginx
+{% highlight %}
+{% highlight %}$ docker search nginx
 NAME                      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 nginx                     Official build of Nginx.                        3260      [OK]       
 jwilder/nginx-proxy       Automated Nginx reverse proxy for docker c...   674                  [OK]
@@ -35,21 +35,21 @@ maxexcloo/nginx-php       Docker framework container with Nginx and ...   57    
 
 <p>获取最新的Nginx</p>
 
-<pre>
-<code>$ docker pull nginx:latest{% endhighlight %}
+{% highlight %}
+{% highlight %}$ docker pull nginx:latest{% endhighlight %}
 
-<p><code>查看是否安装成功：</code></p>
+<p>{% highlight %}查看是否安装成功：{% endhighlight %}</p>
 
 <p>&nbsp;</p>
 
-<pre>
-$ docker images</pre>
+{% highlight %}
+$ docker images{% endhighlight %}
 
 <p><img src="https://www.runoob.com/wp-content/uploads/2016/06/docker-nginx4.png" /></p>
 
-<pre>
+{% highlight %}
 进行启动Nginx container：
-<code>$ docker run --name nginx-test -p 8080:80 -d nginx{% endhighlight %}
+{% highlight %}$ docker run --name nginx-test -p 8080:80 -d nginx{% endhighlight %}
 
 <p>参数说明：</p>
 
@@ -65,8 +65,8 @@ $ docker images</pre>
 
 <p>Nginx 启动，停止：</p>
 
-<pre>
-<code>$ nginx -s stop # 快速停止
+{% highlight %}
+{% highlight %}$ nginx -s stop # 快速停止
 
 $ nginx -s quit # 比较得体的停止
 

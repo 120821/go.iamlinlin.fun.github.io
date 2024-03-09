@@ -6,15 +6,15 @@ categories:
 ---
 <p>已知，在rails里可以使用raw：</p>
 
-<pre>
-<code>&lt;%= raw <span style="color:#ffa07a">@raw_html_content</span> %&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;%= raw <span style="color:#ffa07a">@raw_html_content</span> %&gt;{% endhighlight %}
 
 <p>在react 里可以使用rawHtml：</p>
 
 <p>组件：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 
 class RawHtmlComponent extends React.Component {
   render() {
@@ -29,8 +29,8 @@ export default RawHtmlComponent;{% endhighlight %}
 
 <p>引用：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import RawHtmlComponent from &#39;./RawHtmlComponent&#39;;
 
 class App extends React.Component {

@@ -10,8 +10,8 @@ categories:
 
 <p>增加测试的脚本 ens.rb</p>
 
-<pre>
-<code>require &#39;json&#39;
+{% highlight %}
+{% highlight %}require &#39;json&#39;
 
 require &#39;httparty&#39;
 
@@ -37,8 +37,8 @@ response = httparty.post server_url,
 
 <p>然后进行测试，放在app.rb</p>
 
-<pre>
-<code>+&nbsp; get &quot;/name&quot; do
+{% highlight %}
+{% highlight %}+&nbsp; get &quot;/name&quot; do
 
 +&nbsp;&nbsp;&nbsp; server_url = &#39;https://ensgraph.test-lueluelue-link.com/subgraphs/name/graphprotocol/ens&#39;
 

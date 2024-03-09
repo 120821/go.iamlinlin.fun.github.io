@@ -10,20 +10,20 @@ categories:
 
 <p>1.安装(使用Asdf 安装的go来安装air)</p>
 
-<pre>
-<code>go install github.com/cosmtrek/air@latest{% endhighlight %}
+{% highlight %}
+{% highlight %}go install github.com/cosmtrek/air@latest{% endhighlight %}
 
 <p>在安装的时候出现了一些报错，需要重新安装Air,因为下午使用普通的go来安装了，而不是asdf安装的go来安装。</p>
 
 <p>使用下面的命令来更新所有依赖项</p>
 
-<pre>
-<code>go get -u all{% endhighlight %}
+{% highlight %}
+{% highlight %}go get -u all{% endhighlight %}
 
 <p>如果本地安装了一些非标准库的包，可以使用这些命令来手动安装：</p>
 
-<pre>
-<code>go get -u golang.org/x/tools/cmd/stringer
+{% highlight %}
+{% highlight %}go get -u golang.org/x/tools/cmd/stringer
 
 go get -u golang.org/x/tools/go/packages
 
@@ -41,8 +41,8 @@ go get -u golang.org/x/tools/internal/event/core{% endhighlight %}
 
 <p>如果以上命令都不行，那么使用：</p>
 
-<pre>
-<code>go get -u crypto/md5
+{% highlight %}
+{% highlight %}go get -u crypto/md5
 
 go get -u sync/atomicK{% endhighlight %}
 
@@ -50,16 +50,16 @@ go get -u sync/atomicK{% endhighlight %}
 
 <p>安装：</p>
 
-<pre>
-<code>go get -u github.com/cosmtrek/air{% endhighlight %}
+{% highlight %}
+{% highlight %}go get -u github.com/cosmtrek/air{% endhighlight %}
 
-<pre>
-<code>go install github.com/cosmtrek/air@latest{% endhighlight %}
+{% highlight %}
+{% highlight %}go install github.com/cosmtrek/air@latest{% endhighlight %}
 
 <p>然后必须设置gopath:</p>
 
-<pre>
-<code>export GOPATH=/home/linlin/go
+{% highlight %}
+{% highlight %}export GOPATH=/home/linlin/go
 
 export PATH=$PATH:/home/linlin/.asdf/shims/go/bin:$GOPATH/bin{% endhighlight %}
 
@@ -67,13 +67,13 @@ export PATH=$PATH:/home/linlin/.asdf/shims/go/bin:$GOPATH/bin{% endhighlight %}
 
 <p>再次安装：</p>
 
-<pre>
-<code>go install github.com/cosmtrek/air@latest{% endhighlight %}
+{% highlight %}
+{% highlight %}go install github.com/cosmtrek/air@latest{% endhighlight %}
 
 <p>启动：air</p>
 
-<pre>
-<code>&nbsp; __&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp; ___ &nbsp;
+{% highlight %}
+{% highlight %}&nbsp; __&nbsp;&nbsp;&nbsp; _&nbsp;&nbsp; ___ &nbsp;
 
 &nbsp;/ /\&nbsp; | | | |_)
 
@@ -81,22 +81,22 @@ export PATH=$PATH:/home/linlin/.asdf/shims/go/bin:$GOPATH/bin{% endhighlight %}
 
 <p>&nbsp;</p>
 
-<p><code>mkdir /workspace/dongtaipaifang_2_backend/tmp<br />
+<p>{% highlight %}mkdir /workspace/dongtaipaifang_2_backend/tmp<br />
 watching .<br />
 watching calculators<br />
-watching conf</code></p>
+watching conf{% endhighlight %}</p>
 
 <p>2.注意在使用的时候</p>
 
 <p>（1）第一次需要初始化，生成一个.toml文件</p>
 
-<pre>
-<code>air init&nbsp;{% endhighlight %}
+{% highlight %}
+{% highlight %}air init&nbsp;{% endhighlight %}
 
 <p>（2）之后使用的时候直接使用</p>
 
-<pre>
-<code>air{% endhighlight %}
+{% highlight %}
+{% highlight %}air{% endhighlight %}
 
 <p>&nbsp;</p>
 

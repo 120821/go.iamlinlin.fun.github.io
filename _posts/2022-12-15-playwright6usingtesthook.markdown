@@ -8,8 +8,8 @@ categories:
 
 <p>您可以使用各种测试挂钩，例如 test.describe 来声明一组测试和 test.beforeEach 和 test.afterEach，它们在每个测试之前/之后执行。&nbsp; 其他钩子包括 test.beforeAll 和 test.afterAll ，它们在所有测试之前/之后为每个工作人员执行一次。</p>
 
-<pre>
-<code><span style="color:#393a34"><em>// @ts-check</em>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><em>// @ts-check</em>
 </span><span style="color:#393a34"><span style="color:#cf222e">const</span> <span style="color:#393a34">{</span> test<span style="color:#393a34">,</span> expect <span style="color:#393a34">}</span> <span style="color:#d73a49">=</span> <span style="color:#8250df">require</span><span style="color:#393a34">(</span><span style="color:#c6105f">&quot;@playwright/test&quot;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
 <span style="color:#393a34">test<span style="color:#393a34">.</span><span style="color:#8250df">describe</span><span style="color:#393a34">(</span><span style="color:#c6105f">&quot;navigation&quot;</span><span style="color:#393a34">,</span> <span style="color:#393a34">(</span><span style="color:#393a34">)</span> <span style="color:#d73a49">=&gt;</span> <span style="color:#393a34">{</span>
@@ -26,15 +26,15 @@ categories:
 
 <p>Playwright Test 使用 expect 库进行测试断言，它提供了 toEqual、toContain、toMatch、toBe 等匹配器。&nbsp; Playwright 还使用方便的异步匹配器扩展了这个库，这些匹配器将等待直到满足预期条件。</p>
 
-<pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toHaveTitle</span><span style="color:#393a34">(</span><span style="color:#36acaa">/</span><span style="color:#36acaa">Playwright</span><span style="color:#36acaa">/</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>page<span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toHaveTitle</span><span style="color:#393a34">(</span><span style="color:#36acaa">/</span><span style="color:#36acaa">Playwright</span><span style="color:#36acaa">/</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
 
 <p>Locators： 有很多。。</p>
 
 <p>定位器是 Playwright 自动等待和重试能力的核心部分。&nbsp; 定位器代表了一种随时在页面上查找元素的方法，并用于对元素执行操作，例如 .click .fill 等。</p>
 
-<pre>
-<code><span style="color:#393a34"><span style="color:#cf222e">const</span> getStarted <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;link&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Get started&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><span style="color:#cf222e">const</span> getStarted <span style="color:#d73a49">=</span> page<span style="color:#393a34">.</span><span style="color:#8250df">getByRole</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;link&#39;</span><span style="color:#393a34">,</span> <span style="color:#393a34">{</span> <span style="color:#005cc5">name</span><span style="color:#d73a49">:</span> <span style="color:#c6105f">&#39;Get started&#39;</span> <span style="color:#393a34">}</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span>
 <span style="color:#393a34"><span style="color:#cf222e">await</span> <span style="color:#8250df">expect</span><span style="color:#393a34">(</span>getStarted<span style="color:#393a34">)</span><span style="color:#393a34">.</span><span style="color:#8250df">toHaveAttribute</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;href&#39;</span><span style="color:#393a34">,</span> <span style="color:#c6105f">&#39;/docs/installation&#39;</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span>
 </span><span style="color:#393a34"><span style="color:#cf222e">await</span> getStarted<span style="color:#393a34">.</span><span style="color:#8250df">click</span><span style="color:#393a34">(</span><span style="color:#393a34">)</span><span style="color:#393a34">;</span></span>{% endhighlight %}
@@ -43,6 +43,6 @@ categories:
 
 <p>Playwright Test 基于测试装置的概念，例如传递到您的测试中的内置页面装置。&nbsp; 由于浏览器上下文，页面在测试之间被隔离，这相当于一个全新的浏览器配置文件，每个测试都会获得一个全新的环境，即使在单个浏览器中运行多个测试也是如此。</p>
 
-<pre>
-<code><span style="color:#393a34"><span style="color:#8250df">test</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;basic test&#39;</span><span style="color:#393a34">,</span> <span style="color:#cf222e">async</span> <span style="color:#393a34">(</span><span style="color:#393a34">{</span><span style="color:#953800"> page </span><span style="color:#393a34">}</span><span style="color:#393a34">)</span> <span style="color:#d73a49">=&gt;</span> <span style="color:#393a34">{</span></span>{% endhighlight %}
+{% highlight %}
+{% highlight %}<span style="color:#393a34"><span style="color:#8250df">test</span><span style="color:#393a34">(</span><span style="color:#c6105f">&#39;basic test&#39;</span><span style="color:#393a34">,</span> <span style="color:#cf222e">async</span> <span style="color:#393a34">(</span><span style="color:#393a34">{</span><span style="color:#953800"> page </span><span style="color:#393a34">}</span><span style="color:#393a34">)</span> <span style="color:#d73a49">=&gt;</span> <span style="color:#393a34">{</span></span>{% endhighlight %}
 

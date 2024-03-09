@@ -11,19 +11,19 @@ categories:
 <p>使用css选择器给外层div加上以下flex属性，则该div的子div可以在同一行中显示，</p>
 
 <div class="cnblogs_code">
-<pre>
+{% highlight %}
 .runs-paginator-flex-<span style="color: rgba(0, 0, 0, 1)">container {
   flex: </span>1 1<span style="color: rgba(0, 0, 0, 1)"> auto;
   flex</span>-direction: row-<span style="color: rgba(0, 0, 0, 1)">reverse;
   display: flex;
-}</span></pre>
+}</span>{% endhighlight %}
 </div>
 
 <div class="cnblogs_code">
-<pre>
+{% highlight %}
 <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div </span><span style="color: rgba(255, 0, 0, 1)">className</span><span style="color: rgba(0, 0, 255, 1)">=&quot;runs-paginator-flex-container&quot;</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
     <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>1<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
     <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>2<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
-<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span></pre>
+<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>{% endhighlight %}
 </div>
 

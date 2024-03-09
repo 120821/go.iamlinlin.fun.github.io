@@ -16,9 +16,9 @@ categories:
 
 <div class="answercell post-layout--right">
 <div class="s-prose js-post-body" itemprop="text">
-<p>I recently upgraded an to Rails 7.0.1 and I ran into this same issue. I saw this same error when trying to run <code>rails console</code>.</p>
+<p>I recently upgraded an to Rails 7.0.1 and I ran into this same issue. I saw this same error when trying to run {% highlight %}rails console{% endhighlight %}.</p>
 
-<p>I got past it when I removed <code>spring-watcher-listen</code> from the Gemfile (because it was preventing <code>spring</code> from updating past <code>2.x</code>) and then bumped <code>spring</code> to <code>3.0.0</code> in the Gemfile. Then I ran <code>bundle</code> and <code>rails console</code> worked again.</p>
+<p>I got past it when I removed {% highlight %}spring-watcher-listen{% endhighlight %} from the Gemfile (because it was preventing {% highlight %}spring{% endhighlight %} from updating past {% highlight %}2.x{% endhighlight %}) and then bumped {% highlight %}spring{% endhighlight %} to {% highlight %}3.0.0{% endhighlight %} in the Gemfile. Then I ran {% highlight %}bundle{% endhighlight %} and {% highlight %}rails console{% endhighlight %} worked again.</p>
 </div>
 </div>
 

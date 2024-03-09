@@ -8,20 +8,20 @@ categories:
 
 <p>需要引入：</p>
 
-<p><code>import { withRouter } from &#39;react-router-dom&#39;;</code></p>
+<p>{% highlight %}import { withRouter } from &#39;react-router-dom&#39;;{% endhighlight %}</p>
 
 <p>然后定义：</p>
 
-<p><code>goBack = () =&gt; { this.props.history.goBack(); }</code></p>
+<p>{% highlight %}goBack = () =&gt; { this.props.history.goBack(); }{% endhighlight %}</p>
 
 <p>最后使用：</p>
 
-<p><code>&lt;button onClick={this.goBack}&gt;返回上一页&lt;/button&gt;</code></p>
+<p>{% highlight %}&lt;button onClick={this.goBack}&gt;返回上一页&lt;/button&gt;{% endhighlight %}</p>
 
 <p>完整的组件示例：</p>
 
-<pre>
-<code>import React from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React from &#39;react&#39;;
 import { withRouter } from &#39;react-router-dom&#39;;
 
 class MyComponent extends React.Component {

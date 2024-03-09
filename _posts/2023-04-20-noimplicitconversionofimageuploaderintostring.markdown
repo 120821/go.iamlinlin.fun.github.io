@@ -6,8 +6,8 @@ categories:
 ---
 <p>解决：（使用这样的代码即可）</p>
 
-<pre>
-<code>&lt;% if enterprise.business_license? %&gt;
+{% highlight %}
+{% highlight %}&lt;% if enterprise.business_license? %&gt;
 
 &nbsp;&nbsp;&nbsp; &lt;%= link_to (image_tag enterprise.business_license.url, style: &#39;width: 200px; height: 200px;&#39;), enterprise.business_license.url %&gt;
 
@@ -19,8 +19,8 @@ categories:
 
 <p>1. 确保在您的模型中，将上传器指定为字符串类型字段：</p>
 
-<pre>
-<code>class YourModel &lt; ActiveRecord::Base
+{% highlight %}
+{% highlight %}class YourModel &lt; ActiveRecord::Base
 
 &nbsp; mount_uploader :image, ImageUploader
 
@@ -30,30 +30,30 @@ end{% endhighlight %}
 
 <p>2. 确保在您的视图代码中，使用 `image_url` 或 `image_path` 方法获取上传的图片的 URL 或路径，而不是直接使用实例：</p>
 
-<pre>
-<code>&lt;%= image_tag @model.image_url if @model.image? %&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;%= image_tag @model.image_url if @model.image? %&gt;{% endhighlight %}
 
 <p>或者：</p>
 
-<pre>
-<code>&lt;%= image_tag @model.image.url if @model.image? %&gt;{% endhighlight %}
+{% highlight %}
+{% highlight %}&lt;%= image_tag @model.image.url if @model.image? %&gt;{% endhighlight %}
 
 <p>3. 确保在您的业务逻辑或者控制器代码中，避免将 `ImageUploader` 实例当作字符串使用：</p>
 
-<pre>
+{% highlight %}
 # 避免这种错误使用方式
 
-<code>image_path = @model.image{% endhighlight %}
+{% highlight %}image_path = @model.image{% endhighlight %}
 
-<pre>
+{% highlight %}
 # 正确的使用方式，返回图片的 URL
 
-<code>image_path = @model.image.url{% endhighlight %}
+{% highlight %}image_path = @model.image.url{% endhighlight %}
 
 <p>4. 确保在您的上传器中，正确地实现了 `store_dir` 方法：</p>
 
-<pre>
-<code>class ImageUploader &lt; CarrierWave::Uploader::Base
+{% highlight %}
+{% highlight %}class ImageUploader &lt; CarrierWave::Uploader::Base
 
 &nbsp; # 存储文件的路径
 

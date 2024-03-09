@@ -8,8 +8,8 @@ categories:
 
 <p>注意这里如果是动态得到数据，然后生成图表的话，在没有数据的时候，y轴的单位字数多的话，可能会显示不完全。</p>
 
-<pre>
-<code>option = {
+{% highlight %}
+{% highlight %}option = {
   <span style="color:#d4d0ab">// 其他配置项...</span>
   yAxis: {
     name: <span style="color:#abe338">&#39;单位&#39;</span>, <span style="color:#d4d0ab">// 单位名称</span>

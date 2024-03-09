@@ -10,31 +10,31 @@ categories:
 
 <p>Download winetricks:（需要安装非常多的东西，大概二十分钟）</p>
 
-<pre>
-<code>wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks{% endhighlight %}
+{% highlight %}
+{% highlight %}wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks{% endhighlight %}
 
-<pre>
+{% highlight %}
 设置可执行标志：
-<code>chmod +x winetricks{% endhighlight %}
+{% highlight %}chmod +x winetricks{% endhighlight %}
 
 <p>一些 winetricks &ldquo;包&rdquo;需要安装一些外部工具。&nbsp; 我们需要cabextract：</p>
 
-<pre>
-<code>sudo apt install cabextract
+{% highlight %}
+{% highlight %}sudo apt install cabextract
 {% endhighlight %}
 
 <p>现在我们安装字体和其他一些库：</p>
 
-<pre>
-<code>./winetricks corefonts gdiplus riched20 riched30 wenquanyi
+{% highlight %}
+{% highlight %}./winetricks corefonts gdiplus riched20 riched30 wenquanyi
 {% endhighlight %}
 
 <p>最后，我们需要编辑 regedit 以启用我们刚刚安装的字体。&nbsp; 下载这个&nbsp;<a href="https://gist.github.com/swordfeng/c3fd6b6fcf6dc7d7fa8a" rel="nofollow noreferrer">.reg file</a>.</p>
 
 <p>使用以下命令打开 regedit：</p>
 
-<pre>
-<code>./winetricks regedit
+{% highlight %}
+{% highlight %}./winetricks regedit
 {% endhighlight %}
 
 <p>在菜单栏中，单击注册表并选择导入注册表文件...</p>
@@ -59,13 +59,13 @@ categories:
 
 <p class="fs-headline1 ow-break-word mb8 flex--item fl1" itemprop="name">解决：</p>
 
-<pre>
-<code>sudo apt-get remove winbind &amp;&amp; sudo apt-get install winbind{% endhighlight %}
+{% highlight %}
+{% highlight %}sudo apt-get remove winbind &amp;&amp; sudo apt-get install winbind{% endhighlight %}
 
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><code>2.删除wine：</code>how to remove wine apt</div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}2.删除wine：{% endhighlight %}how to remove wine apt</div>
 
 <pre data-slot-rendered-dynamic="true">
-rm -rf ~/.wine</pre>
+rm -rf ~/.wine{% endhighlight %}
 
 <p>3.wine ~/.wine/drive_c/Program Files (x86)/Tencent/WeChat/WeChat.exe 不能运行，进行修改,有括号和空格就需要反斜杠进行完善命令</p>
 
@@ -94,14 +94,14 @@ deb <span class="hljs-url">http://mirrors.aliyun.com/ubuntu/</span> bionic-backp
 deb-src <span class="hljs-url">http://mirrors.aliyun.com/ubuntu/</span> bionic main restricted universe multiverse
 deb-src <span class="hljs-url">http://mirrors.aliyun.com/ubuntu/</span> bionic-security main restricted universe multiverse
 （3）重新配置proxy
-</pre>
+{% endhighlight %}
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;"><a href="http://siwei.me/blog/posts/linux-python-proxy-pproxy-https-socks5-docker-socks5-proxy-apt-get-curl-wget">python proxy pproxy </a></div>
 
 <div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">Ubuntu更新后需要重新配置</div>
 
-<pre>
-<code>pip3 install pproxy
+{% highlight %}
+{% highlight %}pip3 install pproxy
 
 pproxy -r socks5://127.0.0.1:1099 -vv
 

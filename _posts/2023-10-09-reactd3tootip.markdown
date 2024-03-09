@@ -8,8 +8,8 @@ categories:
 
 <p>代码：</p>
 
-<pre>
-<code>import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight %}
+{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
 
 import * as d3 from &#39;d3&#39;;
 

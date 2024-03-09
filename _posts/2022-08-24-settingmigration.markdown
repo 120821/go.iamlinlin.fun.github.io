@@ -10,8 +10,8 @@ categories:
 
 <p><img alt="" src="http://bug.sweetysoft.com/uploads/2022-08-24-08-58-22.png" /></p>
 
-<pre>
-<code>因此需要进行初始化的环境变量的设置
+{% highlight %}
+{% highlight %}因此需要进行初始化的环境变量的设置
 class CreateSettings &lt; ActiveRecord::Migration
 
 &nbsp; def change
