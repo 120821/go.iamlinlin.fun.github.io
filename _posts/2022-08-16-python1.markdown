@@ -5,24 +5,14 @@ date: "2022-08-16"
 categories: 
 ---
 <p>&nbsp;&nbsp; 问答题 （5分） 注释的种类有哪几种？请写出示例代码</p>
-
 <p>单行注释以 # 开头</p>
-
-{% highlight %}
-{% highlight %}# 这是一个注释
-
+{% highlight html %}# 这是一个注释
 print(&quot;Hello, World!&quot;)
-
 多行注释用三个单引号 &#39;&#39;&#39; 或者三个双引号 &quot;&quot;&quot; 将注释括起来
-
 &#39;&#39;&#39;
-
 这是多行注释，用三个单引号
-
 这是多行注释，用三个单引号
-
 这是多行注释，用三个单引号
-
 &#39;&#39;&#39;
 print(&quot;Hello, World!&quot;)
 &quot;&quot;&quot;
@@ -32,30 +22,20 @@ print(&quot;Hello, World!&quot;)
 &quot;&quot;&quot;
 print(&quot;Hello, World!&quot;)
 {% endhighlight %}
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） / 与 //、%三者的区别是什么？</p>
-
 <p>&ldquo; // &rdquo; 表示整数除法,返回整数 比如 7/3 结果为2 &ldquo; / &rdquo; 表示浮点数除法,返回浮点数 (即小数) 比如 8/2 结果为4.0 &ldquo; %&rdquo; 表示取余数 比如7/4 结果为3 pycharm环境下可直接运行使用 a = 321 b = a//100 c = a//10 % 10 d = a % 10 print(&quot;百位数是%d&quot; % b)</p>
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） Python类型与Java类型的区别？</p>
-
 <p>1.Java必须显式声明变量名，而动态类型的Python不需要声明变量。<br />
 2.Python虚拟机没有Java强，Java虚拟机是Java的核心，Python的核心是可以很方便地使用c语言函数或c++库。<br />
 3.Java是一种静态类型语言，Python是一种动态类型语言<br />
 4.Java 的类型要声明，Python 的类型不需要。<br />
 5.Python是全动态性的，可以在运行时自己修改自己的代码，Java只能通过变通方法实现。</p>
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） 全局变量与局部变量的区别？</p>
-
 <p>全局变量是整个程序都可访问的变量，生存期从程序开始到程序结束；局部变量存在于模块中(比如某个函数)，只有在模块中才可以访问，生存期从模块开始到模块结束。</p>
-
 <p>全局变量分配在全局数据段，在程序开始运行的时候被加载。局部变量则分配在程序的堆栈中。因此，操作系统和编译器可以通过内存分配的位置来知道来区分全局变量和局部变量。</p>
-
 <p><br />
 全局变量和局部变量的区别是在存储器中位置不同，具体说，全局变量存储在数据段中，局部变量一般来说在堆栈段</p>
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） 不同的类型之间是否可以计算？\</p>
-
 <p>1)数字型变量之间可以直接计算<br />
 。在Python中，两个数字型变量是可以直接进行算数运算的如果变量是bool型，在计算时<br />
 o True 对应的数字是1 oFalse对应的数字是0<br />
@@ -76,151 +56,78 @@ In [1]:first_name =&quot;zhang<br />
 In[2]:x=10<br />
 In [3]: x+first name<br />
 TypeError:unsupported operand type(s)for+:&#39;intand&#39;str类型错误:+不支持的操作类型:int和str</p>
-
 <p>7、问答题 （5分） 如何关闭 \ 的转换功能？</p>
-
 <p>有两种方法可以在Python中转义反斜杠转义的字符串。首先是使用literal_eval评估字符串。请注意，在此方法中，您需要将字符串用另一层引号引起来。例如：</p>
-
 <p>&gt;&gt;&gt; import ast</p>
-
 <p>&gt;&gt;&gt; a = &#39;&quot;Hello,\\nworld&quot;&#39;</p>
-
 <p>&gt;&gt;&gt; print ast.literal_eval(a)</p>
-
 <p>Hello,</p>
-
 <p>world</p>
-
 <p>另一种方法是使用字符串类中的decode（&#39;string_escape&#39;）方法。</p>
-
 <p>&gt;&gt;&gt; print &quot;Hello,\\nworld&quot;.decode(&#39;string_escape&#39;)</p>
-
 <p>Hello,</p>
-
 <p>world</p>
-
 <p>8、问答题 （5分） 为何UTF-8会逐渐成为电子邮件、网页等应用中优先采用的编码？</p>
-
 <p>UTF-8就是为了解决向后兼容ASCII码而设计，Unicode中前128个字符，使用与ASCII码相同的二进制值的单个字节进行编码，而且字面与ASCII码的字面一一对应，这使得原来处理ASCII字符的软件无须或只须做少部分修改，即可继续使用。 因此，它逐渐成为电子邮件、网页及其他存储或发送文字优先采用的编码方式</p>
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） ascii、unicode、utf-8、gbk 区别？</p>
-
 <p>1.ASCII --1字节</p>
-
 <p>2.UNICODE --2字节</p>
-
 <p>3.GBK --2字节和1字节混用，表示中文，字符在127以下，用1字节，字符在127以上就是标识汉字。</p>
-
 <p>4.UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
-
 <p>10、问答题 （5分） 如何倒置字符串？</p>
-
 <p>反转方法：1、使用切片法来反转，语法&ldquo;字符串[::-1]&rdquo;。2、首先将字符串转换成列表；然后使用reverse()反转列表元素；最后将反转的列表转换会字符串即可。3、使用reduce()函数，语法&ldquo;reduce(lambda x,y:y+x,字符串)&rdquo;。</p>
-
 <p>第一种：使用字符串切片</p>
-
 <p>&gt;&gt;&gt; s=&quot;abcdef&quot;</p>
-
 <p>&gt;&gt;&gt; result = s[::-1]</p>
-
 <p>&gt;&gt;&gt; print(result)</p>
-
 <p>第二种：使用列表的reverse方法</p>
-
 <p>l = list(s)</p>
-
 <p>l.reverse()</p>
-
 <p>result = &quot;&quot;.join(l)</p>
-
 <p>或者</p>
-
 <p>l = list(s)</p>
-
 <p>result = &quot;&quot;.join(l[::-1])</p>
-
 <p>第三种：使用reduce</p>
-
 <p>result = reduce(lambda x,y:y+x,s)</p>
-
 <p>第四种：使用递归函数</p>
-
 <p>def func(s):</p>
-
 <p>&nbsp;&nbsp;&nbsp; if len(s) &lt;1:</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return s</p>
-
 <p>&nbsp;&nbsp;&nbsp; return func(s[1:])+s[0]</p>
-
 <p>result = func(s)</p>
-
 <p>第五种：使用栈</p>
-
 <p>def func(s):</p>
-
 <p>&nbsp;&nbsp;&nbsp; l = list(s) #模拟全部入栈</p>
-
 <p>&nbsp;&nbsp;&nbsp; result = &quot;&quot;</p>
-
 <p>&nbsp;&nbsp;&nbsp; while len(l)&gt;0:</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result += l.pop() #模拟出栈</p>
-
 <p>&nbsp;&nbsp;&nbsp; return result</p>
-
 <p>result = func(s)</p>
-
 <p>第六种：for循环</p>
-
 <p>def func(s):</p>
-
 <p>&nbsp;&nbsp;&nbsp; result = &quot;&quot;</p>
-
 <p>&nbsp;&nbsp;&nbsp; max_index = len(s)-1</p>
-
 <p>&nbsp;&nbsp;&nbsp; for index,value in enumerate(s):</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result += s[max_index-index]</p>
-
 <p>&nbsp;&nbsp;&nbsp; return result</p>
-
 <p>result = func(s)</p>
-
 <p>11、问答题 （5分） 如何拼接字符串？</p>
-
 <p>print(&#39;第一种方式通过加号形式连接 ：&#39; + &#39;love&#39;+&#39;Python&#39; + &#39;\n&#39;)</p>
-
 <p>print(&#39;第二种方式通过逗号形式连接 ：&#39; + &#39;love&#39;, &#39;Python&#39; + &#39;\n&#39;)</p>
-
 <p>直接连接 中间有无空格均可</p>
-
 <p>print(&#39;第三种方式通过直接连接形式连接 (一) ：&#39; + &#39;love&#39;&#39;Python&#39; + &#39;\n&#39;)</p>
-
 <p>print(&#39;第三种方式通过直接连接形式连接 (二) ：&#39; + &#39;love&#39;&nbsp;&nbsp;&nbsp; &#39;Python&#39; + &#39;\n&#39;)</p>
-
 <p>print(&#39;第四种方式通过格式化形式连接 ：&#39; + &#39;%s %s&#39; % (&#39;love&#39;, &#39;Python&#39;) + &#39;\n&#39;)</p>
-
 <p>第五种 join方式连接</p>
-
 <p>str_list = [&#39;love&#39;, &#39;Python&#39;]</p>
-
 <p>print(&#39;第五种方式通过join形式连接 ：&#39; + &#39;&#39;.join(str_list) + &#39;\n&#39;)</p>
-
 <p>&nbsp;&nbsp;&nbsp; 问答题 （5分） 如何判断字符串数据中是否只包含数字？</p>
-
 <p>str.isdecimal()函数</p>
-
 <p><br />
 作用：如果字符串中的所有字符都是十进制字符且该字符串至少有一个字符，则返回 True ， 否则返回 False 。十进制字符指那些可以用来组成10进制数字的字符，例如 U+0660 ，即阿拉伯字母数字0 。</p>
-
 <p><br />
 str.isdigit()函数</p>
-
 <p><br />
 作用：如果字符串中的所有字符都是数字，并且至少有一个字符，返回 True ，否则返回 False 。 数字包括十进制字符和需要特殊处理的数字，如兼容性上标数字。这包括了不能用来组成 10 进制数的数字，如 Kharosthi 数。 严格地讲，数字是指属性值为 Numeric_Type=Digit 或 Numeric_Type=Decimal 的字符。</p>
-
 <p>str.isnumeric()函数</p>
-
 <p>如果字符串中至少有一个字符且所有字符均为数值字符则返回 True ，否则返回 False 。 数值字符包括数字字符，以及所有在 Unicode 中设置了数值特性属性的字符，例如 U+2155, VULGAR FRACTION ONE FIFTH。 正式的定义为：数值字符就是具有特征属性值 Numeric_Type=Digit, Numeric_Type=Decimal 或 Numeric_Type=Numeric 的字符。</p>
-

@@ -11,53 +11,35 @@ categories:
 列表比较大小，从第一个元素顺序开始比较，如果相等，则继续，返回第一个不相等元素比较的结果。如果所有元素比较均相等，则长的列表大，一样长则两列表相等。<br />
 2、问答题&nbsp;（5分）&nbsp;remove 与 pop 、del 方法的异同？<br />
 del语句可以删除任何位置处的列表元素, 若知道某元素在列表中的位置则可使用del语句.</p>
-
 <p>例:&gt;&gt;&gt; a = [3, 2, 2, 1]</p>
-
 <p>&gt;&gt;&gt; del a[1]</p>
-
 <p>&gt;&gt;&gt; a</p>
-
 <p>[3, 2, 1]<br />
 pop()可删除任意位置的元素并将其返回, 只需在括号内指定要删除元素的索引即可, 当括号内为空时则删除该列表最后一个元素并将其返回.</p>
-
 <p>例1:&gt;&gt;&gt; a = [3, 2, 1]</p>
-
 <p>&gt;&gt;&gt; a.pop(1)</p>
-
 <p>2</p>
-
 <p>&gt;&gt;&gt; a</p>
-
 <p>[3, 1]<br />
 remove()方法可根据值删除元素, 若不知所要删除元素在列表中的位置时可用remove()删除, 需要注意的是remove()所删除的元素是列表中第一个配对的值<br />
 &gt;&gt;&gt; a = [3, 2, 1, 2]</p>
-
 <p>&gt;&gt;&gt; a.remove(2)</p>
-
 <p>&gt;&gt;&gt; a</p>
-
 <p>[3, 1, 2]<br />
 3、问答题&nbsp;（5分）&nbsp;&nbsp;append 与 extend 方法的异同？<br />
 append()方法是将后一组列表当成一个对象，整体加入前一组列表中<br />
 list_A = [&#39;h&#39;, &#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;]<br />
 list_B = [&#39;w&#39;,&#39;o&#39;,&#39;r&#39;,&#39;l&#39;,&#39;d&#39;]</p>
-
 <p>list_A.append(list_B)<br />
 print(list_A)</p>
-
 <p># [&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, [&#39;w&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;]]<br />
 extend()方法是将后一组列表依次加入，并为同一个整体</p>
-
 <p>list_A = [&#39;h&#39;, &#39;e&#39;,&#39;l&#39;,&#39;l&#39;,&#39;o&#39;]<br />
 list_B = [&#39;w&#39;,&#39;o&#39;,&#39;r&#39;,&#39;l&#39;,&#39;d&#39;]</p>
-
 <p>list_A.extend(list_B)<br />
 print(list_A)</p>
-
 <p># [&#39;h&#39;, &#39;e&#39;, &#39;l&#39;, &#39;l&#39;, &#39;o&#39;, &#39;w&#39;, &#39;o&#39;, &#39;r&#39;, &#39;l&#39;, &#39;d&#39;]<br />
 append与extend方法均无返回值，修改的只是list_A的值，因此print(list_A.append(list_B))以及print(list_A.extend(list_B))输出值均为None</p>
-
 <p>4、问答题&nbsp;（5分）&nbsp;字典和列表的异同？<br />
 相同：<br />
 ①修改元素都可以用赋值语句*来完成：list1 = [&#39;小明&#39;,&#39;小红&#39;,&#39;小刚&#39;,&#39;小美&#39;]<br />
@@ -66,11 +48,9 @@ print(list1)<br />
 dict1 = {&#39;小明&#39;:&#39;男&#39;}<br />
 dict1[&#39;小明&#39;] = &#39;女&#39;<br />
 print(dict1)</p>
-
 <p>&gt;&gt;<br />
 [&#39;小明&#39;,&#39;小蓝&#39;,&#39;小刚&#39;,&#39;小美&#39;]<br />
 {&#39;小明&#39;:&#39;女&#39;}</p>
-
 <p>②列表和字典都支持任意嵌套（也就是列表和字典里可以放任何数据类型）：<br />
 students = [[&#39;小明&#39;,&#39;小红&#39;,&#39;小刚&#39;,&#39;小美&#39;],[&#39;小强&#39;,&#39;小兰&#39;,&#39;小伟&#39;,&#39;小芳&#39;]] print(students[1][1])<br />
 scores = {&nbsp;&nbsp;&nbsp; &nbsp;<br />
@@ -78,7 +58,6 @@ scores = {&nbsp;&nbsp;&nbsp; &nbsp;<br />
 &#39;第二组&#39;:{&#39;小强&#39;:99,&#39;小兰&#39;:89,&#39;小伟&#39;:93,&#39;小芳&#39;:88}&nbsp;&nbsp;&nbsp; &nbsp;<br />
 }<br />
 print(scores[&#39;第二组&#39;][&#39;小芳&#39;])</p>
-
 <p>&gt;&gt;<br />
 小兰<br />
 不同：<br />
@@ -89,19 +68,16 @@ print(students1 == students2)<br />
 scores1 = {&#39;小明&#39;:95,&#39;小红&#39;:90,&#39;小刚&#39;:100}<br />
 scores2 = {&#39;小刚&#39;:100,&#39;小明&#39;:95,&#39;小红&#39;:90}<br />
 print(scores1 == scores2)</p>
-
 <p>&gt;&gt;<br />
 False<br />
 True<br />
 5、问答题&nbsp;（5分）&nbsp;试列举出字符串、列表、元组、字典每个常用的方法？<br />
 1、列表 list</p>
-
 <p>&nbsp;&nbsp;&nbsp; 列表(list):专门用于存储一串信息,列表用中括号[]定义,数据之间使用逗号,分隔<br />
 list1 = [&#39;physics&#39;, &#39;chemistry&#39;, 1997, 2000]<br />
 list2 = [1, 2, 3, 4, 5]<br />
 list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]<br />
 1.1、len()</p>
-
 <p>&nbsp;&nbsp;&nbsp; 获取列表的长度<br />
 print(len(list1))<br />
 print(len(list2))<br />
@@ -110,7 +86,6 @@ max()和min()获取列表中最大值和最小值<br />
 print(&quot;----list2------&quot;)<br />
 print(max(list2))<br />
 print(min(list2))</p>
-
 <p>print(&quot;----list3------&quot;)<br />
 print(max(list3))<br />
 print(min(list3))<br />
@@ -118,7 +93,6 @@ reverse()反向列表中元素<br />
 print(&quot;----list2------&quot;)<br />
 list2.reverse()<br />
 print(list2)</p>
-
 <p>print(&quot;----list3------&quot;)<br />
 list3.reverse()<br />
 print(list3)<br />
@@ -126,12 +100,10 @@ sort()对列表进行排序，从小到大<br />
 list1 = [&#39;physics&#39;, &#39;chemistry&#39;, 1997, 2000]<br />
 list2 = [1, 4, 5, 2, 3]<br />
 list3 = [&quot;c&quot;, &quot;d&quot;, &quot;a&quot;, &quot;b&quot;]</p>
-
 <p><br />
 print(&quot;----list2------&quot;)<br />
 list2.sort()<br />
 print(list2)</p>
-
 <p>print(&quot;----list3------&quot;)<br />
 list3.sort()<br />
 print(list3)<br />
@@ -139,7 +111,6 @@ clear()<br />
 print(&quot;----list2------&quot;)<br />
 list2.clear()<br />
 print(list2)</p>
-
 <p>print(&quot;----list3------&quot;)<br />
 list3.clear()<br />
 print(list3)<br />
@@ -148,17 +119,14 @@ remove()<br />
 list1 = [&#39;physics&#39;, &#39;chemistry&#39;, 1997, 2000]<br />
 list2 = [1, 2, 3, 4, 5]<br />
 list3 = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;]</p>
-
 <p>print(list2)<br />
 list2.remove(2)<br />
 print(list2)<br />
 insert()和pop()pop 移除列表中的一个元素（默认最后一个元素），并且返回该元素的值<br />
 insert 插入对象<br />
 list = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]</p>
-
 <p>list.pop()<br />
 print(list)</p>
-
 <p>#指定索引位置进行插入<br />
 list.insert(2,&quot;ppx&quot;)<br />
 print(list)<br />
@@ -178,12 +146,10 @@ dict.clear()<br />
 print(dict)<br />
 keys()和values()keys以列表返回一个字典所有的键<br />
 keys = dict.keys()</p>
-
 <p>for key in keys:<br />
 &nbsp;&nbsp;&nbsp; print(key)<br />
 values以列表返回字典中的所有值<br />
 values = dict.values()</p>
-
 <p>for value in values:<br />
 &nbsp;&nbsp;&nbsp; print(value)<br />
 items()以列表返回可遍历的(键, 值) 元组数组<br />
@@ -197,37 +163,28 @@ print(dict)<br />
 dict.pop(&quot;Beth&quot;)<br />
 4、字符串<br />
 replace()</p>
-
 <p>字符串替换<br />
 str = &quot;hello world hello ppx&quot;</p>
-
 <p>#将hello替换成皮皮虾<br />
 print(str.replace(&quot;hello&quot;,&quot;皮皮虾&quot;))<br />
 split()字符串分割<br />
 str = &quot;hello world hello ppx&quot;</p>
-
 <p>#使用空格进行分割<br />
 string = str.split(&quot; &quot;)<br />
 print(string)</p>
-
 <p>strip()<br />
 自定义删除字符串两边的东西，默认是空格<br />
 lstrip()去除字符串左边空格 rstrip()去除字符串右边空格</p>
-
 <p>str = &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hello world hello ppx&quot;</p>
-
 <p>print(str)<br />
 #去除字符串两边的空格<br />
 string = str.strip()<br />
 print(string)</p>
-
 <p>#去除字符串两边的x<br />
 s = str.strip(&quot;x&quot;)<br />
 print(s)![在这里插入图片描述](https://img-blog.csdnimg.cn/20200905162224508.png#pic_center)</p>
-
 <p>count()<br />
 str = &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hello world hello ppx&quot;</p>
-
 <p>#默认全部查找<br />
 print(str.count(&quot;o&quot;))<br />
 #自定义范围查找<br />
@@ -245,20 +202,16 @@ river = {<br />
 }<br />
 for k, v in river.items():<br />
 &nbsp;&nbsp;&nbsp; print(k + &quot; runs through &quot; + v + &quot;.&quot;)</p>
-
 <p>for k in river.keys():<br />
 &nbsp;&nbsp;&nbsp; print(k)</p>
-
 <p>for v in river.values():<br />
 &nbsp;&nbsp;&nbsp; print(v)</p>
-
 <p>8、问答题&nbsp;（10分）&nbsp;使用while循环输出1 2 3 4 5 6 8 9 10<br />
 number = 1<br />
 while number &lt; 11:<br />
 &nbsp;&nbsp;&nbsp; if number !=7:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print(number,end=&#39; &#39;)<br />
 &nbsp;&nbsp;&nbsp; number += 1</p>
-
 <p>9、问答题&nbsp;（10分）&nbsp;写出实现&ldquo;1-100求和&rdquo;的语句<br />
 方法一：<br />
 one = 0<br />
@@ -275,7 +228,6 @@ while i &lt; 101:<br />
 &nbsp;&nbsp;&nbsp; three = three+i<br />
 &nbsp;&nbsp;&nbsp; i+=1<br />
 print(three)</p>
-
 <p>10、问答题&nbsp;（5分）&nbsp;如何定义一个函数？<br />
 函数代码块以 def 关键词开头，后接函数标识符名称和圆括号 ()。<br />
 &nbsp;&nbsp;&nbsp; 任何传入参数和自变量必须放在圆括号中间，圆括号之间可以用于定义参数。<br />
@@ -288,15 +240,12 @@ def 函数名（参数列表）:<br />
 例如：<br />
 def hello() :<br />
 &nbsp;&nbsp;&nbsp; print(&quot;Hello World!&quot;)</p>
-
 <p>hello()<br />
 11、问答题&nbsp;（5分）&nbsp;什么是正则表达式，在python中对应哪个模块？<br />
 &ldquo; 正则表达式就是字符串的匹配规则,在多数编程语言里都有相应的支持,python里对应的模块是re。&rdquo;<br />
 正则表达式：用来处理字符串，对字符串进行检索和替换，另外正则在python爬虫的应用也是相当广泛！<br />
 特点：灵活性、逻辑性和功能性非常强，可以迅速地用极简单的方式达到字符串的复杂控制</p>
-
 <p>12、问答题&nbsp;（5分）&nbsp;re.match函数与re.search方法的区别是什么？<br />
 &nbsp;&nbsp;&nbsp; match（）函数只检测RE是不是在string的开始位置匹配，<br />
 &nbsp;&nbsp;&nbsp; search()会扫描整个string查找匹配<br />
 &nbsp;&nbsp;&nbsp; match（）只有在0位置匹配成功的话才有返回，如果不是开始位置匹配成功的话，match()就返回none</p>
-

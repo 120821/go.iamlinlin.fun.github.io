@@ -5,25 +5,20 @@ date: "2022-08-31"
 categories: 
 ---
 <p><a href="https://www.cnblogs.com/zealousness/archive/2019/03/19/10557584.html?ivk_sa=1024320u">https://www.cnblogs.com/zealousness/archive/2019/03/19/10557584.html?ivk_sa=1024320u</a></p>
-
 <p>默认情况下，一个div独占一行</p>
-
 <p>使用css选择器给外层div加上以下flex属性，则该div的子div可以在同一行中显示，</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 .runs-paginator-flex-<span style="color: rgba(0, 0, 0, 1)">container {
-  flex: </span>1 1<span style="color: rgba(0, 0, 0, 1)"> auto;
-  flex</span>-direction: row-<span style="color: rgba(0, 0, 0, 1)">reverse;
-  display: flex;
+flex: </span>1 1<span style="color: rgba(0, 0, 0, 1)"> auto;
+flex</span>-direction: row-<span style="color: rgba(0, 0, 0, 1)">reverse;
+display: flex;
 }</span>{% endhighlight %}
 </div>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div </span><span style="color: rgba(255, 0, 0, 1)">className</span><span style="color: rgba(0, 0, 255, 1)">=&quot;runs-paginator-flex-container&quot;</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
-    <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>1<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
-    <span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>2<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
+<span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>1<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
+<span style="color: rgba(0, 0, 255, 1)">&lt;</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>2<span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>
 <span style="color: rgba(0, 0, 255, 1)">&lt;/</span><span style="color: rgba(128, 0, 0, 1)">div</span><span style="color: rgba(0, 0, 255, 1)">&gt;</span>{% endhighlight %}
 </div>
-

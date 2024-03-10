@@ -5,9 +5,5 @@ date: "2023-08-26"
 categories: 
 ---
 <p>缺少了配置文件：</p>
-
-{% highlight %}
-{% highlight %}sudo apt-get install libmysqlclient-dev{% endhighlight %}
-
-<p>{% highlight %}然后继续bundle install 即可。{% endhighlight %}</p>
-
+{% highlight html %}sudo apt-get install libmysqlclient-dev{% endhighlight %}
+<p>{% highlight html %}然后继续bundle install 即可。{% endhighlight %}</p>

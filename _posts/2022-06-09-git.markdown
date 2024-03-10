@@ -4,8 +4,7 @@ title: "git 仓库"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <h3>commit</h3> 
+<h3>commit</h3> 
 <p>git merge</p> 
 <p>git merge name ^c</p> 
 <p>git branch</p> 
@@ -27,4 +26,3 @@ categories:
 <p></p> 
 <p></p> 
 <p></p>
-                

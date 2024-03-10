@@ -5,52 +5,35 @@ date: "2022-07-26"
 categories: 
 ---
 <p>官网：https://github.com/ChainSafe/web3.js</p>
-
 <p>使用node安装&nbsp; npm install web3</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install web3</p>
-
 <p>up to date, audited 378 packages in 3s</p>
-
 <p>65 packages are looking for funding<br />
 &nbsp; run `npm fund` for details</p>
-
 <p>4 moderate severity vulnerabilities</p>
-
 <p>To address all issues (including breaking changes), run:<br />
 &nbsp; npm audit fix --force</p>
-
 <p>Run `npm audit` for details.</p>
-
-<p dir="auto">Use the prebuilt {% highlight %}dist/web3.min.js{% endhighlight %}, or build using the <a href="https://github.com/ethereum/web3.js">web3.js</a> repository:</p>
-
+<p dir="auto">Use the prebuilt {% highlight html %}dist/web3.min.js{% endhighlight %}, or build using the <a href="https://github.com/ethereum/web3.js">web3.js</a> repository:</p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 npm run build{% endhighlight %}
-
 <p>npm run build<br />
 npm ERR! Missing script: &quot;build&quot;<br />
 npm ERR!<br />
 npm ERR! To see a list of scripts, run:<br />
 npm ERR!&nbsp;&nbsp; npm run</p>
-
 <p>npm ERR! A complete log of this run can be found in:<br />
 npm ERR!&nbsp;&nbsp;&nbsp;&nbsp; /home/linlin/.npm/_logs/2022-07-26T03_59_06_618Z-debug.log</p>
 </div>
-
-<p dir="auto">Then include {% highlight %}dist/web3.min.js{% endhighlight %} in your html file. This will expose {% highlight %}Web3{% endhighlight %} on the window object.</p>
-
+<p dir="auto">Then include {% highlight html %}dist/web3.min.js{% endhighlight %} in your html file. This will expose {% highlight html %}Web3{% endhighlight %} on the window object.</p>
 <p dir="auto">Or via jsDelivr CDN:</p>
-
 <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 <span class="pl-kos">&lt;</span><span class="pl-ent">script</span> <span class="pl-c1">src</span>=&quot;<span class="pl-s">https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js</span>&quot;<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span>{% endhighlight %}
 </div>
-
 <p dir="auto">UNPKG:</p>
-
 <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 <span class="pl-kos">&lt;</span><span class="pl-ent">script</span> <span class="pl-c1">src</span>=&quot;<span class="pl-s">https://unpkg.com/web3@latest/dist/web3.min.js</span>&quot;<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">script</span><span class="pl-kos">&gt;</span>{% endhighlight %}
 </div>
-

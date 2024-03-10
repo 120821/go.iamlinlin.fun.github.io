@@ -5,43 +5,28 @@ date: "2023-11-05"
 categories: 
 ---
 <p>1.使用普通的img</p>
-
-{% highlight %}
-{% highlight %}render() {
-  return (
-    &lt;div&gt;
-      &lt;img src={require(&#39;./images/image.jpg&#39;)} alt=&quot;Example-Image&quot; /&gt;
-    &lt;/div&gt;
-  );
+{% highlight html %}render() {
+return (
+&lt;div&gt;
+&lt;img src={require(&#39;./images/image.jpg&#39;)} alt=&quot;Example-Image&quot; /&gt;
+&lt;/div&gt;
+);
 }{% endhighlight %}
-
 <p>2.使用引入：</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;{% endhighlight %}
-
-<p>{% highlight %}然后：{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;{% endhighlight %}
-
+{% highlight html %}<span style="color:#dcc6e0">import</span> HeadImage <span style="color:#dcc6e0">from</span> <span style="color:#abe338">&#39;./fairy.jpeg&#39;</span>;{% endhighlight %}
+<p>{% highlight html %}然后：{% endhighlight %}</p>
+{% highlight html %}&lt;img src={HeadImage} alt=&quot;Head Image&quot; /&gt;{% endhighlight %}
 <p>比较完整的：</p>
-
-{% highlight %}
-{% highlight %}import React, { Component } from &#39;react&#39;;
+{% highlight html %}import React, { Component } from &#39;react&#39;;
 import HeadImage from &#39;./fairy.jpeg&#39;;
-
 class MyComponent extends Component {
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;img src={HeadImage} alt=&quot;Head-Image&quot; /&gt;
-      &lt;/div&gt;
-    );
-  }
+render() {
+return (
+&lt;div&gt;
+&lt;img src={HeadImage} alt=&quot;Head-Image&quot; /&gt;
+&lt;/div&gt;
+);
 }
-
+}
 export default MyComponent;{% endhighlight %}
-
 <p>&nbsp;</p>
-

@@ -1,23 +1,16 @@
 ---
 layout: post
-title: "跨源资源共享 (CORS)"
+title: "跨源资源共享(CORS)"
 date: "2022-08-22"
-categories: 
+categories:
 ---
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS</a></p>
-
-<p>{% highlight %}跨源资源共享{% endhighlight %} (<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CORS">CORS</a>)（或通俗地译为跨域资源共享）是一种基于 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/HTTP">HTTP</a> 头的机制，该机制通过允许服务器标示除了它自己以外的其它 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Origin">origin</a>（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的&quot;预检&quot;请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。</p>
-
-<p>跨源 HTTP 请求的一个例子：运行在 {% highlight %}https://domain-a.com{% endhighlight %} 的 JavaScript 代码使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">{% highlight %}XMLHttpRequest{% endhighlight %}</a> 来发起一个到 {% highlight %}https://domain-b.com/data.json{% endhighlight %} 的请求。</p>
-
-<p>出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。 例如，{% highlight %}XMLHttpRequest{% endhighlight %} 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">Fetch API</a> 遵循<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。</p>
-
-<p>跨源域资源共享（<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CORS">CORS</a>）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">{% highlight %}XMLHttpRequest{% endhighlight %}</a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">Fetch</a>）使用 CORS，以降低跨源 HTTP 请求所带来的风险。</p>
-
+<p>{% highlight html %}跨源资源共享{% endhighlight %} (<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CORS">CORS</a>)（或通俗地译为跨域资源共享）是一种基于 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/HTTP">HTTP</a> 头的机制，该机制通过允许服务器标示除了它自己以外的其它 <a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Origin">origin</a>（域，协议和端口），使得浏览器允许这些 origin 访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的&quot;预检&quot;请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。</p>
+<p>跨源 HTTP 请求的一个例子：运行在 {% highlight html %}https://domain-a.com{% endhighlight %} 的 JavaScript 代码使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">{% highlight html %}XMLHttpRequest{% endhighlight %}</a> 来发起一个到 {% highlight html %}https://domain-b.com/data.json{% endhighlight %} 的请求。</p>
+<p>出于安全性，浏览器限制脚本内发起的跨源 HTTP 请求。 例如，{% highlight html %}XMLHttpRequest{% endhighlight %} 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">Fetch API</a> 遵循<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy">同源策略</a>。这意味着使用这些 API 的 Web 应用程序只能从加载应用程序的同一个域请求 HTTP 资源，除非响应报文包含了正确 CORS 响应头。</p>
+<p>跨源域资源共享（<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/CORS">CORS</a>）机制允许 Web 应用服务器进行跨源访问控制，从而使跨源数据传输得以安全进行。现代浏览器支持在 API 容器中（例如 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">{% highlight html %}XMLHttpRequest{% endhighlight %}</a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">Fetch</a>）使用 CORS，以降低跨源 HTTP 请求所带来的风险。</p>
 <p>客户端和服务器之间使用 CORS 首部字段来处理权限：</p>
-
 <p>以下是浏览器发送给服务器的请求报文：</p>
-
 <pre class="notranslate">
 GET /resources/public-data/ HTTP/1.1
 Host: bar.other
@@ -27,10 +20,7 @@ Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
-{% endhighlight %}
-
-<p>请求首部字段 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Origin">{% highlight %}Origin{% endhighlight %}</a> 表明该请求来源于 {% highlight %}http://foo.example{% endhighlight %}。</p>
-
+<p>请求首部字段 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Origin">Origin</a> 表明该请求来源于 http://foo.example</p>
 <pre class="notranslate">
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 00:23:53 GMT
@@ -40,21 +30,11 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Transfer-Encoding: chunked
 Content-Type: application/xml
-
 [XML Data]
-{% endhighlight %}
-
-<p>本例中，服务端返回的 {% highlight %}Access-Control-Allow-Origin: *{% endhighlight %} 表明，该资源可以被 <strong>任意</strong> 外域访问。</p>
-
+<p>本例中，服务端返回的 {% highlight html %}Access-Control-Allow-Origin: *{% endhighlight %} 表明，该资源可以被 <strong>任意</strong> 外域访问。</p>
 <pre class="notranslate">
 Access-Control-Allow-Origin: *
-{% endhighlight %}
-
-<p>使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Origin">{% highlight %}Origin{% endhighlight %}</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">{% highlight %}Access-Control-Allow-Origin{% endhighlight %}</a> 就能完成最简单的访问控制。如果服务端仅允许来自 {% highlight %}https://foo.example{% endhighlight %} 的访问，该首部字段的内容如下：</p>
-
+<p>使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Origin">{% highlight html %}Origin{% endhighlight %}</a> 和 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">{% highlight html %}Access-Control-Allow-Origin{% endhighlight %}</a> 就能完成最简单的访问控制。如果服务端仅允许来自 {% highlight html %}https://foo.example{% endhighlight %} 的访问，该首部字段的内容如下：</p>
 <pre class="notranslate">
 Access-Control-Allow-Origin: https://foo.example
-{% endhighlight %}
-
 <p>&nbsp;</p>
-

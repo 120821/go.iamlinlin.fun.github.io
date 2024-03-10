@@ -2,33 +2,19 @@
 layout: post
 title: "blockchain - 安装solc install solc, not solcjs"
 date: "2022-07-25"
-categories: 
+categories:
 ---
 <p><a href="http://siwei.me/blog/posts/blockchain-solc-install-solc-not-solcjs">参考</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://github.com/ethereum/solidity/releases">solc </a></p>
-
 <p>solcjs :&nbsp; node package</p>
-
 <p>solc&nbsp; solcjs 两者不一样，参数不兼容。所以，有时候我们需要使用solc 来执行一些命令</p>
-
 <p>安装方法：在上面的 <a href="https://github.com/ethereum/solidity/releases">https://github.com/ethereum/solidity/releases</a> 中，直接下载二进制文件即可。</p>
-
 <p><img src="https://files.sweetysoft.com/blog_images/from_paste_20220723_155128.png" /></p>
-
-{% highlight %}
-{% highlight %}cp ~/Downloads/solc-static-linux /workspace/coding_tools/
-{% endhighlight %}
-
+{% highlight html %}cp ~/Downloads/solc-static-linux /workspace/coding_tools/ {% endhighlight %}
 <p>把solc复制到workspace需要用到的工具文件夹</p>
-
 <p>复制到usr/bin文件夹</p>
-
-{% highlight %}
-{% highlight %}linlin@linlin-i5:/workspace$ sudo cp&nbsp; ~/Downloads/solc-static-linux /usr/bin/
+{% highlight html %}linlin@linlin-i5:/workspace$ sudo cp&nbsp; ~/Downloads/solc-static-linux /usr/bin/
 [sudo] password for linlin:{% endhighlight %}
-{% endhighlight %}
-
 <p>solcjs的使用</p>
-
 <p>linlin@linlin-i5:/workspace$ solcjs<br />
 111.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; email/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; library/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rails6-webpacker-demo/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test_rails/<br />
 222.txt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Firefox-latest-x86_64.tar.bz2&nbsp;&nbsp;&nbsp;&nbsp; linlin_blogs/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rails_graphql/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test_rails_0303/<br />
@@ -46,9 +32,7 @@ devise/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 devise_rails/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; import_csv/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pns-operation_simple_redeem_code/ test_css/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 docker_folder/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; japan/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rails001/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test_fly.io/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 docker_folder2/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rails002/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test_question/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-
 <p>solc的使用</p>
-
 <p>linlin@linlin-i5:/workspace$ solc<br />
 Command &#39;solc&#39; not found, but can be installed with:<br />
 sudo snap install solc<br />
@@ -58,11 +42,9 @@ linlin@linlin-i5:/workspace$ solc<br />
 solc&nbsp;&nbsp;&nbsp; solcjs &nbsp;<br />
 linlin@linlin-i5:/workspace$ solc<br />
 solc, the Solidity commandline compiler.</p>
-
 <p>This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you<br />
 are welcome to redistribute it under certain conditions. See &#39;solc --license&#39;<br />
 for details.</p>
-
 <p>Usage: solc [options] [input_file...]<br />
 Compiles the given Solidity input files (or the standard input if none given or<br />
 &quot;-&quot; is used as a file name) and outputs the components specified in the options<br />
@@ -71,13 +53,11 @@ Imports are automatically read from the filesystem, but it is also possible to<b
 remap paths using the context:prefix=path syntax.<br />
 Example:<br />
 solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
-
 <p>General Information:<br />
 &nbsp; --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show help message and exit.<br />
 &nbsp; --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show version and exit.<br />
 &nbsp; --license&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show licensing information and exit.<br />
 &nbsp; --input-file arg&nbsp;&nbsp;&nbsp;&nbsp; input file</p>
-
 <p>Input Options:<br />
 &nbsp; --base-path path&nbsp;&nbsp;&nbsp;&nbsp; Use the given path as the root of the source tree<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instead of the root of the filesystem.<br />
@@ -93,7 +73,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; supplied by separating them with a comma.<br />
 &nbsp; --ignore-missing&nbsp;&nbsp;&nbsp;&nbsp; Ignore missing files.<br />
 &nbsp; --error-recovery&nbsp;&nbsp;&nbsp;&nbsp; Enables additional parser error recovery.</p>
-
 <p>Output Options:<br />
 &nbsp; -o [ --output-dir ] path<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If given, creates one file per component and<br />
@@ -116,7 +95,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; following components: ast-id, location, snippet.<br />
 &nbsp; --stop-after stage&nbsp;&nbsp; Stop execution after the given compiler stage. Valid<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; options: &quot;parsing&quot;.</p>
-
 <p>Alternative Input Modes:<br />
 &nbsp; --standard-json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch to Standard JSON input / output mode, ignoring<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all options. It reads from standard input, if no input<br />
@@ -142,17 +120,14 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --lsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch to language server mode (&quot;LSP&quot;). Allows the<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compiler to be used as an analysis backend for your<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; favourite IDE.</p>
-
 <p>Assembly Mode Options:<br />
 &nbsp; --machine evm,ewasm&nbsp; Target machine in assembly or Yul mode.<br />
 &nbsp; --yul-dialect evm,ewasm<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input dialect to use in assembly or yul mode.</p>
-
 <p>Linker Mode Options:<br />
 &nbsp; --libraries libs&nbsp;&nbsp;&nbsp;&nbsp; Direct string or file containing library addresses.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Syntax: &lt;libraryName&gt;=&lt;address&gt; [, or whitespace] ...<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Address is interpreted as a hex string prefixed by 0x.</p>
-
 <p>Output Formatting:<br />
 &nbsp; --pretty-json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output JSON in pretty format.<br />
 &nbsp; --json-indent N (=2) Indent pretty-printed JSON with N spaces. Enables<br />
@@ -161,7 +136,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --no-color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explicitly disable colored output, disabling terminal<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; auto-detection.<br />
 &nbsp; --error-codes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output error codes.</p>
-
 <p>Output Components:<br />
 &nbsp; --ast-compact-json&nbsp;&nbsp; AST of all source files in a compact JSON format.<br />
 &nbsp; --asm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EVM assembly of the contracts.<br />
@@ -185,21 +159,18 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on-chain.<br />
 &nbsp; --storage-layout&nbsp;&nbsp;&nbsp;&nbsp; Slots, offsets and types of the contract&#39;s state<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; variables.</p>
-
 <p>Extra Output:<br />
 &nbsp; --gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print an estimate of the maximal gas usage for each<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function.<br />
 &nbsp; --combined-json abi,asm,ast,bin,bin-runtime,devdoc,function-debug,function-debug-runtime,generated-sources,generated-sources-runtime,hashes,metadata,opcodes,srcmap,srcmap-runtime,storage-layout,userdoc<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output a single json document containing the specified<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; information.</p>
-
 <p>Metadata Options:<br />
 &nbsp; --metadata-hash ipfs,none,swarm<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Choose hash method for the bytecode metadata or disable<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it.<br />
 &nbsp; --metadata-literal&nbsp;&nbsp; Store referenced sources as literal data in the metadata<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.</p>
-
 <p>Optimizer Options:<br />
 &nbsp; --optimize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable bytecode optimizer.<br />
 &nbsp; --optimize-runs n (=200)<br />
@@ -214,7 +185,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --yul-optimizations steps<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forces yul optimizer to use the specified sequence of<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optimization steps instead of the built-in one.</p>
-
 <p>Model Checker Options:<br />
 &nbsp; --model-checker-contracts default,&lt;source&gt;:&lt;contract&gt; (=default)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select which contracts should be analyzed using the form<br />
@@ -250,11 +220,9 @@ linlin@linlin-i5:/workspace/pns-airdrop-admin$ solc<br />
 solc&nbsp;&nbsp;&nbsp; solcjs &nbsp;<br />
 linlin@linlin-i5:/workspace/pns-airdrop-admin$ solc --help<br />
 solc, the Solidity commandline compiler.</p>
-
 <p>This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you<br />
 are welcome to redistribute it under certain conditions. See &#39;solc --license&#39;<br />
 for details.</p>
-
 <p>Usage: solc [options] [input_file...]<br />
 Compiles the given Solidity input files (or the standard input if none given or<br />
 &quot;-&quot; is used as a file name) and outputs the components specified in the options<br />
@@ -263,13 +231,11 @@ Imports are automatically read from the filesystem, but it is also possible to<b
 remap paths using the context:prefix=path syntax.<br />
 Example:<br />
 solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
-
 <p>General Information:<br />
 &nbsp; --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show help message and exit.<br />
 &nbsp; --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show version and exit.<br />
 &nbsp; --license&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show licensing information and exit.<br />
 &nbsp; --input-file arg&nbsp;&nbsp;&nbsp;&nbsp; input file</p>
-
 <p>Input Options:<br />
 &nbsp; --base-path path&nbsp;&nbsp;&nbsp;&nbsp; Use the given path as the root of the source tree<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instead of the root of the filesystem.<br />
@@ -285,7 +251,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; supplied by separating them with a comma.<br />
 &nbsp; --ignore-missing&nbsp;&nbsp;&nbsp;&nbsp; Ignore missing files.<br />
 &nbsp; --error-recovery&nbsp;&nbsp;&nbsp;&nbsp; Enables additional parser error recovery.</p>
-
 <p>Output Options:<br />
 &nbsp; -o [ --output-dir ] path<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If given, creates one file per component and<br />
@@ -308,7 +273,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; following components: ast-id, location, snippet.<br />
 &nbsp; --stop-after stage&nbsp;&nbsp; Stop execution after the given compiler stage. Valid<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; options: &quot;parsing&quot;.</p>
-
 <p>Alternative Input Modes:<br />
 &nbsp; --standard-json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch to Standard JSON input / output mode, ignoring<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; all options. It reads from standard input, if no input<br />
@@ -334,17 +298,14 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --lsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Switch to language server mode (&quot;LSP&quot;). Allows the<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compiler to be used as an analysis backend for your<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; favourite IDE.</p>
-
 <p>Assembly Mode Options:<br />
 &nbsp; --machine evm,ewasm&nbsp; Target machine in assembly or Yul mode.<br />
 &nbsp; --yul-dialect evm,ewasm<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Input dialect to use in assembly or yul mode.</p>
-
 <p>Linker Mode Options:<br />
 &nbsp; --libraries libs&nbsp;&nbsp;&nbsp;&nbsp; Direct string or file containing library addresses.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Syntax: &lt;libraryName&gt;=&lt;address&gt; [, or whitespace] ...<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Address is interpreted as a hex string prefixed by 0x.</p>
-
 <p>Output Formatting:<br />
 &nbsp; --pretty-json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output JSON in pretty format.<br />
 &nbsp; --json-indent N (=2) Indent pretty-printed JSON with N spaces. Enables<br />
@@ -353,7 +314,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --no-color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Explicitly disable colored output, disabling terminal<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; auto-detection.<br />
 &nbsp; --error-codes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output error codes.</p>
-
 <p>Output Components:<br />
 &nbsp; --ast-compact-json&nbsp;&nbsp; AST of all source files in a compact JSON format.<br />
 &nbsp; --asm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EVM assembly of the contracts.<br />
@@ -377,21 +337,18 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; on-chain.<br />
 &nbsp; --storage-layout&nbsp;&nbsp;&nbsp;&nbsp; Slots, offsets and types of the contract&#39;s state<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; variables.</p>
-
 <p>Extra Output:<br />
 &nbsp; --gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Print an estimate of the maximal gas usage for each<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function.<br />
 &nbsp; --combined-json abi,asm,ast,bin,bin-runtime,devdoc,function-debug,function-debug-runtime,generated-sources,generated-sources-runtime,hashes,metadata,opcodes,srcmap,srcmap-runtime,storage-layout,userdoc<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Output a single json document containing the specified<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; information.</p>
-
 <p>Metadata Options:<br />
 &nbsp; --metadata-hash ipfs,none,swarm<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Choose hash method for the bytecode metadata or disable<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; it.<br />
 &nbsp; --metadata-literal&nbsp;&nbsp; Store referenced sources as literal data in the metadata<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output.</p>
-
 <p>Optimizer Options:<br />
 &nbsp; --optimize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable bytecode optimizer.<br />
 &nbsp; --optimize-runs n (=200)<br />
@@ -406,7 +363,6 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --yul-optimizations steps<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Forces yul optimizer to use the specified sequence of<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; optimization steps instead of the built-in one.</p>
-
 <p>Model Checker Options:<br />
 &nbsp; --model-checker-contracts default,&lt;source&gt;:&lt;contract&gt; (=default)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Select which contracts should be analyzed using the form<br />
@@ -436,35 +392,27 @@ solc --bin -o /tmp/solcoutput dapp-bin=/usr/local/lib/dapp-bin contract.sol</p>
 &nbsp; --model-checker-timeout ms<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set model checker timeout per query in milliseconds. The<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default is a deterministic resource limit. A timeout of</p>
-
 <p>但是使用的时候不能直接按照solidity的编译合约进行，例如创建了一个合约，（从正在使用的合约复制源代码过来），进行运行就会出错</p>
-
 <p>solc -o solcoutput BigBanana.sol<br />
 Error: Source &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot; not found: File not found. Searched the following locations: &quot;&quot;.<br />
 &nbsp;--&gt; BigBanana.sol:5:1:<br />
 &nbsp; |<br />
 5 | import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;<br />
 &nbsp; | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-
 <p>Error: Source &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol&quot; not found: File not found. Searched the following locations: &quot;&quot;.<br />
 &nbsp;--&gt; BigBanana.sol:6:1:<br />
 &nbsp; |<br />
 6 | import &quot;@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol&quot;;<br />
 &nbsp; | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-
 <p>Error: Source &quot;@openzeppelin/contracts/utils/Counters.sol&quot; not found: File not found. Searched the following locations: &quot;&quot;.<br />
 &nbsp;--&gt; BigBanana.sol:7:1:<br />
 &nbsp; |<br />
 7 | import &quot;@openzeppelin/contracts/utils/Counters.sol&quot;;<br />
 &nbsp; | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-
 <p>Error: Source &quot;@openzeppelin/contracts/utils/Strings.sol&quot; not found: File not found. Searched the following locations: &quot;&quot;.<br />
 &nbsp;--&gt; BigBanana.sol:9:1:<br />
 &nbsp; |<br />
 9 | import &quot;@openzeppelin/contracts/utils/Strings.sol&quot;;<br />
 &nbsp; | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</p>
-
 <p>&nbsp;</p>
-
 <div class="notranslate" style="all:initial">&nbsp;</div>
-

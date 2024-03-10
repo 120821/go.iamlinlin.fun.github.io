@@ -5,7 +5,7 @@ date: "2022-09-26"
 categories: 
 ---
 <div class="language-ruby highlighter-rouge">
-<div class="highlight" style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}<span class="n"><a href="https://sinatrarb.com/intro.html">https://sinatrarb.com/intro.html</a><br />
+<div class="highlight" style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight html %}<span class="n"><a href="https://sinatrarb.com/intro.html">https://sinatrarb.com/intro.html</a><br />
 get</span> <span class="s1">&#39;/posts&#39;</span> <span class="k">do</span><br />
 &nbsp; <span class="c1"># matches &quot;GET /posts?title=foo&amp;author=bar&quot;</span><br />
 &nbsp; <span class="n">title</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span><br />
@@ -13,15 +13,10 @@ get</span> <span class="s1">&#39;/posts&#39;</span> <span class="k">do</span><br
 &nbsp; <span class="c1"># uses title and author variables; query is optional to the /posts route</span><br />
 <span class="k">end</span>{% endhighlight %}</div>
 </div>
-
 <p>传递参数的时候，可以直接在URL后边加上?params=abc进行传递，后端可以不用特意定义，可以直接使用</p>
-
 <p>例如，在接口进行判断子域名是否完全显示：/name/:name?subdomains=yes就完全显示，否则不显示</p>
-
-{% highlight %}if params[&#39;subdomains&#39;] == &#39;yes&#39;<br />
+{% highlight html %}if params[&#39;subdomains&#39;] == &#39;yes&#39;<br />
 &nbsp; result[&#39;subdomains&#39;] = result_domain[&#39;subdomains&#39;]<br />
 end<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% endhighlight %}
-
 <p>&nbsp;</p>
-

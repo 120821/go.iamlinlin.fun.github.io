@@ -5,61 +5,36 @@ date: "2022-11-30"
 categories: 
 ---
 <p>安装vim&nbsp;<a href="http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim">http://http://www.linlin.fun/blogs/410 https://github.com/sg552/happy_book_vim</a></p>
-
-{% highlight %}
-{% highlight %}git clone&nbsp; https://github.com/sg552/happy_book_vim.git{% endhighlight %}
-
+{% highlight html %}git clone&nbsp; https://github.com/sg552/happy_book_vim.git{% endhighlight %}
 <p>1.安装vundle :</p>
-
-{% highlight %}git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim{% endhighlight %}
-
+{% highlight html %}git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim{% endhighlight %}
 <p>2.clone本项目:</p>
-
-{% highlight %}cp dot_vimrc_for_vim8 ~/.vimrc{% endhighlight %}
-
+{% highlight html %}cp dot_vimrc_for_vim8 ~/.vimrc{% endhighlight %}
 <p>3.进入到vim中,然后</p>
-
-{% highlight %}:PluginInstall{% endhighlight %}
-
+{% highlight html %}:PluginInstall{% endhighlight %}
 <p>创建新目录</p>
-<p>{% highlight %}sudo mkdir /opt/app -p{% endhighlight %}
-
+<p>{% highlight html %}sudo mkdir /opt/app -p{% endhighlight %}
 <p>进入新的目录</p>
-{% highlight %}cd /opt/app{% endhighlight %}
-
+{% highlight html %}cd /opt/app{% endhighlight %}
 <p>修改权限</p>
-
-{% highlight %}sudo chown ubuntu:ubuntu . -R &nbsp;{% endhighlight %}
-
+{% highlight html %}sudo chown ubuntu:ubuntu . -R &nbsp;{% endhighlight %}
 <p>克隆项目，安装asdf：</p>
-
-{% highlight %}git clone ...<br />
+{% highlight html %}git clone ...<br />
 cd ~{% endhighlight %}
 <p>1.安装asdf</p>
-
-{% highlight %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}
-
+{% highlight html %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}
 <p>然后增加 ~/.bashrc：</p>
-{% highlight %}&nbsp;source ./bashrc{% endhighlight %}
-
-{% highlight %}. $HOME/.asdf/asdf.sh{% endhighlight %}
+{% highlight html %}&nbsp;source ./bashrc{% endhighlight %}
+{% highlight html %}. $HOME/.asdf/asdf.sh{% endhighlight %}
 <p>asdf(查看是否显示所有命令)</p>
-
 <p>2.安装bundle</p>
-
-{% highlight %}sudo apt update{% endhighlight %}
-
-{% highlight %}sudo apt install bundler{% endhighlight %}
+{% highlight html %}sudo apt update{% endhighlight %}
+{% highlight html %}sudo apt install bundler{% endhighlight %}
 <p>安装ruby</p>
-
-{% highlight %}asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git{% endhighlight %}
-
-{% highlight %}asdf install ruby latest{% endhighlight %}
-
-{% highlight %}ruby -v{% endhighlight %}
-{% highlight %}ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]<br />
+{% highlight html %}asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git{% endhighlight %}
+{% highlight html %}asdf install ruby latest{% endhighlight %}
+{% highlight html %}ruby -v{% endhighlight %}
+{% highlight html %}ruby 3.0.2p107 (2021-07-07 revision 0db68f0233) [x86_64-linux-gnu]<br />
 ubuntu@ip-172-31-46-188:~$ which ruby<br />
 /usr/bin/ruby{% endhighlight %}
-
 <p>&nbsp;</p>
-

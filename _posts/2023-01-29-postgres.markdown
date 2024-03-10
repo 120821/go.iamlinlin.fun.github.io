@@ -5,60 +5,32 @@ date: "2023-01-29"
 categories: 
 ---
 <p>1.删除本地的postgres <a href="https://www.cnblogs.com/52note/p/15277150.html">https://www.cnblogs.com/52note/p/15277150.html</a></p>
-
 <p>sudo apt-get --purge remove postgresql\*</p>
-
 <p>2.重新安装：<a href="https://www.postgresql.org/download/linux/ubuntu/">https://www.postgresql.org/download/linux/ubuntu/</a></p>
-
-{% highlight %}
+{% highlight html %}
 # Create the file repository configuration:
 sudo sh -c &#39;echo &quot;deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main&quot; &gt; /etc/apt/sources.list.d/pgdg.list&#39;
-
 # Import the repository signing key:
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-
 # Update the package lists:
 sudo apt-get update
-
 # Install the latest version of PostgreSQL.
 # If you want a specific version, use &#39;postgresql-12&#39; or similar instead of &#39;postgresql&#39;:
 sudo apt-get -y install postgresql{% endhighlight %}
-
 <p>查看版本：</p>
-
 <p>postgres --version</p>
-
 <p>which postgres</p>
-
 <p>3.删除桌面版postgres,重新安装</p>
-
 <p>sudo apt -y remove pgadmin4</p>
-
 <p>sudo apt -y autoremove pgadmin4*</p>
-
 <p>出现了报错：&lsquo;PgAdmin: Package &#39;pgAdmin4&#39; has no installation candidate&rsquo;</p>
-
 <p><a href="https://stackoverflow.com/questions/58239607/pgadmin-package-pgadmin4-has-no-installation-candidate">https://stackoverflow.com/questions/58239607/pgadmin-package-pgadmin4-has-no-installation-candidate</a></p>
-
-{% highlight %}
-{% highlight %}curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add{% endhighlight %}
-
-{% highlight %}
-{% highlight %}sudo sh -c &#39;echo &quot;deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main&quot; &gt; /etc/apt/sources.list.d/pgadmin4.list &amp;&amp; apt update&#39;{% endhighlight %}
-
-{% highlight %}
-{% highlight %}sudo apt install pgadmin4{% endhighlight %}
-
-{% highlight %}
-{% highlight %}sudo /usr/pgadmin4/bin/setup-web.sh{% endhighlight %}
-
+{% highlight html %}curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add{% endhighlight %}
+{% highlight html %}sudo sh -c &#39;echo &quot;deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main&quot; &gt; /etc/apt/sources.list.d/pgadmin4.list &amp;&amp; apt update&#39;{% endhighlight %}
+{% highlight html %}sudo apt install pgadmin4{% endhighlight %}
+{% highlight html %}sudo /usr/pgadmin4/bin/setup-web.sh{% endhighlight %}
 <p>然后打开桌面的postgres，输入密码，连接远程的某个数据库，可以使用，结束。</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

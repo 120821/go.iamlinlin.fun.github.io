@@ -5,10 +5,6 @@ date: "2022-08-09"
 categories: 
 ---
 <p>https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/302</p>
-
-<p>HTTP {% highlight %}<strong>302 Found</strong>{% endhighlight %} 重定向状态码表明请求的资源被暂时的移动到了由该 HTTP 响应的响应头 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Location">{% highlight %}Location{% endhighlight %}</a> 指定的 URL 上。浏览器会重定向到这个 URL，但是搜索引擎不会对该资源的链接进行更新 (In SEO-speak, it is said that the link-juice is not sent to the new URL)。</p>
-
-<p>即使规范要求浏览器在重定向时保证请求方法和请求主体不变，但并不是所有的用户代理都会遵循这一点，你依然可以看到有缺陷的软件的存在。所以推荐仅在响应 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET">{% highlight %}GET{% endhighlight %}</a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD">{% highlight %}HEAD{% endhighlight %}</a> 方法时采用 302 状态码，而在其他时候使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/307">{% highlight %}307{% endhighlight %}</a> Temporary Redirect 来替代，因为在这些场景下方法变换是明确禁止的。</p>
-
-<p>在确实需要将重定向请求的方法转换为 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET">{% highlight %}GET{% endhighlight %}</a>的场景下，可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/303">{% highlight %}303{% endhighlight %}</a> See Other。例如在使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT">{% highlight %}PUT{% endhighlight %}</a> 方法进行文件上传操作时，需要返回确认信息（例如&ldquo;你已经成功上传了 xyz&rdquo;）而不是上传的资源本身，就可以使用这个状态码。</p>
-
+<p>HTTP {% highlight html %}<strong>302 Found</strong>{% endhighlight %} 重定向状态码表明请求的资源被暂时的移动到了由该 HTTP 响应的响应头 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Location">{% highlight html %}Location{% endhighlight %}</a> 指定的 URL 上。浏览器会重定向到这个 URL，但是搜索引擎不会对该资源的链接进行更新 (In SEO-speak, it is said that the link-juice is not sent to the new URL)。</p>
+<p>即使规范要求浏览器在重定向时保证请求方法和请求主体不变，但并不是所有的用户代理都会遵循这一点，你依然可以看到有缺陷的软件的存在。所以推荐仅在响应 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET">{% highlight html %}GET{% endhighlight %}</a> 或 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/HEAD">{% highlight html %}HEAD{% endhighlight %}</a> 方法时采用 302 状态码，而在其他时候使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/307">{% highlight html %}307{% endhighlight %}</a> Temporary Redirect 来替代，因为在这些场景下方法变换是明确禁止的。</p>
+<p>在确实需要将重定向请求的方法转换为 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/GET">{% highlight html %}GET{% endhighlight %}</a>的场景下，可以使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status/303">{% highlight html %}303{% endhighlight %}</a> See Other。例如在使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Methods/PUT">{% highlight html %}PUT{% endhighlight %}</a> 方法进行文件上传操作时，需要返回确认信息（例如&ldquo;你已经成功上传了 xyz&rdquo;）而不是上传的资源本身，就可以使用这个状态码。</p>

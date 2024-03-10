@@ -5,87 +5,65 @@ date: "2022-07-19"
 categories: 
 ---
 <p>您可以通过创建结构来定义自己的类型。</p>
-
 <p>&nbsp;它们对于将相关数据分组在一起很有用。</p>
-
 <p>&nbsp;结构可以在合同之外声明并在另一个合同中导入。</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>contract Todos {<br />
 &nbsp;&nbsp;&nbsp; struct Todo {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string text;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool completed;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // An array of &#39;Todo&#39; structs<br />
 &nbsp;&nbsp;&nbsp; Todo[] public todos;</p>
-
 <p>&nbsp;&nbsp;&nbsp; function create(string calldata _text) public {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 3 ways to initialize a struct<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // - calling it like a function<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todos.push(Todo(_text, false));</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // key value mapping<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todos.push(Todo({text: _text, completed: false}));</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // initialize an empty struct and then update it<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Todo memory todo;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todo.text = _text;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // todo.completed initialized to false</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todos.push(todo);<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // Solidity automatically created a getter for &#39;todos&#39; so<br />
 &nbsp;&nbsp;&nbsp; // you don&#39;t actually need this function.<br />
 &nbsp;&nbsp;&nbsp; function get(uint _index) public view returns (string memory text, bool completed) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Todo storage todo = todos[_index];<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return (todo.text, todo.completed);<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // update text<br />
 &nbsp;&nbsp;&nbsp; function updateText(uint _index, string calldata _text) public {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Todo storage todo = todos[_index];<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todo.text = _text;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // update completed<br />
 &nbsp;&nbsp;&nbsp; function toggleCompleted(uint _index) public {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Todo storage todo = todos[_index];<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; todo.completed = !todo.completed;<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p>声明结构</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;<br />
 // This is saved &#39;StructDeclaration.sol&#39;</p>
-
 <p>struct Todo {<br />
 &nbsp;&nbsp;&nbsp; string text;<br />
 &nbsp;&nbsp;&nbsp; bool completed;<br />
 }</p>
-
 <p>导入结构</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>import &quot;./StructDeclaration.sol&quot;;</p>
-
 <p>contract Todos {<br />
 &nbsp;&nbsp;&nbsp; // An array of &#39;Todo&#39; structs<br />
 &nbsp;&nbsp;&nbsp; Todo[] public todos;<br />
 }</p>
-
 <p>变量被声明为 storage、memory 或 calldata 以明确指定数据的位置。 storage - 变量是一个状态变量（存储在区块链上） memory - 变量在内存中，并且在调用函数时存在 calldata - 包含函数参数的特殊数据位置</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>contract DataLocations {<br />
 &nbsp;&nbsp;&nbsp; uint[] public arr;<br />
 &nbsp;&nbsp;&nbsp; mapping(uint =&gt; address) map;<br />
@@ -93,17 +71,14 @@ pragma solidity ^0.8.13;</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint foo;<br />
 &nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp; mapping(uint =&gt; MyStruct) myStructs;</p>
-
 <p>&nbsp;&nbsp;&nbsp; function f() public {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // call _f with state variables<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _f(arr, map, myStructs[1]);</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // get a struct from a mapping<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyStruct storage myStruct = myStructs[1];<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // create a struct in memory<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyStruct memory myMemStruct = MyStruct(0);<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function _f(<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint[] storage _arr,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapping(uint =&gt; address) storage _map,<br />
@@ -111,16 +86,12 @@ pragma solidity ^0.8.13;</p>
 &nbsp;&nbsp;&nbsp; ) internal {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // do something with storage variables<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // You can return memory variables<br />
 &nbsp;&nbsp;&nbsp; function g(uint[] memory _arr) public returns (uint[] memory) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // do something with memory array<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function h(uint[] calldata _arr) external {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // do something with calldata array<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p>这段不能进行编译</p>
-

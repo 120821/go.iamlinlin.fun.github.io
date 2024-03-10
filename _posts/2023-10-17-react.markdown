@@ -5,110 +5,89 @@ date: "2023-10-17"
 categories: 
 ---
 <p>在列表页面增加所属材料列，不考虑数据，可以现在column里增加：</p>
-
-{% highlight %}
-{% highlight %}{
-    title: &#39;所属材料&#39;,
-    dataIndex: &#39;materials&#39;,
-    key: &#39;materials&#39;
-  },{% endhighlight %}
-
+{% highlight html %}{
+title: &#39;所属材料&#39;,
+dataIndex: &#39;materials&#39;,
+key: &#39;materials&#39;
+},{% endhighlight %}
 <p>然后得到数据，处理数据：</p>
-
-{% highlight %}
-{% highlight %}state = {
-  data: [],
-  materialData: [], // 添加materialData属性
-  loading: true,
-  currentPage: 1,
-  totalPages: 1,
-  totalCount: 0
+{% highlight html %}state = {
+data: [],
+materialData: [], // 添加materialData属性
+loading: true,
+currentPage: 1,
+totalPages: 1,
+totalCount: 0
 }{% endhighlight %}
-
 <p><span style="font-family:monospace">接口中得到数据：</span><br />
 &nbsp;</p>
-
-{% highlight %}
-{% highlight %}async fetchMaterialsData() {
-  try {
-    const response = await axios.get(`${Config.BASE_URL}/api/v1/all_materials`, {
-      withCredentials: true
-    })
-    if (response.data.message == &quot;ok&quot;) {
-      let materialData = response.data.data
-      this.setState({ materialData }) // 存储材料数据到state中
-    }
-  } catch (error) {
-    console.error(error)
-    // removeToken()
-    // window.location.href = &#39;/&#39;
-  }{% endhighlight %}
-
+{% highlight html %}async fetchMaterialsData() {
+try {
+const response = await axios.get(`${Config.BASE_URL}/api/v1/all_materials`, {
+withCredentials: true
+})
+if (response.data.message == &quot;ok&quot;) {
+let materialData = response.data.data
+this.setState({ materialData }) // 存储材料数据到state中
+}
+} catch (error) {
+console.error(error)
+// removeToken()
+// window.location.href = &#39;/&#39;
+}{% endhighlight %}
 <p>以及和列表页面的数据关联：</p>
-
-{% highlight %}
-{% highlight %}async fetchData(page = 1) {
-  try {
-    const response = await axios.get(`${Config.BASE_URL}/api/v1/calculation_results?page=${page}`, {
-      withCredentials: true
-    })
-    if (response.data.message == &quot;ok&quot;) {
-      const data = response.data.data.map((item) =&gt; ({
-        key: item.id,
-        id: item.id,
-        algorithm_name: item.algorithm_name,
-        calculation_plan_name: item.calculation_plans.name,
-        calculation_plan_id: item.calculation_plans.id,
-        calculated_at: moment(item.calculated_at).format(&#39;YYYY-MM-DD HH:mm:ss&#39;),
-        materialName: this.getMaterialName(item.materials) // 添加materialName属性
-      }));
-      data.sort((a, b) =&gt; new Date(b.id) - new Date(a.id));
-      this.setState({
-        data,
-        loading: false,
-        totalPages: response.data.totalPages,
-        totalCount: response.data.totalCount,
-      });
-    }
-  } catch (error) {
-    console.error(error)
-    // removeToken()
-    // window.location.href = &#39;/&#39;
-  }
+{% highlight html %}async fetchData(page = 1) {
+try {
+const response = await axios.get(`${Config.BASE_URL}/api/v1/calculation_results?page=${page}`, {
+withCredentials: true
+})
+if (response.data.message == &quot;ok&quot;) {
+const data = response.data.data.map((item) =&gt; ({
+key: item.id,
+id: item.id,
+algorithm_name: item.algorithm_name,
+calculation_plan_name: item.calculation_plans.name,
+calculation_plan_id: item.calculation_plans.id,
+calculated_at: moment(item.calculated_at).format(&#39;YYYY-MM-DD HH:mm:ss&#39;),
+materialName: this.getMaterialName(item.materials) // 添加materialName属性
+}));
+data.sort((a, b) =&gt; new Date(b.id) - new Date(a.id));
+this.setState({
+data,
+loading: false,
+totalPages: response.data.totalPages,
+totalCount: response.data.totalCount,
+});
+}
+} catch (error) {
+console.error(error)
+// removeToken()
+// window.location.href = &#39;/&#39;
+}
 }{% endhighlight %}
-
-<p>{% highlight %}增加一个函数，用来把材料的ID和名称进行匹配：{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}getMaterialName(materialIds) {
-  const { materialData } = this.state;
-  const material = materialData.find((item) =&gt; item.id === materialIds[0]);
-  return material ? material.name : &#39;&#39;;
+<p>{% highlight html %}增加一个函数，用来把材料的ID和名称进行匹配：{% endhighlight %}</p>
+{% highlight html %}getMaterialName(materialIds) {
+const { materialData } = this.state;
+const material = materialData.find((item) =&gt; item.id === materialIds[0]);
+return material ? material.name : &#39;&#39;;
 }{% endhighlight %}
-
 <p>修改数据：</p>
-
-{% highlight %}
-{% highlight %}const columns = [
-  // ...
-  {
-    title: &#39;所属材料&#39;,
-    dataIndex: &#39;materialName&#39;, // 修改为materialName
-    key: &#39;materialName&#39;
-  },
-  // ...
+{% highlight html %}const columns = [
+// ...
+{
+title: &#39;所属材料&#39;,
+dataIndex: &#39;materialName&#39;, // 修改为materialName
+key: &#39;materialName&#39;
+},
+// ...
 ];{% endhighlight %}
-
 <p>考虑到材料是多个（数组），可以修改函数：<br />
 &nbsp;</p>
-
-{% highlight %}
-{% highlight %}getMaterialName(materialIds) {
-  const { materialData } = this.state;
-  const materialNames = materialIds.map(materialId =&gt; {
-    const material = materialData.find(item =&gt; item.id === materialId);
-    return material ? material.name : &#39;&#39;;
-  });
-  return materialNames.join(&#39;, &#39;); // 将多个材料名称用逗号分隔
+{% highlight html %}getMaterialName(materialIds) {
+const { materialData } = this.state;
+const materialNames = materialIds.map(materialId =&gt; {
+const material = materialData.find(item =&gt; item.id === materialId);
+return material ? material.name : &#39;&#39;;
+});
+return materialNames.join(&#39;, &#39;); // 将多个材料名称用逗号分隔
 }{% endhighlight %}
-

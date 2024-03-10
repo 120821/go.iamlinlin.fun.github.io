@@ -2,40 +2,36 @@
 layout: post
 title: "实现nft的认领并返回图片的URL"
 date: "2022-07-25"
-categories: 
+categories:
 ---
 <p>增加js</p>
-
 <pre id="line1">
 <span>async function run() {
-      await loadWeb3();
-      window.contract = await loadContract();
-      const account = await getCurrentAccount();
-      // 创建dialog遮罩
-      jQuery(&#39;#hover_when_claiming_nft&#39;).show()
-      let result = await window.contract.methods.mint(account).send({ from: account });
-      /*
-      let amount = 1
-      let value = 0.01 * 1e18 * amount
-      let result = await window.contract.methods.mint(amount).send({ from: account, value: value });
-      */
-      console.info(&quot;== result: &quot;, result)
-      console.log(JSON.stringify(result, null, 4));
-      let nft_id = result.events.MintedEventLog.returnValues.nftId
-
-      if(result.status &amp;&amp; result.transactionHash){
-        location.href=&quot;/front_ends/mark_claim_done?contract_id=&quot; + 58 + &quot;&amp;nft_id=&quot; + nft_id + &quot;&amp;tx=&quot; + result.transactionHash
-      }
-    }
-
-    if(document.getElementById(&#39;do_claim_by_user&#39;)){
-      document.getElementById(&#39;do_claim_by_user&#39;).addEventListener(&#39;click&#39;, async () =&gt; {
-        if (typeof window.ethereum !== &#39;undefined&#39;) {
-          run()
-        }else {
-          alert(&#39;You have not installed a wallet(e.g. Metamask) yet, please install.&#39;)
-        }
-      });
-    }
-</span>{% endhighlight %}
-
+await loadWeb3();
+window.contract = await loadContract();
+const account = await getCurrentAccount();
+// 创建dialog遮罩
+jQuery(&#39;#hover_when_claiming_nft&#39;).show()
+let result = await window.contract.methods.mint(account).send({ from: account });
+/*
+let amount = 1
+let value = 0.01 * 1e18 * amount
+let result = await window.contract.methods.mint(amount).send({ from: account, value: value });
+*/
+console.info(&quot;== result: &quot;, result)
+console.log(JSON.stringify(result, null, 4));
+let nft_id = result.events.MintedEventLog.returnValues.nftId
+if(result.status &amp;&amp; result.transactionHash){
+location.href=&quot;/front_ends/mark_claim_done?contract_id=&quot; + 58 + &quot;&amp;nft_id=&quot; + nft_id + &quot;&amp;tx=&quot; + result.transactionHash
+}
+}
+if(document.getElementById(&#39;do_claim_by_user&#39;)){
+document.getElementById(&#39;do_claim_by_user&#39;).addEventListener(&#39;click&#39;, async () =&gt; {
+if (typeof window.ethereum !== &#39;undefined&#39;) {
+run()
+}else {
+alert(&#39;You have not installed a wallet(e.g. Metamask) yet, please install.&#39;)
+}
+});
+}
+</span>

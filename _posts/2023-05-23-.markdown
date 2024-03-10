@@ -5,10 +5,6 @@ date: "2023-05-23"
 categories: 
 ---
 <p><a href="https://www.vpser.net/manage/aliyun-securitygroup-setting.html">https://www.vpser.net/manage/aliyun-securitygroup-setting.html</a></p>
-
 <p>如果要放行一个端口范围的话，例如要放行20000到30000这个端口范围，在端口范围填写：20000/30000。</p>
-
 <p>授权对象公网所有用户都可以访问的话都填写 0.0.0.0/0 ，如果要指定IP访问的话可以直接添加授权允许访问的IP，多个IP的话是 , 逗号分隔。</p>
-
 <p>点击确定保存好就已经生效了，可以放心的使用了，如果还是不行请到系统里ps aux命令检查程序是否已经启动，使用ss -ntl命令查看端口是否已经起来，检查iptables或其他防火墙是否已经放行该端口。</p>
-

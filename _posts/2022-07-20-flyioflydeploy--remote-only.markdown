@@ -7,4 +7,3 @@ categories:
 <p>1.需要登录到测试服务器进行部署<br />
 2.部署命令：fly deploy --remote-only<br />
 fly deploy</p>
-

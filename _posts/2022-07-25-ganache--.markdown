@@ -2,40 +2,25 @@
 layout: post
 title: "ganache--安装 使用方法"
 date: "2022-07-25"
-categories: 
+categories:
 ---
 <p>官网：<a href="https://github.com/trufflesuite/ganache">https://github.com/trufflesuite/ganache</a>（进行下载安装）</p>
-
 <p dir="auto"><font style="vertical-align:inherit">命令行使用 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">您必须首先安装 </font><a href="https://nodejs.org/" rel="nofollow"><font style="vertical-align:inherit">Node.js </font></a><font style="vertical-align:inherit">&gt;= v12.0.0 和 npm &gt;= 6.12.0。 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">要全局安装 Ganache，请运行： </font></p>
-
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
-{% highlight %}$ npm install ganache --global{% endhighlight %}
+{% highlight html %}$ npm install ganache --global{% endhighlight %}
 </div>
-
-{% highlight %}
-{% highlight %}linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install ganache --global
-
+{% highlight html %}linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ npm install ganache --global
 added 3 packages, and audited 35 packages in 10s
-
 6 packages are looking for funding
-
 &nbsp; run `npm fund` for details
-
-found 0 vulnerabilities{% endhighlight %}
-
+found 0 vulnerabilities
 Reshimming asdf nodejs...{% endhighlight %}
-
 <p><font style="vertical-align:inherit">全局安装后，您可以直接从命令行启动 ganache：</font></p>
-
 <p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ ganache<br />
 ganache v7.3.2 (@ganache/cli: 0.4.2, @ganache/core: 0.4.2)<br />
 Starting RPC server</p>
-
 <p>Available Accounts<br />
 ==================<br />
 (0) 0xE1BadEEa320Dab61cc7C0ADe956C242Fc07BF676 (1000 ETH)<br />
@@ -48,7 +33,6 @@ Starting RPC server</p>
 (7) 0x086B5970Aeb442cDbC212c099284aEf566132945 (1000 ETH)<br />
 (8) 0x859f1Ba216dbAf6F5683EAd923d5129457ED9d0C (1000 ETH)<br />
 (9) 0xC2b5704229d4C9F382de15B394AcDA0a1830dA8b (1000 ETH)</p>
-
 <p>Private Keys<br />
 ==================<br />
 (0) 0x041ffcc31ddafe3ba6e2d6015299da25a8ab3677561308efed2ab6c83ee1a428<br />
@@ -61,404 +45,288 @@ Starting RPC server</p>
 (7) 0x382a0fe48a1dfabfe190a659ec3bf347c1d134f2b758412e2bdc98789b7da6f1<br />
 (8) 0xed9516be1cc47d06533c441587f35019254d5b0b5ef7d7a9b91650fcbb9387f0<br />
 (9) 0x9defb0f85dd418ce4915ce95be29909ac4562e187a39a22b9f35414b8caa30fa</p>
-
 <p>HD Wallet<br />
 ==================<br />
 Mnemonic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; venture gate butter author fine energy drink aspect firm celery love muffin<br />
 Base HD Path:&nbsp; m/44&#39;/60&#39;/0&#39;/0/{account_index}</p>
-
 <p>Default Gas Price<br />
 ==================<br />
 2000000000</p>
-
 <p>BlockGas Limit<br />
 ==================<br />
 30000000</p>
-
 <p>Call Gas Limit<br />
 ==================<br />
 50000000</p>
-
 <p>Chain Id<br />
 ==================<br />
 1337</p>
-
 <p>RPC Listening on 127.0.0.1:8545</p>
-
 <p dir="auto"><font style="vertical-align:inherit">要将 Ganache 安装到 npm 项目中，请运行： </font></p>
-
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 $ npm install ganache{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">然后，您可以将 Ganache 添加到您的 package.json 脚本中： </font></p>
-
 <div class="highlight highlight-source-json notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 &quot;scripts&quot;: {
-  &quot;ganache&quot;: &quot;ganache --wallet.seed myCustomSeed&quot;
+&quot;ganache&quot;: &quot;ganache --wallet.seed myCustomSeed&quot;
 }{% endhighlight %}
-
 <p dir="auto"><em><font style="vertical-align:inherit">请参阅 </font><a href="https://github.com/trufflesuite/ganache#documentation"><font style="vertical-align:inherit">文档 </font></a><font style="vertical-align:inherit">。 </font></em></p>
-
 <p dir="auto"><font style="vertical-align:inherit">然后启动它： </font></p>
-
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 $ npm run ganache{% endhighlight %}
-
 <p dir="auto"><font style="vertical-align:inherit">程序化使用 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">您可以从 Node.js 以编程方式使用 Ganache。 将 Ganache 安装到你的 npm 包中： </font></p>
-
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 $ npm install ganache{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">然后，您可以仅将 ganache 用作 </font><a href="https://github.com/trufflesuite/ganache#as-an-eip-1193-provider-only"><font style="vertical-align:inherit">EIP-1193 提供程序 </font></a><font style="vertical-align:inherit">、 </font><a href="https://github.com/trufflesuite/ganache#as-an-eip-1193-provider-and-json-rpc-web-server"><font style="vertical-align:inherit">EIP-1193 提供程序和 JSON-RPC Web 服务器 </font></a><font style="vertical-align:inherit">、 </font><a href="https://github.com/trufflesuite/ganache#as-a-web3js-provider"><font style="vertical-align:inherit">Web3 提供程序 </font></a><font style="vertical-align:inherit">或 </font><a href="https://github.com/trufflesuite/ganache#as-an-ethersjs-provider"><font style="vertical-align:inherit">ethers 提供程序 </font></a><font style="vertical-align:inherit">。</font></p>
-
 <h4 dir="auto"><font style="vertical-align:inherit">仅作为 EIP-1193 提供者： </font></h4>
-
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const ganache = require(&quot;ganache&quot;);
 const options = {};
 const provider = ganache.provider(options);
 const accounts = await provider.request({ method: &quot;eth_accounts&quot;, params: [] });{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">作为 EIP-1193 提供者和 JSON-RPC Web 服务器： </font></p>
-
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const ganache = require(&quot;ganache&quot;);
 const options = {};
 const server = ganache.server(options);
 const PORT = 8545;
 server.listen(PORT, async err =&gt; {
-  if (err) throw err;
-    console.log(`ganache listening on port ${PORT}...`);
-    const provider = server.provider;
-    const accounts = await provider.request({
-      method: &quot;eth_accounts&quot;,
-      params: []
-    });
-  });{% endhighlight %}
+if (err) throw err;
+console.log(`ganache listening on port ${PORT}...`);
+const provider = server.provider;
+const accounts = await provider.request({
+method: &quot;eth_accounts&quot;,
+params: []
+});
+});{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">作为 </font><a href="https://www.npmjs.com/package/web3" rel="nofollow"><font style="vertical-align:inherit">web3.js </font></a><font style="vertical-align:inherit">提供者： </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">要将 ganache 用作 Web3 提供程序： </font></p>
-
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const Web3 = require(&quot;web3&quot;);
 const ganache = require(&quot;ganache&quot;);
 const web3 = new Web3(ganache.provider());{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">注意：根据您的 web3 版本，您可能需要设置多个确认块 </font></p>
-
 <div class="snippet-clipboard-content notranslate position-relative overflow-auto">
 <pre class="notranslate">
-{% highlight %}const web3 = new Web3(ganache.provider(), null, { transactionConfirmationBlocks: 1 });
+{% highlight html %}const web3 = new Web3(ganache.provider(), null, { transactionConfirmationBlocks: 1 });
 {% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">作为 </font><a href="https://www.npmjs.com/package/ethers" rel="nofollow"><font style="vertical-align:inherit">ethers.js </font></a><font style="vertical-align:inherit">提供者： </font></p>
-
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const ganache = require(&quot;ganache&quot;);
 const provider = new ethers.providers.Web3Provider(ganache.provider());{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">浏览器使用 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">您还可以通过将以下脚本添加到 HTML 中来在浏览器中使用 Ganache： </font></p>
-
 <div class="highlight highlight-text-html-basic notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 &lt;script src=&quot;https://cdn.jsdelivr.net/npm/ganache@{VERSION}/dist/web/ganache.min.js&quot;&gt;&lt;/script&gt;{% endhighlight %}
 </div>
-
-<p dir="auto"><font style="vertical-align:inherit">注意： </font>{% highlight %}{VERSION}{% endhighlight %}<font style="vertical-align:inherit">上述路径中的需要替换为 </font><a href="https://www.npmjs.com/package/ganache?activeTab=versions" rel="nofollow"><font style="vertical-align:inherit">npm </font></a><font style="vertical-align:inherit">。 </font></p>
-
+<p dir="auto"><font style="vertical-align:inherit">注意： </font>{% highlight html %}{VERSION}{% endhighlight %}<font style="vertical-align:inherit">上述路径中的需要替换为 </font><a href="https://www.npmjs.com/package/ganache?activeTab=versions" rel="nofollow"><font style="vertical-align:inherit">npm </font></a><font style="vertical-align:inherit">。 </font></p>
 <p dir="auto"><font style="vertical-align:inherit">从那里，Ganache 可以在您的浏览器中使用： </font></p>
-
 <div class="highlight highlight-source-js notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const options = {};
 const provider = Ganache.provider(options);{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">文档 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">新的交互式 RPC 文档即将推出！ 同时，查看我们的 </font><a href="https://github.com/trufflesuite/ganache/blob/develop/src/chains/ethereum/ethereum/RPC-METHODS.md"><font style="vertical-align:inherit">Ethereum JSON-RPC 文档 </font></a><font style="vertical-align:inherit">。 </font></p>
-
 <h3 dir="auto"><font style="vertical-align:inherit">启动选项 </font></h3>
-
-<p dir="auto"><font style="vertical-align:inherit">启动选项分组在 </font>{% highlight %}chain{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}database{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}fork{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}logging{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight %}miner{% endhighlight %}<font style="vertical-align:inherit">， 和 </font>{% highlight %}wallet{% endhighlight %}<font style="vertical-align:inherit">命名空间，并且应该在启动时使用，即 </font></p>
-
+<p dir="auto"><font style="vertical-align:inherit">启动选项分组在 </font>{% highlight html %}chain{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight html %}database{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight html %}fork{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight html %}logging{% endhighlight %}<font style="vertical-align:inherit">, </font>{% highlight html %}miner{% endhighlight %}<font style="vertical-align:inherit">， 和 </font>{% highlight html %}wallet{% endhighlight %}<font style="vertical-align:inherit">命名空间，并且应该在启动时使用，即 </font></p>
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 ganache --namespace.option=&quot;value&quot;{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">用于 CLI，以及 </font></p>
-
 <div class="highlight highlight-source-ts notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 const options = { namespace: { option: &quot;value&quot;}};
 const provider = ganache.provider(options);{% endhighlight %}
 </div>
-
 <p dir="auto"><font style="vertical-align:inherit">用于程序化使用。 </font></p>
-
 <p dir="auto"><font style="vertical-align:inherit">列出了以下选项供命令行使用，但也可以在项目中以编程方式运行 Ganache 时使用。 </font></p>
-
 <div class="highlight highlight-text-shell-session notranslate position-relative overflow-auto">
-{% highlight %}
+{% highlight html %}
 Chain:
-  --chain.allowUnlimitedContractSize    Allows unlimited contract sizes while debugging. Setting this to true
-                                      will cause ganache to behave differently than production environments.                                                                                  [boolean] [default: false]
-  --chain.asyncRequestProcessing        When set to false only one request will be processed at a time.
-                                                                                  [boolean] [default: true]
-
-  --chain.chainId                       The currently configured chain id.            [number] [default: 1337]
-
-  -i, --chain.networkId                 The id of the network returned by the RPC method net_version.
-                                        deprecated aliases: --networkId
-                                                            [number] [default: System time at process start or
-                                                               Network ID of forked blockchain if configured.]
-
-  -t, --chain.time                      Date that the first block should start.
-                                        deprecated aliases: --time                                    [number]
-
-  -k, --chain.hardfork                  Set the hardfork rules for the EVM.
-                                        deprecated aliases: --hardfork
-                                               [string] [choices: &quot;constantinople&quot;, &quot;byzantium&quot;, &quot;petersburg&quot;,
-                                                 &quot;istanbul&quot;, &quot;muirGlacier&quot;, &quot;berlin&quot;, &quot;london&quot;,&quot;arrowGlacier&quot;]
-                                                                                             [default: london]
-
-  --chain.vmErrorsOnRPCResponse         Whether to report runtime errors from EVM code as RPC errors.
-                                                                                    [boolean] [default: false]
-
-
+--chain.allowUnlimitedContractSize    Allows unlimited contract sizes while debugging. Setting this to true
+will cause ganache to behave differently than production environments.                                                                                  [boolean] [default: false]
+--chain.asyncRequestProcessing        When set to false only one request will be processed at a time.
+[boolean] [default: true]
+--chain.chainId                       The currently configured chain id.            [number] [default: 1337]
+-i, --chain.networkId                 The id of the network returned by the RPC method net_version.
+deprecated aliases: --networkId
+[number] [default: System time at process start or
+Network ID of forked blockchain if configured.]
+-t, --chain.time                      Date that the first block should start.
+deprecated aliases: --time                                    [number]
+-k, --chain.hardfork                  Set the hardfork rules for the EVM.
+deprecated aliases: --hardfork
+[string] [choices: &quot;constantinople&quot;, &quot;byzantium&quot;, &quot;petersburg&quot;,
+&quot;istanbul&quot;, &quot;muirGlacier&quot;, &quot;berlin&quot;, &quot;london&quot;,&quot;arrowGlacier&quot;]
+[default: london]
+--chain.vmErrorsOnRPCResponse         Whether to report runtime errors from EVM code as RPC errors.
+[boolean] [default: false]
 Database:
-  --database.dbPath                     Specify a path to a directory to save the chain database.
-                                        deprecated aliases: --db, --db_path                           [string]
-
+--database.dbPath                     Specify a path to a directory to save the chain database.
+deprecated aliases: --db, --db_path                           [string]
 Logging:
-  --logging.debug                       Set to true to log EVM opcodes.             [boolean] [default: false]
-
-  -q, --logging.quiet                   Set to true to disable logging.
-                                        deprecated aliases: --quiet                 [boolean] [default: false]
-
-  -v, --logging.verbose                 Set to true to log detailed RPC requests.
-                                        deprecated aliases: --verbose               [boolean] [default: false]
-
-
+--logging.debug                       Set to true to log EVM opcodes.             [boolean] [default: false]
+-q, --logging.quiet                   Set to true to disable logging.
+deprecated aliases: --quiet                 [boolean] [default: false]
+-v, --logging.verbose                 Set to true to log detailed RPC requests.
+deprecated aliases: --verbose               [boolean] [default: false]
 Miner:
-  -b, --miner.blockTime                 Sets the blockTime in seconds for automatic mining. A blockTime of 0
-                                        enables &quot;instamine mode&quot;, where new executable transactions will be
-                                        mined instantly.
-                                        deprecated aliases: --blockTime                  [number] [default: 0]
-
-  -g, --miner.defaultGasPrice           Sets the default gas price in WEI for transactions if not otherwise
-                                        specified.
-                                        deprecated aliases: --gasPrice          [string] [default: 0x77359400]
-
-  -l, --miner.blockGasLimit             Sets the block gas limit in WEI.
-                                        deprecated aliases: --gasLimit            [string] [default: 0xb71b00]
-
-  --miner.defaultTransactionGasLimit    Sets the default transaction gas limit in WEI. Set to &quot;estimate&quot; to
-                                        use an estimate (slows down transaction execution by 40%+).
-                                                                                   [string] [default: 0x15f90]
-
-  --miner.difficulty                    Sets the block difficulty.                     [string] [default: 0x1]
-
-  --miner.callGasLimit                  Sets the transaction gas limit in WEI for eth_call and eth_estimateGas
-                                        calls.
-                                                                                 [string] [default: 0x2faf080]
-  --miner.instamine                     Set the instamine mode to either &quot;eager&quot; (default) or &quot;strict&quot;. In
-                                        &quot;eager&quot; mode a transaction will be included in a block before its hash
-                                        is returned to the caller. In &quot;strict&quot; mode a transaction&#39;s hash is
-                                        returned to the caller before the transaction is included in a block.
-                                        This value has no effect if `blockTime` is *not* `0` (the default).`
-                                                      [string] [choices: &quot;eager&quot;, &quot;strict&quot;] [default: &quot;eager&quot;]
-
-  --miner.coinbase                      Sets the address where mining rewards will go.
-                                                         [default: 0x0000000000000000000000000000000000000000]
-
-  --miner.extraData                     Set the extraData block header field a miner can include.
-                                                                                        [string] [default: 0x]
-
-  --miner.priceBump                     Minimum price bump percentage needed to replace a transaction that
-                                        already exists in the transaction pool.         [string] [default: 10]
-
-
+-b, --miner.blockTime                 Sets the blockTime in seconds for automatic mining. A blockTime of 0
+enables &quot;instamine mode&quot;, where new executable transactions will be
+mined instantly.
+deprecated aliases: --blockTime                  [number] [default: 0]
+-g, --miner.defaultGasPrice           Sets the default gas price in WEI for transactions if not otherwise
+specified.
+deprecated aliases: --gasPrice          [string] [default: 0x77359400]
+-l, --miner.blockGasLimit             Sets the block gas limit in WEI.
+deprecated aliases: --gasLimit            [string] [default: 0xb71b00]
+--miner.defaultTransactionGasLimit    Sets the default transaction gas limit in WEI. Set to &quot;estimate&quot; to
+use an estimate (slows down transaction execution by 40%+).
+[string] [default: 0x15f90]
+--miner.difficulty                    Sets the block difficulty.                     [string] [default: 0x1]
+--miner.callGasLimit                  Sets the transaction gas limit in WEI for eth_call and eth_estimateGas
+calls.
+[string] [default: 0x2faf080]
+--miner.instamine                     Set the instamine mode to either &quot;eager&quot; (default) or &quot;strict&quot;. In
+&quot;eager&quot; mode a transaction will be included in a block before its hash
+is returned to the caller. In &quot;strict&quot; mode a transaction&#39;s hash is
+returned to the caller before the transaction is included in a block.
+This value has no effect if `blockTime` is *not* `0` (the default).`
+[string] [choices: &quot;eager&quot;, &quot;strict&quot;] [default: &quot;eager&quot;]
+--miner.coinbase                      Sets the address where mining rewards will go.
+[default: 0x0000000000000000000000000000000000000000]
+--miner.extraData                     Set the extraData block header field a miner can include.
+[string] [default: 0x]
+--miner.priceBump                     Minimum price bump percentage needed to replace a transaction that
+already exists in the transaction pool.         [string] [default: 10]
 Wallet:
-  --wallet.accounts                     Account data in the form &lt;private_key&gt;,&lt;initial_balance&gt;, can be
-                                        specified multiple times. Note that private keys are 64 characters
-                                        long and must be entered as an 0x-prefixed hex string. Balance can
-                                        either be input as an integer, or as a 0x-prefixed hex string with
-                                        either form specifying the initial balance in wei.
-                                        deprecated aliases: --account                                  [array]
-
-  -a, --wallet.totalAccounts            Number of accounts to generate at startup.
-                                        deprecated aliases: --accounts                  [number] [default: 10]
-
-  -d, --wallet.deterministic            Use pre-defined, deterministic seed.
-                                        deprecated aliases: --deterministic         [boolean] [default: false]
-
-  -s, --wallet.seed                     Seed to use to generate a mnemonic.
-                                        deprecated aliases: --seed
-                                                                                                      [string]
-                                             [default: Random value, unless wallet.deterministic is specified]
-
-  -m, --wallet.mnemonic                 Use a specific HD wallet mnemonic to generate initial addresses.
-                                        deprecated aliases: --mnemonic                                [string]
-                                                                         [default: Generated from wallet.seed]
-
-  -u, --wallet.unlockedAccounts         Array of addresses or address indexes specifying which accounts should
-                                        be unlocked.
-                                        deprecated aliases: --unlock                                   [array]
-
-  -n, --wallet.lock                     Lock available accounts by default (good for third party transaction
-                                        signing).
-                                        deprecated aliases: --secure, --lock        [boolean] [default: false]
-
-  --wallet.passphrase                   Passphrase to use when locking accounts.
-                                        deprecated aliases: --passphrase                              [string]
-
-  --wallet.accountKeysPath              Specifies a file to save accounts and private keys to, for testing.
-                                        deprecated aliases: --account_keys_path, --acctKeys           [string]
-
-  -e, --wallet.defaultBalance           The default account balance, specified in ether.
-                                        deprecated aliases: --defaultBalanceEther     [number] [default: 1000]
-
-  --wallet.hdPath                       The hierarchical deterministic path to use when generating accounts.
-                                                                            [string] [default: m,44&#39;,60&#39;,0&#39;,0]
-
-
+--wallet.accounts                     Account data in the form &lt;private_key&gt;,&lt;initial_balance&gt;, can be
+specified multiple times. Note that private keys are 64 characters
+long and must be entered as an 0x-prefixed hex string. Balance can
+either be input as an integer, or as a 0x-prefixed hex string with
+either form specifying the initial balance in wei.
+deprecated aliases: --account                                  [array]
+-a, --wallet.totalAccounts            Number of accounts to generate at startup.
+deprecated aliases: --accounts                  [number] [default: 10]
+-d, --wallet.deterministic            Use pre-defined, deterministic seed.
+deprecated aliases: --deterministic         [boolean] [default: false]
+-s, --wallet.seed                     Seed to use to generate a mnemonic.
+deprecated aliases: --seed
+[string]
+[default: Random value, unless wallet.deterministic is specified]
+-m, --wallet.mnemonic                 Use a specific HD wallet mnemonic to generate initial addresses.
+deprecated aliases: --mnemonic                                [string]
+[default: Generated from wallet.seed]
+-u, --wallet.unlockedAccounts         Array of addresses or address indexes specifying which accounts should
+be unlocked.
+deprecated aliases: --unlock                                   [array]
+-n, --wallet.lock                     Lock available accounts by default (good for third party transaction
+signing).
+deprecated aliases: --secure, --lock        [boolean] [default: false]
+--wallet.passphrase                   Passphrase to use when locking accounts.
+deprecated aliases: --passphrase                              [string]
+--wallet.accountKeysPath              Specifies a file to save accounts and private keys to, for testing.
+deprecated aliases: --account_keys_path, --acctKeys           [string]
+-e, --wallet.defaultBalance           The default account balance, specified in ether.
+deprecated aliases: --defaultBalanceEther     [number] [default: 1000]
+--wallet.hdPath                       The hierarchical deterministic path to use when generating accounts.
+[string] [default: m,44&#39;,60&#39;,0&#39;,0]
 Fork:
-  -f, --fork.url                        Fork from another currently running Ethereum client at a given block.
-                                        Input should be the URL of the node, e.g. &quot;http://localhost:1337&quot;. You
-                                        can optionally specify the block to fork from using an @ sign:
-                                        &quot;http://localhost:1337@8675309&quot;.
-
-                                        You can specify Basic Authentication credentials in the URL as well.
-                                        e.g., &quot;wss://user:password@example.com/&quot;. If you need to use an Infura
-                                        Project Secret, you would use it like this:
-                                        &quot;wss://:{YOUR-PROJECT-SECRET}@mainnet.infura.com/...&quot;
-
-                                        Alternatively, you can use the fork.username and fork.password
-                                        options.
-                                        deprecated aliases: --fork
-
-  --fork.network                        A network name to fork from; uses Infura&#39;s archive nodes.
-
-                                        Use the shorthand command ganache --fork to automatically fork from
-                                        Mainnet at the latest block.
-                                        [choices: &quot;mainnet&quot;, &quot;ropsten&quot;, &quot;kovan&quot;, &quot;rinkeby&quot;, &quot;goerli&quot;, &quot;g&ouml;rli&quot;]
-
-  --fork.blockNumber                    Block number the provider should fork from.
-                                                                                [default: Latest block number]
-
-  --fork.preLatestConfirmations         When the fork.blockNumber is set to &quot;latest&quot; (default), the number of
-                                        blocks before the remote node&#39;s &quot;latest&quot; block to fork from.
-                                                                                         [number] [default: 5]
-
-  --fork.username                       Username to use for Basic Authentication. Does not require setting
-                                        fork.password.
-
-                                        When combined with fork.password, is shorthand for fork: { headers: {
-                                        &quot;Authorization&quot;: &quot;Basic {ENCODED-BASIC-HEADER}&quot; } }
-
-                                        If the fork.headers option specifies an &quot;Authorization&quot; header, it
-                                        will be be inserted after this Basic token.
-
-  --fork.password                       Password to use for Basic Authentication. Does not require setting
-                                        fork.username.
-
-                                        When combined with fork.username, is shorthand for fork: { headers: {
-                                        &quot;Authorization&quot;: &quot;Basic {ENCODED-BASIC-HEADER}&quot; } }
-
-                                        If the fork.headers option specifies an &quot;Authorization&quot; header, it
-                                        will be be inserted after this Basic token.
-
-  --fork.jwt                            Encoded JSON Web Token (JWT) used for authenticating to some servers.
-
-                                        Shorthand for fork:
-                                          { headers: { &quot;Authorization&quot;: &quot;Bearer {YOUR-ENCODED-JWT}&quot; } }
-
-                                        If the fork.headers option specifies an &quot;Authorization&quot; header, it
-                                        will be be inserted after the JWT Bearer token.
-
-  --fork.userAgent                      The User-Agent header sent to the fork on each request.
-
-                                        Sent as Api-User-Agent when used in the browser.
-
-                                        Will be overridden by a &quot;User-Agent&quot; defined in the fork.headers
-                                        option, if provided.
-
-                                                                                [default: Ganache/7.0.0-beta.0
-                                          (https://www.trufflesuite.com/ganache; ganache&lt;at&gt;trufflesuite.com)]
-
-  --fork.origin                         The Origin header sent to the fork on each request.
-
-                                        Ignored in the browser.
-
-                                        Will be overridden by an &quot;Origin&quot; value defined in the fork.headers
-                                        option, if provided.
-
-  --fork.headers                        Headers to supply on each request to the forked provider.
-
-                                        Headers set here override headers set by other options, unless
-                                        otherwise specified.
-
-                                                                    Defaults to: [&quot;User-Agent: Ganache/VERSION
-                                         (https://www.trufflesuite.com/ganache; ganache&lt;at&gt;trufflesuite.com)&quot;]
-                                                                                                       [array]
-
-  --fork.requestsPerSecond              Restrict the number of requests per second sent to the fork provider.
-                                        0 means no limit is applied.                     [number] [default: 0]
-
-  --fork.disableCache                   Disables caching of all forking requests.   [boolean] [default: false]
-
-  --fork.deleteCache                    Deletes the persistent cache before starting.
-                                                                                    [boolean] [default: false]
-
-
+-f, --fork.url                        Fork from another currently running Ethereum client at a given block.
+Input should be the URL of the node, e.g. &quot;http://localhost:1337&quot;. You
+can optionally specify the block to fork from using an @ sign:
+&quot;http://localhost:1337@8675309&quot;.
+You can specify Basic Authentication credentials in the URL as well.
+e.g., &quot;wss://user:password@example.com/&quot;. If you need to use an Infura
+Project Secret, you would use it like this:
+&quot;wss://:{YOUR-PROJECT-SECRET}@mainnet.infura.com/...&quot;
+Alternatively, you can use the fork.username and fork.password
+options.
+deprecated aliases: --fork
+--fork.network                        A network name to fork from; uses Infura&#39;s archive nodes.
+Use the shorthand command ganache --fork to automatically fork from
+Mainnet at the latest block.
+[choices: &quot;mainnet&quot;, &quot;ropsten&quot;, &quot;kovan&quot;, &quot;rinkeby&quot;, &quot;goerli&quot;, &quot;g&ouml;rli&quot;]
+--fork.blockNumber                    Block number the provider should fork from.
+[default: Latest block number]
+--fork.preLatestConfirmations         When the fork.blockNumber is set to &quot;latest&quot; (default), the number of
+blocks before the remote node&#39;s &quot;latest&quot; block to fork from.
+[number] [default: 5]
+--fork.username                       Username to use for Basic Authentication. Does not require setting
+fork.password.
+When combined with fork.password, is shorthand for fork: { headers: {
+&quot;Authorization&quot;: &quot;Basic {ENCODED-BASIC-HEADER}&quot; } }
+If the fork.headers option specifies an &quot;Authorization&quot; header, it
+will be be inserted after this Basic token.
+--fork.password                       Password to use for Basic Authentication. Does not require setting
+fork.username.
+When combined with fork.username, is shorthand for fork: { headers: {
+&quot;Authorization&quot;: &quot;Basic {ENCODED-BASIC-HEADER}&quot; } }
+If the fork.headers option specifies an &quot;Authorization&quot; header, it
+will be be inserted after this Basic token.
+--fork.jwt                            Encoded JSON Web Token (JWT) used for authenticating to some servers.
+Shorthand for fork:
+{ headers: { &quot;Authorization&quot;: &quot;Bearer {YOUR-ENCODED-JWT}&quot; } }
+If the fork.headers option specifies an &quot;Authorization&quot; header, it
+will be be inserted after the JWT Bearer token.
+--fork.userAgent                      The User-Agent header sent to the fork on each request.
+Sent as Api-User-Agent when used in the browser.
+Will be overridden by a &quot;User-Agent&quot; defined in the fork.headers
+option, if provided.
+[default: Ganache/7.0.0-beta.0
+(https://www.trufflesuite.com/ganache; ganache&lt;at&gt;trufflesuite.com)]
+--fork.origin                         The Origin header sent to the fork on each request.
+Ignored in the browser.
+Will be overridden by an &quot;Origin&quot; value defined in the fork.headers
+option, if provided.
+--fork.headers                        Headers to supply on each request to the forked provider.
+Headers set here override headers set by other options, unless
+otherwise specified.
+Defaults to: [&quot;User-Agent: Ganache/VERSION
+(https://www.trufflesuite.com/ganache; ganache&lt;at&gt;trufflesuite.com)&quot;]
+[array]
+--fork.requestsPerSecond              Restrict the number of requests per second sent to the fork provider.
+0 means no limit is applied.                     [number] [default: 0]
+--fork.disableCache                   Disables caching of all forking requests.   [boolean] [default: false]
+--fork.deleteCache                    Deletes the persistent cache before starting.
+[boolean] [default: false]
 Server:
-  --server.ws                           Enable a websocket server.                   [boolean] [default: true]
-
-  --server.wsBinary                     Whether or not websockets should response with binary data
-                                        (ArrayBuffers) or strings.
-                                                                            [choices: &quot;true&quot;, &quot;false&quot;, &quot;auto&quot;]
-                                                                                               [default: auto]
-
-  --server.rpcEndpoint                  Defines the endpoint route the HTTP and WebSocket servers will listen
-                                        on.
-                                                               [default: &quot;/&quot; (Ethereum), &quot;/rpc/v0&quot; (Filecoin)]
-
-  -h, --server.host                     Hostname to listen on.
-                                        deprecated aliases: --host, --hostname
-                                                                               [string] [default: &quot;127.0.0.1&quot;]
-
-  -p, --server.port, --port             Port to listen on.
-                                        deprecated aliases: --port
-                                                                              {% endhighlight %}
+--server.ws                           Enable a websocket server.                   [boolean] [default: true]
+--server.wsBinary                     Whether or not websockets should response with binary data
+(ArrayBuffers) or strings.
+[choices: &quot;true&quot;, &quot;false&quot;, &quot;auto&quot;]
+[default: auto]
+--server.rpcEndpoint                  Defines the endpoint route the HTTP and WebSocket servers will listen
+on.
+[default: &quot;/&quot; (Ethereum), &quot;/rpc/v0&quot; (Filecoin)]
+-h, --server.host                     Hostname to listen on.
+deprecated aliases: --host, --hostname
+[string] [default: &quot;127.0.0.1&quot;]
+-p, --server.port, --port             Port to listen on.
+deprecated aliases: --port
+{% endhighlight %}
 </div>
 </div>
 </div>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

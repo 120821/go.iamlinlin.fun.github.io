@@ -5,8 +5,5 @@ date: "2023-05-15"
 categories: 
 ---
 <p><a href="https://developer.baidu.com/question/detail.html?id=240">https://developer.baidu.com/question/detail.html?id=240</a></p>
-
 <p><strong>服务端</strong>就是指数据操作需要在百度地图<strong>服务器</strong>上进行接口数据交互，不能在前端代码中直接调用，跨域不支持，开发多一个后<strong>端</strong>； <strong>浏览器端</strong>就是指数据操作需要在Web前端就可以完成的，一般地，大多是普通开发者直接申请<strong>浏览器端</strong>AK即可。</p>
-
 <p>新建ak: <a href="https://lbsyun.baidu.com/apiconsole/key#/home">https://lbsyun.baidu.com/apiconsole/key#/home</a></p>
-

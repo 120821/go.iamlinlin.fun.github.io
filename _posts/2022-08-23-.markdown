@@ -5,41 +5,29 @@ date: "2022-08-23"
 categories: 
 ---
 <p><a href="https://guides.rubyonrails.org/active_record_querying.html">https://guides.rubyonrails.org/active_record_querying.html</a></p>
-
 <p>从多个表中检索过滤数据</p>
-
-{% highlight %}Customer<br />
+{% highlight html %}Customer<br />
 &nbsp; .select(&#39;customers.id, customers.last_name, reviews.body&#39;)<br />
 &nbsp; .joins(:reviews)<br />
 &nbsp; .where(&#39;reviews.created_at &gt; ?&#39;, 1.week.ago){% endhighlight %}
-
 <p>查询语句执行的结果是这样的：</p>
-
-{% highlight %}SELECT customers.id, customers.last_name, reviews.body<br />
+{% highlight html %}SELECT customers.id, customers.last_name, reviews.body<br />
 FROM customers<br />
 INNER JOIN reviews<br />
 &nbsp; ON reviews.customer_id = customers.id<br />
 WHERE (reviews.created_at &gt; &#39;2019-01-08&#39;){% endhighlight %}
-
 <p>从多个表中检索特定数据</p>
-
-{% highlight %}Book<br />
+{% highlight html %}Book<br />
 &nbsp; .select(&#39;books.id, books.title, authors.first_name&#39;)<br />
 &nbsp; .joins(:author)<br />
 &nbsp; .find_by(title: &#39;Abstraction and Specification in Program Development&#39;){% endhighlight %}
-
 <p>查询结果：</p>
-
-{% highlight %}SELECT books.id, books.title, authors.first_name<br />
+{% highlight html %}SELECT books.id, books.title, authors.first_name<br />
 FROM books<br />
 INNER JOIN authors<br />
 &nbsp; ON authors.id = books.author_id<br />
 WHERE books.title = $1 [[&quot;title&quot;, &quot;Abstraction and Specification in Program Development&quot;]]<br />
 LIMIT 1{% endhighlight %}
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

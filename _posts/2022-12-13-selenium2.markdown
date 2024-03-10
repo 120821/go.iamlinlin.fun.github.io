@@ -5,23 +5,17 @@ date: "2022-12-13"
 categories: 
 ---
 <p>1.启动driver：</p>
-
 <p>chromedriver</p>
-
 <p>成功的话看到这样的内容：</p>
-
-{% highlight %}Starting ChromeDriver 108.0.5359.94 (713576b895246504ccc6b92c2fb8ce2d60194074-refs/branch-heads/5359_71@{#3}) on port 9515<br />
+{% highlight html %}Starting ChromeDriver 108.0.5359.94 (713576b895246504ccc6b92c2fb8ce2d60194074-refs/branch-heads/5359_71@{#3}) on port 9515<br />
 Only local connections are allowed.<br />
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.<br />
 ChromeDriver was started successfully.{% endhighlight %}
-
 <p>2.写一个脚本，类似这样：（可以获取页面的p,h3等信息，）</p>
-
-{% highlight %}require &#39;selenium-webdriver&#39;<br />
+{% highlight html %}require &#39;selenium-webdriver&#39;<br />
 #driver = Selenium::WebDriver.for :firefox（如果你使用的是Firefox，就替换这一行）<br />
 driver = Selenium::WebDriver.for :chrome#, service: service（如果你需要service，就在上边进行设置）<br />
 driver.manage.timeouts.implicit_wait = 10
-
 begin<br />
 &nbsp; #driver.get &#39;http://somedomain/url_that_delays_loading&#39;（（官方给的页面，但是无法打开）<br />
 &nbsp; driver.get &#39;https://zhuanlan.kanxue.com/article-20043.htm&#39;<br />
@@ -41,10 +35,8 @@ begin<br />
 ensure<br />
 &nbsp; driver.quit<br />
 end{% endhighlight %}
-
 <p>3.运行脚本就可以获得需要的内容：</p>
-
-{% highlight %}title.text is:<br />
+{% highlight html %}title.text is:<br />
 2022游戏安全行业峰会直播预约通道开启！<br />
 ele.text is:<br />
 foo is:<br />
@@ -52,8 +44,5 @@ foo is:<br />
 search_form is:<br />
 #&lt;Selenium::WebDriver::Element:0x45bbdf7170916ac id=&quot;97b5e53e-6294-45b2-a547-d4c2d5df9d40&quot;&gt;<br />
 begin hihi{% endhighlight %}
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

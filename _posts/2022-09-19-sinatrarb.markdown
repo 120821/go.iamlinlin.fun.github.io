@@ -5,8 +5,5 @@ date: "2022-09-19"
 categories: 
 ---
 <p>这种写法可以正常使用，但是太麻烦。 &quot;#{a.to_json}&quot;</p>
-
 <p>修改为：</p>
-
 <p>a.to_json</p>
-

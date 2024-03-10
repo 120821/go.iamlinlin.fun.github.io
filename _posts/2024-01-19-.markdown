@@ -5,13 +5,8 @@ date: "2024-01-19"
 categories: 
 ---
 <p>一般来说时间复杂度越大，越复杂，但也需要根据实际情况来看，包括算法的可读性，可维护性等。</p>
-
 <p>时间复杂度需要根据循环递归等计算。</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#ffa07a">for</span> <span style="color:#ffa07a">i</span> <span style="color:#dcc6e0">in</span> <span style="color:#00e0e0">range</span>(<span style="color:#ffa07a">n</span>):
-    <span style="color:#00e0e0">print</span>(<span style="color:#ffa07a">i</span>)
+{% highlight html %}<span style="color:#ffa07a">for</span> <span style="color:#ffa07a">i</span> <span style="color:#dcc6e0">in</span> <span style="color:#00e0e0">range</span>(<span style="color:#ffa07a">n</span>):
+<span style="color:#00e0e0">print</span>(<span style="color:#ffa07a">i</span>)
 {% endhighlight %}
-
 <p>复杂度是O（n）</p>
-

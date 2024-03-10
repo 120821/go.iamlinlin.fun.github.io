@@ -5,253 +5,190 @@ date: "2022-06-09"
 categories: 
 ---
 <p id="不适合指法不好的同学。">vim不适合指法不好的同学。</p>
-
 <p>Vim的每个键都是需要盲打的。 所以，指法不好，就赶紧提高自己的指法。否则很难的。</p>
-
 <p>安装：</p>
-
 <blockquote>
 <p id="ubuntu：">Ubuntu：</p>
-
-<p>{% highlight %}$ apt-get install vim{% endhighlight %}</p>
-
+<p>{% highlight html %}$ apt-get install vim{% endhighlight %}</p>
 <p id="mac">Mac:</p>
-
 <ul>
-	<li>安装 Homebrew: <a href="http://brew.sh" title="The Missing Package Manager for macOS (or Linux) — Homebrew">The Missing Package Manager for macOS (or Linux) &mdash; Homebrew</a></li>
-	<li>{% highlight %}$ brew update{% endhighlight %}</li>
-	<li>{% highlight %}$ brew install vim &amp;&amp; brew install macvim{% endhighlight %}</li>
+<li>安装 Homebrew: <a href="http://brew.sh" title="The Missing Package Manager for macOS (or Linux) — Homebrew">The Missing Package Manager for macOS (or Linux) &mdash; Homebrew</a></li>
+<li>{% highlight html %}$ brew update{% endhighlight %}</li>
+<li>{% highlight html %}$ brew install vim &amp;&amp; brew install macvim{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <p>Vim 中有无数种插件，你可以随意安装使用。 可以在 <a href="http://www.vim.org/scripts/" title="scripts : vim online">scripts : vim online</a> 搜索到，也可以直接google。</p>
-
-{% highlight %}
-{% highlight %}$ git clone https://github.com/sg552/my_vim.git
+{% highlight html %}$ git clone https://github.com/sg552/my_vim.git
 # 下载完毕后，把这两个文件copy到 home 目录就可以了。
 $ cp .vimrc ~
 $ cp .vim ~ -r
 $ vim
 :BundleInstall{% endhighlight %}
-
 <blockquote>
 <p id="rails插件">Rails插件</p>
-
 <p>Rails插件允许我们快速的在各种文件中跳来跳去（相信Vim 也有 Django, Spring， angular, 这样的插件， 有兴趣的朋友可以看看。）</p>
-
 <ul>
-	<li>跳转到 controller: {% highlight %}ctrl + c{% endhighlight %}</li>
-	<li>跳转到 model : {% highlight %}ctrl + m{% endhighlight %}</li>
-	<li>跳转到 view : 先移动到对应的action, 再 {% highlight %}ctrl + v{% endhighlight %}</li>
+<li>跳转到 controller: {% highlight html %}ctrl + c{% endhighlight %}</li>
+<li>跳转到 model : {% highlight html %}ctrl + m{% endhighlight %}</li>
+<li>跳转到 view : 先移动到对应的action, 再 {% highlight html %}ctrl + v{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="自动补全">自动补全</p>
-
 <p>凡是在 Vim 缓冲区中（近期打开过的文件）的代码，都可以补全。</p>
-
 <ul>
-	<li>从上到下选择候选词： {% highlight %}ctrl + n{% endhighlight %}</li>
-	<li>从下到上选择候选词： {% highlight %}ctrl + p{% endhighlight %}</li>
+<li>从上到下选择候选词： {% highlight html %}ctrl + n{% endhighlight %}</li>
+<li>从下到上选择候选词： {% highlight html %}ctrl + p{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>左移: 选多行后， {% highlight %}&lt;{% endhighlight %} （ {% highlight %}shift + ,{% endhighlight %} ）</li>
-	<li>右移: 选多行后， {% highlight %}&gt;{% endhighlight %} （ {% highlight %}shift + .{% endhighlight %} ）</li>
-	<li>重复上次操作: {% highlight %}.{% endhighlight %}</li>
+<li>左移: 选多行后， {% highlight html %}&lt;{% endhighlight %} （ {% highlight html %}shift + ,{% endhighlight %} ）</li>
+<li>右移: 选多行后， {% highlight html %}&gt;{% endhighlight %} （ {% highlight html %}shift + .{% endhighlight %} ）</li>
+<li>重复上次操作: {% highlight html %}.{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="粘贴模式">粘贴模式</p>
-
-<p>Vim 正常模式下的粘贴，会导致粘贴的代码一行接一行的缩进。 如果要取消这种缩进的话，就要进入到 &quot;粘贴模式&quot;. （记得在这个模式下，无法使用 {% highlight %}ctrl + t{% endhighlight %} 命令来快速打开文件。 ）</p>
-
+<p>Vim 正常模式下的粘贴，会导致粘贴的代码一行接一行的缩进。 如果要取消这种缩进的话，就要进入到 &quot;粘贴模式&quot;. （记得在这个模式下，无法使用 {% highlight html %}ctrl + t{% endhighlight %} 命令来快速打开文件。 ）</p>
 <ul>
-	<li>{% highlight %}:set paste{% endhighlight %} 进入到粘贴模式</li>
-	<li>{% highlight %}:set nopaste{% endhighlight %} 取消粘贴模式</li>
+<li>{% highlight html %}:set paste{% endhighlight %} 进入到粘贴模式</li>
+<li>{% highlight html %}:set nopaste{% endhighlight %} 取消粘贴模式</li>
 </ul>
 </blockquote>
-
 <blockquote>三种模式的切换：字母切换输入模式，esc切换导航模式，：切换命令模式。</blockquote>
-
-<blockquote>上下左右&nbsp; hjkl&nbsp;&nbsp;&nbsp; 光标移动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% highlight %}shift + v{% endhighlight %}， 然后上下移动。就是选中，</blockquote>
-
+<blockquote>上下左右&nbsp; hjkl&nbsp;&nbsp;&nbsp; 光标移动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {% highlight html %}shift + v{% endhighlight %}， 然后上下移动。就是选中，</blockquote>
 <blockquote>
 <ul>
-	<li>{% highlight %}w{% endhighlight %}: 下一个词。 (word)</li>
-	<li>{% highlight %}b{% endhighlight %}: 上一个词。 (backword)</li>
+<li>{% highlight html %}w{% endhighlight %}: 下一个词。 (word)</li>
+<li>{% highlight html %}b{% endhighlight %}: 上一个词。 (backword)</li>
 </ul>
 </blockquote>
-
 <blockquote>
-<p>{% highlight %}ctrl + f{% endhighlight %}: 向下一屏（f = forward) {% highlight %}ctrl + b{% endhighlight %}: 向上一屏（b = backward)</p>
-
+<p>{% highlight html %}ctrl + f{% endhighlight %}: 向下一屏（f = forward) {% highlight html %}ctrl + b{% endhighlight %}: 向上一屏（b = backward)</p>
 <p>分屏</p>
-
 <ul>
-	<li>竖屏分割： {% highlight %}vs{% endhighlight %} (vertical split缩写)</li>
-	<li>横屏分割： {% highlight %}sp{% endhighlight %} (split缩写)</li>
-	<li>来回跳换： {% highlight %}ctrl + w + w{% endhighlight %} （跳到下一个小窗口）, 或者 {% highlight %}ctrl + w + &lt;j/k/h/l&gt;{% endhighlight %} （跳到某个方向的小窗口）</li>
+<li>竖屏分割： {% highlight html %}vs{% endhighlight %} (vertical split缩写)</li>
+<li>横屏分割： {% highlight html %}sp{% endhighlight %} (split缩写)</li>
+<li>来回跳换： {% highlight html %}ctrl + w + w{% endhighlight %} （跳到下一个小窗口）, 或者 {% highlight html %}ctrl + w + &lt;j/k/h/l&gt;{% endhighlight %} （跳到某个方向的小窗口）</li>
 </ul>
-
 <p>多行注释</p>
-
 <ul>
-	<li>选中多行 ({% highlight %}shift + v{% endhighlight %})</li>
-	<li>{% highlight %},cb{% endhighlight %} (逗号 c b 三个键要快速按）</li>
-	<li>取消注释： 使用传统的替换即可。</li>
+<li>选中多行 ({% highlight html %}shift + v{% endhighlight %})</li>
+<li>{% highlight html %},cb{% endhighlight %} (逗号 c b 三个键要快速按）</li>
+<li>取消注释： 使用传统的替换即可。</li>
 </ul>
-
 <p id="为多行代码格式化">多行代码格式化</p>
-
-<p>多行选中后， 按 {% highlight %}={% endhighlight %} 即可。比如多行缩进对齐。</p>
+<p>多行选中后， 按 {% highlight html %}={% endhighlight %} 即可。比如多行缩进对齐。</p>
 </blockquote>
-
 <p>&nbsp;</p>
-
 <blockquote>
-<p>{% highlight %}:%s/原来的字符串/新字符串/&nbsp;&nbsp; 查找替换&nbsp;&nbsp;&nbsp; {% endhighlight %}（所有都替换的话，就在末尾加个{% highlight %}g{% endhighlight %}&nbsp;&nbsp;&nbsp; {% highlight %}:%s/原来的字符串/新字符串/g{% endhighlight %} )&nbsp;&nbsp;&nbsp;</p>
-
-<p>先 {% highlight %}shift + v{% endhighlight %} 选中若干行{% highlight %}&nbsp;&nbsp;&nbsp;&nbsp; :s/原来的/新的字符串&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 替换{% endhighlight %}</p>
-
+<p>{% highlight html %}:%s/原来的字符串/新字符串/&nbsp;&nbsp; 查找替换&nbsp;&nbsp;&nbsp; {% endhighlight %}（所有都替换的话，就在末尾加个{% highlight html %}g{% endhighlight %}&nbsp;&nbsp;&nbsp; {% highlight html %}:%s/原来的字符串/新字符串/g{% endhighlight %} )&nbsp;&nbsp;&nbsp;</p>
+<p>先 {% highlight html %}shift + v{% endhighlight %} 选中若干行{% highlight html %}&nbsp;&nbsp;&nbsp;&nbsp; :s/原来的/新的字符串&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 替换{% endhighlight %}</p>
 <ul>
-	<li>{% highlight %}ctrl + n{% endhighlight %} : 下一个候选</li>
-	<li>{% highlight %}ctrl + p{% endhighlight %} : 上一个候选</li>
+<li>{% highlight html %}ctrl + n{% endhighlight %} : 下一个候选</li>
+<li>{% highlight html %}ctrl + p{% endhighlight %} : 上一个候选</li>
 </ul>
-
 <ul>
-	<li>&nbsp;</li>
+<li>&nbsp;</li>
 </ul>
 </blockquote>
-
 <blockquote>
-<p>搜索 some_thing: {% highlight %}/some_thing{% endhighlight %} 继续搜索下一个： {% highlight %}n{% endhighlight %} 搜索前一个： {% highlight %}shift + n{% endhighlight %}</p>
+<p>搜索 some_thing: {% highlight html %}/some_thing{% endhighlight %} 继续搜索下一个： {% highlight html %}n{% endhighlight %} 搜索前一个： {% highlight html %}shift + n{% endhighlight %}</p>
 </blockquote>
-
 <blockquote>
 <p id="快速打开文件">快速打开文件</p>
-
 <p>使用的插件： fuzzy find</p>
-
-<p>{% highlight %}ctrl + t{% endhighlight %}, 就会弹出 {% highlight %}&gt;file&gt;{% endhighlight %} 这样的标志，然后输入：{% highlight %}**/文件名{% endhighlight %} 即可。 文件名是模糊查询。输入 {% highlight %}ab{% endhighlight %}, vim 也会把 {% highlight %}aub{% endhighlight %} 的结果列出来</p>
-
+<p>{% highlight html %}ctrl + t{% endhighlight %}, 就会弹出 {% highlight html %}&gt;file&gt;{% endhighlight %} 这样的标志，然后输入：{% highlight html %}**/文件名{% endhighlight %} 即可。 文件名是模糊查询。输入 {% highlight html %}ab{% endhighlight %}, vim 也会把 {% highlight html %}aub{% endhighlight %} 的结果列出来</p>
 <p>Ctrl&nbsp; + e&nbsp; 打开最近编辑的文件</p>
-
 <p><strong>快速进另一个文件：</strong></p>
-
-<p>在 Rails的 路由或者 视图文件中，很好用。{% highlight %}gf{% endhighlight %} 即可。 （gf = go to file)</p>
+<p>在 Rails的 路由或者 视图文件中，很好用。{% highlight html %}gf{% endhighlight %} 即可。 （gf = go to file)</p>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>跳到当前行的末尾： {% highlight %}shift + 4{% endhighlight %}</li>
-	<li>跳到当前行的行首： {% highlight %}0{% endhighlight %}</li>
+<li>跳到当前行的末尾： {% highlight html %}shift + 4{% endhighlight %}</li>
+<li>跳到当前行的行首： {% highlight html %}0{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>{% highlight %}gg{% endhighlight %}: 第一行</li>
-	<li>{% highlight %}shift + g{% endhighlight %}: 末行。</li>
+<li>{% highlight html %}gg{% endhighlight %}: 第一行</li>
+<li>{% highlight html %}shift + g{% endhighlight %}: 末行。</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>跳到 上一次编辑的地方： {% highlight %}g;{% endhighlight %}</li>
-	<li>跳到 下一次编辑的地方： {% highlight %}g,{% endhighlight %}</li>
+<li>跳到 上一次编辑的地方： {% highlight html %}g;{% endhighlight %}</li>
+<li>跳到 下一次编辑的地方： {% highlight html %}g,{% endhighlight %}</li>
 </ul>
-
 <ul>
-	<li>快速返回上一次编辑的文件： {% highlight %}ctrl + o{% endhighlight %} ( o 意为 outer )</li>
-	<li>快速返回下一次编辑的文件： {% highlight %}ctrl + i{% endhighlight %} ( i 意为 inner )</li>
-	<li>shift+8 跳到光标位置相同的标签或者单词处</li>
+<li>快速返回上一次编辑的文件： {% highlight html %}ctrl + o{% endhighlight %} ( o 意为 outer )</li>
+<li>快速返回下一次编辑的文件： {% highlight html %}ctrl + i{% endhighlight %} ( i 意为 inner )</li>
+<li>shift+8 跳到光标位置相同的标签或者单词处</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="输入文本">输入文本</p>
-
 <ul>
-	<li>在光标前输入： {% highlight %}i{% endhighlight %} ( insert )</li>
-	<li>在光标后输入： {% highlight %}a{% endhighlight %} (append / after )</li>
-	<li>在行首增加内容： {% highlight %}shift + i{% endhighlight %}</li>
-	<li>在行末增加内容： {% highlight %}shift + a{% endhighlight %}</li>
-	<li>在光标下行增加内容： {% highlight %}o{% endhighlight %}</li>
-	<li>在光标上行增加内容： {% highlight %}shift + o{% endhighlight %}</li>
+<li>在光标前输入： {% highlight html %}i{% endhighlight %} ( insert )</li>
+<li>在光标后输入： {% highlight html %}a{% endhighlight %} (append / after )</li>
+<li>在行首增加内容： {% highlight html %}shift + i{% endhighlight %}</li>
+<li>在行末增加内容： {% highlight html %}shift + a{% endhighlight %}</li>
+<li>在光标下行增加内容： {% highlight html %}o{% endhighlight %}</li>
+<li>在光标上行增加内容： {% highlight html %}shift + o{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p>删除</p>
-
 <p>以下删除都以当前光标作为起始位置。</p>
-
 <p>&nbsp;&nbsp;&nbsp; 删掉一个字母：x<br />
 &nbsp;&nbsp;&nbsp; 删掉一个单词： dw<br />
 &nbsp;&nbsp;&nbsp; 删掉一行： dd<br />
 &nbsp;&nbsp;&nbsp; 删掉多行： shift +v, 然后 x 或者 d</p>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>复制一个单词： {% highlight %}yw{% endhighlight %}</li>
-	<li>复制当前行： {% highlight %}yy{% endhighlight %}</li>
-	<li>粘贴: {% highlight %}p{% endhighlight %}</li>
-	<li>{% highlight %}，a查看历史复制的内容，enter选中粘贴的内容{% endhighlight %}</li>
+<li>复制一个单词： {% highlight html %}yw{% endhighlight %}</li>
+<li>复制当前行： {% highlight html %}yy{% endhighlight %}</li>
+<li>粘贴: {% highlight html %}p{% endhighlight %}</li>
+<li>{% highlight html %}，a查看历史复制的内容，enter选中粘贴的内容{% endhighlight %}</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="针对多个文件进行-查找和替换">针对多个文件进行 查找和替换</p>
-
 <p>使用插件： Greplace</p>
-
 <ol>
-	<li>{% highlight %}Gsearch -F &#39;要替换的字符串&#39; . -R --include=*rb{% endhighlight %} 这里的 {% highlight %}-F{% endhighlight %}, {% highlight %}-R --include=*rb{% endhighlight %} 这些参数，跟{% highlight %}grep{% endhighlight %}中的一样。</li>
-	<li>在返回的结果中，把该替换的替换。</li>
-	<li>{% highlight %}Greplace{% endhighlight %} 然后选择 {% highlight %}y/a/n{% endhighlight %} 来决定是否替换。</li>
-	<li>最后， 输入 {% highlight %}wa{% endhighlight %} 保存所有文件的改动。</li>
+<li>{% highlight html %}Gsearch -F &#39;要替换的字符串&#39; . -R --include=*rb{% endhighlight %} 这里的 {% highlight html %}-F{% endhighlight %}, {% highlight html %}-R --include=*rb{% endhighlight %} 这些参数，跟{% highlight html %}grep{% endhighlight %}中的一样。</li>
+<li>在返回的结果中，把该替换的替换。</li>
+<li>{% highlight html %}Greplace{% endhighlight %} 然后选择 {% highlight html %}y/a/n{% endhighlight %} 来决定是否替换。</li>
+<li>最后， 输入 {% highlight html %}wa{% endhighlight %} 保存所有文件的改动。</li>
 </ol>
-
 <h2>&nbsp;</h2>
 </blockquote>
-
 <blockquote>
 <p>切换背景色</p>
-
 <ul>
-	<li>{% highlight %}:set background=dark{% endhighlight %} 深色背景色</li>
-	<li>{% highlight %}:set background=light{% endhighlight %} 亮色&nbsp;</li>
+<li>{% highlight html %}:set background=dark{% endhighlight %} 深色背景色</li>
+<li>{% highlight html %}:set background=light{% endhighlight %} 亮色&nbsp;</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="显示隐藏行数">显示/隐藏行数</p>
-
 <ul>
-	<li>{% highlight %}:set number{% endhighlight %} 显示行数</li>
-	<li>{% highlight %}:set nonumber{% endhighlight %} 取消行数</li>
+<li>{% highlight html %}:set number{% endhighlight %} 显示行数</li>
+<li>{% highlight html %}:set nonumber{% endhighlight %} 取消行数</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <p id="折叠取消折叠过长的行">折叠/取消折叠过长的行</p>
-
 <ul>
-	<li>{% highlight %}:set wrap{% endhighlight %} 折叠</li>
-	<li>{% highlight %}:set nowrap{% endhighlight %} 取消折叠</li>
+<li>{% highlight html %}:set wrap{% endhighlight %} 折叠</li>
+<li>{% highlight html %}:set nowrap{% endhighlight %} 取消折叠</li>
 </ul>
 </blockquote>
-
 <blockquote>
 <ul>
-	<li>{% highlight %}:set paste{% endhighlight %} 进入到粘贴模式</li>
-	<li>{% highlight %}:set nopaste{% endhighlight %} 取消粘贴模式</li>
+<li>{% highlight html %}:set paste{% endhighlight %} 进入到粘贴模式</li>
+<li>{% highlight html %}:set nopaste{% endhighlight %} 取消粘贴模式</li>
 </ul>
 </blockquote>
-

@@ -4,63 +4,59 @@ title: "vuejs--ref父子组件的使用"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>ref与emit作用相类似，不使用HTML的形式，在webpack的环境下进行，按照书写路由，视图的形式，写父文件和子文件。</p> 
+<p>ref与emit作用相类似，不使用HTML的形式，在webpack的环境下进行，按照书写路由，视图的形式，写父文件和子文件。</p> 
 <blockquote> 
- <p>首先，父文件仍然在视图文件夹下，创建一个父组件：（src/views/Ref.vue）</p> 
- {% highlight %}<code class="language-html">&lt;template&gt;
-  &lt;div class="hello"&gt;
-    &lt;p&gt;本页面是parent页面, 会引用 ChildRef &lt;/p&gt;
-    &lt;input type='button' @click='get_child_value' value="获取child中变量的值"/&gt; :
-    value_in_parent:    {<!-- -->{value_in_parent}}  
-    &lt;br/&gt;
-    &lt;ChildRef ref="child"&gt;&lt;/ChildRef&gt;    
-  &lt;/div&gt;
+<p>首先，父文件仍然在视图文件夹下，创建一个父组件：（src/views/Ref.vue）</p> 
+{% highlight html %}<code class="language-html">&lt;template&gt;
+&lt;div class="hello"&gt;
+&lt;p&gt;本页面是parent页面, 会引用 ChildRef &lt;/p&gt;
+&lt;input type='button' @click='get_child_value' value="获取child中变量的值"/&gt; :
+value_in_parent:    {<!-- -->{value_in_parent}}  
+&lt;br/&gt;
+&lt;ChildRef ref="child"&gt;&lt;/ChildRef&gt;    
+&lt;/div&gt;
 &lt;/template&gt;
-
 &lt;script&gt;
 import ChildRef from '@/components/ChildRef'
 export default {
-  data () {
-    return {
-      value_in_parent: '',
-    }
-  }, 
-  mounted(){
-  },
-  components: {
-    ChildRef
-  },
-  methods: {
-    get_child_value(){
-      this.value_in_parent = this.$refs.child.value_in_child
-    }
-  }
+data () {
+return {
+value_in_parent: '',
+}
+}, 
+mounted(){
+},
+components: {
+ChildRef
+},
+methods: {
+get_child_value(){
+this.value_in_parent = this.$refs.child.value_in_child
+}
+}
 }
 &lt;/script&gt;{% endhighlight %} 
 </blockquote> 
 <blockquote> 
- <p style="margin-left:.0001pt;text-align:justify;">然后我们继续创建上面的父组件应用的src/components/ChildRef.vue文件，内容如下</p> 
- {% highlight %}<code class="language-html">&lt;template&gt;
-  &lt;div style='border: 1px solid red; margin-left: 50px; width: 600px'&gt;
-    本页面是child: &lt;br/&gt;
-    value_in_child: &lt;input type="text" v-model="value_in_child"/&gt;
-  &lt;/div&gt;
+<p style="margin-left:.0001pt;text-align:justify;">然后我们继续创建上面的父组件应用的src/components/ChildRef.vue文件，内容如下</p> 
+{% highlight html %}<code class="language-html">&lt;template&gt;
+&lt;div style='border: 1px solid red; margin-left: 50px; width: 600px'&gt;
+本页面是child: &lt;br/&gt;
+value_in_child: &lt;input type="text" v-model="value_in_child"/&gt;
+&lt;/div&gt;
 &lt;/template&gt;
-
 &lt;script&gt;
 export default {
-  data () {
-    return {
-      value_in_child: ""
-    }
-  },
+data () {
+return {
+value_in_child: ""
+}
+},
 }
 &lt;/script&gt;{% endhighlight %} 
- <p>接着修改路由文件，增加ref路由<strong><img alt="" src="https://img-blog.csdnimg.cn/5771d1e32ae9461ba9a86629e704f246.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></strong></p> 
- <p>刷新页面即可看到页面如下</p> 
- <p><img alt="" height="286" src="https://img-blog.csdnimg.cn/0f764c548d7b4695a70e178fe54c980f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1064"></p> 
- <p> 可见效果与emit类似<img alt="" height="358" src="https://img-blog.csdnimg.cn/15ee37584b0e45ffa1aa0c599ead27f8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1092"></p> 
- <p> </p> 
+<p>接着修改路由文件，增加ref路由<strong><img alt="" src="https://img-blog.csdnimg.cn/5771d1e32ae9461ba9a86629e704f246.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></strong></p> 
+<p>刷新页面即可看到页面如下</p> 
+<p><img alt="" height="286" src="https://img-blog.csdnimg.cn/0f764c548d7b4695a70e178fe54c980f.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1064"></p> 
+<p> 可见效果与emit类似<img alt="" height="358" src="https://img-blog.csdnimg.cn/15ee37584b0e45ffa1aa0c599ead27f8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="1092"></p> 
+<p> </p> 
 </blockquote>
-                

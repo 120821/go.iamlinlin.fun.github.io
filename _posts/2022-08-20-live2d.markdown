@@ -5,32 +5,18 @@ date: "2022-08-20"
 categories: 
 ---
 <p>参考：<a href="https://blog.vincent1230.top/vincent1230/technology/website/198/">搬运的博客</a>&nbsp;&nbsp; <a href="https://www.moeshou.com/310.html">原博客</a></p>
-
 <p>首先在app/views/application.html.erb文件底部增加这样一段内容。</p>
-
-{% highlight %}
-{% highlight %}&nbsp;&lt;footer&gt;
-
+{% highlight html %}&nbsp;&lt;footer&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/greensock@1.20.2/dist/TweenLite.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.3.1/dist/cubism4.min.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;link href=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/pio_sdk4.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src=&quot;https://cdn.jsdelivr.net/gh/journey-ad/blog-img@76ba2b3/live2d/lib/load.js&quot;&gt;&lt;/script&gt;
-
 &nbsp;&nbsp;&nbsp;&nbsp; &lt;/footer&gt;
-
 &nbsp; &lt;/body&gt;{% endhighlight %}
-
 <p>并且在底部增加css， 不然会显示三分之一的页面。<br />
 &lt;style&gt;<br />
 #pio {<br />
@@ -40,18 +26,10 @@ categories:
 &nbsp;vertical-align: middle;<br />
 }<br />
 &lt;/style&gt;</p>
-
 <p>是的就可以了，因为是香港服务器，使用这些源是可以的。</p>
-
 <p><img height="220" src="/uploads/ckeditor/pictures/305/image-20220820221748-1.png" width="380" /></p>
-
 <p>就会跟着你的鼠标进行动态变化。</p>
-
 <p><img height="220" src="/uploads/ckeditor/pictures/306/image-20220820221808-2.png" width="380" /></p>
-
 <p>点击菜单还可以进行更换人物等</p>
-
 <p><img height="269" src="/uploads/ckeditor/pictures/307/image-20220821082820-1.png" width="264" /></p>
-
 <p>&nbsp;</p>
-

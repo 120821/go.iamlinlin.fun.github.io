@@ -5,13 +5,8 @@ date: "2023-06-20"
 categories: 
 ---
 <p>&#39;200吨&#39;获得&lsquo;吨&rsquo;：</p>
-
 <p>可以使用正则表达式，如下所示：</p>
-
-{% highlight %}
-{% highlight %}string = &quot;200吨&quot;
+{% highlight html %}string = &quot;200吨&quot;
 ton = string.match(/\p{Han}+/)[0]
 puts ton # 输出：吨{% endhighlight %}
-
-<p>这里使用了 Unicode 字符属性 {% highlight %}\p{Han}{% endhighlight %} 匹配汉字，加上 {% highlight %}+{% endhighlight %} 表示匹配一个或多个汉字。最后 {% highlight %}[0]{% endhighlight %} 取出匹配到的第一个汉字。</p>
-
+<p>这里使用了 Unicode 字符属性 {% highlight html %}\p{Han}{% endhighlight %} 匹配汉字，加上 {% highlight html %}+{% endhighlight %} 表示匹配一个或多个汉字。最后 {% highlight html %}[0]{% endhighlight %} 取出匹配到的第一个汉字。</p>

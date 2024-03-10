@@ -5,25 +5,15 @@ date: "2023-10-18"
 categories: 
 ---
 <p>refer:&nbsp;<a href="https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/">https://www.freecodecamp.org/chinese/news/javascript-var-let-and-const/</a></p>
-
 <p>const声明的是常量。不能被修改并且不能被重新声明, 而且只能在声明的块级来访问。</p>
-
-<p>一旦使用{% highlight %}const{% endhighlight %}声明一个变量并赋予它一个初始值，就不能再将其指向另一个值:</p>
-
-{% highlight %}
-{% highlight %}const PI = 3.14;
+<p>一旦使用{% highlight html %}const{% endhighlight %}声明一个变量并赋予它一个初始值，就不能再将其指向另一个值:</p>
+{% highlight html %}const PI = 3.14;
 console.log(PI); // 输出 3.14
-
 // 尝试重新赋值
 PI = 3.14159; // 报错，因为常量不可重新赋值{% endhighlight %}
-
 <p>const在声明的块内可见，并且在块之外是不可访问的:</p>
-
-{% highlight %}
-{% highlight %}if (true) {
-  const message = &quot;Hello&quot;;
-  console.log(message); // 输出 &quot;Hello&quot;
+{% highlight html %}if (true) {
+const message = &quot;Hello&quot;;
+console.log(message); // 输出 &quot;Hello&quot;
 }
-
 console.log(message); // 报错，因为 message 在这里不可访问{% endhighlight %}
-

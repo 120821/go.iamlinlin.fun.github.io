@@ -5,49 +5,24 @@ date: "2023-08-14"
 categories: 
 ---
 <p>在react里，有个编辑页面需要保存多个列的数据，但是在保存的时候，发现某个列不能进行保存。而且会跳转到登录页面，需要重新登录。</p>
-
 <p>解决思路：首先，需要f12查看发起的请求是什么，（发现是一个options 和一个put,put是400），进入前端页面的代码进行查看，（把重新登录的代码先注释了。）</p>
-
 <p>然后检查后端的代码，查看路由，然后在vim里:vs，使用ctrl t **加文件名，查看是使用的是哪一段代码，进行检查。</p>
-
 <p>json: cannot unmarshal string into Go struct field UpdateCalculationTemplateRequest.InitialFillingAmount of type float64</p>
-
 <p>注意：（在使用struct的时候，需要吧json右边的格式写完整，双引号不能少，空格不要多）</p>
-
-{% highlight %}
-{% highlight %}+&nbsp; InitialFillingAmount float64 `json:&quot;initialFillingAmount&quot;`
-
+{% highlight html %}+&nbsp; InitialFillingAmount float64 `json:&quot;initialFillingAmount&quot;`
 +&nbsp; OperatingDischargeRate float64 `json:&quot;operatingDischargeRate&quot;`
-
 +&nbsp; MaintenanceDischargeRate float64 `json:&quot;maintenanceDischargeRate&quot;`
-
 +&nbsp; MaintenanceFillingRate float64 `json:&quot;maintenanceFillingRate&quot;`
-
 +&nbsp; AnnualMaintenanceRate float64 `json:&quot;annualMaintenanceRate&quot;`
-
 +&nbsp; ScrapDischargeRate float64 `json:&quot;scrapDischargeRate&quot;{% endhighlight %}
-
 <p>然后再在Error里自己自己的error的打印：</p>
-
-{% highlight %}
-{% highlight %}var req UpdateCalculationTemplateRequest
-
+{% highlight html %}var req UpdateCalculationTemplateRequest
 &nbsp;&nbsp; if err := c.ShouldBindJSON(&amp;req); err != nil {
-
 &nbsp;&nbsp;&nbsp;&nbsp; c.JSON(http.StatusBadRequest, gin.H{&quot;error&quot;: err.Error()})
-
 +&nbsp;&nbsp;&nbsp; fmt.Println(&quot;&nbsp;&nbsp; == got error&quot;, err.Error())
-
 &nbsp;&nbsp;&nbsp;&nbsp; return
-
 &nbsp;&nbsp; }{% endhighlight %}
-
 <p>格式修改完整后，继续在前端发起请求，发现出现了error，说明还是格式不对，仔细对比发现input不匹配，应该使用inputnumber</p>
-
-{% highlight %}
-{% highlight %}-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Input className=&quot;custom-form-item&quot; defaultValue={data.data.initial_filling_amount}/&gt;
-
+{% highlight html %}-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;Input className=&quot;custom-form-item&quot; defaultValue={data.data.initial_filling_amount}/&gt;
 +&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;InputNumber defaultValue={data.data.initial_filling_amount} step={0.01} min={0} max={100} precision={2} className=&quot;custom-input&quot; /&gt;{% endhighlight %}
-
 <p>修改好后，就可以正常保存了。</p>
-

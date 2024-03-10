@@ -4,10 +4,9 @@ title: "javascript hash的使用"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>在javascript中，hash指的是哈希表，是一种根据关键字直接访问内存存储位置的数据结构；通过哈希表，数据元素的存放位置和数据元素的关键字之间建立起某种对应关系，建立这种对应关系的函数称为哈希函数。</p> 
+<p>在javascript中，hash指的是哈希表，是一种根据关键字直接访问内存存储位置的数据结构；通过哈希表，数据元素的存放位置和数据元素的关键字之间建立起某种对应关系，建立这种对应关系的函数称为哈希函数。</p> 
 <p>hash就是一个赋值的方法，含义很多，搜索到的知识和方法也非常复杂，但实际用的并不需要太复杂，能用的就一点点，写法也非常简单，hash有多种写法</p> 
-{% highlight %}my hash = {}←Object { }
+{% highlight html %}my hash = {}←Object { }
 my hash = { "a" : 1}← &gt;Object { a: 1 }
 my hash.a← 1
 &gt; 
@@ -26,4 +25,3 @@ my_hash['a' ]← 1{% endhighlight %}
 <p>hash = { "a" : "1" }</p> 
 <p>第2个任务再创建一个hash，它的key分别是one和two对应的value分别是100和200</p> 
 <p>hash = { one : 100, two : 200}</p>
-                

@@ -5,51 +5,28 @@ date: "2022-09-20"
 categories: 
 ---
 <p><a href="http://www.postgres.cn/docs/9.5/indexes-expressional.html">官网</a></p>
-
 <p><a href="http://t.zoukankan.com/ryjJava-p-14359592.html">http://t.zoukankan.com/ryjJava-p-14359592.html</a></p>
-
 <p><span class="pre-scrollable">一个索引列并不一定是底层表的一个列，也可以是从表的一列或多列计算而来的一个函数或者标量表达式。索引表达式的维护代价较为昂贵，因为在每一个行被插入或更新时都得为它重新计算相应的表达式。然而，索引表达式在进行索引搜索时却<span class="emphasis"><em>不</em>需要重新计算，因为它们的结果已经被存储在索引中了。</span></span></p>
-
-{% highlight %}
-{% highlight %}<span class="pre-scrollable"><span style="color: rgba(0, 0, 255, 1)">SELECT</span> <span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">FROM</span> people <span style="color: rgba(0, 0, 255, 1)">WHERE</span> (first_name <span style="color: rgba(128, 128, 128, 1)">||</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(128, 128, 128, 1)">||</span> last_name) <span style="color: rgba(128, 128, 128, 1)">=</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span><span style="color: rgba(255, 0, 0, 1)">John Smith</span><span style="color: rgba(255, 0, 0, 1)">&#39;</span><span style="color: rgba(0, 0, 0, 1)">;</span>
-
+{% highlight html %}<span class="pre-scrollable"><span style="color: rgba(0, 0, 255, 1)">SELECT</span> <span style="color: rgba(128, 128, 128, 1)">*</span> <span style="color: rgba(0, 0, 255, 1)">FROM</span> people <span style="color: rgba(0, 0, 255, 1)">WHERE</span> (first_name <span style="color: rgba(128, 128, 128, 1)">||</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(128, 128, 128, 1)">||</span> last_name) <span style="color: rgba(128, 128, 128, 1)">=</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span><span style="color: rgba(255, 0, 0, 1)">John Smith</span><span style="color: rgba(255, 0, 0, 1)">&#39;</span><span style="color: rgba(0, 0, 0, 1)">;</span>
 <span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(0, 0, 255, 1)">INDEX</span> people_names <span style="color: rgba(0, 0, 255, 1)">ON</span> people ((first_name <span style="color: rgba(128, 128, 128, 1)">||</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(255, 0, 0, 1)">&#39;</span> <span style="color: rgba(128, 128, 128, 1)">||</span> last_name));</span>{% endhighlight %}
-
 <p><strong><span class="pre-scrollable">部分索引</span></strong></p>
-
 <p><span class="pre-scrollable">　一个部分索引是建立在表的一个子集上，而该子集则由一个条件表达式（被称为部分索引的谓词）定义。而索引中只包含那些符合该谓词的表行的项。部分索引是一种专门的特性，但在很多种情况下它们也很有用。<br />
 　　使用部分索引的一个主要原因是避免索引公值。由于搜索一个公值的查询（一个在所有表行中占比超过一定百分比的值）不会使用索引，所以完全没有理由将这些行保留在索引中。这可以减小索引的尺寸，同时也将加速使用索引的查询。它也将加速很多表更新操作，因为这种索引并不需要在所有情况下都被更新。</span></p>
-
-{% highlight %}
-{% highlight %}<span class="pre-scrollable"><span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(0, 0, 255, 1)">TABLE</span><span style="color: rgba(0, 0, 0, 1)"> tests (
-
+{% highlight html %}<span class="pre-scrollable"><span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(0, 0, 255, 1)">TABLE</span><span style="color: rgba(0, 0, 0, 1)"> tests (
 &nbsp;&nbsp;&nbsp; subject </span><span style="color: rgba(0, 0, 255, 1)">text</span><span style="color: rgba(0, 0, 0, 1)">,
-
 &nbsp;&nbsp;&nbsp; target </span><span style="color: rgba(0, 0, 255, 1)">text</span><span style="color: rgba(0, 0, 0, 1)">,
-
 &nbsp;&nbsp;&nbsp; success boolean,
-
 &nbsp;&nbsp;&nbsp; ...
-
 );</span></span>{% endhighlight %}
-
-{% highlight %}
-{% highlight %}<span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(0, 0, 255, 1)">UNIQUE</span> <span style="color: rgba(0, 0, 255, 1)">INDEX</span> tests_success_constraint <span style="color: rgba(0, 0, 255, 1)">ON</span><span style="color: rgba(0, 0, 0, 1)"> tests (subject, target)
-
+{% highlight html %}<span style="color: rgba(0, 0, 255, 1)">CREATE</span> <span style="color: rgba(0, 0, 255, 1)">UNIQUE</span> <span style="color: rgba(0, 0, 255, 1)">INDEX</span> tests_success_constraint <span style="color: rgba(0, 0, 255, 1)">ON</span><span style="color: rgba(0, 0, 0, 1)"> tests (subject, target)
 &nbsp;&nbsp;&nbsp; </span><span style="color: rgba(0, 0, 255, 1)">WHERE</span> success;{% endhighlight %}
-
 <p><a href="https://www.runoob.com/postgresql/postgresql-index.html">索引的禁用</a>：虽然索引的目的在于提高数据库的性能，但这里有几个情况需要避免使用索引。</p>
-
 <p>使用索引时，需要考虑下列准则：</p>
-
 <ul>
-	<li>索引不应该使用在较小的表上。</li>
-	<li>索引不应该使用在有频繁的大批量的更新或插入操作的表上。</li>
-	<li>索引不应该使用在含有大量的 NULL 值的列上。</li>
-	<li>索引不应该使用在频繁操作的列上。</li>
+<li>索引不应该使用在较小的表上。</li>
+<li>索引不应该使用在有频繁的大批量的更新或插入操作的表上。</li>
+<li>索引不应该使用在含有大量的 NULL 值的列上。</li>
+<li>索引不应该使用在频繁操作的列上。</li>
 </ul>
-
 <p>&nbsp;</p>
-
 <div class="notranslate" style="all: initial;">&nbsp;</div>
-

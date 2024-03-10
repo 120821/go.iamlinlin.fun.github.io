@@ -5,34 +5,25 @@ date: "2023-11-22"
 categories: 
 ---
 <p>d3有自带的比色卡，可以使用最大值最小值来设置地图等的比色卡，例如这样：</p>
-
-{% highlight %}
-{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight html %}import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
-
 const ColorCard = ({ minValue, maxValue }) =&gt; {
-  const svgRef = useRef(null);
-
-  useEffect(() =&gt; {
-    const svg = d3.select(svgRef.current);
-
-    const colorScale = d3
-      .scaleLinear()
-      .domain([minValue, maxValue])
-      .range([&#39;blue&#39;, &#39;red&#39;]);
-
-    svg.append(&#39;rect&#39;)
-      .attr(&#39;x&#39;, 10)
-      .attr(&#39;y&#39;, 10)
-      .attr(&#39;width&#39;, 200)
-      .attr(&#39;height&#39;, 20)
-      .style(&#39;fill&#39;, (d) =&gt; colorScale(d));
-  }, [minValue, maxValue]);
-
-  return (
-    &lt;svg ref={svgRef} width={220} height={40} /&gt;
-  );
+const svgRef = useRef(null);
+useEffect(() =&gt; {
+const svg = d3.select(svgRef.current);
+const colorScale = d3
+.scaleLinear()
+.domain([minValue, maxValue])
+.range([&#39;blue&#39;, &#39;red&#39;]);
+svg.append(&#39;rect&#39;)
+.attr(&#39;x&#39;, 10)
+.attr(&#39;y&#39;, 10)
+.attr(&#39;width&#39;, 200)
+.attr(&#39;height&#39;, 20)
+.style(&#39;fill&#39;, (d) =&gt; colorScale(d));
+}, [minValue, maxValue]);
+return (
+&lt;svg ref={svgRef} width={220} height={40} /&gt;
+);
 };
-
 export default ColorCard;{% endhighlight %}
-

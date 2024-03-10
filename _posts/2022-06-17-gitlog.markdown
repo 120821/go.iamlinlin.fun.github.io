@@ -5,6 +5,4 @@ date: "2022-06-17"
 categories: 
 ---
 <p>git log app/views/blogs/index.html.erb</p>
-
 <p>查看列表页面文件的所有变动</p>
-

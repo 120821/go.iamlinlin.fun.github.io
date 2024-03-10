@@ -4,10 +4,8 @@ title: "a标签字体的颜色"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>如果引用了链接后，字体颜色发生了改变，只需要加上样式即可</p> 
-{% highlight %}a {
-  color: hotpink;
+<p>如果引用了链接后，字体颜色发生了改变，只需要加上样式即可</p> 
+{% highlight html %}a {
+color: hotpink;
 }{% endhighlight %} 
 <p>注意增加字体颜色按照取色器的颜色增加，不要用肉眼来判断</p>
-                

@@ -5,16 +5,9 @@ date: "2023-11-03"
 categories: 
 ---
 <p><a href="https://worktile.com/blog/pingcode-108/amp/">https://worktile.com/blog/pingcode-108/amp/</a></p>
-
 <p>1.浅拷贝对内存地址的复制，让目标对象指针和源对象指向同一片内存空间</p>
-
 <p>浅拷贝是一个传址,也就是把a的值赋给b的时候同时也把a的址赋给了b,</p>
-
 <p>如果b的值发生了改变，那么a也会发生改变</p>
-
 <p>2.深拷贝只会赋值，但是不会影响内存地址</p>
-
 <p>两个值改变互不影响。</p>
-
 <p>&nbsp;</p>
-

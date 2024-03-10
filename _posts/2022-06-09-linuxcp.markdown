@@ -4,8 +4,7 @@ title: "linux复制文件或目录cp用法"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>复制文件到当前目录，并替换Gemfire</p> 
+<p>复制文件到当前目录，并替换Gemfire</p> 
 <p>cp test_rails_crud/config/database.yml my_fruits/config</p> 
 <p>复制文件到当前目录，并命名为rrr</p> 
 <p>cp ../test_rails_crud/Gemfile ./rrr</p> 
@@ -25,4 +24,3 @@ categories:
 <p>ps -ef | grep thin</p> 
 <p>git commit -m 'xxx'</p> 
 <p></p>
-                

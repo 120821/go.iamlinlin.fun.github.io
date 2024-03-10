@@ -5,24 +5,15 @@ date: "2022-11-18"
 categories: 
 ---
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model">https://developer.mozilla.org/zh-CN/docs/Web/API/Document_Object_Model</a>&nbsp;&nbsp;<a href="https://www.itcast.cn/news/20210616/18210937586.shtml">黑马</a>&nbsp;&nbsp;<a href="https://www.runoob.com/htmldom/htmldom-tutorial.html">菜鸟</a></p>
-
 <p>JavaScript中，经常需要操作DOM。所谓DOM指的是文档对象模型(Document Object Model)。它提供了对文档结构化的描述，并将HTML页面与脚本、程序语言联系起来。</p>
-
 <p>HTML标签就是一个类似树形的DOM文档。其中，最外面的一层是&lt;html&gt;标签，&lt;htm1&gt;标签中嵌套着&lt;head&gt;标签和&lt;body&gt;标签，而这两个标签中也会嵌套其他标签，这样一层层的延伸很像一棵倒着的树。</p>
-
 <p>对应上述HTML代码的DOM树形结构如下图所示。</p>
-
 <p><img alt="1623828868292_DOM树形结构.jpg" src="http://www.itheima.com/images/newslistPIC/1623828868291_DOM%E6%A0%91%E5%BD%A2%E7%BB%93%E6%9E%84.jpg" /></p>
-
 <p>所有的元素内容都是一个节点。其中，&lt;html&gt;是所有内容的根节点，&lt;body&gt;是&lt;h1&gt;和&lt;ul&gt;的父节点。&lt;a&gt; 和&lt;meta&gt;标签下面的分支href与charset是标签的属性，在DOM中称为属性节点;标签下面的文本是属于该标签内部的文字，在DOM中称为文本节点。</p>
-
 <p>在了解什么是DOM后，就不再难理解什么是DOM对象。DOM对象就是JavaScript操作DOM所使用的对象。例如，获取以上HTML代码中li标签的DOM对象，并调用innerText属性获取第一个li标签的文本，如下所示。</p>
-
 <pre tabindex="0">
-{% highlight %}//获取1i标签对象集合: HTMLCollection(2) [li, li]
+{% highlight html %}//获取1i标签对象集合: HTMLCollection(2) [li, li]
 var lis = document.getElementsByTagName(&#39;li&#39;);
 var firstLi = lis[0];    //获取第1个1i标签的DOM对象
 var text = firstLi.innerText;    //获取第1个1i标签的文本内容{% endhighlight %}
-
 <p>&nbsp;</p>
-

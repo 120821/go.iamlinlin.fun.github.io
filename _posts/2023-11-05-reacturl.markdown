@@ -5,7 +5,4 @@ date: "2023-11-05"
 categories: 
 ---
 <p>react 需要使用字符串拼接方式来构建动态的URL:</p>
-
-{% highlight %}
-{% highlight %}&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to={`/blog/${item.id}`}&gt;{% endhighlight %}
-
+{% highlight html %}&lt;Link className=&quot;a-link&quot; target=&quot;_blank&quot; to={`/blog/${item.id}`}&gt;{% endhighlight %}

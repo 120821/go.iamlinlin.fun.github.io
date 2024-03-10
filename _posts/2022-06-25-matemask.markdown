@@ -5,6 +5,4 @@ date: "2022-06-25"
 categories: 
 ---
 <p>在主网络，点击头像，进行创建。不需要任何认证，即可创建。</p>
-
 <p><img height="898" src="/uploads/ckeditor/pictures/70/image-20220625085947-2.png" width="1616" /></p>
-

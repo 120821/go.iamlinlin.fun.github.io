@@ -5,34 +5,21 @@ date: "2022-06-23"
 categories: 
 ---
 <p>icon：http://www.fontawesome.com.cn/icons/upload/</p>
-
 <p>icon标签</p>
-
-{% highlight %}
+{% highlight html %}
 <code class="html"><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;fa fa-upload&quot;</span> <span class="na">aria-hidden=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>{% endhighlight %}
-
 <p><img height="139" src="/uploads/ckeditor/pictures/60/image-20220623155130-1.png" width="504" /></p>
-
 <p>视图页面增加：</p>
-
 <p>&lt;%= link_to raw(&quot;&lt;i class=&#39;fa fa-upload&#39;&gt;&lt;/i&gt;导入csv&quot;), upload_csv_nft_owners_path, class: &quot;btn btn-primary btn-sm&quot;%&gt;</p>
-
 <p>可以与下载查询相邻</p>
-
 <p>&lt;%= submit_tag raw(&#39;&amp;#xf002;查询&#39;), class: &quot;form_submit&quot;, class: &#39;btn btn-secondary btn-sm fa-input&#39; %&gt;<br />
 &nbsp;&lt;%= link_to raw(&quot;&lt;i class=&#39;fa fa-download&#39;&gt;&lt;/i&gt;下载csv&quot;), download_csv_nft_owners_path, class: &quot;btn btn-primary btn-sm&quot;%&gt;</p>
-
 <p>controller增加</p>
-
 <p>def upload_csv<br />
 &nbsp;end</p>
-
 <p>route增加</p>
-
 <p>:get upload_csv</p>
-
 <p>导入页面增加，记得增加文件夹 public/upload_files</p>
-
 <p>&lt;div class=&quot;modal-content&quot;&gt;<br />
 &nbsp; &lt;div class=&quot;modal-header&quot;&gt;<br />
 &nbsp;&nbsp;&nbsp; &lt;h4 class=&quot;modal-title&quot; style=&quot;float: left;&quot;&gt;导入CSV&lt;/h4&gt;<br />
@@ -50,6 +37,4 @@ categories:
 &nbsp; &lt;/div&gt;<br />
 &lt;/div&gt;<br />
 示例文件可以在阿里云进行上传，可以进入console，也可以登录阿里云账号，直接拖到文件位置，点击分享。</p>
-
 <p>https://oss.console.aliyun.com/bucket/oss-cn-beijing/120821/object/upload<img height="495" src="/uploads/ckeditor/pictures/61/image-20220623155535-2.png" width="1448" /></p>
-

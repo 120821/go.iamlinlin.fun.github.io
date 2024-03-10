@@ -5,7 +5,6 @@ date: "2022-06-22"
 categories: 
 ---
 <p>首先在controller进行增加循环</p>
-
 <p>&nbsp;def new<br />
 &nbsp;&nbsp;&nbsp; @my_blog = MyBlog.new<br />
 &nbsp;&nbsp;&nbsp; i = 1<br />
@@ -17,14 +16,10 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i = i +1<br />
 &nbsp;&nbsp;&nbsp; end<br />
 &nbsp; end</p>
-
 <p>然后在视图页面进行表单的增加</p>
-
 <p>&lt;h3&gt;新建页面&lt;/h3&gt;</p>
-
 <p>&lt;%= render &#39;form&#39; %&gt;<br />
 &lt;br/&gt;</p>
-
 <p>&lt;%= link_to &#39;返回&#39;, my_blogs_path %&gt;<br />
 &lt;%= form_tag &#39;&#39;, method: :get do %&gt;<br />
 &nbsp; &lt;label class=&quot;control-label&quot;&gt;<br />
@@ -35,12 +30,7 @@ categories:
 &nbsp;&nbsp;&nbsp; 数量: &lt;%= text_field_tag :mount, params[:mount], value: 1 %&gt;<br />
 &nbsp; &lt;%= submit_tag &#39;新建&#39;, class: &quot;form_submit&quot;, class: &#39;btn btn-secondary btn-sm fa-input&#39; %&gt;<br />
 &lt;% end %&gt;</p>
-
 <p>默认值的设置使用value即可，注意默认值会与placeholder进行冲突，影响不大。</p>
-
 <p>&lt;%= text_field_tag :count, params[:count], value: 1, class: &#39;form-control&#39;, placeholder: &quot;例如 100&quot; %&gt;</p>
-
 <p><img height="407" src="/uploads/ckeditor/pictures/53/image-20220622160226-1.png" width="909" /></p>
-
 <p>&nbsp;</p>
-

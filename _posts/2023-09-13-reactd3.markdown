@@ -5,93 +5,64 @@ date: "2023-09-13"
 categories: 
 ---
 <p>refer: <a href="http://siwei.me/blog/posts/d3-svg-path">http://siwei.me/blog/posts/d3-svg-path</a></p>
-
 <p><a href="https://observablehq.com/@d3/testing-projection-visibility?collection=@d3/d3-geo">https://observablehq.com/@d3/testing-projection-visibility?collection=@d3/d3-geo</a></p>
-
 <p>1.首先安装:</p>
-
-{% highlight %}
-{% highlight %}npm install d3 topojson{% endhighlight %}
-
-<p>{% highlight %}或者使用{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}yarn add d3 topojson{% endhighlight %}
-
-<p>{% highlight %}2.{% endhighlight %}react中引入:</p>
-
-{% highlight %}
-{% highlight %}import React, { useEffect, useRef } from &#39;react&#39;;
+{% highlight html %}npm install d3 topojson{% endhighlight %}
+<p>{% highlight html %}或者使用{% endhighlight %}</p>
+{% highlight html %}yarn add d3 topojson{% endhighlight %}
+<p>{% highlight html %}2.{% endhighlight %}react中引入:</p>
+{% highlight html %}import React, { useEffect, useRef } from &#39;react&#39;;
 import * as d3 from &#39;d3&#39;;
 import china from &#39;./china.json&#39;; // 导入拓扑数据
 {% endhighlight %}
-
 <p dir="auto">3.同样，创建钩子:</p>
-
-{% highlight %}
-{% highlight %}const ChinaMap = () =&gt; {
-  const svgRef = useRef(null);
-
-  useEffect(() =&gt; {
-    const svgElement = d3.select(svgRef.current);
-
-    // 创建地理投影
-    const projection = d3
-      .geoMercator()
-      .center([105, 38])
-      .scale(600)
-      .translate([500, 500]);
-
-    // 创建路径生成器
-    const pathGenerator = d3.geoPath().projection(projection);
-
-    // 渲染地图路径
-    svgElement
-      .selectAll(&#39;path&#39;)
-      .data(china.features)
-      .enter()
-      .append(&#39;path&#39;)
-      .attr(&#39;d&#39;, pathGenerator)
-      .attr(&#39;stroke&#39;, &#39;#333&#39;)
-      .attr(&#39;fill&#39;, &#39;lightblue&#39;);
-  }, []);
-
-  return &lt;svg ref={svgRef} width=&quot;1000&quot; height=&quot;1000&quot; /&gt;;
+{% highlight html %}const ChinaMap = () =&gt; {
+const svgRef = useRef(null);
+useEffect(() =&gt; {
+const svgElement = d3.select(svgRef.current);
+// 创建地理投影
+const projection = d3
+.geoMercator()
+.center([105, 38])
+.scale(600)
+.translate([500, 500]);
+// 创建路径生成器
+const pathGenerator = d3.geoPath().projection(projection);
+// 渲染地图路径
+svgElement
+.selectAll(&#39;path&#39;)
+.data(china.features)
+.enter()
+.append(&#39;path&#39;)
+.attr(&#39;d&#39;, pathGenerator)
+.attr(&#39;stroke&#39;, &#39;#333&#39;)
+.attr(&#39;fill&#39;, &#39;lightblue&#39;);
+}, []);
+return &lt;svg ref={svgRef} width=&quot;1000&quot; height=&quot;1000&quot; /&gt;;
 };{% endhighlight %}
-
-<p>上面的例子里使用了 D3 的 {% highlight %}select{% endhighlight %} 方法选择 SVG 元素，创建一个地理投影 {% highlight %}projection{% endhighlight %}用于将地理坐标转换为屏幕坐标。 然后，我们创建一个路径生成器 {% highlight %}pathGenerator{% endhighlight %}，它将根据地理投影生成路径</p>
-
+<p>上面的例子里使用了 D3 的 {% highlight html %}select{% endhighlight %} 方法选择 SVG 元素，创建一个地理投影 {% highlight html %}projection{% endhighlight %}用于将地理坐标转换为屏幕坐标。 然后，我们创建一个路径生成器 {% highlight html %}pathGenerator{% endhighlight %}，它将根据地理投影生成路径</p>
 <p>多写几个例子应该会熟悉一点。</p>
-
 <p>4.最后svg来渲染:</p>
-
 <div class="Layout-main">
 <div class="Box Box--responsive js-code-block-container js-code-nav-container js-tagsearch-file md" id="readme">
 <div class="Box-body pb-5 px-5">
 <div class="notranslate overflow-auto position-relative snippet-clipboard-content">
-{% highlight %}
-{% highlight %}import React from &#39;react&#39;;
+{% highlight html %}import React from &#39;react&#39;;
 import ChinaMap from &#39;./ChinaMap&#39;;
-
 const App = () =&gt; {
-  return (
-    &lt;div className=&quot;App&quot;&gt;
-      &lt;h1&gt;China Map&lt;/h1&gt;
-      &lt;ChinaMap /&gt;
-    &lt;/div&gt;
-  );
+return (
+&lt;div className=&quot;App&quot;&gt;
+&lt;h1&gt;China Map&lt;/h1&gt;
+&lt;ChinaMap /&gt;
+&lt;/div&gt;
+);
 };
-
 export default App;
 {% endhighlight %}
-
 <div class="position-absolute right-0 top-0 zeroclipboard-container">我这里其实是出错了，调整后，还是不行。。。。。</div>
-
 <div class="position-absolute right-0 top-0 zeroclipboard-container">Demo：<a href="https://github.com/120821/react_learn_for_d3_svg_path_20230912">https://github.com/120821/react_learn_for_d3_svg_path_20230912</a></div>
 </div>
 </div>
 </div>
 </div>
-
 <p>&nbsp;</p>
-

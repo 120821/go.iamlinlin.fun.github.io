@@ -5,8 +5,5 @@ date: "2023-09-20"
 categories: 
 ---
 <p>对于以下两行设置组件状态的值的写法，效果是一样的，第一行是简写。</p>
-
-{% highlight %}
-{% highlight %}this.setState({ processedData });
+{% highlight html %}this.setState({ processedData });
 this.setState({ processedData: processedData });{% endhighlight %}
-

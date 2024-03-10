@@ -5,29 +5,16 @@ date: "2023-08-24"
 categories: 
 ---
 <p>详细的介绍：<a href="https://www.runoob.com/react/react-component-life-cycle.html">https://www.runoob.com/react/react-component-life-cycle.html</a></p>
-
 <p>在React中，数据加载有其独特的方式。今天在使用生命周期的过程中，我发现数据已经获取到了，但无法在前端页面中展示，尽管控制台已经打印出了数据，然后就出现了问题。</p>
-
 <p>明确一下React的生命周期分为三个状态：mounting（挂载）、updating（更新）和unmounting（卸载）。它们按从左到右的顺序进行渲染。</p>
-
 <p>在挂载阶段，首先进行构造函数（constructor）的渲染，然后是render方法的执行，接着是React更新DOM和引用（refs），最后是componentDidMount方法的调用。</p>
-
 <p>我遇到的问题是，在render方法执行时数据尚未获得，但在componentDidMount方法执行时数据已经存在，然而此时已经无法再进行render操作了。</p>
-
 <p>========</p>
-
 <p>以下这段感觉写的很乱，，，别看了，有时间再继续修改。（上面这段感觉修改的也是有问题。描述的不准确。）</p>
-
 <p>&nbsp;在react中，加载数据是很特别的，有自己独特的方式，今天在使用生命周期的时候就发现数据已经得到了，但是并不能在前端页面进行中展示，但是console已经打印出数据了，然后就卡住了。</p>
-
 <p>明确：</p>
-
 <p>react生命周期分为三个状态：<br />
 mounting=&gt;updating=&gt;unmounting</p>
-
 <p>顺序是从左到右进行渲染。</p>
-
 <p>在mounting中，首先进行渲染construtor，然后是render, 接着是react updates dom and refs, 最后是componentdidmount</p>
-
 <p>(我今天卡住就是因为,在render的时候是没有数据的，但是进行componentdidmount的时候有数据了，不过已经不render了)</p>
-

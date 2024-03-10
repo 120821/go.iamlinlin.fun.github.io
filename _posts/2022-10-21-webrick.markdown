@@ -5,29 +5,17 @@ date: "2022-10-21"
 categories: 
 ---
 <p>官网：<a href="https://ruby-doc.org/stdlib-2.5.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html">https://ruby-doc.org/stdlib-2.5.0/libdoc/webrick/rdoc/WEBrick/HTTPProxyServer.html</a></p>
-
 <p>使用下面这段代码，就可以使用8000端口进行代理。</p>
-
 <pre class="ruby">
-{% highlight %}<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick&#39;</span>
+{% highlight html %}<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick&#39;</span>
 <span class="ruby-identifier">require</span> <span class="ruby-string">&#39;webrick/httpproxy&#39;</span>
-
 <span class="ruby-identifier">proxy</span> = <span class="ruby-constant">WEBrick</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTPProxyServer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">Port:</span> <span class="ruby-value">8000</span>
-
 <span class="ruby-identifier">trap</span> <span class="ruby-string">&#39;INT&#39;</span>  <span class="ruby-keyword">do</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-keyword">end</span>
 <span class="ruby-identifier">trap</span> <span class="ruby-string">&#39;TERM&#39;</span> <span class="ruby-keyword">do</span> <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-keyword">end</span>
-
 <span class="ruby-identifier">proxy</span>.<span class="ruby-identifier">start</span>{% endhighlight %}
-
 <p><img height="122" src="/uploads/ckeditor/pictures/590/image-20221021094747-1.png" width="895" /></p>
-
 <p>在浏览器增加代理</p>
-
 <p>配置端口，可以更换端口为8888等</p>
-
 <p><img height="678" src="/uploads/ckeditor/pictures/594/image-20221021101145-1.png" width="1306" /></p>
-
 <p>然后，保存设置，使用这个代理，就可以使用</p>
-
 <p><img height="678" src="/uploads/ckeditor/pictures/592/image-20221021095357-3.png" width="1306" /></p>
-

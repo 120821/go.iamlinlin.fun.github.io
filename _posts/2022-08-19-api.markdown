@@ -5,7 +5,6 @@ date: "2022-08-19"
 categories: 
 ---
 <p>使用的时候，会在阿里云加载一个虚拟机，时间是一个小时，可以在自己项目的脚本进行替换，使用自己的keyid 和私钥。在没有备案登记或上线的时候进行使用。</p>
-
 <div style="color: #171717;background-color: #ebeaef;font-family: 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback';font-weight: normal;font-size: 12px;line-height: 20px;white-space: pre;">
 <div><span style="color: #999999;"># gem install aliyunsdkcore</span></div>
 <div><span style="color: #171717;">require </span><span style="color: #a31515;">&#39;aliyunsdkcore&#39;</span></div>
@@ -31,4 +30,3 @@ categories:
 <div><span style="color: #000000;">)</span>&nbsp;</div>
 <div><span style="color: #171717;">print response</span></div>
 </div>
-

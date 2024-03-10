@@ -5,99 +5,53 @@ date: "2022-11-02"
 categories: 
 ---
 <p><a href="https://asdf-vm.com/guide/getting-started.html#_2-download-asdf">https://asdf-vm.com/guide/getting-started.html#_2-download-asdf</a></p>
-
 <p>安装：（使用了git clone ）</p>
-
-<p>{% highlight %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}</p>
-
-<p>{% highlight %}然后增加 ~/.bashrc{% endhighlight %}{% highlight %}：{% endhighlight %}</p>
-
+<p>{% highlight html %}git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2{% endhighlight %}</p>
+<p>{% highlight html %}然后增加 ~/.bashrc{% endhighlight %}{% highlight html %}：{% endhighlight %}</p>
 <pre class="shiki" style="background-color:#272822;">
-{% highlight %}<span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/asdf.sh</span></span>{% endhighlight %}
-
+{% highlight html %}<span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/asdf.sh</span></span>{% endhighlight %}
 <p>必须通过将以下内容添加到 .bashrc 来配置完成：</p>
-
 <pre class="shiki" style="background-color:#272822;">
-{% highlight %}<span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/completions/asdf.bash</span></span>{% endhighlight %}
-
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}但是根据官网的内容，理论是打开两个文件，结果打开的是一个文件{% endhighlight %}</div>
-
+{% highlight html %}<span class="line"><span style="color:#66D9EF;">.</span><span style="color:#F8F8F2;"> $HOME/.asdf/completions/asdf.bash</span></span>{% endhighlight %}
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight html %}但是根据官网的内容，理论是打开两个文件，结果打开的是一个文件{% endhighlight %}</div>
 <p>使asdf生效： source ./bashrc</p>
-
 <p>使用：asdf</p>
-
 <p>就看到很多命令方法：<img height="647" src="/uploads/ckeditor/pictures/670/image-20221102153524-1.png" width="889" /></p>
-
 <p>安装插件：</p>
-
 <pre class="shiki" style="background-color:#272822;">
-{% highlight %}<span class="line"><span style="color:#F8F8F2;">asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git</span></span>{% endhighlight %}
-
+{% highlight html %}<span class="line"><span style="color:#F8F8F2;">asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git</span></span>{% endhighlight %}
 <p>现在我们有了一个 Node.js 插件，我们可以安装该工具的一个版本。安装最新的可用版本：</p>
-
 <pre class="shiki" style="background-color:#272822;">
-{% highlight %}<span class="line"><span style="color:#F8F8F2;">asdf install nodejs latest</span></span>{% endhighlight %}
-
+{% highlight html %}<span class="line"><span style="color:#F8F8F2;">asdf install nodejs latest</span></span>{% endhighlight %}
 <p><img height="156" src="/uploads/ckeditor/pictures/672/image-20221102153728-3.png" width="905" /></p>
-
 <p>asdf 在从当前工作目录到 $HOME 目录的所有 .tool-versions 文件中执行工具的版本查找。&nbsp; 当您执行 asdf 管理的工具时，查找会即时发生。</p>
-
-<p>{% highlight %}$HOME/.tool-versions{% endhighlight %}</p>
-
-<p>{% highlight %}然后查看文件vim .tool-versions，就看到显示了版本号{% endhighlight %}</p>
-
+<p>{% highlight html %}$HOME/.tool-versions{% endhighlight %}</p>
+<p>{% highlight html %}然后查看文件vim .tool-versions，就看到显示了版本号{% endhighlight %}</p>
 <p><img height="63" src="/uploads/ckeditor/pictures/673/image-20221102153940-4.png" width="299" /></p>
-
 <p>全局生效：</p>
-
 <p>asdf&nbsp; global nodejs 19.0.0</p>
-
 <p><a href="https://github.com/asdf-vm/asdf-ruby">安装ruby插件</a>：</p>
-
 <pre class="notranslate">
-{% highlight %}asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git{% endhighlight %}
-
-<p>{% highlight %}安装和本地一样版本的ruby :{% endhighlight %}</p>
-
+{% highlight html %}asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git{% endhighlight %}
+<p>{% highlight html %}安装和本地一样版本的ruby :{% endhighlight %}</p>
 <p>asdf install ruby 3.1.0</p>
-
 <p>全局生效：</p>
-
 <p>asdf global ruby 3.1.0</p>
-
-<p>{% highlight %}<a href="https://github.com/kennyp/asdf-golang">安装go插件</a>：{% endhighlight %}</p>
-
+<p>{% highlight html %}<a href="https://github.com/kennyp/asdf-golang">安装go插件</a>：{% endhighlight %}</p>
 <p>asdf plugin-add golang https://github.com/kennyp/asdf-golang.git</p>
-
 <p>安装go：</p>
-
 <p>asdf install golang latest</p>
-
 <p>全局go：</p>
-
 <p>asdf global golang 1.19.3</p>
-
 <p>安装caddy插件：</p>
-
 <p>asdf plugin-add caddy https://github.com/salasrod/asdf-caddy.git</p>
-
 <p>安装caddy：</p>
-
 <p>asdf install caddy latest</p>
-
 <p><img height="350" src="/uploads/ckeditor/pictures/675/image-20221102162237-1.png" width="1111" /></p>
-
 <p>然后进行替换：</p>
-
 <p>sudo cp /home/ubuntu/.asdf/installs/caddy/2.6.2/bin/caddy /opt/app/caddy</p>
-
 <p>最终把caddy放在这个位置：/opt/app/caddy</p>
-
 <p>需要在远程创建记录</p>
-
 <p><img height="316" src="/uploads/ckeditor/pictures/679/image-20221103143237-1.png" width="1557" /></p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

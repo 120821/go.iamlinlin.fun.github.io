@@ -4,34 +4,16 @@ title: "把某个文件的记录从git中删除"
 date: "2023-08-17"
 categories: 
 ---
-<p>使用命令：（ {% highlight %}git filter-branch{% endhighlight %} 命令的作用：进行历史记录重写）（在根目录下运行）</p>
-
-{% highlight %}
-{% highlight %}git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
-
-<p>然后使用：（{% highlight %}git push --force{% endhighlight %} 命令将更改的历史记录强制推送到远程仓库）</p>
-
-{% highlight %}
-{% highlight %}git push --force origin{% endhighlight %}
-
-<p>{% highlight %}注意：{% endhighlight %}</p>
-
-<p>{% highlight %}如果运行的时候不是在根目录或者文件的路径写的不对，提示了&lsquo;cannot create a new bachup&rsquo;就使用:{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}rm -r .git/refs/original/{% endhighlight %}
-
+<p>使用命令：（ {% highlight html %}git filter-branch{% endhighlight %} 命令的作用：进行历史记录重写）（在根目录下运行）</p>
+{% highlight html %}git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
+<p>然后使用：（{% highlight html %}git push --force{% endhighlight %} 命令将更改的历史记录强制推送到远程仓库）</p>
+{% highlight html %}git push --force origin{% endhighlight %}
+<p>{% highlight html %}注意：{% endhighlight %}</p>
+<p>{% highlight html %}如果运行的时候不是在根目录或者文件的路径写的不对，提示了&lsquo;cannot create a new bachup&rsquo;就使用:{% endhighlight %}</p>
+{% highlight html %}rm -r .git/refs/original/{% endhighlight %}
 <p>如果是windows,使用：</p>
-
-{% highlight %}
-{% highlight %}rmdir /s .git\refs\original{% endhighlight %}
-
+{% highlight html %}rmdir /s .git\refs\original{% endhighlight %}
 <p>删除后，继续使用：</p>
-
-{% highlight %}
-{% highlight %}git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
-
-<p>{% highlight %}然后继续操作。即可。{% endhighlight %}</p>
-
+{% highlight html %}git filter-branch --index-filter <span style="color:#abe338">&#39;git rm --cached --ignore-unmatch &lt;file_path&gt;&#39;</span> -- --all{% endhighlight %}
+<p>{% highlight html %}然后继续操作。即可。{% endhighlight %}</p>
 <p>&nbsp;</p>
-

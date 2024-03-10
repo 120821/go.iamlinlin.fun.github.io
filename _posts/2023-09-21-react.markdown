@@ -5,17 +5,9 @@ date: "2023-09-21"
 categories: 
 ---
 <p>对于接口返回的数据，原来是仅对emission_all处理：</p>
-
-{% highlight %}
-{% highlight %}const emissionAll = result.emission_all;{% endhighlight %}
-
+{% highlight html %}const emissionAll = result.emission_all;{% endhighlight %}
 <p>但是不同的算法返回的内容是不同的，因此进行判断：</p>
-
 <p>如果对于接口返回的数据，存在emission_all就使用emission_all，存在result就使用result:</p>
-
-{% highlight %}
-{% highlight %}const emissionAll = result.emission_all ? result.emission_all : (result.result ? result.result : null);
+{% highlight html %}const emissionAll = result.emission_all ? result.emission_all : (result.result ? result.result : null);
 console.log(&quot;== emissionAll: &quot;, emissionAll);{% endhighlight %}
-
 <p>&nbsp;</p>
-

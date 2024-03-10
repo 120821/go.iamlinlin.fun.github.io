@@ -5,120 +5,103 @@ date: "2023-11-15"
 categories: 
 ---
 <p>组件代码如下：(可以自行调整css）</p>
-
 <p>实现的效果是，每页显示3个图片，点击可以切换位置，hover可以放大，如果觉得放大效果不明显，可以修改注释部分的css参数,</p>
-
 <p>还有一个效果是鼠标拖动也可以切换图片的位置。</p>
-
-{% highlight %}
-{% highlight %}&lt;template&gt;
-  &lt;div class=&quot;carousel&quot;&gt;
-    &lt;div class=&quot;&quot;&gt;
-      &lt;div class=&quot;caroursel-title&quot;&gt;
-        &lt;span class=&quot;text_2&quot;&gt;轮播图demo&lt;/span&gt;&lt;br/&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;caroursel-text&quot;&gt;
-        &lt;span class=&quot;text_1&quot;&gt;每页显示3个图片&lt;/span &gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;carousel__container&quot;&gt;
-      &lt;Carousel :items-to-show=&quot;3&quot; :wrap-around=&quot;true&quot;&gt;
-        &lt;Slide v-for=&quot;image in images&quot; :key=&quot;image.id&quot; style=&quot;width: 29%; margin: 0 20px;&quot;&gt;
-          &lt;img :src=&quot;image.src&quot; :alt=&quot;image.alt&quot; class=&quot;carousel__item&quot; /&gt;
-        &lt;/Slide&gt;
-
-        &lt;template #addons&gt;
-          &lt;Navigation /&gt;
-        &lt;/template&gt;
-      &lt;/Carousel&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+{% highlight html %}&lt;template&gt;
+&lt;div class=&quot;carousel&quot;&gt;
+&lt;div class=&quot;&quot;&gt;
+&lt;div class=&quot;caroursel-title&quot;&gt;
+&lt;span class=&quot;text_2&quot;&gt;轮播图demo&lt;/span&gt;&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class=&quot;caroursel-text&quot;&gt;
+&lt;span class=&quot;text_1&quot;&gt;每页显示3个图片&lt;/span &gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;carousel__container&quot;&gt;
+&lt;Carousel :items-to-show=&quot;3&quot; :wrap-around=&quot;true&quot;&gt;
+&lt;Slide v-for=&quot;image in images&quot; :key=&quot;image.id&quot; style=&quot;width: 29%; margin: 0 20px;&quot;&gt;
+&lt;img :src=&quot;image.src&quot; :alt=&quot;image.alt&quot; class=&quot;carousel__item&quot; /&gt;
+&lt;/Slide&gt;
+&lt;template #addons&gt;
+&lt;Navigation /&gt;
 &lt;/template&gt;
-
+&lt;/Carousel&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/template&gt;
 &lt;script&gt;
 import &#39;@/assets/CarouselContainer.css&#39;
 import { defineComponent } from &#39;vue&#39;
 import { Carousel, Navigation, Slide } from &#39;vue3-carousel&#39;
 import &#39;vue3-carousel/dist/carousel.css&#39;
 export default defineComponent({
-  name: &#39;WrapAround&#39;,
-  components: {
-    Carousel,
-    Slide,
-    Navigation,
-  },
-  data() {
-    return {
-      images: [
-        { id: 1, src: require(&quot;@/assets/image1.png&quot;), alt: &#39;Image 1&#39; },
-        { id: 2, src: require(&quot;@/assets/image2.png&quot;), alt: &#39;Image 2&#39; },
-        { id: 3, src: require(&quot;@/assets/image3.png&quot;), alt: &#39;Image 3&#39; },
-        { id: 4, src: require(&quot;@/assets/image4.png&quot;), alt: &#39;Image 4&#39; },
-        { id: 5, src: require(&quot;@/assets/iamge5.png&quot;), alt: &#39;Image 5&#39; },
-        ...
-      ]
-    };
-  },
+name: &#39;WrapAround&#39;,
+components: {
+Carousel,
+Slide,
+Navigation,
+},
+data() {
+return {
+images: [
+{ id: 1, src: require(&quot;@/assets/image1.png&quot;), alt: &#39;Image 1&#39; },
+{ id: 2, src: require(&quot;@/assets/image2.png&quot;), alt: &#39;Image 2&#39; },
+{ id: 3, src: require(&quot;@/assets/image3.png&quot;), alt: &#39;Image 3&#39; },
+{ id: 4, src: require(&quot;@/assets/image4.png&quot;), alt: &#39;Image 4&#39; },
+{ id: 5, src: require(&quot;@/assets/iamge5.png&quot;), alt: &#39;Image 5&#39; },
+...
+]
+};
+},
 })
 &lt;/script&gt;
-
 &lt;style&gt;
 .test_div {
-  display: flex;
-  align-items: center;
-  width: 80%;
+display: flex;
+align-items: center;
+width: 80%;
 }
-
 .carousel__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 10%;
 }
-
 .carousel__item {
-  width: 300px;
-  height: 200px;
-  background-color: #642afb;
-  color: white;
-  font-size: 20px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s; /* 添加过渡效果 */
+width: 300px;
+height: 200px;
+background-color: #642afb;
+color: white;
+font-size: 20px;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: transform 0.3s; /* 添加过渡效果 */
 }
-
 .carousel__item:hover {
-  transform: scale(1.2); /* 鼠标悬停时放大图片 */
+transform: scale(1.2); /* 鼠标悬停时放大图片 */
 }
-
 .carousel__item--center {
-  width: 400px;
-  height: 300px;
+width: 400px;
+height: 300px;
 }
-
 .carousel__slide {
-  padding: 10px;
+padding: 10px;
 }
-
 .carousel__viewport {
-  overflow: hidden;
-  margin: 0 67px;
+overflow: hidden;
+margin: 0 67px;
 }
-
 .carousel__prev,
 .carousel__next {
-  box-sizing: content-box;
-  border: 5px solid transparent;
-  color: white;
+box-sizing: content-box;
+border: 5px solid transparent;
+color: white;
 }
-
 .carousel__prev:hover,
 .carousel__next:hover {
-  color: var(--vc-nav-color-hover);
-  color: white;
+color: var(--vc-nav-color-hover);
+color: white;
 }
 &lt;/style&gt;{% endhighlight %}
-

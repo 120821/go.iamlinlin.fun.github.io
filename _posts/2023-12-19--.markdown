@@ -5,8 +5,5 @@ date: "2023-12-19"
 categories: 
 ---
 <p>refer: <a href="https://support.mozilla.org/zh-CN/kb/password-manager-remember-delete-change-passwords?as=u#w_dao-chu-deng-lu-shu-ju">https://support.mozilla.org/zh-CN/kb/password-manager-remember-delete-change-passwords?as=u#w_dao-chu-deng-lu-shu-ju</a></p>
-
 <p>1.备份书签的话，在设置里打开书签，管理书签，选择导出即可，保存为xxx.json</p>
-
 <p>2备份登录的密码的话，注册火狐账户，然后在设置里选择账户，导出密码即可。（可以参考上面的官方文档）</p>
-

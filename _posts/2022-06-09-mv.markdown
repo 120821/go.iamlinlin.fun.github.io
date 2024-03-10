@@ -4,7 +4,5 @@ title: "mv的使用"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p style="text-align:center;">mv 文件夹/文件名 /文件夹<img alt="" src="https://img-blog.csdnimg.cn/8d98620b392b44a78f4d7b5c20bbe58c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
+<p style="text-align:center;">mv 文件夹/文件名 /文件夹<img alt="" src="https://img-blog.csdnimg.cn/8d98620b392b44a78f4d7b5c20bbe58c.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p> </p>
-                

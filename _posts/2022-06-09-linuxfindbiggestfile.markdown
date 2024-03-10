@@ -4,8 +4,7 @@ title: "查看文件linux find biggest file"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>Type du -a /dir/ | sort -n -r | head -n 20.</p> 
+<p>Type du -a /dir/ | sort -n -r | head -n 20.</p> 
 <p>对文件进行排序</p> 
 <p>/dir 是根目录，可以自行更换</p> 
 <p> </p> 
@@ -21,22 +20,18 @@ categories:
 <li>还要检查 <a href="https://www.cyberciti.biz/open-source/install-ncdu-on-linux-unix-ncurses-disk-usage/?utm_source=Linux_Unix_Command&amp;utm_medium=faq&amp;utm_campaign=nixcmd" title="ncdu 命令 ">ncdu 命令 </a>以获取目录中最大的文件</li>
 </ol>
 <h3>Linux 在 / 中找到最大的文件</h3> 
-<p>运行命令：<br>{% highlight %}$ sudo du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}<br> 或者<br>{% highlight %}$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20{% endhighlight %}</p> 
-{% highlight %}
-    Open the terminal application
-    Login as root user using the sudo -i command
-    Type du -a /dir/ | sort -n -r | head -n 20
-    du will estimate file space usage
-    sort will sort out the output of du command
-    head will only show top 20 largest file in /dir/
-    Also check the ncdu command to get largest files in directory
-
+<p>运行命令：<br>{% highlight html %}$ sudo du -a /dir/ | sort -n -r | head -n 20{% endhighlight %}<br> 或者<br>{% highlight html %}$ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20{% endhighlight %}</p> 
+{% highlight html %}
+Open the terminal application
+Login as root user using the sudo -i command
+Type du -a /dir/ | sort -n -r | head -n 20
+du will estimate file space usage
+sort will sort out the output of du command
+head will only show top 20 largest file in /dir/
+Also check the ncdu command to get largest files in directory
 Linux find a biggest files in /
-
 Run the command:
 $ sudo du -a /dir/ | sort -n -r | head -n 20
-
 OR
 $ sudo du -a / 2&gt;/dev/null | sort -n -r | head -n 20{% endhighlight %} 
 <p></p>
-                

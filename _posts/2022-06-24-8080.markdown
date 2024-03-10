@@ -5,9 +5,7 @@ date: "2022-06-24"
 categories: 
 ---
 <p>远程的MongoDB与本地的docker需要保持一致</p>
-
 <p>用着比较方便</p>
-
 <p>sudo docker exec -it 29b0 bash<br />
 root@29b06cdf3b26:/# mongo<br />
 MongoDB shell version v5.0.6<br />
@@ -29,15 +27,11 @@ The server generated these startup warnings when booting:<br />
 ---<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
 ---<br />
 &gt;</p>
-
 <p>&nbsp;</p>
-

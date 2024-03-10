@@ -6,19 +6,13 @@ categories:
 ---
 <div class="md md_doc_content" id="code_1685068162678_1">
 <p>服务器响应时间过长可能有多种原因，其中 Rails 服务器未启动是一种可能性。如果使用的是 Rails 开发框架，则需要确保在运行 Web 应用程序之前启动 Rails 服务器。可以通过在终端中使用以下命令来启动服务器：</p>
-
-{% highlight %}
-{% highlight %}rails server{% endhighlight %}
-
+{% highlight html %}rails server{% endhighlight %}
 <p>如果服务器已经运行，但是响应时间仍然很长，则可能是其他问题导致的。一些可能的原因包括：</p>
-
 <ul>
-	<li>数据库连接问题</li>
-	<li>网络问题</li>
-	<li>服务器负载过高</li>
-	<li>代码中的性能问题</li>
+<li>数据库连接问题</li>
+<li>网络问题</li>
+<li>服务器负载过高</li>
+<li>代码中的性能问题</li>
 </ul>
-
-<p>可以使用工具（如 {% highlight %}ping{% endhighlight %} 命令、数据库客户端、性能分析工具等）来诊断和解决这些问题。</p>
+<p>可以使用工具（如 {% highlight html %}ping{% endhighlight %} 命令、数据库客户端、性能分析工具等）来诊断和解决这些问题。</p>
 </div>
-

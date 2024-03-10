@@ -6,33 +6,23 @@ categories:
 ---
 <p>refer:&nbsp; <a href="http://siwei.me/blog/posts/backup_db-sh">http://siwei.me/blog/posts/backup_db-sh</a><br />
 使用.sh文件进行数据库的数据库每天进行备份，例如：（修改好参数就可以使用了。）</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#f5ab35">#!/bin/bash</span>
-
+{% highlight html %}<span style="color:#f5ab35">#!/bin/bash</span>
 <span style="color:#d4d0ab"># 设置备份目录和文件名</span>
 backup_dir=<span style="color:#abe338">&quot;/path/to/backup/directory&quot;</span>
 backup_file=<span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$backup_dir</span><span style="color:#abe338">/db_backup_</span><span style="color:#abe338">$(date +%Y%m%d)</span><span style="color:#abe338">.sql&quot;</span>
-
 <span style="color:#d4d0ab"># MySQL 连接参数</span>
 db_host=<span style="color:#abe338">&quot;localhost&quot;</span>
 db_port=<span style="color:#abe338">&quot;3306&quot;</span>
 db_name=<span style="color:#abe338">&quot;your_database&quot;</span>
 db_user=<span style="color:#abe338">&quot;your_username&quot;</span>
 db_password=<span style="color:#abe338">&quot;your_password&quot;</span>
-
 <span style="color:#d4d0ab"># 创建备份目录</span>
 mkdir -p <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$backup_dir</span><span style="color:#abe338">&quot;</span>
-
 <span style="color:#d4d0ab"># 执行备份命令</span>
 mysqldump -h <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$db_host</span><span style="color:#abe338">&quot;</span> -P <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$db_port</span><span style="color:#abe338">&quot;</span> -u <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$db_user</span><span style="color:#abe338">&quot;</span> -p<span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$db_password</span><span style="color:#abe338">&quot;</span> <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$db_name</span><span style="color:#abe338">&quot;</span> &gt; <span style="color:#abe338">&quot;</span><span style="color:#ffa07a">$backup_file</span><span style="color:#abe338">&quot;</span>
-
 <span style="color:#d4d0ab"># 输出备份完成信息</span>
 <span style="color:#f5ab35">echo</span> <span style="color:#abe338">&quot;数据库备份完成：</span><span style="color:#ffa07a">$backup_file</span><span style="color:#abe338">&quot;</span>
-
 <span style="color:#d4d0ab"># 等待 24 小时</span>
 sleep 24h
-
 <span style="color:#d4d0ab"># 执行脚本本身，实现每天的定时执行</span>
 /path/to/daily_backup.sh{% endhighlight %}
-

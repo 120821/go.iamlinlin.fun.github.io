@@ -4,24 +4,23 @@ title: "vuejs--如何阅读文档"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>官方文档与实际项目文档会有差别,实际项目中使用了 {% highlight %}vue-loader{% endhighlight %}, 会自动加载所有的内容，按照webpacke + vue的约定.</p> 
+<p>官方文档与实际项目文档会有差别,实际项目中使用了 {% highlight html %}vue-loader{% endhighlight %}, 会自动加载所有的内容，按照webpacke + vue的约定.</p> 
 <blockquote> 
- <p>官方文档是js文件</p> 
- {% highlight %}var Child = {
-  template: '
+<p>官方文档是js文件</p> 
+{% highlight html %}var Child = {
+template: '
 A custom component!
 '
 }
 new Vue({
-  // ...
-  components: {
-    //  将只在父模板可用
-    'my-component': Child
-  }
+// ...
+components: {
+//  将只在父模板可用
+'my-component': Child
+}
 }){% endhighlight %} 
- <p>实际项目是</p> 
- {% highlight %}&lt;template&gt;
+<p>实际项目是</p> 
+{% highlight html %}&lt;template&gt;
 ....
 &lt;/template&gt;
 &lt;script&gt;
@@ -30,4 +29,3 @@ new Vue({
 &lt;style&gt;
 &lt;/style&gt;{% endhighlight %} 
 </blockquote>
-                

@@ -5,7 +5,4 @@ date: "2023-11-25"
 categories: 
 ---
 <p>linux直接使用：</p>
-
-{% highlight %}
-{% highlight %}echo $JAVA_HOME{% endhighlight %}
-
+{% highlight html %}echo $JAVA_HOME{% endhighlight %}

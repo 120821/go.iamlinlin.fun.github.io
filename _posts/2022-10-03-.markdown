@@ -5,30 +5,16 @@ date: "2022-10-03"
 categories: 
 ---
 <p><strong>1.键盘指法</strong></p>
-
 <p>学习快捷键的使用： （1）复制粘贴 Ctrl c/v等<a href="http://linlin.fun/blogs/403">电脑快捷键</a>（2）<a href="http://linlin.fun/blogs/123487609">vim快捷键</a>（可以后续学）</p>
-
 <p><strong>2.创建<a href="https://www.csdn.net/">csdn账号</a></strong> <a href="https://www.runoob.com/git/git-tutorial.html">git账号</a></p>
-
 <p>csdn便于记录笔记，git用于保存代码</p>
-
 <p><strong>3.学习前端的<a href="https://www.runoob.com/html/html-tutorial.html">html</a>&nbsp;&nbsp; <a href="https://www.runoob.com/css/css-tutorial.html">css</a>&nbsp;&nbsp; <a href="https://www.runoob.com/js/js-tutorial.html">js</a>&nbsp;&nbsp;&nbsp; <a href="https://www.runoob.com/vue3/vue3-tutorial.html">vuejs</a> &nbsp; </strong><a href="https://www.runoob.com/bootstrap4/bootstrap4-tutorial.html">Bootstrap</a> <a href="https://www.runoob.com/nodejs/nodejs-tutorial.html">nodejs</a> &nbsp; <a href="https://www.runoob.com/font-awesome/fontawesome-tutorial.html">font awsome</a></p>
-
 <p>这个系列的视频讲的很不错，哔哩哔哩千锋教育的html css JavaScript Ajax http jQuery nodejs vue react 小程序 webpack 合集：<a href="https://www.bilibili.com/video/BV17z4y1D7Yj?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV17z4y1D7Yj?spm_id_from=333.337.search-card.all.click</a></p>
-
 <p><strong>4.学习后端的<a href="https://www.runoob.com/go/go-tutorial.html">go</a> <a href="https://github.com/gin-gonic/gin#contents">gins</a> gorm <a href="https://www.runoob.com/sql/sql-tutorial.html">sql</a> <a href="https://www.runoob.com/linux/linux-tutorial.html">linux</a> <a href="https://www.runoob.com/jquery/jquery-tutorial.html">jquery</a> <a href="https://www.runoob.com/ajax/ajax-tutorial.html">ajax</a></strong></p>
-
 <p><strong>4.1 go官网：<a href="https://go.dev/">https://go.dev/</a> 下载：<a href="https://go.dev/dl/">https://go.dev/dl/</a>&nbsp; 快速学习：<a href="https://go.dev/learn/">https://go.dev/learn/</a></strong></p>
-
 <p><strong>4.2 sql</strong>: <a href="https://www.runoob.com/mysql/mysql-tutorial.html">mysql</a> <a href="https://www.runoob.com/postgresql/postgresql-tutorial.html">postgres</a>&nbsp; <a href="https://www.runoob.com/mongodb/mongodb-tutorial.html">MongoDB</a></p>
-
 <p>4.3 MySQL：官网：<a href="https://www.mysql.com/">https://www.mysql.com/</a>&nbsp; 下载：<a href="https://www.mysql.com/downloads/">https://www.mysql.com/downloads/</a>&nbsp;</p>
-
 <p>4.4 postgres： 官网：&nbsp;<a href="https://www.postgresql.org/">https://www.postgresql.org/</a>&nbsp; 下载：&nbsp; <a href="https://www.postgresql.org/download/">https://www.postgresql.org/download/</a> 文档：<a href="https://www.postgresql.org/docs/current/">https://www.postgresql.org/docs/current/</a></p>
-
 <p>4.5 了解<a href="https://www.runoob.com/http/http-tutorial.html">http</a>的请求&nbsp;</p>
-
 <p><strong>5.学习<a href="https://www.runoob.com/java/java-tutorial.html">java</a> <a href="https://www.runoob.com/ruby/ruby-tutorial.html">ruby</a> rails&nbsp; （solidity ）</strong></p>
-
 <p><strong>6.学习sinatra </strong></p>
-

@@ -5,21 +5,17 @@ date: "2023-09-18"
 categories: 
 ---
 <p>在render中这样写：</p>
-
-{% highlight %}
-{% highlight %}render() {
-  const { data } = this.state;
-
-  return (
-    &lt;div&gt;
-      {data.map((item, index) =&gt; (
-        &lt;div key={index}&gt;
-          &lt;svg ref={this.state.svgRef} width={800} height={600}&gt;
-            {this.drawMap(item)} // 确认这里传递了正确的参数（不然会显示undefind...）
-          &lt;/svg&gt;
-        &lt;/div&gt;
-      ))}
-    &lt;/div&gt;
-  );
+{% highlight html %}render() {
+const { data } = this.state;
+return (
+&lt;div&gt;
+{data.map((item, index) =&gt; (
+&lt;div key={index}&gt;
+&lt;svg ref={this.state.svgRef} width={800} height={600}&gt;
+{this.drawMap(item)} // 确认这里传递了正确的参数（不然会显示undefind...）
+&lt;/svg&gt;
+&lt;/div&gt;
+))}
+&lt;/div&gt;
+);
 }{% endhighlight %}
-

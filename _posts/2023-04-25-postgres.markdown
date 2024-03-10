@@ -5,34 +5,23 @@ date: "2023-04-25"
 categories: 
 ---
 <p>使用以下SQL语句查询Postgres数据库中的各个数据库和表占用的空间情况：</p>
-
 <p>查询各个数据库占用空间大小：</p>
-
-{% highlight %}
-{% highlight %}SELECT
-  datname AS database_name,
-  pg_size_pretty(pg_database_size(datname)) AS size
+{% highlight html %}SELECT
+datname AS database_name,
+pg_size_pretty(pg_database_size(datname)) AS size
 FROM pg_database;{% endhighlight %}
-
 <p>查询指定数据库中各个表占用空间大小：</p>
-
-{% highlight %}
-{% highlight %}SELECT
-  tablename AS table_name,
-  pg_size_pretty(pg_total_relation_size(tablename)) AS size
+{% highlight html %}SELECT
+tablename AS table_name,
+pg_size_pretty(pg_total_relation_size(tablename)) AS size
 FROM pg_tables
 WHERE schemaname=&#39;public&#39;
 ORDER BY size DESC;{% endhighlight %}
-
 <p>查询所有数据库中各个表占用空间大小：</p>
-
-{% highlight %}
-{% highlight %}SELECT
-  schemaname AS schema_name,
-  tablename AS table_name,
-  pg_size_pretty(pg_total_relation_size(schemaname || &#39;.&#39; || tablename)) AS size
+{% highlight html %}SELECT
+schemaname AS schema_name,
+tablename AS table_name,
+pg_size_pretty(pg_total_relation_size(schemaname || &#39;.&#39; || tablename)) AS size
 FROM pg_tables
 ORDER BY size DESC;{% endhighlight %}
-
 <p>注意，上述语句中的pg_total_relation_size函数为计算表占用的空间大小，由于不同的操作系统和文件系统，实际空间大小可能与查询结果有所不同。</p>
-

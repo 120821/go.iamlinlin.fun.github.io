@@ -5,11 +5,8 @@ date: "2022-10-13"
 categories: 
 ---
 <p><a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard">w3school</a></p>
-
 <p>使用js实现复制功能：</p>
-
-{% highlight %}
-{% highlight %}&lt;p&gt;Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.&lt;/p&gt;
+{% highlight html %}&lt;p&gt;Click on the button to copy the text from the text field. Try to paste the text (e.g. ctrl+v) afterwards in a different window, to see the effect.&lt;/p&gt;
 &lt;input type=&quot;text&quot; value=&quot;Hello World&quot; id=&quot;myInput&quot;&gt;
 &lt;button onclick=&quot;myFunction()&quot;&gt;Copy text&lt;/button&gt;
 &lt;script&gt;
@@ -21,13 +18,8 @@ function myFunction() {
 &nbsp; copyText.setSelectionRange(0, 99999); // For mobile devices
 &nbsp; // Copy the text inside the text field
 &nbsp; navigator.clipboard.writeText(copyText.value);
-
 &nbsp; // Alert the copied text
-
 &nbsp; alert(&quot;Copied the text: &quot; + copyText.value);
-
 }
 &lt;/script&gt;{% endhighlight %}
-
 <p><img height="112" src="/uploads/ckeditor/pictures/582/image-20221013085701-1.png" width="527" /><img height="112" src="/uploads/ckeditor/pictures/583/image-20221013085712-2.png" width="527" /></p>
-

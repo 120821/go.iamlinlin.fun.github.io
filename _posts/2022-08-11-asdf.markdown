@@ -5,12 +5,7 @@ date: "2022-08-11"
 categories: 
 ---
 <p>参考：<a href="https://asdf-vm.com/">https://asdf-vm.com/</a></p>
-
 <p><a href="https://github.com/asdf-vm/asdf">https://github.com/asdf-vm/asdf</a></p>
-
 <p><a href="https://github.com/asdf-vm/asdf-plugins">https://github.com/asdf-vm/asdf-plugins</a></p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

@@ -5,20 +5,11 @@ date: "2022-07-22"
 categories: 
 ---
 <p>官网： https://infura.io/</p>
-
 <p>点击sign up,然后进行邮箱的注册，验证即可</p>
-
 <p><img alt="" class="css-9pa8cd" draggable="false" src="https://710389488-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FM20h0kdAagX1U6103FUp%2Fuploads%2FQLkvNfOJgwnkSYO58jhz%2Finfura_signup.png?alt=media&amp;token=6d53d9c2-8cff-4a7e-9375-f6f88eb86bf5" /></p>
-
 <p>创建项目，一般选择的是metamask项目，也就是第一个</p>
-
 <p><img alt="" class="css-9pa8cd" draggable="false" src="https://710389488-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FM20h0kdAagX1U6103FUp%2Fuploads%2FlX0tQD8IvbsiVISzNyYS%2FCreate_new_key.png?alt=media&amp;token=7a74ab13-68f7-4401-85f4-5dce5260525c" /></p>
-
 <p>然后就可以创建项目，生成自己的apikey,</p>
-
 <p><img height="391" src="/uploads/ckeditor/pictures/125/image-20220722175002-1.png" width="1853" /></p>
-
 <p>在编译的时候，id就是apikey</p>
-
 <p><img height="524" src="/uploads/ckeditor/pictures/126/image-20220722175104-2.png" width="1190" /></p>
-

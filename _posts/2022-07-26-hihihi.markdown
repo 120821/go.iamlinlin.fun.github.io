@@ -10,4 +10,3 @@ categories:
 4. 在本地搭建contract的开发环境（ solcjs --- npm安装， ganache, truffle, ） 认领测试网络的虚拟币。（例如rinkeby）<br />
 5. 在本地(ganache网络)进行 contract的开发，部署，和调用。<br />
 6. 部署代码到 开放的网络（rinkeby, fuji , eth主网等）</p>
-

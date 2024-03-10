@@ -10,7 +10,6 @@ download_url https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-5.0.6.tgz<br 
 &nbsp; % Total&nbsp;&nbsp;&nbsp; % Received % Xferd&nbsp; Average Speed&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp; Current<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dload&nbsp; Upload&nbsp;&nbsp; Total&nbsp;&nbsp; Spent&nbsp;&nbsp;&nbsp; Left&nbsp; Speed<br />
 100&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 210&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 --:--:--&nbsp; 0:00:01 --:--:--&nbsp;&nbsp; 210</p>
-
 <p>gzip: stdin: not in gzip format<br />
 tar: Child returned status 1<br />
 tar: Error is not recoverable: exiting now<br />
@@ -19,7 +18,6 @@ download_url https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-5.0.6.tgz<br 
 &nbsp; % Total&nbsp;&nbsp;&nbsp; % Received % Xferd&nbsp; Average Speed&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp; Current<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dload&nbsp; Upload&nbsp;&nbsp; Total&nbsp;&nbsp; Spent&nbsp;&nbsp;&nbsp; Left&nbsp; Speed<br />
 100&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 199&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 --:--:--&nbsp; 0:00:01 --:--:--&nbsp;&nbsp; 199</p>
-
 <p>gzip: stdin: not in gzip format<br />
 tar: Child returned status 1<br />
 tar: Error is not recoverable: exiting now<br />
@@ -28,7 +26,6 @@ download_url https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-5.0.6.tgz<br 
 &nbsp; % Total&nbsp;&nbsp;&nbsp; % Received % Xferd&nbsp; Average Speed&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp; Current<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dload&nbsp; Upload&nbsp;&nbsp; Total&nbsp;&nbsp; Spent&nbsp;&nbsp;&nbsp; Left&nbsp; Speed<br />
 100&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 358&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 --:--:-- --:--:-- --:--:--&nbsp;&nbsp; 358</p>
-
 <p>gzip: stdin: not in gzip format<br />
 tar: Child returned status 1<br />
 tar: Error is not recoverable: exiting now<br />
@@ -61,9 +58,7 @@ From https://github.com/asdf-vm/asdf<br />
 You are not currently on a branch.<br />
 Please specify which branch you want to merge with.<br />
 See git-pull(1) for details.</p>
-
 <p>&nbsp;&nbsp;&nbsp; git pull &lt;remote&gt; &lt;branch&gt;</p>
-
 <p>linlin@linlin-i5:~/.asdf$ ls<br />
 asdf.elv&nbsp;&nbsp; asdf.sh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; completions&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; defaults&nbsp; downloads&nbsp; installs&nbsp; LICENSE&nbsp; README.md&nbsp;&nbsp; scripts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shims&nbsp; tmp<br />
 asdf.fish&nbsp; ballad-of-asdf.md&nbsp; CHANGELOG.md&nbsp; CONTRIBUTING.md&nbsp; docs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; help.txt&nbsp;&nbsp; lib&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plugins&nbsp; repository&nbsp; SECURITY.md&nbsp; test&nbsp;&nbsp; version.txt<br />
@@ -79,7 +74,6 @@ download_url https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-5.0.6.tgz<br 
 &nbsp; % Total&nbsp;&nbsp;&nbsp; % Received % Xferd&nbsp; Average Speed&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp; Current<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dload&nbsp; Upload&nbsp;&nbsp; Total&nbsp;&nbsp; Spent&nbsp;&nbsp;&nbsp; Left&nbsp; Speed<br />
 100&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 243&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 191&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 --:--:--&nbsp; 0:00:01 --:--:--&nbsp;&nbsp; 191</p>
-
 <p>gzip: stdin: not in gzip format<br />
 tar: Child returned status 1<br />
 tar: Error is not recoverable: exiting now<br />
@@ -92,6 +86,4 @@ linlin@linlin-i5:~/.asdf/plugins$ sudo docker pull mongo:5.0.6<br />
 Digest: sha256:fed6248ae0bb0d54c0448eb786c87120737eedc522172ee1536ad47789782348<br />
 Status: Image is up to date for mongo:5.0.6<br />
 docker.io/library/mongo:5.0.6</p>
-
 <p>&nbsp;</p>
-

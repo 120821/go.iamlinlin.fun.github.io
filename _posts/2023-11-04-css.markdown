@@ -5,10 +5,8 @@ date: "2023-11-04"
 categories: 
 ---
 <div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">
-{% highlight %}
-{% highlight %}<span style="color:#dcc6e0">p</span> {
-  <span style="color:#ffd700">line-height</span>: <span style="color:#f5ab35">1.5</span>; <span style="color:#d4d0ab">/* 默认值为 normal */</span>
+{% highlight html %}<span style="color:#dcc6e0">p</span> {
+<span style="color:#ffd700">line-height</span>: <span style="color:#f5ab35">1.5</span>; <span style="color:#d4d0ab">/* 默认值为 normal */</span>
 }
 {% endhighlight %}
 </div>
-

@@ -4,27 +4,18 @@ title: "js转义符< >"
 date: "2023-06-09"
 categories: 
 ---
-<p>如果需要在JS中使用含有尖括号{% highlight %}&lt;{% endhighlight %}的字符串，需要对其进行转义，那么在{% highlight %}erb{% endhighlight %}模板中使用{% highlight %}&lt;%%&gt;{% endhighlight %}标签来表示字符{% highlight %}&lt;{% endhighlight %}和{% highlight %}&gt;{% endhighlight %}。</p>
-
-<p>比如下面的示例代码中，我们需要将一个字符串{% highlight %}&quot;2 &lt; 3&quot;{% endhighlight %}传递给Highcharts的{% highlight %}title{% endhighlight %}配置项，可以这样修改：</p>
-
-{% highlight %}
-{% highlight %}title: {
-  text: &#39;2 &lt;%#这里使用转义字符%&gt;&amp;lt; 3&#39;, 
+<p>如果需要在JS中使用含有尖括号{% highlight html %}&lt;{% endhighlight %}的字符串，需要对其进行转义，那么在{% highlight html %}erb{% endhighlight %}模板中使用{% highlight html %}&lt;%%&gt;{% endhighlight %}标签来表示字符{% highlight html %}&lt;{% endhighlight %}和{% highlight html %}&gt;{% endhighlight %}。</p>
+<p>比如下面的示例代码中，我们需要将一个字符串{% highlight html %}&quot;2 &lt; 3&quot;{% endhighlight %}传递给Highcharts的{% highlight html %}title{% endhighlight %}配置项，可以这样修改：</p>
+{% highlight html %}title: {
+text: &#39;2 &lt;%#这里使用转义字符%&gt;&amp;lt; 3&#39;, 
 },{% endhighlight %}
-
-<p>其中{% highlight %}&amp;lt;{% endhighlight %}表示字符{% highlight %}&lt;{% endhighlight %}的HTML实体名，也可以使用{% highlight %}&amp;#60;{% endhighlight %}代替。这样，Highcharts会正确显示{% highlight %}2 &lt; 3{% endhighlight %}作为标题的文本。</p>
-
+<p>其中{% highlight html %}&amp;lt;{% endhighlight %}表示字符{% highlight html %}&lt;{% endhighlight %}的HTML实体名，也可以使用{% highlight html %}&amp;#60;{% endhighlight %}代替。这样，Highcharts会正确显示{% highlight html %}2 &lt; 3{% endhighlight %}作为标题的文本。</p>
 <p>在实际使用中，如果需要频繁使用含有尖括号的字符串，可以将其封装成一个方法或者变量来方便地进行调用，而不用每次都手动转义。例如：</p>
-
-{% highlight %}
-{% highlight %}# 将字符串&quot;&lt;demo&gt;&quot;转义为&quot;&amp;lt;demo&amp;gt;&quot;
+{% highlight html %}# 将字符串&quot;&lt;demo&gt;&quot;转义为&quot;&amp;lt;demo&amp;gt;&quot;
 def escape_html(str)
-  str.gsub(/&lt;/, &quot;&amp;lt;&quot;).gsub(/&gt;/, &quot;&amp;gt;&quot;)
+str.gsub(/&lt;/, &quot;&amp;lt;&quot;).gsub(/&gt;/, &quot;&amp;gt;&quot;)
 end
-
 # 使用转义后的字符串
 title: {
-  text: &quot;Title with &lt;%= escape_html(&quot;&lt;demo&gt;&quot;) %&gt;&quot;,
+text: &quot;Title with &lt;%= escape_html(&quot;&lt;demo&gt;&quot;) %&gt;&quot;,
 },{% endhighlight %}
-

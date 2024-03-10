@@ -34,28 +34,21 @@ INFO [07-26|15:11:33.082] Persisted trie from memory database&nbsp;&nbsp;&nbsp;&
 INFO [07-26|15:11:33.082] Successfully wrote genesis state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database=lightchaindata hash=e3ea4f..18ce30<br />
 linlin@linlin-i5:/workspace/blockchain$ geth --datadir &quot;peer1&quot; --networkid 1111 --port 30401 console 2&gt;peer1.log<br />
 Welcome to the Geth JavaScript console!</p>
-
 <p>instance: Geth/v1.10.20-stable-8f2416a8/linux-amd64/go1.18.1<br />
 at block: 0 (Thu Jan 01 1970 08:00:00 GMT+0800 (CST))<br />
 &nbsp;datadir: /workspace/blockchain/peer1<br />
 &nbsp;modules: admin:1.0 debug:1.0 eth:1.0 ethash:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0</p>
-
 <p>To exit, press ctrl-d or type exit<br />
 &gt;</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain$ geth --datadir &quot;peer2&quot; --networkid 1111 --port 30402 console 2&gt;peer2.log<br />
 Welcome to the Geth JavaScript console!</p>
-
 <p>instance: Geth/v1.10.20-stable-8f2416a8/linux-amd64/go1.18.1<br />
 at block: 0 (Thu Jan 01 1970 08:00:00 GMT+0800 (CST))<br />
 &nbsp;datadir: /workspace/blockchain/peer2<br />
 &nbsp;modules: admin:1.0 debug:1.0 eth:1.0 ethash:1.0 miner:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 web3:1.0</p>
-
 <p>To exit, press ctrl-d or type exit<br />
 &gt;</p>
-
 <p>&nbsp;</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain$ tail -f peer1.log<br />
 INFO [07-26|15:11:42.029] Starting peer-to-peer node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instance=Geth/v1.10.20-stable-8f2416a8/linux-amd64/go1.18.1<br />
 INFO [07-26|15:11:42.034] New local node record&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; seq=1,658,819,502,033 id=44a999c7d335dfc9 ip=127.0.0.1 udp=30401 tcp=30401<br />
@@ -74,6 +67,4 @@ INFO [07-26|15:12:32.350] Looking for peers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 INFO [07-26|15:12:42.393] Looking for peers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; peercount=1 tried=88 static=0<br />
 INFO [07-26|15:13:12.683] Looking for peers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; peercount=1 tried=105 static=0<br />
 INFO [07-26|15:13:22.797] Looking for peers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; peercount=1 tried=77&nbsp; static=0</p>
-
 <p>&nbsp;</p>
-

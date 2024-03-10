@@ -5,67 +5,35 @@ date: "2023-04-25"
 categories: 
 ---
 <p>步骤如下：</p>
-
 <p>1. 首先在 Windows 10 上下载 Ubuntu 20.04 的 ISO 文件。</p>
-
 <p>2. 打开 Windows 10 的&ldquo;磁盘管理器&rdquo;，创建一个新的分区，大小为至少 20GB，用作 Ubuntu 的安装盘。</p>
-
 <p>3. 下载并安装虚拟机软件（如 VirtualBox）。</p>
-
 <p>4. 打开虚拟机软件，点击&ldquo;新建&rdquo;按钮，按照提示完成虚拟机的配置，包括分配给 Ubuntu 的内存大小、硬盘文件、网络设置等。</p>
-
 <p>5. 在虚拟机中运行 Ubuntu 的 ISO 文件，按照安装提示进行安装。在安装过程中，要选择刚刚创建的分区作为 Ubuntu 的安装位置。</p>
-
 <p>6. 完成安装后，重启虚拟机，进入 Ubuntu 操作系统。</p>
-
 <p>注意事项：</p>
-
 <p>1. 在 Windows 10 上启用虚拟化技术（如 VT-x）。</p>
-
 <p>2. 需要禁用 Windows 10 中的&ldquo;快速启动&rdquo;功能。方法是打开&ldquo;电源选项&rdquo;，找到&ldquo;选择电源按钮的功能&rdquo;或&ldquo;选择关闭盖子的功能&rdquo;，点击&ldquo;更改当前不可用的设置&rdquo;，取消勾选&ldquo;启用快速启动&rdquo;。</p>
-
 <p>3. 在虚拟机中使用 Ubuntu 时，可能需要安装一些额外的软件和驱动程序，以获得更好的性能和使用体验。</p>
-
 <hr />
 <p>要在Windows 10（32位）上安装Ubuntu 20.04，您需要按照以下步骤操作：</p>
-
 <p>1. 首先，您需要下载Ubuntu 20.04 ISO文件。请访问Ubuntu官方网站（https://ubuntu.com/download/desktop）下载Ubuntu Desktop 20.04 LTS。</p>
-
 <p>2. 接下来，您需要一个虚拟机软件，例如VirtualBox。您可以从VirtualBox官方网站（https://www.virtualbox.org/wiki/Downloads）下载32位版本。</p>
-
 <p>3. 安装VirtualBox并启动它。</p>
-
 <p>4. 单击&ldquo;新建&rdquo;按钮以创建新虚拟机。</p>
-
 <p>5. 在&ldquo;名称和操作系统&rdquo;部分中，输入虚拟机名称，选择&ldquo;Linux&rdquo;作为操作系统，并选择&ldquo;Ubuntu（32位）&rdquo;作为版本。</p>
-
 <p>6. 在&ldquo;内存大小&rdquo;部分中，输入您希望分配给虚拟机的内存大小。建议为1 GB或更多。</p>
-
 <p>7. 在&ldquo;硬盘&rdquo;部分中，选择&ldquo;创建虚拟硬盘&rdquo;选项并单击&ldquo;创建&rdquo;按钮。</p>
-
 <p>8. 在&ldquo;虚拟硬盘文件类型&rdquo;部分中，选择&ldquo;VDI（VirtualBox磁盘映像）&rdquo;作为文件类型。</p>
-
 <p>9. 在&ldquo;存储在物理硬盘上&rdquo;部分中，选择&ldquo;动态分配&rdquo;的选项。</p>
-
 <p>10. 在&ldquo;文件位置和大小&rdquo;部分中，选择您要为虚拟硬盘分配的大小。建议为20 GB或更多。</p>
-
 <p>11. 单击&ldquo;创建&rdquo;按钮以创建虚拟机。</p>
-
 <p>12. 在VirtualBox中，选择您刚创建的虚拟机并单击&ldquo;设置&rdquo;按钮。</p>
-
 <p>13. 单击&ldquo;存储&rdquo;选项卡，并单击&ldquo;空&rdquo;的CD符号，然后单击&ldquo;选择虚拟光盘文件&rdquo;。</p>
-
 <p>14. 在&ldquo;文件系统&rdquo;部分中，选择下载的Ubuntu 20.04 ISO文件。</p>
-
 <p>15. 单击&ldquo;开始&rdquo;按钮以启动虚拟机。</p>
-
 <p>16. 在启动界面上，选择&ldquo;安装Ubuntu&rdquo;并按照屏幕上的指示操作。</p>
-
 <p>17. 在安装过程中，您需要选择一些选项，例如安装类型，包括安装Ubuntu和Windows双引导或完全覆盖现有Windows系统。</p>
-
 <p>18. 完成安装后，您需要重新启动虚拟机并输入安装过程中设置的用户名和密码。</p>
-
 <p>19. 您现在已成功安装了Ubuntu 20.04在Windows 10（32位）上的虚拟机中。</p>
-
 <p>注意：安装Ubuntu 20.04可能需要一些时间，具体时间取决于您的计算机配置和安装类型。建议您按照与安装程序提示相同的安装选项来完成安装。</p>
-

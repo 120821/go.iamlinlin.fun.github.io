@@ -5,16 +5,8 @@ date: "2023-08-11"
 categories: 
 ---
 <p>如果一个数据看起来很复杂，对于这个数据的数据类型不确定，可以进行打印，显示数据的类型，使用这样的语句：</p>
-
-{% highlight %}
-{% highlight %}fmt.Printf(<span style="color:#abe338">&quot;results的数据类型：%T\n&quot;</span>, results){% endhighlight %}
-
+{% highlight html %}fmt.Printf(<span style="color:#abe338">&quot;results的数据类型：%T\n&quot;</span>, results){% endhighlight %}
 <p>然后就会返回：</p>
-
-{% highlight %}
-{% highlight %}======== results &amp;{95 [] {0 0 0 [] {0 []&nbsp;&nbsp;&nbsp;&nbsp; 0 0 0 0 0 0 0 {0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}} []&nbsp;&nbsp; 0 0&nbsp;&nbsp; {0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}} 1 41 消防 2023-08-11 10:50:51.409784853 +0800 CST m=+21.988672816 {2023-08-11 10:50:51.409833939 +0800 CST m=+21.988721902 2023-08-11 10:50:51.409833939 +0800 CST m=+21.988721902}}
-
+{% highlight html %}======== results &amp;{95 [] {0 0 0 [] {0 []&nbsp;&nbsp;&nbsp;&nbsp; 0 0 0 0 0 0 0 {0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}} []&nbsp;&nbsp; 0 0&nbsp;&nbsp; {0001-01-01 00:00:00 +0000 UTC 0001-01-01 00:00:00 +0000 UTC}} 1 41 消防 2023-08-11 10:50:51.409784853 +0800 CST m=+21.988672816 {2023-08-11 10:50:51.409833939 +0800 CST m=+21.988721902 2023-08-11 10:50:51.409833939 +0800 CST m=+21.988721902}}
 results的数据类型：[]map[string]interface {}{% endhighlight %}
-
 <p>&nbsp;</p>
-

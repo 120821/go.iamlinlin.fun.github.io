@@ -5,16 +5,9 @@ date: "2022-06-15"
 categories: 
 ---
 <p>例如：<span><span><span class="inspect_panels--propertyValue--3JJTg inspect_panels--_propertyValue--MMDhq ellipsis--ellipsis--1RWY6 text--fontPos11--RSei3 text--_fontBase--YWDo0 inspect_panels--_propertyWeight--PqPst" data-tooltip-tip-align-left="true">Noto Sans 字体</span></span></span></p>
-
 <p><span><span><span class="inspect_panels--propertyValue--3JJTg inspect_panels--_propertyValue--MMDhq ellipsis--ellipsis--1RWY6 text--fontPos11--RSei3 text--_fontBase--YWDo0 inspect_panels--_propertyWeight--PqPst" data-tooltip-tip-align-left="true">谷歌搜索：就可以找到字体，</span></span></span></p>
-
 <p><img height="424" src="/uploads/ckeditor/pictures/23/image-20220615105549-2.png" width="1803" /><span><span><span class="inspect_panels--propertyValue--3JJTg inspect_panels--_propertyValue--MMDhq ellipsis--ellipsis--1RWY6 text--fontPos11--RSei3 text--_fontBase--YWDo0 inspect_panels--_propertyWeight--PqPst" data-tooltip-tip-align-left="true">进入下载即可 ，</span></span></span>https://fonts.google.com/noto/specimen/Noto+Sans</p>
-
 <p>然后在本地解压缩，就可以看到很多版本的字体，</p>
-
 <p><img height="296" src="/uploads/ckeditor/pictures/24/image-20220615105734-3.png" width="1716" />选择一种需要的字体点击，就可以安装 install，也可以选择卸载</p>
-
 <p><img height="355" src="/uploads/ckeditor/pictures/25/image-20220615105803-4.png" width="790" /></p>
-
 <p>&nbsp;</p>
-

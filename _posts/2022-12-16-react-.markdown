@@ -5,49 +5,31 @@ date: "2022-12-16"
 categories: 
 ---
 <p>参考： <a href="https://zh-hans.reactjs.org/tutorial/tutorial.html">https://zh-hans.reactjs.org/tutorial/tutorial.html</a></p>
-
 <p>本地搭建</p>
-
 <p>1.确保你安装了较新版本的 <a href="https://nodejs.org/en/" rel="nofollow noopener noreferrer" target="_blank">Node.js</a></p>
-
 <p>2.创建app</p>
-
-{% highlight %}
-{% highlight %}npx create-react-app my-app{% endhighlight %}
-
-<p>{% highlight %}3.{% endhighlight %}删除掉新项目中 {% highlight %}src/{% endhighlight %} 文件夹下的所有文件。</p>
-
-<p><strong>不要删除整个 {% highlight %}src{% endhighlight %} 文件夹，删除里面的源文件</strong>。我们会在接下来的步骤中使用示例代码替换默认源文件。</p>
-
+{% highlight html %}npx create-react-app my-app{% endhighlight %}
+<p>{% highlight html %}3.{% endhighlight %}删除掉新项目中 {% highlight html %}src/{% endhighlight %} 文件夹下的所有文件。</p>
+<p><strong>不要删除整个 {% highlight html %}src{% endhighlight %} 文件夹，删除里面的源文件</strong>。我们会在接下来的步骤中使用示例代码替换默认源文件。</p>
 <div class="gatsby-highlight">
-{% highlight %}
-{% highlight %}cd my-app
+{% highlight html %}cd my-app
 cd src
-
 # 如果你使用 Mac 或 Linux:
 rm -f *
-
 # 如果你使用 Windows:
 del *
-
 # 然后回到项目文件夹
 cd ..{% endhighlight %}
-
 <ol start="4">
-	<li>在 {% highlight %}src/{% endhighlight %} 文件夹中创建一个名为 {% highlight %}index.css{% endhighlight %} 的文件，并拷贝<a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100" rel="nofollow noopener noreferrer" target="_blank">这些 CSS 代码</a>。</li>
-	<li>在 {% highlight %}src/{% endhighlight %} 文件夹下创建一个名为 {% highlight %}index.js{% endhighlight %} 的文件，并拷贝<a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010" rel="nofollow noopener noreferrer" target="_blank">这些 JS 代码</a>。</li>
-	<li>拷贝以下三行代码到 {% highlight %}src/{% endhighlight %} 文件夹下的 {% highlight %}index.js{% endhighlight %} 文件的顶部：</li>
+<li>在 {% highlight html %}src/{% endhighlight %} 文件夹中创建一个名为 {% highlight html %}index.css{% endhighlight %} 的文件，并拷贝<a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100" rel="nofollow noopener noreferrer" target="_blank">这些 CSS 代码</a>。</li>
+<li>在 {% highlight html %}src/{% endhighlight %} 文件夹下创建一个名为 {% highlight html %}index.js{% endhighlight %} 的文件，并拷贝<a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010" rel="nofollow noopener noreferrer" target="_blank">这些 JS 代码</a>。</li>
+<li>拷贝以下三行代码到 {% highlight html %}src/{% endhighlight %} 文件夹下的 {% highlight html %}index.js{% endhighlight %} 文件的顶部：</li>
 </ol>
-
 <div class="gatsby-highlight">
-{% highlight %}
-{% highlight %}import React from &#39;react&#39;;
+{% highlight html %}import React from &#39;react&#39;;
 import ReactDOM from &#39;react-dom/client&#39;;
 import &#39;./index.css&#39;;{% endhighlight %}
-
-<p>现在，在项目文件夹下执行 {% highlight %}npm start{% endhighlight %} 命令，然后在浏览器访问 {% highlight %}http://localhost:3000{% endhighlight %}。这样你就可以在浏览器中看见一个空的井字棋的棋盘了。（这个已经做过了啊）</p>
+<p>现在，在项目文件夹下执行 {% highlight html %}npm start{% endhighlight %} 命令，然后在浏览器访问 {% highlight html %}http://localhost:3000{% endhighlight %}。这样你就可以在浏览器中看见一个空的井字棋的棋盘了。（这个已经做过了啊）</p>
 </div>
-
 <p>&nbsp;</p>
 </div>
-

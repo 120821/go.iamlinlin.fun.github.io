@@ -5,8 +5,5 @@ date: "2023-12-01"
 categories: 
 ---
 <p><a href="https://www.yisu.com/ask/5671.html">https://www.yisu.com/ask/5671.html</a></p>
-
 <p>在命令行使用命令：</p>
-
-<div>{% highlight %}ifconfig{% endhighlight %}</div>
-
+<div>{% highlight html %}ifconfig{% endhighlight %}</div>

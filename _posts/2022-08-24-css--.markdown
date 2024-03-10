@@ -5,39 +5,37 @@ date: "2022-08-24"
 categories: 
 ---
 <p><a href="http://js_book.siwei.me/web_front_end/css.html">http://js_book.siwei.me/web_front_end/css.html</a></p>
-
 <table>
-	<thead>
-		<tr>
-			<th>Selector</th>
-			<th>权重( weight)</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>!imporant</td>
-			<td>无限大</td>
-		</tr>
-		<tr>
-			<td>inline</td>
-			<td>1000</td>
-		</tr>
-		<tr>
-			<td>id</td>
-			<td>100</td>
-		</tr>
-		<tr>
-			<td>class</td>
-			<td>10</td>
-		</tr>
-		<tr>
-			<td>tag</td>
-			<td>1</td>
-		</tr>
-	</tbody>
+<thead>
+<tr>
+<th>Selector</th>
+<th>权重( weight)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!imporant</td>
+<td>无限大</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>id</td>
+<td>100</td>
+</tr>
+<tr>
+<td>class</td>
+<td>10</td>
+</tr>
+<tr>
+<td>tag</td>
+<td>1</td>
+</tr>
+</tbody>
 </table>
-
-{% highlight %}
+{% highlight html %}
 <code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
 <span class="hljs-selector-tag">p</span>             { <span class="hljs-attribute">color</span>: red}               <span class="hljs-comment">/* 权重 1 */</span>
 <span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">p</span>         { <span class="hljs-attribute">color</span>: blue}              <span class="hljs-comment">/* 权重 2 */</span>
@@ -46,15 +44,11 @@ categories:
 <span class="hljs-selector-id">#first_id</span>     { <span class="hljs-attribute">color</span>: chocolate}         <span class="hljs-comment">/* 权重1000 */</span>
 <span class="hljs-selector-tag">p</span>             { <span class="hljs-attribute">color</span>: silver <span class="hljs-meta">!important</span>} <span class="hljs-comment">/* 权重无限大 */</span>
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
-
 <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;parent&#39;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#39;first_id&#39;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;first_class&#39;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;red&#39;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&#39;color: orange&#39;</span>&gt;</span>我是个div<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&#39;first_id&#39;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;first_class&#39;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&#39;red&#39;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&#39;color: orange&#39;</span>&gt;</span>我是个div<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 {% endhighlight %}
-
 <p>下面结果来自 chrome developer tool: inspector, 可以看出, 排在第一位的是 !important属性, 后面的以selector的权重(weight)排序,从高到低.</p>
-
 <p><img alt="CSS选择器权重" src="http://image.happysoft.cc/image/13/css_selector_weight.jpg" /></p>
-

@@ -6,52 +6,34 @@ categories:
 ---
 <div >
 <p>参考：（官网）https://www.mongodb.com/docs/manual/reference/method/db.dropDatabase/</p>
-
 <p>https://www.tutorialkart.com/mongodb/mongodb-delete-database/</p>
-
 <p>进入MongoDB的环境后</p>
-
 <p>&gt; show dbs</p>
-
 <p>admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000GB</p>
-
 <p>local&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.000GB</p>
-
 <p>tutorialkart&nbsp; 0.000GB</p>
-
 <p>&gt; use tutorialkart</p>
-
 <p>switched to db tutorialkart</p>
-
 <p>&gt; db.dropDatabase()</p>
-
 <p>{ &quot;dropped&quot; : &quot;tutorialkart&quot;, &quot;ok&quot; : 1 }</p>
-
 <p>&gt; show dbs</p>
-
 <p>admin&nbsp; 0.000GB</p>
-
 <p>local&nbsp; 0.000GB</p>
-
 <p>或者</p>
-
 <p>use temp</p>
-
 <p>db.dropDatabase()</p>
-
 <div class="line number12 index11 alt1">
 <table class="leafygreen-ui-1v41da1" height="58" width="10">
-	<tbody>
-		<tr>
-			<td class="leafygreen-ui-7razhx">
-			<p>&nbsp;</p>
-			</td>
-		</tr>
-		<tr>
-			<td class="leafygreen-ui-7razhx">&nbsp;</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<td class="leafygreen-ui-7razhx">
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td class="leafygreen-ui-7razhx">&nbsp;</td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
-

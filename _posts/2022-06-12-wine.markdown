@@ -2,61 +2,34 @@
 layout: post
 title: "使用wine安装微信并使用"
 date: "2022-06-12"
-categories: 
+categories:
 ---
 <p>参考：https://wiki.winehq.org/Ubuntu</p>
-
 <p>如果您之前从另一个存储库安装了 Wine 包，请在尝试安装 WineHQ 包之前删除它和依赖它的任何包（例如，wine-mono、wine-gecko、winetricks），因为它们可能会导致依赖冲突。</p>
-
 <p>如果您的系统是 64 位，请启用 32 位架构（如果您还没有）：</p>
-
-{% highlight %}
+{% highlight html %}
 sudo dpkg --add-architecture i386 
- 下载并添加存储库密钥： 
-{% endhighlight %}
-
-{% highlight %}
-{% highlight %}
+下载并添加存储库密钥： 
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/winehq.key" rel="nofollow">https://dl.winehq.org/wine-builds/winehq.key </a>
- sudo mv winehq.key /usr/share/keyrings/winehq-archive.key {% endhighlight %}
-{% endhighlight %}
-
-{% highlight %}
-{% highlight %}wget -nc https://dl.winehq.org/wine-builds/winehq.key
-
+sudo mv winehq.key /usr/share/keyrings/winehq-archive.key {% endhighlight %}
+{% highlight html %}wget -nc https://dl.winehq.org/wine-builds/winehq.key
 --2022-06-12 17:16:02--&nbsp; https://dl.winehq.org/wine-builds/winehq.key
-
 Resolving dl.winehq.org (dl.winehq.org)... 151.101.78.217
-
 Connecting to dl.winehq.org (dl.winehq.org)|151.101.78.217|:443... connected.
-
 HTTP request sent, awaiting response... 200 OK
-
 Length: 3220 (3.1K) [application/pgp-keys]
-
 Saving to: &lsquo;winehq.key&rsquo;{% endhighlight %}
-
-{% highlight %}
-{% highlight %}winehq.key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%[===================&gt;]&nbsp;&nbsp; 3.14K&nbsp; --.-KB/s&nbsp;&nbsp;&nbsp; in 0s&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-
+{% highlight html %}winehq.key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100%[===================&gt;]&nbsp;&nbsp; 3.14K&nbsp; --.-KB/s&nbsp;&nbsp;&nbsp; in 0s&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
 2022-06-12 17:16:03 (32.2 MB/s) - &lsquo;winehq.key&rsquo; saved [3220/3220]
-
 sudo mv /home/linlin/Downloads/winehq.key /usr/share/keyrings/winehq-archive.key{% endhighlight %}
-
 <p>查看版本</p>
-
 <p>cat /etc/issue</p>
-
 <p>&nbsp;cat /etc/issue<br />
 Ubuntu 21.10 \n \l</p>
-
 <p>sudo mv winehq-impish.sources /etc/apt/sources.list.d/</p>
-
 <p>sudo apt update<br />
 0% [Working]</p>
-
 <p>0% [Working]</p>
-
 <p>Hit:1 http://dl.winehq.org/wine-builds/ubuntu impish InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 Hit:2 https://download.docker.com/linux/ubuntu impish InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 Hit:3 http://mirrors.aliyun.com/ubuntu impish InRelease&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
@@ -110,97 +83,89 @@ Building dependency tree... Done<br />
 Reading state information... Done<br />
 winehq-stable is already the newest version (7.0.0.0~impish-1).<br />
 0 upgraded, 0 newly installed, 0 to remove and 55 not upgraded.<img src="/uploads/ckeditor/pictures/10/image-20220612193924-2.png" style="height:324px; width:567px" /></p>
-
 <p><img src="/uploads/ckeditor/pictures/11/image-20220612193935-3.png" style="height:201px; width:385px" />添加存储库：</p>
-
 <table class="wikitable" style="width:100%">
-	<tbody>
-		<tr>
-			<th>对于这个版本：</th>
-			<th>使用这个命令：</th>
-		</tr>
-		<tr>
-			<td>Ubuntu 22.04</td>
-			<td>
-			{% highlight %}
+<tbody>
+<tr>
+<th>对于这个版本：</th>
+<th>使用这个命令：</th>
+</tr>
+<tr>
+<td>Ubuntu 22.04</td>
+<td>
+{% highlight html %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources </a>
- sudo mv winehq-jammy.sources /etc/apt/sources.list.d/ 
- {% endhighlight %}
-			</td>
-		</tr>
-		<tr>
-			<td>Ubuntu 21.10</td>
-			<td>
-			{% highlight %}
+sudo mv winehq-jammy.sources /etc/apt/sources.list.d/ 
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Ubuntu 21.10</td>
+<td>
+{% highlight html %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/impish/winehq-impish.sources </a>
- sudo mv winehq-impish.sources /etc/apt/sources.list.d/ 
- {% endhighlight %}
-			</td>
-		</tr>
-		<tr>
-			<td>Ubuntu 20.04
-			<p>Linux Mint 20.x</p>
-			</td>
-			<td>
-			{% highlight %}
+sudo mv winehq-impish.sources /etc/apt/sources.list.d/ 
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Ubuntu 20.04
+<p>Linux Mint 20.x</p>
+</td>
+<td>
+{% highlight html %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources </a>
- sudo mv winehq-focal.sources /etc/apt/sources.list.d/ 
- {% endhighlight %}
-			</td>
-		</tr>
-		<tr>
-			<td>Ubuntu 18.04
-			<p>Linux Mint 19.x</p>
-			</td>
-			<td>
-			{% highlight %}
+sudo mv winehq-focal.sources /etc/apt/sources.list.d/ 
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<td>Ubuntu 18.04
+<p>Linux Mint 19.x</p>
+</td>
+<td>
+{% highlight html %}
 wget -nc <a class="external free" href="https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources" rel="nofollow">https://dl.winehq.org/wine-builds/ubuntu/dists/bionic/winehq-bionic.sources </a>
- sudo mv winehq-bionic.sources /etc/apt/sources.list.d/ 
- {% endhighlight %}
-			</td>
-		</tr>
-	</tbody>
+sudo mv winehq-bionic.sources /etc/apt/sources.list.d/ 
+{% endhighlight %}
+</td>
+</tr>
+</tbody>
 </table>
-
 <p>更新包：</p>
-
-{% highlight %}
+{% highlight html %}
 sudo apt 更新
- {% endhighlight %}
-
+{% endhighlight %}
 <p>然后安装 <strong>以下软件包之一 </strong>：</p>
-
 <table class="wikitable" style="height:183px; width:713px">
-	<tbody>
-		<tr>
-			<th>稳定的分支</th>
-			<td>
-			{% highlight %}
+<tbody>
+<tr>
+<th>稳定的分支</th>
+<td>
+{% highlight html %}
 sudo apt install --install-recommends winehq-stable
- {% endhighlight %}
-			</td>
-		</tr>
-		<tr>
-			<th>开发分公司</th>
-			<td>
-			{% highlight %}
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<th>开发分公司</th>
+<td>
+{% highlight html %}
 sudo apt install --install-recommends winehq-devel
- {% endhighlight %}
-			</td>
-		</tr>
-		<tr>
-			<th>暂存分支</th>
-			<td>
-			{% highlight %}
+{% endhighlight %}
+</td>
+</tr>
+<tr>
+<th>暂存分支</th>
+<td>
+{% highlight html %}
 sudo apt install --install-recommends winehq-staging
- {% endhighlight %}
-			</td>
-		</tr>
-	</tbody>
+{% endhighlight %}
+</td>
+</tr>
+</tbody>
 </table>
-
 <p>下载完成，安装</p>
-
 <p>linlin@linlin-i5:~$ sudo apt-get install libgconf-2-4安<br />
 [sudo] password for linlin:<br />
 sudo: a password is required<br />
@@ -241,7 +206,6 @@ Selecting previously unselected package gconf-service.<br />
 Preparing to unpack .../gconf-service_3.2.6-7ubuntu2_amd64.deb ...<br />
 Unpacking gconf-service (3.2.6-7ubuntu2) ...<br />
 Setting up gconf2-common (3.2.6-7ubuntu2) ...</p>
-
 <p>Creating config file /etc/gconf/2/path with new version<br />
 Setting up gconf-service (3.2.6-7ubuntu2) ...<br />
 Processing triggers for sgml-base (1.30) ...<br />
@@ -250,32 +214,19 @@ Processing triggers for libc-bin (2.34-0ubuntu3.2) ...<br />
 Setting up gconf-service-backend (3.2.6-7ubuntu2) ...<br />
 linlin@linlin-i5:~$ wine --version<br />
 wine-7.0</p>
-
 <p>安装微信</p>
-
 <p>　# wine --version</p>
-
 <p>　　wine-3.0 (Ubuntu 3.0-1ubuntu1)配置Wine</p>
-
 <p>　　在终端中运行命令：winecfg 会打开Wine configuration窗口，在这个对话框中可以配置Wine设置。Wine 3.0默认给我们配置了Window 7环境，如果想使用更新的Windows系统版本需要升级Wine版本（这里我们用旧版本先试试，直接关闭对话框）。</p>
-
 <p>　　</p>
-
 <p style="text-align:center"><img alt="" src="https://img-blog.csdnimg.cn/img_convert/622ee73db5af6e8bb8b97b056af37de3.png" /></p>
-
 <p>　　Wine安装微信</p>
-
 <p>　　进入微信官网选择Window版本微信安装程序，进入文件下载目录Downloads安装Windows微信。Wine安装软件可以在当前目录打开终端，然后执行命令： wine WeChatSetup.exe就可以启动微信安装程序(或者直接双击软件包)。</p>
-
 <p>　　</p>
-
 <p style="text-align:center"><img alt="" src="https://img-blog.csdnimg.cn/img_convert/08d4cd911ab63ea7c1a9a6fab68f4f17.png" /></p>
-
 <p>wine /home/linlin/Downloads/WeChatSetup.exe</p>
-
 <p><br />
 MESA-INTEL: warning: Performance support disabled, consider sysctl dev.i915.perf_stream_paranoid=0</p>
-
 <p>0070:fixme:imm:ImeSetActiveContext (0x3e760, 0): stub<br />
 0070:fixme:imm:ImmReleaseContext (0000000000010020, 000000000003E760): stub<br />
 0024:fixme:imm:ImeSetActiveContext (0x4ab290, 1): stub<br />
@@ -292,6 +243,4 @@ MESA-INTEL: warning: Performance support disabled, consider sysctl dev.i915.perf
 0170:fixme:netsh:wmain stub: L&quot;netsh&quot; L&quot;advfirewall&quot; L&quot;firewall&quot; L&quot;delete&quot; L&quot;rule&quot; L&quot;name=WeChat&quot; L&quot;program=C:\\Program Files (x86)\\Tencent\\WeChat\\WeChatPlayer.exe&quot;<br />
 0188:fixme:netsh:wmain stub: L&quot;netsh&quot; L&quot;advfirewall&quot; L&quot;firewall&quot; L&quot;add&quot; L&quot;rule&quot; L&quot;name=WeChat&quot; L&quot;dir=in&quot; L&quot;action=allow&quot; L&quot;program=C:\\Program Files (x86)\\Tencent\\WeChat\\WeChatPlayer.exe&quot; L&quot;enable=yes&quot;<br />
 01b0:fixme:kernelbase:AppPolicyGetThreadInitializationType FFFFFFFA, 0640FEF8</p>
-
 <p><img src="/uploads/ckeditor/pictures/12/image-20220612193955-4.png" style="height:457px; width:813px" /></p>
-

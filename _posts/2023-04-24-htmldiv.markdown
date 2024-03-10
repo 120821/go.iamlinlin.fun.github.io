@@ -5,13 +5,7 @@ date: "2023-04-24"
 categories: 
 ---
 <p><a href="https://jingyan.baidu.com/article/adc8151335f0bcb623bf73d6.html">https://jingyan.baidu.com/article/adc8151335f0bcb623bf73d6.html</a></p>
-
 <p>在css标签内，通过id设置div的样式，定义其position属性为绝对定位(position)，右对齐(right:0)</p>
-
-{% highlight %}
-{% highlight %}&lt;div style=&quot;position: absolute; right: 0;&quot;&gt;&lt;/div&gt;{% endhighlight %}
-
+{% highlight html %}&lt;div style=&quot;position: absolute; right: 0;&quot;&gt;&lt;/div&gt;{% endhighlight %}
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

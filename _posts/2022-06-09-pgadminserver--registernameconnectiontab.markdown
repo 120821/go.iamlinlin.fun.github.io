@@ -4,8 +4,7 @@ title: "pg_admin ： 如何添加的新数据库 ( server -＞ 右键 -＞ regis
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>创建docker后，使用postgres，首先需要创建数据库进行和远程进行连接，进入数据库，点击右键进如register，serve的创建，</p> 
+<p>创建docker后，使用postgres，首先需要创建数据库进行和远程进行连接，进入数据库，点击右键进如register，serve的创建，</p> 
 <p><img alt="" height="304" src="https://img-blog.csdnimg.cn/1f4a237323d946409da75c8afd1898cc.png" width="601"></p> 
 <p> 然后可以填写一下名称，关键数据是在connection中的，<img alt="" height="394" src="https://img-blog.csdnimg.cn/c007b0ae4b7a4b80bfd1b9f211574968.png" width="487"></p> 
 <p></p> 
@@ -15,9 +14,9 @@ categories:
 <hr>
 <h2>Go 标记</h2> 
 <p>Go 程序可以由多个标记组成，可以是关键字，标识符，常量，字符串，符号。如以下 GO 语句由 6 个标记组成：</p> 
-{% highlight %}fmt.Println("Hello, World!"){% endhighlight %} 
+{% highlight html %}fmt.Println("Hello, World!"){% endhighlight %} 
 <p>6 个标记是(每行一个)：</p> 
-{% highlight %}1. fmt
+{% highlight html %}1. fmt
 2. .
 3. Println
 4. (
@@ -33,16 +32,16 @@ categories:
 <h2>注释</h2> 
 <p>注释不会被编译，每一个包应该有相关注释。</p> 
 <p>单行注释是最常见的注释形式，你可以在任何地方使用以 // 开头的单行注释。多行注释也叫块注释，均已以 /* 开头，并以 */ 结尾。如：</p> 
-{% highlight %}// 单行注释
+{% highlight html %}// 单行注释
 /*
- Author by 菜鸟教程
- 我是多行注释
- */{% endhighlight %} 
+Author by 菜鸟教程
+我是多行注释
+*/{% endhighlight %} 
 <hr>
 <h2>标识符</h2> 
 <p>标识符用来命名变量、类型等程序实体。一个标识符实际上就是一个或是多个字母(A~Z和a~z)数字(0~9)、下划线_组成的序列，但是第一个字符必须是字母或下划线而不能是数字。</p> 
 <p>以下是有效的标识符：</p> 
-{% highlight %}mahesh   kumar   abc   move_name   a_123
+{% highlight html %}mahesh   kumar   abc   move_name   a_123
 myname50   _temp   j   a23b9   retVal{% endhighlight %} 
 <p>以下是无效的标识符：</p> 
 <ul>
@@ -56,7 +55,7 @@ myname50   _temp   j   a23b9   retVal{% endhighlight %}
 <h2>实例</h2> 
 <p>package main<br> import "fmt"<br> func main() {<!-- --><br>     fmt.Println("Google" + "Runoob")<br> }</p> 
 <p>以上实例输出结果为：</p> 
-{% highlight %}GoogleRunoob{% endhighlight %} 
+{% highlight html %}GoogleRunoob{% endhighlight %} 
 <hr>
 <h2>关键字</h2> 
 <p>下面列举了 Go 代码中会使用到的 25 个关键字或保留字：</p> 
@@ -150,31 +149,29 @@ myname50   _temp   j   a23b9   retVal{% endhighlight %}
 <hr>
 <h2>Go 语言的空格</h2> 
 <p>Go 语言中变量的声明必须使用空格隔开，如：</p> 
-{% highlight %}var age int;{% endhighlight %} 
+{% highlight html %}var age int;{% endhighlight %} 
 <p>语句中适当使用空格能让程序更易阅读。</p> 
 <p>无空格：</p> 
-{% highlight %}fruit=apples+oranges;{% endhighlight %} 
+{% highlight html %}fruit=apples+oranges;{% endhighlight %} 
 <p>在变量与运算符间加入空格，程序看起来更加美观，如：</p> 
-{% highlight %}fruit = apples + oranges; {% endhighlight %} 
+{% highlight html %}fruit = apples + oranges; {% endhighlight %} 
 <hr>
 <h2>格式化字符串</h2> 
 <p>Go 语言中使用 fmt.Sprintf 格式化字符串并赋值给新串：</p> 
 <h2>实例</h2> 
-{% highlight %}package main
-
+{% highlight html %}package main
 import (
-    "fmt"
+"fmt"
 )
 {% endhighlight %} 
-{% highlight %}func main() {
-   // %d 表示整型数字，%s 表示字符串
-    var stockcode=123
-    var enddate="2020-12-31"
-    var url="Code=%d&amp;endDate=%s"
-    var target_url=fmt.Sprintf(url,stockcode,enddate)
-    fmt.Println(target_url)
+{% highlight html %}func main() {
+// %d 表示整型数字，%s 表示字符串
+var stockcode=123
+var enddate="2020-12-31"
+var url="Code=%d&amp;endDate=%s"
+var target_url=fmt.Sprintf(url,stockcode,enddate)
+fmt.Println(target_url)
 }{% endhighlight %} 
 <p>输出结果为：</p> 
-{% highlight %}Code=123&amp;endDate=2020-12-31{% endhighlight %} 
+{% highlight html %}Code=123&amp;endDate=2020-12-31{% endhighlight %} 
 <p></p>
-                

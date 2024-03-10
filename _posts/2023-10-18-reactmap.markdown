@@ -5,40 +5,32 @@ date: "2023-10-18"
 categories: 
 ---
 <p>react 我有这样的数据：</p>
-
-{% highlight %}
-{% highlight %}[[&quot;第n年&quot;,&quot;生产排放因子(factor_production)&quot;,&quot;年度排放因子(factor_by_year)&quot;,&quot;退役排放因子(factor_tui_yi)&quot;],[&quot;1&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;2&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;3&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;4&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;5&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;6&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;7&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;8&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;9&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;10&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;11&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;12&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;13&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;14&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;15&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;16&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;17&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;18&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;19&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;20&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;]]{% endhighlight %}
-
+{% highlight html %}[[&quot;第n年&quot;,&quot;生产排放因子(factor_production)&quot;,&quot;年度排放因子(factor_by_year)&quot;,&quot;退役排放因子(factor_tui_yi)&quot;],[&quot;1&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;2&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;3&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;4&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;5&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;6&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;7&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;8&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;9&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;10&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;11&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;12&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;13&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;14&quot;,&quot;0.02&quot;,&quot;0.01&quot;,&quot;0.01&quot;],[&quot;15&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;16&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;17&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;18&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;19&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;],[&quot;20&quot;,&quot;0.2&quot;,&quot;0.2&quot;,&quot;0.2&quot;]]{% endhighlight %}
 <p>去除第一列:</p>
-
-{% highlight %}
-{% highlight %}const data = [
-  [&quot;第n年&quot;, &quot;生产排放因子(factor_production)&quot;, &quot;年度排放因子(factor_by_year)&quot;, &quot;退役排放因子(factor_tui_yi)&quot;],
-  [&quot;1&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;2&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;3&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;4&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;5&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;6&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;7&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;8&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;9&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;10&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;11&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;12&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;13&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;14&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
-  [&quot;15&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
-  [&quot;16&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
-  [&quot;17&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
-  [&quot;18&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
-  [&quot;19&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
-  [&quot;20&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;]
+{% highlight html %}const data = [
+[&quot;第n年&quot;, &quot;生产排放因子(factor_production)&quot;, &quot;年度排放因子(factor_by_year)&quot;, &quot;退役排放因子(factor_tui_yi)&quot;],
+[&quot;1&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;2&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;3&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;4&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;5&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;6&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;7&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;8&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;9&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;10&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;11&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;12&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;13&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;14&quot;, &quot;0.02&quot;, &quot;0.01&quot;, &quot;0.01&quot;],
+[&quot;15&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
+[&quot;16&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
+[&quot;17&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
+[&quot;18&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
+[&quot;19&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;],
+[&quot;20&quot;, &quot;0.2&quot;, &quot;0.2&quot;, &quot;0.2&quot;]
 ];
-
 const result = data.map(row =&gt; row.slice(1));
 console.log(result);
 {% endhighlight %}
-
 <p>&nbsp;</p>
-

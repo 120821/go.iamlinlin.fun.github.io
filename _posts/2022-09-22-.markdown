@@ -5,18 +5,10 @@ date: "2022-09-22"
 categories: 
 ---
 <p><a href="https://polkadot.js.org/extension/">波卡钱包下载地址（官网）</a></p>
-
 <p>1.下载，安装：可以进行选择，需要安装的是谷歌版本还是火狐版本，然后安装就可以在右上角的工具栏看到这个图标</p>
-
 <p><img height="951" src="/uploads/ckeditor/pictures/464/image-20220922143806-1.png" width="1835" /></p>
-
 <p>2，登录</p>
-
 <p>点开图标，然后创建用户，</p>
-
 <p><img height="3024" src="/uploads/ckeditor/pictures/465/image-20220922144518-2.jpeg" width="3024" /></p>
-
 <p>跳转到页面，进行选择需要增加的Account的json文件，并输入文件密码，可以看到Account了</p>
-
 <p><img height="334" src="/uploads/ckeditor/pictures/466/image-20220922144651-3.png" width="1500" /></p>
-

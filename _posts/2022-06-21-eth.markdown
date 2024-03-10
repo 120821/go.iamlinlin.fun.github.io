@@ -5,6 +5,4 @@ date: "2022-06-21"
 categories: 
 ---
 <p>文章：https://naturaily.com/blog/ruby-on-rails-enum</p>
-
 <p>&nbsp;</p>
-

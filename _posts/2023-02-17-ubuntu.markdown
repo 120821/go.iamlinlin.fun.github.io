@@ -5,47 +5,22 @@ date: "2023-02-17"
 categories: 
 ---
 <p>refer：<a href="https://www.shuzhiduo.com/A/gVdnPxoEJW/">https://www.shuzhiduo.com/A/gVdnPxoEJW/</a></p>
-
 <p>1.查看所有已经安装的软件</p>
-
-{% highlight %}
-{% highlight %}dpkg -l{% endhighlight %}
-
+{% highlight html %}dpkg -l{% endhighlight %}
 <p>2.查看是否安装了飞书</p>
-
-{% highlight %}
-{% highlight %}dpkg -l | grep feishu{% endhighlight %}
-
-{% highlight %}
-{% highlight %}ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu){% endhighlight %}
-
+{% highlight html %}dpkg -l | grep feishu{% endhighlight %}
+{% highlight html %}ii&nbsp; bytedance-feishu-dev&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4.0-0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amd64&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 飞书(Feishu){% endhighlight %}
 <p>3.卸载飞书</p>
-
-{% highlight %}
-{% highlight %}sudo apt-get remove --purge bytedance-feishu-dev{% endhighlight %}
-
-{% highlight %}
-{% highlight %}Reading package lists... Done
-
+{% highlight html %}sudo apt-get remove --purge bytedance-feishu-dev{% endhighlight %}
+{% highlight html %}Reading package lists... Done
 Building dependency tree... Done
-
 Reading state information... Done
-
 The following packages were automatically installed and are no longer required:
-
 &nbsp; libflashrom1 libftdi1-2 libllvm13 libllvm13:i386
-
 Use &#39;sudo apt autoremove&#39; to remove them.
-
 The following packages will be REMOVED
-
 &nbsp; bytedance-feishu-dev*
-
 0 to upgrade, 0 to newly install, 1 to remove and 32 not to upgrade.
-
 After this operation, 1,195 MB disk space will be freed.
-
 Do you want to continue? [Y/n] Y{% endhighlight %}
-
 <p>&nbsp;</p>
-

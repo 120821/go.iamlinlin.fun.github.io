@@ -5,54 +5,26 @@ date: "2023-06-28"
 categories: 
 ---
 <p><strong>安装</strong></p>
-
 <p>要安装指定版本的Bundler，你可以使用gem命令来执行安装。以下是安装指定版本的Bundler的步骤：</p>
-
 <p>1. 打开终端或命令提示符。</p>
-
 <p>2. 运行以下命令以安装特定版本的Bundler：</p>
-
-{% highlight %}
-{% highlight %}&nbsp;&nbsp; gem install bundler -v 版本号{% endhighlight %}
-
+{% highlight html %}&nbsp;&nbsp; gem install bundler -v 版本号{% endhighlight %}
 <p>&nbsp;&nbsp; 请将&ldquo;版本号&rdquo;替换为你要安装的具体Bundler版本的版本号。例如，要安装2.1.4版本的Bundler，运行：</p>
-
-{% highlight %}
-{% highlight %}&nbsp;&nbsp; gem install bundler -v 2.1.4{% endhighlight %}
-
+{% highlight html %}&nbsp;&nbsp; gem install bundler -v 2.1.4{% endhighlight %}
 <p>3. 等待安装完成。安装过程可能会需要一些时间，具体取决于你的网络连接和系统性能。</p>
-
 <p>4. 验证安装是否成功。运行以下命令：</p>
-
-{% highlight %}
-{% highlight %}&nbsp;&nbsp; bundler --version{% endhighlight %}
-
+{% highlight html %}&nbsp;&nbsp; bundler --version{% endhighlight %}
 <p>&nbsp;&nbsp; 如果安装成功，将会显示所安装的Bundler的版本号。</p>
-
 <p>请注意，确保你已经安装了适当的Ruby解释器和gem管理工具，以便能够正确执行gem命令。</p>
-
 <p><strong>卸载</strong></p>
-
 <p>要卸载指定版本的Bundler，你可以使用gem命令来执行卸载。以下是卸载指定版本的Bundler的步骤：</p>
-
 <p>1. 打开终端或命令提示符。</p>
-
 <p>2. 运行以下命令以卸载特定版本的Bundler：</p>
-
-{% highlight %}
-{% highlight %}&nbsp;&nbsp; gem uninstall bundler -v 版本号{% endhighlight %}
-
+{% highlight html %}&nbsp;&nbsp; gem uninstall bundler -v 版本号{% endhighlight %}
 <p>&nbsp;&nbsp; 请将&ldquo;版本号&rdquo;替换为你要卸载的具体Bundler版本的版本号。例如，要卸载2.1.4版本的Bundler，运行：</p>
-
-<p>{% highlight %}&nbsp;&nbsp; gem uninstall bundler -v 2.1.4{% endhighlight %}<br />
+<p>{% highlight html %}&nbsp;&nbsp; gem uninstall bundler -v 2.1.4{% endhighlight %}<br />
 3. 系统会显示一个确认消息，询问你是否确定要卸载指定版本的Bundler。输入&ldquo;y&rdquo;并按回车确认。</p>
-
 <p>4. 等待卸载完成。卸载过程可能会需要一些时间，具体取决于你的系统性能。</p>
-
 <p>请注意，这将仅卸载指定版本的Bundler。如果你有其他版本的Bundler已安装，它们将保留在系统中。如果你想完全卸载所有版本的Bundler，可以运行以下命令：</p>
-
-{% highlight %}
-{% highlight %}gem uninstall bundler{% endhighlight %}
-
+{% highlight html %}gem uninstall bundler{% endhighlight %}
 <p>这会卸载系统中的Bundler的所有版本。</p>
-

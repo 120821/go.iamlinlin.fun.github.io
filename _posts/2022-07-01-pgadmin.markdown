@@ -5,24 +5,15 @@ date: "2022-07-01"
 categories: 
 ---
 <p>使用ps -ef 查看全部的进程</p>
-
 <p><img height="379" src="/uploads/ckeditor/pictures/86/image-20220701162225-1.png" width="1366" /></p>
-
 <p>ps -ef |grep pgAdmin<br />
 linlin&nbsp;&nbsp;&nbsp; 101836&nbsp;&nbsp;&nbsp; 2944&nbsp; 0 6月21 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00:58:05 /usr/pgadmin4/venv/bin/python3 -s /usr/pgadmin4/web/pgAdmin4.py<br />
 linlin&nbsp;&nbsp; 1058778 1058757&nbsp; 0 16:20 pts/10&nbsp;&nbsp; 00:00:00 grep --color=auto pgAdmin</p>
-
 <p>杀掉卡死的进程</p>
-
 <p>kill -9 101836</p>
-
 <p>单击打开数据库</p>
-
 <p>ps -ef |grep pgAdmin<br />
 linlin&nbsp;&nbsp; 1059094 1059073 42 16:21 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 00:00:02 /usr/pgadmin4/venv/bin/python3 -s /usr/pgadmin4/web/pgAdmin4.py<br />
 linlin&nbsp;&nbsp; 1059148 1058757&nbsp; 0 16:21 pts/10&nbsp;&nbsp; 00:00:00 grep --color=auto pgAdmin</p>
-
 <p>即可</p>
-
 <p>&nbsp;</p>
-

@@ -5,10 +5,6 @@ date: "2023-09-19"
 categories: 
 ---
 <p>使用：</p>
-
-<p>{% highlight %}%s/,$//g{% endhighlight %}</p>
-
+<p>{% highlight html %}%s/,$//g{% endhighlight %}</p>
 <p>理解：</p>
-
-<p>{% highlight %},${% endhighlight %} 表示匹配每一行末尾的逗号。</p>
-
+<p>{% highlight html %},${% endhighlight %} 表示匹配每一行末尾的逗号。</p>

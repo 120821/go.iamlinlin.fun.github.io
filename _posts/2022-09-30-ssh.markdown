@@ -5,12 +5,7 @@ date: "2022-09-30"
 categories: 
 ---
 <p>ssh root@47.242.241.247</p>
-
 <p><img height="288" src="/uploads/ckeditor/pictures/503/image-20220930145729-1.png" width="1916" /></p>
-
 <p>ssh ubuntu@43.135.52.56(ddns新服务器）</p>
-
 <p>caddy ddns-ruby</p>
-
 <p>ssh ubuntu@43.132.234.28(ddns )</p>
-

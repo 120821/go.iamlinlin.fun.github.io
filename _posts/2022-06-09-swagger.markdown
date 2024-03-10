@@ -5,86 +5,44 @@ date: "2022-06-09"
 categories: 
 ---
 <p><strong>rails - swagger的使用 rswag 与 openapi v3</strong></p>
-
 <p><tt>refer to: <a href="https://medium.com/@clarkjohnson_85334/adding-swagger-docs-to-a-rails-6-api-using-rswag-a3e8bc577986">https://medium.com/@clarkjohnson_85334/adding-swagger-docs-to-a-rails-6-api-using-rswag-a3e8bc577986</a></tt></p>
-
 <p><tt>rswag 官网:&nbsp;<a href="https://github.com/rswag/rswag/">https://github.com/rswag/rswag/</a></tt></p>
-
 <p><tt>open api v3 官网:&nbsp;<a href="https://github.com/OAI/OpenAPI-Specification">https://github.com/OAI/OpenAPI-Specification</a></tt></p>
-
 <p><strong>如何看文档</strong></p>
-
 <p>看rswag官方文档搞不定，因为rswag这个项目默认大家是熟悉open apiv3 的</p>
-
 <p>open api v3&nbsp; 则需要慢慢的去看</p>
-
 <p>所以应该直接看 最上面的那个例子.</p>
-
 <p><strong>安装</strong></p>
-
 <p>跟rspec绑定在一起的，通过分析rspec的controller的调用，来生成swagger.json / yaml</p>
-
 <p>然后在 /api-docs 页面显示</p>
-
 <p>安装: rails 6&nbsp;&nbsp;&nbsp; ruby 3.0.3&nbsp;</p>
-
 <p>创建一个新项目</p>
-
-<p>{% highlight %}rails new test_swagger{% endhighlight %}</p>
-
+<p>{% highlight html %}rails new test_swagger{% endhighlight %}</p>
 <p>在Gem中增加如下内容</p>
-
-{% highlight %}
-{% highlight %}gem &#39;rswag&#39;
+{% highlight html %}gem &#39;rswag&#39;
 gem &#39;rswag-api&#39;
 gem &#39;rswag-ui&#39;
-
 group :test do
-   gem &#39;database_cleaner&#39;
-   gem &#39;factory_bot_rails&#39;
-   gem &#39;rspec-rails&#39;
-   gem &#39;rswag-specs&#39;
- end
+gem &#39;database_cleaner&#39;
+gem &#39;factory_bot_rails&#39;
+gem &#39;rspec-rails&#39;
+gem &#39;rswag-specs&#39;
+end
 {% endhighlight %}
-
 <p>注意一定要有 rspec这个gem, 因为 rswag的文档是根据rspec的内容生成的.&nbsp;</p>
-
 <p>bundle install&nbsp; 安装好所有的gem</p>
-
 <p>生成 rspec</p>
-
-{% highlight %}
-{% highlight %}rails g rspec:install{% endhighlight %}
-
+{% highlight html %}rails g rspec:install{% endhighlight %}
 <p>再生成 rswag helper:&nbsp;</p>
-
-{% highlight %}
-{% highlight %}rails g rswag&nbsp; &nbsp;(这个命令来自于 gem &#39;rswag&#39; ){% endhighlight %}
-
+{% highlight html %}rails g rswag&nbsp; &nbsp;(这个命令来自于 gem &#39;rswag&#39; ){% endhighlight %}
 <p>上面命令没有的话(如果你按照官方文档操作,则肯定没有 )</p>
-
 <p>就运行下面2个命令</p>
-
-{% highlight %}
-{% highlight %}rails g rswag:specs:install&nbsp; &nbsp;生成swagger_helper{% endhighlight %}
-
-{% highlight %}
-{% highlight %}rails g rswag:api:install&nbsp; &nbsp; &nbsp;生成路由中的 /api-docs{% endhighlight %}
-
-{% highlight %}
-{% highlight %}rails g rswag:ui:install&nbsp; &nbsp; &nbsp;同上,只不过这个也由swagger ui 处理.具体为啥一个路由能映射到2个action 我还没细看{% endhighlight %}
-
+{% highlight html %}rails g rswag:specs:install&nbsp; &nbsp;生成swagger_helper{% endhighlight %}
+{% highlight html %}rails g rswag:api:install&nbsp; &nbsp; &nbsp;生成路由中的 /api-docs{% endhighlight %}
+{% highlight html %}rails g rswag:ui:install&nbsp; &nbsp; &nbsp;同上,只不过这个也由swagger ui 处理.具体为啥一个路由能映射到2个action 我还没细看{% endhighlight %}
 <p>随便生成一个controller 的rswag ( 封装了rspec 的rswag测试文件), 内容如下</p>
-
-{% highlight %}
-{% highlight %}rails generate rspec:swagger API::V1::Encounters_Controller{% endhighlight %}
-
+{% highlight html %}rails generate rspec:swagger API::V1::Encounters_Controller{% endhighlight %}
 <p>内容如下</p>
-
-{% highlight %}
-{% highlight %}2026 vim spec/requests/api/v1/encounters_spec.rb
-
+{% highlight html %}2026 vim spec/requests/api/v1/encounters_spec.rb
 2028 rails rswag:specs:swaggerize
-
 2031 rails s -p 30333{% endhighlight %}
-

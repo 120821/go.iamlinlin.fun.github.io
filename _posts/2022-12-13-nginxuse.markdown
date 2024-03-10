@@ -5,238 +5,120 @@ date: "2022-12-13"
 categories: 
 ---
 <p>nginx 启动(任意目录下）：/p&gt;</p>
-
-{% highlight %}
-{% highlight %}nginx{% endhighlight %}
-
+{% highlight html %}nginx{% endhighlight %}
 <p>NGINX 停止（任意目录下）/p&gt;</p>
-
-{% highlight %}
-{% highlight %}nginx -s stop{% endhighlight %}
-
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">{% highlight %}nginx 配置文件：{% endhighlight %}</div>
-
-{% highlight %}
-{% highlight %}cd /etc/nginx
-
+{% highlight html %}nginx -s stop{% endhighlight %}
+<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px">{% highlight html %}nginx 配置文件：{% endhighlight %}</div>
+{% highlight html %}cd /etc/nginx
 cat nginx.conf
-
 #user www-data;
 worker_processes 2;
 pid /run/nginx.pid;
 events {
 &nbsp; worker_connections 768;
 }
-
 http {
-
 &nbsp; sendfile on;
-
 &nbsp; tcp_nopush on;
-
 &nbsp; tcp_nodelay on;
-
 &nbsp; keepalive_timeout 65;
-
 &nbsp; types_hash_max_size 2048;
-
 &nbsp; include /etc/nginx/mime.types;
-
 &nbsp; default_type application/octet-stream;
-
 &nbsp; server_names_hash_max_size 1024;
-
 &nbsp; access_log /var/log/nginx/access.log;
-
 &nbsp; error_log /var/log/nginx/error.log;
-
 使用了gzip
-
 &nbsp; gzip on;
-
 &nbsp; gzip_disable &quot;msie6&quot;;
-
-
 nbsp; gzip_vary on;
-
 &nbsp; gzip_proxied any;
-
 &nbsp; gzip_comp_level 6;
-
 &nbsp; gzip_buffers 16 8k;
-
 &nbsp; gzip_http_version 1.1;
-
 &nbsp; gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;
-
 &nbsp; include /etc/nginx/conf.d/*.conf;
-
 &nbsp; include /etc/nginx/sites-enabled/*;
-
 }
-
 /etc/nginx/sites-enabled#
-
 cat linlin.fun
-
 server {
-
 &nbsp; listen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80;
-
 &nbsp; server_name&nbsp; linlin.fun www.linlin.fun;
-
 &nbsp; charset utf-8;
-
 &nbsp; location ~ ^/uploads/ {
-
 &nbsp;&nbsp;&nbsp; root /root/blog/public;
-
 &nbsp; }
-
 &nbsp; location / {
-
 &nbsp;&nbsp;&nbsp; #root localhost:3000;
-
 &nbsp;&nbsp;&nbsp; proxy_pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://linlin_fun_server;
-
 &nbsp;&nbsp;&nbsp; #proxy_redirect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; X-Forwarded-For $proxy_add_x_forwarded_for;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; X-Real-IP $remote_addr;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; Host $http_host;
-
 &nbsp;&nbsp;&nbsp; proxy_next_upstream http_502 http_504 error timeout invalid_header;
-
 &nbsp; }
-
 &nbsp; location ~ ^/assets/ {
-
 &nbsp;&nbsp;&nbsp; root /root/blog/public;
-
 &nbsp;&nbsp;&nbsp; #expires 1y;
-
 &nbsp;&nbsp;&nbsp; #add_header Cache-Control public;
-
 &nbsp;&nbsp;&nbsp; #add_header ETag &quot;&quot;;
-
 &nbsp;&nbsp;&nbsp; break;
-
 &nbsp; }
-
 }
-
 upstream linlin_fun_server{
-
 &nbsp; server localhost:3000;
-
 }{% endhighlight %}
-
 <p>然后在sites-enabled/文件夹内创建子文件，可以使用域名进行命名：</p>
-
-{% highlight %}
-{% highlight %}cd /etc/nginx/sites-enabled#
-
+{% highlight html %}cd /etc/nginx/sites-enabled#
 cat linlin.fun
-
 server {
-
 &nbsp; listen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80;
-
 &nbsp; server_name&nbsp; linlin.fun www.linlin.fun;
-
 &nbsp; charset utf-8;
-
 &nbsp; location ~ ^/uploads/ {
-
 &nbsp;&nbsp;&nbsp; root /root/blog/public;
-
 &nbsp; }
-
 &nbsp; location / {
-
 &nbsp;&nbsp;&nbsp; #root localhost:3000;
-
 &nbsp;&nbsp;&nbsp; proxy_pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://linlin_fun_server;
-
 &nbsp;&nbsp;&nbsp; #proxy_redirect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; X-Forwarded-For $proxy_add_x_forwarded_for;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; X-Real-IP $remote_addr;
-
 &nbsp;&nbsp;&nbsp; proxy_set_header&nbsp;&nbsp;&nbsp; Host $http_host;
-
 &nbsp;&nbsp;&nbsp; proxy_next_upstream http_502 http_504 error timeout invalid_header;
-
 &nbsp; }
-
 &nbsp; location ~ ^/assets/ {
-
 &nbsp;&nbsp;&nbsp; root /root/blog/public;
-
 &nbsp;&nbsp;&nbsp; #expires 1y;
-
 &nbsp;&nbsp;&nbsp; #add_header Cache-Control public;
-
 &nbsp;&nbsp;&nbsp; #add_header ETag &quot;&quot;;
-
 &nbsp;&nbsp;&nbsp; break;
-
 &nbsp; }
-
 }
-
 upstream linlin_fun_server{
-
 &nbsp; server localhost:3000;
-
 }{% endhighlight %}
-
 <p>子域名也使用域名进行命名</p>
-
-{% highlight %}
-{% highlight %} cat hi.linlin.fun
-
+{% highlight html %} cat hi.linlin.fun
 server {
-
 &nbsp; listen 80;
-
 &nbsp; server_name hi.linlin.fun www.hi.linlin.fun;
-
 &nbsp; location / {
-
 &nbsp;&nbsp;&nbsp; root /opt/app/hi.linlin.fun;
-
 #&nbsp;&nbsp;&nbsp; index index.html index.htm;
-
 &nbsp; }
-
 &nbsp; location /test/ {
-
 &nbsp;&nbsp;&nbsp; root /opt/app/hi.linlin.fun/test.html;
-
 &nbsp;&nbsp;&nbsp; autoindex on;
-
 &nbsp; }
-
 }
-
 /var/log#
-
 /var/log/nginx#
-
 tail -f error.log access.log{% endhighlight %}
-
 <p>nginx log的使用：</p>
-
 <p>进入/var/log/nginx# 目录下</p>
-
-{% highlight %}cd /var/log/nginx#{% endhighlight %}
-
+{% highlight html %}cd /var/log/nginx#{% endhighlight %}
 <p>同时查看成功和报错的日志：</p>
-
-{% highlight %}tail -f access.log error.log{% endhighlight %}
+{% highlight html %}tail -f access.log error.log{% endhighlight %}
 <p>&nbsp;</p>
-

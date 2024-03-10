@@ -5,109 +5,74 @@ date: "2023-12-04"
 categories: 
 ---
 <p>1.文件目录：</p>
-
-{% highlight %}
-{% highlight %}├── app.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序逻辑代码
-
+{% highlight html %}├── app.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序逻辑代码
 ├── app.json&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序配置文件
-
 ├── app.wxss&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 小程序全局样式
-
 ├── pages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 页面文件夹
-
 │&nbsp;&nbsp; ├── index&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 首页
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── index.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 页面逻辑代码
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── index.json&nbsp;&nbsp;&nbsp; // 页面配置文件
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── index.wxml&nbsp;&nbsp;&nbsp; // 页面结构文件
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; └── index.wxss&nbsp;&nbsp;&nbsp; // 页面样式文件
-
 │&nbsp;&nbsp; ├── blog&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 博客页面
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── blog.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 页面逻辑代码
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── blog.json&nbsp;&nbsp;&nbsp;&nbsp; // 页面配置文件
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; ├── blog.wxml&nbsp;&nbsp;&nbsp;&nbsp; // 页面结构文件
-
 │&nbsp;&nbsp; │&nbsp;&nbsp; └── blog.wxss&nbsp;&nbsp;&nbsp;&nbsp; // 页面样式文件
-
 │&nbsp;&nbsp; └── ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 其他页面
-
 ├── images&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 图片资源文件夹
-
 │&nbsp;&nbsp; ├── friends.jpeg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 背景图片文件
-
 │&nbsp;&nbsp; └── ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 其他图片
-
 └── ...{% endhighlight %}
-
 <p>2.在app.js设置小程序的逻辑：</p>
-
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}App({
-  onLaunch: <span style="color:#dcc6e0">function</span> () {
-    <span style="color:#d4d0ab">// 小程序启动时执行的逻辑</span>
-  },
-  globalData: {
-    <span style="color:#d4d0ab">// 全局变量</span>
-  }
+{% highlight html %}App({
+onLaunch: <span style="color:#dcc6e0">function</span> () {
+<span style="color:#d4d0ab">// 小程序启动时执行的逻辑</span>
+},
+globalData: {
+<span style="color:#d4d0ab">// 全局变量</span>
+}
 });{% endhighlight %}
-
 <p>3.在app.json配置文件写入路由等</p>
-
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}{
-  &quot;pages&quot;: [
-    <span style="color:#abe338">&quot;pages/index/index&quot;</span>,  <span style="color:#d4d0ab">// 首页</span>
-    <span style="color:#abe338">&quot;pages/blog/blog&quot;</span>     <span style="color:#d4d0ab">// 博客页面</span>
-    <span style="color:#d4d0ab">// 其他页面</span>
-  ],
-  &quot;window&quot;: {
-    &quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;我的小程序&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
-    &quot;navigationBarBackgroundColor&quot;: <span style="color:#abe338">&quot;#ffffff&quot;</span>  <span style="color:#d4d0ab">// 导航栏背景色</span>
-  }
+{% highlight html %}{
+&quot;pages&quot;: [
+<span style="color:#abe338">&quot;pages/index/index&quot;</span>,  <span style="color:#d4d0ab">// 首页</span>
+<span style="color:#abe338">&quot;pages/blog/blog&quot;</span>     <span style="color:#d4d0ab">// 博客页面</span>
+<span style="color:#d4d0ab">// 其他页面</span>
+],
+&quot;window&quot;: {
+&quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;我的小程序&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
+&quot;navigationBarBackgroundColor&quot;: <span style="color:#abe338">&quot;#ffffff&quot;</span>  <span style="color:#d4d0ab">// 导航栏背景色</span>
+}
 }{% endhighlight %}
-
 <p>4.在app.xwss写入小程序的全局Css：</p>
-
 <p>具体自己设置</p>
-
 <p>5.在页面index.js设置，例如：</p>
-
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}Page({
-  data: {
-    message: <span style="color:#abe338">&quot;Hello, World!&quot;</span>
-  },
-  onLoad: <span style="color:#dcc6e0">function</span> () {
-    <span style="color:#d4d0ab">// 页面加载时执行的逻辑</span>
-  },
-  <span style="color:#d4d0ab">// 其他页面逻辑代码</span>
+{% highlight html %}Page({
+data: {
+message: <span style="color:#abe338">&quot;Hello, World!&quot;</span>
+},
+onLoad: <span style="color:#dcc6e0">function</span> () {
+<span style="color:#d4d0ab">// 页面加载时执行的逻辑</span>
+},
+<span style="color:#d4d0ab">// 其他页面逻辑代码</span>
 });{% endhighlight %}
-
 <p>在index.json组件设置，例如：</p>
-
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}{
-  &quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;首页&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
-  &quot;usingComponents&quot;: {
-    <span style="color:#d4d0ab">// 可以引用自定义组件</span>
-  }
+{% highlight html %}{
+&quot;navigationBarTitleText&quot;: <span style="color:#abe338">&quot;首页&quot;</span>,  <span style="color:#d4d0ab">// 导航栏标题</span>
+&quot;usingComponents&quot;: {
+<span style="color:#d4d0ab">// 可以引用自定义组件</span>
+}
 }{% endhighlight %}
-
-<p>{% highlight %}在index.wxml页面结构文件设置，例如：{% endhighlight %}</p>
-
+<p>{% highlight html %}在index.wxml页面结构文件设置，例如：{% endhighlight %}</p>
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}&lt;view&gt;
-  &lt;text&gt;{{ message }}&lt;/text&gt;
+{% highlight html %}&lt;view&gt;
+&lt;text&gt;{{ message }}&lt;/text&gt;
 &lt;/view&gt;{% endhighlight %}
-
 <p>也可以引入图片：</p>
-
 <pre style="margin-left:0px; margin-right:0px; text-align:start">
-{% highlight %}&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;{% endhighlight %}
-
+{% highlight html %}&lt;image src=&quot;../../images/friends.jpeg&quot;&gt;&lt;/image&gt;{% endhighlight %}

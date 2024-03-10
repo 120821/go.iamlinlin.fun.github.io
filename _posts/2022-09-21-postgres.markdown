@@ -5,34 +5,18 @@ date: "2022-09-21"
 categories: 
 ---
 <p><a href="http://127.0.0.1:35907/help/help/index_dialog.html">官网教程</a></p>
-
 <p>打开数据库的表，展开后，右键点击index</p>
-
 <p><img height="262" src="/uploads/ckeditor/pictures/448/image-20220921102111-1.png" width="275" /></p>
-
 <p>然后点击创建新的index索引</p>
-
 <p><img height="239" src="/uploads/ckeditor/pictures/449/image-20220921102226-2.png" width="521" /></p>
-
 <p>会弹出页面，依次填写即可</p>
-
 <p><img height="560" src="/uploads/ckeditor/pictures/435/image-20220921093255-1.png" width="718" /></p>
-
 <p>&nbsp;</p>
-
 <p><img height="560" src="/uploads/ckeditor/pictures/436/image-20220921093310-2.png" width="718" /></p>
-
 <p>&nbsp;</p>
-
 <p><img height="560" src="/uploads/ckeditor/pictures/437/image-20220921093318-3.png" width="718" /></p>
-
 <p>SELECT * FROM apples WHERE (first_name) = &#39;jim&#39;;\</p>
-
 <p>&nbsp;</p>
-
 <p><img height="327" src="/uploads/ckeditor/pictures/438/image-20220921093830-4.png" width="503" /></p>
-
 <p>bananas</p>
-
 <p><img height="545" src="/uploads/ckeditor/pictures/440/image-20220921094202-5.png" width="703" /></p>
-

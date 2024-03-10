@@ -9,9 +9,7 @@ categories:
 2. textarea文本域，直接在元素的内容部分填写默认值<br />
 3. 单选、复选按钮默认选中使用checked属性<br />
 4. select下拉框默认选中使用 selected=&quot;selected&quot;</p>
-
 <p>使用label for 进行单选的时候，可以设置默认值，方便使用</p>
-
 <p>&lt;tr&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 领取策略<br />
@@ -23,10 +21,6 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%= form.label :server_mint_then_transfer_to_user, &quot;服务器统一领取然后分发给用户&quot;, for: &quot;server_mint_then_transfer_to_user&quot; %&gt;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/td&gt;<br />
 &nbsp;&nbsp;&nbsp; &lt;/tr&gt;</p>
-
 <p>在页面显示就是默认选择统一发放<img height="63" src="/uploads/ckeditor/pictures/63/image-20220623171126-2.png" width="560" /></p>
-
 <p>&nbsp;</p>
-
 <p><img src="https://img-blog.csdnimg.cn/2020061522252264.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDg3OTc4Nw==,size_16,color_FFFFFF,t_70" style="width: 849px;" /></p>
-

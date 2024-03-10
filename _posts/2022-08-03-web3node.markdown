@@ -5,7 +5,6 @@ date: "2022-08-03"
 categories: 
 ---
 <p>使用node 进行web3，没有安装环境不能进行使用，因此进行安装</p>
-
 <p>linlin@linlin-i5:/tmp$ node<br />
 Welcome to Node.js v16.13.2.<br />
 Type &quot;.help&quot; for more information.<br />
@@ -21,9 +20,7 @@ Require stack:<br />
 &nbsp; requireStack: [ &#39;&lt;repl&gt;&#39; ]<br />
 }<br />
 &gt;</p>
-
 <p>安装： npm install --verbose</p>
-
 <p>linlin@linlin-i5:/workspace/test_web3.js$ npm install --verbose<br />
 npm verb cli [<br />
 npm verb cli&nbsp;&nbsp; &#39;/home/linlin/.asdf/installs/nodejs/16.13.2/bin/node&#39;,<br />
@@ -33,9 +30,7 @@ npm verb cli&nbsp;&nbsp; &#39;--verbose&#39;<br />
 npm verb cli ]<br />
 npm info using npm@8.1.2<br />
 npm info using node@v16.13.2</p>
-
 <p>使用：</p>
-
 <p>linlin@linlin-i5:/workspace/test_web3.js$ node<br />
 Welcome to Node.js v16.13.2.<br />
 Type &quot;.help&quot; for more information.<br />
@@ -68,20 +63,15 @@ Type &quot;.help&quot; for more information.<br />
 &nbsp;&nbsp;&nbsp; checkAddressChecksum: [Function: checkAddressChecksum],<br />
 &nbsp;&nbsp;&nbsp; toChecksumAddress: [Function: toChecksumAddress],<br />
 &nbsp;&nbsp;&nbsp; toHex: [Function: toHex],</p>
-
 <p>使用，检验isAddress</p>
-
 <p>linlin@linlin-i5:/workspace/test_web3.js$ npm run run_hihihi</p>
-
 <p>&gt; build@1.0.0 run_hihihi<br />
 &gt; node hi.js</p>
-
 <p>invalid ethereum address Given address &quot;0x8dCaC795B85dbCa0A2f95218Ffb6e600d52878&quot; is not a valid Ethereum address. 0x8dCaC795B85dbCa0A2f95218Ffb6e600d52878<br />
 invalid ethereum address Given address &quot;0x01621bB40EA5761cbAbd26f5867fe5A0975e9CE33&quot; is not a valid Ethereum address. 0x01621bB40EA5761cbAbd26f5867fe5A0975e9CE33<br />
 linlin@linlin-i5:/workspace/test_web3.js$ node hi.js<br />
 invalid ethereum address Given address &quot;0x8dCaC795B85dbCa0A2f95218Ffb6e600d52878&quot; is not a valid Ethereum address. 0x8dCaC795B85dbCa0A2f95218Ffb6e600d52878<br />
 invalid ethereum address Given address &quot;0x01621bB40EA5761cbAbd26f5867fe5A0975e9CE33&quot; is not a valid Ethereum address. 0x01621bB40EA5761cbAbd26f5867fe5A0975e9CE33</p>
-
 <p>linlin@linlin-i5:/workspace/test_web3.js$ ll<br />
 total 420&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 drwxrwxr-x&nbsp;&nbsp; 4 linlin linlin&nbsp;&nbsp; 4096&nbsp; 8月&nbsp; 2 17:57 ./<br />
@@ -92,8 +82,5 @@ drwxrwxr-x 322 linlin linlin&nbsp; 12288&nbsp; 8月&nbsp; 1 18:05 node_modules/<
 -rw-rw-r--&nbsp;&nbsp; 1 linlin linlin&nbsp;&nbsp;&nbsp; 132&nbsp; 8月&nbsp; 1 20:47 package.json<br />
 -rw-rw-r--&nbsp;&nbsp; 1 linlin linlin 278365&nbsp; 8月&nbsp; 2 17:45 package-lock.json<br />
 linlin@linlin-i5:/workspace/test_web3.js$ vim package.json</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

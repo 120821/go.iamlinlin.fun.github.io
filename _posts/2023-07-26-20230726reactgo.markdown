@@ -5,55 +5,35 @@ date: "2023-07-26"
 categories: 
 ---
 <p>1.把项目克隆到服务器的特定位置。</p>
-
 <p>2.安装postgres nodejs</p>
-
 <p>sudo apt-get install postgresql-15<br />
 Reading package lists... Done<br />
 Building dependency tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
 Reading state information... Done<br />
 E: Unable to locate package postgresql-15</p>
-
 <p>用普通的apt无法安装，尝试更新：</p>
-
 <p>sudo apt update</p>
-
 <p>然后继续安装，还是无法安装：</p>
-
 <p>查看Ubuntu的版本：</p>
-
 <p>lsb_release -r<br />
 Release:&nbsp;&nbsp; &nbsp;18.04</p>
-
 <p>可能是版本太低，无法安装postgres15，那么尝试使用docker进行安装postgres15：</p>
-
 <p>sudo docker ps<br />
 CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp; CREATED&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp; NAMES</p>
-
 <p>可以看到目前没有启动docker的image</p>
-
 <p>查看docker：</p>
-
 <p>&nbsp;which docker<br />
 /usr/bin/docker</p>
-
 <p>查看docker compose:</p>
-
 <p>which docker compose<br />
 /usr/bin/docker<br />
 /usr/bin/compose</p>
-
 <p>查看是否已经配置好了docker compose:</p>
-
 <p>opt# ls<br />
 0219.sql&nbsp; 0219_2.sql&nbsp; app&nbsp; coding_tools&nbsp; containerd&nbsp; docker-compose.yml&nbsp; docker_folder&nbsp; td-agent-bit</p>
-
 <p>打开编辑docker-compose.yml，发现仅配置了一个mysql的文件，进行修改：</p>
-
 <p>启动：</p>
-
 <p>docker-compose up -d</p>
-
 <p>Pulling postgres (postgres:15)...<br />
 15: Pulling from library/postgres<br />
 faef57eae888: Pull complete<br />
@@ -73,21 +53,16 @@ Digest: sha256:362a63cb1e864195ea2bc29b5066bdb222bc9a4461bfaff2418f63a06e56bce0<
 Status: Downloaded newer image for postgres:15<br />
 Creating opt_postgres_1 ...<br />
 Creating opt_postgres_1 ... done</p>
-
 <p>查看启动的image：</p>
-
 <p>sudo docker ps<br />
 CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
 ec234edbb90c&nbsp;&nbsp; postgres:15&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 7 minutes ago&nbsp;&nbsp; Up 7 minutes&nbsp;&nbsp; 0.0.0.0:5432-&gt;5432/tcp, :::5432-&gt;5432/tcp&nbsp;&nbsp; opt_postgres_1</p>
-
 <p>进入docker postgres 创建数据库，和一些表数据：</p>
-
 <p>sudo docker exec -it ec23 /bin/bash<br />
 root@ec234edbb90c:/# su postgres<br />
 postgres@ec234edbb90c:/$ psql<br />
 psql (15.3 (Debian 15.3-1.pgdg120+1))<br />
 Type &quot;help&quot; for help.</p>
-
 <p>postgres=# \l<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of databases<br />
 &nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp; |&nbsp; Owner&nbsp;&nbsp; | Encoding |&nbsp; Collate&nbsp;&nbsp; |&nbsp;&nbsp; Ctype&nbsp;&nbsp;&nbsp; | ICU Locale | Locale Provider |&nbsp;&nbsp; Access privileges&nbsp; &nbsp;<br />
@@ -98,12 +73,10 @@ Type &quot;help&quot; for help.</p>
 &nbsp;template1 | postgres | UTF8&nbsp;&nbsp;&nbsp;&nbsp; | en_US.utf8 | en_US.utf8 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | libc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | =c/postgres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | postgres=CTc/postgres<br />
 (3 rows)</p>
-
 <p>postgres=# \c<br />
 You are now connected to database &quot;postgres&quot; as user &quot;postgres&quot;.<br />
 postgres=# create database dongtaipaifang;<br />
 CREATE DATABASE</p>
-
 <p>postgres=# \l<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List of databases<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; Owner&nbsp;&nbsp; | Encoding |&nbsp; Collate&nbsp;&nbsp; |&nbsp;&nbsp; Ctype&nbsp;&nbsp;&nbsp; | ICU Locale | Locale Provider |&nbsp;&nbsp; Access privileges&nbsp; &nbsp;<br />
@@ -115,7 +88,6 @@ CREATE DATABASE</p>
 &nbsp;template1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | postgres | UTF8&nbsp;&nbsp;&nbsp;&nbsp; | en_US.utf8 | en_US.utf8 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | libc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | =c/postgres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | postgres=CTc/postgres<br />
 (4 rows)</p>
-
 <p>postgres-# \c dongtaipaifang;<br />
 You are now connected to database &quot;dongtaipaifang&quot; as user &quot;postgres&quot;.<br />
 dongtaipaifang-# \d<br />
@@ -140,45 +112,27 @@ dongtaipaifang-# \d<br />
 &nbsp;public | users_id_seq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | sequence | postgres<br />
 &nbsp;public | verification_codes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | table&nbsp;&nbsp;&nbsp; | postgres<br />
 &nbsp;public | verification_codes_id_seq&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | sequence | postgres</p>
-
 <p>dongtaipaifang=#&nbsp;&nbsp;&nbsp; insert into users(login, password, mobile, is_admin, active) values(&#39;admin&#39;, &#39;admin&#39;, &#39;19921221992&#39;, true, true);<br />
 INSERT 0 1</p>
-
 <p>dongtaipaifang=# insert into calculation_templates(name, explain, algorithm_name, initial_discharge_rate, initial_filling_amount, operating_discharge_rate, maintenance_discharge_rate, maintenance_filling_rate, annual_maintenance_rate, scrap_discharge_rate) values(&#39;消防-普通&#39;, &#39;消防领域的普通模版&#39;, &#39;消防&#39;, 1, 2, 3, 4, 5, 6, 7);<br />
 INSERT 0 1<br />
 dongtaipaifang=# insert into calculation_templates(name, explain, algorithm_name, initial_discharge_rate, initial_filling_amount, operating_discharge_rate, maintenance_discharge_rate, maintenance_filling_rate, annual_maintenance_rate, scrap_discharge_rate) values(&#39;空调制冷&#39;, &#39;空调制冷领域的模版&#39;, &#39;制冷&#39;, 1, 2, 3, 4, 5, 6, 7);<br />
 INSERT 0 1</p>
-
 <p>3.安装go1.18.3:(此处省略,使用wegt直接安装即可)</p>
-
 <p>4.nginx install</p>
-
 <p>sudo apt install nginx</p>
-
 <p>进入nginx的目录，进行配置文件：</p>
-
 <p>cd /etc/nginx/<br />
 root@ali-anquan-2:/etc/nginx# ls<br />
 conf.d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fastcgi.conf&nbsp;&nbsp;&nbsp; koi-utf&nbsp; mime.types&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modules-enabled&nbsp; proxy_params&nbsp; sites-available&nbsp; snippets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; win-utf<br />
 dhparam.pem&nbsp; fastcgi_params&nbsp; koi-win&nbsp; modules-available&nbsp; nginx.conf&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scgi_params&nbsp;&nbsp; sites-enabled&nbsp;&nbsp;&nbsp; uwsgi_params</p>
-
 <p>/etc/nginx/sites-enabled# ls</p>
-
 <p>（这里会显示已经配置好的以域名命名的文件）</p>
-
 <p>停止nginx:</p>
-
 <p>sudo nginx -s stop</p>
-
 <p>启动nginx:</p>
-
 <p>sudo nginx</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

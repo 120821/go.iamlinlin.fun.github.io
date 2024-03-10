@@ -5,9 +5,7 @@ date: "2022-07-13"
 categories: 
 ---
 <p>参考：https://www.cnblogs.com/Renyi-Fan/p/9131081.html</p>
-
 <p>点击标题1即可生成表格的数据，再次点击进行隐藏</p>
-
 <p>&lt;!DOCTYPE html&gt;<br />
 &lt;html lang=&quot;en&quot;&gt;<br />
 &lt;head&gt;<br />
@@ -59,10 +57,7 @@ categories:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; isHide=!isHide<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; &lt;/script&gt;<br />
 &lt;/body&gt;<br />
 &lt;/html&gt;</p>
-
 <p><img height="240" src="/uploads/ckeditor/pictures/89/image-20220713144104-1.png" width="389" /></p>
-

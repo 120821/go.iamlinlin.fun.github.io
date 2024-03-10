@@ -5,21 +5,15 @@ date: "2022-11-16"
 categories: 
 ---
 <p>参考：<a href="https://www.runoob.com/w3cnote/linux-common-command.html">https://www.runoob.com/w3cnote/linux-common-command.html</a></p>
-
 <p>磁盘空间：</p>
-
-{% highlight %}
-{% highlight %}df -h 显示已经挂载的分区列表
+{% highlight html %}df -h 显示已经挂载的分区列表
 ls -lSr |more 以尺寸大小排列文件和目录
 du -sh dir1 估算目录 &#39;dir1&#39; 已经使用的磁盘空间&#39;
 du -sk * | sort -rn 以容量大小为依据依次显示文件和目录的大小
 rpm -q -a --qf &#39;%10{SIZE}t%{NAME}n&#39; | sort -k1,1n 以大小为依据依次显示已安装的rpm包所使用的空间 (fedora, redhat类系统)
 dpkg-query -W -f=&#39;${Installed-Size;10}t${Package}n&#39; | sort -k1,1n 以大小为依据显示已安装的deb包所使用的空间 (ubuntu, debian类系统){% endhighlight %}
-
 <p>文件和目录：</p>
-
-{% highlight %}
-{% highlight %}cd /home 进入 &#39;/ home&#39; 目录&#39;
+{% highlight html %}cd /home 进入 &#39;/ home&#39; 目录&#39;
 cd .. 返回上一级目录
 cd ../.. 返回上两级目录
 cd 进入个人的主目录
@@ -52,11 +46,8 @@ file file1 outputs the mime type of the file as text
 iconv -l 列出已知的编码
 iconv -f fromEncoding -t toEncoding inputFile &gt; outputFile creates a new from the given input file by assuming it is encoded in fromEncoding and converting it to toEncoding.
 find . -maxdepth 1 -name *.jpg -print -exec convert &quot;{}&quot; -resize 80x60 &quot;thumbs/{}&quot; \; batch resize files in the current directory and send them to a thumbnails directory (requires convert from Imagemagick){% endhighlight %}
-
 <p>文件搜索：</p>
-
-{% highlight %}
-{% highlight %}find / -name file1 从 &#39;/&#39; 开始进入根文件系统搜索文件和目录
+{% highlight html %}find / -name file1 从 &#39;/&#39; 开始进入根文件系统搜索文件和目录
 find / -user user1 搜索属于用户 &#39;user1&#39; 的文件和目录
 find /home/user1 -name \*.bin 在目录 &#39;/ home/user1&#39; 中搜索带有&#39;.bin&#39; 结尾的文件
 find /usr/bin -type f -atime +100 搜索在过去100天内未被使用过的执行文件
@@ -66,11 +57,8 @@ find / -xdev -name \*.rpm 搜索以 &#39;.rpm&#39; 结尾的文件，忽略光�
 locate \*.ps 寻找以 &#39;.ps&#39; 结尾的文件 - 先运行 &#39;updatedb&#39; 命令
 whereis halt 显示一个二进制文件、源码或man的位置
 which halt 显示一个二进制文件或可执行文件的完整路径{% endhighlight %}
-
 <p>打包和压缩：</p>
-
-{% highlight %}
-{% highlight %}bunzip2 file1.bz2 解压一个叫做 &#39;file1.bz2&#39;的文件
+{% highlight html %}bunzip2 file1.bz2 解压一个叫做 &#39;file1.bz2&#39;的文件
 bzip2 file1 压缩一个叫做 &#39;file1&#39; 的文件
 gunzip file1.gz 解压一个叫做 &#39;file1.gz&#39;的文件
 gzip file1 压缩一个叫做 &#39;file1&#39;的文件
@@ -91,22 +79,16 @@ tar -xvfz archive.tar.gz 解压一个gzip格式的压缩包
 zip file1.zip file1 创建一个zip格式的压缩包
 zip -r file1.zip file1 file2 dir1 将几个文件和目录同时压缩成一个zip格式的压缩包
 unzip file1.zip 解压一个zip格式压缩包{% endhighlight %}
-
 <p>查看文件内容：</p>
-
-{% highlight %}
-{% highlight %}cat file1 从第一个字节开始正向查看文件的内容
+{% highlight html %}cat file1 从第一个字节开始正向查看文件的内容
 tac file1 从最后一行开始反向查看一个文件的内容
 more file1 查看一个长文件的内容
 less file1 类似于 &#39;more&#39; 命令，但是它允许在文件中和正向操作一样的反向操作
 head -2 file1 查看一个文件的前两行
 tail -2 file1 查看一个文件的最后两行
 tail -f /var/log/messages 实时查看被添加到一个文件中的内容{% endhighlight %}
-
 <p>文本处理：</p>
-
-{% highlight %}
-{% highlight %}cat file1 file2 ... | command &lt;&gt; file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT
+{% highlight html %}cat file1 file2 ... | command &lt;&gt; file1_in.txt_or_file1_out.txt general syntax for text manipulation using PIPE, STDIN and STDOUT
 cat file1 | command( sed, grep, awk, grep, etc...) &gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个新文件中
 cat file1 | command( sed, grep, awk, grep, etc...) &gt;&gt; result.txt 合并一个文件的详细说明文本，并将简介写入一个已有的文件中
 grep Aug /var/log/messages 在文件 &#39;/var/log/messages&#39;中查找关键词&quot;Aug&quot;
@@ -137,11 +119,8 @@ sort file1 file2 | uniq -d 取出两个文件的交集(只留下同时存在于�
 comm -1 file1 file2 比较两个文件的内容只删除 &#39;file1&#39; 所包含的内容
 comm -2 file1 file2 比较两个文件的内容只删除 &#39;file2&#39; 所包含的内容
 comm -3 file1 file2 比较两个文件的内容只删除两个文件共有的部分{% endhighlight %}
-
 <p>备份：</p>
-
-{% highlight %}
-{% highlight %}dump -0aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的完整备份
+{% highlight html %}dump -0aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的完整备份
 dump -1aj -f /tmp/home0.bak /home 制作一个 &#39;/home&#39; 目录的交互式备份
 restore -if /tmp/home0.bak 还原一个交互式备份
 rsync -rogpav --delete /home /tmp 同步两边的目录
@@ -158,6 +137,4 @@ find /home/user1 -name &#39;*.txt&#39; | xargs cp -av --target-directory=/home/b
 find /var/log -name &#39;*.log&#39; | tar cv --files-from=- | bzip2 &gt; log.tar.bz2 查找所有以 &#39;.log&#39; 结尾的文件并做成一个bzip包
 dd if=/dev/hda of=/dev/fd0 bs=512 count=1 做一个将 MBR (Master Boot Record)内容复制到软盘的动作
 dd if=/dev/fd0 of=/dev/hda bs=512 count=1 从已经保存到软盘的备份中恢复MBR内容{% endhighlight %}
-
 <p>&nbsp;</p>
-

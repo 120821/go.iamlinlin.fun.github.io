@@ -5,17 +5,12 @@ date: "2022-07-26"
 categories: 
 ---
 <p>https://ethereum.org/zh/developers/tutorials/run-light-node-geth/</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">首先，<a class="Link__ExternalLink-sc-10k1ukq-0 elhKBz" dir="ltr" href="https://geth.ethereum.org/docs/install-and-build/installing-geth" rel="noopener noreferrer" target="_blank">安装 Geth</a>。安装 Geth 后，可以通过在终端窗口运行以下命令以&ldquo;轻&rdquo;模式运行以太坊节点：</p>
-
 <div class="Codeblock__Container-sc-e6hz65-0 hgylJY">
 <div class="Codeblock__HightlightContainer-sc-e6hz65-1 iAZCBX">
 <p class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color: rgb(51, 51, 51);"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light</span></span></p>
-
 <p><strong>geth --syncmode light</strong></p>
-
 <p>等待大约200秒后，从第2300个区块开始同步，然后定期接收到含有1到10个区块的区块包。初始同步所需时间很短。</p>
-
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333">
 <p>linlin@linlin-i5:/workspace/blockchain$ geth --syncmode light<br />
 INFO [07-26|11:39:07.225] Starting Geth on Ethereum mainnet...<br />
@@ -70,166 +65,112 @@ INFO [07-26|11:39:18.685] Looking for peers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 </div>
 </div>
 </div>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">启动后，Geth 将开始连接到以太坊上的其他节点 &mdash; 称为&ldquo;对等节点&rdquo;。 连接到对等节点的过程可能需要一段时间。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">当您的 Geth 节点有足够多的对等节点时，它将从链上的新区块中导入区块头。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">当新的区块头不再有&ldquo;age&rdquo;时，Geth 将同步到链的头部。</p>
-
 <p class="SharedStyledComponents__Header2-sc-1rtdm75-26 tutorial__H2-sc-zcv7it-5 eLMzfE hFyuFs" id="stopping-and-restarting-your-node" style="position: relative;">停止和重启节点</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">您可以随时按 <kbd class="SharedStyledComponents__KBD-sc-1rtdm75-29 hfXbaZ">Ctrl</kbd>+<kbd class="SharedStyledComponents__KBD-sc-1rtdm75-29 hfXbaZ">C</kbd> 键停止您的节点。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">重启节点时，Geth 需要用几分钟下载自上次运行该节点以来创建的区块头。</p>
-
 <p class="SharedStyledComponents__Header2-sc-1rtdm75-26 tutorial__H2-sc-zcv7it-5 eLMzfE hFyuFs" id="enable-the-http-rpc-server" style="position: relative;">启用 HTTP-RPC 服务器</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">启用 HTTP-RPC 服务器可让您将以太坊节点连接到其他软件，如钱包、浏览器扩展程序或自定义软件库。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">您可以在启动 Geth 时通过运行以下命令来启用 HTTP-RPC 服务器：</p>
-
 <div class="Codeblock__Container-sc-e6hz65-0 hgylJY">
 <div class="Codeblock__HightlightContainer-sc-e6hz65-1 iAZCBX">
 <p class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color: rgb(51, 51, 51);"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light --http</span></span></p>
 </div>
 </div>
-
-<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">启用后，运行 {% highlight %}curl http://127.0.0.1:8545{% endhighlight %}。 应该不会报错。（报错了curl http://127.0.0.1:8545<br />
+<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">启用后，运行 {% highlight html %}curl http://127.0.0.1:8545{% endhighlight %}。 应该不会报错。（报错了curl http://127.0.0.1:8545<br />
 404 Not Foundlinlin@linlin-i5:）</p>
-
 <p><strong>parity --light</strong></p>
-
 <p>立即从一个硬编码值（区块高度6219777）开始同步，速度大约为每分钟23,500个区块，同步区块高度达到6,500,000，过程需要15分钟。一旦同步，当新区块被挖出并经由全节点验证，轻节点就会接收到这些区块。</p>
-
 <p><strong>parity --light --no-hardcoded-sync</strong></p>
-
 <p>除了从创世区块开始同步以外，其他设定与轻同步模式一样。</p>
-
 <h3 id="paritymetamaskmacos">连接Parity轻节点到MetaMask（MacOS系统）</h3>
-
 <ol>
-	<li>
-	<p>下载<a href="https://brew.sh/">homebrew</a>（必须先通过苹果的开发条款）</p>
-	</li>
-	<li>
-	<p>查找和打开应用终端（应用/终端）</p>
-	</li>
-	<li>
-	<p>在终端中依次输入以下命令：</p>
-	</li>
+<li>
+<p>下载<a href="https://brew.sh/">homebrew</a>（必须先通过苹果的开发条款）</p>
+</li>
+<li>
+<p>查找和打开应用终端（应用/终端）</p>
+</li>
+<li>
+<p>在终端中依次输入以下命令：</p>
+</li>
 </ol>
-
 <p><strong>brew tap paritytech/paritytech</strong> <em>(把parity添加到brew tap列表)</em></p>
-
 <p><strong>brew install parity</strong> <em>(安装parity稳定版本)</em></p>
-
 <p><strong>parity --light --jsonrpc-cors=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot; &amp;</strong> <em>(同步轻节点，与其他节点相互连接，下载区块头信息)</em></p>
-
 <p>按ctrl+C，然后键入：</p>
-
 <p><strong>tail -f nohup.out</strong> <em>(将展示日志，以确保一切正常运行)</em>，在网页浏览器上打开Metamask，断开网络，连接到本地主机。</p>
-
 <p class="SharedStyledComponents__Header3-sc-1rtdm75-27 tutorial__H3-sc-zcv7it-6 iQXamk fUIjpn" id="allow-remote-connections" style="position: relative;">允许远程连接</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">要允许远程主机连接到您的节点，请使用以下命令启动 Geth：</p>
-
 <p class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color: rgb(51, 51, 51);"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light --http --http.addr 0.0.0.0</span></span></p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">注意：这种情况假设没有进程阻止发送到您的本地主机的请求，例如防火墙</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">Geth JavaScript 控制台：Geth 有一个内置的 JavaScript 控制台和一个名为 <a class="Link__ExternalLink-sc-10k1ukq-0 elhKBz" dir="ltr" href="https://github.com/ethereum/web3.js/" rel="noopener noreferrer" target="_blank">web3js</a> 的 JavaScript API，您可以使用它与您的节点进行交互。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">要使用 JavaScript 控制台，运行以下命令：</p>
-
 <div class="Codeblock__Container-sc-e6hz65-0 hgylJY">
 <div class="Codeblock__HightlightContainer-sc-e6hz65-1 iAZCBX">
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth attach</span></span></div>
-
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333">
 <p>linlin@linlin-i5:/workspace/blockchain$ geth attach<br />
 Welcome to the Geth JavaScript console!</p>
-
 <p>instance: Geth/v1.10.20-stable-8f2416a8/linux-amd64/go1.18.1<br />
 at block: 0 (Thu Jan 01 1970 08:00:00 GMT+0800 (CST))<br />
 &nbsp;datadir: /home/linlin/.ethereum<br />
 &nbsp;modules: admin:1.0 debug:1.0 eth:1.0 ethash:1.0 les:1.0 net:1.0 personal:1.0 rpc:1.0 txpool:1.0 vflux:1.0 web3:1.0</p>
-
 <p>To exit, press ctrl-d or type exit<br />
 &gt;</p>
-
-<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws"><a class="Link__ExternalLink-sc-10k1ukq-0 elhKBz" dir="ltr" href="http://web3js.readthedocs.io/" rel="noopener noreferrer" target="_blank">完整 web3js 相关文档</a> 该控制台允许与以太坊直接交互。 例如，运行 {% highlight %}eth.blockNumber{% endhighlight %} 命令将输出最新的已知区块编号。</p>
+<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws"><a class="Link__ExternalLink-sc-10k1ukq-0 elhKBz" dir="ltr" href="http://web3js.readthedocs.io/" rel="noopener noreferrer" target="_blank">完整 web3js 相关文档</a> 该控制台允许与以太坊直接交互。 例如，运行 {% highlight html %}eth.blockNumber{% endhighlight %} 命令将输出最新的已知区块编号。</p>
 </div>
 </div>
 </div>
-
 <p>&gt; eth.blockNumber<br />
 15215828</p>
-
 <p>&gt; web3.eth.accounts<br />
 []<br />
 &gt; eth.accounts<br />
 []</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">主网和测试网：Geth 默认在<a class="Link__InternalLink-sc-10k1ukq-1 BrXKn is-glossary undefined" dir="ltr" href="https://ethereum.org/zh/glossary/#mainnet/">以太坊主网<svg class="Icon__StyledIcon-sc-c716af-0 Link__GlossaryIcon-sc-10k1ukq-3 bwtnbK ebddOT" fill="currentColor" height="12px" stroke="currentColor" stroke-width="0" viewbox="0 0 16 16" width="12px" xmlns="http://www.w3.org/2000/svg"></svg></a>上运行节点。</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">通过在终端运行以下命令之一，也可以使用 Geth 在几个<a class="Link__InternalLink-sc-10k1ukq-1 BrXKn" dir="ltr" href="https://ethereum.org/zh/networks/#testnets/">公共测试网络</a>之一上运行节点：</p>
-
 <div class="Codeblock__Container-sc-e6hz65-0 hgylJY">
 <div class="Codeblock__HightlightContainer-sc-e6hz65-1 iAZCBX">
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light --ropsten</span></span></div>
-
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light --rinkeby</span></span></div>
-
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">geth --syncmode light --goerli</span></span></div>
-
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333">
 <p class="SharedStyledComponents__Header2-sc-1rtdm75-26 tutorial__H2-sc-zcv7it-5 eLMzfE hFyuFs" id="where-is-the-blockchain-and-evm-data-stored" style="position: relative;">区块链和以太坊虚拟机数据存储在哪里？</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">Geth 用于存储原始区块链数据的目录取决于您的操作系统。 运行 Geth 后，查找如下所示的消息：（这里出错了，没有正确的数据库进行使用，尚未解决）</p>
-
 <div class="Codeblock__Container-sc-e6hz65-0 hgylJY">
 <div class="Codeblock__HightlightContainer-sc-e6hz65-1 iAZCBX">
 <div class="Codeblock__Line-sc-e6hz65-3 jnjcSK token-line" style="color:#333333"><span class="Codeblock__LineContent-sc-e6hz65-5 hSNrvd"><span class="token plain">INFO </span><span class="token punctuation" style="color:#6c6783">[</span><span class="token number" style="color:#e09142">11</span><span class="token plain">-18</span><span class="token operator" style="color:#e09142">|</span><span class="token number" style="color:#e09142">14</span><span class="token plain">:04:47</span><span class="token punctuation" style="color:#6c6783">]</span><span class="token plain"> Allocated cache and </span><span class="token function" style="color:#ff7324">file</span><span class="token plain"> handles </span><span class="token assign-left variable" style="color:#498bb5">database</span><span class="token operator" style="color:#e09142">=</span><span class="token plain">/Users/bgu/Library/Ethereum/testnet/geth/lightchaindata </span><span class="token assign-left variable" style="color:#498bb5">cache</span><span class="token operator" style="color:#e09142">=</span><span class="token number" style="color:#e09142">768</span><span class="token plain"> </span><span class="token assign-left variable" style="color:#498bb5">handles</span><span class="token operator" style="color:#e09142">=</span><span class="token number" style="color:#e09142">128</span></span></div>
 </div>
 </div>
-
-<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">{% highlight %}&ldquo;database=&rdquo;{% endhighlight %}后面的路径应该显示区块链数据在您计算机中的存储位置。 如果您运行的是完整节点，则此目录将包含有关已提交到区块链的每个区块的所有数据。 因为我们在运行轻节点，此目录仅包含区块头。</p>
-
+<p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">{% highlight html %}&ldquo;database=&rdquo;{% endhighlight %}后面的路径应该显示区块链数据在您计算机中的存储位置。 如果您运行的是完整节点，则此目录将包含有关已提交到区块链的每个区块的所有数据。 因为我们在运行轻节点，此目录仅包含区块头。</p>
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">此处要强调的是，在最低层级，这里便是区块链的所在之处。 区块链的完整内容和以太坊虚拟机状态存储在以太网络上的每个完整节点中，其存储目录与您计算机上这个目录非常相似。</p>
-
 <p>安装 Geth 有很多种方式，这里主要就 Linux 环境给出两种：系统包管理器（apt-get）安装和源码安装。更加推荐大家用源码安装，在整个过程中可以看到 Geth 各组件的构建步骤。<br />
 一、apt-get</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 sudo apt-get install software-properties-common
 sudo add-apt-repository -y ppa:ethereum/ethereum
 sudo apt-get update
 sudo apt-get install ethereum{% endhighlight %}
 </div>
-
 <p>二、源码安装</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 git clone https://github.com/ethereum/go-ethereum.git{% endhighlight %}
 </div>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 cd go-ethereum{% endhighlight %}
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 make geth（不能使用，需要进行下载go的配置等）{% endhighlight %}
 </div>
-
 <p>如果一切顺利，我们将看到 Go 编译器构建每个组件，直到它生成 geth 可执行文件：（因为已经使用第一种方式安装了，所以直接到blockchain文件夹下查看版本号即可）</p>
 </div>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">查看版本号</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain$ geth version<br />
 Geth<br />
 Version: 1.10.20-stable<br />
@@ -239,45 +180,34 @@ Go Version: go1.18.1<br />
 Operating System: linux<br />
 GOPATH=<br />
 GOROOT=go</p>
-
 <p>https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getbalance</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws"><font style="vertical-align:inherit">检索 Coinbase 地址和余额来验证接口是否正在运行 </font><a class="Link__ExternalLink-sc-10k1ukq-0 elhKBz" dir="ltr" href="https://curl.haxx.se/download.html" rel="noopener noreferrer" target="_blank"><font style="vertical-align:inherit">curl </font></a><font style="vertical-align:inherit">。 请注意，这些示例中的数据在您的本地节点上会有所不同。 如果您想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。 </font></p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">curl --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_coinbase&quot;, &quot;id&quot;:1}&#39; -H &quot;Content-Type: application/json&quot; localhost:8545<br />
 {&quot;id&quot;:1,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:&quot;0x0000000000000000000000000000000000000000&quot;}</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ curl -X POST -H &quot;Content-Type:application/json&quot; --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;web3_clientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:1}&#39; http://127.0.0.1:8545<br />
 {&quot;id&quot;:1,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:&quot;Ganache/v7.3.2/EthereumJS TestRPC/v7.3.2/ethereum-js&quot;}linlin</p>
-
 <p class="SharedStyledComponents__Paragraph-sc-1rtdm75-24 dZaXws">curl --data &#39;{&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;eth_getBalance&quot;, &quot;params&quot;: [&quot;0x960781B058da688735c98D5165aF8FF4e1B400E0&quot;, &quot;latest&quot;], &quot;id&quot;:2}&#39; -H &quot;Content-Type: application/json&quot; localhost:8545<br />
 {&quot;id&quot;:2,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:&quot;0x0&quot;}lin</p>
-
 <h4>搭建自己的私有链</h4>
-
 <p>因为公共网络的区块数量太多，同步耗时太长，我们为了方便快速了解 Geth，可以试着用它来搭一个只属于自己的私链。首先，我们需要创建网络的&ldquo;创世&rdquo;（genesis）状态，这写在一个小小的 JSON 文件里（例如，我们将其命名为 genesis.json）：</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 {
-  &quot;config&quot;: {
-  &quot;chainId&quot;: 15
-  },
-  &quot;difficulty&quot;: &quot;2000&quot;,
-  &quot;gasLimit&quot;: &quot;2100000&quot;,
-  &quot;alloc&quot;: {
-    &quot;7df9a875a174b3bc565e6424a0050ebc1b2d1d82&quot;: { &quot;balance&quot;: &quot;300000&quot; },
-    &quot;f41c74c9ae680c1aa78f42e5647a62f353b7bdde&quot;: { &quot;balance&quot;: &quot;400000&quot; }
-  }
+&quot;config&quot;: {
+&quot;chainId&quot;: 15
+},
+&quot;difficulty&quot;: &quot;2000&quot;,
+&quot;gasLimit&quot;: &quot;2100000&quot;,
+&quot;alloc&quot;: {
+&quot;7df9a875a174b3bc565e6424a0050ebc1b2d1d82&quot;: { &quot;balance&quot;: &quot;300000&quot; },
+&quot;f41c74c9ae680c1aa78f42e5647a62f353b7bdde&quot;: { &quot;balance&quot;: &quot;400000&quot; }
+}
 }{% endhighlight %}
 </div>
-
 <p>要创建一条以它作为创世块的区块链，我们可以使用下面的命令：</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 geth --datadir path/to/custom/data/folder init genesis.json{% endhighlight %}
-
 <p>linlin@linlin-i5:/workspace/blockchain$ geth --datadir path/to/custom/data/folder init genesis.json<br />
 INFO [07-26|14:55:28.387] Maximum peer count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETH=50 LES=0 total=50<br />
 INFO [07-26|14:55:28.388] Smartcard socket not found, disabling&nbsp;&nbsp;&nbsp; err=&quot;stat /run/pcscd/pcscd.comm: no such file or directory&quot;<br />
@@ -292,14 +222,11 @@ INFO [07-26|14:55:28.412] Opened ancient database&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 INFO [07-26|14:55:28.412] Writing custom genesis block<br />
 INFO [07-26|14:55:28.413] Persisted trie from memory database&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nodes=3 size=397.00B time=&quot;282.712&micro;s&quot; gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B<br />
 INFO [07-26|14:55:28.413] Successfully wrote genesis state&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database=lightchaindata hash=e3ea4f..18ce30</p>
-
 <p>在当前目录下运行 geth，就会启动这条私链，注意要将 networked 设置为与创世块配置里的<br />
 chainId 一致。</p>
-
 <div class="cnblogs_code">
-{% highlight %}
+{% highlight html %}
 geth --datadir path/to/custom/data/folder --networkid 15{% endhighlight %}
-
 <p>linlin@linlin-i5:/workspace/blockchain$ geth --datadir path/to/custom/data/folder --networkid 15<br />
 INFO [07-26|15:03:05.897] Maximum peer count&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ETH=50 LES=0 total=50<br />
 INFO [07-26|15:03:05.898] Smartcard socket not found, disabling&nbsp;&nbsp;&nbsp; err=&quot;stat /run/pcscd/pcscd.comm: no such file or directory&quot;<br />
@@ -343,11 +270,9 @@ INFO [07-26|15:03:05.916] Gasprice oracle is ignoring threshold set threshold=2<
 WARN [07-26|15:03:05.916] Error reading unclean shutdown markers&nbsp;&nbsp; error=&quot;leveldb: not found&quot;<br />
 INFO [07-26|15:03:05.916] Starting peer-to-peer node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instance=Geth/v1.10.20-stable-8f2416a8/linux-amd64/go1.18.1<br />
 Fatal: Error starting protocol stack: listen tcp :30303: bind: address already in use</p>
-
 <p>&nbsp;</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-

@@ -5,30 +5,24 @@ date: "2022-07-21"
 categories: 
 ---
 <p>https://solidity-by-example.org/gas-golf/</p>
-
 <p><font style="vertical-align:inherit">一些节气技术。 </font></p>
-
 <ul>
-	<li><font style="vertical-align:inherit">更换 </font>{% highlight %}memory{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight %}calldata{% endhighlight %}</li>
-	<li><font style="vertical-align:inherit">将状态变量加载到内存 </font></li>
-	<li><font style="vertical-align:inherit">替换 for 循环 </font>{% highlight %}i++{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight %}++i{% endhighlight %}</li>
-	<li><font style="vertical-align:inherit">缓存数组元素 </font></li>
-	<li><font style="vertical-align:inherit">短路 </font></li>
+<li><font style="vertical-align:inherit">更换 </font>{% highlight html %}memory{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight html %}calldata{% endhighlight %}</li>
+<li><font style="vertical-align:inherit">将状态变量加载到内存 </font></li>
+<li><font style="vertical-align:inherit">替换 for 循环 </font>{% highlight html %}i++{% endhighlight %}<font style="vertical-align:inherit">和 </font>{% highlight html %}++i{% endhighlight %}</li>
+<li><font style="vertical-align:inherit">缓存数组元素 </font></li>
+<li><font style="vertical-align:inherit">短路 </font></li>
 </ul>
-
 <p>Some gas saving techniques.</p>
-
 <ul>
-	<li>Replacing {% highlight %}memory{% endhighlight %} with {% highlight %}calldata{% endhighlight %}</li>
-	<li>Loading state variable to memory</li>
-	<li>Replace for loop {% highlight %}i++{% endhighlight %} with {% highlight %}++i{% endhighlight %}</li>
-	<li>Caching array elements</li>
-	<li>Short circuit</li>
+<li>Replacing {% highlight html %}memory{% endhighlight %} with {% highlight html %}calldata{% endhighlight %}</li>
+<li>Loading state variable to memory</li>
+<li>Replace for loop {% highlight html %}i++{% endhighlight %} with {% highlight html %}++i{% endhighlight %}</li>
+<li>Caching array elements</li>
+<li>Short circuit</li>
 </ul>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>// gas golf<br />
 contract GasGolf {<br />
 &nbsp;&nbsp;&nbsp; // start - 50908 gas<br />
@@ -39,9 +33,7 @@ contract GasGolf {<br />
 &nbsp;&nbsp;&nbsp; // cache array length - 48209 gas<br />
 &nbsp;&nbsp;&nbsp; // load array elements to memory - 48047 gas<br />
 &nbsp;&nbsp;&nbsp; // uncheck i overflow/underflow - 47309 gas</p>
-
 <p>&nbsp;&nbsp;&nbsp; uint public total;</p>
-
 <p>&nbsp;&nbsp;&nbsp; // start - not gas optimized<br />
 &nbsp;&nbsp;&nbsp; // function sumIfEvenAndLessThan99(uint[] memory nums) external {<br />
 &nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp; for (uint i = 0; i &lt; nums.length; i += 1) {<br />
@@ -52,13 +44,11 @@ contract GasGolf {<br />
 &nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp; //&nbsp;&nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp; // }</p>
-
 <p>&nbsp;&nbsp;&nbsp; // gas optimized<br />
 &nbsp;&nbsp;&nbsp; // [1, 2, 3, 4, 5, 100]<br />
 &nbsp;&nbsp;&nbsp; function sumIfEvenAndLessThan99(uint[] calldata nums) external {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint _total = total;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint len = nums.length;</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (uint i = 0; i &lt; len; ) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint num = nums[i];<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (num % 2 == 0 &amp;&amp; num &lt; 99) {<br />
@@ -68,10 +58,7 @@ contract GasGolf {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ++i;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; total = _total;<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p>&nbsp;</p>
-

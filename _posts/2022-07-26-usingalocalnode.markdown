@@ -5,7 +5,6 @@ date: "2022-07-26"
 categories: 
 ---
 <p class="lt-article__title lt-mb-4 lt-fs-3 lt-fs-md-1" itemprop="name">首先安装APP--ganache,使用命令 chmod +x ganache...进行安装，使用./gana..进行运行</p>
-
 <p>linlin@linlin-i5:~/Downloads$ ll |grep ganache<br />
 -rw-rw-r--&nbsp; 1 linlin linlin 153130048&nbsp; 7月 25 14:57 ganache-2.5.4-linux-x86_64.AppImage<br />
 linlin@linlin-i5:~/Downloads$ chmod +x ganache-2.5.4-linux-x86_64.AppImage ^C<br />
@@ -16,37 +15,23 @@ linlin@linlin-i5:~/Downloads$ ./ganache-2.5.4-linux-x86_64.AppImage<br />
 09:30:56.509 &rsaquo; Checking for update<br />
 09:30:56.522 &rsaquo; Generated new staging user ID: d6d80e14-56c1-52c8-82e0-ad8a734e3e6e<br />
 listen to truffle</p>
-
 <p>&nbsp;</p>
-
 <p class="lt-article__title lt-mb-4 lt-fs-3 lt-fs-md-1" itemprop="name">======================（以下不用看了）</p>
-
 <p class="lt-article__title lt-mb-4 lt-fs-3 lt-fs-md-1" itemprop="name">Using a Local Node</p>
-
 <div class="lt-article__body" itemprop="articleBody">
 <p>For greater security, privacy, and read speeds, you may choose to run a local blockchain client, and connect MetaMask to it. A local blockchain client takes a while to &quot;synchronize&quot; with the network, but once it has, it&#39;s easy to connect MetaMask to it.</p>
-
 <p>There are a <a href="https://ethernodes.org/">number of clients out there</a>, including <a href="https://besu.hyperledger.org/en/stable/">Besu</a>, which ConsenSys helps maintain. <a href="https://greg.jeanmart.me/2020/02/23/running-an-ethereum-full-node-on-a-raspberrypi-4-/">Here&#39;s</a> a helpful guide on setting up a node. Once you have your local client set up, you can connect to it with the network menu in the top left corner of MetaMask:</p>
-
 <p><img alt="" src="https://hf-files-oregon.s3.amazonaws.com/hdpconsensyssupport_kb_attachments/2017/07-04/6f19e017-a20f-48d8-b6cf-05454d356497/local-network.png" /></p>
-
 <h3>Geth</h3>
-
 <p>Geth needs to have a special CORS setting enabled to allow MetaMask to connect to it by default, so try starting it with this command:</p>
-
-<p>{% highlight %}geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;{% endhighlight %}</p>
-
-<p>{% highlight %}本地没有运行，切换网络后，进行命令的执行。{% endhighlight %}</p>
-
+<p>{% highlight html %}geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;{% endhighlight %}</p>
+<p>{% highlight html %}本地没有运行，切换网络后，进行命令的执行。{% endhighlight %}</p>
 <p>geth --rpc --rpccorsdomain=&quot;chrome-extension://nkbihfbeogaeaoehlefnkodbefgpgknn&quot;<br />
 Incorrect Usage. flag provided but not defined: -rpc</p>
-
 <p>NAME:<br />
 &nbsp;&nbsp; geth - the go-ethereum command line interface</p>
-
 <p>USAGE:<br />
 &nbsp;&nbsp; geth [global options] command [command options] [arguments...]</p>
-
 <p>COMMANDS:<br />
 &nbsp;&nbsp; account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage accounts<br />
 &nbsp;&nbsp; attach&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Start an interactive JavaScript environment (connect to node)<br />
@@ -71,7 +56,6 @@ Incorrect Usage. flag provided but not defined: -rpc</p>
 &nbsp;&nbsp; version-check&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checks (online) for known Geth security vulnerabilities<br />
 &nbsp;&nbsp; wallet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Manage Ethereum presale wallets<br />
 &nbsp;&nbsp; help, h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shows a list of commands or help for one command</p>
-
 <p>GLOBAL OPTIONS:<br />
 &nbsp;&nbsp; ACCOUNT<br />
 &nbsp; &nbsp;<br />
@@ -613,19 +597,13 @@ Incorrect Usage. flag provided but not defined: -rpc</p>
 &nbsp;&nbsp;&nbsp; --vmdebug&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (default: false)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Record information useful for VM and contract debugging<br />
 &nbsp; &nbsp;</p>
-
 <p>COPYRIGHT:<br />
 &nbsp;&nbsp; Copyright 2013-2022 The go-ethereum Authors<br />
 flag provided but not defined: -rpc</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ ls<br />
 build&nbsp; call.js&nbsp; compile.js&nbsp; contracts&nbsp; Demo.json&nbsp; Demo.sol&nbsp; deploy.js&nbsp; migrations&nbsp; node_modules&nbsp; package.json&nbsp; package-lock.json&nbsp; test&nbsp; truffle-config.js</p>
-
 <p>linlin@linlin-i5:/workspace/blockchain/contract_on_goerli_using_infura$ ls build/contracts/<br />
 Migrations.json</p>
-
 <h3>Parity</h3>
-
 <p>Parity has installers for Mac and Windows, and seems to work with MetaMask pretty easily out of the box, once synchronized.</p>
 </div>
-

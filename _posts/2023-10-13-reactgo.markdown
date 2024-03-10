@@ -5,127 +5,71 @@ date: "2023-10-13"
 categories: 
 ---
 <p>1.git clone 前后端项目</p>
-
 <p>2.安装docker</p>
-
-{% highlight %}
- sudo apt-get update{% endhighlight %}
-
-{% highlight %}
- sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common{% endhighlight %}
-
-{% highlight %}
- curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -{% endhighlight %}
-
-{% highlight %}
- sudo apt-key fingerprint 0EBFCD88{% endhighlight %}
-
-{% highlight %}
- sudo add-apt-repository    &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable&quot;{% endhighlight %}
-
-{% highlight %}
- sudo apt-get update{% endhighlight %}
-
-{% highlight %}
- sudo apt-get install docker-ce docker-ce-cli containerd.io{% endhighlight %}
-
-{% highlight %}
- sudo docker run hello-world{% endhighlight %}
-
+{% highlight html %}
+sudo apt-get update{% endhighlight %}
+{% highlight html %}
+sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common{% endhighlight %}
+{% highlight html %}
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -{% endhighlight %}
+{% highlight html %}
+sudo apt-key fingerprint 0EBFCD88{% endhighlight %}
+{% highlight html %}
+sudo add-apt-repository    &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) \
+stable&quot;{% endhighlight %}
+{% highlight html %}
+sudo apt-get update{% endhighlight %}
+{% highlight html %}
+sudo apt-get install docker-ce docker-ce-cli containerd.io{% endhighlight %}
+{% highlight html %}
+sudo docker run hello-world{% endhighlight %}
 <p>3.安装docker compose</p>
-
 <p>这个命令需要代理，而且网速很慢（可以使用scp下载, 链接: https://pan.baidu.com/s/1YoPO1StZkGOoArkPkIjFAA 提取码: hbdg ）</p>
-
-<p>wget{% highlight %} https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64{% endhighlight %}</p>
-
+<p>wget{% highlight html %} https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64{% endhighlight %}</p>
 <p>sudo mv docker-compose-linux-x86_64 /usr/local/bin/docker-compose</p>
-
-<p>{% highlight %}docker-compose --version{% endhighlight %}</p>
-
+<p>{% highlight html %}docker-compose --version{% endhighlight %}</p>
 <p>输出：</p>
-
-<p>{% highlight %}Docker Compose version v2.5.0{% endhighlight %}</p>
-
-<p>{% highlight %}4。安装docker postgres15{% endhighlight %}</p>
-
+<p>{% highlight html %}Docker Compose version v2.5.0{% endhighlight %}</p>
+<p>{% highlight html %}4。安装docker postgres15{% endhighlight %}</p>
 <p>sudo docker pull postgres:15</p>
-
 <p>docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres</p>
-
 <p>docker ps</p>
-
 <p>输出：</p>
-
-{% highlight %}
-{% highlight %}CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
-
+{% highlight html %}CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES
 42701b5edfd0&nbsp;&nbsp; postgres&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 2 seconds&nbsp;&nbsp; 5432/tcp&nbsp;&nbsp; laughing_faraday{% endhighlight %}
-
 <p>docker inspect 4270</p>
-
 <p>ip address： 172.18.0.2</p>
-
 <p>5.安装go</p>
-
-{% highlight %}
-{% highlight %}wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
-
-{% highlight %}
-{% highlight %}tar -xvf go1.18.3.linux-amd64.tar.gz{% endhighlight %}
-
-{% highlight %}
-{% highlight %}sudo mv go /usr/local/go_1.18.3{% endhighlight %}
-
-<p>{% highlight %}vim {% endhighlight %}.bashrc</p>
-
+{% highlight html %}wget https://golang.org/dl/go1.18.3.linux-amd64.tar.gz{% endhighlight %}
+{% highlight html %}tar -xvf go1.18.3.linux-amd64.tar.gz{% endhighlight %}
+{% highlight html %}sudo mv go /usr/local/go_1.18.3{% endhighlight %}
+<p>{% highlight html %}vim {% endhighlight %}.bashrc</p>
 <p>export PATH=$PATH:/usr/local/go_1.18.3/bin</p>
-
-{% highlight %}
-{% highlight %}go version{% endhighlight %}
-
+{% highlight html %}go version{% endhighlight %}
 <p>go version go1.18.3 linux/amd64</p>
-
 <p>6.部署后端</p>
-
 <p>进入后端：</p>
-
 <p>go build</p>
-
 <p>修改conf/app.ini</p>
-
 <p>修改postgres的密码和端口号（5432）和ip(172.18.0.2)</p>
-
 <p>创建数据库：</p>
-
 <p>sudo docker exec -it 4270 /bin/bash</p>
-
 <p>su postgres</p>
-
 <p>psql</p>
-
 <p>create database database_name;</p>
-
 <p>启动./xxx(生成的可执行文件)</p>
-
 <p>7.启动后端</p>
-
 <p>使用静态文件，在本地yarn build生成后，scp到服务器即可</p>
-
 <p>8.配置nginx</p>
-
 <p>react端使用静态配置，go后端使用动态配置</p>
-
 <p>server {<br />
 &nbsp; listen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80;<br />
 &nbsp; server_name&nbsp; xxx.xxx.com;<br />
 &nbsp; charset utf-8;</p>
-
 <p>&nbsp; #location ~ ^/uploads/ {<br />
 &nbsp; #&nbsp; root /root/blog/public;<br />
 &nbsp; #}</p>
-
 <p>&nbsp; location / {<br />
 &nbsp;&nbsp;&nbsp; #root localhost:8000;<br />
 &nbsp;&nbsp;&nbsp; #proxy_pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; server localhost:8000;<br />
@@ -136,23 +80,17 @@ categories:
 &nbsp;&nbsp;&nbsp; proxy_next_upstream http_502 http_504 error timeout invalid_header;<br />
 &nbsp;&nbsp;&nbsp; proxy_set_header Cookie $http_cookie;<br />
 &nbsp; }</p>
-
 <p>}</p>
-
 <p>upstream yoursite_name_server{<br />
 &nbsp; server localhost:8000;<br />
 }</p>
-
 <p>前端使用：</p>
-
 <p>server {<br />
 &nbsp; listen 80;<br />
 &nbsp; server_name xxx.xxx.com;<br />
 &nbsp; charset utf-8;</p>
-
 <p>&nbsp; root /tmp/build;<br />
 &nbsp; index index.html;</p>
-
 <p>&nbsp; location / {<br />
 &nbsp;&nbsp;&nbsp; add_header Access-Control-Allow-Origin http://xxx.xx.com;<br />
 &nbsp;&nbsp;&nbsp; add_header Access-Control-Allow-Methods &#39;GET, POST, PUT, DELETE, OPTIONS&#39;;<br />
@@ -166,8 +104,5 @@ categories:
 &nbsp;&nbsp;&nbsp; try_files $uri $uri/ /index.html;<br />
 &nbsp; }<br />
 }</p>
-
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

@@ -31,7 +31,6 @@ linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps -a<br />
 CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; COMMAND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CREATED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STATUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NAMES<br />
 3b2d46e0543a&nbsp;&nbsp; f4a2a7264d08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;/bin/bash -c &#39;volta&hellip;&quot;&nbsp;&nbsp; 2 weeks ago&nbsp;&nbsp;&nbsp; Exited (127) 2 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compassionate_gould<br />
 a2f73981864a&nbsp;&nbsp; f4a2a7264d08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;/bin/bash -c &#39;volta&hellip;&quot;&nbsp;&nbsp; 2 weeks ago&nbsp;&nbsp;&nbsp; Exited (127) 2 weeks ago&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; kind_davinci</p>
-
 <p><br />
 sudo docker start 5d5b<br />
 5d5b<br />
@@ -63,7 +62,6 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
 5d5b156fb1b0&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 8 weeks ago&nbsp;&nbsp; Up 3 minutes&nbsp;&nbsp; 0.0.0.0:27017-&gt;27017/tcp, :::27017-&gt;27017/tcp&nbsp;&nbsp; mongo5.0.6<br />
 linlin@linlin-i5:/workspace/docker_folder$ sudo docker stop 5d5b<br />
 5d5b</p>
-
 <p>sudo docker run -it -p 127.0.0.1:27017:27017 -v /workspace/docker_folder/mongo5.0.6:/data/db -d mongo:5.0.6<br />
 74378c6e312082860d162442edaf6c434da6e6dee1a7ab052365fc8fccec34b3<br />
 linlin@linlin-i5:/workspace/docker_folder$ sudo docker ps<br />
@@ -71,18 +69,15 @@ CONTAINER ID&nbsp;&nbsp; IMAGE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C
 74378c6e3120&nbsp;&nbsp; mongo:5.0.6&nbsp;&nbsp; &quot;docker-entrypoint.s&hellip;&quot;&nbsp;&nbsp; 5 seconds ago&nbsp;&nbsp; Up 4 seconds&nbsp;&nbsp; 127.0.0.1:27017-&gt;27017/tcp&nbsp;&nbsp; modest_thompson<br />
 linlin@linlin-i5:/workspace/docker_folder$ sudo docker exec -it 7437 bash<br />
 root@74378c6e3120:/# top</p>
-
 <p>top - 10:52:06 up 5 days,&nbsp; 6:54,&nbsp; 0 users,&nbsp; load average: 1.17, 1.15, 1.01<br />
 Tasks:&nbsp;&nbsp; 3 total,&nbsp;&nbsp; 1 running,&nbsp;&nbsp; 2 sleeping,&nbsp;&nbsp; 0 stopped,&nbsp;&nbsp; 0 zombie<br />
 %Cpu(s):&nbsp; 7.9 us,&nbsp; 1.4 sy,&nbsp; 0.0 ni, 90.5 id,&nbsp; 0.0 wa,&nbsp; 0.0 hi,&nbsp; 0.2 si,&nbsp; 0.0 st<br />
 MiB Mem :&nbsp; 15699.0 total,&nbsp;&nbsp;&nbsp; 270.0 free,&nbsp; 12958.7 used,&nbsp;&nbsp; 2470.3 buff/cache<br />
 MiB Swap:&nbsp;&nbsp; 2048.0 total,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.0 free,&nbsp;&nbsp; 2048.0 used.&nbsp;&nbsp; 1121.2 avail Mem</p>
-
 <p>&nbsp;&nbsp;&nbsp; PID USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PR&nbsp; NI&nbsp;&nbsp;&nbsp; VIRT&nbsp;&nbsp;&nbsp; RES&nbsp;&nbsp;&nbsp; SHR S&nbsp; %CPU&nbsp; %MEM&nbsp;&nbsp;&nbsp;&nbsp; TIME+ COMMAND<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 mongodb&nbsp;&nbsp; 20&nbsp;&nbsp; 0 1543264 112636&nbsp; 49288 S&nbsp;&nbsp; 0.3&nbsp;&nbsp; 0.7&nbsp;&nbsp; 0:01.14 mongod<br />
 &nbsp;&nbsp;&nbsp;&nbsp; 59 root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 4248&nbsp;&nbsp; 3444&nbsp;&nbsp; 2872 S&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0:00.01 bash<br />
 &nbsp;&nbsp;&nbsp;&nbsp; 67 root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 6156&nbsp;&nbsp; 3228&nbsp;&nbsp; 2692 R&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0.0&nbsp;&nbsp; 0:00.00 top</p>
-
 <p><br />
 root@74378c6e3120:/# mongo<br />
 MongoDB shell version v5.0.6<br />
@@ -110,11 +105,9 @@ The server generated these startup warnings when booting:<br />
 ---<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
 ---<br />
@@ -150,11 +143,9 @@ The server generated these startup warnings when booting:<br />
 ---<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
 ---<br />
@@ -174,30 +165,22 @@ mongo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongod&nbsp;&nbsp;&nbsp;&n
 root@74378c6e3120:~# mongorestore --help<br />
 Usage:<br />
 &nbsp; mongorestore &lt;options&gt; &lt;connection-string&gt; &lt;directory or file to restore&gt;</p>
-
 <p>Restore backups generated with mongodump to a running server.</p>
-
 <p>Specify a database with -d to restore a single database from the target directory,<br />
 or use -d and -c to restore a single collection from a single .bson file.</p>
-
 <p>Connection strings must begin with mongodb:// or mongodb+srv://.</p>
-
 <p>See http://docs.mongodb.com/database-tools/mongorestore/ for more information.</p>
-
 <p>general options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --help&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print usage<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print the tool version and exit<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --config=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path to a configuration file</p>
-
 <p>verbosity options:<br />
 &nbsp; -v, --verbose=&lt;level&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; more detailed log output (include multiple times for more verbosity, e.g. -vvvvv, or specify a numeric value,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.g. --verbose=N)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --quiet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hide all log output</p>
-
 <p>connection options:<br />
 &nbsp; -h, --host=&lt;hostname&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodb host to connect to (setname/host1,host2 for replica sets)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --port=&lt;port&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; server port (can also use --host hostname:port)</p>
-
 <p>ssl options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --ssl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; connect to a mongod or mongos that has ssl enabled<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslCAFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the .pem file containing the root certificate chain from the certificate authority<br />
@@ -206,25 +189,20 @@ or use -d and -c to restore a single collection from a single .bson file.</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslCRLFile=&lt;filename&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the .pem file containing the certificate revocation list<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --sslFIPSMode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; use FIPS mode of the installed openssl library<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --tlsInsecure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bypass the validation for server&#39;s certificate chain and host name</p>
-
 <p>authentication options:<br />
 &nbsp; -u, --username=&lt;username&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; username for authentication<br />
 &nbsp; -p, --password=&lt;password&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; password for authentication<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --authenticationDatabase=&lt;database-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database that holds the user&#39;s credentials<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --authenticationMechanism=&lt;mechanism&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; authentication mechanism to use<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --awsSessionToken=&lt;aws-session-token&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; session token to authenticate via AWS IAM</p>
-
 <p>kerberos options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gssapiServiceName=&lt;service-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; service name to use when authenticating using GSSAPI/Kerberos (default: mongodb)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gssapiHostName=&lt;host-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hostname to use when authenticating using GSSAPI/Kerberos (default: &lt;remote server&#39;s address&gt;)</p>
-
 <p>namespace options:<br />
 &nbsp; -d, --db=&lt;database-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; database to use<br />
 &nbsp; -c, --collection=&lt;collection-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collection to use</p>
-
 <p>uri options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --uri=mongodb-uri&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mongodb uri connection string</p>
-
 <p>namespace options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --excludeCollection=&lt;collection-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEPRECATED; collection to skip over during restore (may be specified multiple times to exclude additional<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collections)<br />
@@ -234,7 +212,6 @@ or use -d and -c to restore a single collection from a single .bson file.</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsInclude=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include matching namespaces<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsFrom=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rename matching namespaces, must have matching nsTo<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --nsTo=&lt;namespace-pattern&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rename matched namespaces, must have matching nsFrom</p>
-
 <p>input options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --objcheck&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; validate all objects before inserting<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --oplogReplay&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; replay oplog for point-in-time restore<br />
@@ -244,7 +221,6 @@ or use -d and -c to restore a single collection from a single .bson file.</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --restoreDbUsersAndRoles&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; restore user and role definitions for the given database<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --dir=&lt;directory-name&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; input directory, use &#39;-&#39; for stdin<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --gzip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decompress gzipped input</p>
-
 <p>restore options:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --drop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drop each collection before import<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --dryRun&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; view summary without importing anything. recommended with verbosity<br />
@@ -281,7 +257,6 @@ root@74378c6e3120:~# mongorestore --archive=20220624-065751.archive<br />
 2022-06-24T10:54:22.776+0000&nbsp;&nbsp;&nbsp; restoring lueluelue.claims from archive &#39;20220624-065751.archive&#39;<br />
 2022-06-24T10:54:22.872+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.claims index: _id_ dup key: { _id: ObjectId(&#39;61a71b291828d7531dae46ab&#39;) }<br />
 2022-06-24T10:54:22.872+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.claims index: _id_ dup key: { _id: ObjectId(&#39;61a70c55f48225bbe6932360&#39;) }</p>
-
 <p><br />
 2022-06-24T10:54:23.238+0000&nbsp;&nbsp;&nbsp; continuing through error: E11000 duplicate key error collection: lueluelue.domain_registers index: _id_ dup key: { _id: ObjectId(&#39;626a168e4cf72c5084e166a0&#39;) }<br />
 2022-06-24T10:54:23.256+0000&nbsp;&nbsp;&nbsp; finished restoring lueluelue.domain_registers (3020 documents, 2153 failures)<br />
@@ -314,11 +289,9 @@ The server generated these startup warnings when booting:<br />
 ---<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
 ---<br />
@@ -332,7 +305,6 @@ The server generated these startup warnings when booting:<br />
 &nbsp;&nbsp;&nbsp; help keys&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; key shortcuts<br />
 &nbsp;&nbsp;&nbsp; help misc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; misc things to know<br />
 &nbsp;&nbsp;&nbsp; help mr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mapreduce</p>
-
 <p>&nbsp;&nbsp;&nbsp; show dbs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show database names<br />
 &nbsp;&nbsp;&nbsp; show collections&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show collections in current database<br />
 &nbsp;&nbsp;&nbsp; show users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; show users in current database<br />
@@ -367,11 +339,9 @@ The server generated these startup warnings when booting:<br />
 ---<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; metrics about your deployment (disk utilization, CPU, operation statistics, etc).</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The monitoring data will be available on a MongoDB website with a unique URL accessible to you<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and anyone you share the URL with. MongoDB may use this information to make product<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; improvements and to suggest MongoDB products and deployment options to you.</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To enable free monitoring, run the following command: db.enableFreeMonitoring()<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To permanently disable this reminder, run the following command: db.disableFreeMonitoring()<br />
 ---<br />
@@ -419,6 +389,4 @@ root@74378c6e3120:~# mongorestore --archive=20220624-065751.archive<br />
 2022-06-24T10:55:46.080+0000&nbsp;&nbsp;&nbsp; no indexes to restore for collection lueluelue.invalid_domains<br />
 2022-06-24T10:55:46.129+0000&nbsp;&nbsp;&nbsp; 10461 document(s) restored successfully. 0 document(s) failed to restore.<br />
 root@74378c6e3120:~#</p>
-
 <p>&nbsp;</p>
-

@@ -5,18 +5,9 @@ date: "2023-08-08"
 categories: 
 ---
 <p>refer: <a href="https://git-scm.com/docs/git-show">https://git-scm.com/docs/git-show</a></p>
-
 <p>使用git show 可以查看某个commit修改的所有内容。</p>
-
-<p>({% highlight %}git show{% endhighlight %} 是 Git 的一个命令，可用于查看指定提交的详细信息，包括提交的 SHA-1 校验和、作者、提交日期和时间、提交注释以及提交的更改内容等。)</p>
-
+<p>({% highlight html %}git show{% endhighlight %} 是 Git 的一个命令，可用于查看指定提交的详细信息，包括提交的 SHA-1 校验和、作者、提交日期和时间、提交注释以及提交的更改内容等。)</p>
 <p>1.使用git log获得某个commit 的id，使用id进行查看该commit的修改内容。</p>
-
-{% highlight %}
-{% highlight %}git show [commit]{% endhighlight %}
-
-<p>{% highlight %}2.查看最新的commit{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}git <span style="color:#dcc6e0">show</span>{% endhighlight %}
-
+{% highlight html %}git show [commit]{% endhighlight %}
+<p>{% highlight html %}2.查看最新的commit{% endhighlight %}</p>
+{% highlight html %}git <span style="color:#dcc6e0">show</span>{% endhighlight %}

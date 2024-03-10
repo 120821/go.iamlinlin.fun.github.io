@@ -5,121 +5,65 @@ date: "2022-12-16"
 categories: 
 ---
 <p>参考： <a href="https://www.programsbuzz.com/article/how-handle-multiple-tabs-playwright">https://www.programsbuzz.com/article/how-handle-multiple-tabs-playwright</a></p>
-
 <p>例如这样的：</p>
-
-{% highlight %}
-{% highlight %}test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
-    const page = await context.newPage();
-    await page.goto(&quot;https://www.programsbuzz.com/&quot;)
-
-    const [newPage] = await Promise.all([
-        context.waitForEvent(&#39;page&#39;),
-        // This action triggers the new tab
-        page.locator(&#39;text=By iVagus Services Pvt. Ltd.&#39;).click() 
-      ])
-           
-      // title of new tab page
-      console.log(await newPage.title());
-      // title of existing page
-      console.log(await page.title());
+{% highlight html %}test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
+const page = await context.newPage();
+await page.goto(&quot;https://www.programsbuzz.com/&quot;)
+const [newPage] = await Promise.all([
+context.waitForEvent(&#39;page&#39;),
+// This action triggers the new tab
+page.locator(&#39;text=By iVagus Services Pvt. Ltd.&#39;).click() 
+])
+// title of new tab page
+console.log(await newPage.title());
+// title of existing page
+console.log(await page.title());
 }){% endhighlight %}
-
 <p>那么获得京东的首页，进入首页的秒杀页面，进入商品的详情页面就是这样的：</p>
-
-{% highlight %}
-{% highlight %}const { test, expect } = require(&#39;@playwright/test&#39;);
-
+{% highlight html %}const { test, expect } = require(&#39;@playwright/test&#39;);
 test.only(&#39;verify multiple tabs&#39;, async({context})=&gt;{
-
 &nbsp; const page = await context.newPage();
-
 &nbsp; await page.goto(&#39;https://www.jd.com/?d&#39;)
-
 &nbsp; await page.waitForTimeout(5000);
-
 &nbsp; const [newPage] = await Promise.all([
-
 &nbsp;&nbsp;&nbsp; context.waitForEvent(&#39;page&#39;),
-
 &nbsp;&nbsp;&nbsp; // This action triggers the new tab
-
 &nbsp;&nbsp;&nbsp; //page.getByText(&#39;（全8册，少年读史记，国学早启蒙。100余位历史人物传记，图文并茂，提高作文水平）&#39;).last().click();
-
 &nbsp;&nbsp;&nbsp; //page.waitForTimeout(5000);
-
 &nbsp;&nbsp;&nbsp; page.locator(&#39;text=史记少年版&#39;).first().click()
-
 &nbsp; ])
-
 &nbsp; const [showPage] = await Promise.all([
-
 &nbsp;&nbsp;&nbsp; context.waitForEvent(&#39;page&#39;),
-
 &nbsp;&nbsp;&nbsp; // This action triggers the new tab
-
 &nbsp;&nbsp;&nbsp; //page.getByText(&#39;（全8册，少年读史记，国学早启蒙。100余位历史人物传记，图文并茂，提高作文水平）&#39;).last().click();
-
 &nbsp;&nbsp;&nbsp; //page.waitForTimeout(5000);
-
 &nbsp;&nbsp;&nbsp; page.locator(&#39;text=史记少年版&#39;).first().click()
-
 &nbsp; ])
-
 &nbsp; console.log(await showPage.title());
-
 &nbsp; console.log(await showPage.url());
-
 &nbsp; // title of new tab page
-
 &nbsp; console.log(await newPage.title());
-
 &nbsp; console.log(await newPage.url());
-
 &nbsp; // title of existing page
-
 &nbsp; console.log(await page.title());
-
 &nbsp; console.log(await page.url());
-
 }){% endhighlight %}
-
 <p>运行后，通过了：npx playwright test jing.spec.js --debug</p>
-
-{% highlight %}
-{% highlight %}Running 2 tests using 1 worker
-
+{% highlight html %}Running 2 tests using 1 worker
 [firefox] &rsaquo; jing.spec.js:3:6 &rsaquo; verify multiple tabs
-
 京东秒杀-正品保证、天天低价、限时限量
-
 https://miaosha.jd.com/#13119711
-
 京东秒杀-正品保证、天天低价、限时限量
-
 https://miaosha.jd.com/#13119711
-
 京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！
-
 https://www.jd.com/?d
-
 [webkit] &rsaquo; jing.spec.js:3:6 &rsaquo; verify multiple tabs
-
 京东秒杀-正品保证、天天低价、限时限量
-
 https://miaosha.jd.com/#13119711
-
 京东秒杀-正品保证、天天低价、限时限量
-
 https://miaosha.jd.com/#13119711
-
 京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！
-
 https://www.jd.com/?d
-
 &nbsp; 2 passed (39s)
-
 To open last HTML report run:
-
 &nbsp; npx playwright show-report{% endhighlight %}
-

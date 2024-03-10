@@ -5,16 +5,9 @@ date: "2022-11-11"
 categories: 
 ---
 <p><a href="https://blog.csdn.net/ju_362204801/article/details/105338612">https://blog.csdn.net/ju_362204801/article/details/105338612</a></p>
-
 <p>升序：</p>
-
-{% highlight %}ps aux --sort=+rss{% endhighlight %}
-
+{% highlight html %}ps aux --sort=+rss{% endhighlight %}
 <p><img height="250" src="/uploads/ckeditor/pictures/725/image-20221111175120-3.png" width="1521" /></p>
-
 <p>降序：</p>
-
-{% highlight %}ps aux --sort=-rss{% endhighlight %}
-
+{% highlight html %}ps aux --sort=-rss{% endhighlight %}
 <p><img height="250" src="/uploads/ckeditor/pictures/724/image-20221111175113-2.png" width="1521" /></p>
-

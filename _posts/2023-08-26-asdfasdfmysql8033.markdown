@@ -5,17 +5,8 @@ date: "2023-08-26"
 categories: 
 ---
 <p>使用命令查看要取消的版本：</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#ffd700">asdf list mysql</span>{% endhighlight %}
-
+{% highlight html %}<span style="color:#ffd700">asdf list mysql</span>{% endhighlight %}
 <p>取消安装即可：</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#ffd700">asdf</span> uninstall mysql <span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">33</span>{% endhighlight %}
-
+{% highlight html %}<span style="color:#ffd700">asdf</span> uninstall mysql <span style="color:#f5ab35">8</span>.<span style="color:#f5ab35">0</span>.<span style="color:#f5ab35">33</span>{% endhighlight %}
 <p>或者仅仅取消全局：</p>
-
-{% highlight %}
-{% highlight %}asdf <span style="color:#f5ab35">global</span> mysql <span style="color:#f5ab35">none</span>{% endhighlight %}
-
+{% highlight html %}asdf <span style="color:#f5ab35">global</span> mysql <span style="color:#f5ab35">none</span>{% endhighlight %}

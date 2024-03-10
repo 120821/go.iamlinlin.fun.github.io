@@ -5,30 +5,16 @@ date: "2023-08-01"
 categories: 
 ---
 <p>Arefer: <a href="http://cd /usr/local/ linlin@linlin-i5:/usr/local$ ls bin  etc  games  go  go.gz  include  lib  man  sbin  share  src">http://cd /usr/local/ linlin@linlin-i5:/usr/local$ ls bin etc games go go.gz include lib man sbin share src</a></p>
-
 <p><a href="https://bbs.huaweicloud.com/blogs/291830">https://bbs.huaweicloud.com/blogs/291830</a></p>
-
 <p>1.包和目录的命名：</p>
-
 <p>全部小写，不重名。简洁简短，不使用复数，不使用common，lib, util,shared.</p>
-
 <p>2.文件命名：</p>
-
 <p>全小写字母，使用分词&#39;_&#39;连接。</p>
-
 <p>3.变量和常量：</p>
-
 <p>变量使用驼峰命名法。</p>
-
 <p>常量使用全部大写，使用&#39;_&#39;分词。</p>
-
 <p>4.函数名和方法名：</p>
-
 <p>使用动词+名词，如果是判断类型，名称应该包含：Is, Has,Can,Allow...</p>
-
 <p>5.接口和结构体：</p>
-
 <p>使用名词或名词连接</p>
-
 <p>&nbsp;</p>
-

@@ -5,10 +5,6 @@ date: "2022-07-12"
 categories: 
 ---
 <p>grep blue . -r --include=*yml</p>
-
 <p>grep blue . -r --include=*rb</p>
-
 <p>grep blue . -r</p>
-
 <p>&nbsp;</p>
-

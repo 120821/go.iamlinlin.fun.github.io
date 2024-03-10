@@ -5,16 +5,10 @@ date: "2022-08-09"
 categories: 
 ---
 <p>参考：https://guides.rubyonrails.org/action_mailer_basics.html</p>
-
 <p><img height="492" src="/uploads/ckeditor/pictures/171/image-20220809162655-1.png" width="785" /></p>
-
 <p><img height="578" src="/uploads/ckeditor/pictures/172/image-20220809162723-2.png" width="776" /></p>
-
-<p>{% highlight %}user_mailer.rb ：{% endhighlight %}</p>
-
-{% highlight %}
-{% highlight %}&nbsp;class UserMailer &lt; ApplicationMailer
-
+<p>{% highlight html %}user_mailer.rb ：{% endhighlight %}</p>
+{% highlight html %}&nbsp;class UserMailer &lt; ApplicationMailer
 &nbsp; 2&nbsp;&nbsp; default from: &#39; web3@163.com&#39;
 &nbsp; 3
 &nbsp; 4&nbsp;&nbsp; def send_validation_email to, code, subject
@@ -23,11 +17,8 @@ categories:
 &nbsp; 7&nbsp;&nbsp; end
 &nbsp; 8
 &nbsp; 9 end{% endhighlight %}
-
 <p>正文：app/views/user_mailer/send_validation_email.html.erb</p>
-
-{% highlight %}
-{% highlight %}&lt;body style=&quot;font-size:14px;font-family:arial,verdana,sans-serif;line-height:1.666;padding:0;margin:0;overflow:auto;white-space:normal;word-wrap:break-word;min-height:100px;
+{% highlight html %}&lt;body style=&quot;font-size:14px;font-family:arial,verdana,sans-serif;line-height:1.666;padding:0;margin:0;overflow:auto;white-space:normal;word-wrap:break-word;min-height:100px;
 &nbsp; &lt;table width=&quot;700&quot; border=&quot;0&quot; align=&quot;center&quot; cellspacing=&quot;0&quot; style=&quot;width:700px;&quot;&gt;
 &nbsp;&nbsp;&nbsp; &lt;tbody&gt;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tr&gt;
@@ -66,4 +57,3 @@ categories:
 &nbsp;&nbsp;&nbsp; &lt;/tbody&gt;
 &nbsp; &lt;/table&gt;
 &lt;/body&gt;{% endhighlight %}
-

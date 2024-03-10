@@ -5,52 +5,38 @@ date: "2023-12-19"
 categories: 
 ---
 <p><a href="https://avd.aliyun.com/">阿里云漏洞库</a>&nbsp; <a href="https://cve.mitre.org/index.html">https://cve.mitre.org/index.html</a></p>
-
 <p>我在CVE库里进行查询某个漏洞：</p>
-
 <p>例如：<a href="https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-20867">https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2023-20867</a></p>
-
-{% highlight %}
-{% highlight %}<span style="color:#dcc6e0">Search</span> Results
+{% highlight html %}<span style="color:#dcc6e0">Search</span> Results
 There are <span style="color:#f5ab35">1</span> CVE Records that match your <span style="color:#dcc6e0">search</span>.
 <span style="color:#f5ab35">Name</span> 	Description
 CVE<span style="color:#f5ab35">-2023</span><span style="color:#f5ab35">-20867</span> 	A fully compromised ESXi host can force VMware Tools <span style="color:#dcc6e0">to</span> fail <span style="color:#dcc6e0">to</span> authenticate host-<span style="color:#dcc6e0">to</span>-guest operations, impacting the confidentiality <span style="color:#dcc6e0">and</span> integrity <span style="color:#dcc6e0">of</span> the guest virtual machine.
 {% endhighlight %}
-
 <p>该 CVE 记录的描述，CVE-2023-20867 是指完全被入侵的 ESXi 主机可以强制 VMware Tools 在主机与客户机之间的操作中无法进行身份验证，从而影响了客户虚拟机的机密性和完整性。</p>
-
 <p>阿里云的漏洞库得到的结果是：<a href="https://avd.aliyun.com/search?q=CVE-2023-20867">https://avd.aliyun.com/search?q=CVE-2023-20867</a></p>
-
 <table class="table">
-	<tbody>
-		<tr>
-			<td><a href="https://avd.aliyun.com/detail?id=AVD-2023-20867" target="_blank">AVD-2023-20867 </a></td>
-			<td>VMware Tools 身份认证绕过漏洞(CVE-2023-20867)</td>
-			<td>&nbsp;</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<td><a href="https://avd.aliyun.com/detail?id=AVD-2023-20867" target="_blank">AVD-2023-20867 </a></td>
+<td>VMware Tools 身份认证绕过漏洞(CVE-2023-20867)</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
 </table>
-
 <table class="table">
-	<tbody>
-		<tr>
-			<td>2023-06-14</td>
-			<td>&nbsp;</td>
-		</tr>
-	</tbody>
+<tbody>
+<tr>
+<td>2023-06-14</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
 </table>
-
 <p>漏洞的描述是：VMware Tools 在 vgauth 模块中存在身份验证绕过漏洞，受影响的 ESXi 主机可能使得 VMware Tools 无法验证主机到客户机的操作，从而影响客户虚拟机的机密性和完整性。</p>
-
 <p>详细介绍见:&nbsp; <a href="https://avd.aliyun.com/detail?id=AVD-2023-20867">https://avd.aliyun.com/detail?id=AVD-2023-20867</a></p>
-
 <p>如果我要重现这个漏洞，我需要进行以下步骤：</p>
-
 <ol>
-	<li>拥有一个已经被完全入侵的 ESXi 主机。</li>
-	<li>主机上安装了 VMware Tools。</li>
-	<li>执行一系列的攻击操作，以迫使 VMware Tools 无法进行主机到客户机的身份验证。</li>
+<li>拥有一个已经被完全入侵的 ESXi 主机。</li>
+<li>主机上安装了 VMware Tools。</li>
+<li>执行一系列的攻击操作，以迫使 VMware Tools 无法进行主机到客户机的身份验证。</li>
 </ol>
-
 <p>&nbsp;</p>
-

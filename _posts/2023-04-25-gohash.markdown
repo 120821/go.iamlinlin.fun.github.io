@@ -5,264 +5,174 @@ date: "2023-04-25"
 categories: 
 ---
 <p>go hash（哈希）是Go语言中的一个标准库，可用于散列（哈希）数据。使用它可以完成数据加密、数据校验、唯一标识生成等多种功能。</p>
-
 <p>以下是go hash的简单使用：</p>
-
 <ol>
-	<li>
-	<p>导入go hash包：{% highlight %}import &quot;crypto/sha1&quot;{% endhighlight %}</p>
-	</li>
-	<li>
-	<p>创建一个hash对象：{% highlight %}hasher := sha1.New(){% endhighlight %}</p>
-	</li>
-	<li>
-	<p>将数据添加到hash中：{% highlight %}hasher.Write([]byte(&quot;password&quot;)){% endhighlight %}</p>
-	</li>
-	<li>
-	<p>计算哈希值：{% highlight %}hashBytes := hasher.Sum(nil){% endhighlight %}</p>
-	</li>
-	<li>
-	<p>将哈希值转换为字符串形式：{% highlight %}hashString := hex.EncodeToString(hashBytes){% endhighlight %}</p>
-	</li>
+<li>
+<p>导入go hash包：{% highlight html %}import &quot;crypto/sha1&quot;{% endhighlight %}</p>
+</li>
+<li>
+<p>创建一个hash对象：{% highlight html %}hasher := sha1.New(){% endhighlight %}</p>
+</li>
+<li>
+<p>将数据添加到hash中：{% highlight html %}hasher.Write([]byte(&quot;password&quot;)){% endhighlight %}</p>
+</li>
+<li>
+<p>计算哈希值：{% highlight html %}hashBytes := hasher.Sum(nil){% endhighlight %}</p>
+</li>
+<li>
+<p>将哈希值转换为字符串形式：{% highlight html %}hashString := hex.EncodeToString(hashBytes){% endhighlight %}</p>
+</li>
 </ol>
-
 <p>完整的示例代码如下：</p>
-
-{% highlight %}
-{% highlight %}import (
-    &quot;crypto/sha1&quot;
-    &quot;encoding/hex&quot;   
+{% highlight html %}import (
+&quot;crypto/sha1&quot;
+&quot;encoding/hex&quot;   
 )
-
 func main() {
-    hasher := sha1.New()
-    hasher.Write([]byte(&quot;password&quot;))
-    hashBytes := hasher.Sum(nil)
-    hashString := hex.EncodeToString(hashBytes)
-    fmt.Println(hashString)
+hasher := sha1.New()
+hasher.Write([]byte(&quot;password&quot;))
+hashBytes := hasher.Sum(nil)
+hashString := hex.EncodeToString(hashBytes)
+fmt.Println(hashString)
 }{% endhighlight %}
-
-<p>输出结果将是 {% highlight %}5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8{% endhighlight %}，这就是&ldquo;password&rdquo;经过sha1哈希后的结果。</p>
-
+<p>输出结果将是 {% highlight html %}5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8{% endhighlight %}，这就是&ldquo;password&rdquo;经过sha1哈希后的结果。</p>
 <p>以上就是go hash的简单使用示例，可以根据具体需求选择适合的哈希算法（MD5、SHA1、SHA256、SHA512等）。</p>
-
 <p>2.go hash 的key value 的简单使用</p>
-
-<p>go hash 中的 key-value 使用，可以使用内置的 {% highlight %}map{% endhighlight %} 数据类型，其中 key 可以是任何可比较类型，而 value 可以是任何类型。下面是一个简单的示例：</p>
-
-{% highlight %}
-{% highlight %}myMap := make(map[string]int)
+<p>go hash 中的 key-value 使用，可以使用内置的 {% highlight html %}map{% endhighlight %} 数据类型，其中 key 可以是任何可比较类型，而 value 可以是任何类型。下面是一个简单的示例：</p>
+{% highlight html %}myMap := make(map[string]int)
 myMap[&quot;one&quot;] = 1
 myMap[&quot;two&quot;] = 2
-
 fmt.Println(myMap[&quot;one&quot;]) // 输出 1
 fmt.Println(myMap[&quot;two&quot;]) // 输出 2{% endhighlight %}
-
-<p>在上面的示例中，我们创建了一个 {% highlight %}map{% endhighlight %} 类型的变量 {% highlight %}myMap{% endhighlight %}，其中 key 的类型为 {% highlight %}string{% endhighlight %}，value 的类型为 {% highlight %}int{% endhighlight %}。</p>
-
-<p>可以使用 {% highlight %}make{% endhighlight %} 函数初始化一个空的 {% highlight %}map{% endhighlight %} 变量，然后使用 key 进行插入和查询操作。例如，我们插入了 {% highlight %}&quot;one&quot;{% endhighlight %} 和 {% highlight %}&quot;two&quot;{% endhighlight %} 作为 key，并将对应的 value 设置为 1 和 2。然后，我们使用 {% highlight %}Println{% endhighlight %} 函数输出了 {% highlight %}myMap[&quot;one&quot;]{% endhighlight %} 和 {% highlight %}myMap[&quot;two&quot;]{% endhighlight %} 的值，分别为 1 和 2。</p>
-
-<p>除了使用 {% highlight %}make{% endhighlight %} 函数初始化 {% highlight %}map{% endhighlight %}，还可以使用以下语法初始化：</p>
-
-{% highlight %}
-{% highlight %}myMap := map[string]int{
-    &quot;one&quot;: 1,
-    &quot;two&quot;: 2,
+<p>在上面的示例中，我们创建了一个 {% highlight html %}map{% endhighlight %} 类型的变量 {% highlight html %}myMap{% endhighlight %}，其中 key 的类型为 {% highlight html %}string{% endhighlight %}，value 的类型为 {% highlight html %}int{% endhighlight %}。</p>
+<p>可以使用 {% highlight html %}make{% endhighlight %} 函数初始化一个空的 {% highlight html %}map{% endhighlight %} 变量，然后使用 key 进行插入和查询操作。例如，我们插入了 {% highlight html %}&quot;one&quot;{% endhighlight %} 和 {% highlight html %}&quot;two&quot;{% endhighlight %} 作为 key，并将对应的 value 设置为 1 和 2。然后，我们使用 {% highlight html %}Println{% endhighlight %} 函数输出了 {% highlight html %}myMap[&quot;one&quot;]{% endhighlight %} 和 {% highlight html %}myMap[&quot;two&quot;]{% endhighlight %} 的值，分别为 1 和 2。</p>
+<p>除了使用 {% highlight html %}make{% endhighlight %} 函数初始化 {% highlight html %}map{% endhighlight %}，还可以使用以下语法初始化：</p>
+{% highlight html %}myMap := map[string]int{
+&quot;one&quot;: 1,
+&quot;two&quot;: 2,
 }{% endhighlight %}
-
-<p>在这种情况下，我们创建了一个 {% highlight %}map{% endhighlight %} 变量 {% highlight %}myMap{% endhighlight %}，其中包含了两个 key-value 对。我们可以通过 {% highlight %}myMap[&quot;one&quot;]{% endhighlight %} 和 {% highlight %}myMap[&quot;two&quot;]{% endhighlight %} 访问它们的值。</p>
-
-<p>总的来说，go hash 的 key-value 使用就是通过内置的 {% highlight %}map{% endhighlight %} 类型实现，其基本方法与其他语言中的哈希表实现类似</p>
-
+<p>在这种情况下，我们创建了一个 {% highlight html %}map{% endhighlight %} 变量 {% highlight html %}myMap{% endhighlight %}，其中包含了两个 key-value 对。我们可以通过 {% highlight html %}myMap[&quot;one&quot;]{% endhighlight %} 和 {% highlight html %}myMap[&quot;two&quot;]{% endhighlight %} 访问它们的值。</p>
+<p>总的来说，go hash 的 key-value 使用就是通过内置的 {% highlight html %}map{% endhighlight %} 类型实现，其基本方法与其他语言中的哈希表实现类似</p>
 <p>3.hash的key value 怎么理解</p>
-
 <p>在编程中，哈希表（也称散列表）是一种基于键值对（key-value）存储元素的数据结构。这意味着每个元素都有一个唯一的键和与之相关联的值。</p>
-
 <p>在哈希表中，我们通过将键（key）映射为哈希值（hash value）来定位元素，在哈希表中查找或插入元素的时间复杂度通常为 O(1)。因此，哈希表是一种非常高效的数据结构，通常被用于缓存、查找、索引等应用场景。</p>
-
 <p>哈希表中的键值对是一个键（key）和一个与之关联的值（value），其中键在哈希表中是唯一的。当我们向哈希表中插入一个元素时，我们指定这个元素的键和值；当我们从哈希表中访问元素时，我们指定这个元素的键，哈希表使用哈希函数（hash function）计算出哈希值，然后通过哈希值在哈希表中查找相应的值。</p>
-
 <p>在 Go 语言中，哈希表使用内置的 map 类型，其中键的类型可以是任何可以使用 == 运算符比较的类型，值的类型可以是任何类型。因此，当我们创建一个 map 变量时，必须先定义键和值的类型。例如：</p>
-
-{% highlight %}
-{% highlight %}var myMap map[string]int       // 定义一个键为 string，值为 int 的 map
+{% highlight html %}var myMap map[string]int       // 定义一个键为 string，值为 int 的 map
 map[string]string{&quot;k1&quot;: &quot;v1&quot;}  // 定义一个键为 string，值为 string 的 map{% endhighlight %}
-
 <p>在 Go 中，我们可以通过 map[key]value 的方式来访问或设置哈希表中的元素，其中 key 是哈希表中的键，value 是与之关联的值。例如：</p>
-
-{% highlight %}
-{% highlight %}myMap := make(map[string]int)  // 创建一个键值为 string-int 的空哈希表
-
+{% highlight html %}myMap := make(map[string]int)  // 创建一个键值为 string-int 的空哈希表
 myMap[&quot;apple&quot;] = 2             // 将键为 &quot;apple&quot; 的元素值设置为 2
 fmt.Println(myMap[&quot;apple&quot;])    // 输出 2
-
 _, ok := myMap[&quot;orange&quot;]       // 查看是否存在某个键
 fmt.Println(ok)                // 输出 false{% endhighlight %}
-
 <p>在上面的示例中，我们演示了如何将一个元素添加或读取到哈希表中，并使用 ok 特判查看一个键是否存在于哈希表中。</p>
-
 <p>4.在go语言，hash的key value 怎么理解</p>
-
 <p>在 Go 语言中，哈希表（也称为字典或映射）是一种用于存储键值对的数据结构。哈希表中的每个元素都由一个唯一的键（key）和一个与之相关联的值（value）组成。当我们想要检索哈希表中的某个元素时，只需要提供该元素的键即可快速找到其对应的值，而不需要遍历整个哈希表。</p>
-
 <p>在 Go 语言中，我们可以使用内置的 map 类型来定义哈希表。map 类型支持添加、删除和修改元素，同时还提供了快速查找元素的方法。</p>
-
 <p>以下是使用 map 类型定义哈希表以及操作哈希表示例的代码：</p>
-
-{% highlight %}
-{% highlight %}// 定义一个键为 string 类型、值为 int 类型的哈希表
+{% highlight html %}// 定义一个键为 string 类型、值为 int 类型的哈希表
 var myMap map[string]int
-
 // 初始化哈希表
 myMap = make(map[string]int)
-
 // 添加元素
 myMap[&quot;apple&quot;] = 10
 myMap[&quot;banana&quot;] = 20
 myMap[&quot;orange&quot;] = 30
-
 // 访问元素
 fmt.Println(myMap[&quot;apple&quot;]) // 输出 10
-
 // 修改元素
 myMap[&quot;apple&quot;] = 5
-
 // 删除元素
 delete(myMap, &quot;banana&quot;)
-
 // 遍历哈希表
 for key, value := range myMap {
-    fmt.Printf(&quot;%s:%d\n&quot;, key, value)
+fmt.Printf(&quot;%s:%d\n&quot;, key, value)
 }{% endhighlight %}
-
-<p>上述代码中，我们首先定义了一个键类型为 string，值类型为 int 的哈希表变量 {% highlight %}myMap{% endhighlight %}。接着，我们使用 {% highlight %}make{% endhighlight %} 函数对哈希表变量进行初始化，并使用赋值语句将元素添加到哈希表中。</p>
-
-<p>然后，我们使用 {% highlight %}fmt.Println(){% endhighlight %} 函数输出了键为 &quot;apple&quot; 的元素的值。接着，我们对键为 &quot;apple&quot; 的元素的值进行了修改，并使用 {% highlight %}delete(){% endhighlight %} 函数删除了键为 &quot;banana&quot; 的元素。最后，我们使用 {% highlight %}for{% endhighlight %} 循环遍历了整个哈希表，并输出了每个键值对。</p>
-
+<p>上述代码中，我们首先定义了一个键类型为 string，值类型为 int 的哈希表变量 {% highlight html %}myMap{% endhighlight %}。接着，我们使用 {% highlight html %}make{% endhighlight %} 函数对哈希表变量进行初始化，并使用赋值语句将元素添加到哈希表中。</p>
+<p>然后，我们使用 {% highlight html %}fmt.Println(){% endhighlight %} 函数输出了键为 &quot;apple&quot; 的元素的值。接着，我们对键为 &quot;apple&quot; 的元素的值进行了修改，并使用 {% highlight html %}delete(){% endhighlight %} 函数删除了键为 &quot;banana&quot; 的元素。最后，我们使用 {% highlight html %}for{% endhighlight %} 循环遍历了整个哈希表，并输出了每个键值对。</p>
 <p>综上所述，哈希表的键值对就是一种 key-value 的存储方式，可以将数据以键值对的形式存储在哈希表中，并通过键来快速查找对应的值。</p>
-
 <p>5.go hash中使用array</p>
-
 <p>在 Go 语言中，我们可以使用数组作为哈希表的值类型，实现一些特定的功能。具体来说，我们可以将数组作为值存储在哈希表中，并在需要的时候对数组进行访问和操作，以实现一些数据结构的功能。</p>
-
 <p>例如，我们可以使用数组作为哈希表的值类型来实现一个简单的计数器。具体来说，我们可以定义一个键类型为字符串，值类型为整数数组的哈希表，并在每次计数时对相应的数组元素进行增加操作。代码示例如下：</p>
-
-{% highlight %}
-{% highlight %}// 定义一个键类型为字符串，值类型为整数数组的哈希表
+{% highlight html %}// 定义一个键类型为字符串，值类型为整数数组的哈希表
 var counter map[string][]int
-
 // 初始化哈希表
 counter = make(map[string][]int)
-
 // 对计数器进行增加操作
 func incrementCounter(key string, index int) {
-    if _, ok := counter[key]; !ok {
-        counter[key] = make([]int, 10)
-    }
-    counter[key][index]++
+if _, ok := counter[key]; !ok {
+counter[key] = make([]int, 10)
 }
-
+counter[key][index]++
+}
 // 进行计数
 incrementCounter(&quot;apple&quot;, 0)
 incrementCounter(&quot;apple&quot;, 1)
 incrementCounter(&quot;banana&quot;, 0)
-
 // 输出结果
 fmt.Println(counter[&quot;apple&quot;])  // 输出 [1 1 0 0 0 0 0 0 0 0]
 fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]{% endhighlight %}
-
-<p>上述代码中，我们首先定义了一个键类型为字符串，值类型为整数数组的哈希表变量 {% highlight %}counter{% endhighlight %}。接着，我们定义了一个 {% highlight %}incrementCounter{% endhighlight %} 函数，在该函数中对计数器进行增加操作。在 {% highlight %}incrementCounter{% endhighlight %} 函数中，我们首先检查哈希表中是否存在对应的键，如果不存在，则使用 {% highlight %}make{% endhighlight %} 函数创建一个长度为 10 的整数数组，并将其作为哈希表的值进行存储。然后，我们对数组的指定下标进行自增操作。</p>
-
-<p>在进行计数时，我们可以多次调用 {% highlight %}incrementCounter{% endhighlight %} 函数，并传入不同的键和下标，以逐步增加计数器的值。最后，我们可以使用 {% highlight %}fmt.Println(){% endhighlight %} 函数输出每个键对应的整数数组的值，以检查计数器是否正常工作。</p>
-
+<p>上述代码中，我们首先定义了一个键类型为字符串，值类型为整数数组的哈希表变量 {% highlight html %}counter{% endhighlight %}。接着，我们定义了一个 {% highlight html %}incrementCounter{% endhighlight %} 函数，在该函数中对计数器进行增加操作。在 {% highlight html %}incrementCounter{% endhighlight %} 函数中，我们首先检查哈希表中是否存在对应的键，如果不存在，则使用 {% highlight html %}make{% endhighlight %} 函数创建一个长度为 10 的整数数组，并将其作为哈希表的值进行存储。然后，我们对数组的指定下标进行自增操作。</p>
+<p>在进行计数时，我们可以多次调用 {% highlight html %}incrementCounter{% endhighlight %} 函数，并传入不同的键和下标，以逐步增加计数器的值。最后，我们可以使用 {% highlight html %}fmt.Println(){% endhighlight %} 函数输出每个键对应的整数数组的值，以检查计数器是否正常工作。</p>
 <p>综上所述，我们可以使用数组作为哈希表的值类型，以实现一些特定的功能。由于哈希表的值类型不限于基本数据类型，因此我们可以使用数组、切片、结构体等复杂数据类型来实现更加复杂的功能。</p>
-
 <p>6.go hash各种数据类型的简单使用</p>
-
-<p>Go 语言中的哈希表（Hash Table）可以使用内置的 {% highlight %}map{% endhighlight %} 类型实现，同时，{% highlight %}map{% endhighlight %} 类型也支持各种数据类型作为其键和值。下面我们将介绍 Go 语言中哈希表的各种数据类型的简单使用方法。</p>
-
+<p>Go 语言中的哈希表（Hash Table）可以使用内置的 {% highlight html %}map{% endhighlight %} 类型实现，同时，{% highlight html %}map{% endhighlight %} 类型也支持各种数据类型作为其键和值。下面我们将介绍 Go 语言中哈希表的各种数据类型的简单使用方法。</p>
 <h3>字符串作为键</h3>
-
-{% highlight %}
-{% highlight %}// 定义一个键类型为字符串，值类型为整数的哈希表
+{% highlight html %}// 定义一个键类型为字符串，值类型为整数的哈希表
 var m map[string]int
-
 // 初始化哈希表
 m = make(map[string]int)
-
 // 设置键值
 m[&quot;one&quot;] = 1
 m[&quot;two&quot;] = 2
-
 // 获取键值
 fmt.Println(m[&quot;one&quot;]) // 输出 1
 fmt.Println(m[&quot;two&quot;]) // 输出 2{% endhighlight %}
-
 <h3>整数作为键</h3>
-
-{% highlight %}
-{% highlight %}// 定义一个键类型为整数，值类型为字符串的哈希表
+{% highlight html %}// 定义一个键类型为整数，值类型为字符串的哈希表
 var m map[int]string
-
 // 初始化哈希表
 m = make(map[int]string)
-
 // 设置键值
 m[1] = &quot;one&quot;
 m[2] = &quot;two&quot;
-
 // 获取键值
 fmt.Println(m[1]) // 输出 &quot;one&quot;
 fmt.Println(m[2]) // 输出 &quot;two&quot;{% endhighlight %}
-
 <h3>结构体作为键</h3>
-
-{% highlight %}
-{% highlight %}// 定义一个结构体类型
+{% highlight html %}// 定义一个结构体类型
 type Point struct {
-    X int
-    Y int
+X int
+Y int
 }
-
 // 定义一个键类型为结构体，值类型为整数的哈希表
 var m map[Point]int
-
 // 初始化哈希表
 m = make(map[Point]int)
-
 // 设置键值
 m[Point{0,0}] = 1
 m[Point{1,0}] = 2
-
 // 获取键值
 fmt.Println(m[Point{0,0}]) // 输出 1
 fmt.Println(m[Point{1,0}]) // 输出 2{% endhighlight %}
-
 <h3>数组、切片作为值</h3>
-
-{% highlight %}
-{% highlight %}// 定义一个键类型为字符串，值类型为整数数组的哈希表
+{% highlight html %}// 定义一个键类型为字符串，值类型为整数数组的哈希表
 var counter map[string][]int
-
 // 初始化哈希表
 counter = make(map[string][]int)
-
 // 对计数器进行增加操作
 func incrementCounter(key string, index int) {
-    if _, ok := counter[key]; !ok {
-        counter[key] = make([]int, 10)
-    }
-    counter[key][index]++
+if _, ok := counter[key]; !ok {
+counter[key] = make([]int, 10)
 }
-
+counter[key][index]++
+}
 // 进行计数
 incrementCounter(&quot;apple&quot;, 0)
 incrementCounter(&quot;apple&quot;, 1)
 incrementCounter(&quot;banana&quot;, 0)
-
 // 输出结果
 fmt.Println(counter[&quot;apple&quot;])  // 输出 [1 1 0 0 0 0 0 0 0 0]
 fmt.Println(counter[&quot;banana&quot;]) // 输出 [1 0 0 0 0 0 0 0 0 0]{% endhighlight %}
-
-<p>综上所述，Go 语言中的 {% highlight %}map{% endhighlight %} 类型非常灵活，可以使用各种数据类型作为键和值，从而适应各种不同的需求。需要注意的是，当使用结构体、数组、切片等复杂数据类型作为键时，我们需要确保其是可比较的，否则不能作为键类型。</p>
-
+<p>综上所述，Go 语言中的 {% highlight html %}map{% endhighlight %} 类型非常灵活，可以使用各种数据类型作为键和值，从而适应各种不同的需求。需要注意的是，当使用结构体、数组、切片等复杂数据类型作为键时，我们需要确保其是可比较的，否则不能作为键类型。</p>

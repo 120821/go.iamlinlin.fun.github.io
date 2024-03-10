@@ -5,33 +5,22 @@ date: "2022-08-18"
 categories: 
 ---
 <p><a href="https://www.runoob.com/react/react-rendering-elements.html">React 元素渲染 </a></p>
-
 <p>元素是构成 React 应用的最小单位，它用于描述屏幕上输出的内容</p>
-
 <pre class="prettyprint prettyprinted" style="">
-{% highlight %}<span class="kwd">const</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> </span><span class="str">&lt;h1&gt;</span><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> world</span><span class="pun">!&lt;/</span><span class="pln">h1</span><span class="pun">&gt;;</span>{% endhighlight %}
-
+{% highlight html %}<span class="kwd">const</span><span class="pln"> element </span><span class="pun">=</span><span class="pln"> </span><span class="str">&lt;h1&gt;</span><span class="typ">Hello</span><span class="pun">,</span><span class="pln"> world</span><span class="pun">!&lt;/</span><span class="pln">h1</span><span class="pun">&gt;;</span>{% endhighlight %}
 <p>首先我们在一个 HTML 页面中添加一个 <span class="marked">id=&quot;example&quot;</span> 的 <span class="marked">&lt;div&gt;</span></p>
-
 <pre class="prettyprint prettyprinted" style="">
-{% highlight %}<span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">&quot;example&quot;</span><span class="tag">&gt;&lt;/div&gt;</span>{% endhighlight %}
-
+{% highlight html %}<span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">&quot;example&quot;</span><span class="tag">&gt;&lt;/div&gt;</span>{% endhighlight %}
 <p>在此 div 中的所有内容都将由 React DOM 来管理，所以我们将其称为 &quot;根&quot; DOM 节点。</p>
-
 <p>我们用 React 开发应用时一般只会定义一个根节点。但如果你是在一个已有的项目当中引入 React 的话，你可能会需要在不同的部分单独定义 React 根节点。</p>
-
 <p>要将React元素渲染到根DOM节点中，我们通过把它们都传递给 <span class="marked">ReactDOM.render()</span> 的方法来将其渲染到页面上：</p>
-
 <p>React 元素都是不可变的。当元素被创建之后，你是无法改变其内容或属性的。</p>
-
-{% highlight %}&lt;head&gt;
-
+{% highlight html %}&lt;head&gt;
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js&quot;&gt;&lt;/script&gt;<br />
 &lt;/head&gt;
-
 &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;<br />
 &lt;script type=&quot;text/babel&quot;&gt;<br />
 const element =&lt;h1&gt;Hello, world!&lt;/h1&gt;;<br />
@@ -40,19 +29,14 @@ ReactDOM.render(<br />
 &nbsp; &nbsp; document.getElementById(&#39;example&#39;)<br />
 );<br />
 &lt;/script&gt;{% endhighlight %}
-
 <p>目前更新界面的唯一办法是创建一个新的元素，然后将它传入 ReactDOM.render() 方法：</p>
-
 <p>来看一下这个计时器的例子</p>
-
-{% highlight %}&lt;head&gt;
-
+{% highlight html %}&lt;head&gt;
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js&quot;&gt;&lt;/script&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js&quot;&gt;&lt;/script&gt;<br />
 &lt;/head&gt;
-
 &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;<br />
 &lt;script type=&quot;text/babel&quot;&gt;<br />
 function tick() {<br />
@@ -70,12 +54,9 @@ function tick() {<br />
 &nbsp;<br />
 setInterval(tick, 1000);<br />
 &lt;/script&gt;{% endhighlight %}
-
 <p>以上实例通过 setInterval() 方法，每秒钟调用一次 ReactDOM.render()。</p>
-
 <p>我们可以将要展示的部分封装起来，以下实例用一个函数来表示：</p>
-
-{% highlight %}&lt;head&gt;<br />
+{% highlight html %}&lt;head&gt;<br />
 &lt;meta charset=&quot;UTF-8&quot; /&gt;<br />
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -83,7 +64,6 @@ setInterval(tick, 1000);<br />
 &lt;script src=&quot;https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js&quot;&gt;&lt;/script&gt;<br />
 &lt;/head&gt;<br />
 &lt;body&gt;
-
 &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;<br />
 &lt;script type=&quot;text/babel&quot;&gt;<br />
 function Clock(props) {<br />
@@ -94,22 +74,17 @@ function Clock(props) {<br />
 &nbsp; &nbsp; &lt;/div&gt;<br />
 &nbsp; );<br />
 }
-
 function tick() {<br />
 &nbsp; ReactDOM.render(<br />
 &nbsp; &nbsp; &lt;Clock date={new Date()} /&gt;,<br />
 &nbsp; &nbsp; document.getElementById(&#39;example&#39;)<br />
 &nbsp; );<br />
 }
-
 setInterval(tick, 1000);<br />
 &lt;/script&gt;
-
 &lt;/body&gt;{% endhighlight %}
-
 <p>除了函数外我们还可以创建一个 React.Component 的 ES6 类，该类封装了要展示的元素，需要注意的是在 render() 方法中，需要使用&nbsp;this.props&nbsp;替换&nbsp;props：</p>
-
-{% highlight %}&lt;head&gt;<br />
+{% highlight html %}&lt;head&gt;<br />
 &lt;meta charset=&quot;UTF-8&quot; /&gt;<br />
 &lt;title&gt;Hello React!&lt;/title&gt;<br />
 &lt;script src=&quot;https://cdn.staticfile.org/react/16.4.0/umd/react.development.js&quot;&gt;&lt;/script&gt;<br />
@@ -117,7 +92,6 @@ setInterval(tick, 1000);<br />
 &lt;script src=&quot;https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js&quot;&gt;&lt;/script&gt;<br />
 &lt;/head&gt;<br />
 &lt;body&gt;
-
 &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;<br />
 &lt;script type=&quot;text/babel&quot;&gt;<br />
 class Clock extends React.Component {<br />
@@ -130,16 +104,12 @@ class Clock extends React.Component {<br />
 &nbsp; &nbsp; );<br />
 &nbsp; }<br />
 }
-
 function tick() {<br />
 &nbsp; ReactDOM.render(<br />
 &nbsp; &nbsp; &lt;Clock date={new Date()} /&gt;,<br />
 &nbsp; &nbsp; document.getElementById(&#39;example&#39;)<br />
 &nbsp; );<br />
 }
-
 setInterval(tick, 1000);<br />
 &lt;/script&gt;
-
 &lt;/body&gt;{% endhighlight %}
-

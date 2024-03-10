@@ -5,30 +5,16 @@ date: "2022-12-14"
 categories: 
 ---
 <p>参考：<a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html">https://www.ruanyifeng.com/blog/2019/09/curl-reference.html</a></p>
-
-<p>{% highlight %}-d{% endhighlight %}参数用于发送 POST 请求的数据体</p>
-
-{% highlight %}
-{% highlight %}$ curl -d&#39;login=emma＆password=123&#39;-X POST https://google.com/login
+<p>{% highlight html %}-d{% endhighlight %}参数用于发送 POST 请求的数据体</p>
+{% highlight html %}$ curl -d&#39;login=emma＆password=123&#39;-X POST https://google.com/login
 # 或者
 $ curl -d &#39;login=emma&#39; -d &#39;password=123&#39; -X POST  https://google.com/login{% endhighlight %}
-
-<p>使用{% highlight %}-d{% endhighlight %}参数以后，HTTP 请求会自动加上标头{% highlight %}Content-Type : application/x-www-form-urlencoded{% endhighlight %}。并且会自动将请求转为 POST 方法，因此可以省略{% highlight %}-X POST{% endhighlight %}。</p>
-
-<p>{% highlight %}-d{% endhighlight %}参数可以读取本地文本文件的数据，向服务器发送。</p>
-
-<p>{% highlight %}-o{% endhighlight %}（字母o）参数将服务器的回应保存成文件，等同于{% highlight %}wget{% endhighlight %}命令。</p>
-
-{% highlight %}
-{% highlight %}$ curl -o example.html https://www.example.com
+<p>使用{% highlight html %}-d{% endhighlight %}参数以后，HTTP 请求会自动加上标头{% highlight html %}Content-Type : application/x-www-form-urlencoded{% endhighlight %}。并且会自动将请求转为 POST 方法，因此可以省略{% highlight html %}-X POST{% endhighlight %}。</p>
+<p>{% highlight html %}-d{% endhighlight %}参数可以读取本地文本文件的数据，向服务器发送。</p>
+<p>{% highlight html %}-o{% endhighlight %}（字母o）参数将服务器的回应保存成文件，等同于{% highlight html %}wget{% endhighlight %}命令。</p>
+{% highlight html %}$ curl -o example.html https://www.example.com
 {% endhighlight %}
-
-<p>上面命令将{% highlight %}www.example.com{% endhighlight %}保存成{% highlight %}example.html{% endhighlight %}。</p>
-
-<p>{% highlight %}-O{% endhighlight %}（数字零）参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名</p>
-
-{% highlight %}
-{% highlight %}$ curl -O https://www.example.com/foo/bar.html{% endhighlight %}
-
-<p>上面命令将服务器回应保存成文件，文件名为{% highlight %}bar.html{% endhighlight %}。</p>
-
+<p>上面命令将{% highlight html %}www.example.com{% endhighlight %}保存成{% highlight html %}example.html{% endhighlight %}。</p>
+<p>{% highlight html %}-O{% endhighlight %}（数字零）参数将服务器回应保存成文件，并将 URL 的最后部分当作文件名</p>
+{% highlight html %}$ curl -O https://www.example.com/foo/bar.html{% endhighlight %}
+<p>上面命令将服务器回应保存成文件，文件名为{% highlight html %}bar.html{% endhighlight %}。</p>

@@ -5,36 +5,17 @@ date: "2023-04-13"
 categories: 
 ---
 <p><a href="https://aiweb.douguguo.com/?type=faq">https://aiweb.douguguo.com/?type=faq</a></p>
-
 <p>`git blame` 命令可以显示指定文件每一行代码是由谁在什么时间提交的，也就是查询一个文件中每行代码的最后一次修改的提交信息。这对于团队协作开发和代码 review 非常有用。</p>
-
 <p>使用 `git blame` 命令的格式如下：</p>
-
-{% highlight %}
-{% highlight %}git blame &lt;file&gt;{% endhighlight %}
-
+{% highlight html %}git blame &lt;file&gt;{% endhighlight %}
 <p>其中 `&lt;file&gt;` 是你要查询的文件名。</p>
-
 <p>在执行 `git blame` 命令后，会显示出指定文件的每一行代码。在每一行代码前面会有一串代码的哈希值以及提交该代码的作者和提交时间。如下所示：</p>
-
-{% highlight %}
-{% highlight %}c330cee7 (John Doe 2021-06-15 12:30:00 +0800 1) function add(x, y) {
-
+{% highlight html %}c330cee7 (John Doe 2021-06-15 12:30:00 +0800 1) function add(x, y) {
 c330cee7 (John Doe 2021-06-15 12:30:00 +0800 2)&nbsp;&nbsp; return x + y;
-
 c330cee7 (John Doe 2021-06-15 12:30:00 +0800 3) }{% endhighlight %}
-
 <p>在这个例子中，第一行代码提交者是 John Doe，提交时间为 2021-06-15 12:30:00 +0800，提交时该行代码的哈希值为 c330cee7。</p>
-
 <p>通过 `git blame` 命令，我们可以轻松地查询每个提交者对文件的修改记录，以便更好地跟踪修改历史和代码贡献。</p>
-
 <p>Git blame is a Git command that allows you to see who last modified a particular line of code in a file, as well as the commit message and date and time for that modification. It can be useful for identifying when and by whom a particular change was made, and for tracking down bugs or issues in your code. The syntax for using git blame is as follows:</p>
-
-{% highlight %}
-{% highlight %}git blame &lt;file path&gt;{% endhighlight %}
-
+{% highlight html %}git blame &lt;file path&gt;{% endhighlight %}
 <p>This will display each line of the file, along with the commit hash, author name, and date and time for the last modification of that line. Alternatively, you can also use the -L option followed by a range of line numbers to limit the output to a particular section of the file, like so:</p>
-
-{% highlight %}
-{% highlight %}git blame -L &lt;start_line&gt;,&lt;end_line&gt; &lt;file path&gt;{% endhighlight %}
-
+{% highlight html %}git blame -L &lt;start_line&gt;,&lt;end_line&gt; &lt;file path&gt;{% endhighlight %}

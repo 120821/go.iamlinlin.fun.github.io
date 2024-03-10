@@ -5,19 +5,14 @@ date: "2022-06-16"
 categories: 
 ---
 <p>字体下载安装</p>
-
 <p>下载：sudo apt install fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy</p>
-
 <p>找不到目录，还没安装</p>
-
 <p>目录：gedit /opt/deepinwine/tools/run_v2.sh</p>
-
 <p>我的打开是空文件<br />
 &nbsp;&nbsp; &nbsp;<br />
 实现：增加或者修改这个内容看起来是这样的一行：WINE_CMD=&quot;LC_ALL=zh_CN.UTF-8 deepin-wine&quot;<br />
 linlin@linlin-i5:/$<br />
 linlin@linlin-i5:/$ WINE_CMD=&quot;LC_ALL=zh_CN.UTF-8 deepin-wine&quot;</p>
-
 <p>sudo apt install fonts-wqy-microhei fonts-wqy-zenhei xfonts-wqy<br />
 [sudo] password for linlin:<br />
 Reading package lists... Done<br />
@@ -29,7 +24,6 @@ The following NEW packages will be installed:<br />
 Need to get 11.1 MB of archives.<br />
 After this operation, 34.6 MB of additional disk space will be used.<br />
 0% [Working]</p>
-
 <p>Get:1 http://mirrors.aliyun.com/ubuntu impish/universe amd64 fonts-wqy-microhei all 0.2.0-beta-3.1 [1,607 kB]<br />
 Get:2 http://mirrors.aliyun.com/ubuntu impish/universe amd64 fonts-wqy-zenhei all 0.9.45-8 [7,472 kB]<br />
 Get:3 http://mirrors.aliyun.com/ubuntu impish/universe amd64 xfonts-wqy all 1.0.0~rc1-7 [2,071 kB]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
@@ -49,9 +43,7 @@ Setting up fonts-wqy-zenhei (0.9.45-8) ...<br />
 Setting up fonts-wqy-microhei (0.2.0-beta-3.1) ...<br />
 Setting up xfonts-wqy (1.0.0~rc1-7) ...<br />
 Processing triggers for fontconfig (2.13.1-4.2ubuntu3) ...</p>
-
 <p>图片：</p>
-
 <p>sudo apt install libjpeg62:i386<br />
 Reading package lists... Done<br />
 Building dependency tree... Done<br />
@@ -69,6 +61,4 @@ Preparing to unpack .../libjpeg62_1%3a6b2-3_i386.deb ...<br />
 Unpacking libjpeg62:i386 (1:6b2-3) ...<br />
 Setting up libjpeg62:i386 (1:6b2-3) ...<br />
 Processing triggers for libc-bin (2.34-0ubuntu3.2) ...</p>
-
 <p>&nbsp;</p>
-

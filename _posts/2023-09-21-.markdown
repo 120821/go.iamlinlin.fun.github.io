@@ -5,16 +5,11 @@ date: "2023-09-21"
 categories: 
 ---
 <p>refer: <a href="https://lbsyun.baidu.com/index.php?title=jspopularGL/guide/custom">https://lbsyun.baidu.com/index.php?title=jspopularGL/guide/custom</a></p>
-
 <p>1.编辑自己需要的样式：<br />
 <a class="external text" href="http://lbsyun.baidu.com/customv2/index.html" rel="nofollow" target="_blank">个性化地图样式编辑器</a></p>
-
 <p>2.在<a class="external text" href="http://lbsyun.baidu.com/apiconsole/custommap" rel="nofollow" target="_blank">我的地图</a>中，创建一个地图样式，发布样式，得到json， 得到id(使用id即可，比较简单)</p>
-
 <p>3.增加（替换为自己的id）</p>
-
-{% highlight %}
+{% highlight html %}
 map.setMapStyleV2({&nbsp; &nbsp; &nbsp;
-  styleId: &#39;3d71dc5a4ce6222d3396801dee06622d&#39;
+styleId: &#39;3d71dc5a4ce6222d3396801dee06622d&#39;
 });{% endhighlight %}
-

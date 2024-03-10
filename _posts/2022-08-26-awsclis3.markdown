@@ -5,18 +5,10 @@ date: "2022-08-26"
 categories: 
 ---
 <p><a href="http://siwei.me/blog/posts/aws-aws-cli-s3">http://siwei.me/blog/posts/aws-aws-cli-s3</a></p>
-
 <p>1. 安装</p>
-
 <p>pip install awscli</p>
-
 <p>2. 登录</p>
-
 <p>aws configure</p>
-
 <p>添加对应的pub key, private key</p>
-
 <p>3. 上传文件到远程</p>
-
 <p>aws s3 cp --acl public-read-write hihihi s3://your-bucket-site/data/hihihi</p>
-

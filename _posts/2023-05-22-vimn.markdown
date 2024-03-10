@@ -5,26 +5,15 @@ date: "2023-05-22"
 categories: 
 ---
 <p>在vim中，可以使用大写的N来查询上一个匹配的单词。</p>
-
 <p>具体使用方法如下：</p>
-
 <ol>
-	<li>使用/keywords进行查询</li>
+<li>使用/keywords进行查询</li>
 </ol>
-
-{% highlight %}
-{% highlight %}/keywords{% endhighlight %}
-
+{% highlight html %}/keywords{% endhighlight %}
 <p>其中，keywords为要查找的单词或关键字。</p>
-
 <ol start="2">
-	<li>然后按下n可以向下查找下一个匹配的单词，按下了N可以向上查找上一个匹配的单词。</li>
+<li>然后按下n可以向下查找下一个匹配的单词，按下了N可以向上查找上一个匹配的单词。</li>
 </ol>
-
 <p>如果你想一下子查找上一个匹配的单词，你可以在查询的时候用 ? 替换 / 作为开头，然后使用小写的 n 。例如：</p>
-
-{% highlight %}
-{% highlight %}?keywords{% endhighlight %}
-
+{% highlight html %}?keywords{% endhighlight %}
 <p>之后按下 n 就可以查找上一个匹配的单词了。</p>
-

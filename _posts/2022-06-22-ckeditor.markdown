@@ -5,32 +5,17 @@ date: "2022-06-22"
 categories: 
 ---
 <p>参考：https://ckeditor.com/cke4/addon/a11ychecker</p>
-
 <p>https://ckeditor.com/ckeditor-4/download/?null-addons=#ckeditor4</p>
-
 <p>把表单的text_area修改为可以使用富文本编辑器的形式，需要</p>
-
-<p>在Gemfile 增加：{% highlight %}gem &#39;ckeditor&#39;{% endhighlight %}</p>
-
-<p>{% highlight %}然后bundle install{% endhighlight %}</p>
-
-<p>{% highlight %}在对应的视图文件增加{% endhighlight %}：</p>
-
-<p>{% highlight %}&lt;%= javascript_include_tag :ckeditor %&gt;{% endhighlight %}</p>
-
-<p>{% highlight %}例如在 application.html.erb中{% endhighlight %}</p>
-
-<p>{% highlight %}在表单中增加：{% endhighlight %}</p>
-
+<p>在Gemfile 增加：{% highlight html %}gem &#39;ckeditor&#39;{% endhighlight %}</p>
+<p>{% highlight html %}然后bundle install{% endhighlight %}</p>
+<p>{% highlight html %}在对应的视图文件增加{% endhighlight %}：</p>
+<p>{% highlight html %}&lt;%= javascript_include_tag :ckeditor %&gt;{% endhighlight %}</p>
+<p>{% highlight html %}例如在 application.html.erb中{% endhighlight %}</p>
+<p>{% highlight html %}在表单中增加：{% endhighlight %}</p>
 <p>标准：&lt;script src=&quot;//cdn.ckeditor.com/4.19.0/standard/ckeditor.js&quot;&gt;&lt;/script&gt;</p>
-
 <p>基本：&lt;script src=&quot;//cdn.ckeditor.com/4.19.0/basic/ckeditor.js&quot;&gt;&lt;/script&gt;</p>
-
 <p>完整：&lt;script src=&quot;//cdn.ckeditor.com/4.19.0/full/ckeditor.js&quot;&gt;&lt;/script&gt;</p>
-
-<p>{% highlight %}&lt;%= f.cktext_area :name%&gt;{% endhighlight %}</p>
-
-<p>{% highlight %}&lt;%= form.cktext_area :name%&gt;{% endhighlight %}</p>
-
+<p>{% highlight html %}&lt;%= f.cktext_area :name%&gt;{% endhighlight %}</p>
+<p>{% highlight html %}&lt;%= form.cktext_area :name%&gt;{% endhighlight %}</p>
 <p><img height="574" src="/uploads/ckeditor/pictures/55/image-20220622160917-2.png" width="1175" /></p>
-

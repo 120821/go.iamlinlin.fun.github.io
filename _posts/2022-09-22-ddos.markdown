@@ -5,6 +5,4 @@ date: "2022-09-22"
 categories: 
 ---
 <p>使用ddos.so，加上momain的前缀即可进入自己的环境。</p>
-
 <p><img height="334" src="/uploads/ckeditor/pictures/470/image-20220922155512-1.png" width="1500" /></p>
-

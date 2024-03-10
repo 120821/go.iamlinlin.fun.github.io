@@ -5,19 +5,10 @@ date: "2022-08-26"
 categories: 
 ---
 <p><a href="https://blog.csdn.net/qq_42772854/article/details/126152839">https://blog.csdn.net/qq_42772854/article/details/126152839</a></p>
-
 <p>生成从1开始进行递增的文件：</p>
-
 <p>i=1; for x in *.文件格式; do <strong>echo</strong> mv $x $i.文件格式; let i=i+1; done</p>
-
-{% highlight %}
-{% highlight %}i=1; for x in *.jpeg; do $echo mv $x $i.jpeg; let i=i+1; done{% endhighlight %}
-
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}如果文件名称存在空格，那么进行批量修改名称的时候就会报错，自己手动进行修改就可以了，{% endhighlight %}</div>
-
-<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight %}注意：命令的echo应该增加一个$的符号，不然不能进行执行。会puts命令，但是文件名称不会改变。{% endhighlight %}</div>
-
+{% highlight html %}i=1; for x in *.jpeg; do $echo mv $x $i.jpeg; let i=i+1; done{% endhighlight %}
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight html %}如果文件名称存在空格，那么进行批量修改名称的时候就会报错，自己手动进行修改就可以了，{% endhighlight %}</div>
+<div style="background:#eeeeee;border:1px solid #cccccc;padding:5px 10px;">{% highlight html %}注意：命令的echo应该增加一个$的符号，不然不能进行执行。会puts命令，但是文件名称不会改变。{% endhighlight %}</div>
 <p>&nbsp;</p>
-
 <p>&nbsp;</p>
-

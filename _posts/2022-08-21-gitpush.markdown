@@ -5,8 +5,5 @@ date: "2022-08-21"
 categories: 
 ---
 <p>已经git push后，需要回退，那么先git log，把id复制，然后使用命令</p>
-
 <p>git reset --soft ea19be7ef998b174cb884ed9df5928cd6f2f7991</p>
-
 <p>接着git status ，把git commit 的内容，进行取消，就可以了。</p>
-

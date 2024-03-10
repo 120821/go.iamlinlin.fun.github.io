@@ -5,7 +5,4 @@ date: "2023-08-17"
 categories: 
 ---
 <p>mysql可以备份本地的数据库，也可以在本地链接到远程的mysql进行备份远程的数据库。（需要知道远程服务器的主机名（或 IP 地址）、端口号、用户名和密码）</p>
-
-{% highlight %}
-{% highlight %}mysqldump -h &lt;hostname&gt; -P 3306 -u &lt;username&gt; -p &lt;password&gt; &lt;database_name&gt; &gt; backup.sql{% endhighlight %}
-
+{% highlight html %}mysqldump -h &lt;hostname&gt; -P 3306 -u &lt;username&gt; -p &lt;password&gt; &lt;database_name&gt; &gt; backup.sql{% endhighlight %}

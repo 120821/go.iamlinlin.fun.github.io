@@ -19,4 +19,3 @@ telnet: Unable to connect to remote host: Connection refused<br />
 <span style="color:#a2e043">rm /workspace/lueluelue-operation-backend/tmp/pids/server.pid</span><br />
 <span style="color:#38d8f0">bundle exec rails s -p 3030</span></p>
 </blockquote>
-

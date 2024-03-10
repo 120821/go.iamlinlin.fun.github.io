@@ -4,51 +4,49 @@ title: "MySQL数据库无法打开 用户不存在 快速的解决方法"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <blockquote> 
- <p><span style="color:#fe2c24;">the user specified as a definer ('mysql.infochema'@'localhost')does not exist</span></p> 
- <p>使用root无法进入数据库， 数据库无论是localhost还是127.0.0.1都无法连接</p> 
+<blockquote> 
+<p><span style="color:#fe2c24;">the user specified as a definer ('mysql.infochema'@'localhost')does not exist</span></p> 
+<p>使用root无法进入数据库， 数据库无论是localhost还是127.0.0.1都无法连接</p> 
 </blockquote> 
 <p><img alt="" src="https://img-blog.csdnimg.cn/e120330cb76c4b0fb767e22c7df34e18.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p>打开数据库创建新用户或者打开以前的用户，都不能顺利进行，都会看到报错。同样，在命令行看到的是这样。<img alt="" src="https://img-blog.csdnimg.cn/593ffb57736c481da471b8e4d707e1b5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16"></p> 
 <p>那么首先在命令行进入MySQL，</p> 
-{% highlight %}mysql -u root -p88888888{% endhighlight %} 
+{% highlight html %}mysql -u root -p88888888{% endhighlight %} 
 <p>输入命令，删除用户</p> 
-{% highlight %}DROP USER 'mysql.infoschema'@'localhost';
+{% highlight html %}DROP USER 'mysql.infoschema'@'localhost';
 {% endhighlight %} 
 <p>然后，再次创建用户</p> 
-{% highlight %}mysql&gt; CREATE USER 'mysql.infoschema'@'localhost' IDENTIFIED BY 'password';{% endhighlight %} 
+{% highlight html %}mysql&gt; CREATE USER 'mysql.infoschema'@'localhost' IDENTIFIED BY 'password';{% endhighlight %} 
 <p>最后，授予它权限</p> 
-{% highlight %}mysql&gt; GRANT SELECT ON *.* TO `mysql.infoschema`@`localhost`;
+{% highlight html %}mysql&gt; GRANT SELECT ON *.* TO `mysql.infoschema`@`localhost`;
 {% endhighlight %} 
 <p>接下来就可以正常使用，也可以导入数据了。</p> 
 <blockquote> 
- <h3>常用命令</h3> 
- <h2>一：查询</h2> 
- <h2>1、单表查询：</h2> 
- <p>格式：SELECT 需要查询显示的字段 FROM 表名</p> 
- <p>*：代表所有字段,多个字段用逗号隔开（英文逗号）</p> 
- <p>例如：SELECT * FROM user_info     </p> 
- <p>SELECT id,name FROM user_info</p> 
- <h2>2、连接查询，这里就讲左连接，其他的也类似：</h2> 
- <p>格式：SELECT需要查询显示的字段 FROM 主表 别名 LEFT JOIN 维表 别名 ON 连接的条件</p> 
- <p>例如：SELECT u.*, c.* FROM user_info u LEFT JOIN class_info c ON u.class_id = c.id</p> 
- <h2></h2> 
- <h2>二：增加</h2> 
- <p>注意：如果字段不写默认是全部字段，如果写了就知道添加写的字段，字段和值是一一对应的，顺序不能乱</p> 
- <p>批量添加每一条数据之前必须用逗号隔开</p> 
- <p>格式：INSERT INTO 表名(字段,字段) VALUES('值',值),('值',值)</p> 
- <p>例如：INSERT INTO user_info (`name`,class_id) VALUES('曹擦',1),('凤雏',2)</p> 
- <p></p> 
- <h2>三：修改</h2> 
- <p>格式：UPDATE 表名 SET 修改的阻断明 = 需要修改的后的值 WHERE 条件</p> 
- <p>例如：UPDATE user_info SET `name` = '貂蝉' WHERE id = 8</p> 
- <p>注意：如果不加条件（WHERE）那就所有的数据都修改了</p> 
- <p></p> 
- <h2>四：删除</h2> 
- <p>格式：DELETE FROM 表名 WHERE 条件</p> 
- <p>例如：DELETE FROM user_info WHERE id = 8</p> 
- <p>注意：如果不加条件，所有的数据都会被删除</p> 
+<h3>常用命令</h3> 
+<h2>一：查询</h2> 
+<h2>1、单表查询：</h2> 
+<p>格式：SELECT 需要查询显示的字段 FROM 表名</p> 
+<p>*：代表所有字段,多个字段用逗号隔开（英文逗号）</p> 
+<p>例如：SELECT * FROM user_info     </p> 
+<p>SELECT id,name FROM user_info</p> 
+<h2>2、连接查询，这里就讲左连接，其他的也类似：</h2> 
+<p>格式：SELECT需要查询显示的字段 FROM 主表 别名 LEFT JOIN 维表 别名 ON 连接的条件</p> 
+<p>例如：SELECT u.*, c.* FROM user_info u LEFT JOIN class_info c ON u.class_id = c.id</p> 
+<h2></h2> 
+<h2>二：增加</h2> 
+<p>注意：如果字段不写默认是全部字段，如果写了就知道添加写的字段，字段和值是一一对应的，顺序不能乱</p> 
+<p>批量添加每一条数据之前必须用逗号隔开</p> 
+<p>格式：INSERT INTO 表名(字段,字段) VALUES('值',值),('值',值)</p> 
+<p>例如：INSERT INTO user_info (`name`,class_id) VALUES('曹擦',1),('凤雏',2)</p> 
+<p></p> 
+<h2>三：修改</h2> 
+<p>格式：UPDATE 表名 SET 修改的阻断明 = 需要修改的后的值 WHERE 条件</p> 
+<p>例如：UPDATE user_info SET `name` = '貂蝉' WHERE id = 8</p> 
+<p>注意：如果不加条件（WHERE）那就所有的数据都修改了</p> 
+<p></p> 
+<h2>四：删除</h2> 
+<p>格式：DELETE FROM 表名 WHERE 条件</p> 
+<p>例如：DELETE FROM user_info WHERE id = 8</p> 
+<p>注意：如果不加条件，所有的数据都会被删除</p> 
 </blockquote> 
 <p></p>
-                

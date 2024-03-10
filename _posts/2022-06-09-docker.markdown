@@ -4,8 +4,7 @@ title: "查看docker是否处于启动状态"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>sudo systemctl daemon-reload</p> 
+<p>sudo systemctl daemon-reload</p> 
 <p>使用命令进行重新启动，</p> 
 <p>sudo systemctl stop docker</p> 
 <p>使用命令进行停止，可以多执行几次，保证停止，</p> 
@@ -19,4 +18,3 @@ categories:
 <p>使用命令进行启动，</p> 
 <p>sudo systemctl status docker </p> 
 <p>然后进行查看是否是启动状态<img alt="" height="549" src="https://img-blog.csdnimg.cn/e8a1a085fd5f4efdbf231207f2b8cb22.png" width="1200"></p>
-                

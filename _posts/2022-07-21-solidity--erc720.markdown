@@ -5,57 +5,38 @@ date: "2022-07-21"
 categories: 
 ---
 <p>Any contract that follow the <a href="https://eips.ethereum.org/EIPS/eip-20" target="__blank">ERC20 standard</a> is a ERC20 token.</p>
-
 <p>ERC20 tokens provide functionalities to</p>
-
 <ul>
-	<li>transfer tokens</li>
-	<li>allow others to transfer tokens on behalf of the token holder</li>
+<li>transfer tokens</li>
+<li>allow others to transfer tokens on behalf of the token holder</li>
 </ul>
-
 <p>Here is the interface for ERC20.</p>
-
 <p>任何遵循 ERC20 标准的合约都是 ERC20 代币。</p>
-
 <p>&nbsp;ERC20 代币提供以下功能</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp; 转移代币<br />
 &nbsp;&nbsp;&nbsp;&nbsp; 允许其他人代表代币持有者转移代币</p>
-
 <p>&nbsp;这是ERC20的接口。</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>// https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.0.0/contracts/token/ERC20/IERC20.sol<br />
 interface IERC20 {<br />
 &nbsp;&nbsp;&nbsp; function totalSupply() external view returns (uint);</p>
-
 <p>&nbsp;&nbsp;&nbsp; function balanceOf(address account) external view returns (uint);</p>
-
 <p>&nbsp;&nbsp;&nbsp; function transfer(address recipient, uint amount) external returns (bool);</p>
-
 <p>&nbsp;&nbsp;&nbsp; function allowance(address owner, address spender) external view returns (uint);</p>
-
 <p>&nbsp;&nbsp;&nbsp; function approve(address spender, uint amount) external returns (bool);</p>
-
 <p>&nbsp;&nbsp;&nbsp; function transferFrom(<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address sender,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address recipient,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; uint amount<br />
 &nbsp;&nbsp;&nbsp; ) external returns (bool);</p>
-
 <p>&nbsp;&nbsp;&nbsp; event Transfer(address indexed from, address indexed to, uint value);<br />
 &nbsp;&nbsp;&nbsp; event Approval(address indexed owner, address indexed spender, uint value);<br />
 }</p>
-
 <p>example</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>import &quot;./IERC20.sol&quot;;</p>
-
 <p>contract ERC20 is IERC20 {<br />
 &nbsp;&nbsp;&nbsp; uint public totalSupply;<br />
 &nbsp;&nbsp;&nbsp; mapping(address =&gt; uint) public balanceOf;<br />
@@ -63,20 +44,17 @@ pragma solidity ^0.8.13;</p>
 &nbsp;&nbsp;&nbsp; string public name = &quot;Solidity by Example&quot;;<br />
 &nbsp;&nbsp;&nbsp; string public symbol = &quot;SOLBYEX&quot;;<br />
 &nbsp;&nbsp;&nbsp; uint8 public decimals = 18;</p>
-
 <p>&nbsp;&nbsp;&nbsp; function transfer(address recipient, uint amount) external returns (bool) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; balanceOf[msg.sender] -= amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; balanceOf[recipient] += amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(msg.sender, recipient, amount);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function approve(address spender, uint amount) external returns (bool) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allowance[msg.sender][spender] = amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Approval(msg.sender, spender, amount);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function transferFrom(<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address sender,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address recipient,<br />
@@ -88,31 +66,23 @@ pragma solidity ^0.8.13;</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(sender, recipient, amount);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function mint(uint amount) external {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; balanceOf[msg.sender] += amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; totalSupply += amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(address(0), msg.sender, amount);<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function burn(uint amount) external {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; balanceOf[msg.sender] -= amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; totalSupply -= amount;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; emit Transfer(msg.sender, address(0), amount);<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p id="create-your-own-erc20-token">Create your own ERC20 token</p>
-
 <p>Using <a href="https://github.com/OpenZeppelin/openzeppelin-contracts" target="__blank">Open Zeppelin</a> it&#39;s really easy to create your own ERC20 token.</p>
-
 <p>Here is an example</p>
-
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>import &quot;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/ERC20.sol&quot;;</p>
-
 <p>contract MyToken is ERC20 {<br />
 &nbsp;&nbsp;&nbsp; constructor(string memory name, string memory symbol) ERC20(name, symbol) {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Mint 100 tokens to msg.sender<br />
@@ -122,34 +92,22 @@ pragma solidity ^0.8.13;</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _mint(msg.sender, 100 * 10**uint(decimals()));<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p id="contract-to-swap-tokens">Contract to swap tokens</p>
-
-<p>Here is an example contract, {% highlight %}TokenSwap{% endhighlight %}, to trade one ERC20 token for another.</p>
-
+<p>Here is an example contract, {% highlight html %}TokenSwap{% endhighlight %}, to trade one ERC20 token for another.</p>
 <p>This contract will swap tokens by calling</p>
-
 <p>transferFrom(address sender, address recipient, uint256 amount)</p>
-
-<p>which will transfer {% highlight %}amount{% endhighlight %} of token from {% highlight %}sender{% endhighlight %} to {% highlight %}recipient{% endhighlight %}.</p>
-
-<p>For {% highlight %}transferFrom{% endhighlight %} to succeed, {% highlight %}sender{% endhighlight %} must</p>
-
+<p>which will transfer {% highlight html %}amount{% endhighlight %} of token from {% highlight html %}sender{% endhighlight %} to {% highlight html %}recipient{% endhighlight %}.</p>
+<p>For {% highlight html %}transferFrom{% endhighlight %} to succeed, {% highlight html %}sender{% endhighlight %} must</p>
 <ul>
-	<li>have more than {% highlight %}amount{% endhighlight %} tokens in their balance</li>
-	<li>allowed {% highlight %}TokenSwap{% endhighlight %} to withdraw {% highlight %}amount{% endhighlight %} tokens by calling {% highlight %}approve{% endhighlight %}</li>
+<li>have more than {% highlight html %}amount{% endhighlight %} tokens in their balance</li>
+<li>allowed {% highlight html %}TokenSwap{% endhighlight %} to withdraw {% highlight html %}amount{% endhighlight %} tokens by calling {% highlight html %}approve{% endhighlight %}</li>
 </ul>
-
-<p>prior to {% highlight %}TokenSwap{% endhighlight %} calling {% highlight %}transferFrom{% endhighlight %}</p>
-
+<p>prior to {% highlight html %}TokenSwap{% endhighlight %} calling {% highlight html %}transferFrom{% endhighlight %}</p>
 <p>// SPDX-License-Identifier: MIT<br />
 pragma solidity ^0.8.13;</p>
-
 <p>import &quot;https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.0.0/contracts/token/ERC20/IERC20.sol&quot;;</p>
-
 <p>/*<br />
 How to swap tokens</p>
-
 <p>1. Alice has 100 tokens from AliceCoin, which is a ERC20 token.<br />
 2. Bob has 100 tokens from BobCoin, which is also a ERC20 token.<br />
 3. Alice and Bob wants to trade 10 AliceCoin for 20 BobCoin.<br />
@@ -159,7 +117,6 @@ How to swap tokens</p>
 7. Alice or Bob calls TokenSwap.swap()<br />
 8. Alice and Bob traded tokens successfully.<br />
 */</p>
-
 <p>contract TokenSwap {<br />
 &nbsp;&nbsp;&nbsp; IERC20 public token1;<br />
 &nbsp;&nbsp;&nbsp; address public owner1;<br />
@@ -167,7 +124,6 @@ How to swap tokens</p>
 &nbsp;&nbsp;&nbsp; IERC20 public token2;<br />
 &nbsp;&nbsp;&nbsp; address public owner2;<br />
 &nbsp;&nbsp;&nbsp; uint public amount2;</p>
-
 <p>&nbsp;&nbsp;&nbsp; constructor(<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address _token1,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address _owner1,<br />
@@ -183,7 +139,6 @@ How to swap tokens</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; owner2 = _owner2;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; amount2 = _amount2;<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function swap() public {<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(msg.sender == owner1 || msg.sender == owner2, &quot;Not authorized&quot;);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(<br />
@@ -194,11 +149,9 @@ How to swap tokens</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; token2.allowance(owner2, address(this)) &gt;= amount2,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;Token 2 allowance too low&quot;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; );</p>
-
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _safeTransferFrom(token1, owner1, owner2, amount1);<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _safeTransferFrom(token2, owner2, owner1, amount2);<br />
 &nbsp;&nbsp;&nbsp; }</p>
-
 <p>&nbsp;&nbsp;&nbsp; function _safeTransferFrom(<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IERC20 token,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; address sender,<br />
@@ -209,6 +162,4 @@ How to swap tokens</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; require(sent, &quot;Token transfer failed&quot;);<br />
 &nbsp;&nbsp;&nbsp; }<br />
 }</p>
-
 <p>&nbsp;</p>
-

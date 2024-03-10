@@ -5,14 +5,11 @@ date: "2023-09-02"
 categories: 
 ---
 <p>例如，计算方案的第一条的name修改为&#39;消防-HFC&#39;,如下所示：</p>
-
-{% highlight %}
-{% highlight %}UPDATE calculation_templates
+{% highlight html %}UPDATE calculation_templates
 <span style="color:#dcc6e0">SET</span> algorithm_name = <span style="color:#abe338">&#39;消防-HFC&#39;</span>
 <span style="color:#dcc6e0">WHERE</span> id = (
-  <span style="color:#dcc6e0">SELECT</span> id
-  <span style="color:#dcc6e0">FROM</span> calculation_templates
-  <span style="color:#dcc6e0">ORDER</span> <span style="color:#dcc6e0">BY</span> id
-  LIMIT <span style="color:#f5ab35">1</span>
+<span style="color:#dcc6e0">SELECT</span> id
+<span style="color:#dcc6e0">FROM</span> calculation_templates
+<span style="color:#dcc6e0">ORDER</span> <span style="color:#dcc6e0">BY</span> id
+LIMIT <span style="color:#f5ab35">1</span>
 );{% endhighlight %}
-

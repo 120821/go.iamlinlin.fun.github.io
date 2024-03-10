@@ -5,13 +5,8 @@ date: "2023-11-14"
 categories: 
 ---
 <p>1.写一个css文件：</p>
-
-<p>{% highlight %}styles.css{% endhighlight %}</p>
-
-<p>2.引入：（打开你的Vue组件文件（{% highlight %}.vue{% endhighlight %}文件），在文件的顶部添加一个{% highlight %}&lt;style&gt;{% endhighlight %}标签。）</p>
-
-{% highlight %}
-{% highlight %}&lt;style&gt;
+<p>{% highlight html %}styles.css{% endhighlight %}</p>
+<p>2.引入：（打开你的Vue组件文件（{% highlight html %}.vue{% endhighlight %}文件），在文件的顶部添加一个{% highlight html %}&lt;style&gt;{% endhighlight %}标签。）</p>
+{% highlight html %}&lt;style&gt;
 @import &#39;./styles.css&#39;;
 &lt;/style&gt;{% endhighlight %}
-

@@ -4,16 +4,15 @@ title: "PostgreSQL无法创建用户"
 date: "2022-06-09"
 categories: 
 ---
-
-                    <p>搜索是否安装完毕  使用命令 ps | grep postgres 查找不到</p> 
+<p>搜索是否安装完毕  使用命令 ps | grep postgres 查找不到</p> 
 <p>ps -ef  查询所有进程</p> 
 <p>安装</p> 
-{% highlight %}sudo apt update
+{% highlight html %}sudo apt update
 sudo apt install postgresql postgresql-contrib{% endhighlight %} 
 <p>运行</p> 
-{% highlight %}sudo systemctl start postgresql.service{% endhighlight %} 
+{% highlight html %}sudo systemctl start postgresql.service{% endhighlight %} 
 <p>切换到postgres帐户<br> 通过键入以下内容切换到服务器上的postgres帐户：</p> 
-{% highlight %}通过键入切换到服务器上的postgres帐户  sudo -i -u postgres   
+{% highlight html %}通过键入切换到服务器上的postgres帐户  sudo -i -u postgres   
 现在，您可以通过键入以下内容立即访问Postgres提示符：
 psql   
 这将让您登录到PostgreSQL提示符，您可以从这里自由地与数据库管理系统进行交互。
@@ -34,11 +33,10 @@ createuser --interactive{% endhighlight %}
 <p>意味着它永远不会要求密码，并且始终信任任何连接。</p> 
 <p><img alt="" height="404" src="https://img-blog.csdnimg.cn/2eeaec492e344d07b066ea0a618769e8.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6K645aKo44Gu5bCP6J206J22,size_20,color_FFFFFF,t_70,g_se,x_16" width="729"></p> 
 <blockquote> 
- <h2>createuser</h2> 
- <p>createuser — define a new PostgreSQL user account</p> 
- <h2>Synopsis</h2> 
- <p id="id-1.9.4.5.4.1">{% highlight %}createuser{% endhighlight %} [<em>{% highlight %}connection-option{% endhighlight %}</em>...] [<em>{% highlight %}option{% endhighlight %}</em>...] [<em>{% highlight %}username{% endhighlight %}</em>]</p> 
- <p><a class="has-card" href="https://cdn.ckeditor.com/" title="CKEditor CDN"><span class="link-card-box"><span class="link-title">CKEditor CDN</span><span class="link-link"><img alt="" class="link-link-icon" src="https://csdnimg.cn/release/blog_editor_html/release2.0.8/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=M276">https://cdn.ckeditor.com/</span></span></a><a href="http://www.chenxm.cc/article/1048.html" title="Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客">Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客</a></p> 
- <p> </p> 
+<h2>createuser</h2> 
+<p>createuser — define a new PostgreSQL user account</p> 
+<h2>Synopsis</h2> 
+<p id="id-1.9.4.5.4.1">{% highlight html %}createuser{% endhighlight %} [<em>{% highlight html %}connection-option{% endhighlight %}</em>...] [<em>{% highlight html %}option{% endhighlight %}</em>...] [<em>{% highlight html %}username{% endhighlight %}</em>]</p> 
+<p><a class="has-card" href="https://cdn.ckeditor.com/" title="CKEditor CDN"><span class="link-card-box"><span class="link-title">CKEditor CDN</span><span class="link-link"><img alt="" class="link-link-icon" src="https://csdnimg.cn/release/blog_editor_html/release2.0.8/ckeditor/plugins/CsdnLink/icons/icon-default.png?t=M276">https://cdn.ckeditor.com/</span></span></a><a href="http://www.chenxm.cc/article/1048.html" title="Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客">Ubuntu 18.04 安装 PostgreSQL和简单使用-陈新明博客</a></p> 
+<p> </p> 
 </blockquote>
-                

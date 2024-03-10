@@ -5,38 +5,17 @@ date: "2022-11-10"
 categories: 
 ---
 <p>1.连接数据库：</p>
-
 <p>（1）启动postgres</p>
-
-{% highlight %}
-{% highlight %}docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres{% endhighlight %}
-
+{% highlight html %}docker run&nbsp; -e POSTGRES_PASSWORD=abdfdd3859a24c -d postgres{% endhighlight %}
 <p>（2）查看postgres的id</p>
-
-{% highlight %}
-{% highlight %}sudo docker ps -a{% endhighlight %}
-
+{% highlight html %}sudo docker ps -a{% endhighlight %}
 <p>（3）查看postgres的ip：</p>
-
-{% highlight %}
-{% highlight %}sudo docker inspect f1a6a66855f5，修改配置文件的host{% endhighlight %}
-
+{% highlight html %}sudo docker inspect f1a6a66855f5，修改配置文件的host{% endhighlight %}
 <p>2.运行节点：</p>
-
-{% highlight %}
-{% highlight %}./ckb run{% endhighlight %}
-
+{% highlight html %}./ckb run{% endhighlight %}
 <p>3.运行redis：</p>
-
-{% highlight %}
-{% highlight %}redis-server{% endhighlight %}
-
+{% highlight html %}redis-server{% endhighlight %}
 <p>抓取数据</p>
-
-{% highlight %}
-{% highlight %}ruby lib/ckb_block_node_processor.rb{% endhighlight %}
-
-<p>{% highlight %}4.j进入container{% endhighlight %}</p>
-
+{% highlight html %}ruby lib/ckb_block_node_processor.rb{% endhighlight %}
+<p>{% highlight html %}4.j进入container{% endhighlight %}</p>
 <p>docker exec -it 4153c8a7c46f bash</p>
-

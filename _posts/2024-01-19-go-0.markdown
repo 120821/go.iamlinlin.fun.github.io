@@ -5,24 +5,17 @@ date: "2024-01-19"
 categories: 
 ---
 <p>go删除数组的0元素，加在末尾：</p>
-
-{% highlight %}
-{% highlight %}<span style="color:#dcc6e0">package</span> main
-
+{% highlight html %}<span style="color:#dcc6e0">package</span> main
 <span style="color:#dcc6e0">import</span> <span style="color:#abe338">&quot;fmt&quot;</span>
-
 <span style="color:#dcc6e0">func</span> <span style="color:#00e0e0">main</span><span style="color:#f5ab35">()</span> {
-    array := []<span style="color:#dcc6e0">int</span>{<span style="color:#f5ab35">0</span>, <span style="color:#f5ab35">3</span>, <span style="color:#f5ab35">6</span>, <span style="color:#f5ab35">0</span>, <span style="color:#f5ab35">9</span>, <span style="color:#f5ab35">0</span>}
-    target := <span style="color:#f5ab35">0</span>
-
-    <span style="color:#dcc6e0">for</span> i := <span style="color:#f5ab35">0</span>; i &lt; <span style="color:#f5ab35">len</span>(array); i++ {
-        <span style="color:#dcc6e0">if</span> array[i] == target {
-            array = <span style="color:#f5ab35">append</span>(array[:i], array[i+<span style="color:#f5ab35">1</span>:]...)
-            array = <span style="color:#f5ab35">append</span>(array, target)
-            i-- <span style="color:#d4d0ab">// 重新检查当前位置</span>
-        }
-    }
-
-    fmt.Println(array)
+array := []<span style="color:#dcc6e0">int</span>{<span style="color:#f5ab35">0</span>, <span style="color:#f5ab35">3</span>, <span style="color:#f5ab35">6</span>, <span style="color:#f5ab35">0</span>, <span style="color:#f5ab35">9</span>, <span style="color:#f5ab35">0</span>}
+target := <span style="color:#f5ab35">0</span>
+<span style="color:#dcc6e0">for</span> i := <span style="color:#f5ab35">0</span>; i &lt; <span style="color:#f5ab35">len</span>(array); i++ {
+<span style="color:#dcc6e0">if</span> array[i] == target {
+array = <span style="color:#f5ab35">append</span>(array[:i], array[i+<span style="color:#f5ab35">1</span>:]...)
+array = <span style="color:#f5ab35">append</span>(array, target)
+i-- <span style="color:#d4d0ab">// 重新检查当前位置</span>
+}
+}
+fmt.Println(array)
 }{% endhighlight %}
-
